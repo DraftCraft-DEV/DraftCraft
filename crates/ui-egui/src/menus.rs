@@ -76,6 +76,7 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     #[cfg(not(target_arch = "wasm32"))]
     ("ui.updates.check", "Check for Updates...", &["Help", "Check for Updates..."], None),
     ("ui.dialog.commands", "Command Reference", &["Help", "DraftCraft Help"], Some("F1")),
+    ("ui.whatsnew", "What's New", &["Help", "What's New"], None),
     ("ui.toggle.history", "Command History", &["Window", "Command History"], Some("F2")),
     ("ui.cmdline.lines", "Command Line History Lines", &[], None),
     ("ui.cmdline.clear", "Clear Command History", &[], None),
@@ -554,6 +555,7 @@ fn run_ui_command_inner(app: &mut CadApp, id: &str, params: &Value) -> Option<Re
             crate::updates_ui::check_now(app);
             Ok(Value::Null)
         }
+        "ui.whatsnew" => Ok(json!({ "versions": crate::whats_new::open_all(app) })),
         "ui.dialog.close" => {
             app.ui.dialog = None;
             Ok(Value::Null)

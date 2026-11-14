@@ -7,10 +7,16 @@ shows it in About, `draftcraft --version` and `draftcraft-cli --version`.
 
 ```bash
 cargo xtask version            # prints it
-cargo xtask version set 1.1.0  # changes it
+cargo xtask version set 1.1.0  # changes it, and moves CHANGELOG.md's Unreleased notes under 1.1.0
 cargo xtask ci                 # the quality checks
 git commit -am "DraftCraft 1.1.0" && git push origin main
 ```
+
+The release notes are `CHANGELOG.md`: every change adds its line under `## Unreleased`, and
+`version set` moves them into the release's section (run it before tagging even when `Cargo.toml`
+already has the version). The app carries the file and shows the new sections once, in its What's
+New window, at the first start after an update. Read them over before tagging; the GitHub release
+notes can start from the same section.
 
 ## 2. Tag: every package is built for you
 

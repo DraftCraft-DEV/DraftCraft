@@ -48,6 +48,17 @@ People trust DraftCraft with their drawings; a crash loses their work. **This ou
 - Headless: `draftcraft-cli run --sample --script 'LINE 0,0 10,10\n' --export out.png`; `draftcraft-cli info file.dxf`; `draftcraft-cli mcp`.
 - Shell gotcha: `mv`/`cp` may be aliased interactive — use `/bin/mv -f` / `/bin/cp -f`.
 
+## Release notes (What's New)
+- `CHANGELOG.md` is built into the app (`crates/ui-egui/src/whats_new.rs`): at the first start after an
+  update, the What's New window shows the sections of the versions the user skipped, once; Help ▸
+  What's New opens it any time. Nothing is fetched to show it.
+- **Every user-visible change adds a line under `## Unreleased`** in `CHANGELOG.md`, in the same commit:
+  plain words for users, one `- ` line per change (not wrapped), under `### New`, `### Improved` or
+  `### Fixed`. Internal work (tests, CI, refactors) gets no line.
+- **Releasing:** `cargo xtask version set X.Y.Z` (also when `Cargo.toml` already says X.Y.Z) moves the
+  Unreleased lines into `## X.Y.Z`, and refuses a version that has no notes. A test
+  (`the_changelog_has_notes_for_this_version`) fails while the version in `Cargo.toml` has no section.
+
 ## Quality gates
 - Before every commit: `cargo xtask ci` (fmt, clippy -D warnings, tests, assets, layers, wasm).
 - Three tests fail only on macOS and pass on Linux CI: two need file names that APFS refuses

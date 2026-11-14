@@ -1385,6 +1385,10 @@ menu	Modify	Edita
 	You have version {version}.	Hai la versione {version}.
 	Do you want to download the update?	Vuoi scaricare l'aggiornamento?
 	What's new	Novità
+	What's New	Novità
+	What's New in DraftCraft	Novità di DraftCraft
+	DraftCraft {version}	DraftCraft {version}
+	There are no release notes for this version.	Non ci sono note di rilascio per questa versione.
 	Download	Scarica
 	Later	Più tardi
 	Skip This Version	Salta questa versione

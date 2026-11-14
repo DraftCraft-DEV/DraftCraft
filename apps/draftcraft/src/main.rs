@@ -434,6 +434,8 @@ fn main() -> eframe::Result {
             }
             // Autosave files (SAVEFILEPATH) default to `<settings dir>/autosave`.
             if let Some(dir) = &vars.config_dir {
+                // After an update, the new version's release notes show once (What's New).
+                app.enable_whats_new(dir);
                 app.enable_autosave(&dir.join("autosave"));
                 // Startup LISP (acad.lsp, acaddoc.lsp) is read from `<settings>/support`; the
                 // folder is made so it is there to put them in.

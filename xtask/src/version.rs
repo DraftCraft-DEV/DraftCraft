@@ -56,6 +56,82 @@ pub fn validate(v: &str) -> Result<(), String> {
     Ok(())
 }
 
+/// `CHANGELOG.md` ready for release `version`: the lines under `## Unreleased` move to the top of
+/// `## version` (made under Unreleased when it is new), leaving Unreleased empty. The app shows
+/// these notes in its What's New window, so a release without them is refused.
+pub fn fold_changelog(text: &str, version: &str) -> Result<String, String> {
+    const UNRELEASED: &str = "## Unreleased";
+    let lines: Vec<&str> = text.lines().collect();
+    let heading = |l: &str| l.starts_with("## ");
+    let is_version = |l: &str| l.strip_prefix("## ").and_then(|h| h.split_whitespace().next()) == Some(version);
+    let Some(u) = lines.iter().position(|l| l.trim_end() == UNRELEASED) else {
+        return Err("CHANGELOG.md has no `## Unreleased` section".into());
+    };
+    let u_end = lines.iter().skip(u + 1).position(|l| heading(l)).map_or(lines.len(), |i| u + 1 + i);
+    let notes: Vec<&str> = lines.get(u + 1..u_end).unwrap_or(&[]).iter().copied().skip_while(|l| l.trim().is_empty()).collect();
+    let notes: Vec<&str> = notes.iter().rev().copied().skip_while(|l| l.trim().is_empty()).collect::<Vec<_>>().into_iter().rev().collect();
+    let existing = lines.iter().position(|l| is_version(l));
+    if notes.is_empty() {
+        return match existing {
+            Some(_) => Ok(text.to_string()),
+            None => Err(format!("CHANGELOG.md has no notes for {version}: write the release's changes under `## Unreleased` first")),
+        };
+    }
+    let mut out: Vec<&str> = Vec::with_capacity(lines.len() + 4);
+    match existing {
+        Some(v) => {
+            for (i, l) in lines.iter().enumerate() {
+                if i > u && i < u_end {
+                    continue;
+                }
+                out.push(l);
+                if i == u {
+                    out.push("");
+                }
+                if i == v {
+                    out.push("");
+                    out.extend(notes.iter().copied());
+                }
+            }
+        }
+        None => {
+            for (i, l) in lines.iter().enumerate() {
+                out.push(l);
+                if i == u {
+                    out.push("");
+                    out.push("");
+                }
+            }
+            // The heading goes between Unreleased and its notes.
+            let at = out.iter().position(|l| l.trim_end() == UNRELEASED).map_or(0, |p| p + 2);
+            let heading = format!("## {version}");
+            let mut v: Vec<String> = out.iter().map(|s| s.to_string()).collect();
+            v.insert(at, heading);
+            return Ok(tidy(&v.join("\n")));
+        }
+    }
+    Ok(tidy(&out.join("\n")))
+}
+
+/// No runs of blank lines, one newline at the end.
+fn tidy(text: &str) -> String {
+    let mut out = String::with_capacity(text.len() + 1);
+    let mut blank = false;
+    for l in text.lines() {
+        if l.trim().is_empty() {
+            if !blank {
+                out.push('\n');
+            }
+            blank = true;
+        } else {
+            out.push_str(l);
+            out.push('\n');
+            blank = false;
+        }
+    }
+    out
+}
+
 /// Index and text of the `version` line in `[workspace.package]`.
 fn find_line(manifest: &str) -> Result<(usize, &str), String> {
     let mut in_section = false;
@@ -86,11 +162,19 @@ pub fn run(root: &Path, args: &[&str]) -> Result<(), String> {
         ["set", new] => {
             let old = read(&text)?;
             let updated = replace(&text, new)?;
+            // The release notes first: a version with none is refused before anything is written.
+            let log_path = root.join("CHANGELOG.md");
+            let log = std::fs::read_to_string(&log_path).map_err(|e| format!("read {}: {e}", log_path.display()))?;
+            let folded = fold_changelog(&log, new)?;
             // Write atomically: a half-written root manifest breaks every build in the workspace.
             let tmp = root.join("target").join("Cargo.toml.xtask-version");
             std::fs::create_dir_all(root.join("target")).map_err(|e| format!("create target/: {e}"))?;
             std::fs::write(&tmp, updated).map_err(|e| format!("write {}: {e}", tmp.display()))?;
             std::fs::rename(&tmp, &path).map_err(|e| format!("replace {}: {e}", path.display()))?;
+            if folded != log {
+                std::fs::write(&log_path, folded).map_err(|e| format!("write {}: {e}", log_path.display()))?;
+                println!("CHANGELOG.md: the Unreleased notes are now under {new}");
+            }
             // Refresh the workspace members' entries in Cargo.lock (no dependency upgrades).
             let mut c = crate::cargo();
             c.args(["update", "--workspace", "--offline"]);
@@ -111,6 +195,20 @@ mod tests {
     use super::*;
 
     const MANIFEST: &str = "[workspace]\nmembers = [\"a\"]\n\n[workspace.package]\nversion = \"0.1.0\"\nedition = \"2024\"\n\n[workspace.dependencies]\nfoo = { version = \"1\" }\n";
+
+    #[test]
+    fn the_unreleased_notes_become_the_release() {
+        let log = "# Log\n\n## Unreleased\n\n- new thing\n\n## 1.0.0\n\n- old\n";
+        assert_eq!(fold_changelog(log, "1.1.0").unwrap(), "# Log\n\n## Unreleased\n\n## 1.1.0\n\n- new thing\n\n## 1.0.0\n\n- old\n");
+        // A version already named in the file takes the notes at its top.
+        let log = "# Log\n\n## Unreleased\n\n- newer\n\n## 1.1.0\n\n- new thing\n";
+        assert_eq!(fold_changelog(log, "1.1.0").unwrap(), "# Log\n\n## Unreleased\n\n## 1.1.0\n\n- newer\n\n- new thing\n");
+        // Nothing to move: fine when the version has notes, refused when it has none.
+        let log = "## Unreleased\n\n## 1.1.0\n\n- x\n";
+        assert_eq!(fold_changelog(log, "1.1.0").unwrap(), log);
+        assert!(fold_changelog(log, "1.2.0").is_err());
+        assert!(fold_changelog("## 1.0.0\n- x\n", "1.0.0").is_err(), "no Unreleased section");
+    }
 
     #[test]
     fn reads_the_workspace_version() {

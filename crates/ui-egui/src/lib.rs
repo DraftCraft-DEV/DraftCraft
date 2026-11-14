@@ -70,6 +70,7 @@ pub mod theme;
 pub mod updates_ui;
 pub mod viewcube;
 pub mod vpscale;
+pub mod whats_new;
 #[cfg(not(target_arch = "wasm32"))]
 pub mod window_frame;
 pub mod workspaces;
@@ -360,6 +361,8 @@ pub struct CadApp {
     /// The startup update check and its prompt (desktop; [`updates_ui`]).
     #[cfg(not(target_arch = "wasm32"))]
     pub updates_rt: updates_ui::Runtime,
+    /// The What's New window, while open ([`whats_new`]).
+    pub whats_new: Option<whats_new::WhatsNew>,
 }
 
 impl CadApp {
@@ -421,6 +424,7 @@ impl CadApp {
             ribbon_context: ribbon::context::State::default(),
             #[cfg(not(target_arch = "wasm32"))]
             updates_rt: updates_ui::Runtime::default(),
+            whats_new: None,
         }
     }
 
@@ -965,6 +969,7 @@ impl CadApp {
         self.opening.show(ui.ctx());
         #[cfg(not(target_arch = "wasm32"))]
         updates_ui::show(self, ui.ctx());
+        whats_new::show(self, ui.ctx());
         dialogs::show(self, ui.ctx());
         palettes::patterns::prompt_picker(self, ui.ctx());
         closing::prompt(self, ui.ctx());
