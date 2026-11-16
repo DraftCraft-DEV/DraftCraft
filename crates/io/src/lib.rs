@@ -177,8 +177,8 @@ pub fn write_noted(d: &Drawing, name: impl AsRef<Path>, opts: &SaveOptions) -> R
 pub fn write_dwg_own(d: &Drawing, version: Version) -> Result<(Vec<u8>, dwg::write::Unwritten)> {
     let ver = dwg::write::version_of(version.code()).ok_or_else(|| IoError::Format(format!("DWG: no writer for {}", version.code())))?;
     let d = &*with_handles(d);
-    let mut tags = dxf_write::dwg_records(d, version);
-    dwg::write::add_variable_dictionary(&mut tags, d);
+    // The records hold AutoCAD's drawing variables dictionary (`dwg::write::variables`).
+    let tags = dxf_write::dwg_records(d, version);
     let preview = dwg::write::preview(d);
     let info = dwg::write::FileInfo {
         app_name: "DraftCraft",
@@ -333,6 +333,9 @@ pub fn write_dxf(d: &Drawing) -> String {
 
 /// Regions, written as closed polylines.
 mod dxf_region;
+#[cfg(feature = "solids")]
+mod solid_acis;
+mod solid_file;
 
 #[cfg(test)]
 mod tests;

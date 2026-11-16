@@ -1,0 +1,24 @@
+[package]
+name = "draftcraft-solid"
+description = "DraftCraft 3D solids: the one crate that names solidcore, the B-rep kernel (bodies, operations, display edges and meshes, hidden lines and sections)"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[lints]
+workspace = true
+
+[features]
+# The kernel itself. Off, this crate is empty and costs nothing: the workspace builds, tests and
+# wasm check exactly as without solids. `draftcraft-engine/solids` turns it on (docs/solids.md).
+kernel = ["dep:solidcore-ops", "dep:solidcore-record", "dep:solidcore-tess", "dep:solidcore-step", "dep:cadmpeg-asm", "dep:cadmpeg-core", "dep:serde_json"]
+
+[dependencies]
+draftcraft-geom = { workspace = true }
+solidcore-ops = { workspace = true, optional = true }
+solidcore-record = { workspace = true, optional = true }
+solidcore-tess = { workspace = true, optional = true }
+solidcore-step = { workspace = true, optional = true }
+cadmpeg-asm = { workspace = true, optional = true }
+cadmpeg-core = { workspace = true, optional = true }
+serde_json = { workspace = true, optional = true }

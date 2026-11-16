@@ -44,7 +44,7 @@ mod document;
 mod entities;
 mod hatch;
 mod objects;
-pub(crate) use objects::{apply_own_records, apply_scales, put_groups};
+pub(crate) use objects::{VARIABLES_KEY, apply_own_records, apply_scales, apply_variables, put_groups};
 mod tables;
 mod text;
 
@@ -167,6 +167,8 @@ fn read_budgeted(bytes: &[u8], mut table_cells_left: usize) -> Result<Drawing> {
     }
     crate::dxf_raw::read(&secs, &mut d);
     crate::dxf_clip::read(&mut d);
+    #[cfg(feature = "solids")]
+    crate::solid_file::recover(&mut d);
     d.skipped_records = skipped;
     Ok(d)
 }

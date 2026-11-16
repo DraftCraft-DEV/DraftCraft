@@ -185,6 +185,31 @@ pub enum Icon {
     GeoLocation,
     PointCloud,
     Customize,
+    // 3D solids (docs/solids.md).
+    Box3d,
+    Wedge,
+    Cylinder,
+    Cone,
+    Sphere,
+    Torus,
+    Extrude,
+    Revolve,
+    Union,
+    Subtract,
+    Intersect,
+    Interfere,
+    Slice,
+    Shell,
+    FilletEdge,
+    ChamferEdge,
+    SectionCut,
+    Flatshot,
+    ViewIso,
+    ViewTop,
+    ViewFront,
+    ViewRight,
+    VisualStyle,
+    PlanView,
 }
 
 struct Pen<'a> {
@@ -285,6 +310,188 @@ pub fn paint(p: &Painter, rect: Rect, icon: Icon, dim: bool) {
     paint_navigation_controls(&pen, icon, b, a, dim);
     paint_constraints(&pen, icon, b, a, dim);
     paint_context_tools(&pen, icon, b, a);
+    paint_solid_tools(&pen, icon, b, a);
+}
+
+/// An isometric box: front-left corner at the bottom `(x, y)`, sides `w` (right) and `d` (left)
+/// at 30°, height `h`.
+fn iso_box(pen: &Pen<'_>, x: f32, y: f32, w: f32, d: f32, h: f32, c: Color32) {
+    let (cx, sx) = (0.866f32, 0.5f32);
+    let r = (x + w * cx, y - w * sx);
+    let l = (x - d * cx, y - d * sx);
+    let back = (r.0 - d * cx, r.1 - d * sx);
+    pen.poly(&[(x, y), r, (r.0, r.1 - h), (x, y - h)], true, c);
+    pen.poly(&[(x, y), l, (l.0, l.1 - h), (x, y - h)], true, c);
+    pen.poly(&[(x, y - h), (r.0, r.1 - h), (back.0, back.1 - h), (l.0, l.1 - h)], true, c);
+}
+
+/// An upright cylinder seen from slightly above: base and top ellipses and the two sides.
+fn iso_cylinder(pen: &Pen<'_>, x: f32, y: f32, rx: f32, h: f32, c: Color32) {
+    let ry = rx * 0.4;
+    let ellipse = |cy: f32, from: f32, to: f32| {
+        let n = 18;
+        let pts: Vec<(f32, f32)> = (0..=n)
+            .map(|i| {
+                let t = (from + (to - from) * i as f32 / n as f32).to_radians();
+                (x + rx * t.cos(), cy - ry * t.sin())
+            })
+            .collect();
+        pen.poly(&pts, false, c);
+    };
+    ellipse(y - h, 0.0, 360.0);
+    ellipse(y, 180.0, 360.0);
+    pen.poly(&[(x - rx, y - h), (x - rx, y)], false, c);
+    pen.poly(&[(x + rx, y - h), (x + rx, y)], false, c);
+}
+
+fn paint_solid_tools(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32) {
+    use Icon::*;
+    match icon {
+        Box3d => iso_box(pen, 11.0, 20.0, 9.0, 7.0, 8.0, a),
+        Wedge => {
+            pen.poly(&[(4.0, 19.0), (19.0, 19.0), (19.0, 8.0)], true, a);
+            pen.poly(&[(19.0, 19.0), (21.0, 15.0), (21.0, 5.0), (19.0, 8.0)], false, a);
+            pen.poly(&[(4.0, 19.0), (6.0, 15.0), (21.0, 15.0)], false, b);
+            pen.l(6.0, 15.0, 21.0, 5.0);
+        }
+        Cylinder => iso_cylinder(pen, 12.0, 19.0, 7.0, 13.0, a),
+        Cone => {
+            pen.poly(&[(5.0, 18.0), (12.0, 3.0), (19.0, 18.0)], false, a);
+            pen.arc(12.0, 18.0, 7.0, 180.0, 360.0, a);
+            pen.arc(12.0, 18.0, 7.0, 0.0, 180.0, b.gamma_multiply(0.5));
+        }
+        Sphere => {
+            pen.c(12.0, 12.0, 8.5, a);
+            pen.poly(
+                &(0..=18)
+                    .map(|i| {
+                        let t = (i as f32 * 20.0).to_radians();
+                        (12.0 + 8.5 * t.cos(), 12.0 + 3.0 * t.sin())
+                    })
+                    .collect::<Vec<_>>(),
+                false,
+                b,
+            );
+            pen.poly(
+                &(0..=18)
+                    .map(|i| {
+                        let t = (i as f32 * 20.0).to_radians();
+                        (12.0 + 3.0 * t.cos(), 12.0 + 8.5 * t.sin())
+                    })
+                    .collect::<Vec<_>>(),
+                false,
+                b,
+            );
+        }
+        Torus => {
+            let ring = |rx: f32, ry: f32, c: Color32| {
+                pen.poly(
+                    &(0..=24)
+                        .map(|i| {
+                            let t = (i as f32 * 15.0).to_radians();
+                            (12.0 + rx * t.cos(), 13.0 + ry * t.sin())
+                        })
+                        .collect::<Vec<_>>(),
+                    false,
+                    c,
+                );
+            };
+            ring(9.5, 5.5, a);
+            ring(4.0, 1.8, a);
+            ring(6.8, 3.6, b.gamma_multiply(0.6));
+        }
+        Extrude => {
+            pen.poly(&[(4.0, 20.0), (13.0, 20.0), (17.0, 16.0), (8.0, 16.0)], true, b);
+            pen.poly(&[(4.0, 12.0), (13.0, 12.0), (17.0, 8.0), (8.0, 8.0)], true, a);
+            pen.la(4.0, 20.0, 4.0, 12.0);
+            pen.la(13.0, 20.0, 13.0, 12.0);
+            pen.la(17.0, 16.0, 17.0, 8.0);
+            pen.la(20.0, 12.0, 20.0, 4.5);
+            pen.arrow_tip(20.0, 3.0, 0.0, -1.0, a);
+        }
+        Revolve => {
+            pen.l(6.0, 3.0, 6.0, 21.0);
+            pen.poly(&[(9.0, 16.0), (14.0, 16.0), (14.0, 8.0), (9.0, 8.0)], true, b);
+            pen.arc(6.0, 12.0, 13.0, -40.0, 40.0, a);
+            pen.arrow_tip(15.9, 3.6, -0.6, -0.8, a);
+        }
+        Union | Subtract | Intersect => {
+            let (c1, c2) = match icon {
+                Union => (a, a),
+                Subtract => (a, b),
+                _ => (b, b),
+            };
+            iso_box(pen, 9.0, 19.0, 7.0, 5.0, 8.0, c1);
+            iso_box(pen, 15.0, 22.0, 6.0, 5.0, 9.0, c2);
+            if icon == Intersect {
+                pen.fill_c(12.0, 14.0, 2.5, a);
+            }
+        }
+        Interfere => {
+            iso_box(pen, 9.0, 19.0, 7.0, 5.0, 8.0, b);
+            iso_box(pen, 15.0, 22.0, 6.0, 5.0, 9.0, b);
+            pen.fill_rect(10.0, 11.5, 4.0, 5.0, a);
+        }
+        Slice => {
+            iso_box(pen, 11.0, 20.0, 9.0, 7.0, 8.0, b);
+            pen.poly(&[(2.0, 7.0), (14.0, 3.0), (22.0, 15.0), (10.0, 19.0)], true, a);
+        }
+        Shell => {
+            iso_box(pen, 11.0, 20.0, 9.0, 7.0, 8.0, a);
+            iso_box(pen, 11.0, 17.5, 6.0, 4.5, 4.0, b);
+        }
+        FilletEdge | ChamferEdge => {
+            pen.poly(&[(4.0, 20.0), (4.0, 10.0)], false, b);
+            pen.poly(&[(14.0, 4.0), (20.0, 4.0)], false, b);
+            if icon == FilletEdge {
+                pen.arc(14.0, 10.0, 10.0, 90.0, 180.0, a);
+            } else {
+                pen.la(4.0, 10.0, 14.0, 4.0);
+            }
+            pen.poly(&[(4.0, 20.0), (8.0, 17.0), (8.0, 8.0)], false, b);
+            pen.poly(&[(20.0, 4.0), (22.0, 6.0)], false, b);
+        }
+        SectionCut => {
+            iso_box(pen, 11.0, 21.0, 9.0, 7.0, 8.0, b);
+            pen.tri([(11.0, 21.0), (11.0, 13.0), (5.0, 9.5)], a.gamma_multiply(0.6));
+            pen.tri([(11.0, 21.0), (5.0, 9.5), (5.0, 17.5)], a.gamma_multiply(0.6));
+        }
+        Flatshot => {
+            iso_box(pen, 9.0, 13.0, 6.0, 5.0, 6.0, b);
+            pen.rect(12.0, 13.0, 9.0, 8.0, a);
+            pen.la(16.5, 13.0, 16.5, 21.0);
+        }
+        ViewIso => {
+            iso_box(pen, 12.0, 20.0, 8.0, 8.0, 8.0, b);
+            pen.fill_c(12.0, 12.0, 1.8, a);
+        }
+        ViewTop | ViewFront | ViewRight => {
+            // A cube with the face the view looks at filled.
+            iso_box(pen, 12.0, 20.0, 8.0, 8.0, 8.0, b);
+            let face = match icon {
+                ViewTop => [(12.0, 12.0), (18.9, 8.0), (12.0, 4.0), (5.1, 8.0)],
+                ViewFront => [(12.0, 20.0), (5.1, 16.0), (5.1, 8.0), (12.0, 12.0)],
+                _ => [(12.0, 20.0), (18.9, 16.0), (18.9, 8.0), (12.0, 12.0)],
+            };
+            let fill = a.gamma_multiply(0.6);
+            pen.tri([face[0], face[1], face[2]], fill);
+            pen.tri([face[0], face[2], face[3]], fill);
+        }
+        VisualStyle => {
+            pen.c(12.0, 12.0, 8.0, b);
+            pen.tri([(12.0, 4.0), (12.0, 20.0), (4.5, 15.0)], a.gamma_multiply(0.5));
+            pen.fill_c(9.0, 10.0, 2.0, a);
+        }
+        PlanView => {
+            // The plan view: a square seen from straight above, the viewer's eye over it.
+            pen.poly(&[(4.0, 9.0), (20.0, 9.0), (20.0, 21.0), (4.0, 21.0)], true, b);
+            pen.l(4.0, 15.0, 20.0, 15.0);
+            pen.l(12.0, 9.0, 12.0, 21.0);
+            pen.arc(12.0, 6.0, 4.0, 180.0, 360.0, a);
+            pen.fill_c(12.0, 4.5, 1.4, a);
+        }
+        _ => {}
+    }
 }
 
 fn paint_file_view(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32, dim: bool) {

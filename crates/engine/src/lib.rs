@@ -59,6 +59,8 @@ mod running;
 mod session;
 mod settings;
 mod view;
+#[cfg(feature = "solids")]
+pub mod view3d;
 
 pub use doc_state::{DocState, Snapshot};
 pub use error::{EngineError, Result};
@@ -93,6 +95,12 @@ pub struct Session {
     pub last_command: Option<String>,
     /// LASTPOINT.
     pub last_point: Vec2,
+    /// The Z of the point being given, when it was typed with three coordinates (`x,y,z`, or
+    /// `@dx,dy,dz` from [`Session::last_z`]); `None` for a picked point or `x,y`. Points are
+    /// plan points everywhere else; the 3D commands (SLICE, SECTION) read it.
+    pub point_z: Option<f64>,
+    /// The Z of the last point typed with three coordinates.
+    pub last_z: f64,
     /// AREA and PERIMETER: the last area AREA or MEASUREGEOM measured (in their Add and Subtract
     /// modes the running total) and that area's perimeter. Not saved, as in AutoCAD.
     pub area: f64,
@@ -182,6 +190,8 @@ impl Session {
             log: Vec::new(),
             last_command: None,
             last_point: Vec2::ZERO,
+            point_z: None,
+            last_z: 0.0,
             area: 0.0,
             perimeter: 0.0,
             distance: 0.0,

@@ -1661,3 +1661,48 @@ menu	Workspaces	Aree di lavoro
 	Export Attributes	Esporta attributi
 	Import Attributes	Importa attributi
 	Text, tab-delimited (TXT)	Testo delimitato da tabulazioni (TXT)
+# 3D solids (docs/solids.md).
+	3D solids are not available in this build.	I solidi 3D non sono disponibili in questa versione.
+	3D Modeling	Modellazione 3D
+	3D Solid	Solido 3D
+	Section	Sezione
+	Wedge	Cuneo
+	Interference Checking	Controllo interferenze
+	Slice	Taglia
+	Shell	Guscio
+	Fillet Edge	Raccorda spigolo
+	Fillet Edges	Raccorda spigoli
+	Chamfer Edge	Cima spigolo
+	Chamfer Edges	Cima spigoli
+	Flatshot	Vista piatta
+	Viewpoint	Punto di vista
+	Visual Styles	Stili di visualizzazione
+	Plan View	Vista in pianta
+	3D Views	Viste 3D
+	Constrained Orbit	Orbita vincolata
+	Wireframe	Wireframe
+	Hidden	Nascosto
+	Realistic	Realistico
+	Conceptual	Concettuale
+	Shaded	Ombreggiato
+	Shaded with edges	Ombreggiato con spigoli
+	Shades of Gray	Tonalità di grigio
+	X-Ray	Raggi X
+	Back	Posteriore
+	Bottom	Basso
+	Front	Anteriore
+	NE Isometric	Isometrica NE
+	NW Isometric	Isometrica NO
+	SE Isometric	Isometrica SE
+	SW Isometric	Isometrica SO
+	Custom View	Vista personalizzata
+	Hide ViewCube	Nascondi ViewCube
+	Click to view from here; drag to orbit	Fai clic per guardare da qui; trascina per orbitare
+	BOTTOM	BASSO
+	FRONT	ANTERIORE
+	BACK	POSTERIORE
+	LEFT	SINISTRA
+	RIGHT	DESTRA
+	Visualize	Visualizza
+	Primitive	Primitive
+	Views	Viste

@@ -129,8 +129,12 @@ pub(crate) fn guid(text: &str) -> (u32, u16, u16, [u8; 8]) {
 }
 
 /// The SAT text of the modeler groups (format 1): each group 1 a line, continued by groups 3,
-/// with DXF's caret escape undone, each line ended by CR LF as AutoCAD stores it, and without
-/// the end-of-data line DWG's sized blocks have no use for. `None` when the groups hold none.
+/// with DXF's caret escape undone, each line ended by a line feed alone as AutoCAD 2000 and 2010
+/// store it. The end-of-data line stays when the groups have one. AutoCAD's own SAT has none,
+/// because its header gives the record count, but a SAT whose header gives no count (0) needs
+/// it. SAT 700 without that line made AutoCAD 2027 discard every solid of the file ("Error Code
+/// Number is 75003", eCannotRestoreFromAcisFile); DraftCraft's SAT 400 with the line kept opens
+/// in AutoCAD 2027 from DWG 2000 and 2010. `None` when the groups hold none.
 fn sat_text(g: &Groups<'_>) -> Option<Vec<u8>> {
     if g.i(70) != 1 && !g.0.iter().any(|t| t.code == 1) {
         return None;
@@ -143,17 +147,14 @@ fn sat_text(g: &Groups<'_>) -> Option<Vec<u8>> {
             _ => lines.push(part),
         }
     }
-    if lines.last().is_some_and(|l| is_end(l)) {
-        lines.pop();
-    }
-    if lines.is_empty() {
+    if lines.iter().all(|l| is_end(l)) {
         return None;
     }
-    let mut out = Vec::with_capacity(lines.iter().map(|l| l.len() + 2).sum());
+    let mut out = Vec::with_capacity(lines.iter().map(|l| l.len() + 1).sum());
     for l in &lines {
         // The text is one byte per character, as the reader takes it.
         out.extend(l.chars().map(|c| u8::try_from(u32::from(c)).unwrap_or(b'?')));
-        out.extend_from_slice(b"\r\n");
+        out.push(b'\n');
     }
     Some(out)
 }
@@ -163,4 +164,35 @@ fn sat_text(g: &Groups<'_>) -> Option<Vec<u8>> {
 fn is_end(line: &str) -> bool {
     let plain: String = line.chars().map(|c| if ('!'..='~').contains(&c) { char::from(159 - c as u8) } else { c }).collect();
     [line, plain.as_str()].iter().any(|l| l.starts_with("End-of-ACIS-data") || l.starts_with("End-of-ASM-data"))
+}
+
+#[cfg(test)]
+mod tests {
+    use draftcraft_dxf::Tag;
+
+    use super::*;
+
+    /// AutoCAD 2000 and 2010 keep a solid's SAT text with a line feed alone after each line. The
+    /// end-of-data line stays: a SAT whose header gives no record count needs it.
+    #[test]
+    fn sat_text_lines_end_with_a_line_feed_alone_and_keep_the_end_line() {
+        let tags = [
+            Tag::s(100, "AcDbModelerGeometry"),
+            Tag::i(70, 1),
+            Tag::s(1, "hoo o n o "),
+            Tag::s(1, "=0;& {rn "),
+            Tag::s(3, "rn {rn |"),
+            Tag::s(1, "Z1;r09r^ \\VLr;>+>"),
+        ];
+        let sat = sat_text(&Groups(&tags)).expect("SAT text");
+        assert_eq!(sat, b"hoo o n o \n=0;& {rn rn {rn |\nZ1;r09r^\\VLr;>+>\n".to_vec());
+        assert!(!sat.contains(&b'\r'));
+    }
+
+    /// Groups holding nothing but the end-of-data line describe no shape.
+    #[test]
+    fn an_end_line_alone_is_no_sat_text() {
+        let tags = [Tag::s(100, "AcDbModelerGeometry"), Tag::i(70, 1), Tag::s(1, "End-of-ACIS-data")];
+        assert!(sat_text(&Groups(&tags)).is_none());
+    }
 }

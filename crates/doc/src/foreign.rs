@@ -8,7 +8,7 @@
 
 use std::collections::{BTreeMap, BTreeSet};
 
-use crate::{Handle, RawTag};
+use crate::{EntityKind, Handle, RawTag, Unknown};
 
 /// What a file handle stood for when the object it named is one DraftCraft writes itself (under a
 /// new handle on save): a kind and an upper-case name, e.g. `("LAYER", "WALLS")`,
@@ -75,6 +75,30 @@ pub struct Foreign {
     /// surfaces, which from 2013 on those entities don't carry themselves: each `ACDSRECORD`
     /// names its entity with a 320 handle (see [`Foreign::data_store_entities`]).
     pub data_store: Vec<RawTag>,
+    /// AutoCAD's own ACIS description of each 3D solid, body and region the file reader turned
+    /// into a DraftCraft one, by the entity's handle: saving an entity that is still as it was
+    /// read writes this back rather than a new description (see [`AcisSource`]).
+    pub acis: BTreeMap<Handle, AcisSource>,
+}
+
+/// A 3DSOLID, BODY or REGION as AutoCAD saved it, kept when the file reader turns it into a
+/// DraftCraft solid or region. ACIS describes more than DraftCraft models (a solid's history,
+/// face colours and other attributes, the ACIS version, surfaces as their modeller defined them),
+/// so while the entity stays as it was read, saving writes AutoCAD's description back unchanged
+/// rather than DraftCraft's translation of it.
+#[derive(Clone, Debug, PartialEq)]
+pub struct AcisSource {
+    /// The `$ACADVER` of the file it was read from (`AC1015`…): the ACIS version of its
+    /// description follows it, and an older AutoCAD discards a newer one.
+    pub acadver: String,
+    /// The entity as read: its type and its own groups (the description as SAT text up to
+    /// AutoCAD 2010, a GUID from 2013).
+    pub entity: Unknown,
+    /// The description as SAB, from the file's data store (AutoCAD 2013 and later).
+    pub sab: Option<Vec<u8>>,
+    /// The DraftCraft entity it was read as: the description is written back only while the
+    /// entity is still this.
+    pub read: EntityKind,
 }
 
 impl Foreign {
@@ -87,6 +111,7 @@ impl Foreign {
             && self.targets.is_empty()
             && self.class_order.is_empty()
             && self.data_store.is_empty()
+            && self.acis.is_empty()
     }
 
     /// The entities with a geometry record in the data store: an `ACDSRECORD` naming the entity

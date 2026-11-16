@@ -74,6 +74,12 @@ pub fn specs() -> Vec<CommandSpec> {
     v
 }
 
+/// [`fmt_d`] for the solids commands.
+#[cfg(feature = "solids")]
+pub(crate) fn fmt_distance(s: &Session, v: f64) -> String {
+    fmt_d(s, v)
+}
+
 /// Format a distance with the drawing's `LUNITS` and `LUPREC` (decimal units, four places by
 /// default).
 fn fmt_d(s: &Session, v: f64) -> String {
