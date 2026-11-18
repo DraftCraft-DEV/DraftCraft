@@ -286,6 +286,71 @@ fn write_files_for_autocad() {
     for (i, a) in areas.iter().enumerate() {
         println!("region #{} area {a:.4}", i + 1);
     }
+    let save = |d: &Drawing, stem: &str, versions: &[(Version, &str)], dwg: bool| {
+        for (v, y) in versions {
+            let dxf = crate::write_with(d, "x.dxf", &crate::SaveOptions { version: Some(*v), binary: false }).expect("dxf");
+            std::fs::write(format!("{dir}/{stem}-{y}.dxf"), dxf).expect("write");
+            if dwg {
+                std::fs::write(format!("{dir}/{stem}-{y}.dwg"), crate::write_dwg_own(d, *v).expect("dwg").0).expect("write");
+            }
+        }
+    };
+    let all = [(Version::R2000, "2000"), (Version::R2010, "2010"), (Version::R2013, "2013"), (Version::R2018, "2018")];
+    // NURBS faces described by DraftCraft (handoff A1): AutoCAD's LOFT and SWEEP moved 1000 along
+    // X, so the save writes DraftCraft's description instead of keeping AutoCAD's.
+    let mut free = crate::read(&data("solids-free-2018.dwg"), "f.dwg").expect("read");
+    let hs: Vec<draftcraft_doc::Handle> = free.model.iter().filter(|e| matches!(e.kind, EntityKind::Solid3d(_))).map(|e| e.handle).collect();
+    for h in hs {
+        free.model.modify(h, |e| {
+            if let EntityKind::Solid3d(so) = &mut e.kind {
+                so.placement =
+                    Mat4 { m: [[1.0, 0.0, 0.0, 1000.0], [0.0, 1.0, 0.0, 0.0], [0.0, 0.0, 1.0, 0.0], [0.0, 0.0, 0.0, 1.0]] }.mul(&so.placement);
+            }
+        });
+    }
+    save(&free, "dc-free", &all, true);
+    for (i, (v, c)) in solids(&free).iter().enumerate() {
+        println!("free #{} volume {v:.4} centroid {:.4}, {:.4}, {:.4}", i + 1, c.x, c.y, c.z);
+    }
+    // Properties (PR 22): red, 0.50 mm, 40 % transparent, linetype scale 2, on solids and regions.
+    let props = Common {
+        color: draftcraft_doc::color::Color::Index(1),
+        lineweight: draftcraft_doc::Lineweight::Mm100(50),
+        transparency: draftcraft_doc::Transparency::Percent(40),
+        ltscale: 2.0,
+        ..Common::default()
+    };
+    let mut coloured = d.clone();
+    for e in r.model.iter() {
+        coloured.add(&Space::Model, e.common.clone(), e.kind.clone()).expect("add");
+    }
+    let hs: Vec<draftcraft_doc::Handle> = coloured.model.iter().map(|e| e.handle).collect();
+    for h in hs {
+        coloured.model.modify(h, |e| e.common = Common { layer: e.common.layer.clone(), ..props.clone() });
+    }
+    save(&coloured, "dc-props", &all, true);
+    // AutoCAD's own drawings saved again unedited (PR 22): the same version, and 2000 → 2010 DXF.
+    for (name, v, y) in [
+        ("solids-basic-2000.dxf", Version::R2000, "2000"),
+        ("solids-basic-2000.dwg", Version::R2000, "2000"),
+        ("solids-basic-2010.dxf", Version::R2010, "2010"),
+        ("solids-basic-2013.dwg", Version::R2013, "2013"),
+        ("solids-edit-2018.dwg", Version::R2018, "2018"),
+        ("solids-free-2018.dwg", Version::R2018, "2018"),
+        ("regions-2000.dxf", Version::R2000, "2000"),
+        ("regions-2018.dwg", Version::R2018, "2018"),
+        ("solids-basic-2000.dxf", Version::R2010, "2000-to-2010"),
+    ] {
+        let a = crate::read(&data(name), name).expect("read");
+        let stem = name.rsplit_once('-').map(|(s, _)| s).unwrap_or(name);
+        let ext = if name.ends_with(".dwg") { "dwg" } else { "dxf" };
+        let bytes = if ext == "dwg" {
+            crate::write_dwg_own(&a, v).expect("dwg").0
+        } else {
+            crate::write_with(&a, "a.dxf", &crate::SaveOptions { version: Some(v), binary: false }).expect("dxf")
+        };
+        std::fs::write(format!("{dir}/acad-unedited-{stem}-{y}.{ext}"), bytes).expect("write");
+    }
 }
 
 #[test]
@@ -609,6 +674,20 @@ fn solids_and_regions_keep_their_properties() {
             crate::read(&crate::write_with(&d, out, &crate::SaveOptions { version: Some(v), binary: false }).expect("write"), out).expect("read");
         for (h, src) in &d.foreign.acis {
             assert_eq!(back.foreign.acis.get(h).map(modeler_groups), Some(modeler_groups(src)), "{name}: {h:?}");
+        }
+    }
+}
+
+/// Writes the SAB of each solid of `DRAFTCRAFT_SAB_IN` (a drawing in tests/data/acad-solids) to
+/// `DRAFTCRAFT_SAB_OUT-<n>.sab`, to look at AutoCAD's records.
+#[test]
+#[ignore]
+fn dump_sab() {
+    let (Ok(name), Ok(out)) = (std::env::var("DRAFTCRAFT_SAB_IN"), std::env::var("DRAFTCRAFT_SAB_OUT")) else { return };
+    let d = crate::read(&data(&name), &name).unwrap();
+    for (i, src) in d.foreign.acis.values().enumerate() {
+        if let Some(sab) = &src.sab {
+            std::fs::write(format!("{out}-{i}.sab"), sab).unwrap();
         }
     }
 }

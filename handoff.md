@@ -1,13 +1,16 @@
 # Handoff: finishing 3D in DraftCraft, everything still missing compared with AutoCAD
 
-Rewritten 2026-11-15 for the agent that takes the work over. This file is the to-do list: everything that
+Rewritten 2026-11-15 for the agent that takes the work over; updated 2026-11-17 after the
+`feat/solids-3d-finish` round (section 1 lists what it added, section 3 what is still open, and **A1 now
+has AutoCAD's verdict on the NURBS writer with the diagnosis and the fix**). This file is the to-do list: everything that
 DraftCraft's 3D still lacks compared with AutoCAD's 3D Modeling workspace, checked against the code at the
 tip of `feat/solids-3d` (commit `afccf044` and this file). The goal set by the owner is that DraftCraft's 3D works
 **like AutoCAD's and is perfectly compatible with AutoCAD**: what AutoCAD saves opens here as the same
 objects, and what DraftCraft saves opens in AutoCAD as AutoCAD's own objects.
 
-- **Branch:** `feat/solids-3d`. **PR:** https://github.com/SkryxDev/DraftCraft/pull/20. Commit and push to
-  this branch; never to `main`, and never merge the PR (the owner merges).
+- **Branch:** `feat/solids-3d-finish` (from `main` after PR 22). **Remote:** `origin` is now
+  `DraftCraft-DEV/DraftCraft`. Commit and push to this branch and its pull request; never to `main`, and
+  never merge the PR (the owner merges).
 - **Feature:** everything 3D is behind the cargo feature `solids`. Without it, the build, the tests and the
   wasm build must stay exactly as they are.
 - **Read first:** `AGENTS.md` (the rules; they outrank this file), then `docs/solids.md` (how the 3D code
@@ -67,6 +70,36 @@ Verified in the code and, where it says so, in AutoCAD 2027.
 - Solids the ACIS writer can't describe are saved in the *interim form* (a polyface mesh plus the exact body
   in an XRECORD, `crates/io/src/solid_file.rs`), which DraftCraft reopens as the solid.
 - DXF no longer writes `$CTABLESTYLE` in the header; AutoCAD's variables dictionary is written and read.
+- **Checked in AutoCAD 2027 on 2026-11-17** (43 files, every version, report summarised under A1): solids
+  and regions written by DraftCraft, with colour, lineweight, linetype scale and transparency (except
+  transparency in DWG 2000, see A1b); AutoCAD's own solids and regions opened and saved back unedited
+  (kept byte for byte, `Foreign::acis`). The only failures are NURBS faces (A1) and A1b.
+
+**Added in the `feat/solids-3d-finish` round (2026-11-17)**
+- **A3 lumps:** an ACIS body of several lumps reads as one solid of several pieces
+  (`to_bodies` in `crates/solid/src/acis/read.rs` joins the lumps of one body; `body::join`). Test
+  `a_solid_of_separate_pieces_reads_as_one_body`. UNION of disjoint solids already gives one body with
+  `solid_count() == 2`, written as 2 lumps.
+- **A4 mirrors (reading):** a body transform with determinant < 0 is applied to the kernel body
+  (`placed()` in `read.rs` returns the mirror matrix; `Body::transform` mirrors). Regions still refuse
+  mirrored transforms (`transformed()`). No test against AutoCAD's drawing yet: `acad-solids/mirror-*`
+  (from the AutoCAD session) needs its MASSPROP values (README of that session) and a test.
+- **A12 legacy 3D in the 3D view:** `crates/render/src/wire3d.rs` gives each non-solid object its place in
+  space (`placement()`: flat, lifted to one height, or a 3D wire with faces): lines and points with Z,
+  3D polylines, 3DFACE, polyface meshes, helices, thickness (extruded with side faces), circles, arcs,
+  ellipses and polylines in any OCS, block references with Z, rotation and arrays (recursive, capped).
+  `view3d.rs` draws them; 3DFACE/meshes/thickness sides are filled and hide what is behind them. Test
+  `objects_off_the_xy_plane_are_drawn_where_they_are`.
+- **LINE takes 3D points** (`x,y,z`, `@dx,dy,dz`, JSON `[x,y,z]`): `Session.point_z` is kept per point.
+- **C 3D transforms** (not behind `solids`; `crates/engine/src/cmd/modify3d.rs` + tests):
+  3DMOVE (3M), 3DROTATE (3R), ROTATE3D, 3DSCALE, MIRROR3D, 3DALIGN (3AL), 3DARRAY (3A), each with JSON
+  form, AutoCAD's prompts and keywords, icons and a place in the 3D Modeling Home ▸ Modify panel, Italian
+  and Chinese labels. The geometry is `EntityKind::transform3` (`crates/doc/src/entity/transform3.rs`) on
+  `Mat4` helpers in `crates/geom/src/mat.rs` (`rotation_about`, `mirror_plane`, `apply_normal`…):
+  a transform that keeps XY level works on every kind (plan transform + heights); one that tilts XY moves
+  lines, points, 3D polylines, faces, meshes, leaders, rays, solids (2D SOLID/TRACE), circles, arcs,
+  ellipses and lightweight polylines into their new plane (extrusion + angles); the others are left as
+  they were and the command says how many (`NotIn3d`).
 
 ---
 
@@ -134,27 +167,88 @@ Wrap whatever you use in `draftcraft-solid`'s facade first, with its own tests.
 
 ### A. File compatibility (highest priority: the owner's first requirement)
 
-**A1. Check the NURBS writer in AutoCAD.** DraftCraft writes NURBS faces (`spline-surface`, `intcurve-curve`,
-`exppc` pcurves; `crates/solid/src/acis/write.rs`) as SAT 400 and SAB 700, but no file with a NURBS face
-has been opened in AutoCAD yet. Take AutoCAD's LOFT/SWEEP from `acad-solids/solids-free-2018.dwg`, save it
-from DraftCraft as DWG/DXF 2000, 2010, 2013, 2018, and check in AutoCAD (open, AUDIT, Check, MASSPROP).
-The least certain part is the SAB tail after a spline surface's and curve's discontinuity lists
-(`Tok::Sab` in `acis/model.rs`): if 2013/2018 fail while 2010 works, look there first. Also check solids
-made by DraftCraft's own future SWEEP/LOFT the same way.
+**A1. NURBS faces written by DraftCraft don't load in AutoCAD (checked 2026-11-17).** Analytic solids
+pass everywhere. AutoCAD's LOFT and SWEEP from `solids-free-2018.dwg`, moved +1000 X in DraftCraft and
+saved (`dc-free-*`, made by the ignored test `write_files_for_autocad` in
+`crates/io/src/solid_acis/tests.rs`), fail in all 8 versions:
+- SAT (DWG/DXF 2000, 2010): AutoCAD prints `Error Code Number is 75004`. The loft loads but SOLIDEDIT
+  Check says it is not a valid ShapeManager solid (MASSPROP 175684.1039 against 175685.1346). The sweep
+  never loads: the DXF keeps an empty 3DSOLID ("ASM body missing"), DWG 2000 needs RECOVER (which deletes
+  it) and DWG 2010 drops it without saying so.
+- SAB (2013, 2018): neither solid loads ("ASM body missing", empty bounding box).
 
-**A2. DWG 2004–2010 solids stored as SAB.** `modeler()` in `crates/io/src/dwg/entities.rs` reads only SAT
+Diagnosis, made by comparing our SAT with AutoCAD's own for the same loft and sweep
+(`solids-free-2000.dxf`). A checker evaluated every coedge's pcurve on its spline surface against its
+edge (unscramble the DXF groups 1/3 with `c → 159 − c`, split on `#`, de Boor on the knots with the first
+and last repeated once more). Its findings:
+1. **Pcurves aren't on the edge's parameter.** ACIS needs `S(pcurve(t)) = edge_curve(t)` (reversed
+   coedges use `−t`, as AutoCAD's knots `-40 … -0` show). Ours lie on the right circle but at another
+   angle: up to 0.01 rad, 0.47 units, on the loft's circle edges (AutoCAD's: 1.2e-4). Cause: the STEP
+   pcurve from solidcore is parametrised along the surface's u, and `write.rs` maps it to the ACIS edge
+   parameter linearly; a circle's angle is not linear in a loft's u. Fix: reparametrise each pcurve on
+   a spline face. Sample the edge at its own parameter, find the pcurve parameter of each sample
+   (1D Newton on |S(P(s)) − E(t)|), and refit a 2D B-spline in t. Write its real deviation as the
+   pcurve's fit tolerance (we write 0).
+2. **Our surfaces are not AutoCAD's.** Read from the 2018 DWG (procedural loft/sweep caches), they come
+   back as cubic patches with interior knots of multiplicity 3 (C0 in parameter, listed in the C0
+   discontinuity list). They are up to 4e-4 off the original circle. AutoCAD's own 2000 loft has simple
+   knots (C2). ShapeManager may reject C0 knots inside a face: if (1) alone doesn't fix the loft, remove
+   the knots (they are geometrically smooth) before writing.
+3. **The sweep's seam and closed edges are written differently.** AutoCAD writes a periodic surface's
+   seam edge as `intcurve-curve { parcur … }` (a curve given on the surface), with
+   `pcurve $-1 1 $<intcurve> 0 0` and `pcurve $-1 -1 $<intcurve> -6.28… 0` pointing at it. It writes the
+   closed circle edges' pcurves as `nubs 1 periodic`. We write an `exactcur` approximation with two free
+   `exppc` pcurves `open`, and their ends miss the vertex by 1.8e-4. Write the seam and the closed edges
+   as AutoCAD does.
+4. In SAB both fail, so also check the SAB tail after a spline's discontinuity lists (`Tok::Sab` in
+   `acis/model.rs`) once SAT works.
+
+**Quick and exact for the common case (do this first):** a solid read from AutoCAD and then only moved,
+rotated, mirrored or uniformly scaled has the same body and a new `placement`. Today `unchanged()` in
+`crates/io/src/solid_acis.rs` then drops AutoCAD's ACIS and rewrites the geometry (and hits the bugs
+above). Instead, keep AutoCAD's data and set the body's transform:
+- SAT: the body record is record 0 (`body $-1 $lump $wire $transform #`). AutoCAD writes
+  `transform $-1 r11 r12 r13 r21 r22 r23 r31 r32 r33 tx ty tz scale rotate|no_rotate reflect|no_reflect
+  no_shear #`. Rows are the images of the axes (row vectors: `p' = p·A·scale + t`), seen in
+  `acad-solids/mirror-2000.dxf` and `history-2000.dxf`.
+  - Compose with an existing transform, or append a new record and point the body at it.
+  - Bump the record count in the header line (`400 87 1 0`).
+- SAB: cadmpeg frames records with byte offsets (`sab::Record { offset, len }`). Patch the body's
+  transform `Ref` (tag 0x0c, i32) in place and insert the transform record before the end marker. The
+  ignored test `dump_sab` writes AutoCAD's SAB to files so you can copy its exact token layout
+  (`DRAFTCRAFT_SAB_IN=mirror-2018.dxf DRAFTCRAFT_SAB_OUT=/tmp/x cargo test -p draftcraft-io --features
+  solids --lib dump_sab -- --ignored`).
+- Read the result back in a test (volume and centroid moved), then check it in AutoCAD: the `dc-free`
+  files must then pass.
+
+Then fix 1–4 for solids whose geometry DraftCraft changed (booleans, fillets on NURBS bodies, and
+DraftCraft's own SWEEP/LOFT when they exist), and run the same AutoCAD check again.
+
+**A1b. Transparency lost in DWG 2000.** `dc-props-2000.dwg` opens with colour, lineweight and linetype
+scale right but no transparency (no group 440; LIST shows none). The DXF 2000 of the same drawing keeps it,
+and so do DWG 2010, 2013 and 2018. DWG 2000 has no transparency field. Observe how AutoCAD itself saves an
+object with transparency as DWG 2000: likely as xdata under an application of its own; if so, write and
+read that.
+
+**A2. DWG 2004–2010 solids stored as SAB.** AutoCAD-made test drawings `acad-solids/sab-2004.dwg`,
+`sab-2007.dwg`, `sab-2010.dwg` (and `sab-2000.dxf`, `sab-2018.*`) were made on 2026-11-17 by the AutoCAD
+session (its README holds their MASSPROP values). `modeler()` in `crates/io/src/dwg/entities.rs` reads only SAT
 text before 2013 (`bs != 1` → not read). AutoCAD 2004–2010 DWGs can hold binary SAB (modeler format 2)
 right after the entity header up to the end marker. Read it into the same path as the 2013+ data store,
 with caps on its size, and add AutoCAD-made DWG 2004/2007/2010 test drawings. Check whether DraftCraft
 should also write SAB there (what AutoCAD writes when saving as 2004/2007/2010; observe its files).
 
-**A3. A 3DSOLID or BODY with several separate lumps.** Refused today and kept as saved ("several separate
+**A3. A 3DSOLID or BODY with several separate lumps.** *Reading done (section 1).* Still open: SOLIDEDIT
+Body ▸ seParate, a test against AutoCAD's `acad-solids/lumps-*`, and a check in AutoCAD of a DraftCraft
+UNION of disjoint solids. Original note: refused and kept as saved ("several separate
 solids"). AutoCAD allows one 3DSOLID made of disjoint pieces (UNION of two apart boxes, SOLIDEDIT
 Separate undoes it). Make the body type hold several lumps (check how solidcore's body/record represent
 it), read and write them (the writer already lays out lumps for regions), and make UNION of disjoint solids
 produce one 3DSOLID as AutoCAD does.
 
-**A4. Mirrored ACIS transforms** (determinant < 0): refused in `crates/solid/src/acis/read.rs` (`a mirrored or
+**A4. Mirrored ACIS transforms** (determinant < 0): *reading done for solids (section 1); still to do:
+regions, the test against `acad-solids/mirror-*`, and keeping AutoCAD's data under MIRROR/MIRROR3D
+(A1's body transform).* Was: refused in `crates/solid/src/acis/read.rs` (`a mirrored or
 flattened body (not read yet)`). AutoCAD writes them after MIRROR/MIRROR3D. Apply the reflection by
 reversing face senses, and on write, decide whether to bake mirrors into the geometry or write the
 transform as AutoCAD does (observe its files).
@@ -193,7 +287,9 @@ data and not drawn in 3D.
 **A11. MESH (subdivision mesh).** The `MESH` entity (vertices, faces, edges, crease data, smoothness level)
 is not modelled: read, draw (with its smoothing levels), write, in every version.
 
-**A12. Legacy 3D entities in the 3D view.** The 3D view draws every non-solid object flattened onto Z = 0
+**A12. Legacy 3D entities in the 3D view.** *Done (section 1).* Still open: text, mtext and hatches
+in planes other than XY (drawn only when their normal is +Z), MLINE/dimensions with elevation,
+polygon meshes with smoothing, and an AutoCAD comparison with `acad-solids/legacy3d-*`. Original note: The 3D view draws every non-solid object flattened onto Z = 0
 (`crates/ui-egui/src/canvas/view3d.rs`, `to3(0.0)`): 3DFACE, polyface and polygon meshes, 3D polylines,
 lines and points with Z, elevation, thickness (extruded 2D objects), OCS of arcs/circles/polylines in
 other planes, blocks inserted with Z are all wrong in 3D. Draw them at their real 3D positions (and fill
@@ -243,17 +339,22 @@ All need the checklist of section 2.
 
 ### C. 3D transforms
 
-Nothing exists; MOVE/ROTATE/SCALE/MIRROR work in 2D only (they already change a solid's placement).
-- **3DMOVE, 3DROTATE, 3DSCALE** with the move/rotate/scale gizmos (drawn in code), axis/plane constraint,
-  gizmo relocation; gizmo shown when a solid is selected in a 3D visual style (DEFAULTGIZMO).
-- **MIRROR3D** (Object, Last, Zaxis, View, XY/YZ/ZX, 3points) — needs mirrored placements to save
-  correctly (A4).
-- **ROTATE3D** (axis by object, last, view, X/Y/Z, 2 points).
-- **3DARRAY** (rectangular with levels, polar about an axis) and **ARRAYRECT/ARRAYPOLAR/ARRAYPATH** with
-  Levels and Z spacing for 3D objects.
-- **3DALIGN** (3 source points to 3 destination points); **ALIGN** in 3D (it exists, check it with solids
-  and Z).
-- **COPY/MOVE/STRETCH with 3D points**: typed `x,y,z` and picked points on faces/edges.
+*3DMOVE, 3DROTATE, ROTATE3D, 3DSCALE, MIRROR3D, 3DALIGN and 3DARRAY exist (section 1).* Still open:
+- The **gizmos** (move/rotate/scale, drawn in code), axis/plane constraint, gizmo relocation, shown when
+  a solid is selected in a 3D visual style (DEFAULTGIZMO). Today the commands take points, keywords and
+  numbers only.
+- Options not there yet: MIRROR3D Object/Last/Zaxis/View, ROTATE3D Object/Last/View, 3DALIGN Copy is
+  there but not the scale question, 3DARRAY polar uses the middle of the objects' extents (at Z 0) when
+  items are not rotated.
+- **Kinds that can't leave the XY plane yet** (`NotIn3d` in `transform3.rs`): text, mtext, attribute
+  definitions, block references, dimensions, multilines, multileaders, hatches, splines, helices,
+  regions, images, wipeouts, tables, tolerances. Block references need an insert normal (OCS); regions
+  need A6.
+- **ARRAYRECT/ARRAYPOLAR/ARRAYPATH** with Levels and Z spacing.
+- **ALIGN** in 3D with solids and Z.
+- **COPY/MOVE/STRETCH and every drawing command with 3D points**: LINE takes `x,y,z` now; CIRCLE, ARC,
+  PLINE, COPY, MOVE… still drop the Z of a typed point (they read `Input::Point`, 2D, and ignore
+  `Session.point_z`). Points picked on faces/edges need E3.
 
 ### D. Working with parts of solids
 
@@ -365,11 +466,13 @@ Nothing exists; MOVE/ROTATE/SCALE/MIRROR work in 2D only (they already change a 
 
 ## 4. Suggested order
 
-1. **A1** (NURBS check in AutoCAD), **A2** (DWG 2004–2010 SAB), **A4** (mirrors), **A3** (lumps): file
-   compatibility first, as the owner asked.
-2. **A12** (legacy 3D objects drawn at their real Z) and **E1–E4** (UCS, DUCS, 3D snaps, 3D point input):
-   without these, nothing else in 3D feels like AutoCAD.
-3. **C** (3DMOVE, 3DROTATE, 3DSCALE, MIRROR3D, 3DALIGN, 3DARRAY).
+1. **A1** quick part (keep AutoCAD's ACIS under a body transform), then the NURBS writer fixes,
+   **A1b**, **A2** (DWG 2004–2010 SAB, drawings now exist), tests for **A3**/**A4** against the new
+   AutoCAD drawings: file compatibility first, as the owner asked.
+2. **E1–E4** (UCS, DUCS, 3D snaps, 3D point input in every command) and the rest of **C** (gizmos, the
+   kinds that can't tilt yet).
+3. **A5/A6/A9/A10/A11** with the new AutoCAD drawings (`procsurf`, `regions-ucs`, `facecolor`,
+   `surfaces`, `mesh`, `history`).
 4. **D1–D3** (sub-objects, grips, Properties) with **A8** (primitive history).
 5. **B**: PRESSPULL, SWEEP, LOFT, POLYSOLID, PYRAMID, the rest of SOLIDEDIT, then the remaining options.
 6. **A13** STEP/STL, **A5**/**A6**/**A9** remaining ACIS cases.
@@ -377,4 +480,4 @@ Nothing exists; MOVE/ROTATE/SCALE/MIRROR work in 2D only (they already change a 
    (visual style manager, materials, lights, render, GPU), **A10/A11/H** (surfaces, meshes), **I**.
 
 After each step: gates green, `docs/solids.md` updated, this file updated (move done items to section 1),
-commit and push to `feat/solids-3d`.
+commit and push to `feat/solids-3d-finish`.

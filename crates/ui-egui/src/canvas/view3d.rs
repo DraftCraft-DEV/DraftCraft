@@ -18,6 +18,7 @@ use draftcraft_engine::Input;
 use draftcraft_engine::view3d::{View3d, VisualStyle};
 use draftcraft_geom::{Mat3, Mat4, Vec2, Vec3};
 use draftcraft_render::Kind;
+use draftcraft_render::wire3d::{Placement, Wire3d};
 use egui::{Color32, Mesh, Pos2, Rect, Shape, Stroke, pos2};
 
 use crate::CadApp;
@@ -246,10 +247,34 @@ impl Scene {
                 }
             }
         }
+        // Objects off the XY plane: lifted to their height, or drawn from their own edges and
+        // faces (a 3D face or a mesh hides what is behind it, like a solid's faces).
+        let mut heights: HashMap<Handle, f64> = HashMap::new();
+        let mut spatial: std::collections::HashSet<Handle> = std::collections::HashSet::new();
+        if let Some(st) = d.space(&Space::Model) {
+            let mut visits = 0usize;
+            for e in st.iter() {
+                if matches!(e.kind, EntityKind::Solid3d(_)) {
+                    continue;
+                }
+                match place(d, e, 0, &mut visits) {
+                    Placement::Flat => {}
+                    Placement::Lifted(z) => {
+                        heights.insert(e.handle, z);
+                    }
+                    Placement::Spatial(w) => {
+                        spatial.insert(e.handle);
+                        let (color, aci7) = colors.get(&e.handle).copied().unwrap_or((Rgb(255, 255, 255), true));
+                        scene.add_wire(e.handle, &w, color, aci7);
+                    }
+                }
+            }
+        }
         for p in &list.prims {
-            if solid_handles.contains(&p.handle) {
+            if solid_handles.contains(&p.handle) || spatial.contains(&p.handle) {
                 continue;
             }
+            let z = heights.get(&p.handle).copied().unwrap_or(0.0);
             let start = usize::try_from(p.start).unwrap_or(usize::MAX);
             let len = usize::try_from(p.len).unwrap_or(0);
             let end = start.saturating_add(len);
@@ -260,7 +285,7 @@ impl Scene {
                         if let [a, b] = w
                             && scene.segs.len() < MAX_SEGMENTS
                         {
-                            scene.segs.push(Seg { a: a.to3(0.0), b: b.to3(0.0), color: p.color, aci7: p.aci7, solid: None, handle: p.handle });
+                            scene.segs.push(Seg { a: a.to3(z), b: b.to3(z), color: p.color, aci7: p.aci7, solid: None, handle: p.handle });
                         }
                     }
                 }
@@ -268,7 +293,7 @@ impl Scene {
                     let Some(pts) = list.tris.get(start..end) else { continue };
                     for [a, b, cc] in pts.as_chunks::<3>().0 {
                         if scene.fills.len() < MAX_TRIANGLES {
-                            scene.fills.push(([a.to3(0.0), b.to3(0.0), cc.to3(0.0)], p.color, p.aci7));
+                            scene.fills.push(([a.to3(z), b.to3(z), cc.to3(z)], p.color, p.aci7));
                         }
                     }
                 }
@@ -277,6 +302,109 @@ impl Scene {
         }
         scene
     }
+}
+
+impl Scene {
+    /// An object drawn from its own edges and faces. With faces it draws like a solid (shaded,
+    /// hiding what is behind it); edges alone draw like 2D objects.
+    fn add_wire(&mut self, handle: Handle, w: &Wire3d, color: Rgb, aci7: bool) {
+        let index = if w.faces.is_empty() {
+            None
+        } else {
+            let Ok(i) = u32::try_from(self.solids.len()) else { return };
+            self.solids.push(SolidInfo { handle, color, aci7 });
+            Some(i)
+        };
+        for line in &w.lines {
+            for pair in line.windows(2) {
+                if let [a, b] = pair
+                    && self.segs.len() < MAX_SEGMENTS
+                {
+                    self.segs.push(Seg { a: *a, b: *b, color, aci7, solid: index, handle });
+                }
+            }
+        }
+        if let Some(solid) = index {
+            for p in &w.faces {
+                if self.tris.len() >= MAX_TRIANGLES {
+                    break;
+                }
+                let n = (p[1] - p[0]).cross(p[2] - p[0]).normalized();
+                self.tris.push(Tri { p: *p, n, solid });
+            }
+        }
+    }
+}
+
+/// How an object of model space is drawn in 3D. A block reference is lifted to its height when
+/// everything in its block lies on the block's XY plane, drawn in 3D when everything in it can
+/// be, and left on the XY plane otherwise (its plan drawing keeps its text and fills).
+fn place(d: &Drawing, e: &draftcraft_doc::Entity, depth: usize, visits: &mut usize) -> Placement {
+    let EntityKind::Insert(ins) = &e.kind else { return draftcraft_render::wire3d::placement(e) };
+    let Some((flat, wire)) = block_3d(d, ins, depth, visits) else { return Placement::Flat };
+    if flat {
+        let z = ins.insert.z;
+        return if z.is_finite() && z != 0.0 && ins.attribs.is_empty() { Placement::Lifted(z) } else { Placement::Flat };
+    }
+    match wire {
+        Some(w) if ins.attribs.is_empty() => Placement::Spatial(w),
+        _ => Placement::Flat,
+    }
+}
+
+/// A block reference's contents in 3D: whether all of it lies on its block's XY plane, and its
+/// edges and faces placed in the drawing when every object in it can be drawn that way.
+fn block_3d(d: &Drawing, ins: &Insert, depth: usize, visits: &mut usize) -> Option<(bool, Option<Wire3d>)> {
+    let b = d.block(&ins.block)?;
+    if depth >= MAX_BLOCK_DEPTH || !ins.scale.z.is_finite() {
+        return None;
+    }
+    let mut flat = true;
+    let mut parts: Option<Wire3d> = Some(Wire3d::default());
+    for child in b.entities.iter() {
+        *visits += 1;
+        if *visits > MAX_INSERT_VISITS {
+            return None;
+        }
+        let (child_flat, child_wire) = match &child.kind {
+            // Solids in blocks are drawn with the solids; attribute definitions don't show.
+            EntityKind::Solid3d(_) | EntityKind::AttDef(_) => continue,
+            EntityKind::Insert(inner) => {
+                let (f, w) = block_3d(d, inner, depth + 1, visits)?;
+                (f && inner.insert.z == 0.0, w)
+            }
+            _ => {
+                let f = matches!(draftcraft_render::wire3d::placement(child), Placement::Flat);
+                (f, draftcraft_render::wire3d::wire(child))
+            }
+        };
+        flat &= child_flat;
+        parts = match (parts, child_wire) {
+            (Some(mut all), Some(w)) => {
+                all.lines.extend(w.lines);
+                all.faces.extend(w.faces);
+                Some(all)
+            }
+            _ => None,
+        };
+    }
+    let cells = usize::try_from(ins.rows.max(1)).unwrap_or(usize::MAX).saturating_mul(usize::try_from(ins.cols.max(1)).unwrap_or(usize::MAX));
+    *visits = visits.saturating_add(cells);
+    if *visits > MAX_INSERT_VISITS {
+        return None;
+    }
+    let placed = parts.map(|w| {
+        let mut out = Wire3d::default();
+        for row in 0..ins.rows.max(1) {
+            for col in 0..ins.cols.max(1) {
+                let m = insert_matrix(ins, b.base, col, row);
+                out.lines.extend(w.lines.iter().map(|l| l.iter().map(|p| m.apply(*p)).collect()));
+                out.faces.extend(w.faces.iter().map(|f| f.map(|p| m.apply(p))));
+            }
+        }
+        out
+    });
+    Some((flat, placed))
 }
 
 /// The scene for the current drawing, rebuilt when it changes.
@@ -891,6 +1019,38 @@ mod tests {
         assert!(faces_out(&scene, Vec3::new(105.0, -5.0, 5.0)));
         // Its edges are 3D edges of the solid, not its plan drawn flat.
         assert!(scene.segs.iter().all(|g| g.solid.is_some()), "flat segments of the block's solid");
+    }
+
+    #[test]
+    fn objects_off_the_xy_plane_are_drawn_where_they_are() {
+        // Handoff A12: 3D objects were drawn flattened onto Z = 0.
+        let mut s = draftcraft_engine::Session::new();
+        s.execute("line", &serde_json::json!({"points": [[0, 0, 0], [0, 0, 50]]})).unwrap();
+        let st = s.state().unwrap();
+        let mut d: Drawing = (*st.doc).clone();
+        d.add(
+            &Space::Model,
+            draftcraft_doc::Common::default(),
+            EntityKind::Circle(draftcraft_doc::Circle { center: Vec3::new(100.0, 0.0, 12.0), radius: 5.0 }),
+        )
+        .unwrap();
+        let face = draftcraft_doc::Face3d {
+            corners: [Vec3::new(0.0, 0.0, 0.0), Vec3::new(50.0, 0.0, 0.0), Vec3::new(50.0, 50.0, 20.0), Vec3::new(0.0, 50.0, 20.0)],
+            hidden_edges: 0,
+        };
+        d.add(&Space::Model, draftcraft_doc::Common::default(), EntityKind::Face3d(face)).unwrap();
+        let thick = draftcraft_doc::Common { thickness: 30.0, ..draftcraft_doc::Common::default() };
+        d.add(&Space::Model, thick, EntityKind::Circle(draftcraft_doc::Circle { center: Vec3::new(200.0, 0.0, 0.0), radius: 20.0 })).unwrap();
+        let scene = Scene::build(&d, (1, 1));
+        let top = |pred: &dyn Fn(&Seg) -> bool| scene.segs.iter().filter(|g| pred(g)).fold(f64::MIN, |m, g| m.max(g.a.z).max(g.b.z));
+        // The vertical line stands up, the circle sits at its height, the extruded circle has
+        // its top 30 up.
+        assert!((top(&|g| g.a.x.abs() < 1e-9 && g.b.x.abs() < 1e-9 && g.a.y.abs() < 1e-9) - 50.0).abs() < 1e-9);
+        assert!(scene.segs.iter().filter(|g| g.a.x > 90.0 && g.a.x < 110.0).all(|g| (g.a.z - 12.0).abs() < 1e-9));
+        assert!((top(&|g| g.a.x > 170.0) - 30.0).abs() < 1e-9);
+        // The 3D face and the extruded circle hide what is behind them, like solids.
+        assert_eq!(scene.solids.len(), 2);
+        assert!(scene.tris.iter().flat_map(|t| t.p).any(|p| (p.z - 20.0).abs() < 1e-9));
     }
 
     #[test]

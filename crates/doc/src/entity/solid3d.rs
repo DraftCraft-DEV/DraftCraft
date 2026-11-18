@@ -87,16 +87,22 @@ impl Solid3d {
     /// Scale the solid's heights by `f` about the height `base_z` (SCALE, with
     /// [`Solid3d::transform`]).
     pub fn scale_heights(&mut self, base_z: f64, f: f64) {
+        self.map_heights(f, base_z * (1.0 - f));
+    }
+
+    /// Map the solid's heights `z ↦ a z + b`.
+    pub fn map_heights(&mut self, a: f64, b: f64) {
         let mut t = Mat4::IDENTITY;
-        t.m[2][2] = f;
-        t.m[2][3] = base_z * (1.0 - f);
+        t.m[2][2] = a;
+        t.m[2][3] = b;
         self.placement = t.mul(&self.placement);
-        self.volume *= f.abs();
+        self.volume *= a.abs();
     }
 
     /// Apply a 3D transform of the drawing.
     pub fn transform3(&mut self, m: &Mat4) {
         self.placement = m.mul(&self.placement);
+        self.volume *= m.det3().abs();
     }
 
     /// Whether the placement mirrors the body (a negative determinant): its triangles then wind

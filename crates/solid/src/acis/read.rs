@@ -210,7 +210,18 @@ impl Geometry {
     /// the shift in the decoder's millimetres of the binary centimetre convention). A mirroring
     /// or flattening transform is refused.
     pub(super) fn transformed(&self, rows: Option<&Value>) -> Result<Geometry> {
-        let Some(rows) = rows.and_then(Value::as_array) else { return Ok(Geometry::new(self.mm)) };
+        match self.placed(rows)? {
+            (g, None) => Ok(g),
+            (_, Some(_)) => Err(err("a mirrored or flattened body (not read yet)")),
+        }
+    }
+
+    /// The body's transform as [`Geometry::transformed`], but a mirroring one (determinant below
+    /// 0, MIRROR and MIRROR3D in AutoCAD) is not applied to the geometry: it comes back as the
+    /// kernel's matrix (rows the images of the axes, row 3 the shift), for the kernel to mirror
+    /// the body once it is made, which turns its faces and loops the right way round.
+    pub(super) fn placed(&self, rows: Option<&Value>) -> Result<(Geometry, Option<[[f64; 4]; 4]>)> {
+        let Some(rows) = rows.and_then(Value::as_array) else { return Ok((Geometry::new(self.mm), None)) };
         let mut m = [[0.0; 4]; 3];
         for (i, row) in rows.iter().take(3).enumerate() {
             for (j, v) in row.as_array().into_iter().flatten().take(4).enumerate() {
@@ -224,11 +235,22 @@ impl Geometry {
         let det = linear[0][0] * (linear[1][1] * linear[2][2] - linear[1][2] * linear[2][1])
             - linear[0][1] * (linear[1][0] * linear[2][2] - linear[1][2] * linear[2][0])
             + linear[0][2] * (linear[1][0] * linear[2][1] - linear[1][1] * linear[2][0]);
-        if !(det.is_finite() && det > 1e-300) {
-            return Err(err("a mirrored or flattened body (not read yet)"));
-        }
         let shift = [m[0][3] / BINARY_MM_PER_UNIT, m[1][3] / BINARY_MM_PER_UNIT, m[2][3] / BINARY_MM_PER_UNIT];
-        Ok(Geometry { mm: self.mm, linear, shift, scale: det.cbrt() })
+        if det.is_finite() && det < -1e-300 {
+            // Rows of the kernel's matrix: the images of the axes (the columns of `linear`).
+            let l = &linear;
+            let mirror = [
+                [l[0][0], l[1][0], l[2][0], 0.0],
+                [l[0][1], l[1][1], l[2][1], 0.0],
+                [l[0][2], l[1][2], l[2][2], 0.0],
+                [shift[0], shift[1], shift[2], 1.0],
+            ];
+            return Ok((Geometry::new(self.mm), Some(mirror)));
+        }
+        if !(det.is_finite() && det > 1e-300) {
+            return Err(err("a flattened body (its transform has no volume)"));
+        }
+        Ok((Geometry { mm: self.mm, linear, shift, scale: det.cbrt() }, None))
     }
 
     fn len(&self, v: f64) -> f64 {
@@ -908,7 +930,7 @@ fn grow(lo: &mut [f64; 3], hi: &mut [f64; 3], p: P3) {
 }
 
 /// The decoded B-rep's solids as STEP text.
-fn step(v: &Value, mm: f64) -> Result<(String, usize, Vec<FacePcurves>)> {
+fn step(v: &Value, mm: f64) -> Result<(String, Vec<Owner>, Vec<FacePcurves>)> {
     let unplaced = Geometry::new(mm);
     let faces = by_id(v, "faces");
     if faces.len() > MAX_FACES {
@@ -941,11 +963,12 @@ fn step(v: &Value, mm: f64) -> Result<(String, usize, Vec<FacePcurves>)> {
     let mut solids = Vec::new();
 
     let bodies = v.get("bodies").and_then(Value::as_array).cloned().unwrap_or_default();
-    for body in &bodies {
+    let mut owners: Vec<Owner> = Vec::new();
+    for (body_index, body) in bodies.iter().enumerate() {
         if body.get("kind").and_then(Value::as_str) != Some("solid") {
             continue;
         }
-        let geometry = unplaced.transformed(body.get("transform"))?;
+        let (geometry, mirror) = unplaced.placed(body.get("transform"))?;
         for region in ids(body.get("regions")) {
             let Some(region) = regions.get(region) else { continue };
             // Each closed shell: its STEP shell, and the size of its box (the outer one is the
@@ -1108,9 +1131,10 @@ fn step(v: &Value, mm: f64) -> Result<(String, usize, Vec<FacePcurves>)> {
                 w.add_distinct("BREP_WITH_VOIDS", &[s(""), r(outer), list(&voids)])
             };
             solids.push(solid);
+            owners.push(Owner { body: body_index, mirror });
         }
     }
-    Ok((w.file("acis", "AUTOMOTIVE_DESIGN"), solids.len(), face_pcurves))
+    Ok((w.file("acis", "AUTOMOTIVE_DESIGN"), owners, face_pcurves))
 }
 
 /// The kernel making the pcurves STEP leaves out: ACIS's own where the data has them (a face on
@@ -1217,23 +1241,49 @@ impl Trims for Kernel {
     }
 }
 
+/// Which body of the data a STEP solid (one lump) comes from, and the mirror its body's
+/// transform leaves for the kernel.
+struct Owner {
+    body: usize,
+    mirror: Option<[[f64; 4]; 4]>,
+}
+
+/// Most lumps put together into one solid.
+const MAX_LUMPS: usize = 10_000;
+
+/// One kernel body per body of the data: its lumps (a 3DSOLID made of separate pieces, as
+/// AutoCAD's UNION of solids apart leaves it) are put together into one body.
 fn to_bodies(v: &Value, mm: f64) -> Result<Vec<Body>> {
-    let (text, count, faces) = step(v, mm)?;
-    if count == 0 {
+    let (text, owners, faces) = step(v, mm)?;
+    if owners.is_empty() {
         return Err(err("the ACIS data holds no solid"));
+    }
+    if owners.len() > MAX_LUMPS {
+        return Err(err("the solid has too many separate pieces"));
     }
     let ex = solidcore_step::p21::parse(&text).map_err(|e| err(format!("the solid can't be read ({e})")))?;
     let read = solidcore_step::topology::read_solids_with(&ex, &Kernel { faces });
     if let Some(f) = read.failures.first() {
         return Err(err(format!("the solid can't be read ({})", f.message)));
     }
-    let mut out = Vec::new();
-    for solid in &read.solids {
+    if read.solids.len() != owners.len() {
+        return Err(err("the solid can't be read (its pieces don't match its records)"));
+    }
+    let mut out: Vec<(usize, Body)> = Vec::new();
+    for (solid, owner) in read.solids.iter().zip(&owners) {
         let (b, _) = ops::Body::from_record(&solid.brep, false)?;
-        out.push(Body(b));
+        if let Some(m) = &owner.mirror {
+            b.transform(m)?;
+        }
+        match out.last_mut() {
+            Some((at, whole)) if *at == owner.body => {
+                *whole = crate::body::join(whole, &Body(b))?;
+            }
+            _ => out.push((owner.body, Body(b))),
+        }
     }
     if out.is_empty() {
         return Err(err("the ACIS data holds no solid"));
     }
-    Ok(out)
+    Ok(out.into_iter().map(|(_, b)| b).collect())
 }

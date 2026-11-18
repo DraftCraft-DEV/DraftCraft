@@ -1,35 +1,46 @@
+use super::super::helpers::line3;
 use super::{
     Accept, EntityKind, Input, Interactive, Outcome, PlineAsk, PolyVertex, Prompt, Result, Session, Step, Value, Vec2, added, arc_to_bulge, bad,
-    bool_or, bulge_to_arc, distinct_points, f64_or, json, line, lwpoly, number, point_value, points_param, size_param, snap,
+    bool_or, bulge_to_arc, f64_or, json, line, lwpoly, number, point_value, size_param, snap,
 };
 
 // ---------------- JSON forms ----------------
 
 pub(super) fn run_line(s: &mut Session, p: &Value) -> Result<Value> {
-    let pts = points_param(p, "points").ok_or_else(|| bad("line", "`points` [[x,y],...] (2 or more) is required"))?;
+    let pts = super::super::helpers::points3_param(p, "points", MAX_LINE_POINTS)
+        .ok_or_else(|| bad("line", "`points` [[x,y] or [x,y,z],...] (2 to 100000) is required"))?;
     if pts.len() < 2 {
         return Err(bad("line", "need at least 2 points"));
     }
     // A repeated point would make a zero-length line.
-    let pts = distinct_points(&pts);
+    let mut kept: Vec<draftcraft_geom::Vec3> = Vec::with_capacity(pts.len());
+    for q in pts {
+        if kept.last().is_none_or(|l| (*l - q).len() > 1e-12) {
+            kept.push(q);
+        }
+    }
+    let pts = kept;
     if pts.len() < 2 {
         return Err(bad("line", "need at least 2 different points"));
     }
     let mut hs = Vec::new();
     for w in pts.windows(2) {
         if let [a, b] = w {
-            hs.push(s.add_entity(line(*a, *b))?.hex());
+            hs.push(s.add_entity(line3(*a, *b))?.hex());
         }
     }
     if bool_or(p, "closed", false)
         && pts.len() > 2
         && let (Some(a), Some(b)) = (pts.last(), pts.first())
-        && !a.near(*b, 1e-12)
+        && (*a - *b).len() > 1e-12
     {
-        hs.push(s.add_entity(line(*a, *b))?.hex());
+        hs.push(s.add_entity(line3(*a, *b))?.hex());
     }
     Ok(json!({ "handles": hs }))
 }
+
+/// Most points one LINE call takes.
+const MAX_LINE_POINTS: usize = 100_000;
 
 fn vertex_value(v: &Value) -> Option<PolyVertex> {
     if let Some(p) = point_value(v) {
@@ -62,6 +73,8 @@ pub(super) fn run_pline(s: &mut Session, p: &Value) -> Result<Value> {
 #[derive(Default)]
 pub(super) struct LineM {
     pts: Vec<Vec2>,
+    /// The height of each point (typed `x,y,z`; 0 for a point picked or typed in 2D).
+    zs: Vec<f64>,
     handles: Vec<draftcraft_doc::Handle>,
     /// A first point picked as a deferred tangent/perpendicular, resolved by the next point.
     first: Option<snap::Deferred>,
@@ -76,6 +89,7 @@ impl LineM {
         };
         self.handles.push(s.add_entity(line(a, b))?);
         self.pts = vec![a, b];
+        self.zs = vec![0.0, 0.0];
         self.first = None;
         s.last_point = b;
         Ok(Step::Continue)
@@ -108,6 +122,7 @@ impl Interactive for LineM {
                         let e = t + Vec2::new(ang.cos(), ang.sin()) * dist;
                         self.handles.push(s.add_entity(line(t, e))?);
                         self.pts = vec![t, e];
+                        self.zs = vec![0.0, 0.0];
                         s.last_point = e;
                         self.first = None;
                         return Ok(Step::Continue);
@@ -132,13 +147,15 @@ impl Interactive for LineM {
                 None => Ok(Step::Continue),
             },
             Input::Point(p) => {
-                if let Some(last) = self.pts.last().copied() {
-                    if last.near(p, 1e-12) {
+                let z = s.point_z.unwrap_or(0.0);
+                if let (Some(last), Some(lz)) = (self.pts.last().copied(), self.zs.last().copied()) {
+                    if last.near(p, 1e-12) && (lz - z).abs() <= 1e-12 {
                         return Ok(Step::Continue);
                     }
-                    self.handles.push(s.add_entity(line(last, p))?);
+                    self.handles.push(s.add_entity(line3(last.to3(lz), p.to3(z)))?);
                 }
                 self.pts.push(p);
+                self.zs.push(z);
                 Ok(Step::Continue)
             }
             Input::Keyword(k) if k == "Undo" => {
@@ -149,11 +166,13 @@ impl Interactive for LineM {
                     s.doc_mut()?.remove_entity(h);
                 }
                 self.pts.pop();
+                self.zs.pop();
                 Ok(Step::Continue)
             }
             Input::Keyword(k) if k == "Close" => {
                 if let (Some(a), Some(b)) = (self.pts.last().copied(), self.pts.first().copied()) {
-                    s.add_entity(line(a, b))?;
+                    let (az, bz) = (self.zs.last().copied().unwrap_or(0.0), self.zs.first().copied().unwrap_or(0.0));
+                    s.add_entity(line3(a.to3(az), b.to3(bz)))?;
                 }
                 Ok(Step::Done)
             }
@@ -402,5 +421,36 @@ impl Interactive for PlineM {
         } else {
             vec![line(last.p, c)]
         }
+    }
+}
+
+#[cfg(test)]
+mod tests_3d {
+    #![allow(clippy::unwrap_used)]
+    use crate::Session;
+    use draftcraft_doc::EntityKind;
+    use draftcraft_geom::Vec3;
+    use serde_json::json;
+
+    fn lines(s: &Session) -> Vec<(Vec3, Vec3)> {
+        s.state().unwrap().doc.model.iter().filter_map(|e| if let EntityKind::Line(l) = &e.kind { Some((l.a, l.b)) } else { None }).collect()
+    }
+
+    /// LINE takes points in space, typed `x,y,z` and `@dx,dy,dz` or given in JSON, as AutoCAD does.
+    #[test]
+    fn line_takes_points_in_space() {
+        let mut s = Session::new();
+        s.execute("line", &json!({"points": [[0, 0, 0], [0, 0, 50], [10, 0, 50]]})).unwrap();
+        assert_eq!(lines(&s), vec![(Vec3::new(0.0, 0.0, 0.0), Vec3::new(0.0, 0.0, 50.0)), (Vec3::new(0.0, 0.0, 50.0), Vec3::new(10.0, 0.0, 50.0))]);
+        let mut s = Session::new();
+        s.cmdline("line 1,2,3 @0,0,7").unwrap();
+        s.cmdline("").unwrap();
+        assert_eq!(lines(&s), vec![(Vec3::new(1.0, 2.0, 3.0), Vec3::new(1.0, 2.0, 10.0))]);
+        // A hostile JSON point is refused, not drawn.
+        assert!(Session::new().execute("line", &json!({"points": [[0, 0, "x"], [1, 1, 1]]})).is_err());
+        // Points typed as text, as the 2D form takes them, keep working; `x,y,z` keeps its Z.
+        let mut s = Session::new();
+        s.execute("line", &json!({"points": ["0,0", "@10<0", "5,5,9"]})).unwrap();
+        assert_eq!(lines(&s), vec![(Vec3::new(0.0, 0.0, 0.0), Vec3::new(10.0, 0.0, 0.0)), (Vec3::new(10.0, 0.0, 0.0), Vec3::new(5.0, 5.0, 9.0))]);
     }
 }
