@@ -4,8 +4,9 @@ Continues `docs/dwg-handoff.md` (withshalom's PR #15: DraftCraft reads every DWG
 still went through acadrust). This page is the state of the writer that replaced acadrust for
 saving, how to work on it, and what is left.
 
-Branch `dwg-writer`, in the worktree `.claude/worktrees/dwg-writer` of the main checkout. It
-starts from the head of PR #15 (which contains `main` at f6f72215).
+The writer is on main: PR #16 brought it in, and PRs #18 and #19 followed it up. Its ACIS
+records for 3DSOLID, REGION and BODY stay on main with it. Solid modelling and the ACIS
+translator are on the `3D` branch (see `AGENTS.md`).
 
 ## State
 

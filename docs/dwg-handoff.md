@@ -1,4 +1,4 @@
-# DWG and DXF in 3.0.0: handoff
+# DWG and DXF on main (the 2.x releases): handoff
 
 For whoever reviews, tests and patches this work next. The design and the full record of
 findings are in [`dwg.md`](dwg.md); this page is the state today, how to build and test it, and
@@ -11,6 +11,9 @@ what is left.
 - **Writing DWG**: DraftCraft's own writer (`draftcraft_io::dwg::write`, over
   `draftcraft_dwg::compose`), in 2000, 2004, 2007, 2010, 2013 and 2018. Its state is in
   [`dwg-writer-handoff.md`](dwg-writer-handoff.md). acadrust is no longer a dependency.
+- **3D solids**: main reads and writes 3DSOLID, REGION and BODY with their ACIS data as the file
+  holds it (SAT text to 2010, the data store from 2013), but does not model or edit them. Solid
+  modelling, the ACIS translator and the 3D commands are on the `3D` branch (see `AGENTS.md`).
 - **DXF**: linetype element rotations are degrees, as AutoCAD writes them (older DraftCraft files
   are still read as radians); typed table cells show AutoCAD's formatted text.
 
@@ -102,9 +105,25 @@ and the note says saving over the file would lose it.
 
 **Data kept by DXF but not yet by DWG**
 
-- MATERIAL, VISUALSTYLE and the section and detail view styles before 2013; CELLSTYLEMAP,
-  TABLECONTENT, TABLEGEOMETRY.
+- VISUALSTYLE and the section and detail view styles before 2013; CELLSTYLEMAP, TABLECONTENT,
+  TABLEGEOMETRY.
 - A material set ByBlock or on a layer (DXF group 347).
+
+## What an AutoCAD DXF loses when saved as DWG
+
+Measured on 2026-11-18 with `draftcraft-cli roundtrip` in strict mode (`DRAFTCRAFT_CORPUS_STRICT=1`)
+over AutoCAD's 3D test drawings (2000, 2010 and 2018 DXFs, kept on the `3D` branch under
+`crates/io/tests/data/acad-solids/`). Saving each as DWG, with the default options, does not write:
+
+- MATERIAL, in every one of those versions.
+- MESH (subdivision meshes).
+- The surfaces: SURFACE, PLANESURFACE, EXTRUDEDSURFACE, LOFTEDSURFACE, REVOLVEDSURFACE,
+  SWEPTSURFACE, NURBSURFACE.
+- The solids' history and associative objects: ACSH_HISTORY_CLASS and the other ACSH_ types,
+  ACDBPERSSUBENTMANAGER, ACDBASSOCPERSSUBENTMANAGER, ACDBASSOCACTION, ACDBASSOCDEPENDENCY and the
+  other ACDBASSOC types.
+
+3DSOLID, REGION and BODY are kept. DXF to DXF keeps all of the above.
 
 ## Known differences from AutoCAD's DXF
 
