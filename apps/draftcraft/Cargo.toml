@@ -31,6 +31,10 @@ ron = "0.12"
 [build-dependencies]
 winresource = "0.1"
 
+[features]
+# 3D solids (docs/solids.md): off by default; without it nothing changes.
+solids = ["draftcraft-engine/solids", "draftcraft-io/solids", "draftcraft-ui-egui/solids", "draftcraft-mcp/solids"]
+
 [target.'cfg(all(unix, not(target_os = "macos")))'.dependencies]
 winit = { version = "0.30", default-features = false, features = ["x11"] }
 # View ▸ Theme ▸ System: the desktop's light/dark choice from the XDG desktop portal

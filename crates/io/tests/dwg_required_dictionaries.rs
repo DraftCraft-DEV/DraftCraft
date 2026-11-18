@@ -73,15 +73,14 @@ fn value<'a>(vars: &'a [(String, String)], name: &str) -> Option<&'a str> {
     vars.iter().find(|(n, _)| n.eq_ignore_ascii_case(name)).map(|(_, v)| v.as_str())
 }
 
-/// #1813's regression: a DXF written without an `AcDbVariableDictionary` (as ezdxf and DraftCraft
-/// write them) must gain AutoCAD's dictionary when exported as an AC1018 DWG, so readers that
-/// require it see the drawing's contents; the added objects must not break DraftCraft's own read.
+/// #1813's regression: a drawing without an `AcDbVariableDictionary` (as ezdxf writes DXF files,
+/// or one made from scratch) must gain AutoCAD's dictionary when exported as an AC1018 DWG, so
+/// readers that require it see the drawing's contents; the added objects must not break
+/// DraftCraft's own read.
 #[test]
 fn an_ac1018_dwg_gets_the_variable_dictionary_autocad_always_writes() {
     let d = rectangle();
-    let dxf = write_with(&d, "rect.dxf", &SaveOptions { version: Some(Version::R2000), binary: false }).expect("write the DXF");
-    let text = String::from_utf8_lossy(&dxf).to_ascii_lowercase();
-    assert!(!text.contains("acdbvariabledictionary"), "this DXF is one without the dictionary, like ezdxf's");
+    assert!(d.variables.is_empty(), "this drawing is one without the dictionary, like ezdxf's DXF");
 
     let dwg = write_with(&d, "rect.dwg", &SaveOptions { version: Some(Version::R2004), binary: false }).expect("write the DWG");
     assert!(dwg.starts_with(b"AC1018"), "the DWG is AutoCAD 2004");

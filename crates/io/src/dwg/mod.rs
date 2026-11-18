@@ -11,7 +11,7 @@
 
 mod blocks;
 mod carry;
-mod data_store;
+pub(crate) mod data_store;
 mod dynblock;
 mod entities;
 mod header;
@@ -190,6 +190,8 @@ pub fn read(bytes: &[u8]) -> Result<(Drawing, Unread)> {
     }
     // A block reference's clip, from the kept filter objects, as the DXF reader takes it.
     crate::dxf_clip::read(&mut d);
+    #[cfg(feature = "solids")]
+    crate::solid_file::recover(&mut d);
     for o in &objects {
         if !done.contains(&o.handle) && !carried.contains(&o.handle) {
             unread.count(&o.type_name);

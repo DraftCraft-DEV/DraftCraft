@@ -125,31 +125,67 @@ impl Region {
     }
 
     /// Area, perimeter, bounding box, centroid and second moments (outer loops counted
-    /// counter-clockwise, islands clockwise).
+    /// counter-clockwise, islands clockwise), exact: each edge's chord, and each arc's circular
+    /// segment between its chord and the arc, as MASSPROP gives them.
     pub fn props(&self) -> RegionProps {
-        let tol = self.fine_tol();
-        let (mut a, mut cx, mut cy, mut ixx, mut iyy, mut ixy) = (0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-        for (l, pts) in self.loops.iter().zip(self.tessellate(tol)) {
-            let signed = draftcraft_geom::shoelace(&pts);
+        // [area, ∫x, ∫y, ∫y², ∫x², ∫xy]
+        let mut m = [0.0f64; 6];
+        for l in &self.loops {
+            let signed = Polyline { vertices: l.vertices.clone(), closed: true }.area();
             // Outer loops add, islands subtract, whatever way they run.
             let flip = if (signed >= 0.0) == l.outer { 1.0 } else { -1.0 };
-            let n = pts.len();
+            let n = l.vertices.len();
             for i in 0..n {
-                let (Some(p), Some(q)) = (pts.get(i), pts.get((i + 1) % n)) else { continue };
+                let (Some(v), Some(w)) = (l.vertices.get(i), l.vertices.get((i + 1) % n)) else { continue };
+                let (p, q) = (v.p, w.p);
                 let c = (p.x * q.y - q.x * p.y) * flip;
-                a += c / 2.0;
-                cx += (p.x + q.x) * c / 6.0;
-                cy += (p.y + q.y) * c / 6.0;
-                ixx += (p.y * p.y + p.y * q.y + q.y * q.y) * c / 12.0;
-                iyy += (p.x * p.x + p.x * q.x + q.x * q.x) * c / 12.0;
-                ixy += (p.x * q.y + 2.0 * p.x * p.y + 2.0 * q.x * q.y + q.x * p.y) * c / 24.0;
+                m[0] += c / 2.0;
+                m[1] += (p.x + q.x) * c / 6.0;
+                m[2] += (p.y + q.y) * c / 6.0;
+                m[3] += (p.y * p.y + p.y * q.y + q.y * q.y) * c / 12.0;
+                m[4] += (p.x * p.x + p.x * q.x + q.x * q.x) * c / 12.0;
+                m[5] += (p.x * q.y + 2.0 * p.x * p.y + 2.0 * q.x * q.y + q.x * p.y) * c / 24.0;
+                if let Some((arc, ccw)) = draftcraft_geom::bulge_to_arc(p, q, v.bulge) {
+                    let s = segment(arc.center, arc.radius, arc.start, arc.sweep());
+                    let k = if ccw { flip } else { -flip };
+                    for (acc, x) in m.iter_mut().zip(s) {
+                        *acc += k * x;
+                    }
+                }
             }
         }
+        let [a, cx, cy, ixx, iyy, ixy] = m;
         let c = if a.abs() > 1e-300 { Vec2::new(cx / a, cy / a) } else { Vec2::ZERO };
-        // Shifted with the area of the same outline the moments were taken from.
         let centroid_moments = [ixx - a * c.y * c.y, iyy - a * c.x * c.x, ixy - a * c.x * c.y];
         RegionProps { area: self.area(), perimeter: self.perimeter(), bounds: self.bounds(), centroid: c, ixx, iyy, ixy, centroid_moments }
     }
+}
+
+/// The circular segment between an arc (centre, radius, counter-clockwise from angle `start`
+/// through `sweep`) and its chord: [area, ∫x, ∫y, ∫y², ∫x², ∫xy] over it. Worked out in the
+/// frame of the arc's middle (u from the centre towards it, v across) as the sector less the
+/// triangle of the centre and the chord, then moved to the drawing's axes.
+fn segment(center: Vec2, r: f64, start: f64, sweep: f64) -> [f64; 6] {
+    let half = sweep / 2.0;
+    let mid = start + half;
+    let (e, f) = (Vec2::new(mid.cos(), mid.sin()), Vec2::new(-mid.sin(), mid.cos()));
+    let (sa, ca) = half.sin_cos();
+    let (r2, r4) = (r * r, r * r * r * r);
+    // The centre-and-chord triangle's area (negative past a half turn: the segment then holds it).
+    let t = r2 * sa * ca;
+    let area = r2 * (sweep - sweep.sin()) / 2.0;
+    let su = 2.0 / 3.0 * r * r2 * sa * sa * sa;
+    let suu = r4 / 8.0 * (sweep + sweep.sin()) - t * r2 * ca * ca / 2.0;
+    let svv = r4 / 8.0 * (sweep - sweep.sin()) - t * r2 * sa * sa / 6.0;
+    let (x0, y0) = (center.x, center.y);
+    [
+        area,
+        x0 * area + e.x * su,
+        y0 * area + e.y * su,
+        y0 * y0 * area + 2.0 * y0 * e.y * su + e.y * e.y * suu + f.y * f.y * svv,
+        x0 * x0 * area + 2.0 * x0 * e.x * su + e.x * e.x * suu + f.x * f.x * svv,
+        x0 * y0 * area + (x0 * e.y + y0 * e.x) * su + e.x * e.y * suu + f.x * f.y * svv,
+    ]
 }
 
 /// A point of a loop to test its nesting with: the middle of its first non-degenerate edge.
@@ -192,5 +228,35 @@ mod tests {
         let before = r.clone();
         assert!(!r.renest());
         assert_eq!(r, before, "flags left as they were");
+    }
+
+    #[test]
+    fn mass_properties_are_exact_on_arcs() {
+        // AutoCAD 2027's MASSPROP of the same regions (crates/io/tests/data/acad-solids/README-regions.md):
+        // area, centroid, moments of inertia about X and Y, four decimals.
+        let p = |x: f64, y: f64, b: f64| PolyVertex::with_bulge(Vec2::new(x, y), b);
+        let slot = Region::from_loop(vec![p(500.0, 0.0, 0.0), p(600.0, 0.0, 0.0), p(600.0, 60.0, 1.0), p(500.0, 60.0, 0.0)]);
+        let disc = Region::from_loop(vec![p(170.0, 30.0, 1.0), p(230.0, 30.0, 1.0)]);
+        let plate = Region {
+            loops: vec![
+                HatchLoop {
+                    vertices: vec![p(300.0, 0.0, 0.0), p(400.0, 0.0, 0.0), p(400.0, 60.0, 0.0), p(300.0, 60.0, 0.0)],
+                    outer: true,
+                    sources: Vec::new(),
+                },
+                // The hole runs counter-clockwise too: its flag says it takes area away.
+                HatchLoop { vertices: vec![p(335.0, 30.0, 1.0), p(365.0, 30.0, 1.0)], outer: false, sources: Vec::new() },
+            ],
+        };
+        for (r, area, c, ixx, iyy) in [
+            (slot, 9926.9908, [550.0, 50.2622], 33791536.2018, 3010369091.3993),
+            (disc, 2827.4334, [200.0, 30.0], 3180862.5618, 113733508.0416),
+            (plate, 5293.1417, [350.0, 30.0], 6524066.7056, 653370091.7034),
+        ] {
+            let m = r.props();
+            let near = |a: f64, b: f64| (a - b).abs() <= 1e-4 + 1e-12 * b.abs();
+            assert!(near(m.area, area) && near(m.centroid.x, c[0]) && near(m.centroid.y, c[1]), "{m:?}");
+            assert!(near(m.ixx, ixx) && near(m.iyy, iyy), "{m:?}");
+        }
     }
 }

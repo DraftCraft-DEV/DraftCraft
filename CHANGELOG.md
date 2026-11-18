@@ -17,6 +17,14 @@ How to write it (see AGENTS.md):
 - AREATOTAL (Home › Utilities › Total Area): select objects to get their total area and perimeter and the total length of the open ones, with how many were measured; the totals can be placed in the drawing as text. AREA also totals several objects at once from scripts and agents, with objects to subtract.
 - The Properties palette shows the Rho of a selected conic arc (an ellipse, parabola or hyperbola piece drawn with CONIC, or any spline of that shape) under Geometry, and typing a new value between 0 and 1 reshapes it; with several conics selected it shows their common Rho.
 
+### Improved
+- The Workspace button on the status bar opens a menu of the workspaces, as on Windows, with the current one checked.
+- The workspace menus show 3D Modeling greyed out, with a note that 3D solids are not available in this build yet.
+
+### Fixed
+- AutoCAD no longer reports an unknown header variable $CTABLESTYLE when it opens a DXF file saved by DraftCraft: the current table style is saved where AutoCAD keeps it.
+- MASSPROP gives a region's exact centroid and moments of inertia when it has arcs, the same as AutoCAD (they were measured on a fine polygon before).
+
 ## 3.0.0
 
 ### New

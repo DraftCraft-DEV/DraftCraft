@@ -370,9 +370,39 @@ pub fn parse_point_with(text: &str, last: Vec2, angles: &crate::units::AngleSett
     r.is_finite().then_some(r)
 }
 
+/// The Z of a point typed with three coordinates: `x,y,z` gives `z`, `@dx,dy,dz` gives
+/// `last_z + dz`; `None` for any other point.
+pub fn typed_z(text: &str, last_z: f64) -> Option<f64> {
+    let t = text.trim();
+    let t = t.strip_prefix('*').map_or(t, str::trim_start);
+    let (rel, body) = match t.strip_prefix('@') {
+        Some(b) => (true, b.trim()),
+        None => (false, t.strip_prefix('#').unwrap_or(t).trim()),
+    };
+    let body = body.strip_prefix('*').map_or(body, str::trim_start);
+    if body.contains('<') {
+        return None;
+    }
+    let parts: Vec<&str> = body.split(',').collect();
+    let z = crate::units::parse_distance(parts.get(2).filter(|_| parts.len() == 3)?)?;
+    let z = if rel { last_z + z } else { z };
+    z.is_finite().then_some(z)
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn typed_heights() {
+        assert_eq!(typed_z("1,2,3", 9.0), Some(3.0));
+        assert_eq!(typed_z("@1,2,3", 9.0), Some(12.0));
+        assert_eq!(typed_z("#1,2,-4", 9.0), Some(-4.0));
+        assert_eq!(typed_z("1,2", 9.0), None);
+        assert_eq!(typed_z("5<30", 9.0), None);
+        assert_eq!(typed_z("1,2,x", 9.0), None);
+        assert_eq!(typed_z("1,2,1e400", 9.0), None);
+    }
 
     #[test]
     fn points() {

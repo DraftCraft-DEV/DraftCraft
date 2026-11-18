@@ -35,6 +35,7 @@ const MODELLED_KEYS: &[&str] = &[
     "ACAD_IMAGE_DICT",
     "ACAD_IMAGE_VARS",
     "ACAD_PDFDEFINITIONS",
+    "ACDBVARIABLEDICTIONARY",
 ];
 
 /// Extension dictionary entries not kept raw: dimension associativity (DraftCraft reads and
@@ -644,6 +645,10 @@ pub(crate) fn strip_entries(tags: &mut Vec<RawTag>) {
 /// An entity of a type DraftCraft doesn't model, as read, with its handle, owner, space and layer
 /// from the drawing. Its reactors, extension dictionary and xdata are added by [`finish`] (they
 /// are kept with the drawing's other foreign data); its references are remapped there too.
+/// One whose groups lack the `AcDbEntity` subclass marker (read from a DWG file, or made by
+/// DraftCraft, such as a 3DSOLID saved from a solid) gains it before its space and layer:
+/// AutoCAD discards a DXF file whose entity has none ("Era previsto il separatore di
+/// classificazione per la classificazione AcDbEntity").
 pub(crate) fn unknown_entity(u: &Unknown, e: &Entity, owner: &str, paper: bool) -> Vec<Tag> {
     let kind = up(&u.dxf_type);
     if STRUCTURAL.contains(&kind.as_str()) || u.dxf_type.trim() != u.dxf_type {
@@ -655,6 +660,7 @@ pub(crate) fn unknown_entity(u: &Unknown, e: &Entity, owner: &str, paper: bool) 
     let mut owner_seen = false;
     let mut layer = false;
     let mut paper_done = !paper;
+    let marked = u.tags.iter().take_while(|r| r.code < 1000).any(|r| r.code == 100 && r.value.trim() == "AcDbEntity");
     for r in u.tags.iter().take_while(|r| r.code < 1000) {
         match r.code {
             102 => {
@@ -681,6 +687,9 @@ pub(crate) fn unknown_entity(u: &Unknown, e: &Entity, owner: &str, paper: bool) 
         }
     }
     let mut lead = Vec::new();
+    if !marked {
+        lead.push(Tag::s(100, "AcDbEntity"));
+    }
     if !paper_done {
         lead.push(Tag::i(67, 1));
     }

@@ -17,6 +17,17 @@ use crate::theme::Tokens;
 
 /// The built-in workspace: DraftCraft's default layout, which can't be renamed or deleted.
 pub const BUILT_IN: &str = "2D Drafting";
+/// The built-in workspaces: 2D Drafting, and 3D Modeling when DraftCraft is built with solids
+/// (its ribbon puts the 3D tabs first, as AutoCAD's does).
+pub fn built_ins() -> &'static [&'static str] {
+    if cfg!(feature = "solids") { &[BUILT_IN, crate::ribbon::WORKSPACE_3D] } else { &[BUILT_IN] }
+}
+
+/// The built-in workspace named `name` (any case), as it is spelled.
+pub fn built_in(name: &str) -> Option<&'static str> {
+    built_ins().iter().copied().find(|b| b.eq_ignore_ascii_case(name))
+}
+
 /// Most saved workspaces, and most Quick Access Toolbar commands.
 const MAX_WORKSPACES: usize = 50;
 pub(crate) const MAX_QAT: usize = 40;
@@ -84,9 +95,29 @@ fn clip(s: &str) -> String {
     s.chars().filter(|c| !c.is_control()).take(MAX_NAME).collect::<String>().trim().to_string()
 }
 
-/// The workspaces' names, the built-in one first.
+/// The workspaces' names, the built-in ones first. A saved workspace named as a built-in one (a
+/// "3D Modeling" saved by a DraftCraft built without solids) is that built-in one's layout, listed
+/// once.
 pub fn names(app: &CadApp) -> Vec<String> {
-    std::iter::once(BUILT_IN.to_string()).chain(app.ui.workspaces.iter().map(|w| w.name.clone())).collect()
+    built_ins()
+        .iter()
+        .map(|b| b.to_string())
+        .chain(app.ui.workspaces.iter().filter(|w| built_in(&w.name).is_none()).map(|w| w.name.clone()))
+        .collect()
+}
+
+/// The 3D Modeling workspace when this build has no 3D solids (the browser build) and no saved
+/// workspace of that name: the workspace menus show it greyed out, saying why.
+pub fn unavailable(app: &CadApp) -> Option<&'static str> {
+    (!cfg!(feature = "solids") && find(app, crate::ribbon::WORKSPACE_3D).is_none()).then_some(crate::ribbon::WORKSPACE_3D)
+}
+
+/// Show [`unavailable`]'s workspace, if any, greyed out in a workspace menu.
+pub fn show_unavailable(app: &CadApp, ui: &mut egui::Ui) {
+    if let Some(n) = unavailable(app) {
+        ui.add_enabled(false, egui::Button::selectable(false, crate::i18n::t(n)))
+            .on_disabled_hover_text(crate::tl!("3D solids are not available in this build."));
+    }
 }
 
 /// The current workspace's name.
@@ -104,9 +135,11 @@ fn listing(app: &CadApp) -> Value {
 
 /// Make `name` current: lay the interface out as it was saved.
 pub fn set_current(app: &mut CadApp, name: &str) -> Result<Value, String> {
-    if name.eq_ignore_ascii_case(BUILT_IN) {
-        SavedWorkspace::default().apply(&mut app.ui);
-        app.ui.current_workspace = BUILT_IN.into();
+    if let Some(b) = built_in(name) {
+        // A saved workspace of that name is its layout; otherwise the default one.
+        let saved = find(app, b).and_then(|i| app.ui.workspaces.get(i).cloned());
+        saved.unwrap_or_default().apply(&mut app.ui);
+        app.ui.current_workspace = b.into();
     } else {
         let i = find(app, name).ok_or_else(|| format!("no workspace \"{name}\""))?;
         let w = app.ui.workspaces.get(i).cloned().ok_or("no such workspace")?;
@@ -124,8 +157,8 @@ pub fn save_as(app: &mut CadApp, name: &str) -> Result<Value, String> {
     if name.is_empty() {
         return Err("a workspace needs a name".into());
     }
-    if name.eq_ignore_ascii_case(BUILT_IN) {
-        return Err(format!("\"{BUILT_IN}\" is the built-in workspace: save under another name"));
+    if let Some(b) = built_in(&name) {
+        return Err(format!("\"{b}\" is a built-in workspace: save under another name"));
     }
     let w = SavedWorkspace::capture(&name, &app.ui);
     match find(app, &name) {
@@ -162,8 +195,8 @@ pub fn command(app: &mut CadApp, id: &str, p: &Value) -> Result<Value, String> {
         "rename" => {
             let from = name()?;
             let to = s("to").filter(|n| !n.is_empty()).ok_or("`to` is the new name")?;
-            if from.eq_ignore_ascii_case(BUILT_IN) || to.eq_ignore_ascii_case(BUILT_IN) {
-                return Err(format!("\"{BUILT_IN}\" is the built-in workspace"));
+            if let Some(b) = built_in(&from).or_else(|| built_in(&to)) {
+                return Err(format!("\"{b}\" is a built-in workspace"));
             }
             if find(app, &to).is_some_and(|j| Some(j) != find(app, &from)) {
                 return Err(format!("a workspace is already named \"{to}\""));
@@ -179,8 +212,9 @@ pub fn command(app: &mut CadApp, id: &str, p: &Value) -> Result<Value, String> {
         }
         "delete" => {
             let n = name()?;
-            if n.eq_ignore_ascii_case(BUILT_IN) {
-                return Err(format!("\"{BUILT_IN}\" is the built-in workspace"));
+            // A built-in workspace stays; a saved layout of its name can go.
+            if let Some(b) = built_in(&n).filter(|_| find(app, &n).is_none()) {
+                return Err(format!("\"{b}\" is a built-in workspace"));
             }
             if n.eq_ignore_ascii_case(&current(app)) {
                 return Err("the current workspace can't be deleted: make another current first".into());
@@ -283,7 +317,7 @@ pub fn dialog(app: &mut CadApp, ctx: &egui::Context, open: &mut bool) {
                 {
                     todo.push(("workspace", json!({ "operation": "setCurrent", "name": n })));
                 }
-                let deletable = sel.as_deref().is_some_and(|n| n != BUILT_IN && n != cur);
+                let deletable = sel.as_deref().is_some_and(|n| (built_in(n).is_none() || find(app, n).is_some()) && n != cur);
                 if ui.add_enabled(deletable, egui::Button::new(crate::tl!("Delete"))).clicked()
                     && let Some(n) = &sel
                 {
@@ -297,7 +331,7 @@ pub fn dialog(app: &mut CadApp, ctx: &egui::Context, open: &mut bool) {
                 if ui.add_enabled(named, egui::Button::new(crate::tl!("Save Current As"))).clicked() {
                     todo.push(("workspace", json!({ "operation": "saveAs", "name": st.new_name.trim() })));
                 }
-                let renamable = named && sel.as_deref().is_some_and(|n| n != BUILT_IN);
+                let renamable = named && sel.as_deref().is_some_and(|n| built_in(n).is_none());
                 if ui.add_enabled(renamable, egui::Button::new(crate::tl!("Rename"))).clicked()
                     && let Some(n) = &sel
                 {

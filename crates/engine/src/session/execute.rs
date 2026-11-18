@@ -88,6 +88,22 @@ impl Session {
         result
     }
 
+    /// Run `f` as one change: when it fails, the drawing and the selection go back to how they
+    /// were, so a command working through several objects never leaves part of its work done
+    /// (EXTRUDE of several profiles, SLICE of several solids, SUBTRACT of solids and regions).
+    pub(crate) fn all_or_nothing<T>(&mut self, f: impl FnOnce(&mut Session) -> Result<T>) -> Result<T> {
+        let before = self.state().ok().map(|s| (s.doc.clone(), s.selection.clone(), s.uid));
+        let r = f(self);
+        if r.is_err()
+            && let Some((doc, sel, uid)) = before
+            && let Some(st) = self.docs.iter_mut().find(|d| d.uid == uid)
+        {
+            st.doc = doc;
+            st.selection = sel;
+        }
+        r
+    }
+
     /// Bump the revision without an undo step (view-only or settings changes that redraw).
     pub fn touch(&mut self) {
         if let Ok(st) = self.state_mut() {

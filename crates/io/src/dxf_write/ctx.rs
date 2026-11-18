@@ -38,6 +38,8 @@ pub(super) struct Ctx {
     pub(super) arrows: HashMap<String, String>,
     /// Upper-case linetype name → LTYPE record handle (DIMLTYPE, DIMLTEX1, DIMLTEX2).
     pub(super) ltypes: HashMap<String, String>,
+    /// 3D solid → the handles of its extension dictionary and record (`solid_file`).
+    pub(super) solids: HashMap<Handle, (String, String)>,
     /// Associative dimension → its DIMASSOC object.
     pub(super) assoc: HashMap<Handle, AssocObj>,
     /// Table → (anonymous `*T` block name, BLOCK_RECORD handle).

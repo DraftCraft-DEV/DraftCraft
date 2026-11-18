@@ -36,6 +36,8 @@ fn yes() -> bool {
 }
 mod region;
 pub use region::*;
+mod solid3d;
+pub use solid3d::{Solid3d, SolidLook};
 
 mod block;
 mod common;
@@ -88,6 +90,9 @@ pub enum EntityKind {
     Face3d(Face3d),
     PolyfaceMesh(PolyfaceMesh),
     Region(Region),
+    /// A 3D solid made in DraftCraft (docs/solids.md); a solid from another program's file is
+    /// [`EntityKind::Unknown`] (its ACIS data kept as read).
+    Solid3d(Solid3d),
     Viewport(Viewport),
     Image(Image),
     Wipeout(Wipeout),
@@ -143,6 +148,7 @@ impl EntityKind {
             EntityKind::Face3d(_) => "3D Face",
             EntityKind::PolyfaceMesh(_) => "Polyface Mesh",
             EntityKind::Region(_) => "Region",
+            EntityKind::Solid3d(_) => "3D Solid",
             EntityKind::Viewport(_) => "Viewport",
             EntityKind::Image(i) if i.underlay.is_some() => "PDF Underlay",
             EntityKind::Image(_) => "Raster Image",
@@ -180,6 +186,8 @@ impl EntityKind {
             EntityKind::Face3d(_) => "3DFACE",
             EntityKind::PolyfaceMesh(_) => "POLYLINE",
             EntityKind::Region(_) => "REGION",
+            EntityKind::Solid3d(s) if s.body_entity => "BODY",
+            EntityKind::Solid3d(_) => "3DSOLID",
             EntityKind::Viewport(_) => "VIEWPORT",
             EntityKind::Image(i) if i.underlay.is_some() => "PDFUNDERLAY",
             EntityKind::Image(_) => "IMAGE",
@@ -225,6 +233,7 @@ impl EntityKind {
             }
             EntityKind::Face3d(f) => f.visible_edges().into_iter().map(|(a, b)| Prim::Seg(Segment::Line(GLine::new(a.xy(), b.xy())))).collect(),
             // Each face's visible edges (an edge flagged hidden, by a negative index, isn't drawn).
+            EntityKind::Solid3d(s) => s.plan_segments().into_iter().map(|(a, b)| Prim::Seg(Segment::Line(GLine::new(a, b)))).collect(),
             EntityKind::PolyfaceMesh(m) => {
                 m.faces3d().iter().flat_map(Face3d::visible_edges).map(|(a, b)| Prim::Seg(Segment::Line(GLine::new(a.xy(), b.xy())))).collect()
             }
@@ -434,6 +443,7 @@ impl EntityKind {
             EntityKind::Solid(so) | EntityKind::Trace(so) => so.corners.iter_mut().for_each(t3),
             EntityKind::Face3d(f) => f.corners.iter_mut().for_each(t3),
             EntityKind::PolyfaceMesh(pm) => pm.vertices.iter_mut().for_each(t3),
+            EntityKind::Solid3d(so) => so.transform(m),
             EntityKind::Region(r) => {
                 for v in r.loops.iter_mut().flat_map(|l| l.vertices.iter_mut()) {
                     v.p = m.apply(v.p);
@@ -553,6 +563,7 @@ impl EntityKind {
             EntityKind::Solid(so) | EntityKind::Trace(so) => so.corners.iter_mut().for_each(z),
             EntityKind::Face3d(fc) => fc.corners.iter_mut().for_each(z),
             EntityKind::PolyfaceMesh(m) => m.vertices.iter_mut().for_each(z),
+            EntityKind::Solid3d(so) => so.scale_heights(base_z, f),
             EntityKind::Viewport(v) => z(&mut v.center),
             EntityKind::Image(i) => z(&mut i.insert),
             EntityKind::Table(t) => z(&mut t.insert),
@@ -623,6 +634,8 @@ impl EntityKind {
             EntityKind::Solid(s) | EntityKind::Trace(s) => s.corners.iter().map(|c| c.xy()).collect(),
             EntityKind::Face3d(f) => f.corners.iter().map(|c| c.xy()).collect(),
             EntityKind::PolyfaceMesh(m) => m.vertices.iter().map(|v| v.xy()).collect(),
+            // AutoCAD's grip on a solid is at its centroid; ours at its placement's origin.
+            EntityKind::Solid3d(so) => vec![so.world(Vec3::ZERO).xy()],
             EntityKind::Region(r) => vec![r.bounds().center()],
             EntityKind::Viewport(v) => {
                 let c = v.center.xy();

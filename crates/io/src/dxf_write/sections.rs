@@ -331,6 +331,7 @@ fn write_classes(w: &mut W, cx: &Ctx, every: &[&Entity]) {
         ("MLEADERSTYLE", "AcDbMLeaderStyle", 4095, false),
         ("ACDBDICTIONARYWDFLT", "AcDbDictionaryWithDefault", 0, false),
         ("ACDBPLACEHOLDER", "AcDbPlaceHolder", 0, false),
+        ("DICTIONARYVAR", "AcDbDictionaryVar", 0, false),
     ];
     if !cx.tables.is_empty() {
         classes.push(("ACAD_TABLE", "AcDbTable", 1025, true));
@@ -717,6 +718,46 @@ fn write_named_objects(w: &mut W, plan: &ObjectWritePlan<'_>) {
     scale_list(w, scales, scale_dict, root_dict);
 }
 
+/// Each 3D solid's extension dictionary and its record of the exact body (`solid_file`).
+fn write_solid_records(w: &mut W, d: &Drawing, cx: &Ctx) {
+    let stores = std::iter::once(&d.model).chain(d.layouts.iter().map(|l| &l.entities)).chain(d.blocks.values().map(|b| &b.entities));
+    let mut solids: Vec<(&Entity, &draftcraft_doc::Solid3d)> = Vec::new();
+    for st in stores {
+        for e in st.iter() {
+            if let EntityKind::Solid3d(so) = &e.kind {
+                solids.push((e, so));
+            }
+        }
+    }
+    for (e, so) in solids {
+        let Some((xdict, rec)) = cx.solids.get(&e.handle) else { continue };
+        let eh = e.handle.hex();
+        w.s(0, "DICTIONARY");
+        w.s(5, xdict.clone());
+        w.group("ACAD_REACTORS", 330, &[&eh]);
+        w.s(330, eh);
+        w.s(100, "AcDbDictionary");
+        w.i(280, 1);
+        w.i(281, 1);
+        w.s(3, crate::solid_file::KEY);
+        w.s(360, rec.clone());
+        w.s(0, "XRECORD");
+        w.s(5, rec.clone());
+        w.group("ACAD_REACTORS", 330, &[xdict]);
+        w.s(330, xdict.clone());
+        w.s(100, "AcDbXrecord");
+        w.i(280, 1);
+        let parts = crate::solid_file::meshes(so);
+        for (code, v) in crate::solid_file::record_groups(so, &parts) {
+            match v {
+                crate::solid_file::Value::S(s) => w.s(code, s),
+                crate::solid_file::Value::I(i) => w.i(code, i),
+                crate::solid_file::Value::F(f) => w.f(code, f),
+            }
+        }
+    }
+}
+
 fn write_associative_objects(w: &mut W, cx: &Ctx) {
     // Dimension associativity: extension dictionary + DIMASSOC per dimension.
     let mut assoc: Vec<(&Handle, &AssocObj)> = cx.assoc.iter().collect();
@@ -772,6 +813,7 @@ fn write_objects(w: &mut W, plan: ObjectWritePlan<'_>) {
     write_style_objects(w, &plan, &mleader_dict, &mleader_handles);
     write_named_objects(w, &plan);
     write_associative_objects(w, plan.cx);
+    write_solid_records(w, plan.d, plan.cx);
     write_layout_objects(w, &plan);
     // Raster image definitions.
     w.t.extend(crate::dxf_image::objects(&plan.cx.images, plan.root_dict));
@@ -986,6 +1028,13 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
     cx.underlays = crate::dxf_underlay::plan(every.iter().copied(), || w.h());
     cx.mlines = crate::dxf_mline::plan(d, every.iter().copied(), || w.h());
     plan_dimension_associations(d, &all_spaces, &mut w, &mut cx);
+    for e in &every {
+        if let EntityKind::Solid3d(so) = &e.kind
+            && !so.body.is_empty()
+        {
+            cx.solids.insert(e.handle, (w.h(), w.h()));
+        }
+    }
     let default_table_style = [TableStyle::default()];
     let table_styles: &[TableStyle] = if d.table_styles.is_empty() { &default_table_style } else { &d.table_styles };
     cx.table_styles = table_styles.iter().map(|s| (s.name.clone(), w.h())).collect();
@@ -1173,12 +1222,28 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
     // Only a DXF declares the version it is written for: the DWG bridge writes R2000 text for the
     // DWG writer, which keeps SAT-text solids (#2334).
     crate::dxf_raw::finish(&mut w.t, d, &w.reactors, version >= Version::R2013);
+    // AutoCAD's drawing variables dictionary: the current table style is there, not in the
+    // header, which has no $CTABLESTYLE in AutoCAD's DXF.
+    crate::dwg::write::add_variable_dictionary(&mut w.t, d);
+    raise_handseed(&mut w.t);
     // A DWG of AutoCAD 2004 to 2010 (`dwg_records` declares 2000 for any DWG) holds the binary
     // ACIS in the entity itself: the DWG writer takes it from the section.
     crate::dxf_raw::data_store(&mut w.t, d, target >= Version::R2013 || target > version);
     add_class_instance_counts(&mut w.t, target);
     mark_xrefs(&mut w.t, d);
     w.t
+}
+
+/// Raise `$HANDSEED` above every handle the records use (the variables dictionary is numbered
+/// after the seed was set).
+fn raise_handseed(tags: &mut [Tag]) {
+    let top = tags.iter().filter(|t| t.code == 5 || t.code == 105).filter_map(|t| u64::from_str_radix(t.str().trim(), 16).ok()).max().unwrap_or(0);
+    let Some(at) = tags.iter().position(|t| t.code == 9 && t.str() == "$HANDSEED") else { return };
+    let Some(seed) = tags.get_mut(at.saturating_add(1)) else { return };
+    let current = u64::from_str_radix(seed.str().trim(), 16).unwrap_or(0);
+    if top >= current {
+        *seed = Tag::s(5, format!("{:X}", top.saturating_add(1)));
+    }
 }
 
 /// DXF Reference group 91 of CLASS records, the instance count, which came with the 2004 format.

@@ -301,7 +301,7 @@ fn probe_header() {
 
 /// A region's SAT text comes back as written in every version that keeps it in the entity:
 /// lines over 255 characters (continued in groups 3), carets, and more text than one 4096-byte
-/// block holds; the end-of-data line is left out, as AutoCAD stores it.
+/// block holds, and the end-of-data line (kept: a SAT whose header gives no record count needs it).
 #[test]
 fn sat_text_survives_the_dwg_versions_that_hold_it() {
     let long: String = "kooo ".repeat(80);
@@ -332,9 +332,9 @@ fn sat_text_survives_the_dwg_versions_that_hold_it() {
         }
         lines
     };
-    let mut want = sat(&d);
+    // Every line comes back, the end-of-data line included.
+    let want = sat(&d);
     assert!(want.iter().map(String::len).sum::<usize>() > 4096);
-    want.pop();
     for v in [crate::Version::R2000, crate::Version::R2004, crate::Version::R2010] {
         let dwg = crate::write_with(&d, "x.dwg", &crate::SaveOptions { version: Some(v), binary: false }).expect("write");
         let back = crate::read(&dwg, "x.dwg").expect("read");

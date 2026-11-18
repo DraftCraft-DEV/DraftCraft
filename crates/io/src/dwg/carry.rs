@@ -500,6 +500,19 @@ fn model(src: &Source, dec: &Decoded, d: &mut Drawing, unread: &mut Unread) -> H
         Some(out)
     };
     crate::dxf_read::apply_own_records(d, &text);
+    // AutoCAD's drawing variables dictionary, as the DXF reader takes it (its objects are rebuilt
+    // on save).
+    if let Some(vars) = entry(crate::dxf_read::VARIABLES_KEY).and_then(dictionary) {
+        let vars = vars
+            .entries
+            .iter()
+            .filter_map(|(name, h)| match objs.get(&h.0).and_then(|o| o.value.as_ref()) {
+                Some(NonGraphic::DictionaryVar { value, .. }) => Some((name.clone(), value.clone())),
+                _ => None,
+            })
+            .collect();
+        crate::dxf_read::apply_variables(d, vars);
+    }
     // A file DraftCraft wrote names its own next handle (#495), as the DXF reader takes it.
     if let Some(seed) = text(crate::dxf_ext::HANDSEED_KEY).and_then(|t| Handle::parse_hex(t.trim())) {
         d.bump_handseed(Handle(seed.0.saturating_sub(1)));

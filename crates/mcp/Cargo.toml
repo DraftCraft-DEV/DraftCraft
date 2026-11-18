@@ -18,6 +18,10 @@ log = { workspace = true }
 # Secure randomness for the per-session control token (MIT OR Apache-2.0).
 getrandom = "0.4"
 
+[features]
+# 3D solids (docs/solids.md): off by default; without it nothing changes.
+solids = ["draftcraft-engine/solids", "draftcraft-io/solids"]
+
 [dev-dependencies]
 # Reads the pixels of rendered PNGs in the tests.
 tiny-skia = { workspace = true }
