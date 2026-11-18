@@ -18,6 +18,7 @@ How to write it (see AGENTS.md):
 - The Properties palette shows the Rho of a selected conic arc (an ellipse, parabola or hyperbola piece drawn with CONIC, or any spline of that shape) under Geometry, and typing a new value between 0 and 1 reshapes it; with several conics selected it shows their common Rho.
 
 ### Fixed
+- DWG: the materials AutoCAD 2027 puts in every drawing (ByLayer, ByBlock and Global) are kept when a DXF file from it is saved as DWG and when one of its DWG files is opened; before, they were left out.
 - AutoCAD no longer reports an unknown header variable $CTABLESTYLE when it opens a DXF file saved by DraftCraft: the current table style is saved where AutoCAD keeps it.
 
 ## 3.0.0

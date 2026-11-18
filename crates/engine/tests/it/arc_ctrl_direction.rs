@@ -116,7 +116,8 @@ fn no_ctrl_is_the_old_behavior() {
 /// Same angle modulo a full turn.
 fn same_angle(a: f64, b: f64) -> bool {
     let d = (a - b).rem_euclid(std::f64::consts::TAU);
-    d < 1e-9 || d > std::f64::consts::TAU - 1e-9
+    // The distance to the nearest full turn (false for NaN, as before).
+    d.min(std::f64::consts::TAU - d) < 1e-9
 }
 
 /// Types each input at the command line, holding Ctrl (or not) for the last one, and returns

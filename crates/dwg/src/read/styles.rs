@@ -14,7 +14,6 @@
 
 use super::streams::Streams;
 use super::version::DwgVersion as V;
-use crate::bits::BitReader;
 use crate::compose::{FieldRef as Ref, ObjW};
 use crate::read::error::{Error, Result};
 use crate::read::geom::Vec3;
@@ -1266,41 +1265,72 @@ fn encode_dimassoc(w: &mut ObjW, g: &Groups) -> Result<()> {
 // MATERIAL
 // ---------------------------------------------------------------------------
 
-/// A material's record between its name and its six map transforms, and
-/// after the last, as AutoCAD writes its default materials (ByLayer,
-/// ByBlock, Global). The DXF of those materials gives only the name, the
-/// map sources (all 0) and the six matrices; the rest of each record is
-/// AutoCAD's default values, which these runs hold. A material with any
-/// other property set is not handled. Before 2007 the record ends after the last map's source
-/// (the first 8 bits of the last run): the translucence, self-illumination, reflectivity,
-/// illumination model, channel flags and mode came with 2007.
-const MATERIAL_RUNS: [&str; 7] = [
-    "0000000001000000000101000000100000000100000001",
-    "00000000000000000101000000100000000100000001",
-    "0000000000000000000000000000000000000000000000000000000000111000000011111101000000100000000100000001",
-    "000000000101000000100000000100000001",
-    "0000000001000000100000000100000001",
-    "000000000101000000100000000100000001",
-    "0000000010101010010111111110",
+/// A field of a material's record held at AutoCAD's default value. AutoCAD's DXF gives a
+/// material's group only when its value is not the default, and the materials AutoCAD puts in
+/// every drawing (ByLayer, ByBlock, Global) leave these at it; a material with one of them set
+/// is not handled.
+#[derive(Clone, Copy)]
+enum Fixed {
+    Rc(u8),
+    Bd(f64),
+    Bl(u32),
+}
+
+/// The fields before each of the six maps: the ambient and diffuse colours (method 0, the
+/// object's own colour, at factor 1) before the diffuse map, the specular colour before the
+/// specular map, then the gloss (0.5), the opacity (1) and, before the refraction map, the
+/// refraction index (1).
+const MATERIAL_BEFORE: [&[Fixed]; 6] = [
+    &[Fixed::Rc(0), Fixed::Bd(1.0), Fixed::Rc(0), Fixed::Bd(1.0)],
+    &[Fixed::Rc(0), Fixed::Bd(1.0)],
+    &[Fixed::Bd(0.5)],
+    &[Fixed::Bd(1.0)],
+    &[],
+    &[Fixed::Bd(1.0)],
 ];
-/// The matrix codes, and the DXF-only source group (0) before each but the
-/// last.
+
+/// What starts each map: its blend factor (1), projection, tiling and automatic transform.
+/// Its transform matrix follows, then its source and, for a map from an image file, the file.
+const MAP_START: [Fixed; 4] = [Fixed::Bd(1.0), Fixed::Rc(2), Fixed::Rc(1), Fixed::Rc(1)];
+
+/// Each map's matrix group, and the group of its source. The refraction map's source has no
+/// group: it is 0 in AutoCAD's files.
 const MATERIAL_MAPS: [(u16, Option<u16>); 6] = [(43, Some(72)), (47, Some(77)), (49, Some(171)), (142, Some(175)), (144, Some(179)), (147, None)];
 
-/// The bits after a material's last matrix in files of version `ver`.
-fn material_tail(ver: V) -> &'static str {
-    let tail = MATERIAL_RUNS[6];
-    if ver < V::R2007 { tail.get(..8).unwrap_or(tail) } else { tail }
+/// A map's source: 0 for the scene, 1 for an image file (AutoCAD's default, which AutoCAD 2027
+/// gives its own materials, with no file named; older versions gave them 0).
+const SCENE: i64 = 0;
+const IMAGE_FILE: i64 = 1;
+
+/// The channels a material uses (group 94, from AutoCAD 2007): AutoCAD's default, which its DXF
+/// leaves out, is all seven; AutoCAD 2027 gives its own materials 63.
+const ALL_CHANNELS: u32 = 127;
+
+/// A map's matrix when the DXF gives none.
+const IDENTITY: [f64; 16] = [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0];
+
+fn read_fixed(s: &mut Streams, f: Fixed) -> Result<()> {
+    let default = match f {
+        Fixed::Rc(v) => s.dat.rc()? == v,
+        Fixed::Bd(v) => s.dat.bd()?.to_bits() == v.to_bits(),
+        Fixed::Bl(v) => s.dat.bl()? == v,
+    };
+    if default { Ok(()) } else { Err(Error::unsupported("MATERIAL: a property other than AutoCAD's default")) }
 }
 
-fn read_run(r: &mut BitReader, run: &str) -> Result<()> {
-    for ch in run.bytes() {
-        if r.b()? != (ch == b'1') {
-            return Err(Error::format("MATERIAL: not one of AutoCAD's default materials"));
-        }
+fn write_fixed(w: &mut ObjW, f: Fixed) {
+    match f {
+        Fixed::Rc(v) => w.dat.rc(v),
+        Fixed::Bd(v) => w.dat.bd(v),
+        Fixed::Bl(v) => w.dat.bl(v),
     }
-    Ok(())
 }
+
+/// What follows the maps from AutoCAD 2007, around the channels: the translucence,
+/// self-illumination and reflectivity (0) and the illumination model (0) before, the mode (0)
+/// after. Before 2007 the record ends with the last map.
+const BEFORE_CHANNELS: [Fixed; 4] = [Fixed::Bd(0.0), Fixed::Bd(0.0), Fixed::Bd(0.0), Fixed::Bl(0)];
+const AFTER_CHANNELS: Fixed = Fixed::Bl(0);
 
 fn decode_material(s: &mut Streams) -> Result<Vec<(u16, XrValue)>> {
     let name = s.tv()?;
@@ -1310,16 +1340,41 @@ fn decode_material(s: &mut Streams) -> Result<Vec<(u16, XrValue)>> {
     if !description.is_empty() {
         out.push((2, XrValue::Str(description)));
     }
-    for (i, (code, source)) in MATERIAL_MAPS.iter().enumerate() {
-        read_run(&mut s.dat, MATERIAL_RUNS[i])?;
-        if let Some(src) = source {
-            out.push((*src, XrValue::Int16(0)));
+    for ((code, source), before) in MATERIAL_MAPS.iter().zip(MATERIAL_BEFORE) {
+        for f in before.iter().chain(&MAP_START) {
+            read_fixed(s, *f)?;
         }
-        for _ in 0..16 {
-            out.push((*code, XrValue::Real(s.dat.bd()?)));
+        let mut matrix = [0.0; 16];
+        for m in &mut matrix {
+            *m = s.dat.bd()?;
+        }
+        let src = i64::from(s.dat.rc()?);
+        match (src, source) {
+            (IMAGE_FILE, Some(_)) => {
+                if !s.tv()?.is_empty() {
+                    return Err(Error::unsupported("MATERIAL: a map from an image file"));
+                }
+            }
+            (SCENE, Some(group)) => out.push((*group, XrValue::Int16(0))),
+            (SCENE, None) => {}
+            _ => return Err(Error::unsupported(format!("MATERIAL: map source {src}"))),
+        }
+        // As AutoCAD's DXF: the source before the matrix, each only when not the default.
+        if matrix.iter().zip(IDENTITY).any(|(a, b)| a.to_bits() != b.to_bits()) {
+            out.extend(matrix.iter().map(|m| (*code, XrValue::Real(*m))));
         }
     }
-    read_run(&mut s.dat, material_tail(s.ver))?;
+    if s.ver >= V::R2007 {
+        for f in BEFORE_CHANNELS {
+            read_fixed(s, f)?;
+        }
+        let channels = s.dat.bl()?;
+        read_fixed(s, AFTER_CHANNELS)?;
+        if channels != ALL_CHANNELS {
+            let n = i32::try_from(channels).map_err(|_| Error::format(format!("MATERIAL: channels {channels}")))?;
+            out.push((94, XrValue::Int32(n)));
+        }
+    }
     Ok(out)
 }
 
@@ -1330,21 +1385,41 @@ fn encode_material(w: &mut ObjW, g: &Groups) -> Result<()> {
     }
     tz(w, &c.str(1)?);
     tz(w, &if c.peek() == Some(2) { c.str(2)? } else { String::new() });
-    for (i, (code, source)) in MATERIAL_MAPS.iter().enumerate() {
-        for ch in MATERIAL_RUNS[i].bytes() {
-            w.dat.b(ch == b'1');
+    for ((code, source), before) in MATERIAL_MAPS.iter().zip(MATERIAL_BEFORE) {
+        for f in before.iter().chain(&MAP_START) {
+            write_fixed(w, *f);
         }
-        if let Some(src) = source
-            && c.int(*src)? != 0
-        {
-            return Err(Error::format("MATERIAL: map source other than the default"));
+        // A group DXF leaves out holds AutoCAD's default.
+        let src = match source {
+            Some(group) if c.peek() == Some(*group) => c.int(*group)?,
+            Some(_) => IMAGE_FILE,
+            None => SCENE,
+        };
+        if c.peek() == Some(*code) {
+            for _ in 0..16 {
+                w.dat.bd(c.real(*code)?);
+            }
+        } else {
+            for m in IDENTITY {
+                w.dat.bd(m);
+            }
         }
-        for _ in 0..16 {
-            w.dat.bd(c.real(*code)?);
+        match src {
+            SCENE => w.dat.rc(0),
+            IMAGE_FILE => {
+                w.dat.rc(1);
+                tz(w, "");
+            }
+            _ => return Err(Error::unsupported(format!("MATERIAL: map source {src}"))),
         }
     }
-    for ch in material_tail(w.ver).bytes() {
-        w.dat.b(ch == b'1');
+    let channels = if c.peek() == Some(94) { c.int(94)? } else { i64::from(ALL_CHANNELS) };
+    if w.ver >= V::R2007 {
+        for f in BEFORE_CHANNELS {
+            write_fixed(w, f);
+        }
+        w.dat.bl(u32::try_from(channels).map_err(|_| Error::format(format!("MATERIAL: channels {channels}")))?);
+        write_fixed(w, AFTER_CHANNELS);
     }
     c.done()
 }
@@ -1846,5 +1921,164 @@ mod tests {
         // the size of the claim is allocated (that aborted the process).
         let mut w = ObjW::new(V::R2018);
         encode_layout(&mut w, &groups("ACDBSECTIONVIEWSTYLE", i32::MAX), &l).unwrap();
+    }
+
+    /// AutoCAD 2027's ByLayer material as it saves it, every field after the name and
+    /// description: in a 2018 file (the texts are in the text stream; `sab-2018.dwg` in the
+    /// `acad-solids` test drawings) and a 2000 file (`regions-2000.dwg`). Its ByBlock is the
+    /// same; its Global differs only in four matrices.
+    const BYLAYER_2018: &str = concat!(
+        "0000000001000000000101000000100000000100000001011010101001101010100110101010010000000100000000010100",
+        "0000100000000100000001011010101001101010100110101010010000000100000000000000000000000000000000000000",
+        "0000000000001110000000111111010000001000000001000000010110101010011010101001101010100100000001010100",
+        "0000100000000100000001011010101001101010100110101010010000000101000000100000000100000001011010101001",
+        "1010101001101010100100000001010100000010000000010000000101101010100110101010011010101001000000001010",
+        "1010010011111110",
+    );
+    const BYLAYER_2000: &str = concat!(
+        "0000000001000000000101000000100000000100000001011010101001101010100110101010010000000110000000000101",
+        "0000001000000001000000010110101010011010101001101010100100000001100000000000000000000000000000000000",
+        "0000000000000000111000000011111101000000100000000100000001011010101001101010100110101010010000000110",
+        "0101000000100000000100000001011010101001101010100110101010010000000110010000001000000001000000010110",
+        "1010100110101010011010101001000000011001010000001000000001000000010110101010011010101001101010100100",
+        "000000",
+    );
+
+    fn bits_of(w: &crate::bits::BitWriter) -> String {
+        (0..w.position()).map(|i| if w.bytes()[i / 8] & (0x80 >> (i % 8)) != 0 { '1' } else { '0' }).collect()
+    }
+
+    fn bytes_of(bits: &str) -> Vec<u8> {
+        bits.as_bytes().chunks(8).map(|c| c.iter().enumerate().fold(0u8, |b, (i, ch)| b | u8::from(*ch == b'1') << (7 - i))).collect()
+    }
+
+    fn material(items: Vec<(u16, XrValue)>) -> Groups {
+        Groups { kind: "MATERIAL".into(), items }
+    }
+
+    fn text(code: u16, s: &str) -> (u16, XrValue) {
+        (code, XrValue::Str(s.into()))
+    }
+
+    /// A material as AutoCAD 2027's DXF gives it: the name, the matrices that are not the
+    /// identity (the Global material's four, at 1/1250), the channels.
+    fn autocad_2027(name: &str, scaled: &[u16]) -> Groups {
+        let mut items = vec![text(100, "AcDbMaterial"), text(1, name)];
+        for code in scaled {
+            let m = [0.0008, 0.0, 0.0, 0.0, 0.0, 0.0008, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0];
+            items.extend(m.iter().map(|v| (*code, XrValue::Real(*v))));
+        }
+        items.push((94, XrValue::Int32(63)));
+        material(items)
+    }
+
+    /// Read the material whose record `w` holds.
+    fn read_back(w: ObjW) -> Result<Vec<(u16, XrValue)>> {
+        let ver = w.ver;
+        let (dat, strs, has_strings, _) = w.into_streams();
+        let (dat, strs) = (dat.into_bytes(), strs.into_bytes());
+        let mut s = Streams {
+            ver,
+            codepage: 30,
+            text: crate::records::text::TextDecoding::default(),
+            dat: crate::bits::BitReader::new(&dat),
+            strs: has_strings.then(|| crate::bits::BitReader::new(&strs)),
+            hdl: None,
+        };
+        decode_material(&mut s)
+    }
+
+    #[test]
+    fn autocad_2027s_materials_are_written_as_autocad_writes_them() {
+        let mut w = ObjW::new(V::R2018);
+        encode_material(&mut w, &autocad_2027("ByLayer", &[])).unwrap();
+        assert_eq!(bits_of(&w.dat), BYLAYER_2018);
+        // A 2000 file has no channels (AutoCAD's DXF 2000 gives none): the name ("ByLayer" and
+        // the zero byte, after its length) and the empty description come first.
+        let mut w = ObjW::new(V::R2000);
+        encode_material(&mut w, &material(vec![text(100, "AcDbMaterial"), text(1, "ByLayer")])).unwrap();
+        let bits = bits_of(&w.dat);
+        assert_eq!(bits.len(), 10 + 8 * 8 + 2 + BYLAYER_2000.len());
+        assert!(bits.ends_with(BYLAYER_2000), "{bits}");
+    }
+
+    #[test]
+    fn autocad_2027s_materials_read_as_its_dxf_gives_them() {
+        let bytes = bytes_of(BYLAYER_2018);
+        let mut s = Streams {
+            ver: V::R2018,
+            codepage: 30,
+            text: crate::records::text::TextDecoding::default(),
+            dat: crate::bits::BitReader::with_bounds(&bytes, 0, BYLAYER_2018.len()),
+            strs: None,
+            hdl: None,
+        };
+        // No text stream here: the name reads empty.
+        assert_eq!(decode_material(&mut s).unwrap(), autocad_2027("", &[]).items);
+        assert_eq!(s.dat.remaining(), 0);
+    }
+
+    /// Materials of AutoCAD 2027 and of older versions (each map's source the scene, each matrix
+    /// given) through a record of every version, back to the same groups. Before 2007 the
+    /// record has no channels.
+    #[test]
+    fn materials_keep_their_groups_in_every_version() {
+        let mut older = vec![text(100, "AcDbMaterial"), text(1, "Global"), text(2, "A description")];
+        for (code, source) in MATERIAL_MAPS {
+            if let Some(source) = source {
+                older.push((source, XrValue::Int16(0)));
+            }
+            older.extend((0..16).map(|i| (code, XrValue::Real(if i % 5 == 0 { 1.0 / 48.0 } else { 0.0 }))));
+        }
+        let older = material(older);
+        for ver in [V::R2000, V::R2004, V::R2007, V::R2010, V::R2013, V::R2018] {
+            for g in [&autocad_2027("ByLayer", &[]), &autocad_2027("Global", &[43, 49, 142, 144]), &older] {
+                let mut w = ObjW::new(ver);
+                encode_material(&mut w, g).unwrap();
+                let mut want = g.items.clone();
+                if ver < V::R2007 {
+                    want.retain(|(code, _)| *code != 94);
+                }
+                assert_eq!(read_back(w).unwrap(), want, "{ver:?}");
+            }
+        }
+    }
+
+    /// A material with a property the codec has no field for is an error, not a guess, both
+    /// ways: the writer leaves it out (and counts it), the reader reports it.
+    #[test]
+    fn a_material_the_codec_does_not_handle_is_an_error() {
+        let base = autocad_2027("ByLayer", &[]).items;
+        let with = |extra: Vec<(u16, XrValue)>| {
+            let mut items = base.clone();
+            items.splice(2..2, extra);
+            material(items)
+        };
+        for g in [
+            // A procedural diffuse map, a matrix cut short, a diffuse colour.
+            with(vec![(72, XrValue::Int16(2))]),
+            with(vec![(43, XrValue::Real(1.0)), (43, XrValue::Real(0.0))]),
+            with(vec![(71, XrValue::Int16(1))]),
+            // Channels a record can't hold.
+            material(vec![text(100, "AcDbMaterial"), text(1, "ByLayer"), (94, XrValue::Int32(-1))]),
+            material(vec![text(100, "AcDbVisualStyle"), text(1, "ByLayer")]),
+        ] {
+            assert!(encode_material(&mut ObjW::new(V::R2018), &g).is_err(), "{:?}", g.items);
+        }
+        // AutoCAD's record with its ambient colour method changed, and cut short.
+        let mut changed = BYLAYER_2018.to_string();
+        changed.replace_range(0..1, "1");
+        for bits in [changed.as_str(), &BYLAYER_2018[..300]] {
+            let bytes = bytes_of(bits);
+            let mut s = Streams {
+                ver: V::R2018,
+                codepage: 30,
+                text: crate::records::text::TextDecoding::default(),
+                dat: crate::bits::BitReader::with_bounds(&bytes, 0, bits.len()),
+                strs: None,
+                hdl: None,
+            };
+            assert!(decode_material(&mut s).is_err());
+        }
     }
 }

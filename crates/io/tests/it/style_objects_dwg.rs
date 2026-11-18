@@ -97,6 +97,64 @@ fn style_objects_take_the_layout_of_the_version_saved() {
     }
 }
 
+/// AutoCAD 2027's drawings (`acad-solids`). Its DXF gives a material's group only when the
+/// value is not AutoCAD's default: no map sources (each map's is an image file, with none
+/// named), only the matrices that are not the identity (four of the Global material's), and
+/// from 2007 the channels (63). Each DWG's materials read as the DXF of its version gives them.
+const ACAD_2027: [(&str, &[u8], &[u8]); 6] = [
+    ("sab 2004", include_bytes!("../data/acad-solids/sab-2004.dwg"), include_bytes!("../data/acad-solids/sab-2000.dxf")),
+    ("sab 2007", include_bytes!("../data/acad-solids/sab-2007.dwg"), include_bytes!("../data/acad-solids/sab-2018.dxf")),
+    ("sab 2010", include_bytes!("../data/acad-solids/sab-2010.dwg"), include_bytes!("../data/acad-solids/sab-2018.dxf")),
+    ("sab 2018", include_bytes!("../data/acad-solids/sab-2018.dwg"), include_bytes!("../data/acad-solids/sab-2018.dxf")),
+    ("regions 2000", include_bytes!("../data/acad-solids/regions-2000.dwg"), include_bytes!("../data/acad-solids/regions-2000.dxf")),
+    ("regions 2013", include_bytes!("../data/acad-solids/regions-2013.dwg"), include_bytes!("../data/acad-solids/regions-2018.dxf")),
+];
+
+/// The materials of `d`, without the channels when a file of `version` has none (before 2007,
+/// as AutoCAD's DXF 2000 gives none).
+fn materials(d: &draftcraft_doc::Drawing, version: Version) -> Objects {
+    let mut m = objects(d, "MATERIAL");
+    if version < Version::R2007 {
+        for groups in m.values_mut() {
+            groups.retain(|(code, _)| *code != 94);
+        }
+    }
+    m
+}
+
+#[test]
+fn autocad_2027s_materials_read_as_its_dxf_gives_them() {
+    for (name, dwg, dxf) in ACAD_2027 {
+        let theirs = read_dwg_with(dwg, DwgReader::Direct).unwrap();
+        assert!(!theirs.read_notes.iter().any(|n| n.contains("MATERIAL")), "{name}: {:?}", theirs.read_notes);
+        let want = objects(&read_dxf(dxf).unwrap(), "MATERIAL");
+        assert_eq!(want.len(), 3, "{name}");
+        same(&objects(&theirs, "MATERIAL"), &want, name);
+    }
+}
+
+/// AutoCAD 2027's DXF of 2000, 2010 and 2018 saved as a DWG of every version: no material is
+/// left out, and each reads back as it was.
+#[test]
+fn autocad_2027s_materials_go_through_dwg() {
+    for (name, dxf) in [
+        ("sab 2000", include_bytes!("../data/acad-solids/sab-2000.dxf").as_slice()),
+        ("regions 2010", include_bytes!("../data/acad-solids/regions-2010.dxf").as_slice()),
+        ("sab 2018", include_bytes!("../data/acad-solids/sab-2018.dxf").as_slice()),
+    ] {
+        let d = read_dxf(dxf).unwrap();
+        for version in Version::ALL {
+            let context = format!("{name} saved as {version:?}");
+            let (dwg, unwritten) = draftcraft_io::write_dwg_own(&d, version).unwrap();
+            assert!(!unwritten.contains_key("MATERIAL"), "{context}: {unwritten:?}");
+            let back = read_dwg_with(&dwg, DwgReader::Direct).unwrap();
+            let want = materials(&d, version);
+            assert_eq!(want.len(), 3, "{context}");
+            same(&materials(&back, version), &want, &context);
+        }
+    }
+}
+
 /// AutoCAD's own DWG files read to the groups its DXF of the same version gives; the cell
 /// style map, which its DXF of every version has, is in its DWG only up to 2007.
 #[test]
