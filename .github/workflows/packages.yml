@@ -181,7 +181,9 @@ jobs:
           version="$(awk '/^\[/{p=($0=="[workspace.package]");next} p&&$1=="version"{gsub(/[" ]/,"",$3);print $3;exit}' Cargo.toml)"
           stage="target/windows-package/${{ matrix.arch }}"
           mkdir -p dist/upload
-          cp "dist/release/draftcraft-$version-windows-${{ matrix.arch }}.msi" "dist/upload/draftcraft-windows-${{ matrix.arch }}.msi"
+          # The setup .exe (the MSI inside) is the installer people download, and what Update Now runs
+          # for installed copies (crates/ui-egui/src/self_update.rs). The bare MSI isn't uploaded.
+          cp "dist/release/draftcraft-$version-windows-${{ matrix.arch }}-setup.exe" "dist/upload/draftcraft-windows-${{ matrix.arch }}-setup.exe"
           # The zip in-app updates of unzipped copies read: a DraftCraft/ folder with DraftCraft.exe
           # (crates/ui-egui/src/self_update.rs). The same signed binaries as the installer.
           dir="dist/zip/DraftCraft"
@@ -194,15 +196,17 @@ jobs:
           ls -l dist/upload
       - name: Install, check and uninstall the installer
         # A real install on this throwaway runner, for this account (no administrator), as a
-        # double-click with the default choice does. The arm64 package can't run here.
+        # double-click with the default choice does, through the setup .exe people download.
+        # The arm64 package can't run here.
         if: matrix.arch == 'x64'
         shell: pwsh
         run: |
           $ErrorActionPreference = 'Stop'
-          $msi = (Resolve-Path 'dist/upload/draftcraft-windows-x64.msi').Path
+          $setup = (Resolve-Path 'dist/upload/draftcraft-windows-x64-setup.exe').Path
+          $msi = (Resolve-Path 'dist/release/draftcraft-*-windows-x64.msi').Path
           $log = Join-Path $env:RUNNER_TEMP 'install.log'
-          $p = Start-Process msiexec.exe -ArgumentList @('/i', "`"$msi`"", '/qn', '/l*v', "`"$log`"") -Wait -PassThru
-          if ($p.ExitCode -ne 0) { Get-Content $log -Tail 80; throw "install failed: $($p.ExitCode)" }
+          $p = Start-Process $setup -ArgumentList @('/quiet', '/log', "`"$log`"") -Wait -PassThru
+          if ($p.ExitCode -ne 0) { if (Test-Path $log) { Get-Content $log -Tail 80 }; throw "install failed: $($p.ExitCode)" }
           $exe = (Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\App Paths\draftcraft.exe').'(default)'
           if (-not (Test-Path $exe)) { throw "App Paths names a missing exe: $exe" }
           Write-Output "installed: $exe"
@@ -217,6 +221,19 @@ jobs:
           if ((Get-ItemProperty 'HKCU:\Software\RegisteredApplications').DraftCraft -ne 'Software\DraftCraft\Capabilities') { throw 'not in RegisteredApplications' }
           & (Join-Path (Split-Path $exe) 'draftcraft-cli.exe') --version
           if ($LASTEXITCODE -ne 0) { throw 'draftcraft-cli --version failed' }
+          # Update Now's run: the setup waits for the app (here a stand-in process) to quit, installs
+          # over the copy for this account, then starts the program it was given again.
+          $app = Start-Process ping.exe -ArgumentList @('-n', '4', '127.0.0.1') -WindowStyle Hidden -PassThru
+          $marker = Join-Path $env:RUNNER_TEMP 'relaunched.txt'
+          $relaunch = Join-Path $env:RUNNER_TEMP 'relaunch.cmd'
+          Set-Content $relaunch "@echo relaunched> `"$marker`""
+          $log = Join-Path $env:RUNNER_TEMP 'update.log'
+          $p = Start-Process $setup -ArgumentList @('/quiet', '--scope', 'user', '--after', $app.Id, '--relaunch', "`"$relaunch`"", '/log', "`"$log`"") -Wait -PassThru
+          if (-not $app.HasExited) { throw 'the setup installed before the app had quit' }
+          if ($p.ExitCode -ne 0) { if (Test-Path $log) { Get-Content $log -Tail 80 }; throw "update failed: $($p.ExitCode)" }
+          Start-Sleep -Seconds 2
+          if (-not (Test-Path $marker)) { throw 'the setup did not start the app again' }
+          if (-not (Test-Path $exe)) { throw "the update left no $exe" }
           $p = Start-Process msiexec.exe -ArgumentList @('/x', "`"$msi`"", '/qn') -Wait -PassThru
           if ($p.ExitCode -ne 0) { throw "uninstall failed: $($p.ExitCode)" }
           if (Test-Path $exe) { throw "uninstall left $exe" }

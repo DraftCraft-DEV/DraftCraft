@@ -33,8 +33,8 @@ builds every package with [`packages.yml`](../.github/workflows/packages.yml):
 | `draftcraft-macos-arm64.dmg` | `DraftCraft.app` (Apple silicon, with `draftcraft-cli` inside) |
 | `draftcraft-macos-x86_64.dmg` | the same for Intel Macs (cross-compiled on the Apple-silicon runner) |
 | `draftcraft-cli-macos-arm64.zip`, `draftcraft-cli-macos-x86_64.zip` | `draftcraft-cli` for macOS on its own |
-| `draftcraft-windows-x64.msi` | the installer (`packaging/windows/package.ps1`, WiX 5): for this account or everyone, Start menu, optional desktop shortcut, `.dxf`/`.dwg` registration |
-| `draftcraft-windows-arm64.msi` | the same for Windows on ARM (cross-compiled) |
+| `draftcraft-windows-x64-setup.exe` | the setup (`apps/draftcraft-setup`, built by `packaging/windows/package.ps1`): the WiX 5 MSI inside one `.exe`; for this account or everyone, Start menu, optional desktop shortcut, `.dxf`/`.dwg` registration |
+| `draftcraft-windows-arm64-setup.exe` | the same for Windows on ARM (cross-compiled) |
 | `draftcraft-windows-x64.zip` | `DraftCraft.exe`, `draftcraft-cli.exe`, licences, to unzip anywhere |
 | `draftcraft-windows-arm64.zip` | the same for Windows on ARM |
 | `draftcraft-linux-x86_64.AppImage` | the app; `… cli <args>` runs `draftcraft-cli` (built by `packaging/linux/appimage.sh`) |
@@ -44,7 +44,7 @@ builds every package with [`packages.yml`](../.github/workflows/packages.yml):
 The names carry no version, so the README's `releases/latest/download/<name>` links always give the
 newest. The same workflow runs on every pull request that changes `packaging/` or the workflows; its
 packages are then that run's artifacts, so a packaging change can be tried before a release. On the
-way it installs the x64 MSI and both `.deb`s on the runners, checks the `.dxf`/`.dwg` registration, and
+way it installs the x64 setup (and runs it again as Update Now does) and both `.deb`s on the runners, checks the `.dxf`/`.dwg` registration, and
 uninstalls them. The workflow creates the GitHub Release `DraftCraft v<version>` with them and `SHA256SUMS.txt`. The DMG is
 made on a macOS 26 runner, whose Xcode compiles the app icon. The workflow can also be started by hand
 (**Actions › Release › Run workflow**) for an existing tag.
@@ -54,7 +54,8 @@ made on a macOS 26 runner, whose Xcode compiles the app icon. The workflow can a
 From 2.0.2, **Update Now** in the app's update window downloads the new release and installs it
 ([`crates/ui-egui/src/self_update.rs`](../crates/ui-egui/src/self_update.rs)): `DraftCraft.app` from
 `draftcraft-macos-{arm64,x86_64}.dmg`, a Windows folder from `draftcraft-windows-{x64,arm64}.zip` (whose
-top folder is `DraftCraft/`), the AppImage from `draftcraft-linux-{x86_64,aarch64}.AppImage`, each for
+top folder is `DraftCraft/`), a copy the setup installed by running
+`draftcraft-windows-{x64,arm64}-setup.exe /passive` once DraftCraft has quit, the AppImage from `draftcraft-linux-{x86_64,aarch64}.AppImage`, each for
 the processor it runs on. Each file is checked
 against `SHA256SUMS.txt`, and the DMG's app must have the bundle id `dev.skryx.draftcraft` and the
 release's version. Keep those names, that folder and `SHA256SUMS.txt`, or installed copies can no

@@ -1,0 +1,18 @@
+[package]
+name = "draftcraft-setup"
+description = "DraftCraft's Windows setup: the installer (MSI) inside one .exe, which also runs app updates"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+rust-version = "1.95"
+publish = false
+
+[lints]
+workspace = true
+
+[build-dependencies]
+winresource = "0.1"
+
+# Only Windows has an installer; elsewhere the program just says so.
+[target.'cfg(windows)'.dependencies]
+rfd = { workspace = true }

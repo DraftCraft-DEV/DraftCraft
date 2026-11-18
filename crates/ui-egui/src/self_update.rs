@@ -7,15 +7,15 @@
 //! | macOS `DraftCraft.app` (bundle id `dev.skryx.draftcraft`) | `draftcraft-macos-{arm64,x86_64}.dmg` | the new app copied out of the disk image beside the old one, then swapped in by renaming (fine while it runs) |
 //! | Windows folder with `DraftCraft.exe` | `draftcraft-windows-{x64,arm64}.zip` | unzipped beside it; each running file renamed to `*.old` (Windows allows that) and the new one moved in |
 //! | Linux AppImage (`$APPIMAGE`) | `draftcraft-linux-{x86_64,aarch64}.AppImage` | renamed over the old one (fine while it runs) |
+//! | Windows copy installed by the setup (its exe named in `App Paths`) | `draftcraft-windows-{x64,arm64}-setup.exe` | run once DraftCraft has quit: `/passive` in the same context (this account or everyone), it waits for this process to end, installs over it and starts DraftCraft again (`apps/draftcraft-setup`) |
 //!
-//! Anything else (a build from source, a folder this account can't write, a copy installed by the
-//! Windows installer or a Linux `.deb`, another system) gets the release page instead, as before:
-//! the installer and the package manager keep their own record of the installed version, which
-//! replacing the files would leave behind. The leftovers of a swap (the old app, `*.old` files) are deleted
+//! Anything else (a build from source, a folder this account can't write, a copy installed by a
+//! Linux `.deb`, another system) gets the release page instead, as before: the package manager
+//! keeps its own record of the installed version, which replacing the files would leave behind. The leftovers of a swap (the old app, `*.old` files) are deleted
 //! at the next start ([`clean_leftovers`]).
 //!
 //! Downloading, resuming and the checksum are `craft_update::Http::download`; only files under
-//! `https://github.com/SkryxDev/DraftCraft/releases/download/` are fetched.
+//! `https://github.com/DraftCraft-DEV/DraftCraft/releases/download/` are fetched.
 
 use std::path::{Path, PathBuf};
 use std::sync::Mutex;
@@ -52,6 +52,9 @@ pub enum Install {
     WindowsFolder(PathBuf),
     /// Linux: the AppImage file.
     AppImage(PathBuf),
+    /// Windows: a copy the setup installed: its `draftcraft.exe`, and whether it is installed for
+    /// everyone (`HKLM`) rather than this account (`HKCU`). It updates by running the new setup.
+    WindowsInstalled { exe: PathBuf, for_everyone: bool },
 }
 
 impl Install {
@@ -68,6 +71,8 @@ impl Install {
             (Self::MacApp(_), "x86_64") => Some("draftcraft-macos-x86_64.dmg"),
             (Self::WindowsFolder(_), "aarch64") => Some("draftcraft-windows-arm64.zip"),
             (Self::WindowsFolder(_), "x86_64") => Some("draftcraft-windows-x64.zip"),
+            (Self::WindowsInstalled { .. }, "aarch64") => Some("draftcraft-windows-arm64-setup.exe"),
+            (Self::WindowsInstalled { .. }, "x86_64") => Some("draftcraft-windows-x64-setup.exe"),
             (Self::AppImage(_), "x86_64") => Some("draftcraft-linux-x86_64.AppImage"),
             (Self::AppImage(_), "aarch64") => Some("draftcraft-linux-aarch64.AppImage"),
             _ => None,
@@ -80,6 +85,7 @@ impl Install {
             Self::MacApp(bundle) => bundle.clone(),
             Self::WindowsFolder(dir) => dir.join("DraftCraft.exe"),
             Self::AppImage(path) => path.clone(),
+            Self::WindowsInstalled { exe, .. } => exe.clone(),
         }
     }
 }
@@ -92,8 +98,14 @@ pub fn detect() -> Option<Install> {
         return None;
     }
     let install = detect_at(&exe, std::env::var_os("APPIMAGE").map(PathBuf::from))?;
-    if matches!(install, Install::WindowsFolder(_)) && installed_by_msi(&exe) {
-        return None;
+    if matches!(install, Install::WindowsFolder(_))
+        && let Some(for_everyone) = installed_for(&exe)
+    {
+        // The setup writes the files (asking Windows for permission when installed for everyone),
+        // so this account needn't be able to write the program's folder.
+        let install = Install::WindowsInstalled { exe, for_everyone };
+        install.asset_name()?;
+        return Some(install);
     }
     install.asset_name()?;
     writable(container(&install)?).then_some(install)
@@ -119,22 +131,40 @@ fn detect_at(exe: &Path, appimage: Option<PathBuf>) -> Option<Install> {
 #[cfg(windows)]
 const APP_PATHS_KEY: &str = r"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\draftcraft.exe";
 
-/// Windows: whether `exe` (canonical) is the copy the installer (MSI) put in place. The installer
-/// names its exe in `App Paths`, under HKCU when installed for one account and HKLM for everyone;
-/// an unzipped folder has no such entry. Such a copy updates by running the new installer.
+/// Windows: whether `exe` (canonical) is the copy the setup (MSI) put in place, and then whether
+/// for everyone. The installer names its exe in `App Paths`, under HKCU when installed for one
+/// account and HKLM for everyone; an unzipped folder has no such entry.
 #[cfg(windows)]
-fn installed_by_msi(exe: &Path) -> bool {
+fn installed_for(exe: &Path) -> Option<bool> {
     use winreg::RegKey;
     use winreg::enums::{HKEY_CURRENT_USER, HKEY_LOCAL_MACHINE, KEY_READ, KEY_WOW64_32KEY, KEY_WOW64_64KEY};
-    [(HKEY_CURRENT_USER, 0), (HKEY_LOCAL_MACHINE, KEY_WOW64_64KEY), (HKEY_LOCAL_MACHINE, KEY_WOW64_32KEY)].into_iter().any(|(hive, view)| {
-        let Ok(key) = RegKey::predef(hive).open_subkey_with_flags(APP_PATHS_KEY, KEY_READ | view) else { return false };
-        key.get_value::<String, _>("").is_ok_and(|value| registered_exe_is(&value, exe))
-    })
+    [(HKEY_CURRENT_USER, 0, false), (HKEY_LOCAL_MACHINE, KEY_WOW64_64KEY, true), (HKEY_LOCAL_MACHINE, KEY_WOW64_32KEY, true)].into_iter().find_map(
+        |(hive, view, everyone)| {
+            let key = RegKey::predef(hive).open_subkey_with_flags(APP_PATHS_KEY, KEY_READ | view).ok()?;
+            key.get_value::<String, _>("").is_ok_and(|value| registered_exe_is(&value, exe)).then_some(everyone)
+        },
+    )
 }
 
 #[cfg(not(windows))]
-fn installed_by_msi(_exe: &Path) -> bool {
-    false
+fn installed_for(_exe: &Path) -> Option<bool> {
+    None
+}
+
+/// The setup's command line for updating the copy at `exe` once process `pid` has quit
+/// (`apps/draftcraft-setup`).
+fn setup_args(pid: u32, exe: &Path, for_everyone: bool) -> Vec<std::ffi::OsString> {
+    let scope = if for_everyone { "machine" } else { "user" };
+    ["/passive", "--scope", scope, "--after", &pid.to_string(), "--relaunch"]
+        .into_iter()
+        .map(Into::into)
+        .chain([exe.as_os_str().to_owned()])
+        .collect()
+}
+
+/// Whether `program` is a downloaded setup rather than DraftCraft itself.
+fn is_setup(program: &Path) -> bool {
+    program.file_name().and_then(|n| n.to_str()).is_some_and(|n| n.to_ascii_lowercase().ends_with("-setup.exe"))
 }
 
 /// Whether an `App Paths` value (an exe's path, perhaps in quotes) names `exe` (canonical). Both
@@ -151,6 +181,7 @@ fn container(install: &Install) -> Option<&Path> {
     match install {
         Install::MacApp(bundle) | Install::AppImage(bundle) => bundle.parent(),
         Install::WindowsFolder(dir) => Some(dir),
+        Install::WindowsInstalled { exe, .. } => exe.parent(),
     }
 }
 
@@ -244,6 +275,11 @@ pub fn install(release: &Release, install: &Install, stop: &Stop, progress: &mut
         Install::MacApp(bundle) => install_mac(&file, bundle, &version),
         Install::WindowsFolder(folder) => install_windows(&file, folder),
         Install::AppImage(path) => install_appimage(&file, path),
+        // The setup installs once DraftCraft has quit: it is what starts then (relaunch_if_scheduled).
+        Install::WindowsInstalled { .. } => {
+            log::info!("DraftCraft {version} setup downloaded to {}", file.display());
+            return Ok(file);
+        }
     };
     let _ = std::fs::remove_file(&file);
     placed?;
@@ -445,6 +481,11 @@ pub fn relaunch_if_scheduled() {
     } else {
         std::process::Command::new(&program)
     };
+    if is_setup(&program) {
+        let exe = std::env::current_exe().map(|e| e.canonicalize().unwrap_or(e)).unwrap_or_default();
+        let for_everyone = installed_for(&exe).unwrap_or(false);
+        cmd.args(setup_args(std::process::id(), &exe, for_everyone));
+    }
     // A pretend version (for trying the update) lasts one run.
     cmd.env_remove("DRAFTCRAFT_PRETEND_VERSION");
     if let Err(e) = cmd.spawn() {
@@ -459,6 +500,9 @@ pub fn clean_leftovers() {
         clean_beside(&install);
     }
     remove_any(&downloads_dir().join("mount"));
+    for arch in ["x64", "arm64"] {
+        remove_any(&downloads_dir().join(format!("draftcraft-windows-{arch}-setup.exe")));
+    }
 }
 
 fn clean_beside(install: &Install) {
@@ -474,6 +518,7 @@ fn clean_beside(install: &Install) {
             remove_old_files(dir, 0);
         }
         Install::AppImage(path) => remove_any(&path.with_file_name(LINUX_STAGED)),
+        Install::WindowsInstalled { .. } => {}
     }
 }
 
@@ -517,7 +562,7 @@ mod tests {
     const SHA: &str = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa";
 
     fn ours(name: &str) -> String {
-        format!("https://github.com/SkryxDev/DraftCraft/releases/download/v9.0.0/{name}")
+        format!("https://github.com/DraftCraft-DEV/DraftCraft/releases/download/v9.0.0/{name}")
     }
 
     #[test]
@@ -529,7 +574,7 @@ mod tests {
         // Another repository, a path that climbs out, no checksum, no size, too big, missing.
         for (u, size, sha) in [
             ("https://github.com/someone/else/releases/download/v9.0.0/x.zip", 10, Some(SHA)),
-            ("https://github.com/SkryxDev/DraftCraft/releases/download/../../../x/y/releases/download/v1/z", 10, Some(SHA)),
+            ("https://github.com/DraftCraft-DEV/DraftCraft/releases/download/../../../x/y/releases/download/v1/z", 10, Some(SHA)),
             (url.as_str(), 10, None),
             (url.as_str(), 10, Some("abc")),
             (url.as_str(), 0, Some(SHA)),
@@ -545,6 +590,7 @@ mod tests {
         let win = Install::WindowsFolder(PathBuf::from("C:/DraftCraft"));
         let mac = Install::MacApp(PathBuf::from("/Applications/DraftCraft.app"));
         let linux = Install::AppImage(PathBuf::from("/home/me/DraftCraft.AppImage"));
+        let setup = Install::WindowsInstalled { exe: PathBuf::from("C:/Program Files/DraftCraft/DraftCraft/draftcraft.exe"), for_everyone: true };
         assert_eq!(mac.program(), PathBuf::from("/Applications/DraftCraft.app"));
         // The names the release workflow (.github/workflows/packages.yml) publishes.
         for (install, arch, name) in [
@@ -553,6 +599,9 @@ mod tests {
             (&win, "aarch64", Some("draftcraft-windows-arm64.zip")),
             (&win, "x86_64", Some("draftcraft-windows-x64.zip")),
             (&win, "x86", None),
+            (&setup, "aarch64", Some("draftcraft-windows-arm64-setup.exe")),
+            (&setup, "x86_64", Some("draftcraft-windows-x64-setup.exe")),
+            (&setup, "x86", None),
             (&linux, "x86_64", Some("draftcraft-linux-x86_64.AppImage")),
             (&linux, "aarch64", Some("draftcraft-linux-aarch64.AppImage")),
             (&linux, "riscv64", None),
@@ -560,6 +609,18 @@ mod tests {
             assert_eq!(install.asset_name_for(arch), name, "{install:?} on {arch}");
         }
         assert_eq!(mac.asset_name(), mac.asset_name_for(std::env::consts::ARCH));
+    }
+
+    #[test]
+    fn an_installed_copy_updates_by_running_the_setup_after_it_quits() {
+        let exe = PathBuf::from("C:/Users/me/AppData/Local/Programs/DraftCraft/DraftCraft/draftcraft.exe");
+        let args: Vec<String> = setup_args(4242, &exe, false).into_iter().map(|a| a.to_string_lossy().into_owned()).collect();
+        assert_eq!(args, ["/passive", "--scope", "user", "--after", "4242", "--relaunch", exe.to_str().unwrap()]);
+        assert!(setup_args(1, &exe, true).iter().any(|a| a == "machine"));
+        assert!(is_setup(Path::new("C:/t/draftcraft-windows-x64-setup.exe")));
+        assert!(is_setup(Path::new("C:/t/DRAFTCRAFT-WINDOWS-ARM64-SETUP.EXE")));
+        assert!(!is_setup(&exe));
+        assert!(!is_setup(Path::new("/Applications/DraftCraft.app")));
     }
 
     #[test]

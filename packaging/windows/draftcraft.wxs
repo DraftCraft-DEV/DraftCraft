@@ -13,9 +13,9 @@
 
     <Icon Id="DraftcraftIcon.ico" SourceFile="$(var.IconPath)" />
     <Property Id="ARPPRODUCTICON" Value="DraftcraftIcon.ico" />
-    <Property Id="ARPURLINFOABOUT" Value="https://github.com/SkryxDev/DraftCraft" />
-    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/SkryxDev/DraftCraft" />
-    <Property Id="ARPHELPLINK" Value="https://github.com/SkryxDev/DraftCraft/issues" />
+    <Property Id="ARPURLINFOABOUT" Value="https://github.com/DraftCraft-DEV/DraftCraft" />
+    <Property Id="ARPURLUPDATEINFO" Value="https://github.com/DraftCraft-DEV/DraftCraft" />
+    <Property Id="ARPHELPLINK" Value="https://github.com/DraftCraft-DEV/DraftCraft/issues" />
 
     <StandardDirectory Id="ProgramFiles6432Folder">
       <Directory Id="CraftSuiteFolder" Name="DraftCraft">

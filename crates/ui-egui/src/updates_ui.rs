@@ -1,6 +1,6 @@
 //! The update check (desktop only; the web build is always the latest). Once at startup, and again
 //! from Help ▸ Check for Updates…, a background thread asks GitHub for the newest release of
-//! DraftCraft (`SkryxDev/DraftCraft`). When it is newer than this build, a window offers it:
+//! DraftCraft (`DraftCraft-DEV/DraftCraft`). When it is newer than this build, a window offers it:
 //! Update Now downloads and installs it and offers to restart ([`crate::self_update`], when this
 //! copy can replace itself), Download opens the release page, Later closes the window until the
 //! next start, and Skip This Version stops the startup check offering that version.
@@ -483,7 +483,7 @@ mod tests {
     fn offer(v: &str) -> Offer {
         Offer {
             version: v.into(),
-            url: format!("https://github.com/SkryxDev/DraftCraft/releases/tag/v{v}"),
+            url: format!("https://github.com/DraftCraft-DEV/DraftCraft/releases/tag/v{v}"),
             notes: "Conic arcs".into(),
             release: None,
         }

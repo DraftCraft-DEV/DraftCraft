@@ -14,7 +14,7 @@ section: graphics
 priority: optional
 maintainer: ${DRAFTCRAFT_MAINTAINER}
 vendor: Skryx Dev
-homepage: https://github.com/SkryxDev/DraftCraft
+homepage: https://github.com/DraftCraft-DEV/DraftCraft
 license: MIT OR Apache-2.0
 description: |-
   Open-source computer-aided design and drafting: draft, dimension and plot 2D

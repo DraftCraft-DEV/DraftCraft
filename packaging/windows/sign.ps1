@@ -55,7 +55,7 @@ if (-not $haveCert -and -not $haveAzure) {
 }
 
 $script:SignTool = Find-SignTool
-$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'DraftCraft', '/du', 'https://github.com/SkryxDev/DraftCraft')
+$common = @('sign', '/v', '/fd', 'SHA256', '/td', 'SHA256', '/d', 'DraftCraft', '/du', 'https://github.com/DraftCraft-DEV/DraftCraft')
 $tmp = Join-Path ([IO.Path]::GetTempPath()) "draftcraft-sign-$PID"
 New-Item -ItemType Directory -Force -Path $tmp | Out-Null
 

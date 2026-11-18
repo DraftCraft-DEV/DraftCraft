@@ -16,9 +16,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-windows-x64.msi"><img alt="Download for Windows" src="https://img.shields.io/badge/Windows-Download-0078D6?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zIDNoOC41djguNUgzek0xMi41IDNIMjF2OC41aC04LjV6TTMgMTIuNWg4LjVWMjFIM3pNMTIuNSAxMi41SDIxVjIxaC04LjV6Ii8%2BPC9zdmc%2B&logoColor=white"></a>
-  <a href="https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-macos-arm64.dmg"><img alt="Download for macOS" src="https://img.shields.io/badge/macOS-Download-333333?style=for-the-badge&logo=apple&logoColor=white"></a>
-  <a href="https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.AppImage"><img alt="Download for Linux (AppImage)" src="https://img.shields.io/badge/Linux-AppImage-E95420?style=for-the-badge&logo=linux&logoColor=white"></a>
+  <a href="https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-windows-x64-setup.exe"><img alt="Download for Windows" src="https://img.shields.io/badge/Windows-Download-0078D6?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0id2hpdGUiPjxwYXRoIGQ9Ik0zIDNoOC41djguNUgzek0xMi41IDNIMjF2OC41aC04LjV6TTMgMTIuNWg4LjVWMjFIM3pNMTIuNSAxMi41SDIxVjIxaC04LjV6Ii8%2BPC9zdmc%2B&logoColor=white"></a>
+  <a href="https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-macos-arm64.dmg"><img alt="Download for macOS" src="https://img.shields.io/badge/macOS-Download-333333?style=for-the-badge&logo=apple&logoColor=white"></a>
+  <a href="https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.AppImage"><img alt="Download for Linux (AppImage)" src="https://img.shields.io/badge/Linux-AppImage-E95420?style=for-the-badge&logo=linux&logoColor=white"></a>
 </p>
 
 <p align="center">
@@ -88,8 +88,8 @@
   and Extra Tools, with large, small and split buttons, the layer list and the property lists, the
   application menu and the Quick Access Toolbar — the same on macOS, Windows and Linux. On Windows the menu
   bar sits in the title bar.
-- **Open files.** DWG and DXF are read and written at the version you choose (2000 to 2018), and the DWG
-  files open in AutoCAD. Plot to PDF, export SVG and PNG.
+- **Open files.** DWG and DXF are read and written by DraftCraft's own code at the version you choose
+  (2000 to 2018), and the DWG files open in AutoCAD without recovery. Plot to PDF, export SVG and PNG.
 - **Things other CAD tools don't do.** CONIC draws exact conic arcs, saved as rational splines every DWG
   and DXF program reads.
 - **Fast and native.** Pure Rust and egui, no Electron, no web view, drawing on the GPU.
@@ -130,22 +130,27 @@ can edit with grips, in DXF and in DWG at every version. Agents and scripts call
 `{"command": "conic", "params": {"start": [0,0], "apex": [5,5], "end": [10,0], "rho": 0.6}}`, or `through`
 in place of `rho`.
 
+Select a conic later and its **Rho** shows in the Properties palette under **Geometry**: type a new value
+between 0 and 1 and the arc reshapes, keeping its ends and tangents. It works on any spline of that shape,
+whoever drew it.
+
 ## What works today
 
 DraftCraft is young and moving fast. [ROADMAP.md](ROADMAP.md) has what is missing and what comes next.
 
 | Area | Status |
 |---|---|
-| Interface | Windows-style ribbon (10 tabs, split buttons, layer and property lists), application menu, Quick Access Toolbar, file tabs, floating command line, ViewCube and navigation bar, status bar toggles, Properties and Layers palettes, 18 languages |
-| Command line | AutoCAD command names and aliases, prompts with keywords, AutoComplete, `@dx,dy`, `@d<a`, `#x,y`, direct distance entry, transparent commands, scripts |
+| Interface | Windows-style ribbon (10 tabs, split buttons, layer and property lists), application menu, Quick Access Toolbar, file tabs, floating command line, ViewCube and navigation bar, status bar toggles and drawing units, Properties and Layers palettes, What's New after every update, 18 languages |
+| Command line | AutoCAD command names and aliases, prompts with keywords, AutoComplete that learns the commands you use most, `@dx,dy`, `@d<a`, `#x,y`, direct distance entry, transparent commands, scripts |
 | Draw | LINE, PLINE (arcs, widths), CIRCLE, ARC, RECTANG, POLYGON, ELLIPSE, SPLINE, CONIC, POINT, XLINE, RAY, DONUT, REVCLOUD, WIPEOUT, TEXT, MTEXT |
 | Modify | ERASE, MOVE, COPY, ROTATE, SCALE, MIRROR, STRETCH, OFFSET, TRIM, EXTEND, FILLET, CHAMFER, BREAK, JOIN, EXPLODE, arrays, draw order, OVERKILL, grips |
-| Precision | Object snaps, polar tracking, ortho, grid snap, dynamic input |
+| Precision and inquiry | Object snaps, polar tracking, ortho, grid snap, dynamic input; DIST, ID, LIST, AREA, MEASUREGEOM and AREATOTAL (total area, perimeter and length of a selection) |
 | Annotation | DIM commands with dimension styles and associative dimensions, multileaders, tables, TrueType and SHX fonts, right-to-left text |
-| Hatches and blocks | Pattern, solid and gradient fills; blocks, attributes, the Block Editor, in-place editing, external references |
+| Hatches and blocks | Pattern, solid and gradient fills; blocks, attributes, ATTOUT and ATTIN, the Block Editor and dynamic blocks, in-place editing, external references |
 | Parametric | Geometric and dimensional constraints, AUTOCONSTRAIN, parameters with expressions |
 | Layouts and output | Paper-space layouts, viewports, page setups, plot styles, PLOT and EXPORTPDF (arcs, circles and splines kept as true curves), SVG and PNG export |
-| Files | DWG and DXF reading and writing at a chosen version, AUDIT and RECOVER, autosave and drawing recovery. Objects DraftCraft doesn't model yet can be lost on save |
+| Files | DWG (AutoCAD 2000 to 2018) and DXF reading and writing with DraftCraft's own code, at a chosen version; AUDIT and RECOVER; autosave and drawing recovery. Objects DraftCraft doesn't model yet can be lost on save |
+| Settings | Export Settings and Import Settings (CONFIGEXPORT, CONFIGIMPORT): your setup in one TOML file you can take to another computer |
 | Automation | MCP server, JSON control channel, `draftcraft-cli`, AutoLISP, scripts and alias files |
 
 ## Quick start
@@ -189,7 +194,7 @@ Requirements: **Rust 1.95** or later. On Linux, also the development packages fo
 fontconfig (`pkg-config libxkbcommon-dev libwayland-dev libx11-dev libfontconfig1-dev` on Debian/Ubuntu).
 
 ```bash
-git clone https://github.com/SkryxDev/DraftCraft.git
+git clone https://github.com/DraftCraft-DEV/DraftCraft.git
 cd DraftCraft
 cargo run --release -p draftcraft -- --sample
 ```
@@ -238,23 +243,25 @@ More: [MCP](docs/mcp.md) · [CLI](docs/cli.md) · [control channel](docs/control
 
 ## Downloads
 
-One click downloads the newest version from the [latest release](https://github.com/SkryxDev/DraftCraft/releases/latest):
+One click downloads the newest version from the [latest release](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest):
 
 | System | Download |
 |---|---|
-| Windows 10 and 11 | Installer: [64-bit (x64)](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-windows-x64.msi) · [ARM64](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-windows-arm64.msi) — zip: [x64](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-windows-x64.zip) · [ARM64](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-windows-arm64.zip) |
-| macOS 11 or later | Disk image: [Apple silicon](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-macos-arm64.dmg) · [Intel](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-macos-x86_64.dmg) |
-| Linux (any distribution) | AppImage: [x86_64](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.AppImage) · [ARM64 (aarch64)](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.AppImage) |
-| Debian, Ubuntu 22.04 or later | .deb: [x86_64](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.deb) · [ARM64 (aarch64)](https://github.com/SkryxDev/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.deb) |
+| Windows 10 and 11 | Setup: [64-bit (x64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-windows-x64-setup.exe) · [ARM64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-windows-arm64-setup.exe) — zip: [x64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-windows-x64.zip) · [ARM64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-windows-arm64.zip) |
+| macOS 11 or later | Disk image: [Apple silicon](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-macos-arm64.dmg) · [Intel](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-macos-x86_64.dmg) |
+| Linux (any distribution) | AppImage: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.AppImage) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.AppImage) |
+| Debian, Ubuntu 22.04 or later | .deb: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.deb) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.deb) |
 
 The release page also has the macOS command-line tool on its own (`draftcraft-cli-macos-arm64.zip`,
 `draftcraft-cli-macos-x86_64.zip`) and
 `SHA256SUMS.txt`. Every download includes `draftcraft-cli`, the command-line and MCP tool.
 
-- **Windows** — run the installer: it installs for your account (or, if you choose, for everyone), adds
-  DraftCraft to the Start menu and offers it in **Open with** for `.dxf` and `.dwg` files; to open them
-  with DraftCraft by default, pick it in **Settings › Apps › Default apps**. The zip runs from any folder
-  instead (`DraftCraft.exe`) and changes nothing on the system. Neither is signed yet, so SmartScreen may
+- **Windows** — run the setup (`draftcraft-windows-x64-setup.exe`): it installs for your account (or, if
+  you choose, for everyone), adds DraftCraft to the Start menu and offers it in **Open with** for `.dxf`
+  and `.dwg` files; to open them with DraftCraft by default, pick it in **Settings › Apps › Default
+  apps**. Later versions install themselves from **Update Now** in the app: it closes DraftCraft, shows
+  a progress bar and opens the new version. The zip runs from any folder instead (`DraftCraft.exe`) and
+  changes nothing on the system. Neither is signed yet, so SmartScreen may
   stop it the first time: choose **More info**, then **Run anyway**. DraftCraft draws its own title bar
   there, with the menu bar in it; set `DRAFTCRAFT_TITLEBAR=system` to keep Windows' own.
 - **macOS** — open the disk image and drag **DraftCraft** into **Applications**. It isn't notarized yet, so
@@ -307,12 +314,12 @@ Settings, logs and autosaves live in `~/Library/Application Support/DraftCraft` 
 
 ## Found a bug?
 
-Please [open an issue](https://github.com/SkryxDev/DraftCraft/issues/new) with what you did, what you
+Please [open an issue](https://github.com/DraftCraft-DEV/DraftCraft/issues/new) with what you did, what you
 expected and what happened — a screenshot or the drawing helps a lot. The log file is in the `logs` folder
 of the settings directory above. Or come and say it on [Discord](https://discord.gg/YgRK8Eww9x).
 
 Pull requests are welcome too: fork the repository, make your change on a branch, run `cargo xtask ci`, and
-[open a pull request](https://github.com/SkryxDev/DraftCraft/pulls).
+[open a pull request](https://github.com/DraftCraft-DEV/DraftCraft/pulls).
 
 ## Made by
 
@@ -356,7 +363,7 @@ Origin
   of WithShalom Studios. The ™ sign marks a claimed trademark; it is not a registration.
 
 Use in this repository
-  WithShalom Studios lets this repository (https://github.com/SkryxDev/DraftCraft, formerly
+  WithShalom Studios lets this repository (https://github.com/DraftCraft-DEV/DraftCraft, formerly
   https://github.com/SkryxDev/RustDraft, under whatever name it later carries) and its maintainer,
   SkryxDev, use the marks for the application developed here, which SkryxDev and WithShalom Studios
   develop together. SkryxDev made the program, released as RustDraft (versions 1.0 and 1.1); from

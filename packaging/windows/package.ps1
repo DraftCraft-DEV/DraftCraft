@@ -4,7 +4,9 @@
 
 .DESCRIPTION
   Produces, in $env:DIST (default: dist/release):
-    draftcraft-<version>-windows-<arch>.msi            per-machine installer (WiX v5)
+    draftcraft-<version>-windows-<arch>-setup.exe      the setup people download: the MSI inside one .exe
+                                                       (apps/draftcraft-setup), which also runs app updates
+    draftcraft-<version>-windows-<arch>.msi            the installer itself (WiX v5), kept for checks
     draftcraft-<version>-windows-<arch>-portable.zip   draftcraft.exe + draftcraft-cli.exe
 
   The binaries link the C runtime statically (+crt-static), so neither the MSI nor the portable
@@ -121,6 +123,24 @@ Invoke-Native 'wix build' {
 Remove-Item -Force -ErrorAction SilentlyContinue ([IO.Path]::ChangeExtension($Msi, '.wixpdb'))
 & (Join-Path $PSScriptRoot 'sign.ps1') $Msi
 
+# ---- setup .exe --------------------------------------------------------------------------------
+# The download is an .exe, not the bare MSI: draftcraft-setup carries the signed MSI inside and, run
+# by Update Now with /passive, waits for DraftCraft to quit, installs over it and starts it again.
+$Setup = Join-Path $Dist "draftcraft-$Version-windows-$Arch-setup.exe"
+if (-not $SkipBuild) {
+  $env:DRAFTCRAFT_SETUP_MSI = $Msi
+  Invoke-Native "cargo build draftcraft-setup ($Target)" { cargo build --release --locked -p draftcraft-setup --target $Target }
+  Remove-Item Env:\DRAFTCRAFT_SETUP_MSI
+}
+$SetupBin = Join-Path $Bin 'draftcraft-setup.exe'
+$h = Get-PeHeader $SetupBin
+if ($h.Machine -ne $Machine) { throw "draftcraft-setup.exe is for machine 0x$('{0:X}' -f $h.Machine), expected 0x$('{0:X}' -f $Machine) ($Arch)" }
+if ($h.Subsystem -ne 2) { throw "draftcraft-setup.exe has PE subsystem $($h.Subsystem), expected 2" }
+if ((Get-Item $SetupBin).Length -le (Get-Item $Msi).Length) { throw 'draftcraft-setup.exe is smaller than the MSI it should carry' }
+Copy-Item -Force $SetupBin $Setup
+& (Join-Path $PSScriptRoot 'sign.ps1') $Setup
+Write-Output "ok draftcraft-setup.exe: $Arch, carries $([IO.Path]::GetFileName($Msi))"
+
 # ---- portable zip ------------------------------------------------------------------------------
 $Portable = Join-Path $TargetDir "windows-package\draftcraft-$Version-windows-$Arch-portable"
 Remove-Item -Recurse -Force $Portable -ErrorAction SilentlyContinue
@@ -148,4 +168,4 @@ if ($Arch -ne 'arm64' -or $HostArch -eq 'arm64') {
 } else {
   Write-Output "skipping draftcraft-cli --version: an $Arch build doesn't run on this $HostArch machine"
 }
-Get-Item $Msi, $Zip | Format-Table Name, Length
+Get-Item $Setup, $Msi, $Zip | Format-Table Name, Length

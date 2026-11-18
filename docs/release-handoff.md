@@ -2,6 +2,11 @@
 
 **For:** SkryxDev. **From:** Sophie (Claude Code), for Shalom (`withshalom`).
 
+> **Done (2026-11-18):** main was released as **2.2.0**, the `## 3.0.0` and `## Unreleased` notes merged
+> into its section. The update check now names `DraftCraft-DEV/DraftCraft` (since the repository moved,
+> 2.1.0's Update Now refused the new releases' files). On the next merge of main into `3D`, keep 3.0.0
+> there (step 3 below).
+
 ## What to do
 
 1. **Main is ready for release review, as a 2.x.x release without 3D.** Review it, pick the version number, and release it (steps below). Do not release main as 3.0.0: that number is kept for the 3D release.

@@ -2,7 +2,7 @@
 
 ## Reporting a vulnerability
 
-Please report it privately through [GitHub's private reporting](https://github.com/SkryxDev/DraftCraft/security/advisories/new), not in a public issue or pull request. Say which version you ran, on which platform, and how to reproduce it. A small sample file helps, as long as it holds nothing private.
+Please report it privately through [GitHub's private reporting](https://github.com/DraftCraft-DEV/DraftCraft/security/advisories/new), not in a public issue or pull request. Say which version you ran, on which platform, and how to reproduce it. A small sample file helps, as long as it holds nothing private.
 
 Maintainers read reports as they arrive, but there is no fixed response time yet.
 
@@ -18,9 +18,11 @@ DraftCraft treats these as untrusted, and a way past these defences is a vulnera
 - **AutoLISP in a drawing's folder.** A drawing must not run code that the user didn't choose to load.
 - **The control channel.** It listens on loopback only and needs the session token from an owner-only file on every request. Another local account reaching it without that token is a vulnerability.
 - **Temporary and autosave files.** Autosave files are unsaved drawings: another account must not be able to read them or redirect a write through them.
-- **Releases.** DraftCraft has no automatic updater; releases come only from
-  [github.com/SkryxDev/DraftCraft/releases](https://github.com/SkryxDev/DraftCraft/releases), and a release
-  must not be replaceable by someone other than the project.
+- **Releases and updates.** Releases come only from
+  [github.com/DraftCraft-DEV/DraftCraft/releases](https://github.com/DraftCraft-DEV/DraftCraft/releases).
+  **Update Now** in the app downloads only from there and checks every file against the release's
+  `SHA256SUMS.txt` before installing it. A release or an update must not be replaceable by someone other
+  than the project.
 
 ## Known limits
 

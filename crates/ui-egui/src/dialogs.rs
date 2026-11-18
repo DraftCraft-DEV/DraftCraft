@@ -339,7 +339,7 @@ fn about(ctx: &egui::Context, open: &mut bool) {
             });
             ui.label(crate::tl!("Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust."));
             ui.add_space(6.0);
-            ui.hyperlink_to("github.com/SkryxDev/DraftCraft", "https://github.com/SkryxDev/DraftCraft");
+            ui.hyperlink_to("github.com/DraftCraft-DEV/DraftCraft", "https://github.com/DraftCraft-DEV/DraftCraft");
             ui.hyperlink_to("Discord", "https://discord.gg/YgRK8Eww9x");
             ui.add_space(6.0);
             ui.label(RichText::new(crate::tl!("MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.")).small().color(t.text_faint));

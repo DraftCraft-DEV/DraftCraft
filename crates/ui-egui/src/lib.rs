@@ -8,14 +8,14 @@
 #![deny(clippy::unwrap_used, clippy::expect_used, clippy::panic, clippy::unimplemented, clippy::todo, clippy::unreachable)]
 #![forbid(unsafe_code)]
 
-/// DraftCraft's identity for the update check: its GitHub repository (`SkryxDev/DraftCraft`), whose
+/// DraftCraft's identity for the update check: its GitHub repository (`DraftCraft-DEV/DraftCraft`), whose
 /// newest release [`updates_ui`] offers, with its 128 px icon and accent colour.
 #[cfg(not(target_arch = "wasm32"))]
 pub const UPDATE_APP: craft_update::app::App = craft_update::app::App {
     icon_png: Some(include_bytes!("../../../assets/app-icon/hicolor/128x128/apps/dev.skryx.draftcraft.png")),
     accent: Some([0x3e, 0xa6, 0xe8]),
     developer: "SkryxDev",
-    ..craft_update::app::App::new("draftcraft", "DraftCraft", "Computer-aided design and drafting", "SkryxDev/DraftCraft")
+    ..craft_update::app::App::new("draftcraft", "DraftCraft", "Computer-aided design and drafting", "DraftCraft-DEV/DraftCraft")
 };
 
 pub mod aliasdlg;
