@@ -1680,3 +1680,11 @@ menu	CAD Standards	CAD 标准
 	Visualize	可视化
 	Primitive	图元
 	Views	视图
+# 3D modify (3DMOVE, 3DROTATE, 3DSCALE, MIRROR3D, 3DALIGN, 3DARRAY).
+	3D Move	三维移动
+	3D Rotate	三维旋转
+	Rotate 3D	三维旋转（旧）
+	3D Scale	三维缩放
+	3D Mirror	三维镜像
+	3D Align	三维对齐
+	3D Array	三维阵列

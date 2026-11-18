@@ -202,6 +202,12 @@ pub enum Icon {
     Shell,
     FilletEdge,
     ChamferEdge,
+    Move3d,
+    Rotate3d,
+    Scale3d,
+    Mirror3d,
+    Align3d,
+    Array3d,
     SectionCut,
     Flatshot,
     ViewIso,
@@ -450,6 +456,57 @@ fn paint_solid_tools(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32) {
             }
             pen.poly(&[(4.0, 20.0), (8.0, 17.0), (8.0, 8.0)], false, b);
             pen.poly(&[(20.0, 4.0), (22.0, 6.0)], false, b);
+        }
+        Move3d => {
+            // A small box and the move gizmo: X, Y and Z arrows from one point.
+            iso_box(pen, 6.0, 22.0, 4.0, 3.0, 4.0, b);
+            pen.la(12.0, 14.0, 21.0, 18.5);
+            pen.la(12.0, 14.0, 3.5, 9.5);
+            pen.la(12.0, 14.0, 12.0, 4.0);
+            pen.arrow_tip(21.5, 19.0, 0.866, 0.5, a);
+            pen.arrow_tip(3.0, 9.2, -0.866, -0.5, a);
+            pen.arrow_tip(12.0, 2.5, 0.0, -1.0, a);
+        }
+        Rotate3d => {
+            // The rotate gizmo: three rings about one point.
+            pen.c(12.0, 12.0, 8.5, a);
+            let ring = |rx: f32, ry: f32| {
+                let pts: Vec<(f32, f32)> = (0..=24)
+                    .map(|i| {
+                        let t = (i as f32 * 15.0).to_radians();
+                        (12.0 + rx * t.cos(), 12.0 + ry * t.sin())
+                    })
+                    .collect();
+                pen.poly(&pts, false, b);
+            };
+            ring(8.5, 3.0);
+            ring(3.0, 8.5);
+            pen.fill_c(12.0, 12.0, 1.6, a);
+        }
+        Scale3d => {
+            iso_box(pen, 9.0, 21.0, 4.0, 3.0, 4.0, b);
+            iso_box(pen, 11.0, 22.0, 9.0, 7.0, 9.0, a);
+            pen.arrow_tip(20.0, 5.0, 0.7, -0.7, a);
+        }
+        Mirror3d => {
+            // A box each side of a mirror plane seen at a slant.
+            iso_box(pen, 6.0, 20.0, 4.0, 3.0, 6.0, b);
+            iso_box(pen, 18.0, 20.0, 4.0, 3.0, 6.0, a);
+            pen.poly(&[(10.5, 22.0), (13.5, 18.0), (13.5, 2.0), (10.5, 6.0)], true, b.gamma_multiply(0.7));
+        }
+        Align3d => {
+            // A box carried onto the corner of another, following an arrow.
+            iso_box(pen, 6.0, 21.0, 4.0, 3.0, 4.0, b);
+            iso_box(pen, 16.0, 10.0, 5.0, 4.0, 5.0, a);
+            pen.la(8.0, 15.0, 14.0, 10.0);
+            pen.arrow_tip(15.0, 9.2, 0.77, -0.64, a);
+        }
+        Array3d => {
+            // Copies in rows, columns and levels.
+            iso_box(pen, 7.0, 22.0, 4.0, 3.0, 4.0, b);
+            iso_box(pen, 16.0, 22.0, 4.0, 3.0, 4.0, b);
+            iso_box(pen, 7.0, 12.0, 4.0, 3.0, 4.0, a);
+            iso_box(pen, 16.0, 12.0, 4.0, 3.0, 4.0, a);
         }
         SectionCut => {
             iso_box(pen, 11.0, 21.0, 9.0, 7.0, 8.0, b);

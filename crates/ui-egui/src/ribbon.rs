@@ -270,7 +270,7 @@ const SOLID_TABS: &[RibbonTab] = &[
                 ],
             },
             HOME_DRAW,
-            HOME_MODIFY,
+            HOME_MODIFY_3D,
             RibbonPanel {
                 title: "Section",
                 cols: &[Large(b(Icon::SectionCut, "section", "Section")), Icons(&[b(Icon::Flatshot, "flatshot", "Flatshot")])],
@@ -404,6 +404,24 @@ const SWEEP_MORE: &[Tool] = &[(Icon::Extrude, "extrude", "Extrude"), (Icon::Revo
 #[cfg(feature = "solids")]
 const BOOLEAN_MORE: &[Tool] =
     &[(Icon::Union, "union", "Union"), (Icon::Subtract, "subtract", "Subtract"), (Icon::Intersect, "intersect", "Intersect")];
+
+/// The 3D Modeling Home tab's Modify panel: the 3D tools, then 2D Drafting's.
+#[cfg(feature = "solids")]
+const HOME_MODIFY_3D: RibbonPanel = RibbonPanel {
+    title: "Modify",
+    cols: &[
+        Large(b(Icon::Move3d, "3dmove", "3D Move")),
+        Icons(&[b(Icon::Rotate3d, "3drotate", "3D Rotate"), b(Icon::Align3d, "3dalign", "3D Align"), b(Icon::Scale3d, "3dscale", "3D Scale")]),
+        Icons(&[b(Icon::Mirror3d, "mirror3d", "3D Mirror"), b(Icon::Array3d, "3darray", "3D Array"), b(Icon::Erase, "erase", "Erase")]),
+        Small(&[b(Icon::Move, "move", "Move"), b(Icon::Copy, "copy", "Copy"), b(Icon::Stretch, "stretch", "Stretch")]),
+        Small(&[b(Icon::Rotate, "rotate", "Rotate"), b(Icon::Mirror, "mirror", "Mirror"), b(Icon::Scale, "scale", "Scale")]),
+        Icons(&[
+            d(Icon::Trim, "trim", "Trim", TRIM_MORE),
+            d(Icon::Fillet, "fillet", "Fillet", FILLET_MORE),
+            d(Icon::ArrayRect, "arrayrect", "Array", ARRAY_MORE),
+        ]),
+    ],
+};
 
 /// The Home tab's panels that the 3D Modeling workspace's Home tab shows too.
 const HOME_DRAW: RibbonPanel = RibbonPanel {

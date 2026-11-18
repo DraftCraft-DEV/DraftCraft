@@ -394,6 +394,12 @@ pub fn boolean(a: &Body, b: &Body, op: BoolOp) -> Result<Option<Body>> {
     }
 }
 
+/// Two bodies as one, as UNION makes them: pieces that don't meet stay separate pieces (lumps)
+/// of the one body.
+pub(crate) fn join(a: &Body, b: &Body) -> Result<Body> {
+    boolean(a, b, BoolOp::Union)?.ok_or_else(|| err("the pieces leave no solid"))
+}
+
 /// The parts of `body` on each side of a plane: (the side the normal points to, the other side).
 pub fn slice(body: &Body, origin: Vec3, normal: Vec3) -> Result<(Option<Body>, Option<Body>)> {
     let origin = point(origin, "the plane's point")?;

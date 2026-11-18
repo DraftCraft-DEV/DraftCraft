@@ -168,3 +168,19 @@ fn hostile_regions_never_crash() {
     }
     assert!(read_region(&[]).is_err());
 }
+
+/// A solid of two pieces apart (AutoCAD's UNION of solids that don't meet) is one 3DSOLID with
+/// two lumps, and reads back as one body of two pieces with the same volume (handoff A3).
+#[test]
+fn a_solid_of_separate_pieces_reads_as_one_body() {
+    let a = box_solid(Vec3::new(0.0, 0.0, 0.0), Vec3::new(50.0, 50.0, 50.0)).unwrap();
+    let b = box_solid(Vec3::new(200.0, 0.0, 0.0), Vec3::new(250.0, 50.0, 50.0)).unwrap();
+    let both = crate::boolean(&a, &b, crate::BoolOp::Union).unwrap().unwrap();
+    assert_eq!(both.solid_count().unwrap(), 2);
+    for (form, bytes) in [("SAT", write_sat(&both).unwrap().into_bytes()), ("SAB", write_sab(&both).unwrap())] {
+        let back = read(&bytes).unwrap();
+        let [one] = back.as_slice() else { panic!("{form}: {} bodies", back.len()) };
+        assert_eq!(one.solid_count().unwrap(), 2, "{form}");
+        assert!((one.mass().unwrap().volume - 250_000.0).abs() < 1e-6, "{form}");
+    }
+}

@@ -1707,3 +1707,11 @@ menu	Workspaces	Aree di lavoro
 	Visualize	Visualizza
 	Primitive	Primitive
 	Views	Viste
+# 3D modify (3DMOVE, 3DROTATE, 3DSCALE, MIRROR3D, 3DALIGN, 3DARRAY).
+	3D Move	Spostamento 3D
+	3D Rotate	Rotazione 3D
+	Rotate 3D	Ruota 3D
+	3D Scale	Scala 3D
+	3D Mirror	Specchio 3D
+	3D Align	Allineamento 3D
+	3D Array	Serie 3D
