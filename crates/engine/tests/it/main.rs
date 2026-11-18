@@ -3,6 +3,7 @@ mod angle_settings;
 mod annotate_options;
 mod annotative;
 mod arc_ctrl_direction;
+mod area_total;
 mod array_commands;
 mod assoc_array;
 mod attdef_command;

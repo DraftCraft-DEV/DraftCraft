@@ -23,7 +23,7 @@ mod point;
 mod polygon;
 mod solid;
 mod spline;
-mod text;
+pub(super) mod text;
 
 use circle::{CircleM, run_arc, run_circle};
 pub(crate) use ellipse::ellipse_machine;

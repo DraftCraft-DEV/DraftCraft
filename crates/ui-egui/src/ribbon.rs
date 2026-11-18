@@ -134,6 +134,7 @@ const MEASURE_MORE: &[Tool] = &[
     (Icon::DimRadius, "radius.measure", "Radius"),
     (Icon::DimAngular, "angle.measure", "Angle"),
     (Icon::Area, "area", "Area"),
+    (Icon::AreaTotal, "areatotal", "Total Area and Length"),
     (Icon::Rectangle, "volume.measure", "Volume"),
 ];
 const PASTE_MORE: &[Tool] = &[
@@ -217,7 +218,13 @@ const SLIDE_OUTS: &[(&str, &str, &[Tool])] = &[
     (
         "Home",
         "Utilities",
-        &[(Icon::Distance, "dist", "Distance"), (Icon::Point, "id", "ID Point"), (Icon::Area, "area", "Area"), (Icon::List, "list", "List")],
+        &[
+            (Icon::Distance, "dist", "Distance"),
+            (Icon::Point, "id", "ID Point"),
+            (Icon::Area, "area", "Area"),
+            (Icon::AreaTotal, "areatotal", "Total Area and Length"),
+            (Icon::List, "list", "List"),
+        ],
     ),
 ];
 
@@ -522,6 +529,7 @@ const TABS: &[RibbonTab] = &[
                 title: "Utilities",
                 cols: &[
                     Large(d(Icon::Measure, "measuregeom", "Measure", MEASURE_MORE)),
+                    Large(b(Icon::AreaTotal, "areatotal", "Total Area")),
                     Icons(&[
                         b(Icon::QuickSelect, "qselect", "Quick Select"),
                         b(Icon::SelectObjects, "selectall", "Select All"),

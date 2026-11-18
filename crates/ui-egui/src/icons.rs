@@ -149,6 +149,7 @@ pub enum Icon {
     Measure,
     Distance,
     Area,
+    AreaTotal,
     List,
     PickAdd,
     SelectObjects,
@@ -1449,6 +1450,12 @@ fn paint_constraints(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32, dim: boo
         Area => {
             pen.poly(&[(4.0, 18.0), (6.0, 5.0), (19.0, 7.0), (20.0, 19.0)], true, a);
             pen.text(12.0, 12.5, "A", 9.0, b);
+        }
+        AreaTotal => {
+            // Two shapes, a square and a circle, and a sum sign drawn in strokes (a font may lack Σ).
+            pen.rect(2.0, 3.0, 9.0, 9.0, a);
+            pen.c(7.0, 17.0, 4.0, a);
+            pen.poly(&[(21.5, 6.0), (21.5, 4.0), (13.5, 4.0), (18.0, 12.0), (13.5, 20.0), (21.5, 20.0), (21.5, 18.0)], false, b);
         }
         List => {
             for y in [6.0, 11.0, 16.0] {

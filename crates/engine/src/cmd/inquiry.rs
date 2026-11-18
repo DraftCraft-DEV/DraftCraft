@@ -1,4 +1,4 @@
-//! Inquiry: DIST, ID, LIST, AREA, drawing inspection for agents.
+//! Inquiry: DIST, ID, LIST, AREA, AREATOTAL, drawing inspection for agents.
 
 use std::collections::{BTreeMap, BTreeSet};
 
@@ -15,6 +15,7 @@ mod arcs;
 mod loops;
 mod regions;
 mod shapes;
+mod totals;
 mod usage;
 
 /// The inquiry commands: distances, points, listing, area, time and status, the drawing and
@@ -43,9 +44,13 @@ pub fn specs() -> Vec<CommandSpec> {
         CommandSpec::new("area", "Area", run_area)
             .menu(&["Tools", "Inquiry", "Area"])
             .alias(&["aa"])
-            .params("{points: [[x,y],...]} | {handle}")
+            .params("{points: [[x,y],...]} | {handle} | {handles: [...], subtract?: [...]} (Add area and Subtract area: the areas of `handles` added, those of `subtract` taken away) → {area, perimeter, message, count?, skipped?}")
             .noundo()
             .interactive(|_| Ok(Box::new(AreaM::default()))),
+        CommandSpec::new("areatotal", "Total Area and Length", totals::run)
+            .menu(&["Tools", "Inquiry", "Total Area and Length"])
+            .params(totals::PARAMS)
+            .interactive(|_| Ok(Box::<totals::AreaTotalM>::default())),
         CommandSpec::new("time", "Time", run_time).menu(&["Tools", "Inquiry", "Time"]).noundo(),
         CommandSpec::new("status", "Status", run_status).menu(&["Tools", "Inquiry", "Status"]).noundo(),
         CommandSpec::new("drawing.inspect", "Inspect Drawing", run_inspect).params("{entities?: bool, limit?: n}").noundo(),
@@ -432,6 +437,10 @@ fn given_points(p: &Value, cmd: &str) -> Result<Option<Vec<Vec2>>> {
 }
 
 fn run_area(s: &mut Session, p: &Value) -> Result<Value> {
+    let several = p.get("handles").is_some_and(Value::is_array) || p.get("subtract").is_some_and(|v| !v.is_null());
+    if several && p.get("points").is_none_or(Value::is_null) {
+        return run_area_total(s, p);
+    }
     let (a, per) = if let Some(pts) = given_points(p, "area")? {
         area_of(&pts)
     } else {
@@ -444,6 +453,46 @@ fn run_area(s: &mut Session, p: &Value) -> Result<Value> {
     s.area = a;
     s.perimeter = per;
     Ok(json!({ "area": a, "perimeter": per, "message": area_text(s, a, per) }))
+}
+
+/// AREA's Object option in Add area and Subtract area mode, in one call: the areas of `handles`
+/// (or of the selection) added up, those of `subtract` taken away. The perimeter is that of the
+/// objects added. Objects without an area are skipped and listed; at least one must have one.
+fn run_area_total(s: &mut Session, p: &Value) -> Result<Value> {
+    let added = targets(s, p)?;
+    let subtracted = match p.get("subtract") {
+        None | Some(Value::Null) => Vec::new(),
+        Some(v) => targets(s, &json!({ "handles": v }))?,
+    };
+    let (mut area, mut per, mut count) = (0.0, 0.0, 0usize);
+    let mut skipped = Vec::new();
+    for (hs, sign) in [(&added, 1.0), (&subtracted, -1.0)] {
+        for &h in hs {
+            match object_area(s, h) {
+                Ok((a, pp)) => {
+                    if let Some(what) = too_large(a, pp) {
+                        return Err(bad("area", format!("the {what} of {} is too large", h.hex())));
+                    }
+                    area += sign * a;
+                    if sign > 0.0 {
+                        per += pp;
+                    }
+                    count = count.saturating_add(1);
+                }
+                Err(_) => skipped.push(h.hex()),
+            }
+        }
+    }
+    if count == 0 {
+        return Err(bad("area", "none of the objects has an area"));
+    }
+    if let Some(what) = too_large(area, per) {
+        return Err(bad("area", format!("the total {what} is too large")));
+    }
+    s.area = area;
+    s.perimeter = per;
+    let message = format!("Total area = {}, Perimeter = {}", fmt_d(s, area), fmt_d(s, per));
+    Ok(json!({ "area": area, "perimeter": per, "count": count, "skipped": skipped, "message": message }))
 }
 
 fn area_text(s: &Session, a: f64, per: f64) -> String {
