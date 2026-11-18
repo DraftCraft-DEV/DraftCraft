@@ -9,6 +9,7 @@ and what is not there yet.
 | Startup LISP (`acad.lsp`, `acaddoc.lsp`) | Loaded from the support folder at startup and for each drawing. | [autolisp.md](autolisp.md#at-startup) |
 | Scripts (`.scr`) | SCRIPT (Tools > Run Script...), `draftcraft-cli run --script-file`, and script text over MCP and the control channel. | below |
 | Command aliases (`.pgp`) | ALIASEDIT `{file}` loads an alias file for the session; REINIT reads it again. | below |
+| A profile (`.arg`) or a setup you repeat by hand | One TOML settings file: CONFIGEXPORT writes the interface, Options, drawing, plot and alias settings, CONFIGIMPORT reads them back. | [config-file.md](config-file.md) |
 | Compiled plug-ins (C++, .NET) | Not supported. A plug-in API, for plug-ins written in Rust and compiled to WebAssembly, may come later. | — |
 | Programs that drive the CAD program from outside | The JSON control channel, the MCP server and `draftcraft-cli`. Any language that can open a TCP socket or start a process can use them. | below |
 

@@ -7,6 +7,7 @@ mod array;
 mod audit;
 pub(crate) mod blocks;
 pub mod clipboard;
+pub mod config;
 pub mod constraints;
 mod draw;
 mod draw2;
@@ -221,6 +222,7 @@ pub fn command_specs() -> &'static [CommandSpec] {
         v.extend(inquiry::specs());
         v.extend(settings::specs());
         v.extend(options::specs());
+        v.extend(config::specs());
         v.extend(utility::specs());
         v.extend(table::specs());
         v.extend(tolerance::specs());

@@ -67,6 +67,8 @@ unicode-bidi = "0.3.18"
 icu_segmenter = { version = "~2.3", default-features = false, features = ["compiled_data", "lstm"] }
 image = { version = "0.25", default-features = false, features = ["png", "jpeg", "bmp", "tiff"] }
 encoding_rs = "0.8.35"
+# The portable settings file (CONFIGEXPORT, CONFIGIMPORT): TOML, keys kept in the order written.
+toml = { version = "1.1", default-features = false, features = ["std", "serde", "parse", "display", "preserve_order"] }
 # XML for the SVG reader (streaming parser, no entity expansion beyond the five predefined ones)
 quick-xml = "0.42"
 

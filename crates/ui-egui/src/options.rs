@@ -262,6 +262,12 @@ fn run_json(app: &mut CadApp, params: &Value) -> Result<Value, String> {
     if reset {
         reset_ui(app);
     }
+    apply_ui(app, ui);
+    Ok(report(app))
+}
+
+/// Make the interface preference changes `ui` holds (already checked by [`parse_ui`]).
+fn apply_ui(app: &mut CadApp, ui: UiChanges) {
     if let Some(t) = ui.theme {
         app.ui.theme = t;
     }
@@ -310,7 +316,146 @@ fn run_json(app: &mut CadApp, params: &Value) -> Result<Value, String> {
     if let Some(b) = ui.time_sensitive_right_click {
         app.options.time_sensitive_right_click = b;
     }
-    Ok(report(app))
+}
+
+// ---------- the portable settings file ----------
+
+/// The colour preferences, whose default (`null` in the JSON form) the settings file writes as
+/// `"default"` (TOML has no null).
+const COLOR_KEYS: [&str; 3] = ["modelBackground", "paperBackground", "selectionColor"];
+
+/// The most `[interface]` entries one import reads.
+const MAX_INTERFACE_ENTRIES: usize = 256;
+
+/// The interface preferences as the settings file's `[interface]` section: the OPTIONS JSON
+/// form's, without SAVEFILEPATH (a folder on this computer only).
+pub fn config_interface(app: &CadApp) -> Map<String, Value> {
+    let mut m = ui_json(app);
+    m.remove("SAVEFILEPATH");
+    for k in COLOR_KEYS {
+        if m.get(k).is_some_and(Value::is_null) {
+            m.insert(k.into(), json!("default"));
+        }
+    }
+    m
+}
+
+/// Apply a settings file's `[interface]` section: each entry the OPTIONS JSON form takes is
+/// applied, every other one is reported in `r`.
+pub fn apply_config_interface(app: &mut CadApp, section: &Value, r: &mut draftcraft_engine::cmd::config::Report) {
+    let Some(m) = section.as_object() else {
+        r.issue("interface: must be a section ([interface]); skipped");
+        return;
+    };
+    let mut c = UiChanges::default();
+    for (k, v) in m.iter().take(MAX_INTERFACE_ENTRIES) {
+        let key: String = k.chars().filter(|c| !c.is_control()).take(64).collect();
+        // A folder on one computer: a file from somewhere else never moves the autosaves.
+        if k.eq_ignore_ascii_case("SAVEFILEPATH") {
+            r.issue(format!("interface.{key}: a folder on one computer is not read from a settings file; skipped"));
+            continue;
+        }
+        let default_color = COLOR_KEYS.contains(&k.as_str()) && v.as_str().is_some_and(|t| t.trim().eq_ignore_ascii_case("default"));
+        let v = if default_color { Value::Null } else { v.clone() };
+        match parse_ui(k, &v, &mut c) {
+            Ok(true) => r.applied.push(format!("interface.{key}")),
+            Ok(false) => r.issue(format!("interface.{key}: unknown setting; skipped")),
+            Err(e) => r.issue(format!("interface.{key}: {e}; skipped")),
+        }
+    }
+    if m.len() > MAX_INTERFACE_ENTRIES {
+        r.issue(format!("[interface]: more than {MAX_INTERFACE_ENTRIES} entries; the rest are skipped"));
+    }
+    apply_ui(app, c);
+}
+
+/// CONFIGEXPORT and CONFIGIMPORT in the app: from the ribbon, a menu or typed (no parameters)
+/// the file dialog asks for the file, and the `[interface]` section is written and applied here.
+/// JSON calls never open a dialog. `None` where the engine's command should run as it is:
+/// with FILEDIA off or no file dialog, it asks for the file name at the command line.
+pub fn config_route(app: &mut CadApp, id: &str, params: &Value) -> Option<Result<Value, String>> {
+    use draftcraft_engine::cmd::config;
+    if !matches!(id, "configexport" | "configimport") {
+        return None;
+    }
+    let dialog = params.is_null() && app.session.settings.filedia;
+    // Asked at the command line instead (FILEDIA off, no dialog): the engine writes the
+    // interface settings handed to it now, and leaves what it read for [`config_imported`].
+    app.session.config_interface.current = Some(config_interface(app));
+    if id == "configexport" {
+        let mut p = if params.is_null() {
+            if app.services.no_file_system {
+                // The browser downloads the file.
+                json!({ "file": config::DEFAULT_FILE })
+            } else {
+                let pick = app.services.pick_save.as_ref().filter(|_| dialog)?;
+                let Some(path) = pick(config::DEFAULT_FILE) else { return Some(Ok(Value::Null)) };
+                json!({ "file": path })
+            }
+        } else {
+            params.clone()
+        };
+        if let Some(o) = p.as_object_mut() {
+            o.insert(config::INTERFACE.into(), Value::Object(config_interface(app)));
+        }
+        return Some(app.session.execute("configexport", &p).map_err(|e| e.to_string()));
+    }
+    let p = if params.is_null() {
+        if app.services.no_file_system {
+            let hint = "CONFIGIMPORT: there is no file system here; run it with the file's contents, e.g. configimport {\"text\": \"[profile]\\nPICKBOX = 5\"}";
+            app.session.echo(hint.to_string());
+            app.set_status(hint);
+            return Some(Ok(Value::Null));
+        }
+        let pick = app.services.pick_file.as_ref().filter(|_| dialog)?;
+        let Some(path) = pick("DraftCraft settings (TOML)", &["toml"]) else { return Some(Ok(Value::Null)) };
+        json!({ "file": path })
+    } else {
+        params.clone()
+    };
+    Some(config_import(app, &p))
+}
+
+/// Apply the `[interface]` section CONFIGIMPORT read at the command line (once per frame).
+pub fn config_imported(app: &mut CadApp) {
+    let Some(section) = app.session.config_interface.imported.take() else { return };
+    let mut r = draftcraft_engine::cmd::config::Report::default();
+    apply_config_interface(app, &section, &mut r);
+    if !r.applied.is_empty() || !r.issues.is_empty() {
+        app.session.echo(format!("CONFIGIMPORT: {} interface setting(s) imported.", r.applied.len()));
+        for i in &r.issues {
+            app.session.echo(format!("  {i}"));
+        }
+    }
+}
+
+/// Read a settings file, apply its `[interface]` section here and the rest through the engine's
+/// CONFIGIMPORT (one undo step for the drawing), and report both together.
+fn config_import(app: &mut CadApp, p: &Value) -> Result<Value, String> {
+    use draftcraft_engine::cmd::config;
+    let mut settings = config::load_params("configimport", p).map_err(|e| e.to_string())?;
+    let interface = settings.remove(config::INTERFACE);
+    let mut r = config::Report::default();
+    if let Some(section) = &interface {
+        apply_config_interface(app, section, &mut r);
+    }
+    let engine = app.session.execute("configimport", &json!({ "settings": settings, "quiet": true })).map_err(|e| e.to_string())?;
+    let strings = |k: &str| {
+        engine
+            .get(k)
+            .and_then(Value::as_array)
+            .map(|a| a.iter().filter_map(Value::as_str).map(str::to_string).collect::<Vec<_>>())
+            .unwrap_or_default()
+    };
+    r.applied.extend(strings("applied"));
+    for issue in strings("issues") {
+        r.issue(issue);
+    }
+    app.session.echo(format!("CONFIGIMPORT: {}", r.summary()));
+    for i in &r.issues {
+        app.session.echo(format!("  {i}"));
+    }
+    Ok(r.to_json())
 }
 
 /// The interface preferences back to their defaults (the interface language stays).
@@ -400,5 +545,39 @@ mod tests {
         for bad in ["#+f+0+0", "", "#fff", "#gggggg", "#12345678", "#ééé", "#1234567"] {
             assert_eq!(parse_hex(bad), None, "{bad}");
         }
+    }
+
+    fn app() -> CadApp {
+        CadApp::new(draftcraft_engine::Session::new(), crate::Services::default())
+    }
+
+    /// The settings file carries the interface preferences too: export from one app, import into
+    /// another, and both have the same; the colour defaults travel as "default".
+    #[test]
+    fn the_settings_file_carries_the_interface_both_ways() {
+        let mut a = app();
+        a.run("options", serde_json::json!({ "theme": "light", "modelBackground": "#102030", "interfaceScale": 1.25, "PICKBOX": 6 })).unwrap();
+        let r = a.run("configexport", serde_json::json!({})).unwrap();
+        let text = r["text"].as_str().unwrap_or_default().to_string();
+        assert!(text.contains("theme = \"light\"") && text.contains("paperBackground = \"default\""), "{text}");
+        assert!(!text.contains("SAVEFILEPATH"), "a folder on this computer only");
+        let mut b = app();
+        let r = b.run("configimport", serde_json::json!({ "text": text })).unwrap();
+        assert_eq!(r["issues"], serde_json::json!([]), "{r}");
+        assert_eq!(config_interface(&b), config_interface(&a));
+        assert_eq!(b.ui.theme, ThemePref::Light);
+        assert_eq!(b.options.model_background, Some(Color32::from_rgb(0x10, 0x20, 0x30)));
+        assert_eq!(b.session.settings.pickbox, 6.0);
+        // Bad interface entries are listed and change nothing.
+        let r = b
+            .run(
+                "configimport",
+                serde_json::json!({ "text": "[interface]\ntheme = \"sepia\"\ninterfaceScale = 99\nnope = 1\nSAVEFILEPATH = \"/tmp\"\nmodelBackground = \"default\"\n" }),
+            )
+            .unwrap();
+        assert_eq!(r["applied"], serde_json::json!(["interface.modelBackground"]));
+        assert_eq!(r["issues"].as_array().map(Vec::len), Some(4), "{r}");
+        assert_eq!(b.ui.theme, ThemePref::Light);
+        assert_eq!(b.options.model_background, None);
     }
 }

@@ -21,6 +21,8 @@ draftcraft-render = { workspace = true }
 craft-docpath = { workspace = true }
 serde = { workspace = true }
 serde_json = { workspace = true }
+# The portable settings file (CONFIGEXPORT, CONFIGIMPORT).
+toml = { workspace = true }
 thiserror = { workspace = true }
 log = { workspace = true }
 # 3D solids (feature `solids`, docs/solids.md): the kernel facade, the only way to the kernel.

@@ -163,6 +163,8 @@ pub struct Session {
     /// ([`Session::input_object`]): a pick at exactly that point picks that object
     /// ([`Session::pick_object`]).
     pick_hint: Option<(Handle, Vec2)>,
+    /// The app's side of the settings file (CONFIGEXPORT, CONFIGIMPORT at the command line).
+    pub config_interface: cmd::config::HostInterface,
 }
 
 impl Default for Session {
@@ -220,6 +222,7 @@ impl Session {
             lisp_last: None,
             hatch_picks: None,
             pick_hint: None,
+            config_interface: cmd::config::HostInterface::default(),
         }
     }
 

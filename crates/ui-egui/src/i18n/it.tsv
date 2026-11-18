@@ -1707,6 +1707,12 @@ menu	Workspaces	Aree di lavoro
 	Visualize	Visualizza
 	Primitive	Primitive
 	Views	Viste
+# Portable settings file (CONFIGIMPORT, CONFIGEXPORT).
+	Import Settings	Importa impostazioni
+	Export Settings	Esporta impostazioni
+	Import Settings...	Importa impostazioni...
+	Export Settings...	Esporta impostazioni...
+	DraftCraft settings (TOML)	Impostazioni DraftCraft (TOML)
 # 3D modify (3DMOVE, 3DROTATE, 3DSCALE, MIRROR3D, 3DALIGN, 3DARRAY).
 	3D Move	Spostamento 3D
 	3D Rotate	Rotazione 3D

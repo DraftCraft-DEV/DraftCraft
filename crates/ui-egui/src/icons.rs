@@ -186,6 +186,9 @@ pub enum Icon {
     GeoLocation,
     PointCloud,
     Customize,
+    /// CONFIGIMPORT and CONFIGEXPORT: the portable settings file.
+    SettingsImport,
+    SettingsExport,
     // 3D solids (docs/solids.md).
     Box3d,
     Wedge,
@@ -1663,6 +1666,23 @@ fn paint_manager_tools(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32) {
             pen.l(3.0, 7.0, 15.0, 7.0);
             pen.p.line_segment([pen.at(11.0, 20.0), pen.at(18.0, 13.0)], Stroke::new(pen.w * 2.4, a));
             pen.c(19.0, 12.0, 2.6, a);
+        }
+        SettingsImport | SettingsExport => {
+            // A sheet of settings (three sliders), with an arrow into it (import) or out of it
+            // (export).
+            pen.rect(3.0, 3.0, 13.0, 18.0, b);
+            for (y, knob) in [(7.0, 6.5), (11.0, 12.0), (15.0, 8.5)] {
+                pen.l(5.5, y, 13.5, y);
+                pen.fill_c(knob, y, 1.5, b);
+            }
+            let thick = Stroke::new(pen.w * 2.0, a);
+            if icon == SettingsImport {
+                pen.p.line_segment([pen.at(23.0, 19.0), pen.at(16.0, 19.0)], thick);
+                pen.big_arrow(10.0, 19.0, -1.0, 0.0, 6.0, 4.0, a);
+            } else {
+                pen.p.line_segment([pen.at(10.0, 19.0), pen.at(17.0, 19.0)], thick);
+                pen.big_arrow(23.0, 19.0, 1.0, 0.0, 6.0, 4.0, a);
+            }
         }
         _ => {}
     }

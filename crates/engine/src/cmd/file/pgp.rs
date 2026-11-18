@@ -43,6 +43,24 @@ pub(crate) fn user_alias(name: &str) -> Option<String> {
     store().map.get(name).cloned()
 }
 
+/// The user aliases now (lower-case alias → command id), for CONFIGEXPORT.
+pub(crate) fn user_aliases() -> BTreeMap<String, String> {
+    store().map.clone()
+}
+
+/// Add or replace one user alias (CONFIGIMPORT): `alias` must be one ALIASEDIT takes and
+/// `target` name a command. Returns the command id.
+pub(crate) fn add_user_alias(alias: &str, target: &str) -> std::result::Result<String, String> {
+    let name = alias_name(alias)?;
+    let id = command_id(target).ok_or_else(|| format!("unknown command {}", target.trim()))?;
+    let mut st = store();
+    if !st.map.contains_key(&name) && st.map.len() >= MAX_ALIASES {
+        return Err(format!("more than {MAX_ALIASES} aliases"));
+    }
+    st.map.insert(name, id.clone());
+    Ok(id)
+}
+
 /// The command id `target` names (`*LINE`, `_.line`, `-LAYER`…), if there is such a command.
 pub fn command_id(target: &str) -> Option<String> {
     let t = target.trim().trim_start_matches('*').trim().trim_start_matches(['_', '.']).to_ascii_lowercase();
