@@ -21,7 +21,7 @@ use crate::{Accept, Input, Interactive, Prompt, Result, Session, Step};
 pub fn specs() -> Vec<CommandSpec> {
     vec![
         CommandSpec::new("properties", "Properties", run_get).menu(&["Modify", "Properties"]).alias(&["pr", "props", "ch"]).params("{handles?} → properties of the selection").noundo(),
-        CommandSpec::new("properties.set", "Set Properties", run_set).params("{handles?, layer?, color?, linetype?, lineweight?, ltscale?, thickness?, transparency?: \"ByLayer\" | \"ByBlock\" | 0..90, visible?, <geometry fields: radius, center, start, end, text, height, rotation…>; dimensions: textOverride, dimStyle, textHeight, arrowSize, dimScale, precision (per-dimension overrides)}"),
+        CommandSpec::new("properties.set", "Set Properties", run_set).params("{handles?, layer?, color?, linetype?, lineweight?, ltscale?, thickness?, transparency?: \"ByLayer\" | \"ByBlock\" | 0..90, visible?, <geometry fields: radius, center, start, end, text, height, rotation…>; dimensions: textOverride, dimStyle, textHeight, arrowSize, dimScale, precision (per-dimension overrides); conic splines: rho (0 < rho < 1: under 0.5 an ellipse, 0.5 a parabola, over 0.5 a hyperbola)}"),
         CommandSpec::new("chprop", "Change Properties", chprop::run_chprop)
             .params("as properties.set, leaving out objects on locked layers → {changed, locked} (the command line asks Color, LAyer, LType, ltScale, LWeight, Thickness and TRansparency in turn)")
             .interactive(|_| Ok(Box::new(chprop::ChpropM::new()))),
@@ -137,6 +137,12 @@ pub(super) fn entity_props(d: &draftcraft_doc::Drawing, e: &draftcraft_doc::Enti
                     o.insert("area".into(), json!(pl.area().abs()));
                 }
             }
+            EntityKind::Spline(sp) => {
+                // A conic arc (CONIC's rational quadratic spline) shows its shape.
+                if let Some(rho) = sp.conic_rho() {
+                    o.insert("rho".into(), json!(rho));
+                }
+            }
             _ => {}
         }
     }
@@ -211,6 +217,9 @@ fn run_set(s: &mut Session, p: &Value) -> Result<Value> {
         .map(|v| v.as_f64().filter(|x| x.is_finite()).ok_or_else(|| bad("properties.set", "thickness must be a finite number")))
         .transpose()?;
     let lw = p.get("lineweight").map(|v| super::layer::parse_lw(v).ok_or_else(|| bad("properties.set", "bad lineweight"))).transpose()?;
+    if let Some(r) = p.get("rho").filter(|v| !v.is_null()) {
+        check_rho(s, &hs, r)?;
+    }
     let d = s.doc_mut()?;
     // An explicit object linetype must be ByLayer, ByBlock or a loaded definition (as `linetype current` requires).
     let linetype = str_param(p, "linetype")
@@ -238,6 +247,20 @@ fn run_set(s: &mut Session, p: &Value) -> Result<Value> {
         })?;
     }
     Ok(json!({ "changed": hs.len() }))
+}
+
+/// A conic's new rho must be a number strictly between 0 and 1, and the selection must hold a
+/// conic arc to take it: otherwise nothing changes.
+fn check_rho(s: &Session, hs: &[draftcraft_doc::Handle], r: &Value) -> Result<()> {
+    r.as_f64()
+        .filter(|r| r.is_finite() && *r > 0.0 && *r < 1.0)
+        .ok_or_else(|| bad("properties.set", "rho must be a number between 0 and 1 (0.5 is a parabola)"))?;
+    let d = s.doc()?;
+    let conic = |h: &draftcraft_doc::Handle| d.entity(*h).is_some_and(|e| matches!(&e.kind, EntityKind::Spline(sp) if sp.conic_rho().is_some()));
+    if !hs.iter().any(conic) {
+        return Err(bad("properties.set", "rho applies to conic splines, and none is selected"));
+    }
+    Ok(())
 }
 
 fn apply_kind_properties(
@@ -340,6 +363,11 @@ fn apply_kind_properties(
             }
             if let Some(c) = params.get("closed").and_then(Value::as_bool) {
                 pl.closed = c;
+            }
+        }
+        EntityKind::Spline(sp) => {
+            if let Some(n) = num("rho").and_then(|r| sp.with_conic_rho(r)) {
+                *sp = n;
             }
         }
         EntityKind::Insert(insert) => set_insert_properties(insert, params),

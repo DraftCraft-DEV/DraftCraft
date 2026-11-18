@@ -42,6 +42,9 @@ fn conic_splines_keep_their_weights() {
             let mid = (start + end) * 0.5;
             assert!(sp.eval((lo + hi) / 2.0).near(mid + (apex - mid) * rho, 1e-9), "{what} rho {rho}");
             assert!(sp.eval(lo).near(start, 1e-9) && sp.eval(hi).near(end, 1e-9), "{what}");
+            // Still a conic with the same rho, so Properties shows it after a reload.
+            let back = sp.conic_rho().unwrap_or(f64::NAN);
+            assert!((back - rho).abs() < 1e-9, "{what} rho {rho} read back as {back}");
         }
     };
     check(&draftcraft_io::read(&draftcraft_io::write(&d, "c.dxf").unwrap(), "c.dxf").unwrap(), "dxf");

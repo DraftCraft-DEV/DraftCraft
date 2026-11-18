@@ -17,6 +17,7 @@ How to write it (see AGENTS.md):
 - LINE takes points in space: type x,y,z or @dx,dy,dz and the line keeps its height.
 - The command line's AutoComplete learns which commands you use: the ones you run most, and most recently, move up the list, so typing LI soon offers LINE first if you draw lines more than you list. The arrow keys move through the suggestions, and Reset Suggestion Order in the command line's right-click menu forgets what was learned.
 - AREATOTAL (Home › Utilities › Total Area): select objects to get their total area and perimeter and the total length of the open ones, with how many were measured; the totals can be placed in the drawing as text. AREA also totals several objects at once from scripts and agents, with objects to subtract.
+- The Properties palette shows the Rho of a selected conic arc (an ellipse, parabola or hyperbola piece drawn with CONIC, or any spline of that shape) under Geometry, and typing a new value between 0 and 1 reshapes it; with several conics selected it shows their common Rho.
 
 ### Improved
 - The Workspace button on the status bar opens a menu of the workspaces, as on Windows, with the current one checked.

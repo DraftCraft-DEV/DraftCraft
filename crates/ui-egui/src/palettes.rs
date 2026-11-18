@@ -607,6 +607,12 @@ fn report_bad(app: &mut CadApp, bad: Option<String>) {
     }
 }
 
+/// Whether every selected object is a conic arc (a spline [`draftcraft_geom::Spline::conic_rho`]
+/// reads a rho from).
+fn conics_only(d: &draftcraft_doc::Drawing, sel: &[draftcraft_doc::Handle]) -> bool {
+    !sel.is_empty() && sel.iter().all(|h| d.entity(*h).is_some_and(|e| matches!(&e.kind, EntityKind::Spline(sp) if sp.conic_rho().is_some())))
+}
+
 /// A drop-down of `items` showing `current`; returns the item clicked.
 fn pick_menu(ui: &mut egui::Ui, current: &str, items: impl IntoIterator<Item = String>) -> Option<String> {
     // Names are the drawing's own; only the ByLayer/ByBlock keywords are translated.
@@ -1121,6 +1127,12 @@ pub(crate) fn properties_section(app: &mut CadApp, ui: &mut egui::Ui) {
                 num(ui, "Scale", "scale", real(hh.scale), &mut set, &mut bad, &ids);
                 num(ui, "Angle", "angle", real(hh.angle.to_degrees()), &mut set, &mut bad, &ids);
             }
+            // A conic arc (as CONIC draws it) shows its shape, and typing one reshapes it.
+            EntityKind::Spline(sp) => {
+                if let Some(rho) = sp.conic_rho() {
+                    num(ui, "Rho", "rho", real(rho), &mut set, &mut bad, &ids);
+                }
+            }
             EntityKind::Dimension(dm) => {
                 prop_row(ui, "Text override", |ui| {
                     if let Some(s) = edit_field(ui, ui.scope_id().with(("dimtxt", &ids)), dm.text.clone()) {
@@ -1177,6 +1189,18 @@ pub(crate) fn properties_section(app: &mut CadApp, ui: &mut egui::Ui) {
             }
             _ => {}
         }
+    } else if conics_only(d, &sel) {
+        // Several conic arcs: their common rho, or *VARIES*; a typed rho goes to them all.
+        group(ui, "Geometry");
+        let rho = same(&|e| match &e.kind {
+            EntityKind::Spline(sp) => sp.conic_rho().map_or_else(String::new, |r| format!("{r:.4}")),
+            _ => String::new(),
+        });
+        prop_row(ui, "Rho", |ui| {
+            if let Some(f) = number(edit_field(ui, ui.scope_id().with(("rho", &ids)), rho.clone()), &mut bad) {
+                set = Some(json!({ "handles": ids, "rho": f }));
+            }
+        });
     }
     if let Some(mut p) = set {
         // A rotation is typed as shown (from ANGBASE, in the ANGDIR sense); properties.set takes it

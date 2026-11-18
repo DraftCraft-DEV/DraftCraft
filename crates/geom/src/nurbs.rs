@@ -493,6 +493,53 @@ impl Spline {
         (rho.is_finite() && rho > 0.0 && rho < 1.0).then_some(rho)
     }
 
+    /// The rho of a conic arc, the shape [`Spline::conic`] gives it: `Some` only for one span
+    /// of a rational quadratic spline (three control points not on one line, positive finite
+    /// weights, no fit points). With its weights scaled so the ends are 1 the middle weight is
+    /// w, and rho = w / (1 + w).
+    pub fn conic_rho(&self) -> Option<f64> {
+        let w = self.conic_weight()?;
+        let rho = w / (1.0 + w);
+        (rho.is_finite() && rho > 0.0 && rho < 1.0).then_some(rho)
+    }
+
+    /// This conic arc with its shape set to `rho` in (0, 1): the same end points and apex, end
+    /// weights 1 and middle weight rho / (1 − rho). `None` when it is not a conic arc or rho
+    /// is out of range.
+    pub fn with_conic_rho(&self, rho: f64) -> Option<Spline> {
+        self.conic_weight()?;
+        if !(rho.is_finite() && rho > 0.0 && rho < 1.0) {
+            return None;
+        }
+        let w = rho / (1.0 - rho);
+        (w.is_finite() && w > 0.0).then(|| Spline { weights: vec![1.0, w, 1.0], ..self.clone() })
+    }
+
+    /// The middle weight of a conic arc with its end weights scaled to 1 (w₁ / √(w₀·w₂), the
+    /// same curve).
+    fn conic_weight(&self) -> Option<f64> {
+        if self.degree != 2 || self.closed || !self.fit.is_empty() || !self.is_valid() {
+            return None;
+        }
+        let [p0, p1, p2] = self.control[..] else { return None };
+        let [w0, w1, w2] = self.weights[..] else { return None };
+        let [k0, k1, k2, k3, k4, k5] = self.knots[..] else { return None };
+        let one_span = k0.total_cmp(&k2).is_eq() && k1.total_cmp(&k2).is_eq() && k3.total_cmp(&k5).is_eq() && k4.total_cmp(&k5).is_eq();
+        if !(one_span && k2.is_finite() && k3.is_finite() && k2 < k3) {
+            return None;
+        }
+        if ![w0, w1, w2].iter().all(|w| w.is_finite() && *w > 0.0) || !(p0.is_finite() && p1.is_finite() && p2.is_finite()) {
+            return None;
+        }
+        let (a, b) = (p1 - p0, p2 - p1);
+        let scale = a.len() * b.len();
+        if !(scale.is_finite() && scale > 1e-300) || a.cross(b).abs() <= 1e-9 * scale {
+            return None;
+        }
+        let w = w1 / (w0 * w2).sqrt();
+        (w.is_finite() && w > 0.0).then_some(w)
+    }
+
     /// An ellipse or elliptical arc as an exact rational spline (counter-clockwise).
     pub fn from_ellipse(e: &Ellipse) -> Option<Spline> {
         let s = Spline::from_conic_arc(e.center, e.major, e.minor(), e.start, e.sweep())?;
@@ -793,6 +840,71 @@ mod tests {
         for p in [Vec2::new(1.0, 2.0), Vec2::new(1.0, -0.1), s0, apex, Vec2::new(f64::NAN, 0.5)] {
             assert!(Spline::conic_rho_through(s0, apex, e, p).is_none(), "{p:?}");
         }
+    }
+
+    /// A conic arc is told by its shape: its rho comes back from the spline's own data (weights
+    /// scaled to end weights of 1 too), and setting a rho changes only the middle weight.
+    #[test]
+    fn conic_rho_is_read_and_set_from_the_spline() {
+        let (s0, apex, e) = (Vec2::ZERO, Vec2::new(1.0, 1.0), Vec2::new(2.0, 0.0));
+        for rho in [0.05, 0.2, 0.5, 0.7, 0.99] {
+            let c = Spline::conic(s0, apex, e, rho).unwrap();
+            let back = c.conic_rho().unwrap();
+            assert!((back - rho).abs() < 1e-12, "{rho} {back}");
+            // rho → w → rho.
+            let w = c.weights[1];
+            assert!((w - rho / (1.0 - rho)).abs() < 1e-9 * w.max(1.0) && (w / (1.0 + w) - rho).abs() < 1e-12);
+            // The same curve with every weight doubled, or end weights not 1, has the same rho.
+            let scaled = Spline { weights: c.weights.iter().map(|w| w * 2.0).collect(), ..c.clone() };
+            assert!((scaled.conic_rho().unwrap() - rho).abs() < 1e-12);
+            let uneven = Spline { weights: vec![4.0, c.weights[1] * 3.0, 2.25], ..c.clone() };
+            assert!((uneven.conic_rho().unwrap() - rho).abs() < 1e-12);
+            // Setting a rho keeps the points and knots and gives the curve that rho.
+            let set = uneven.with_conic_rho(0.3).unwrap();
+            assert_eq!(set.control, c.control);
+            assert_eq!(set.knots, c.knots);
+            assert_eq!(set.weights, vec![1.0, 0.3 / 0.7, 1.0]);
+            assert!((set.conic_rho().unwrap() - 0.3).abs() < 1e-12);
+            let (lo, hi) = set.domain();
+            let mid = (s0 + e) * 0.5;
+            assert!(set.eval((lo + hi) / 2.0).near(mid + (apex - mid) * 0.3, 1e-12));
+        }
+        let c = Spline::conic(s0, apex, e, 0.4).unwrap();
+        for rho in [0.0, 1.0, -0.5, 1.5, f64::NAN, f64::INFINITY] {
+            assert!(c.with_conic_rho(rho).is_none(), "{rho}");
+        }
+        // Not conics: non-rational, cubic, more spans, fit points, points on one line, bad weights.
+        let plain = Spline { weights: Vec::new(), ..c.clone() };
+        let cubic = Spline::from_control(vec![s0, apex, e, Vec2::new(3.0, 1.0)], 3);
+        let cubic = Spline { weights: vec![1.0; 4], ..cubic };
+        let two_spans = Spline::from_control(vec![s0, apex, e, Vec2::new(3.0, 1.0)], 2);
+        let two_spans = Spline { weights: vec![1.0; 4], ..two_spans };
+        let fit = Spline { fit: vec![s0, e], ..c.clone() };
+        let straight = Spline { control: vec![s0, Vec2::new(1.0, 0.0), e], ..c.clone() };
+        let zero_w = Spline { weights: vec![1.0, 0.0, 1.0], ..c.clone() };
+        let nan_w = Spline { weights: vec![1.0, f64::NAN, 1.0], ..c.clone() };
+        let neg_w = Spline { weights: vec![-1.0, 1.0, 1.0], ..c.clone() };
+        let nan_pt = Spline { control: vec![s0, Vec2::new(f64::NAN, 1.0), e], ..c.clone() };
+        let bad_knots = Spline { knots: vec![0.0, 0.0, 0.0, 0.0, 0.0, 0.0], ..c.clone() };
+        for (what, s) in [
+            ("plain", plain),
+            ("cubic", cubic),
+            ("two spans", two_spans),
+            ("fit", fit),
+            ("straight", straight),
+            ("zero weight", zero_w),
+            ("NaN weight", nan_w),
+            ("negative weight", neg_w),
+            ("NaN point", nan_pt),
+            ("empty span", bad_knots),
+        ] {
+            assert!(s.conic_rho().is_none(), "{what}");
+            assert!(s.with_conic_rho(0.5).is_none(), "{what}");
+        }
+        // A circular arc built as a conic is one too (rho of a quarter circle: w = cos 45°).
+        let q = Spline::from_conic_arc(Vec2::ZERO, Vec2::X, Vec2::Y, 0.0, std::f64::consts::FRAC_PI_2).unwrap();
+        let w = std::f64::consts::FRAC_1_SQRT_2;
+        assert!((q.conic_rho().unwrap() - w / (1.0 + w)).abs() < 1e-12);
     }
 
     #[test]

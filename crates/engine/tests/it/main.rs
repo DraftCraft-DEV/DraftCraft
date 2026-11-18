@@ -26,6 +26,7 @@ mod change_command;
 mod chprop_command;
 mod classic_array;
 mod compare_export;
+mod conic_rho;
 mod constraint_geometry;
 mod constraint_infer;
 mod copy_count;
