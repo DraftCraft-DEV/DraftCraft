@@ -20,10 +20,6 @@ mod grid;
 mod grips;
 mod list;
 mod pick;
-#[cfg(feature = "solids")]
-mod view3d;
-#[cfg(feature = "solids")]
-mod view3d_overlay;
 mod viewport;
 mod widgets;
 
@@ -837,11 +833,6 @@ pub fn show(app: &mut CadApp, ui: &mut egui::Ui) {
     let painter = ui.painter_at(rect);
     app.canvas.rect = Some(rect);
     app.session.viewport_px = (f64::from(rect.width()).max(1.0), f64::from(rect.height()).max(1.0));
-    // A 3D view of model space (VPOINT, 3DORBIT, VSCURRENT) draws and navigates on its own.
-    #[cfg(feature = "solids")]
-    if view3d::show(app, ui, rect, &resp) {
-        return;
-    }
     if app.canvas.zoom_pending {
         app.canvas.zoom_pending = false;
         let _ = app.session.zoom_extents();

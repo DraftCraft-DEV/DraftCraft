@@ -59,6 +59,16 @@ People trust DraftCraft with their drawings; a crash loses their work. **This ou
   Unreleased lines into `## X.Y.Z`, and refuses a version that has no notes. A test
   (`the_changelog_has_notes_for_this_version`) fails while the version in `Cargo.toml` has no section.
 
+## Branches: main is always releasable
+- **3D work goes to the `3D` branch, not main, until it is finished:** 3D solids and the `solids`
+  feature, the solid kernel (`crates/solid`), the ACIS translator, 3D commands and views, and the
+  3D Modeling workspace. Pull requests for it target `3D`.
+- DWG and DXF work goes to main, ACIS data in DWG included, when it works without the `solids`
+  feature. A change that needs the solid kernel goes to `3D`.
+- Merge main into `3D` often (weekly at least) so it does not drift; `3D` comes back to main in one
+  pull request when it is finished.
+- Any other long piece of work that is not ready to ship gets its own branch the same way.
+
 ## Quality gates
 - Before every commit: `cargo xtask ci` (fmt, clippy -D warnings, tests, assets, layers, wasm).
 - Three tests fail only on macOS and pass on Linux CI: two need file names that APFS refuses

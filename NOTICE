@@ -18,31 +18,6 @@ Software dependencies are listed in Cargo.lock. DWG files are read and written b
 code (crates/dwg, crates/io), from the Open Design Alliance's public DWG specification and our own
 tests.
 
-Builds with the optional `solids` feature (3D solids, docs/solids.md) link solidcore, a pure-Rust
-B-rep modeller (the crates solidcore, solidcore-ops, solidcore-record, solidcore-convert and
-solidcore-tess and solidcore-step of https://github.com/tangency-labs/solidcore, pinned to commit
-ce5c6e95ff4ec28e673f287b8291dc0cd38b1901), used unmodified, under the Apache License, Version 2.0.
-Builds without the feature contain none of it. solidcore's notice reads, in part:
-
-  Copyright (c) 2026 The solidcore contributors
-
-  This product is a Rust port (a derivative work) of the SMLib and SM_API components of USD BRep,
-  https://github.com/NVIDIA-Omniverse/usd-brep (v1.0.1, commit 3fd5b95), licensed under the
-  Apache License, Version 2.0.
-
-  USD BRep is Copyright (c) 2020-2026, NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-  NVIDIA-authored portions of this product are licensed under the Apache License, Version 2.0,
-  except where otherwise noted.
-
-  SPDX-FileCopyrightText: Copyright (c) 2026 NVIDIA CORPORATION & AFFILIATES. All rights reserved.
-  SPDX-License-Identifier: Apache-2.0
-
-The full notice is solidcore's NOTICE file at the pinned commit.
-
-The same builds read ACIS data (AutoCAD's 3D solids) with cadmpeg (the crates cadmpeg-asm,
-cadmpeg-core and cadmpeg-ir 0.6.12 of https://github.com/cadmpeg/cadmpeg), used unmodified, under
-the Apache License, Version 2.0.
-
 
 DraftCraft's icons, drafting font, hatch patterns and linetypes are drawn or defined in code.
 The UI also bundles the egui font inputs described below. The per-file list is in ATTRIBUTION.md.

@@ -24,17 +24,6 @@ draftcraft-io = { path = "crates/io" }
 draftcraft-engine = { path = "crates/engine" }
 draftcraft-ui-egui = { path = "crates/ui-egui" }
 draftcraft-mcp = { path = "crates/mcp" }
-draftcraft-solid = { path = "crates/solid" }
-# 3D solids (cargo feature `solids`, docs/solids.md): solidcore, the pure-Rust B-rep kernel (a port
-# of NVIDIA's SMLib, Apache-2.0), with its operations, record and display-mesh crates, pinned to a
-# reviewed commit of tangency-labs/solidcore. Only `draftcraft-solid` names them.
-solidcore-ops = { git = "https://github.com/tangency-labs/solidcore", rev = "ce5c6e95ff4ec28e673f287b8291dc0cd38b1901" }
-solidcore-record = { git = "https://github.com/tangency-labs/solidcore", rev = "ce5c6e95ff4ec28e673f287b8291dc0cd38b1901" }
-solidcore-tess = { git = "https://github.com/tangency-labs/solidcore", rev = "ce5c6e95ff4ec28e673f287b8291dc0cd38b1901" }
-solidcore-step = { git = "https://github.com/tangency-labs/solidcore", rev = "ce5c6e95ff4ec28e673f287b8291dc0cd38b1901" }
-# ACIS (SAT/SAB) records, read for AutoCAD's 3D solids (docs/solids.md, "The ACIS translator"). Apache-2.0.
-cadmpeg-asm = "=0.6.12"
-cadmpeg-core = "=0.6.12"
 # Which paths stored in a drawing (xrefs, data links) may be opened.
 craft-docpath = { version = "0.1.0", git = "https://github.com/storytold/craft-libs", rev = "92d392cff132eaf53e13afff77f38b5c11b73aa0" }
 # PDF writing (krilla) for plots, and reading them back in tests. The root patches below pin

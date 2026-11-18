@@ -22,7 +22,7 @@ pub(crate) mod groups;
 pub(crate) mod hatch;
 mod image;
 mod imageops;
-pub(crate) mod inquiry;
+mod inquiry;
 mod layer;
 mod layout;
 mod lisp;
@@ -30,7 +30,6 @@ mod merge;
 mod mleader_content;
 mod mleader_edit;
 mod modify;
-mod modify3d;
 mod pointcloud;
 pub mod underlay;
 pub(crate) use modify::Erased;
@@ -48,8 +47,6 @@ mod qselect;
 mod selecttools;
 mod settings;
 pub mod sheetset;
-#[cfg(feature = "solids")]
-pub(crate) mod solids;
 mod spline_opts;
 mod table;
 mod tolerance;
@@ -201,7 +198,6 @@ pub fn command_specs() -> &'static [CommandSpec] {
         v.extend(overkill::specs());
         v.extend(blocks::specs());
         v.extend(modify::specs());
-        v.extend(modify3d::specs());
         v.extend(draworder::specs());
         v.extend(array::specs());
         v.extend(modify2::specs());
@@ -229,8 +225,6 @@ pub fn command_specs() -> &'static [CommandSpec] {
         v.extend(txt2mtxt::specs());
         v.extend(constraints::specs());
         v.extend(lisp::specs());
-        #[cfg(feature = "solids")]
-        v.extend(solids::specs());
         v
     })
 }

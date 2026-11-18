@@ -24,7 +24,6 @@ mod text;
 mod tolerance;
 pub mod units;
 mod wide;
-pub mod wire3d;
 
 use draftcraft_color::{Color, Rgb};
 use draftcraft_doc::{Drawing, Entity, EntityKind, Handle, Lineweight, Prim, Space};

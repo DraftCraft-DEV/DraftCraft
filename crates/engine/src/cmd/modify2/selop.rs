@@ -104,8 +104,7 @@ pub(crate) fn flatten_kind(k: &mut EntityKind) {
         EntityKind::Solid(so) | EntityKind::Trace(so) => so.corners.iter_mut().for_each(z),
         EntityKind::Face3d(f) => f.corners.iter_mut().for_each(z),
         EntityKind::PolyfaceMesh(m) => m.vertices.iter_mut().for_each(z),
-        // A solid keeps its shape: FLATSHOT draws a flat view of it.
-        EntityKind::Region(_) | EntityKind::Solid3d(_) => {}
+        EntityKind::Region(_) => {}
         EntityKind::Image(i) => {
             z(&mut i.insert);
             i.u.z = 0.0;

@@ -11,37 +11,6 @@ pub fn line(a: Vec2, b: Vec2) -> EntityKind {
     EntityKind::Line(Line { a: v3(a), b: v3(b) })
 }
 
-/// A line between two points in space.
-pub fn line3(a: Vec3, b: Vec3) -> EntityKind {
-    EntityKind::Line(Line { a, b })
-}
-
-/// A JSON point: `[x, y]` (at Z 0), `[x, y, z]`, or any form `point_value` takes (`"x,y"`, `"x,y,z"`,
-/// `"@d<a"`, `{x, y}`), a typed `x,y,z` keeping its Z.
-pub fn point3_value(v: &serde_json::Value) -> Option<Vec3> {
-    let Some(a) = v.as_array() else {
-        let z = v.as_str().and_then(|t| crate::prompt::typed_z(t, 0.0)).unwrap_or(0.0);
-        return super::point_value(v).map(|p| p.to3(z)).filter(|p| p.z.is_finite());
-    };
-    let x = a.first()?.as_f64()?;
-    let y = a.get(1)?.as_f64()?;
-    let z = match a.get(2) {
-        None | Some(serde_json::Value::Null) => 0.0,
-        Some(z) => z.as_f64()?,
-    };
-    let p = Vec3::new(x, y, z);
-    (p.x.is_finite() && p.y.is_finite() && p.z.is_finite()).then_some(p)
-}
-
-/// The JSON points at `key` (`[[x, y, z?], ...]`), at most `max`; `None` when one isn't a point.
-pub fn points3_param(p: &serde_json::Value, key: &str, max: usize) -> Option<Vec<Vec3>> {
-    let a = p.get(key)?.as_array()?;
-    if a.len() > max {
-        return None;
-    }
-    a.iter().map(point3_value).collect()
-}
-
 pub fn circle(c: Vec2, r: f64) -> EntityKind {
     EntityKind::Circle(draftcraft_doc::Circle { center: v3(c), radius: r.abs() })
 }

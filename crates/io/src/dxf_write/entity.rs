@@ -1,5 +1,5 @@
 use super::blocks::table_size;
-use super::common::{attrib_common, common, common_x, common_xd, dim_xdata, layer_and_props, multiline_tags, oblique_52, text_tags};
+use super::common::{attrib_common, common, common_x, dim_xdata, layer_and_props, multiline_tags, oblique_52, text_tags};
 use super::ctx::Ctx;
 use super::layout::paper_view;
 use super::{
@@ -37,21 +37,6 @@ pub(super) fn hatch_reactors(d: &Drawing) -> HashMap<Handle, Vec<String>> {
 /// and indices are 16-bit groups (71–74), and no index is above the vertex count: a mesh too large
 /// for them is written as its 3D faces rather than with numbers cut short.
 fn polyface(w: &mut W, d: &Drawing, e: &Entity, m: &draftcraft_doc::PolyfaceMesh, owner: &str, paper: bool, cx: &Ctx) {
-    polyface_x(w, d, e, m, owner, paper, cx, None);
-}
-
-/// A 3D solid as its meshes, the first with the record of the exact body (`solid_file`).
-fn solid3d(w: &mut W, d: &Drawing, e: &Entity, so: &draftcraft_doc::Solid3d, owner: &str, paper: bool, cx: &Ctx) {
-    let xdict = cx.solids.get(&e.handle).map(|(x, _)| x.as_str());
-    for (i, m) in crate::solid_file::meshes(so).iter().enumerate() {
-        let handle = if i == 0 { e.handle } else { Handle(w.next_handle()) };
-        let part = Entity { handle, common: e.common.clone(), kind: EntityKind::PolyfaceMesh(m.clone()) };
-        polyface_x(w, d, &part, m, owner, paper, cx, if i == 0 { xdict } else { None });
-    }
-}
-
-#[allow(clippy::too_many_arguments)]
-fn polyface_x(w: &mut W, d: &Drawing, e: &Entity, m: &draftcraft_doc::PolyfaceMesh, owner: &str, paper: bool, cx: &Ctx, xdict: Option<&str>) {
     let faces: Vec<&[i32; 4]> = m.faces.iter().filter(|f| m.face3d(f).is_some()).collect();
     let max = usize::try_from(i16::MAX).unwrap_or(usize::MAX);
     if m.vertices.len() > max || faces.len() > max {
@@ -63,7 +48,7 @@ fn polyface_x(w: &mut W, d: &Drawing, e: &Entity, m: &draftcraft_doc::PolyfaceMe
         return;
     }
     w.s(0, "POLYLINE");
-    common_xd(w, e, owner, paper, "AcDbPolyFaceMesh", xdict);
+    common(w, e, owner, paper, "AcDbPolyFaceMesh");
     w.i(66, 1);
     w.p(10, Vec3::ZERO);
     w.i(70, 64);
@@ -218,7 +203,6 @@ fn write_basic_entity(w: &mut W, d: &Drawing, e: &Entity, owner: &str, paper: bo
             w.s(8, &e.common.layer);
         }
         EntityKind::PolyfaceMesh(m) => polyface(w, d, e, m, owner, paper, cx),
-        EntityKind::Solid3d(so) => solid3d(w, d, e, so, owner, paper, cx),
         EntityKind::Spline(s) => {
             w.s(0, "SPLINE");
             common(w, e, owner, paper, "AcDbSpline");

@@ -166,10 +166,7 @@ fn draw_status_toggles(
             painter.hline(br.x_range().shrink(4.0), br.bottom() - 1.0, Stroke::new(1.5, t.toggle_on));
         }
         icons::describe_control(ui, &resp, tip, Some(on), false);
-        if icon == Icon::Workspace {
-            // Workspace Switching, as on Windows: a menu of the workspaces.
-            workspace_menu(app, &resp.on_hover_text(crate::i18n::t(tip)));
-        } else if resp.on_hover_text(crate::i18n::t(tip)).clicked() {
+        if resp.on_hover_text(crate::i18n::t(tip)).clicked() {
             toggle_cmd = Some(cmd);
         }
         rx += size + 4.0;
@@ -179,26 +176,6 @@ fn draw_status_toggles(
         Some(c) if c.starts_with("ui.") => app.start(c),
         Some(c) => crate::menus::run_transparent(app, c),
         None => {}
-    }
-}
-
-/// The status bar's Workspace Switching menu: the workspaces, the current one checked.
-fn workspace_menu(app: &mut CadApp, resp: &egui::Response) {
-    let current = crate::workspaces::current(app);
-    let names = crate::workspaces::names(app);
-    let mut pick: Option<String> = None;
-    egui::Popup::menu(resp).show(|ui| {
-        for n in &names {
-            let label = crate::workspaces::built_in(n).map_or_else(|| n.clone(), |b| crate::i18n::t(b).to_string());
-            if ui.radio(*n == current, label).clicked() {
-                pick = Some(n.clone());
-                ui.close();
-            }
-        }
-        crate::workspaces::show_unavailable(app, ui);
-    });
-    if let Some(name) = pick {
-        let _ = app.run("wscurrent", json!({ "name": name }));
     }
 }
 

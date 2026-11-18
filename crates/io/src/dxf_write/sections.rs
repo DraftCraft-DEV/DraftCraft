@@ -718,46 +718,6 @@ fn write_named_objects(w: &mut W, plan: &ObjectWritePlan<'_>) {
     scale_list(w, scales, scale_dict, root_dict);
 }
 
-/// Each 3D solid's extension dictionary and its record of the exact body (`solid_file`).
-fn write_solid_records(w: &mut W, d: &Drawing, cx: &Ctx) {
-    let stores = std::iter::once(&d.model).chain(d.layouts.iter().map(|l| &l.entities)).chain(d.blocks.values().map(|b| &b.entities));
-    let mut solids: Vec<(&Entity, &draftcraft_doc::Solid3d)> = Vec::new();
-    for st in stores {
-        for e in st.iter() {
-            if let EntityKind::Solid3d(so) = &e.kind {
-                solids.push((e, so));
-            }
-        }
-    }
-    for (e, so) in solids {
-        let Some((xdict, rec)) = cx.solids.get(&e.handle) else { continue };
-        let eh = e.handle.hex();
-        w.s(0, "DICTIONARY");
-        w.s(5, xdict.clone());
-        w.group("ACAD_REACTORS", 330, &[&eh]);
-        w.s(330, eh);
-        w.s(100, "AcDbDictionary");
-        w.i(280, 1);
-        w.i(281, 1);
-        w.s(3, crate::solid_file::KEY);
-        w.s(360, rec.clone());
-        w.s(0, "XRECORD");
-        w.s(5, rec.clone());
-        w.group("ACAD_REACTORS", 330, &[xdict]);
-        w.s(330, xdict.clone());
-        w.s(100, "AcDbXrecord");
-        w.i(280, 1);
-        let parts = crate::solid_file::meshes(so);
-        for (code, v) in crate::solid_file::record_groups(so, &parts) {
-            match v {
-                crate::solid_file::Value::S(s) => w.s(code, s),
-                crate::solid_file::Value::I(i) => w.i(code, i),
-                crate::solid_file::Value::F(f) => w.f(code, f),
-            }
-        }
-    }
-}
-
 fn write_associative_objects(w: &mut W, cx: &Ctx) {
     // Dimension associativity: extension dictionary + DIMASSOC per dimension.
     let mut assoc: Vec<(&Handle, &AssocObj)> = cx.assoc.iter().collect();
@@ -813,7 +773,6 @@ fn write_objects(w: &mut W, plan: ObjectWritePlan<'_>) {
     write_style_objects(w, &plan, &mleader_dict, &mleader_handles);
     write_named_objects(w, &plan);
     write_associative_objects(w, plan.cx);
-    write_solid_records(w, plan.d, plan.cx);
     write_layout_objects(w, &plan);
     // Raster image definitions.
     w.t.extend(crate::dxf_image::objects(&plan.cx.images, plan.root_dict));
@@ -1028,13 +987,6 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
     cx.underlays = crate::dxf_underlay::plan(every.iter().copied(), || w.h());
     cx.mlines = crate::dxf_mline::plan(d, every.iter().copied(), || w.h());
     plan_dimension_associations(d, &all_spaces, &mut w, &mut cx);
-    for e in &every {
-        if let EntityKind::Solid3d(so) = &e.kind
-            && !so.body.is_empty()
-        {
-            cx.solids.insert(e.handle, (w.h(), w.h()));
-        }
-    }
     let default_table_style = [TableStyle::default()];
     let table_styles: &[TableStyle] = if d.table_styles.is_empty() { &default_table_style } else { &d.table_styles };
     cx.table_styles = table_styles.iter().map(|s| (s.name.clone(), w.h())).collect();

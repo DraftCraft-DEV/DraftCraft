@@ -138,7 +138,7 @@ pub fn show(app: &mut CadApp, ui: &mut egui::Ui, l: &Layout) {
 }
 
 /// A small house, drawn in code.
-pub(crate) fn paint_home(p: &egui::Painter, r: Rect, hot: bool) {
+fn paint_home(p: &egui::Painter, r: Rect, hot: bool) {
     let t = Tokens::get();
     if hot {
         p.rect_filled(r, 3.0, t.control_hover);

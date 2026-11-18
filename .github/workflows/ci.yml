@@ -28,16 +28,3 @@ jobs:
         pkg-config libxkbcommon-dev libwayland-dev libx11-dev libxcb1-dev libxcursor-dev
         libxrandr-dev libxi-dev libfontconfig1-dev libfreetype-dev mesa-vulkan-drivers
         libgl1-mesa-dev
-
-  gate-solids:
-    # The same gates with the 3D solids feature on (docs/solids.md): clippy and the tests of
-    # every solids code path, and the solids kernel checked for wasm32.
-    uses: storytold/craft-common-actions/.github/workflows/gate.yml@main
-    with:
-      command: cargo xtask ci --solids
-      craft-fonts-ref: b076417b5880bd4154bd22f00695b1d28c6bea83
-      timeout-minutes: 90
-      packages: >-
-        pkg-config libxkbcommon-dev libwayland-dev libx11-dev libxcb1-dev libxcursor-dev
-        libxrandr-dev libxi-dev libfontconfig1-dev libfreetype-dev mesa-vulkan-drivers
-        libgl1-mesa-dev

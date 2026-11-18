@@ -51,24 +51,6 @@ struct W {
     taken: std::collections::HashSet<u64>,
 }
 
-/// An entity's `AcDbEntity` marker and property groups as this writer writes them (layer,
-/// linetype, colour, lineweight, linetype scale, visibility, transparency), for an entity saved as
-/// groups of its own: a 3D solid or region saved as AutoCAD's 3DSOLID or REGION (`solid_acis`).
-/// A named plot style is left out (its placeholder's handle is the writer's).
-#[cfg(feature = "solids")]
-pub(crate) fn property_groups(c: &Common) -> Vec<draftcraft_doc::RawTag> {
-    let mut w = W {
-        t: vec![Tag::s(100, "AcDbEntity")],
-        next: 0,
-        pstyles: HashMap::new(),
-        layers: HashMap::new(),
-        reactors: HashMap::new(),
-        taken: std::collections::HashSet::new(),
-    };
-    common::entity_props(&mut w, c);
-    w.t.iter().map(|t| draftcraft_doc::RawTag { code: t.code, value: t.str() }).collect()
-}
-
 impl W {
     fn s(&mut self, c: i32, v: impl Into<String>) {
         self.t.push(Tag::s(c, v));
@@ -140,23 +122,12 @@ pub fn write(d: &Drawing) -> String {
 
 /// The drawing's DXF tags, declaring `version` in `$ACADVER`.
 pub fn tags(d: &Drawing, version: Version) -> Vec<Tag> {
-    #[cfg(feature = "solids")]
-    let d = &*crate::solid_acis::for_saving(d, version);
     tags_for(d, version, version, version < Version::R2004)
-}
-
-/// The drawing as R2000 ASCII DXF with every solid in its interim file form (the meshes and the
-/// record), as a solid the ACIS writer can't write is saved.
-#[cfg(all(test, feature = "solids"))]
-pub(crate) fn write_interim(d: &Drawing) -> String {
-    draftcraft_dxf::write_ascii(&tags_for(d, Version::R2000, Version::R2000, true))
 }
 
 /// The drawing's records for DraftCraft's own DWG writer ([`crate::dwg::write`]), which encodes
 /// each as the DWG object of the same meaning: the entity types are the DWG version's.
 pub(crate) fn dwg_records(d: &Drawing, dwg: Version) -> Vec<Tag> {
-    #[cfg(feature = "solids")]
-    let d = &*crate::solid_acis::for_saving(d, dwg);
     tags_for(d, Version::R2000, dwg, false)
 }
 

@@ -27,10 +27,6 @@ same-file = { workspace = true }
 serde_json = { workspace = true }
 thiserror = { workspace = true }
 
-[features]
-# 3D solids (docs/solids.md): off by default; without it nothing changes.
-solids = ["draftcraft-engine/solids", "draftcraft-io/solids", "draftcraft-mcp/solids"]
-
 [dev-dependencies]
 # Shell completions and man pages (examples/man-and-completions.rs, for the Linux packages); not
 # in the binary.

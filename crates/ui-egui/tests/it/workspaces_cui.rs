@@ -17,16 +17,6 @@ fn app() -> CadApp {
     app
 }
 
-/// The built-in workspaces, then `more`.
-fn listed(more: &[&str]) -> serde_json::Value {
-    let mut v = vec!["2D Drafting"];
-    if cfg!(feature = "solids") {
-        v.push("3D Modeling");
-    }
-    v.extend_from_slice(more);
-    json!(v)
-}
-
 #[test]
 fn a_saved_workspace_restores_its_layout() {
     let mut app = app();
@@ -34,7 +24,7 @@ fn a_saved_workspace_restores_its_layout() {
     app.ui.ribbon_minimized = true;
     let r = app.run("workspace", json!({"operation": "saveAs", "name": "Minimal"})).unwrap();
     assert_eq!(r["current"], "Minimal");
-    assert_eq!(r["workspaces"], listed(&["Minimal"]));
+    assert_eq!(r["workspaces"], json!(["2D Drafting", "Minimal"]));
     // The built-in workspace is the default layout.
     app.run("wscurrent", json!({"name": "2D Drafting"})).unwrap();
     assert!(app.ui.show_status_bar && !app.ui.ribbon_minimized);
@@ -55,38 +45,9 @@ fn the_built_in_workspace_and_the_current_one_are_protected() {
     assert_eq!(app.ui.current_workspace, "Ours");
     app.run("wscurrent", json!({"name": "2D Drafting"})).unwrap();
     let r = app.run("workspace", json!({"operation": "delete", "name": "Ours"})).unwrap();
-    assert_eq!(r["workspaces"], listed(&[]));
+    assert_eq!(r["workspaces"], json!(["2D Drafting"]));
     assert!(app.run("wscurrent", json!({"name": "Nowhere"})).is_err());
     assert!(app.run("workspace", json!({"operation": "explode"})).is_err());
-}
-
-/// The 3D Modeling workspace swaps in AutoCAD's 3D ribbon: Home (with the modeling panels),
-/// Solid and Visualize, then the shared tabs; 2D Drafting brings the 2D ribbon back.
-#[cfg(feature = "solids")]
-#[test]
-fn the_3d_modeling_workspace_shows_the_3d_ribbon() {
-    let mut app = app();
-    assert!(app.run("workspace", json!({"operation": "delete", "name": "3D Modeling"})).is_err());
-    assert!(app.run("workspace", json!({"operation": "saveAs", "name": "3d modeling"})).is_err());
-    app.run("wscurrent", json!({"name": "3d modeling"})).unwrap();
-    assert_eq!(app.ui.current_workspace, "3D Modeling");
-    let mut h = Harness::builder().with_size(vec2(1600.0, 900.0)).build_ui_state(
-        |ui, app: &mut CadApp| {
-            app.logic(&ui.ctx().clone());
-            app.ui(ui);
-        },
-        app,
-    );
-    h.run_steps(4);
-    for tab in ["Home", "Solid", "Visualize", "Insert", "Annotate"] {
-        assert!(h.query_by_role_and_label(Role::Tab, tab).is_some(), "{tab}");
-    }
-    assert!(h.query_all_by_label("Box").next().is_some(), "the Modeling panel is on Home");
-    h.state_mut().run("wscurrent", json!({"name": "2D Drafting"})).unwrap();
-    h.run_steps(4);
-    assert!(h.query_by_role_and_label(Role::Tab, "Solid").is_none());
-    assert!(h.query_by_role_and_label(Role::Tab, "Visualize").is_none());
-    assert!(h.query_by_role_and_label(Role::Tab, "Home").is_some());
 }
 
 #[test]
@@ -123,30 +84,4 @@ fn typed_cui_opens_the_dialog_and_never_from_json() {
     app.ui.dialog = None;
     app.run("workspace", json!({"operation": "list"})).unwrap();
     assert_eq!(app.ui.dialog, None);
-}
-
-#[test]
-fn a_saved_workspace_named_3d_modeling_is_not_hidden() {
-    // Review of PR 20: a "3D Modeling" saved by a DraftCraft built without solids was shadowed
-    // by the built-in one and could not be reached or deleted.
-    let mut app = app();
-    let mut saved = draftcraft_ui_egui::workspaces::SavedWorkspace { name: "3D Modeling".into(), ..Default::default() };
-    saved.show_status_bar = false;
-    app.ui.workspaces.push(saved);
-    // Listed once.
-    let r = app.run("workspace", json!({"operation": "list"})).unwrap();
-    let names: Vec<&str> = r["workspaces"].as_array().unwrap().iter().filter_map(|v| v.as_str()).collect();
-    assert_eq!(names.iter().filter(|n| **n == "3D Modeling").count(), 1, "{names:?}");
-    // Its layout comes back.
-    app.run("wscurrent", json!({"name": "3D Modeling"})).unwrap();
-    assert!(!app.ui.show_status_bar);
-    // And it can be deleted (from another workspace): the built-in one, if any, stays.
-    app.run("wscurrent", json!({"name": "2D Drafting"})).unwrap();
-    let r = app.run("workspace", json!({"operation": "delete", "name": "3D Modeling"})).unwrap();
-    assert_eq!(r["workspaces"], listed(&[]));
-    if cfg!(feature = "solids") {
-        app.run("wscurrent", json!({"name": "3D Modeling"})).unwrap();
-        assert!(app.ui.show_status_bar, "the built-in layout");
-        assert!(app.run("workspace", json!({"operation": "delete", "name": "2D Drafting"})).is_err());
-    }
 }

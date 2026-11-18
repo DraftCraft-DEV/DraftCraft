@@ -905,9 +905,6 @@ pub fn loss_on_save(s: &Session, path: &str) -> std::collections::BTreeMap<Strin
 
 /// Report what the file `path`, just written at the drawing's own version, left out.
 pub(super) fn report_loss(s: &mut Session, r: &mut Value, path: &str) {
-    if is_drawing_file(path) {
-        report_solids_as_meshes(s, r);
-    }
     if is_dxf_file(path) {
         if drawing_version(s, path) >= Version::R2013 {
             report_sat_text_dropped(s, r);
@@ -936,38 +933,6 @@ fn is_drawing_file(path: impl AsRef<std::path::Path>) -> bool {
 /// Whether `path` is a DXF file.
 fn is_dxf_file(path: impl AsRef<std::path::Path>) -> bool {
     Format::from_path(path) == Some(Format::Dxf)
-}
-
-/// DraftCraft's 3D solids in the drawing that a DXF or DWG file holds as meshes, across model
-/// space, layouts and block definitions: those the ACIS writer can't describe yet (free-form
-/// surfaces); the others are saved as AutoCAD's own 3DSOLIDs.
-fn mesh_solid_count(s: &Session) -> usize {
-    let Ok(st) = s.state() else { return 0 };
-    let d = st.drawing();
-    let stores = std::iter::once(&d.model).chain(d.layouts.iter().map(|l| &l.entities)).chain(d.blocks.values().map(|b| &b.entities));
-    let as_mesh = |e: &draftcraft_doc::Entity| match &e.kind {
-        #[cfg(feature = "solids")]
-        draftcraft_doc::EntityKind::Solid3d(so) => !super::solids::saves_as_acis(so),
-        #[cfg(not(feature = "solids"))]
-        draftcraft_doc::EntityKind::Solid3d(_) => true,
-        _ => false,
-    };
-    stores.map(|st| st.iter().filter(|e| as_mesh(e)).count()).sum()
-}
-
-/// Say which 3D solids go into DXF and DWG as meshes with the exact body beside them, because
-/// the ACIS writer can't describe them yet (docs/solids.md): other programs see the meshes.
-fn report_solids_as_meshes(s: &mut Session, r: &mut Value) {
-    let n = mesh_solid_count(s);
-    if n == 0 {
-        return;
-    }
-    s.echo(format!(
-        "{n} 3D solid(s) saved as polyface meshes with DraftCraft's exact body attached: DraftCraft reopens them as solids; AutoCAD and other programs see meshes."
-    ));
-    if let Some(o) = r.as_object_mut() {
-        o.insert("solidsAsMeshes".into(), json!(n));
-    }
 }
 
 /// Say on the command line which solid modeler entities a DXF of 2013 or later left out because

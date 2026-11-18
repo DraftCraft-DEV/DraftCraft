@@ -1635,65 +1635,12 @@ menu	CAD Standards	CAD 标准
 	Text, tab-delimited (TXT)	制表符分隔的文本 (TXT)
 	Enter output file name	输入要写入的文件名
 	Enter input file name	输入要读取的文件名
-# 3D solids (docs/solids.md).
-	3D solids are not available in this build.	此版本不提供三维实体。
-	3D Modeling	三维建模
-	3D Solid	三维实体
-	Section	截面
-	Wedge	楔体
-	Interference Checking	干涉检查
-	Slice	剖切
-	Shell	抽壳
-	Fillet Edge	圆角边
-	Fillet Edges	圆角边
-	Chamfer Edge	倒角边
-	Chamfer Edges	倒角边
-	Flatshot	平面摄影
-	Viewpoint	视点
-	Visual Styles	视觉样式
-	Plan View	平面视图
-	3D Views	三维视图
-	Constrained Orbit	受约束的动态观察
-	Wireframe	线框
-	Hidden	隐藏
-	Realistic	真实
-	Conceptual	概念
-	Shaded	着色
-	Shaded with edges	带边缘着色
-	Shades of Gray	灰度
-	X-Ray	X 射线
-	Back	后视
-	Bottom	仰视
-	Front	前视
-	NE Isometric	东北等轴测
-	NW Isometric	西北等轴测
-	SE Isometric	东南等轴测
-	SW Isometric	西南等轴测
-	Custom View	自定义视图
-	Hide ViewCube	隐藏 ViewCube
-	Click to view from here; drag to orbit	单击从此处查看；拖动以动态观察
-	BOTTOM	仰视
-	FRONT	前视
-	BACK	后视
-	LEFT	左视
-	RIGHT	右视
-	Visualize	可视化
-	Primitive	图元
-	Views	视图
 # Portable settings file (CONFIGIMPORT, CONFIGEXPORT).
 	Import Settings	导入设置
 	Export Settings	导出设置
 	Import Settings...	导入设置...
 	Export Settings...	导出设置...
 	DraftCraft settings (TOML)	DraftCraft 设置 (TOML)
-# 3D modify (3DMOVE, 3DROTATE, 3DSCALE, MIRROR3D, 3DALIGN, 3DARRAY).
-	3D Move	三维移动
-	3D Rotate	三维旋转
-	Rotate 3D	三维旋转（旧）
-	3D Scale	三维缩放
-	3D Mirror	三维镜像
-	3D Align	三维对齐
-	3D Array	三维阵列
 	Total Area and Length	总面积和长度
 	Total Area	总面积
 	Specify point to place the totals as text	指定将合计放置为文字的点

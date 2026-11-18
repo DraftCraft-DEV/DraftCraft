@@ -151,7 +151,6 @@ fn entity(expected: &Entity, actual: &Entity, context: &str) {
     equal(handle, &actual.handle, context, "handle");
     common(properties, &actual.common, &format!("{context}.common"));
     match (kind, &actual.kind) {
-        (EntityKind::Region(r), EntityKind::Region(other)) => region(r, other, context),
         (EntityKind::Line(Line { a, b }), EntityKind::Line(other)) => {
             equal(a, &other.a, context, "line.a");
             equal(b, &other.b, context, "line.b");
@@ -189,33 +188,13 @@ fn entity(expected: &Entity, actual: &Entity, context: &str) {
             | EntityKind::Helix(_)
             | EntityKind::MLine(_)
             | EntityKind::MLeader(_)
+            | EntityKind::Region(_)
             | EntityKind::Dimension(_)
             | EntityKind::Tolerance(_)
             | EntityKind::Viewport(_),
             _,
         ) => equal(kind, &actual.kind, context, "kind"),
         _ => panic!("{context}.kind: unsupported or changed type: expected {kind:?}, actual {:?}", actual.kind),
-    }
-}
-
-/// A region's loops, field by field. Saved as AutoCAD's REGION (ACIS, with solids), an arc is a
-/// circle and its two ends, so its bulge comes back through the arc's angles: a converted angle,
-/// with the angles' roundoff. The points, the loops and everything else are exact.
-fn region(expected: &draftcraft_doc::Region, actual: &draftcraft_doc::Region, context: &str) {
-    let draftcraft_doc::Region { loops } = expected;
-    equal(&loops.len(), &actual.loops.len(), context, "region.loops");
-    for (i, (e, a)) in loops.iter().zip(&actual.loops).enumerate() {
-        let path = format!("{context}.region.loop[{i}]");
-        let draftcraft_doc::HatchLoop { vertices, outer, sources } = e;
-        equal(outer, &a.outer, &path, "outer");
-        equal(sources, &a.sources, &path, "sources");
-        equal(&vertices.len(), &a.vertices.len(), &path, "vertices");
-        for (j, (ev, av)) in vertices.iter().zip(&a.vertices).enumerate() {
-            let at = format!("{path}.vertex[{j}]");
-            equal(&ev.p, &av.p, &at, "p");
-            angle(ev.bulge, av.bulge, &at, "bulge");
-            equal(&(ev.start_width, ev.end_width), &(av.start_width, av.end_width), &at, "widths");
-        }
     }
 }
 

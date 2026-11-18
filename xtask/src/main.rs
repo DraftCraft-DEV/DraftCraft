@@ -22,8 +22,7 @@ commands:
   wasm            cargo check --target wasm32-unknown-unknown for the wasm-safe crates
   test            cargo nextest run (cargo test without nextest) plus the doctests
   i18n            print the strings each interface language shows in English (never fails)
-  ci [--solids]   fmt --check, clippy -D warnings, test, i18n, assets, layers, wasm (stops at first failure);
-                  --solids: clippy and test with the 3D solids feature on, and the kernel's wasm check
+  ci              fmt --check, clippy -D warnings, test, i18n, assets, layers, wasm (stops at first failure)
   corpus [DIR] [--out DIR] [--keep-saved] [--same-format]
                   open -> save -> reopen every DXF/DWG of a real-file corpus (DIR, default
                   $DRAFTCRAFT_CORPUS_DIR or ../draftcraft-corpus) and write report.md + report.json
@@ -41,9 +40,9 @@ fn main() -> ExitCode {
         Some("assets") => assets::run(&root()),
         Some("layers") => cmd_layers(),
         Some("wasm") => cmd_wasm(),
-        Some("test") => cmd_test(&[]),
+        Some("test") => cmd_test(),
         Some("i18n") => cmd_i18n(),
-        Some("ci") => cmd_ci(rest.contains(&"--solids")),
+        Some("ci") => cmd_ci(),
         Some("corpus") => cmd_corpus(&rest),
         Some("stats") => stats::run(&root(), rest.contains(&"--exact")),
         Some("parity") => parity::run(&root()),
@@ -148,17 +147,6 @@ fn cmd_wasm() -> Result<(), String> {
     run(c, &format!("cargo check --target wasm32-unknown-unknown --keep-going ({} crates)", set.len())).map_err(|e| format!("wasm check failed: {e}"))
 }
 
-/// The features `ci --solids` turns on: the 3D solids feature of every app (docs/solids.md).
-const SOLIDS_FEATURES: &str = "draftcraft/solids,draftcraft-cli/solids";
-
-/// The solids kernel checked for wasm32 (the web build keeps solids off, but the kernel must
-/// keep building there).
-fn cmd_wasm_solids() -> Result<(), String> {
-    let mut c = cargo();
-    c.args(["check", "--target", "wasm32-unknown-unknown", "-p", "draftcraft-solid", "--features", "kernel"]);
-    run(c, "cargo check --target wasm32-unknown-unknown -p draftcraft-solid --features kernel").map_err(|e| format!("solids wasm check failed: {e}"))
-}
-
 /// Whether `cargo nextest` is installed.
 fn has_nextest() -> bool {
     let mut c = cargo();
@@ -168,20 +156,19 @@ fn has_nextest() -> bool {
 
 /// Unit and integration tests (examples are not built) with nextest, or `cargo test` when
 /// nextest is missing, then the doctests, which nextest does not run.
-fn cmd_test(extra: &[&str]) -> Result<(), String> {
-    let more = extra.join(" ");
+fn cmd_test() -> Result<(), String> {
     let mut c = cargo();
     if has_nextest() {
-        c.args(["nextest", "run", "--workspace", "--lib", "--bins", "--tests"]).args(extra);
-        run(c, &format!("cargo nextest run --workspace --lib --bins --tests {more}"))?;
+        c.args(["nextest", "run", "--workspace", "--lib", "--bins", "--tests"]);
+        run(c, "cargo nextest run --workspace --lib --bins --tests")?;
     } else {
         eprintln!("note: cargo-nextest is not installed (cargo install cargo-nextest --locked); running cargo test");
-        c.args(["test", "--workspace", "--lib", "--bins", "--tests"]).args(extra);
-        run(c, &format!("cargo test --workspace --lib --bins --tests {more}"))?;
+        c.args(["test", "--workspace", "--lib", "--bins", "--tests"]);
+        run(c, "cargo test --workspace --lib --bins --tests")?;
     }
     let mut c = cargo();
-    c.args(["test", "--workspace", "--doc"]).args(extra);
-    run(c, &format!("cargo test --workspace --doc {more}"))
+    c.args(["test", "--workspace", "--doc"]);
+    run(c, "cargo test --workspace --doc")
 }
 
 /// The translation gap report (`draftcraft-ui-egui`'s ignored `i18n::tests::translation_gaps`).
@@ -196,11 +183,9 @@ fn cmd_i18n() -> Result<(), String> {
     Ok(())
 }
 
-fn cmd_ci(solids: bool) -> Result<(), String> {
+fn cmd_ci() -> Result<(), String> {
     type Step = (&'static str, Box<dyn Fn() -> Result<(), String>>);
-    let extra: Vec<&'static str> = if solids { vec!["--features", SOLIDS_FEATURES] } else { Vec::new() };
-    let (clippy_extra, test_extra) = (extra.clone(), extra);
-    let mut steps: Vec<Step> = vec![
+    let steps: Vec<Step> = vec![
         (
             "fmt",
             Box::new(|| {
@@ -211,21 +196,18 @@ fn cmd_ci(solids: bool) -> Result<(), String> {
         ),
         (
             "clippy",
-            Box::new(move || {
+            Box::new(|| {
                 let mut c = cargo();
-                c.args(["clippy", "--workspace", "--all-targets", "--keep-going"]).args(&clippy_extra).args(["--", "-D", "warnings"]);
-                run(c, &format!("cargo clippy --workspace --all-targets --keep-going {} -- -D warnings", clippy_extra.join(" ")))
+                c.args(["clippy", "--workspace", "--all-targets", "--keep-going", "--", "-D", "warnings"]);
+                run(c, "cargo clippy --workspace --all-targets --keep-going -- -D warnings")
             }),
         ),
-        ("test", Box::new(move || cmd_test(&test_extra))),
+        ("test", Box::new(cmd_test)),
         ("i18n", Box::new(cmd_i18n)),
         ("assets", Box::new(|| assets::run(&root()))),
         ("layers", Box::new(cmd_layers)),
         ("wasm", Box::new(cmd_wasm)),
     ];
-    if solids {
-        steps.push(("wasm-solids", Box::new(cmd_wasm_solids)));
-    }
     let mut done = Vec::new();
     for (name, f) in &steps {
         eprintln!("\n=== ci: {name} ===");

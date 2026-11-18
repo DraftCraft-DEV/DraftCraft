@@ -31,8 +31,7 @@ const MAX_PREVIEW_PX: u64 = 4096;
 const MAX_SHEETS: usize = 256;
 
 pub fn specs() -> Vec<CommandSpec> {
-    #[cfg_attr(feature = "solids", allow(unused_mut))]
-    let mut v = vec![
+    vec![
         CommandSpec::new("import", "Import...", run_import)
             .menu(&["File", "Import..."])
             .alias(&["imp"])
@@ -67,18 +66,11 @@ pub fn specs() -> Vec<CommandSpec> {
         })
         .params("not available yet")
         .noundo(),
-    ];
-    // With 3D solids, 3DORBIT is the real command (cmd/solids/look.rs).
-    #[cfg(not(feature = "solids"))]
-    v.push(
-        CommandSpec::new("3dorbit", "Orbit", |_, _| {
-            Err(EngineError::Other("3DORBIT is not available yet: DraftCraft draws in 2D (plan view) only".into()))
-        })
-        .alias(&["3do", "orbit"])
-        .params("not available yet")
-        .noundo(),
-    );
-    v
+        CommandSpec::new("3dorbit", "Orbit", |_, _| Err(EngineError::Other("3DORBIT is not available yet: DraftCraft draws in 2D (plan view) only".into())))
+            .alias(&["3do", "orbit"])
+            .params("not available yet")
+            .noundo(),
+    ]
 }
 
 fn extension(path: &str) -> String {
@@ -936,11 +928,7 @@ mod tests {
     #[test]
     fn attach_share_and_orbit_say_they_are_not_available_yet() {
         let mut s = session();
-        let mut names = vec!["attach", "share"];
-        if cfg!(not(feature = "solids")) {
-            names.extend(["3dorbit", "orbit"]);
-        }
-        for c in names {
+        for c in ["attach", "share", "3dorbit", "orbit"] {
             let e = s.execute(&resolve_alias(c), &Value::Null).unwrap_err().to_string();
             assert!(e.contains("not available yet"), "{c}: {e}");
         }

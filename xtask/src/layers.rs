@@ -37,9 +37,6 @@ pub const TABLE: &[(&str, Class)] = &[
     ("dxf", Class::Standalone),
     ("dwg", Class::Standalone),
     ("color", Class::Layer(0)),
-    // 3D solids: the facade over solidcore, the B-rep kernel (docs/solids.md), the only crate that may
-    // name it (KERNEL_CRATES).
-    ("solid", Class::Layer(0)),
     ("doc", Class::Layer(1)),
     ("constraints", Class::Layer(2)),
     ("fonts", Class::Layer(2)),
@@ -60,7 +57,7 @@ pub const TABLE: &[(&str, Class)] = &[
 /// The L0 foundation is a small chain: `raster` builds on `color` and
 /// `geom`, which the §3 diagram draws on one line. The GPU backend (`gpu`)
 /// reuses the CPU reference (`compose`) for LUTs and parity tests.
-pub const INTRA_LAYER_ORDER: &[&[&str]] = &[&["geom", "color"], &["geom", "solid"], &["fonts", "render"]];
+pub const INTRA_LAYER_ORDER: &[&[&str]] = &[&["geom", "color"], &["fonts", "render"]];
 
 fn intra_layer_allowed(from: &str, to: &str) -> bool {
     let (from, to) = (short_name(from), short_name(to));
@@ -73,20 +70,6 @@ fn intra_layer_allowed(from: &str, to: &str) -> bool {
 /// External crates that constitute a UI toolkit / windowing dependency.
 /// Entries ending in `*` are prefixes.
 pub const UI_CRATES: &[&str] = &["craft-ui", "egui", "eframe", "egui-wgpu", "wgpu", "winit", "egui_kittest", "rfd", "bevy*"];
-
-/// The solid modelling kernel's crates (docs/solids.md): only `draftcraft-solid` may depend on
-/// them, so the kernel can be pinned, patched or replaced in one place.
-pub const KERNEL_CRATES: &[&str] = &["solidcore*", "cadmpeg*"];
-
-/// The one crate allowed to depend on [`KERNEL_CRATES`].
-pub const KERNEL_FACADE: &str = "solid";
-
-fn is_kernel_crate(name: &str) -> bool {
-    KERNEL_CRATES.iter().any(|p| match p.strip_suffix('*') {
-        Some(prefix) => name.starts_with(prefix),
-        None => name == *p,
-    })
-}
 
 /// First layer allowed to use UI crates.
 pub const UI_MIN_LAYER: u8 = 5;
@@ -135,7 +118,6 @@ pub enum Violation {
     StandaloneHasWorkspaceDep { krate: String, dep: String },
     TestkitAsNormalDep { krate: String },
     UiBelowL6 { krate: String, dep: String, layer: u8 },
-    KernelOutsideFacade { krate: String, dep: String },
 }
 
 impl std::fmt::Display for Violation {
@@ -155,9 +137,6 @@ impl std::fmt::Display for Violation {
             }
             Violation::UiBelowL6 { krate, dep, layer } => {
                 write!(f, "{krate} (L{layer}) depends on UI crate `{dep}`; UI toolkits are only allowed in L6+")
-            }
-            Violation::KernelOutsideFacade { krate, dep } => {
-                write!(f, "{krate} depends on kernel crate `{dep}`; only draftcraft-{KERNEL_FACADE} may name the solid modelling kernel")
             }
         }
     }
@@ -208,8 +187,6 @@ pub fn check(crates: &[Crate]) -> Vec<Violation> {
                 }
             } else if layer < UI_MIN_LAYER && is_ui_crate(&d.name) {
                 out.push(Violation::UiBelowL6 { krate: c.name.clone(), dep: d.name.clone(), layer });
-            } else if is_kernel_crate(&d.name) && short_name(&c.name) != KERNEL_FACADE {
-                out.push(Violation::KernelOutsideFacade { krate: c.name.clone(), dep: d.name.clone() });
             }
         }
     }
@@ -290,19 +267,6 @@ mod tests {
         assert!(check(&[c("draftcraft-color", &[("draftcraft-geom", Normal, true)])]).is_empty());
         let v = check(&[c("draftcraft-geom", &[("draftcraft-color", Normal, true)])]);
         assert!(matches!(v[..], [Violation::Upward { from: 0, to: 0, .. }]));
-    }
-
-    #[test]
-    fn only_the_solid_facade_names_the_kernel() {
-        let ok = c("draftcraft-solid", &[("draftcraft-geom", Normal, true), ("solidcore-ops", Normal, false), ("solidcore", Normal, false)]);
-        assert!(check(&[ok]).is_empty());
-        let v = check(&[c("draftcraft-engine", &[("draftcraft-solid", Normal, true), ("solidcore-ops", Normal, false)])]);
-        assert!(matches!(v[..], [Violation::KernelOutsideFacade { .. }]), "{v:?}");
-        let v = check(&[c("draftcraft-doc", &[("solidcore-record", Normal, false)])]);
-        assert!(matches!(v[..], [Violation::KernelOutsideFacade { .. }]), "{v:?}");
-        // The facade is at L0: it may use geom, not doc.
-        let v = check(&[c("draftcraft-solid", &[("draftcraft-doc", Normal, true)])]);
-        assert!(matches!(v[..], [Violation::Upward { from: 0, to: 1, .. }]), "{v:?}");
     }
 
     #[test]
