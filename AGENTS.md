@@ -60,6 +60,8 @@ People trust DraftCraft with their drawings; a crash loses their work. **This ou
   (`the_changelog_has_notes_for_this_version`) fails while the version in `Cargo.toml` has no section.
 
 ## Branches: main is always releasable
+- **Every change goes through a pull request the owner reviews.** Agents never merge and never commit
+  directly to `main` or `3D`, unless the owner gives permission for that one change.
 - **3D work goes to the `3D` branch, not main, until it is finished:** 3D solids and the `solids`
   feature, the solid kernel (`crates/solid`), the ACIS translator, 3D commands and views, and the
   3D Modeling workspace. Pull requests for it target `3D`.
