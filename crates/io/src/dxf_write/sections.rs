@@ -331,7 +331,6 @@ fn write_classes(w: &mut W, cx: &Ctx, every: &[&Entity]) {
         ("MLEADERSTYLE", "AcDbMLeaderStyle", 4095, false),
         ("ACDBDICTIONARYWDFLT", "AcDbDictionaryWithDefault", 0, false),
         ("ACDBPLACEHOLDER", "AcDbPlaceHolder", 0, false),
-        ("DICTIONARYVAR", "AcDbDictionaryVar", 0, false),
     ];
     if !cx.tables.is_empty() {
         classes.push(("ACAD_TABLE", "AcDbTable", 1025, true));
@@ -1174,28 +1173,12 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
     // Only a DXF declares the version it is written for: the DWG bridge writes R2000 text for the
     // DWG writer, which keeps SAT-text solids (#2334).
     crate::dxf_raw::finish(&mut w.t, d, &w.reactors, version >= Version::R2013);
-    // AutoCAD's drawing variables dictionary: the current table style is there, not in the
-    // header, which has no $CTABLESTYLE in AutoCAD's DXF.
-    crate::dwg::write::add_variable_dictionary(&mut w.t, d);
-    raise_handseed(&mut w.t);
     // A DWG of AutoCAD 2004 to 2010 (`dwg_records` declares 2000 for any DWG) holds the binary
     // ACIS in the entity itself: the DWG writer takes it from the section.
     crate::dxf_raw::data_store(&mut w.t, d, target >= Version::R2013 || target > version);
     add_class_instance_counts(&mut w.t, target);
     mark_xrefs(&mut w.t, d);
     w.t
-}
-
-/// Raise `$HANDSEED` above every handle the records use (the variables dictionary is numbered
-/// after the seed was set).
-fn raise_handseed(tags: &mut [Tag]) {
-    let top = tags.iter().filter(|t| t.code == 5 || t.code == 105).filter_map(|t| u64::from_str_radix(t.str().trim(), 16).ok()).max().unwrap_or(0);
-    let Some(at) = tags.iter().position(|t| t.code == 9 && t.str() == "$HANDSEED") else { return };
-    let Some(seed) = tags.get_mut(at.saturating_add(1)) else { return };
-    let current = u64::from_str_radix(seed.str().trim(), 16).unwrap_or(0);
-    if top >= current {
-        *seed = Tag::s(5, format!("{:X}", top.saturating_add(1)));
-    }
 }
 
 /// DXF Reference group 91 of CLASS records, the instance count, which came with the 2004 format.

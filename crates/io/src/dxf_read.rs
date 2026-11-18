@@ -44,7 +44,7 @@ mod document;
 mod entities;
 mod hatch;
 mod objects;
-pub(crate) use objects::{VARIABLES_KEY, apply_own_records, apply_scales, apply_variables, put_groups};
+pub(crate) use objects::{apply_own_records, apply_scales, put_groups};
 mod tables;
 mod text;
 

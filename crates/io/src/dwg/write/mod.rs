@@ -488,8 +488,8 @@ fn merge(into: &mut Unwritten, from: Unwritten) {
     }
 }
 
-/// Add the drawing variables dictionary AutoCAD writes in every DWG and DXF, with the drawing's
-/// values, when the records have none (see `variables`).
+/// Add the drawing variables dictionary AutoCAD writes in every DWG, with the drawing's values,
+/// when the records have none (see `variables`).
 pub fn add_variable_dictionary(tags: &mut Vec<Tag>, d: &draftcraft_doc::Drawing) {
     variables::add(tags, &variables::values(d));
 }

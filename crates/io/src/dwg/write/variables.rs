@@ -1,39 +1,29 @@
 //! The drawing variables dictionary (`AcDbVariableDictionary`) AutoCAD writes in the named
-//! object dictionary of every DWG and DXF. Some programs read a DWG without it as empty (#1813:
-//! Vectric Aspire 10.5 and an AutoCAD 2004 file), and AutoCAD keeps the current table style
-//! there, not in the DXF header (which has no `$CTABLESTYLE`): every DWG and DXF gets AutoCAD's
-//! dictionary. A dictionary the drawing was read with (`Drawing::variables`, from AutoCAD's or
-//! another program's file) keeps its own entries, with the drawing's current table style.
+//! object dictionary of every DWG. DraftCraft's DXF has none, as AutoCAD's own DXF often has
+//! none either; but some programs read a DWG without it as empty (#1813: Vectric Aspire 10.5 and
+//! an AutoCAD 2004 file), so a DWG gets AutoCAD's dictionary when the drawing has none. A
+//! dictionary the drawing has (read from another program's file) keeps its own entries.
 
 use draftcraft_doc::{Drawing, HVal};
 use draftcraft_dxf::Tag;
 
 use super::rec::{hex, text};
 
-use crate::dxf_read::VARIABLES_KEY as KEY;
+/// AutoCAD's key for the dictionary in the named object dictionary. Keys are matched without
+/// regard to case, as AutoCAD matches them.
+const KEY: &str = "AcDbVariableDictionary";
 
 /// The variables the dictionary holds, by name, with the drawing's values: the current
 /// multileader and table styles and annotation scale, DIMASSOC and HIDETEXT (a value the
 /// variable doesn't accept, which a hostile file can hold, is AutoCAD's default), and the two
-/// layer notification settings, which have no header variable. A drawing read with a dictionary
-/// keeps its entries and values, with its own current table style.
-pub(crate) fn values(d: &Drawing) -> Vec<(String, String)> {
+/// layer notification settings, which have no header variable.
+pub(crate) fn values(d: &Drawing) -> Vec<(&'static str, String)> {
     let name =
         |var: &str, default: &str| d.header.get(var).and_then(HVal::as_str).map(str::trim).filter(|s| !s.is_empty()).unwrap_or(default).to_string();
     let int = |var: &str, valid: std::ops::RangeInclusive<i64>, default: i64| {
         d.header.get(var).and_then(HVal::as_i64).filter(|v| valid.contains(v)).unwrap_or(default).to_string()
     };
-    if !d.variables.is_empty() {
-        return d
-            .variables
-            .iter()
-            .map(|(var, value)| {
-                let value = if var.eq_ignore_ascii_case("CTABLESTYLE") { name("CTABLESTYLE", value) } else { value.clone() };
-                (var.clone(), value)
-            })
-            .collect();
-    }
-    [
+    vec![
         ("CANNOSCALE", name("CANNOSCALE", "1:1")),
         ("CMLEADERSTYLE", name("CMLEADERSTYLE", "Standard")),
         ("CTABLESTYLE", name("CTABLESTYLE", "Standard")),
@@ -42,15 +32,12 @@ pub(crate) fn values(d: &Drawing) -> Vec<(String, String)> {
         ("LAYEREVAL", "0".to_string()),
         ("LAYERNOTIFY", "0".to_string()),
     ]
-    .into_iter()
-    .map(|(var, value)| (var.to_string(), value))
-    .collect()
 }
 
 /// Add the dictionary and its variables to the records, unless the named object dictionary
 /// already has one. Records that are not laid out as DraftCraft's DXF writer lays them out (no
 /// OBJECTS section, no dictionary first in it) are left as they are.
-pub(crate) fn add(tags: &mut Vec<Tag>, variables: &[(String, String)]) {
+pub(crate) fn add(tags: &mut Vec<Tag>, variables: &[(&str, String)]) {
     let Some(objects) = tags.windows(2).position(|w| {
         w.first().is_some_and(|t| t.code == 0 && text(t) == "SECTION") && w.get(1).is_some_and(|t| t.code == 2 && text(t) == "OBJECTS")
     }) else {
@@ -79,7 +66,7 @@ pub(crate) fn add(tags: &mut Vec<Tag>, variables: &[(String, String)]) {
         format!("{next:X}")
     };
     let dictionary = handle();
-    let entries: Vec<(&str, &str, String)> = variables.iter().map(|(name, value)| (name.as_str(), value.as_str(), handle())).collect();
+    let entries: Vec<(&str, &str, String)> = variables.iter().map(|(name, value)| (*name, value.as_str(), handle())).collect();
     let mut added = vec![
         Tag::s(0, "DICTIONARY"),
         Tag::s(5, dictionary.clone()),

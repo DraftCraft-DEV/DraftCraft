@@ -177,8 +177,8 @@ pub fn write_noted(d: &Drawing, name: impl AsRef<Path>, opts: &SaveOptions) -> R
 pub fn write_dwg_own(d: &Drawing, version: Version) -> Result<(Vec<u8>, dwg::write::Unwritten)> {
     let ver = dwg::write::version_of(version.code()).ok_or_else(|| IoError::Format(format!("DWG: no writer for {}", version.code())))?;
     let d = &*with_handles(d);
-    // The records hold AutoCAD's drawing variables dictionary (`dwg::write::variables`).
-    let tags = dxf_write::dwg_records(d, version);
+    let mut tags = dxf_write::dwg_records(d, version);
+    dwg::write::add_variable_dictionary(&mut tags, d);
     let preview = dwg::write::preview(d);
     let info = dwg::write::FileInfo {
         app_name: "DraftCraft",

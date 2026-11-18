@@ -24,46 +24,11 @@ pub(super) struct Objects {
     layout_views: Vec<(String, (Vec2, f64))>,
     /// SORTENTSTABLE objects: (owning block record handle, entity handle → sort handle).
     pub(super) sortents: Vec<(String, HashMap<Handle, u64>)>,
-    /// DICTIONARYVAR objects: (handle, owner handles, value), in file order, all upper case but
-    /// the value.
-    variables: Vec<(String, Vec<String>, String)>,
     /// WIPEOUTVARIABLES: the drawing's WIPEOUTFRAME (0 = frames hidden, 1 = shown).
     wipeout_frame: Option<i64>,
 }
 
 pub(super) const MAX_OBJECTS: usize = 1_000_000;
-
-/// The key of AutoCAD's drawing variables dictionary in the named object dictionary. Keys are
-/// matched without regard to case, as AutoCAD matches them.
-pub(crate) const VARIABLES_KEY: &str = "AcDbVariableDictionary";
-
-/// Most variables read from a drawing variables dictionary (AutoCAD writes about a dozen).
-const MAX_VARIABLES: usize = 1_000;
-
-/// Most characters of a variable's name or value that are kept.
-const MAX_VARIABLE_TEXT: usize = 2_048;
-
-/// Take AutoCAD's drawing variables dictionary, (name, value) in its order, into the drawing:
-/// it is saved again as it was, but for the variables the drawing models. One of those is the
-/// current table style, which AutoCAD keeps there rather than in the DXF header (a `$CTABLESTYLE`
-/// in the header, as DraftCraft's DXF had it before, is read with the header). A name that is
-/// empty, repeated or holds control characters is left out, as is a value with control
-/// characters. The DWG reader uses it too.
-pub(crate) fn apply_variables(d: &mut Drawing, vars: Vec<(String, String)>) {
-    let fit = |s: &str| s.chars().count() <= MAX_VARIABLE_TEXT && !s.chars().any(char::is_control);
-    let mut kept: Vec<(String, String)> = Vec::new();
-    for (name, value) in vars.into_iter().take(MAX_VARIABLES) {
-        let name = name.trim().to_string();
-        if name.is_empty() || !fit(&name) || !fit(&value) || kept.iter().any(|(n, _)| n.eq_ignore_ascii_case(&name)) {
-            continue;
-        }
-        if name.eq_ignore_ascii_case("CTABLESTYLE") && !value.trim().is_empty() {
-            d.header.set_str("CTABLESTYLE", value.trim());
-        }
-        kept.push((name, value));
-    }
-    d.variables = kept;
-}
 
 impl Objects {
     pub(super) fn add(&mut self, kind: &str, tags: &[Tag]) {
@@ -99,12 +64,6 @@ impl Objects {
             "DIMASSOC" if self.dimassocs.len() < MAX_OBJECTS => self.dimassocs.push(tags.to_vec()),
             "MLEADERSTYLE" if self.mleader_styles.len() < MAX_OBJECTS => self.mleader_styles.push((h, tags.to_vec())),
             "GROUP" if self.groups.len() < MAX_OBJECTS => self.groups.push((h, tags.to_vec())),
-            "DICTIONARYVAR" if self.variables.len() < MAX_VARIABLES => {
-                if let Some(v) = T(tags).s(1) {
-                    let owners = tags.iter().filter(|t| t.code == 330).map(|t| t.str().trim().to_ascii_uppercase()).take(4).collect();
-                    self.variables.push((h, owners, v));
-                }
-            }
             "WIPEOUTVARIABLES" => self.wipeout_frame = T(tags).i(70).filter(|v| (0..=2).contains(v)),
             "SORTENTSTABLE" if self.sortents.len() < MAX_OBJECTS => {
                 if let Some(t) = sortents_table(tags) {
@@ -133,19 +92,6 @@ impl Objects {
             text.push_str(&t.str());
         }
         Some(text)
-    }
-
-    /// AutoCAD's drawing variables dictionary: the variables of the dictionary the named object
-    /// dictionary names `AcDbVariableDictionary`, by their entry names.
-    fn apply_variables(&self, d: &mut Drawing) {
-        let Some(dict) = self.names.iter().find(|(_, n)| n.trim().eq_ignore_ascii_case(VARIABLES_KEY)).map(|(h, _)| h) else { return };
-        let vars = self
-            .variables
-            .iter()
-            .filter(|(_, owners, _)| owners.contains(dict))
-            .filter_map(|(h, _, value)| Some((self.names.get(h)?.clone(), value.clone())))
-            .collect();
-        apply_variables(d, vars);
     }
 
     fn apply_table_styles(&self, d: &mut Drawing) {
@@ -223,7 +169,6 @@ impl Objects {
         if let Some(v) = self.wipeout_frame {
             d.header.set_i64("WIPEOUTFRAME", v);
         }
-        self.apply_variables(d);
         self.apply_table_styles(d);
         self.apply_table_style_fixes(d, rx);
         apply_scales(d, &self.scales);

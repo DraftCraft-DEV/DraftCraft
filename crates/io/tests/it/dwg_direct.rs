@@ -203,9 +203,8 @@ const NAMES: &[&str] = &[
 
 /// Where the R14 DWG and the R12 DXF, the nearest reference AutoCAD writes, are different files
 /// of different formats: R12 has a variable for whether handles are on (a later DWG always has
-/// them), AutoCAD wrote 64 as the R12 file's $MAXACTVP where the R14 file holds 48, and the R14
-/// file's drawing variables dictionary names the current table style, which R12 (no objects) can't.
-const R12_DIFFERS: &[&str] = &["HANDLING", "MAXACTVP", "CTABLESTYLE"];
+/// them), and AutoCAD wrote 64 as the R12 file's $MAXACTVP where the R14 file holds 48.
+const R12_DIFFERS: &[&str] = &["HANDLING", "MAXACTVP"];
 
 fn same(a: &draftcraft_doc::HVal, b: &draftcraft_doc::HVal) -> bool {
     use draftcraft_doc::HVal::*;

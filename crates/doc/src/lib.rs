@@ -125,10 +125,6 @@ pub struct Drawing {
     pub parametric: Parametric,
     /// The annotation scale list (SCALELISTEDIT).
     pub scales: Vec<AnnoScale>,
-    /// AutoCAD's drawing variables dictionary (`AcDbVariableDictionary`) as the file had it:
-    /// (name, value), in its order. Saved again with the drawing's own current table style; empty,
-    /// AutoCAD's own set is saved.
-    pub variables: Vec<(String, String)>,
     /// Next free handle.
     pub handseed: u64,
     /// Objects hidden for this session by ISOLATEOBJECTS / HIDEOBJECTS. Never written to a file:
@@ -203,7 +199,6 @@ impl Drawing {
             constraints: Vec::new(),
             parametric: Parametric::default(),
             scales: imperial_scales(),
-            variables: Vec::new(),
             handseed: 0x100,
             hidden_objects: BTreeSet::new(),
             read_notes: Vec::new(),
