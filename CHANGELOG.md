@@ -11,6 +11,9 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### New
+- The command line's AutoComplete learns which commands you use: the ones you run most, and most recently, move up the list, so typing LI soon offers LINE first if you draw lines more than you list. The arrow keys move through the suggestions, and Reset Suggestion Order in the command line's right-click menu forgets what was learned.
+
 ### Improved
 - The Workspace button on the status bar opens a menu of the workspaces, as on Windows, with the current one checked.
 - The workspace menus show 3D Modeling greyed out, with a note that 3D solids are not available in this build yet.

@@ -28,6 +28,7 @@ pub mod capture;
 pub mod chrome;
 pub mod clipboard;
 pub mod closing;
+pub mod cmd_usage;
 pub mod cmdline;
 pub mod context_menu;
 pub mod control;
@@ -488,21 +489,32 @@ impl CadApp {
     /// command or system variable) runs `fallback` instead: Enter on a partly typed name accepts
     /// the highlighted AutoComplete suggestion.
     pub fn cmdline_or(&mut self, text: &str, fallback: Option<&str>) -> Option<String> {
+        self.cmdline_or_ran(text, fallback).err()
+    }
+
+    /// [`Self::cmdline_or`], telling what ran: `Ok(true)` when `text` was unknown and `fallback`
+    /// ran instead, `Ok(false)` when `text` ran, `Err` when it failed (the error is echoed).
+    pub fn cmdline_or_ran(&mut self, text: &str, fallback: Option<&str>) -> Result<bool, String> {
         if !self.session.prompting() {
             let first = text.split_whitespace().next().unwrap_or("");
             // `cmd {json}` is a programmatic call: the engine runs it with those parameters.
             let json_form = text.trim_start().get(first.len()..).is_some_and(|rest| rest.trim_start().starts_with('{'));
             if !first.is_empty() && !json_form && menus::run_ui_command(self, &first.to_ascii_lowercase(), &Value::Null).is_some() {
-                return None;
+                return Ok(false);
             }
         }
         let e = match (self.session.cmdline(text), fallback) {
-            (Ok(()), _) => return None,
-            (Err(draftcraft_engine::EngineError::UnknownCommand(_)), Some(f)) => return self.cmdline(f),
+            (Ok(()), _) => return Ok(false),
+            (Err(draftcraft_engine::EngineError::UnknownCommand(_)), Some(f)) => {
+                return match self.cmdline(f) {
+                    None => Ok(true),
+                    Some(e) => Err(e),
+                };
+            }
             (Err(e), _) => e.to_string(),
         };
         self.session.echo(e.clone());
-        Some(e)
+        Err(e)
     }
 
     /// The theme the interface shows now (the choice resolved against the OS appearance).
@@ -535,6 +547,9 @@ impl CadApp {
         }
         if let Some(dir) = &self.ui.last_lisp_dir {
             prefs["lispDir"] = json!(dir);
+        }
+        if !self.cmd.usage.is_empty() {
+            prefs["cmdlineUsage"] = self.cmd.usage.to_json();
         }
         prefs.to_string()
     }
@@ -571,6 +586,9 @@ impl CadApp {
         }
         if let Some(dir) = v.get("lispDir").and_then(Value::as_str).filter(|d| !d.is_empty()) {
             self.ui.last_lisp_dir = Some(dir.to_string());
+        }
+        if let Some(usage) = v.get("cmdlineUsage") {
+            self.cmd.usage = cmd_usage::Usage::from_json(usage);
         }
     }
 

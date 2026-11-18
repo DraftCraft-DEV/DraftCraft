@@ -155,6 +155,7 @@
 	Command Aliases	명령 별칭
 	Command History	명령 기록
 	Clear Command History	명령 기록 지우기
+	Reset Suggestion Order	제안 순서 재설정
 	Command Line	명령행
 	Command Line History Lines	명령행 기록 줄 수
 	Command Reference	명령 참조

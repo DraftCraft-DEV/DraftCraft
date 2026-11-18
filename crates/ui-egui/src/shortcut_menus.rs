@@ -43,7 +43,7 @@ fn push(groups: &mut Vec<Vec<Entry>>, group: Vec<Entry>) {
 }
 
 /// The command line's menu: Recent Commands, Dynamic Input, the history window and its height,
-/// Copy History and Clear.
+/// Copy History and Clear, and Reset Suggestion Order.
 pub fn command_line_entries(app: &CadApp) -> Vec<Vec<Entry>> {
     let mut groups = Vec::new();
     let recent: Vec<Entry> = app
@@ -64,6 +64,12 @@ pub fn command_line_entries(app: &CadApp) -> Vec<Vec<Entry>> {
     let mut edit = vec![action("Copy History", "cmdline:copy".into(), !app.session.log.is_empty())];
     edit.extend(item(app, "ui.cmdline.clear", None));
     groups.push(edit);
+    // AutoComplete's learned order (the commands used most listed first) can be forgotten.
+    let reset = item(app, "ui.cmdline.resetsuggestions", None).map(|e| match e {
+        Entry::Item { label, id, shortcut, .. } => Entry::Item { label, id, shortcut, enabled: !app.cmd.usage.is_empty() },
+        other => other,
+    });
+    push(&mut groups, reset.into_iter().collect());
     groups
 }
 

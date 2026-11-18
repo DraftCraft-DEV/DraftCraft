@@ -166,6 +166,7 @@ menu	Modify	Edita
 	Command Aliases	Alias dei comandi
 	Command History	Cronologia comandi
 	Clear Command History	Cancella cronologia comandi
+	Reset Suggestion Order	Ripristina ordine dei suggerimenti
 	Command Line	Riga di comando
 	Command Line History Lines	Righe della cronologia della riga di comando
 	Command Reference	Riferimento comandi

@@ -80,6 +80,7 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("ui.toggle.history", "Command History", &["Window", "Command History"], Some("F2")),
     ("ui.cmdline.lines", "Command Line History Lines", &[], None),
     ("ui.cmdline.clear", "Clear Command History", &[], None),
+    ("ui.cmdline.resetsuggestions", "Reset Suggestion Order", &[], None),
     ("ui.dialog.language", "Interface Language", &["Edit", "Interface Language"], None),
     ("ui.dialog.find", "Find and Replace", &[], Some("Cmd+F")),
     ("ui.language", "Language", &[], None),
@@ -537,6 +538,12 @@ fn run_ui_command_inner(app: &mut CadApp, id: &str, params: &Value) -> Option<Re
         "ui.cmdline.clear" => {
             app.session.log.clear();
             Ok(Value::Null)
+        }
+        // Forget the learned AutoComplete order: suggestions go back to their unlearned order.
+        "ui.cmdline.resetsuggestions" => {
+            let forgotten = app.cmd.usage.len();
+            app.cmd.usage.clear();
+            Ok(json!({ "forgotten": forgotten }))
         }
         "ui.dialog.language"
         | "ui.dialog.layers"

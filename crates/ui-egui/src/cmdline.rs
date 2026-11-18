@@ -49,6 +49,12 @@ pub struct CmdLine {
     active_at: f64,
     /// How much of the inline history shows (1 = all, 0 = faded away): it fades when idle.
     lines_alpha: f32,
+    /// What the command line learned about the commands run from it: AutoComplete lists the
+    /// ones used most, and most recently, first ([`crate::cmd_usage`]).
+    pub usage: crate::cmd_usage::Usage,
+    /// The AutoComplete row the arrows moved to (0 = the first) and the text it was chosen for:
+    /// typing anything else goes back to the first row.
+    highlight: (usize, String),
 }
 
 /// The most history lines the command line shows above its bar.
@@ -112,8 +118,8 @@ fn tab(app: &mut CadApp) {
     {
         // Both values typed: Tab locks the second one as well.
         app.cmd.locked_second = Some(app.cmd.buffer.clone());
-    } else if let Some(s) = suggestions(&app.cmd.buffer).first() {
-        app.cmd.buffer = s.id.clone();
+    } else if let Some(s) = highlighted(app) {
+        app.cmd.buffer = s.id;
     }
 }
 
@@ -128,24 +134,47 @@ pub struct Suggestion {
     pub label: &'static str,
 }
 
-/// Matching command names/aliases for AutoComplete.
-fn suggestions(prefix: &str) -> Vec<Suggestion> {
+/// The most AutoComplete suggestions listed.
+const MAX_SUGGESTIONS: usize = 8;
+
+/// Matching command names/aliases for AutoComplete, the commands used most (`usage`) first.
+///
+/// Without anything learned the order is: the exact alias or command name, then commands whose
+/// name starts with `prefix` (shortest first), then commands with an alias starting with it. Learned
+/// scores then move commands up; an exactly typed command name always stays first, and an exactly
+/// typed alias counts as [`crate::cmd_usage::EXACT_ALIAS_BONUS`] uses, so a few stray uses of
+/// another command do not take its place.
+pub fn suggestions(prefix: &str, usage: &crate::cmd_usage::Usage) -> Vec<Suggestion> {
+    let found = matches(prefix);
+    let p = prefix.to_ascii_lowercase();
+    let weights: Vec<f64> = found
+        .iter()
+        .enumerate()
+        .map(|(i, (s, exact))| match (i, exact) {
+            (0, true) if s.id.eq_ignore_ascii_case(&p) => f64::INFINITY,
+            (0, true) => usage.score(&s.id) + crate::cmd_usage::EXACT_ALIAS_BONUS,
+            _ => usage.score(&s.id),
+        })
+        .collect();
+    let mut found: Vec<Option<Suggestion>> = found.into_iter().map(|(s, _)| Some(s)).collect();
+    crate::cmd_usage::rank(&weights).into_iter().filter_map(|i| found.get_mut(i).and_then(Option::take)).take(MAX_SUGGESTIONS).collect()
+}
+
+/// Every command matching `prefix`, in the unlearned order; `true` marks the exact match.
+fn matches(prefix: &str) -> Vec<(Suggestion, bool)> {
     if prefix.is_empty() || prefix.contains(' ') {
         return Vec::new();
     }
     let p = prefix.to_ascii_lowercase();
 
-    let mut out: Vec<Suggestion> = Vec::new();
+    let mut out: Vec<(Suggestion, bool)> = Vec::new();
     let mut seen_ids: HashSet<&'static str> = HashSet::new();
 
     // 1. Exact match: alias resolution or exact command name match.
-    let resolved = draftcraft_engine::cmd::resolve_alias(&p);
-    if let Some(spec) = draftcraft_engine::cmd::find_command(&resolved)
-        && !spec.id.contains('.')
-    {
+    if let Some(spec) = exact_command(&p) {
         let display =
             if spec.id == p { spec.id.to_ascii_uppercase() } else { format!("{} ({})", p.to_ascii_uppercase(), spec.id.to_ascii_uppercase()) };
-        out.push(Suggestion { id: spec.id.to_ascii_uppercase(), display, label: spec.label });
+        out.push((Suggestion { id: spec.id.to_ascii_uppercase(), display, label: spec.label }, true));
         seen_ids.insert(spec.id);
     }
 
@@ -154,7 +183,7 @@ fn suggestions(prefix: &str) -> Vec<Suggestion> {
         draftcraft_engine::command_specs().iter().filter(|c| !c.id.contains('.') && !seen_ids.contains(c.id) && c.id.starts_with(&p)).collect();
     id_matches.sort_by_key(|c| (c.id.len(), c.id));
     for c in id_matches {
-        out.push(Suggestion { id: c.id.to_ascii_uppercase(), display: c.id.to_ascii_uppercase(), label: c.label });
+        out.push((Suggestion { id: c.id.to_ascii_uppercase(), display: c.id.to_ascii_uppercase(), label: c.label }, false));
         seen_ids.insert(c.id);
     }
 
@@ -172,16 +201,62 @@ fn suggestions(prefix: &str) -> Vec<Suggestion> {
     alias_matches.sort_by_key(|(alias, c)| (alias.len(), *alias, c.id));
     for (alias, c) in alias_matches {
         if seen_ids.insert(c.id) {
-            out.push(Suggestion {
-                id: c.id.to_ascii_uppercase(),
-                display: format!("{} ({})", alias.to_ascii_uppercase(), c.id.to_ascii_uppercase()),
-                label: c.label,
-            });
+            out.push((
+                Suggestion {
+                    id: c.id.to_ascii_uppercase(),
+                    display: format!("{} ({})", alias.to_ascii_uppercase(), c.id.to_ascii_uppercase()),
+                    label: c.label,
+                },
+                false,
+            ));
         }
     }
-
-    out.truncate(8);
     out
+}
+
+/// The command a typed word names exactly, as an alias or by its name.
+fn exact_command(word: &str) -> Option<&'static draftcraft_engine::CommandSpec> {
+    let p = word.to_ascii_lowercase();
+    let resolved = draftcraft_engine::cmd::resolve_alias(&p);
+    draftcraft_engine::cmd::find_command(&resolved).filter(|spec| !spec.id.contains('.'))
+}
+
+/// The AutoComplete list for what is typed now (none while a command prompts).
+fn current_suggestions(app: &CadApp) -> Vec<Suggestion> {
+    if app.session.prompting() { Vec::new() } else { suggestions(&app.cmd.buffer, &app.cmd.usage) }
+}
+
+/// Which AutoComplete row is highlighted: the one the arrows moved to for this text, else the first.
+fn highlight_index(app: &CadApp, len: usize) -> usize {
+    let (i, text) = &app.cmd.highlight;
+    if *text == app.cmd.buffer && *i < len { *i } else { 0 }
+}
+
+/// The highlighted AutoComplete suggestion: what Tab completes and Enter runs.
+fn highlighted(app: &CadApp) -> Option<Suggestion> {
+    let mut sug = suggestions(&app.cmd.buffer, &app.cmd.usage);
+    let i = highlight_index(app, sug.len());
+    (i < sug.len()).then(|| sug.swap_remove(i))
+}
+
+/// Move the AutoComplete highlight by `step` rows. `false` when there is no list to move in, or
+/// Up is pressed on the first row (the arrows then browse the command history as before).
+fn suggestion_key(app: &mut CadApp, step: isize) -> bool {
+    if app.cmd.history_pos.is_some() {
+        return false;
+    }
+    let n = current_suggestions(app).len();
+    if n == 0 {
+        return false;
+    }
+    let i = highlight_index(app, n);
+    let next = match i.checked_add_signed(step) {
+        Some(next) if next < n => next,
+        Some(_) => n - 1,
+        None => return false,
+    };
+    app.cmd.highlight = (next, app.cmd.buffer.clone());
+    true
 }
 
 impl CmdLine {
@@ -389,6 +464,8 @@ pub fn keyboard(app: &mut CadApp, ctx: &egui::Context) {
                         app.cmd.buffer.pop();
                     }
                 }
+                Key::ArrowUp if !modifiers.any() && suggestion_key(app, -1) => {}
+                Key::ArrowDown if !modifiers.any() && suggestion_key(app, 1) => {}
                 Key::ArrowUp if !modifiers.any() && !app.cmd.history.is_empty() => {
                     let n = app.cmd.history.len();
                     let pos = app.cmd.history_pos.map(|p| p.saturating_sub(1)).unwrap_or(n - 1);
@@ -453,9 +530,36 @@ pub fn submit(app: &mut CadApp) {
         }
         return;
     }
-    // A partly typed command name runs the highlighted (first) AutoComplete suggestion.
-    let completion = if app.session.prompting() { None } else { suggestions(text.trim()).into_iter().next() };
-    app.cmdline_or(&text, completion.map(|s| s.id.to_ascii_lowercase()).as_deref());
+    if app.session.prompting() {
+        app.cmdline(&text);
+        return;
+    }
+    // The highlighted AutoComplete suggestion: the first one, or the one the arrows moved to.
+    let word = text.trim();
+    let mut sug = suggestions(word, &app.cmd.usage);
+    // (The buffer is taken by now: the highlight is checked against the text it held.)
+    let chosen = match &app.cmd.highlight {
+        (i, was) if *was == text && *i < sug.len() => *i,
+        _ => 0,
+    };
+    let top = (chosen < sug.len()).then(|| sug.swap_remove(chosen));
+    app.cmd.highlight = (0, String::new());
+    let typed = exact_command(text.split_whitespace().next().unwrap_or(""));
+    // A suggestion the arrows moved to, or one the learned ranking put above the alias typed
+    // exactly, is what Enter runs; a partly typed command name runs the highlighted suggestion.
+    let picked = top.as_ref().filter(|s| chosen > 0 || typed.is_some_and(|c| !c.id.eq_ignore_ascii_case(&s.id))).map(|s| s.id.to_ascii_lowercase());
+    let fallback = top.map(|s| s.id.to_ascii_lowercase());
+    let ran = match picked {
+        Some(id) => app.cmdline(&id).is_none().then_some(id),
+        None => match app.cmdline_or_ran(&text, fallback.as_deref()) {
+            Ok(true) => fallback,
+            Ok(false) => typed.map(|c| c.id.to_string()),
+            Err(_) => None,
+        },
+    };
+    if let Some(id) = ran {
+        app.cmd.usage.record(&id);
+    }
 }
 
 fn visible_lines(app: &CadApp, canvas: Rect, bar: Rect) -> usize {
@@ -641,7 +745,8 @@ pub fn show(app: &mut CadApp, ui: &mut egui::Ui, canvas: Rect) {
     );
     // AutoComplete list.
     if !app.session.prompting() {
-        let sug = suggestions(&app.cmd.buffer);
+        let sug = current_suggestions(app);
+        let lit = highlight_index(app, sug.len());
         if !sug.is_empty() {
             let rh = 20.0;
             let lr = Rect::from_min_size(
@@ -653,7 +758,7 @@ pub fn show(app: &mut CadApp, ui: &mut egui::Ui, canvas: Rect) {
             for (i, s) in sug.iter().enumerate() {
                 let r = Rect::from_min_size(pos2(lr.left(), lr.top() + rh * i as f32), vec2(lr.width(), rh));
                 let resp = ui.interact(r, ui.scope_id().with(("sug", i)), Sense::click());
-                if resp.hovered() || i == 0 {
+                if resp.hovered() || i == lit {
                     p.rect_filled(r.shrink(1.0), 2.0, if resp.hovered() { t.cmd_keyword_hover } else { t.list_row });
                 }
                 p.text(Pos2::new(r.left() + 8.0, r.center().y), egui::Align2::LEFT_CENTER, &s.display, crate::theme::body(), t.text);
@@ -666,7 +771,9 @@ pub fn show(app: &mut CadApp, ui: &mut egui::Ui, canvas: Rect) {
                 );
                 if resp.clicked() {
                     app.cmd.buffer.clear();
-                    app.start(&s.id.to_ascii_lowercase());
+                    let id = s.id.to_ascii_lowercase();
+                    app.start(&id);
+                    app.cmd.usage.record(&id);
                 }
             }
         }
@@ -703,7 +810,7 @@ fn zones(app: &CadApp, canvas: Rect, bar: Rect) -> Zones {
     let grip = Rect::from_min_max(pos2(bar.left(), top - 3.0), pos2(bar.right(), top + 3.0));
     let mut all = bar.union(grip);
     if !app.session.prompting() {
-        let k = suggestions(&app.cmd.buffer).len();
+        let k = current_suggestions(app).len();
         if k > 0 {
             all = all.union(Rect::from_min_size(pos2(bar.left(), bar.top() - 6.0 - 20.0 * k as f32 - above), vec2(bar.width(), 1.0)));
         }
@@ -1030,7 +1137,7 @@ mod autocomplete_tests {
 
     #[test]
     fn exact_alias_is_first_suggestion_with_alias_display() {
-        let rec = suggestions("rec");
+        let rec = suggestions("rec", &Default::default());
         assert!(!rec.is_empty());
         assert_eq!(rec[0].id, "RECTANG");
         assert_eq!(rec[0].display, "REC (RECTANG)");
@@ -1040,26 +1147,26 @@ mod autocomplete_tests {
         assert_eq!(rec[1].id, "RECOVER");
         assert_eq!(rec[1].display, "RECOVER");
 
-        let l = suggestions("l");
+        let l = suggestions("l", &Default::default());
         assert_eq!(l[0].id, "LINE");
         assert_eq!(l[0].display, "L (LINE)");
 
-        let c = suggestions("c");
+        let c = suggestions("c", &Default::default());
         assert_eq!(c[0].id, "CIRCLE");
         assert_eq!(c[0].display, "C (CIRCLE)");
 
-        let co = suggestions("co");
+        let co = suggestions("co", &Default::default());
         assert_eq!(co[0].id, "COPY");
         assert_eq!(co[0].display, "CO (COPY)");
     }
 
     #[test]
     fn prefix_without_alias_shows_command_id() {
-        let rect = suggestions("rect");
+        let rect = suggestions("rect", &Default::default());
         assert_eq!(rect[0].id, "RECTANG");
         assert_eq!(rect[0].display, "RECTANG");
 
-        let line = suggestions("line");
+        let line = suggestions("line", &Default::default());
         assert_eq!(line[0].id, "LINE");
         assert_eq!(line[0].display, "LINE");
     }
@@ -1105,5 +1212,134 @@ mod autocomplete_tests {
         submit(&mut app);
         assert!(app.session.running.is_none());
         assert!(app.session.log.iter().any(|l| l.contains("unknown command")), "{:?}", app.session.log);
+    }
+
+    fn ids(s: &[Suggestion]) -> Vec<&str> {
+        s.iter().map(|s| s.id.as_str()).collect()
+    }
+
+    fn running(app: &CadApp) -> Option<&str> {
+        app.session.running.as_ref().map(|r| r.id.as_str())
+    }
+
+    /// Type `text` and press Down `downs` times, then Enter; cancel what started.
+    fn pick(app: &mut CadApp, text: &str, downs: usize) -> Option<String> {
+        app.cmd.buffer = text.to_string();
+        for _ in 0..downs {
+            assert!(suggestion_key(app, 1), "Down moves in the list");
+        }
+        submit(app);
+        let ran = running(app).map(str::to_string);
+        app.session.cancel();
+        ran
+    }
+
+    #[test]
+    fn li_lists_line_above_list_once_line_is_used_more() {
+        let mut app = app();
+        let fresh = suggestions("li", &app.cmd.usage);
+        assert_eq!(fresh[0].id, "LIST", "LI is LIST's alias: {:?}", ids(&fresh));
+        let line = fresh.iter().position(|s| s.id == "LINE").unwrap_or(usize::MAX);
+        assert!(line > 0 && line < fresh.len(), "{:?}", ids(&fresh));
+        // Typing LI, Down to LINE and Enter: the arrows choose what Enter runs.
+        assert_eq!(pick(&mut app, "li", line).as_deref(), Some("line"));
+        // A few uses do not yet move LINE above the alias typed exactly...
+        assert_eq!(suggestions("li", &app.cmd.usage)[0].id, "LIST");
+        // (LINE has moved up: right under LIST.)
+        assert_eq!(suggestions("li", &app.cmd.usage)[1].id, "LINE");
+        for _ in 0..3 {
+            assert_eq!(pick(&mut app, "li", 1).as_deref(), Some("line"));
+        }
+        // ...but used more often than that, LINE lists first and Enter on LI runs it.
+        let learned = suggestions("li", &app.cmd.usage);
+        assert_eq!(ids(&learned)[..2], ["LINE", "LIST"], "{:?}", ids(&learned));
+        assert_eq!(pick(&mut app, "li", 0).as_deref(), Some("line"));
+        // LIST is still a Down away, and choosing it counts for it.
+        assert_eq!(pick(&mut app, "li", 1).as_deref(), Some("list"));
+        // A command name typed in full always runs that command.
+        assert_eq!(suggestions("list", &app.cmd.usage)[0].id, "LIST");
+    }
+
+    #[test]
+    fn uses_typed_in_any_form_count_and_fade() {
+        let mut app = app();
+        // L is LINE's alias: running LINE through it counts for LINE.
+        for _ in 0..5 {
+            assert_eq!(pick(&mut app, "l", 0).as_deref(), Some("line"));
+        }
+        assert!(app.cmd.usage.score("line") > 4.9);
+        assert_eq!(suggestions("li", &app.cmd.usage)[0].id, "LINE");
+        // Commands typed with their options count too, under their own name.
+        app.cmd.buffer = "circle 0,0 5".into();
+        submit(&mut app);
+        assert!(app.cmd.usage.score("circle") > 0.9);
+        // Much later, LINE's old uses have faded and LIST is back on top for LI.
+        for _ in 0..(3 * crate::cmd_usage::HALF_LIFE as usize) {
+            app.cmd.usage.record("pan");
+        }
+        assert_eq!(suggestions("li", &app.cmd.usage)[0].id, "LIST");
+    }
+
+    #[test]
+    fn learning_moves_a_command_into_the_shortened_list() {
+        let mut usage = crate::cmd_usage::Usage::default();
+        let all = matches("d");
+        assert!(all.len() > MAX_SUGGESTIONS, "D matches many commands");
+        let Some((last, _)) = all.last() else { return };
+        assert!(!ids(&suggestions("d", &usage)).contains(&last.id.as_str()));
+        usage.record(&last.id);
+        let learned = suggestions("d", &usage);
+        assert_eq!(learned.len(), MAX_SUGGESTIONS);
+        // Right after the alias typed exactly, if D is one; else first.
+        let at = usize::from(all.first().is_some_and(|(_, exact)| *exact));
+        assert_eq!(learned.get(at).map(|s| s.id.as_str()), Some(last.id.as_str()), "{:?}", ids(&learned));
+    }
+
+    #[test]
+    fn arrows_move_the_highlight_and_typing_resets_it() {
+        let mut app = app();
+        app.cmd.buffer = "re".into();
+        let n = current_suggestions(&app).len();
+        assert!(n > 2);
+        assert!(!suggestion_key(&mut app, -1), "Up on the first row is left to the history");
+        assert!(suggestion_key(&mut app, 1));
+        assert!(suggestion_key(&mut app, 1));
+        assert_eq!(highlight_index(&app, n), 2);
+        assert!(suggestion_key(&mut app, -1));
+        assert_eq!(highlight_index(&app, n), 1);
+        for _ in 0..20 {
+            suggestion_key(&mut app, 1);
+        }
+        assert_eq!(highlight_index(&app, n), n - 1, "Down stops on the last row");
+        let second = current_suggestions(&app).get(n - 1).map(|s| s.id.clone());
+        tab(&mut app);
+        assert_eq!(Some(app.cmd.buffer.clone()), second, "Tab completes the highlighted row");
+        app.cmd.buffer = "rec".into();
+        assert_eq!(highlight_index(&app, current_suggestions(&app).len()), 0, "new text starts at the first row");
+    }
+
+    #[test]
+    fn learned_order_is_kept_with_the_preferences_and_can_be_reset() {
+        let mut app = app();
+        for _ in 0..6 {
+            pick(&mut app, "line", 0);
+        }
+        let prefs = app.prefs_json();
+        let mut restarted = CadApp::new(draftcraft_engine::Session::empty(), crate::Services::default());
+        restarted.load_prefs(&prefs);
+        assert_eq!(restarted.cmd.usage, app.cmd.usage);
+        assert_eq!(suggestions("li", &restarted.cmd.usage)[0].id, "LINE");
+        // A corrupt stored value is ignored.
+        let mut corrupt = CadApp::new(draftcraft_engine::Session::empty(), crate::Services::default());
+        corrupt.load_prefs(r#"{"cmdlineUsage": {"clock": "soon", "commands": {"line": [1e308, 1]}}}"#);
+        assert!(corrupt.cmd.usage.is_empty());
+        corrupt.load_prefs(r#"{"cmdlineUsage": {"clock": 4, "commands": {"line": "often", "list": [2.0, 3]}}}"#);
+        assert_eq!(corrupt.cmd.usage.len(), 1);
+        assert_eq!(suggestions("li", &corrupt.cmd.usage)[0].id, "LIST");
+        // Reset: back to the unlearned order, and nothing is stored.
+        let r = crate::menus::run_ui_command(&mut restarted, "ui.cmdline.resetsuggestions", &serde_json::Value::Null);
+        assert_eq!(r, Some(Ok(serde_json::json!({ "forgotten": 1 }))));
+        assert_eq!(suggestions("li", &restarted.cmd.usage)[0].id, "LIST");
+        assert!(!restarted.prefs_json().contains("cmdlineUsage"));
     }
 }
