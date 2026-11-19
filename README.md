@@ -251,6 +251,8 @@ One click downloads the newest version from the [latest release](https://github.
 | macOS 11 or later | Disk image: [Apple silicon](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-macos-arm64.dmg) · [Intel](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-macos-x86_64.dmg) |
 | Linux (any distribution) | AppImage: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.AppImage) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.AppImage) |
 | Debian, Ubuntu 22.04 or later | .deb: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.deb) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.deb) |
+| Fedora, openSUSE, RHEL 10 | .rpm: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.rpm) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.rpm) |
+| Arch Linux, Manjaro, EndeavourOS | pacman package: [x86_64](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-x86_64.pkg.tar.zst) · [ARM64 (aarch64)](https://github.com/DraftCraft-DEV/DraftCraft/releases/latest/download/draftcraft-linux-aarch64.pkg.tar.zst) |
 
 The release page also has the macOS command-line tool on its own (`draftcraft-cli-macos-arm64.zip`,
 `draftcraft-cli-macos-x86_64.zip`) and
@@ -268,8 +270,10 @@ The release page also has the macOS command-line tool on its own (`draftcraft-cl
   the first time open it once, then **System Settings › Privacy & Security › Open Anyway** — or run
   `xattr -dr com.apple.quarantine /Applications/DraftCraft.app`. Finder then lists DraftCraft under
   **Open With** for `.dxf` and `.dwg` files.
-- **Linux** — install the `.deb` for your processor (`sudo apt install ./draftcraft-linux-x86_64.deb`, or
-  `…-aarch64.deb` on ARM): DraftCraft appears in the applications menu and in the file manager's **Open With**
+- **Linux** — install the package for your distribution and processor: the `.deb` on Debian and Ubuntu
+  (`sudo apt install ./draftcraft-linux-x86_64.deb`), the `.rpm` on Fedora, openSUSE and RHEL
+  (`sudo dnf install ./draftcraft-linux-x86_64.rpm`), the `.pkg.tar.zst` on Arch, Manjaro and EndeavourOS
+  (`sudo pacman -U draftcraft-linux-x86_64.pkg.tar.zst`); on ARM, take the `aarch64` file. DraftCraft appears in the applications menu and in the file manager's **Open With**
   for `.dxf` and `.dwg`. Or make the AppImage executable (`chmod +x draftcraft-linux-x86_64.AppImage`) and
   run it.
 

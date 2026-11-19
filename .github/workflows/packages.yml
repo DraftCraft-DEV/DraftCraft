@@ -1,7 +1,8 @@
 name: Packages
 
 # Builds every DraftCraft package: macOS (Apple silicon and Intel DMG and CLI zip), Windows (x64
-# and arm64 installer and zip) and Linux (x86_64 and aarch64 AppImage and .deb). Windows arm64 is
+# and arm64 installer and zip) and Linux (x86_64 and aarch64 AppImage, .deb, .rpm and
+# Arch Linux package). Windows arm64 is
 # cross-compiled on an x86_64 runner and macOS Intel on an Apple-silicon one; Linux aarch64 builds
 # on an ARM runner. The files carry no version in their
 # names, so releases/latest/download/<name> always gives the newest.
@@ -98,8 +99,10 @@ jobs:
           mkdir -p dist/upload
           # ARCH (from the matrix) picks appimagetool and the AppImage runtime for this processor.
           packaging/linux/appimage.sh "target/$TARGET/release" "dist/upload/draftcraft-linux-$ARCH.AppImage"
-          DIST="$PWD/dist/deb" packaging/linux/package.sh --skip-build --target "$TARGET" --formats deb
+          DIST="$PWD/dist/deb" packaging/linux/package.sh --skip-build --target "$TARGET" --formats "deb rpm archlinux"
           cp dist/deb/draftcraft-*-linux-"$ARCH".deb "dist/upload/draftcraft-linux-$ARCH.deb"
+          cp dist/deb/draftcraft-*-linux-"$ARCH".rpm "dist/upload/draftcraft-linux-$ARCH.rpm"
+          cp dist/deb/draftcraft-*-linux-"$ARCH".pkg.tar.zst "dist/upload/draftcraft-linux-$ARCH.pkg.tar.zst"
           ls -l dist/upload
       - name: Check the .deb
         run: |
@@ -125,6 +128,39 @@ jobs:
           fi
           # The AppImage starts its CLI (extracted: CI runners have no FUSE).
           APPIMAGE_EXTRACT_AND_RUN=1 "dist/upload/draftcraft-linux-$ARCH.AppImage" cli --version
+      - name: Check the .rpm on Fedora
+        run: |
+          set -euo pipefail
+          # A real install with dnf, which pulls the package's dependencies from Fedora's repositories.
+          docker run --rm -v "$PWD/dist/upload:/pkg:ro" -e ARCH fedora:41 bash -euxc '
+            dnf install -y --setopt=install_weak_deps=False "/pkg/draftcraft-linux-$ARCH.rpm"
+            test "$(rpm -q --qf "%{ARCH}" draftcraft)" = "$ARCH"
+            test -x /usr/bin/draftcraft
+            test -f /usr/share/applications/dev.skryx.draftcraft.desktop
+            test -f /usr/share/mime/packages/dev.skryx.draftcraft.xml
+            test -f /usr/share/icons/hicolor/256x256/apps/dev.skryx.draftcraft.png
+            draftcraft-cli --version
+            dnf remove -y draftcraft
+            test ! -e /usr/bin/draftcraft
+          '
+      - name: Check the Arch Linux package
+        # Arch's official image is x86_64 only.
+        if: matrix.arch == 'x86_64'
+        run: |
+          set -euo pipefail
+          # pacman -U installs the file and pulls its dependencies from Arch's repositories.
+          docker run --rm -v "$PWD/dist/upload:/pkg:ro" archlinux:latest bash -euxc '
+            pacman -Syu --noconfirm
+            pacman -U --noconfirm /pkg/draftcraft-linux-x86_64.pkg.tar.zst
+            pacman -Qi draftcraft
+            test -x /usr/bin/draftcraft
+            test -f /usr/share/applications/dev.skryx.draftcraft.desktop
+            test -f /usr/share/mime/packages/dev.skryx.draftcraft.xml
+            test -f /usr/share/icons/hicolor/256x256/apps/dev.skryx.draftcraft.png
+            draftcraft-cli --version
+            pacman -R --noconfirm draftcraft
+            test ! -e /usr/bin/draftcraft
+          '
       - uses: actions/upload-artifact@v4
         with:
           name: linux-${{ matrix.arch }}

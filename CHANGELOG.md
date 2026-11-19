@@ -13,18 +13,15 @@ How to write it (see AGENTS.md):
 
 ## 2.2.2
 
-### Improved
-- The DraftCraft logo with its name no longer sits beside the menu bar: the application button already is the logo, so the menus (File, Edit …) start at the left edge.
-
-## 2.2.1
-
 ### New
 - DraftCraft starts on the Start page, as AutoCAD does: begin a new drawing in Metric (millimeters) or Imperial (inches), open a drawing or the sample, and choose your workspace. Your choice of units is remembered for the next New.
+- Linux packages for Fedora, openSUSE and RHEL (.rpm) and for Arch Linux, Manjaro and EndeavourOS (a pacman package), for x86_64 and ARM64: DraftCraft appears in the applications menu and opens .dxf and .dwg files.
 
 ### Improved
-- The About window says DraftCraft and its logo are trademarks of DraftCraft Engineering Ventures, the organization that makes DraftCraft.
 - The status bar shows the drawing's unit as well as its format (for example "mm · Decimal" or "in · Architectural"), and its menu switches between millimeters, centimeters, meters, inches, feet and unitless.
-- The window title shows the DraftCraft version with the drawing's name, for example "DraftCraft 2.2.1   Plan.dwg".
+- The window title shows the DraftCraft version with the drawing's name, for example "DraftCraft 2.2.2   Plan.dwg".
+- The DraftCraft logo with its name no longer sits beside the menu bar: the application button already is the logo, so the menus (File, Edit …) start at the left edge.
+- The About window says DraftCraft and its logo are trademarks of DraftCraft Engineering Ventures, the organization that makes DraftCraft.
 
 ### Fixed
 - The diameter sign (%%c) no longer shows as a box in text that uses a TrueType font such as Arial: it draws as the font's own Ø.

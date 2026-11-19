@@ -1,7 +1,7 @@
 # DraftCraft roadmap
 
 DraftCraft **2.2.0** is out for Windows (x64 and ARM64, installer or zip), macOS (Apple silicon and
-Intel) and Linux (x86_64 and ARM64, AppImage or .deb), and in the browser. It is a young project: good
+Intel) and Linux (x86_64 and ARM64: AppImage, .deb, .rpm or Arch package), and in the browser. It is a young project: good
 for 2D drafting, dimensioning and plotting, with DWG and DXF read and written by its own code, and still
 missing parts of what a full CAD suite does. This page says what works today, what is known to be
 missing and what comes next.
