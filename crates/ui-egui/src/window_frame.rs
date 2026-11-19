@@ -1,6 +1,7 @@
 //! DraftCraft's own window frame, as Windows CAD programs draw theirs. The desktop's title bar is
-//! turned off and DraftCraft draws one row in its place: the logo, the name, the menu bar (File,
-//! Edit, View … Help) and the minimize, maximize and close buttons. Its empty part moves the
+//! turned off and DraftCraft draws one row in its place: the menu bar (File, Edit, View … Help)
+//! and the minimize, maximize and close buttons. No logo there: the application button under it
+//! already is the DraftCraft logo. Its empty part moves the
 //! window (a double-click maximizes it), and the window's edges and corners resize it. The menu
 //! bar no longer needs a row of its own under the ribbon.
 //!
@@ -16,8 +17,8 @@ use crate::theme::Tokens;
 /// Height of the title bar row.
 pub const TITLE_H: f32 = 30.0;
 
-/// Height of the full logo (icon and wordmark) in the title bar, in points.
-const LOGO_H: f32 = 24.0;
+/// The menu bar's distance from the window's left edge.
+pub const MENU_INSET: f32 = 6.0;
 /// Width of each window button, as Windows draws them.
 const BUTTON_W: f32 = 46.0;
 /// How far in from the window's edge a press resizes it.
@@ -59,7 +60,7 @@ enum Caption {
     Close,
 }
 
-/// The title bar row: logo, name, menu bar, the empty part that moves the window, window buttons.
+/// The title bar row: menu bar, the empty part that moves the window, window buttons.
 pub fn title_bar(app: &mut CadApp, ui: &mut egui::Ui) {
     let t = Tokens::get();
     let mut clicked = None;
@@ -70,11 +71,8 @@ pub fn title_bar(app: &mut CadApp, ui: &mut egui::Ui) {
         // First, so the controls drawn over it keep their own clicks.
         let title = crate::chrome::window_title(app);
         craft_window::title_bar::empty_area(ui, free).on_hover_text(title.clone());
-        let p = ui.painter().clone();
-        let logo_left = r.left() + 8.0;
-        let logo_w = crate::brand::paint_full(&p, logo_left, r.center().y, LOGO_H, t.chrome_dark);
         if app.ui.in_window_menu {
-            let menus = Rect::from_min_max(pos2(logo_left + logo_w + 12.0, r.top()), pos2(free.right(), r.bottom()));
+            let menus = Rect::from_min_max(pos2(r.left() + MENU_INSET, r.top()), pos2(free.right(), r.bottom()));
             ui.scope_builder(egui::UiBuilder::new().max_rect(menus).layout(egui::Layout::left_to_right(egui::Align::Center)), |ui| {
                 ui.set_clip_rect(menus);
                 clicked = crate::menus::menu_titles(app, ui);

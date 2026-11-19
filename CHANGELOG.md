@@ -11,6 +11,11 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+## 2.2.2
+
+### Improved
+- The DraftCraft logo with its name no longer sits beside the menu bar: the application button already is the logo, so the menus (File, Edit …) start at the left edge.
+
 ## 2.2.1
 
 ### New

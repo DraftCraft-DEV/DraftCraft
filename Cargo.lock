@@ -1196,7 +1196,7 @@ checksum = "d8b14ccef22fc6f5a8f4d7d768562a182c04ce9a3b3157b91390b52ddfdf1a76"
 
 [[package]]
 name = "draftcraft"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "chrono",
  "clap",
@@ -1226,7 +1226,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-cli"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "clap",
  "clap_complete",
@@ -1242,14 +1242,14 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-color"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "serde",
 ]
 
 [[package]]
 name = "draftcraft-constraints"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "draftcraft-doc",
  "draftcraft-geom",
@@ -1259,7 +1259,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-doc"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "draftcraft-color",
  "draftcraft-geom",
@@ -1270,14 +1270,14 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-dwg"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "chrono",
 ]
 
 [[package]]
 name = "draftcraft-dxf"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "encoding_rs",
  "log",
@@ -1286,7 +1286,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-engine"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "craft-docpath",
  "draftcraft-color",
@@ -1310,7 +1310,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-fonts"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "draftcraft-geom",
  "encoding_rs",
@@ -1322,14 +1322,14 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-geom"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "serde",
 ]
 
 [[package]]
 name = "draftcraft-io"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "chrono",
  "craft-pdf",
@@ -1352,7 +1352,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-mcp"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "clap",
  "draftcraft-engine",
@@ -1366,7 +1366,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-render"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "draftcraft-color",
  "draftcraft-doc",
@@ -1380,7 +1380,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-setup"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "rfd",
  "winresource",
@@ -1388,7 +1388,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-ui-egui"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "chrono",
  "craft-ui",
@@ -1416,7 +1416,7 @@ dependencies = [
 
 [[package]]
 name = "draftcraft-web"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "craft-web-host",
  "draftcraft-engine",
@@ -6151,7 +6151,7 @@ checksum = "9440ea3e5aeabb0ac63af70daf835274065238cdd0cec83418f417eae38bacee"
 
 [[package]]
 name = "xtask"
-version = "2.2.1"
+version = "2.2.2"
 dependencies = [
  "chrono",
  "serde_json",
