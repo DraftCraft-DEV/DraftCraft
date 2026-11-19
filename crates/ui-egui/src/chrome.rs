@@ -374,6 +374,17 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
     });
 }
 
+/// The window's title, as AutoCAD's names its version and the drawing: "DraftCraft 2.2.0   Start"
+/// on the Start page, "DraftCraft 2.2.0   Plan.dwg" with a drawing open (".dwg" added to an
+/// unsaved drawing's name). The ribbon's title row and the desktop's title bar both show it.
+pub fn window_title(app: &CadApp) -> String {
+    let product = format!("DraftCraft {}", env!("CARGO_PKG_VERSION"));
+    match app.session.state() {
+        Ok(st) if !app.ui.start_tab => format!("{product}   {}{}", st.title, if st.title.contains('.') { "" } else { ".dwg" }),
+        _ => format!("{product}   {}", crate::tl!("Start")),
+    }
+}
+
 /// The Start page (no drawing open, or the Start tab).
 pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     let t = Tokens::get();
@@ -382,33 +393,95 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     let left = Rect::from_min_size(r.min, vec2(300.0, r.height()));
     p.rect_filled(left, 0.0, t.chrome_dark);
     p.rect_filled(Rect::from_min_max(pos2(left.right(), r.top()), r.max), 0.0, t.chrome);
-    // The DraftCraft logo beside the name and version.
-    crate::brand::paint(&p, Rect::from_min_size(pos2(left.left() + 30.0, left.top() + 56.0), vec2(56.0, 56.0)));
+    // The DraftCraft logo beside the name, and the version under it where it is easy to read.
+    crate::brand::paint(&p, Rect::from_min_size(pos2(left.left() + 30.0, left.top() + 44.0), vec2(56.0, 56.0)));
     p.text(
-        pos2(left.left() + 98.0, left.top() + 70.0),
+        pos2(left.left() + 98.0, left.top() + 60.0),
         egui::Align2::LEFT_CENTER,
         crate::tl!("DraftCraft"),
         egui::FontId::proportional(28.0),
         t.text,
     );
     p.text(
-        pos2(left.left() + 98.0, left.top() + 98.0),
+        pos2(left.left() + 99.0, left.top() + 88.0),
         egui::Align2::LEFT_CENTER,
         crate::tf!("Version {version}", version = env!("CARGO_PKG_VERSION")),
-        crate::theme::small(),
-        t.text_faint,
+        crate::theme::body(),
+        t.text_dim,
     );
-    let mut y = left.top() + 140.0;
     let mut action = None;
-    for (label, cmd) in [("Open...", "open"), ("New", "new"), ("New (metric)", "new.metric"), ("Open sample drawing", "sample")] {
-        let br = Rect::from_min_size(pos2(left.left() + 34.0, y), vec2(220.0, 34.0));
+    let x = left.left() + 34.0;
+    let heading = |y: f32, text: &str| {
+        p.text(pos2(x, y), egui::Align2::LEFT_TOP, text, crate::theme::small(), t.text_faint);
+    };
+    // New drawing: metric or imperial, as AutoCAD's two starting templates (acadiso, acad). The
+    // one picked is remembered (MEASUREINIT) for a plain New, and is outlined here.
+    let mut y = left.top() + 128.0;
+    heading(y, crate::tl!("NEW DRAWING"));
+    y += 20.0;
+    let metric_default = app.session.settings.measureinit;
+    for (metric, title, sub, cmd) in [(true, "Metric", "Millimeters", "new.metric"), (false, "Imperial", "Inches", "new.imperial")] {
+        let br = Rect::from_min_size(pos2(x, y), vec2(232.0, 48.0));
         let resp = ui.interact(br, ui.scope_id().with(("start", cmd)), Sense::click());
-        p.rect_stroke(br, 2.0, Stroke::new(1.0, if resp.hovered() { t.text } else { t.text_dim }), egui::StrokeKind::Inside);
+        let current = metric == metric_default;
+        if resp.hovered() {
+            p.rect_filled(br, 4.0, t.control_hover.gamma_multiply(0.5));
+        }
+        let edge = if current {
+            t.accent
+        } else if resp.hovered() {
+            t.text
+        } else {
+            t.text_dim
+        };
+        p.rect_stroke(br, 4.0, Stroke::new(if current { 1.5 } else { 1.0 }, edge), egui::StrokeKind::Inside);
+        p.text(pos2(br.left() + 16.0, br.top() + 16.0), egui::Align2::LEFT_CENTER, crate::i18n::t(title), crate::theme::body(), t.text);
+        p.text(pos2(br.left() + 16.0, br.top() + 34.0), egui::Align2::LEFT_CENTER, crate::i18n::t(sub), crate::theme::small(), t.text_dim);
+        let tip = if metric { crate::tl!("A new drawing in millimeters") } else { crate::tl!("A new drawing in inches") };
+        if resp.on_hover_text(tip).clicked() {
+            action = Some(cmd);
+        }
+        y += 56.0;
+    }
+    y += 12.0;
+    heading(y, crate::tl!("OPEN"));
+    y += 20.0;
+    for (label, cmd) in [("Open...", "open"), ("Open sample drawing", "sample")] {
+        let br = Rect::from_min_size(pos2(x, y), vec2(232.0, 34.0));
+        let resp = ui.interact(br, ui.scope_id().with(("start", cmd)), Sense::click());
+        if resp.hovered() {
+            p.rect_filled(br, 4.0, t.control_hover.gamma_multiply(0.5));
+        }
+        p.rect_stroke(br, 4.0, Stroke::new(1.0, if resp.hovered() { t.text } else { t.text_dim }), egui::StrokeKind::Inside);
         p.text(pos2(br.left() + 16.0, br.center().y), egui::Align2::LEFT_CENTER, crate::i18n::t(label), crate::theme::body(), t.text);
         if resp.clicked() {
             action = Some(cmd);
         }
-        y += 44.0;
+        y += 42.0;
+    }
+    // The workspace: the interface layout the drawing opens in, as AutoCAD's workspace switch.
+    y += 12.0;
+    heading(y, crate::tl!("WORKSPACE"));
+    y += 20.0;
+    let names = crate::workspaces::names(app);
+    let current = crate::workspaces::current(app);
+    let mut chosen = None;
+    let wr = Rect::from_min_size(pos2(x, y), vec2(232.0, 28.0));
+    ui.scope_builder(egui::UiBuilder::new().max_rect(wr), |ui| {
+        let combo = craft_ui::ComboBox::from_id_salt("start_workspace").width(232.0).selected_text(current.clone()).show_ui(ui, |ui| {
+            for n in &names {
+                if ui.selectable_label(*n == current, n).clicked() {
+                    chosen = Some(n.clone());
+                }
+            }
+        });
+        let name = crate::i18n::t("Workspace").to_string();
+        combo.response.widget_info(|| egui::WidgetInfo::labeled(egui::Role::ComboBox, true, &name));
+    });
+    if let Some(name) = chosen
+        && let Err(e) = crate::workspaces::set_current(app, &name)
+    {
+        app.status = Some((e, crate::now_ms()));
     }
     let main = Rect::from_min_max(pos2(left.right() + 36.0, r.top() + 40.0), r.max);
     p.text(main.min, egui::Align2::LEFT_TOP, crate::tl!("Recent"), egui::FontId::proportional(22.0), t.text);
@@ -449,13 +522,10 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     }
     match action {
         Some("open") => app.start("ui.open"),
-        Some("new") => {
-            app.start("new");
-            app.ui.start_tab = false;
-        }
-        Some("new.metric") => {
-            let _ = app.run("new", json!({ "metric": true }));
-            app.ui.start_tab = false;
+        Some(cmd @ ("new.metric" | "new.imperial")) => {
+            if let Err(e) = start_new(app, cmd == "new.metric") {
+                app.status = Some((e, crate::now_ms()));
+            }
         }
         Some("sample") => {
             app.start("ui.sample");
@@ -464,9 +534,44 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     }
 }
 
+/// The Start page's New: remember metric or imperial for later plain News (MEASUREINIT, as
+/// AutoCAD keeps the last template), then open a new drawing in it.
+pub(crate) fn start_new(app: &mut CadApp, metric: bool) -> Result<(), String> {
+    // New first: SETVAR needs a drawing open, and the Start page may have none.
+    app.run("new", json!({ "metric": metric }))?;
+    app.run("setvar", json!({ "name": "MEASUREINIT", "value": i32::from(metric) }))?;
+    app.ui.start_tab = false;
+    Ok(())
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
+
+    #[test]
+    fn the_window_title_names_the_version_and_the_drawing() {
+        let v = env!("CARGO_PKG_VERSION");
+        let mut app = CadApp::new(draftcraft_engine::Session::new(), crate::Services::default());
+        app.ui.start_tab = true;
+        assert_eq!(window_title(&app), format!("DraftCraft {v}   Start"));
+        app.ui.start_tab = false;
+        let name = app.session.state().map(|s| s.title.clone()).unwrap_or_default();
+        assert!(!name.is_empty());
+        assert_eq!(window_title(&app), format!("DraftCraft {v}   {name}.dwg"));
+    }
+
+    #[test]
+    fn the_start_page_new_drawing_is_in_the_chosen_units_and_remembers_them() {
+        // As the desktop app starts: on the Start page, with no drawing open.
+        let mut app = CadApp::new(draftcraft_engine::Session::empty(), crate::Services::default());
+        app.ui.start_tab = true;
+        start_new(&mut app, false).unwrap();
+        assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 1, "imperial is inches");
+        assert!(!app.session.settings.measureinit);
+        start_new(&mut app, true).unwrap();
+        assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 4, "metric is millimeters");
+        assert!(app.session.settings.measureinit, "a later plain New stays metric");
+    }
 
     #[test]
     fn layout_tabs_that_do_not_fit_keep_the_current_one() {

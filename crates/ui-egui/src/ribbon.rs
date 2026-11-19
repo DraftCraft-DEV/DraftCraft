@@ -1251,10 +1251,7 @@ fn app_bar(app: &mut CadApp, ui: &mut egui::Ui, bar: Rect, out: &mut Out) {
         ui.data_mut(|d| d.insert_temp(id, scratch));
     }
     // Window title, centred, between the toolbar and the search box.
-    let title = match app.session.state() {
-        Ok(st) if !app.ui.start_tab => format!("DraftCraft   {}{}", st.title, if st.title.contains('.') { "" } else { ".dwg" }),
-        _ => format!("DraftCraft   {}", crate::tl!("Start")),
-    };
+    let title = crate::chrome::window_title(app);
     let galley = p.layout_no_wrap(title, FontId::proportional(13.0), t.text);
     let right_limit = if sr.left() > qat_end + 120.0 { sr.left() - 10.0 } else { bar.right() - 8.0 };
     let tx = (bar.center().x - galley.size().x / 2.0).max(qat_end);

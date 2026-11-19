@@ -471,9 +471,9 @@ fn main() -> eframe::Result {
                 app.open_path(f);
             }
             if app.session.docs.is_empty() {
-                // In the units the profile asks for (MEASUREINIT, restored above).
-                let metric = app.session.settings.measureinit;
-                app.session.new_drawing(metric);
+                // Nothing to open: start on the Start page, as AutoCAD does, where a new drawing
+                // is begun in metric or imperial units and the workspace is chosen.
+                app.ui.start_tab = true;
             }
             let ctx = cc.egui_ctx.clone();
             let desktop_theme = desktop_theme::DesktopTheme::start(move || ctx.request_repaint());

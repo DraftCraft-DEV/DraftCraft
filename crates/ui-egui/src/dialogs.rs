@@ -202,7 +202,7 @@ const LENGTH_TYPES: [(i64, &str); 5] = crate::chrome::units::LENGTH_FORMATS;
 /// AUNITS values.
 const ANGLE_TYPES: [(i64, &str); 5] = [(0, "Decimal Degrees"), (1, "Deg/Min/Sec"), (2, "Grads"), (3, "Radians"), (4, "Surveyor's Units")];
 /// INSUNITS names, indexed by value (DXF Reference, header group code 70).
-const INSERTION_UNITS: [&str; 25] = [
+pub(crate) const INSERTION_UNITS: [&str; 25] = [
     "Unitless",
     "Inches",
     "Feet",

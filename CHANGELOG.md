@@ -11,8 +11,18 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+## 2.2.1
+
+### New
+- DraftCraft starts on the Start page, as AutoCAD does: begin a new drawing in Metric (millimeters) or Imperial (inches), open a drawing or the sample, and choose your workspace. Your choice of units is remembered for the next New.
+
 ### Improved
 - The About window says DraftCraft and its logo are trademarks of DraftCraft Engineering Ventures, the organization that makes DraftCraft.
+- The status bar shows the drawing's unit as well as its format (for example "mm · Decimal" or "in · Architectural"), and its menu switches between millimeters, centimeters, meters, inches, feet and unitless.
+- The window title shows the DraftCraft version with the drawing's name, for example "DraftCraft 2.2.1   Plan.dwg".
+
+### Fixed
+- The diameter sign (%%c) no longer shows as a box in text that uses a TrueType font such as Arial: it draws as the font's own Ø.
 
 ## 2.2.0
 

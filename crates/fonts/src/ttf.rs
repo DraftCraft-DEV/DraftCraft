@@ -1125,11 +1125,25 @@ pub(crate) fn fallback_glyph(c: char) -> Option<Arc<GlyphOutline>> {
     Some(glyph(&f, c)).filter(|g| g.mapped)
 }
 
-/// The glyph of `c` in `face`, or from a fallback font when `face` lacks it.
+/// Characters that draw the same sign as `c` in fonts that lack `c`, best first. The diameter
+/// sign (⌀, U+2300, what `%%c` decodes to) is in almost no TrueType font, while nearly all have
+/// Ø (U+00D8), which drafting uses for it; ∅ (U+2205) is the next best.
+fn look_alikes(c: char) -> &'static [char] {
+    match c {
+        '\u{2300}' => &['\u{00D8}', '\u{2205}'],
+        _ => &[],
+    }
+}
+
+/// The glyph of `c` in `face`; when `face` lacks it, a look-alike in the same face (so the sign
+/// matches the text around it), then `c` from a fallback font. Only then the missing-glyph box.
 fn glyph_or_fallback(face: &Face, c: char) -> Arc<GlyphOutline> {
     let g = glyph(face, c);
     if g.mapped || c.is_whitespace() {
         return g;
+    }
+    if let Some(alike) = look_alikes(c).iter().map(|&a| glyph(face, a)).find(|a| a.mapped) {
+        return alike;
     }
     fallback_glyph(c).unwrap_or(g)
 }

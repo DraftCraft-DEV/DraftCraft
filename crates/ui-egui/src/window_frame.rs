@@ -40,6 +40,17 @@ pub fn draws_own_frame_here() -> bool {
     draws_own_frame(std::env::var("DRAFTCRAFT_TITLEBAR").ok().as_deref())
 }
 
+/// Keep the desktop's window title (macOS, Linux, a system frame) the same as [`crate::chrome::window_title`].
+/// Sent only when it changes.
+pub fn sync_os_title(app: &CadApp, ctx: &egui::Context) {
+    let title = crate::chrome::window_title(app);
+    let id = egui::Id::unique("draftcraft_os_window_title");
+    if ctx.data(|d| d.get_temp::<String>(id)).as_deref() != Some(title.as_str()) {
+        ctx.send_viewport_cmd(ViewportCommand::Title(title.clone()));
+        ctx.data_mut(|d| d.insert_temp(id, title));
+    }
+}
+
 /// The window buttons, left to right.
 #[derive(Clone, Copy, Debug, PartialEq, Eq)]
 enum Caption {
@@ -57,7 +68,8 @@ pub fn title_bar(app: &mut CadApp, ui: &mut egui::Ui) {
         let buttons = Rect::from_min_max(pos2(r.right() - BUTTON_W * 3.0, r.top()), r.max);
         let free = Rect::from_min_max(r.min, pos2(buttons.left(), r.bottom()));
         // First, so the controls drawn over it keep their own clicks.
-        craft_window::title_bar::empty_area(ui, free).on_hover_text("DraftCraft");
+        let title = crate::chrome::window_title(app);
+        craft_window::title_bar::empty_area(ui, free).on_hover_text(title.clone());
         let p = ui.painter().clone();
         let logo_left = r.left() + 8.0;
         let logo_w = crate::brand::paint_full(&p, logo_left, r.center().y, LOGO_H, t.chrome_dark);

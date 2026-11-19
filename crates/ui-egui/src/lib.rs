@@ -759,6 +759,8 @@ impl CadApp {
         if ctx.current_pass_index() != 0 {
             return;
         }
+        #[cfg(not(target_arch = "wasm32"))]
+        window_frame::sync_os_title(self, ctx);
         if self.restore_modifiers.is_some() {
             ctx.request_repaint();
         }

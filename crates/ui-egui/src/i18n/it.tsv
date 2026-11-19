@@ -1672,3 +1672,15 @@ menu	Workspaces	Aree di lavoro
 	Total Area	Area totale
 	Specify point to place the totals as text	Specificare il punto in cui inserire i totali come testo
 	Rho	Rho
+	Unit	Unità
+	Drawing units: {unit}, {format}	Unità del disegno: {unit}, {format}
+	NEW DRAWING	NUOVO DISEGNO
+	OPEN	APRI
+	WORKSPACE	AREA DI LAVORO
+	Metric	Metrico
+	Imperial	Imperiale
+	Millimeters	Millimetri
+	Inches	Pollici
+	A new drawing in millimeters	Un nuovo disegno in millimetri
+	A new drawing in inches	Un nuovo disegno in pollici
+	Unitless	Senza unità
