@@ -344,7 +344,9 @@ fn about(ctx: &egui::Context, open: &mut bool) {
             ui.add_space(6.0);
             ui.label(RichText::new(crate::tl!("MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.")).small().color(t.text_faint));
             ui.label(
-                RichText::new(crate::tl!("DraftCraft and the DraftCraft logo are trademarks of WithShalom Studios.")).small().color(t.text_faint),
+                RichText::new(crate::tl!("DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures."))
+                    .small()
+                    .color(t.text_faint),
             );
         });
 }

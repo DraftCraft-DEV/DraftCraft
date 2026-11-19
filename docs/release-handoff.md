@@ -1,6 +1,6 @@
 # Release handoff: main after the 3D split (2026-11-18)
 
-**For:** SkryxDev. **From:** Sophie (Claude Code), for Shalom (`withshalom`).
+**For:** SkryxDev. **From:** Sophie (Claude Code), for WithShalom Studios (`withshalom`).
 
 > **Done (2026-11-18):** main was released as **2.2.0**, the `## 3.0.0` and `## Unreleased` notes merged
 > into its section. The update check now names `DraftCraft-DEV/DraftCraft` (since the repository moved,

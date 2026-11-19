@@ -11,6 +11,9 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### Improved
+- The About window says DraftCraft and its logo are trademarks of DraftCraft Engineering Ventures, the organization that makes DraftCraft.
+
 ## 2.2.0
 
 ### New

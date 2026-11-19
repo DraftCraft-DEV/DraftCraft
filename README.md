@@ -323,8 +323,8 @@ Pull requests are welcome too: fork the repository, make your change on a branch
 
 ## Made by
 
-DraftCraft™ is made together by **[SkryxDev](https://github.com/SkryxDev)** and
-**[WithShalom Studios](https://github.com/withshalom)**. SkryxDev built the program as RustDraft (versions 1.0 and
+DraftCraft™ is made by **[DraftCraft Engineering Ventures](https://github.com/DraftCraft-DEV)**:
+**[SkryxDev](https://github.com/SkryxDev)** and **[WithShalom Studios](https://github.com/withshalom)** together. SkryxDev built the program as RustDraft (versions 1.0 and
 1.1): the Windows-style ribbon, CONIC's conic arcs and DWG files that AutoCAD opens. WithShalom Studios brought the
 DraftCraft name and its work toward native, lossless DWG, which joins the main build as it lands. Both started from
 [CADCraft](https://github.com/storytold/cadcraft) by the ArtCraft Team and the CADCraft contributors, credited in
@@ -336,8 +336,9 @@ DraftCraft is dual-licensed under the [MIT License](LICENSE-MIT) or the [Apache 
 at your option; the copyright notices are in [LICENSE-MIT](LICENSE-MIT) and [NOTICE](NOTICE). Bundled fonts
 and other asset files keep their own open licences, listed in [ATTRIBUTION.md](ATTRIBUTION.md).
 
-DraftCraft™, the DraftCraft logo and the DraftCraft app icon were created by WithShalom Studios, which first
-claimed DraftCraft as its trademark; they are WithShalom Studios' trademarks, used in this project by agreement.
+DraftCraft™, the DraftCraft logo and the DraftCraft app icon are trademarks of DraftCraft Engineering Ventures.
+WithShalom Studios created them, first claimed DraftCraft as its trademark, and assigned it to DraftCraft
+Engineering Ventures on 19 November 2026 ([the record](docs/brand/trademark-assignment.md)).
 The licences above cover the code, not the name, the logo or the icon: you may fork and redistribute the code,
 but a modified version must not be presented as DraftCraft. The full terms are in
 [docs/brand/LICENSE-brand.txt](docs/brand/LICENSE-brand.txt).
@@ -356,21 +357,26 @@ The marks
     drafting grid (assets/app-icon/, including assets/app-icon/src/draftcraft-icon.svg and
     assets/app-icon/src/draftcraft-icon-macos.svg).
 
+Owner
+  DraftCraft™, the DraftCraft logo and the DraftCraft app icon are trademarks of DraftCraft
+  Engineering Ventures (https://github.com/DraftCraft-DEV), the organization that makes DraftCraft.
+  The ™ sign marks a claimed trademark; it is not a registration.
+
 Origin
-  The DraftCraft name, the logo and the app icon were created by WithShalom Studios, which first used
-  them and first claimed DraftCraft as its trademark, for its drafting application at
-  https://github.com/withshalom/draftcraft (2026). DraftCraft™ and the DraftCraft logo are trademarks
-  of WithShalom Studios. The ™ sign marks a claimed trademark; it is not a registration.
+  WithShalom Studios created the name, the logo and the app icon, first used them and first claimed
+  DraftCraft as its trademark, for its drafting application at https://github.com/withshalom/draftcraft
+  (2026). On 19 November 2026 WithShalom Studios assigned its claimed trademark, with the goodwill
+  that goes with it, to DraftCraft Engineering Ventures. The record of the assignment is
+  docs/brand/trademark-assignment.md.
 
 Use in this repository
-  WithShalom Studios lets this repository (https://github.com/DraftCraft-DEV/DraftCraft, formerly
-  https://github.com/SkryxDev/RustDraft, under whatever name it later carries) and its maintainer,
-  SkryxDev, use the marks for the application developed here, which SkryxDev and WithShalom Studios
-  develop together. SkryxDev made the program, released as RustDraft (versions 1.0 and 1.1); from
-  version 2.0 it carries the DraftCraft name, logo and app icon by this agreement. SkryxDev keeps the
-  credit for RustDraft and for his work in DraftCraft; the marks stay WithShalom Studios'.
-  WithShalom Studios may end or change this permission; the code itself stays under its open-source
-  licence either way.
+  DraftCraft Engineering Ventures uses the marks for the application developed in this repository
+  (https://github.com/DraftCraft-DEV/DraftCraft, formerly https://github.com/SkryxDev/RustDraft, under
+  whatever name it later carries). SkryxDev made the program, released as RustDraft (versions 1.0 and
+  1.1); from version 2.0 it carries the DraftCraft name, logo and app icon. SkryxDev keeps the credit
+  for RustDraft and for his work in DraftCraft, and WithShalom Studios keeps the credit for creating
+  the name, the logo and the app icon. DraftCraft Engineering Ventures decides which of its other
+  projects may use the marks; the code stays under its open-source licence either way.
 
 What the code licence covers
   The source code and the files in this repository are licensed under the MIT License or the Apache
@@ -381,11 +387,12 @@ What the code licence covers
 Forks and redistribution
   You may fork, modify and redistribute the code under its licence. A modified version or a fork
   must not be presented as DraftCraft or with the DraftCraft logo or app icon, and must not suggest
-  that WithShalom Studios made, endorsed or supports it, unless WithShalom Studios agrees in writing.
-  You may say truthfully that your work is based on or compatible with DraftCraft.
+  that DraftCraft Engineering Ventures made, endorsed or supports it, unless DraftCraft Engineering
+  Ventures agrees in writing. You may say truthfully that your work is based on or compatible with
+  DraftCraft.
 
 Contact
-  WithShalom Studios, https://github.com/withshalom
+  DraftCraft Engineering Ventures, https://github.com/DraftCraft-DEV
 ```
 
 </details>

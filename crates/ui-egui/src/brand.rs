@@ -1,7 +1,7 @@
 //! The DraftCraft logo in the interface: the app icon (a drafting compass and the arc it drew on a
 //! blueprint-blue tile, `assets/app-icon/`), drawn on the application button, the Start page and the About
 //! window, and the full logo (the icon and the wordmark as one piece, `assets/brand/`) at the left of the
-//! top row. Both are WithShalom Studios' marks, used by agreement (`docs/brand/LICENSE-brand.txt`).
+//! top row. Both are trademarks of DraftCraft Engineering Ventures (`docs/brand/LICENSE-brand.txt`).
 
 use egui::{Align2, Color32, FontId, Rect, pos2};
 

@@ -4,8 +4,8 @@ DraftCraft is an open-source, pure-Rust 2D CAD and drafting application with a W
 interface on macOS, Windows and Linux, plus a browser build (WASM). It reads and writes DWG and DXF, uses
 AutoCAD's command names at its command line, and can be driven by agents (MCP, control channel, CLI).
 Its upstream's copyright notice (MIT OR Apache-2.0) stays in `LICENSE-MIT` and `NOTICE`: the licence
-requires it. The DraftCraft™ name and logo are WithShalom Studios' marks, used by agreement
-(`docs/brand/LICENSE-brand.txt`).
+requires it. The DraftCraft™ name and logo are trademarks of DraftCraft Engineering Ventures, the organization
+that makes DraftCraft (`docs/brand/LICENSE-brand.txt`).
 
 ## Never crash
 People trust DraftCraft with their drawings; a crash loses their work. **This outranks feature work.**
