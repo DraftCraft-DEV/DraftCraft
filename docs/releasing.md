@@ -40,11 +40,13 @@ builds every package with [`packages.yml`](../.github/workflows/packages.yml):
 | `draftcraft-linux-x86_64.AppImage` | the app; `… cli <args>` runs `draftcraft-cli` (built by `packaging/linux/appimage.sh`) |
 | `draftcraft-linux-aarch64.AppImage` | the same for 64-bit ARM (built on an ARM runner) |
 | `draftcraft-linux-x86_64.deb`, `draftcraft-linux-aarch64.deb` | Debian/Ubuntu package (`packaging/linux/package.sh`, nfpm): `/usr/bin`, menu entry, icons, MIME types, man pages |
+| `draftcraft-linux-x86_64.rpm`, `draftcraft-linux-aarch64.rpm` | the same for Fedora, openSUSE and RHEL |
+| `draftcraft-linux-x86_64.pkg.tar.zst`, `draftcraft-linux-aarch64.pkg.tar.zst` | the same for Arch Linux, Manjaro and EndeavourOS (`pacman -U`) |
 
 The names carry no version, so the README's `releases/latest/download/<name>` links always give the
 newest. The same workflow runs on every pull request that changes `packaging/` or the workflows; its
 packages are then that run's artifacts, so a packaging change can be tried before a release. On the
-way it installs the x64 setup (and runs it again as Update Now does) and both `.deb`s on the runners, checks the `.dxf`/`.dwg` registration, and
+way it installs the x64 setup (and runs it again as Update Now does) both `.deb`s, both `.rpm`s (in a Fedora container) and the x86_64 Arch package (in an Arch container) on the runners, checks the `.dxf`/`.dwg` registration, and
 uninstalls them. The workflow creates the GitHub Release `DraftCraft v<version>` with them and `SHA256SUMS.txt`. The DMG is
 made on a macOS 26 runner, whose Xcode compiles the app icon. The workflow can also be started by hand
 (**Actions › Release › Run workflow**) for an existing tag.

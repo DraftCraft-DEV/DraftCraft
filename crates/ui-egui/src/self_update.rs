@@ -10,8 +10,9 @@
 //! | Windows copy installed by the setup (its exe named in `App Paths`) | `draftcraft-windows-{x64,arm64}-setup.exe` | run once DraftCraft has quit: `/passive` in the same context (this account or everyone), it waits for this process to end, installs over it and starts DraftCraft again (`apps/draftcraft-setup`) |
 //!
 //! Anything else (a build from source, a folder this account can't write, a copy installed by a
-//! Linux `.deb`, another system) gets the release page instead, as before: the package manager
-//! keeps its own record of the installed version, which replacing the files would leave behind. The leftovers of a swap (the old app, `*.old` files) are deleted
+//! Linux package (`.deb`, `.rpm`, Arch), another system) gets the release page instead, as before:
+//! the package manager keeps its own record of the installed version, which replacing the files
+//! would leave behind. The leftovers of a swap (the old app, `*.old` files) are deleted
 //! at the next start ([`clean_leftovers`]).
 //!
 //! Downloading, resuming and the checksum are `craft_update::Http::download`; only files under

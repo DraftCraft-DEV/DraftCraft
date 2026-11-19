@@ -1,4 +1,4 @@
-# .deb and .rpm packages (nfpm: https://nfpm.goreleaser.com). Run by package.sh, which stages
+# .deb, .rpm and Arch Linux (.pkg.tar.zst) packages (nfpm: https://nfpm.goreleaser.com). Run by package.sh, which stages
 # the file tree, substitutes its path for ${STAGE} (nfpm doesn't expand env vars in `src`) and
 # exports VERSION and NFPM_ARCH.
 #
@@ -7,7 +7,7 @@ name: draftcraft
 arch: ${NFPM_ARCH}
 platform: linux
 version: ${VERSION}
-# semver: 0.2.0-rc.1 becomes 0.2.0~rc.1 in deb/rpm, so pre-releases sort before the release.
+# semver: 0.2.0-rc.1 becomes 0.2.0~rc.1 in deb/rpm (0.2.0rc.1 in Arch), so pre-releases sort before the release.
 version_schema: semver
 release: 1
 section: graphics
@@ -53,6 +53,15 @@ overrides:
       - libXrandr
       - mesa-vulkan-drivers
       - xdg-desktop-portal
+  # Arch Linux, Manjaro, EndeavourOS, ... pacman has no "or" and nfpm writes no optional
+  # dependencies there, so these are the ones every desktop needs: libglvnd gives EGL/GL, and the
+  # Vulkan loader, X11 and Wayland libraries come with any desktop session.
+  archlinux:
+    depends:
+      - glibc
+      - gcc-libs
+      - libxkbcommon
+      - libglvnd
 
 contents:
   - src: ${STAGE}/usr/bin/draftcraft

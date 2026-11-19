@@ -11,6 +11,9 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### New
+- Linux packages for Fedora, openSUSE and RHEL (.rpm) and for Arch Linux, Manjaro and EndeavourOS (a pacman package), for x86_64 and ARM64: DraftCraft appears in the applications menu and opens .dxf and .dwg files.
+
 ## 2.2.1
 
 ### New
