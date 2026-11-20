@@ -86,6 +86,8 @@ fn dwg_keeps_true_colours_and_transparency() {
 #[test]
 fn dwg_keeps_paper_space_entities_in_their_layout() {
     let mut d = Drawing::new_metric();
+    // A second layout (a new drawing has Layout1 only).
+    d.layouts.push(Layout::new("Layout2", 2));
     let second = Space::Paper(d.layouts[1].name.clone());
     let h = d.add(&second, Common::default(), EntityKind::Circle(Circle { center: Vec3::new(1.0, 1.0, 0.0), radius: 0.5 })).unwrap();
     let back = through_dwg(&d);

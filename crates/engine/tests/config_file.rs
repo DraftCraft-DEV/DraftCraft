@@ -240,7 +240,8 @@ fn typed_at_the_command_line_it_asks_for_the_file_name() {
 #[test]
 fn the_example_in_the_docs_imports_cleanly() {
     let _one = ONE_AT_A_TIME.lock().unwrap_or_else(|e| e.into_inner());
-    let doc = include_str!("../../../docs/config-file.md");
+    // A Windows checkout may have the file with CRLF line ends.
+    let doc = include_str!("../../../docs/config-file.md").replace("\r\n", "\n");
     let example = doc.split("```toml\n").nth(1).and_then(|rest| rest.split("```").next()).unwrap();
     let mut s = Session::new();
     let r = s.execute("configimport", &json!({ "text": example })).unwrap();

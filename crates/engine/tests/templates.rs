@@ -164,7 +164,7 @@ fn layout_saveas_writes_the_layout_and_the_named_objects_it_uses() {
 
     // The drawing is not changed.
     let d = s.doc().unwrap();
-    assert_eq!(layout_names(d), ["Layout1", "Layout2", "Sheet"]);
+    assert_eq!(layout_names(d), ["Layout1", "Sheet"]);
     assert_eq!(d.model.iter().count(), 2);
     assert!(d.layer("UNUSED").is_some() && d.block("PARTS").is_some());
 
@@ -177,6 +177,8 @@ fn layout_saveas_writes_the_layout_and_the_named_objects_it_uses() {
 fn typed_layout_saveas_asks_for_the_layout_and_the_template_file() {
     hooks();
     let mut s = Session::new();
+    // A second layout to name at the prompt (a new drawing has Layout1 only).
+    s.doc_mut().unwrap().layouts.push(draftcraft_engine::doc::Layout::new("Layout2", 2));
     let dir = TempDir::new("templates");
     s.cmdline("LAYOUT").unwrap();
     s.cmdline("sa").unwrap();

@@ -31,9 +31,9 @@ fn layouts_name_the_sheets_of_one_pdf() {
         assert_eq!(r["layout"], "Model");
         assert!(plotted(&r).ends_with(r#"["model","sheet b"]"#), "the plotter gets the list: {}", plotted(&r));
     }
-    // "all": model (it has objects), then the layouts in tab order.
+    // "all": model (it has objects), then the layouts in tab order (Layout1 and Sheet B).
     let r = s.execute("exportpdf", &json!({"layouts": "all"})).unwrap();
-    assert_eq!((r["pages"].as_u64(), r["layout"].as_str()), (Some(4), Some("Model")));
+    assert_eq!((r["pages"].as_u64(), r["layout"].as_str()), (Some(3), Some("Model")));
     // One sheet without `layouts` as before.
     assert_eq!(s.execute("plot", &json!({})).unwrap()["pages"], 1);
 }

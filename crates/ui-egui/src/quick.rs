@@ -256,6 +256,7 @@ pub fn quick_properties(app: &mut CadApp, ctx: &egui::Context) {
         && !sel.is_empty()
         && app.session.running.is_none()
         && !app.ui.start_tab
+        && !app.tracedraft_active()
         && app.ui.dialog.as_deref() != Some("qselect");
     let mut st: QpState = ctx.data_mut(|d| d.get_temp(sid)).unwrap_or_default();
     if !active {

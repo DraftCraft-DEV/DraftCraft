@@ -1,6 +1,9 @@
 [workspace]
 resolver = "3"
 members = ["crates/*", "apps/*", "xtask"]
+# TraceDraft, the vector editor the desktop app shows in its TraceDraft tab: a git submodule with a
+# workspace of its own, used as a path dependency (`apps/draftcraft`), never a member.
+exclude = ["tracedraft"]
 # default-members
 
 [workspace.package]

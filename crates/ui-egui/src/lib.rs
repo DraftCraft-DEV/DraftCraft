@@ -49,6 +49,8 @@ pub mod dyngrips;
 pub mod dyninput;
 pub mod gpu;
 pub mod grip_dyn;
+// The TraceDraft page the desktop app hosts in the central area.
+pub mod hosted;
 pub mod i18n;
 pub mod icons;
 pub mod layers;
@@ -364,6 +366,12 @@ pub struct CadApp {
     pub updates_rt: updates_ui::Runtime,
     /// The What's New window, while open ([`whats_new`]).
     pub whats_new: Option<whats_new::WhatsNew>,
+    /// The TraceDraft page the host app supplies (the desktop app; `None` elsewhere), shown in
+    /// the central area while [`Self::central`] says so ([`hosted`]).
+    pub hosted: Option<Box<dyn hosted::HostedPage>>,
+    /// What the central area shows: the drawing or the hosted page. Not saved: DraftCraft
+    /// always starts on the drawing.
+    pub central: hosted::CentralView,
 }
 
 impl CadApp {
@@ -426,7 +434,17 @@ impl CadApp {
             #[cfg(not(target_arch = "wasm32"))]
             updates_rt: updates_ui::Runtime::default(),
             whats_new: None,
+            hosted: None,
+            central: hosted::CentralView::Drawing,
         }
+    }
+
+    /// Forget the theme, animation setting and interface size last handed to egui, so the next
+    /// frame installs DraftCraft's own again (after the hosted page drew with its own).
+    pub(crate) fn forget_shown_style(&mut self) {
+        self.shown_theme = None;
+        self.shown_animations = None;
+        self.shown_interface_scale = None;
     }
 
     /// The interface language shown: the chosen one, or English when this computer has no font
@@ -709,6 +727,7 @@ impl CadApp {
             Err(e) => self.set_status(e),
             Ok(v) => {
                 self.ui.start_tab = false;
+                self.set_central(hosted::CentralView::Drawing);
                 self.canvas.zoom_pending = true;
                 let doc = v.get("index").and_then(Value::as_u64).and_then(|i| self.session.docs.get(usize::try_from(i).ok()?));
                 if let Some(path) = doc.and_then(|d| d.path.clone()) {
@@ -815,6 +834,21 @@ impl CadApp {
     /// the buffer is never injected again; the next batch waits for a real `ui` pass to consume
     /// the previous one.
     pub fn raw_input_hook(&mut self, ctx: &egui::Context, raw: &mut egui::RawInput) {
+        self.own_raw_input(ctx, raw);
+        // The hosted page reads the frame's input too while it is shown (a tablet's pressure,
+        // characters an input method sent). Outside the frame's panic guard ([`fault`]), so under
+        // one of its own: a panic in it goes back to the drawing.
+        if self.tracedraft_active()
+            && let Some(page) = self.hosted.as_mut()
+            && std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| page.raw_input_hook(ctx, raw))).is_err()
+        {
+            log::error!("the TraceDraft page failed reading the frame's input");
+            self.central = hosted::CentralView::Drawing;
+            self.forget_shown_style();
+        }
+    }
+
+    fn own_raw_input(&mut self, ctx: &egui::Context, raw: &mut egui::RawInput) {
         capture::note_raw_geometry(self, ctx, raw);
         // The forwarded window's modifiers hold for the frame its keys go in (Shift+Copy is
         // COPYBASE); the next frame puts the main window's back, before its own changes.
@@ -891,7 +925,14 @@ impl CadApp {
         let ctx = &ctx;
         let language = self.language();
         if self.fonts_language != Some(language) {
-            theme::install_fonts(ctx, language);
+            // With the hosted page's faces, whether it is shown or not: one set of fonts serves the
+            // whole window, and the page never installs its own.
+            let hosted = self.hosted.as_deref();
+            theme::install_fonts_with(ctx, language, |defs| {
+                if let Some(page) = hosted {
+                    page.add_fonts(defs);
+                }
+            });
             self.fonts_language = Some(language);
         }
         // The AccessKit root carries the language the interface is actually shown in; egui copies
@@ -938,9 +979,13 @@ impl CadApp {
 
     /// Input-derived work, once per layout frame.
     fn ui_input(&mut self, ctx: &egui::Context) {
-        menus::shortcuts(self, ctx);
+        // The hosted page takes its own keys, clipboard and dropped files while it is shown.
+        let own = !self.tracedraft_active();
+        if own {
+            menus::shortcuts(self, ctx);
+        }
         #[cfg(not(target_arch = "wasm32"))]
-        {
+        if own {
             let dropped = ctx.input_mut(|input| std::mem::take(&mut input.raw.dropped_files));
             for file in dropped {
                 let path = file.path();
@@ -958,6 +1003,13 @@ impl CadApp {
     fn draw(&mut self, ui: &mut egui::Ui) {
         let t0 = now_ms();
         control::begin_frame(ui.ctx());
+        // The hosted page asked to be left (its own File ▸ Exit): back to the drawing.
+        if self.hosted.as_mut().is_some_and(|page| page.wants_exit()) {
+            self.set_central(hosted::CentralView::Drawing);
+        }
+        // The hosted page brings its own menus and tools: DraftCraft keeps the title bar and the
+        // tab bar only.
+        let hosted_page = self.tracedraft_active();
         let t = theme::Tokens::get();
         #[cfg(not(target_arch = "wasm32"))]
         if self.own_window_frame {
@@ -968,12 +1020,15 @@ impl CadApp {
         if self.ui.in_window_menu {
             menus::web_top_row(self, ui);
         }
-        ribbon::title_and_ribbon(self, ui);
+        if !hosted_page {
+            ribbon::title_and_ribbon(self, ui);
+        }
         #[cfg(not(target_arch = "wasm32"))]
-        if self.ui.in_window_menu && !self.own_window_frame {
+        if self.ui.in_window_menu && !self.own_window_frame && !hosted_page {
             menus::menu_bar(self, ui);
         }
-        if self.ui.show_status_bar {
+        // Always with the hosted page: its tabs are the way back to the drawing.
+        if self.ui.show_status_bar || hosted_page {
             chrome::status_bar(self, ui);
         }
         if self.ui.show_file_tabs {
@@ -981,7 +1036,12 @@ impl CadApp {
         }
         let has_doc = !self.session.docs.is_empty() && !self.ui.start_tab;
         egui::CentralPanel::default().frame(egui::Frame::NONE.fill(t.canvas)).show(ui, |ui| {
-            if has_doc {
+            // Asked again: a tab clicked in the status bar this frame already counts.
+            if self.tracedraft_active()
+                && let Some(page) = self.hosted.as_mut()
+            {
+                page.ui(ui);
+            } else if has_doc {
                 docking::show(self, ui);
             } else {
                 chrome::start_page(self, ui);

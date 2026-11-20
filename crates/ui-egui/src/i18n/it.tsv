@@ -1108,6 +1108,8 @@ menu	Modify	Edita
 	Tools	Strumenti
 	Torus	Toro
 	Trace	Traccia
+	TraceDraft	TraceDraft
+	TraceDraft is not available in this build	TraceDraft non è disponibile in questa versione
 	Track orthogonally only	Puntamento solo ortogonale
 	Track using all polar angle settings	Puntamento con tutte le impostazioni degli angoli polari
 	Transparency	Trasparenza
@@ -1145,6 +1147,7 @@ menu	Modify	Edita
 	Value	Valore
 	Value:	Valore:
 	Variables	Variabili
+	Vector drawing with TraceDraft	Disegno vettoriale con TraceDraft
 	Version	Versione
 	Version 2000	Versione 2000
 	Version 2004	Versione 2004

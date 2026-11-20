@@ -1,4 +1,5 @@
-//! Windows only: embed the app icon and version info into `draftcraft.exe`. Elsewhere a no-op.
+//! Windows only: embed the app icon and version info into `draftcraft.exe`, and give its main
+//! thread the stack Linux and macOS give theirs. Elsewhere a no-op.
 
 fn main() {
     println!("cargo:rerun-if-changed=build.rs");
@@ -7,6 +8,14 @@ fn main() {
     println!("cargo:rerun-if-env-changed=DRAFTCRAFT_BUILD_SHA");
     if std::env::var("CARGO_CFG_TARGET_OS").as_deref() != Ok("windows") {
         return;
+    }
+    // The main thread's stack, 1 MB on Windows by default, as large as on Linux and macOS (8 MB):
+    // the TraceDraft tab's editor draws on it, and a drawing of a few hundred nested groups needs
+    // more than 1 MB there.
+    if std::env::var("CARGO_CFG_TARGET_ENV").as_deref() == Ok("msvc") {
+        println!("cargo:rustc-link-arg-bin=draftcraft=/STACK:8388608");
+    } else {
+        println!("cargo:rustc-link-arg-bin=draftcraft=-Wl,--stack,8388608");
     }
     let mut res = winresource::WindowsResource::new();
     if std::path::Path::new("../../assets/app-icon/draftcraft.ico").exists() {

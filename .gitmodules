@@ -1,0 +1,3 @@
+[submodule "tracedraft"]
+	path = tracedraft
+	url = https://github.com/DraftCraft-DEV/TraceDraft.git

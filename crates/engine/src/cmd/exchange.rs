@@ -907,6 +907,8 @@ mod tests {
         if io().and_then(|h| h.plot).is_none() {
             return;
         }
+        // A second layout, as a drawing with two of them has (a new one has Layout1 only).
+        s.doc_mut().unwrap().layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
         let r = s.execute("publish", &json!({})).unwrap();
         let sheets: Vec<&str> = r["sheets"].as_array().unwrap().iter().filter_map(|x| x["layout"].as_str()).collect();
         assert_eq!(sheets, ["Model", "Layout1", "Layout2"]);

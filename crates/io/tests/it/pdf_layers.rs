@@ -165,6 +165,8 @@ fn viewport_contents_keep_their_layers() {
 #[test]
 fn several_sheets_in_one_file_with_page_labels() {
     let mut d = layered();
+    // A second, empty layout (a new drawing has Layout1 only).
+    d.layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
     add_line(&mut d, &Space::Paper("Layout1".into()), "Walls", (10.0, 10.0), (50.0, 10.0));
     let doc = read(&plot(&d, &Space::Model, &raw(json!({"layouts": ["model", "LAYOUT1"]}))).unwrap());
     // "all": model (it has objects), then every layout in tab order.

@@ -25,6 +25,7 @@ mod logging;
 mod native_menu;
 mod spacemouse;
 mod system_animations;
+mod tracedraft;
 mod workspace;
 
 use draftcraft_engine::Session;
@@ -101,7 +102,10 @@ impl eframe::App for App {
                     m.poll(&mut self.cad, ctx);
                 }
             }
-            self.spacemouse.poll(&mut self.cad, ctx);
+            // The spacemouse moves the drawing, which the TraceDraft tab hides.
+            if !self.cad.tracedraft_active() {
+                self.spacemouse.poll(&mut self.cad, ctx);
+            }
             // After `cad.logic`, so a control command's workspace change is saved in the same frame.
             self.persist_workspace(Some(ctx));
         }
@@ -109,11 +113,14 @@ impl eframe::App for App {
             ctx.send_viewport_cmd(egui::ViewportCommand::Close);
         }
     }
-    /// Apply the desktop-theme fallback, forward raw input to `CadApp`, and capture Tab at the command line.
+    /// Apply the desktop-theme fallback, forward raw input to `CadApp`, and capture Tab at the command line
+    /// (not on the TraceDraft tab, whose editor has no command line and takes Tab itself).
     fn raw_input_hook(&mut self, ctx: &egui::Context, raw: &mut egui::RawInput) {
         follow_desktop(raw, self.desktop_theme.current());
         self.cad.raw_input_hook(ctx, raw);
-        draftcraft_ui_egui::cmdline::capture_tab(ctx, raw);
+        if !self.cad.tracedraft_active() {
+            draftcraft_ui_egui::cmdline::capture_tab(ctx, raw);
+        }
     }
     fn ui(&mut self, ui: &mut egui::Ui, _frame: &mut eframe::Frame) {
         self.cad.guarded_ui(ui);
@@ -121,11 +128,18 @@ impl eframe::App for App {
         craft_window::title_bar::sync_movable(ui.ctx(), &mut self.movable);
     }
     /// A normal exit: the workspace is saved, and this run's autosave files are not needed (a
-    /// crash leaves them for recovery).
-    fn on_exit(&mut self) {
+    /// crash leaves them for recovery). The TraceDraft tab's editor keeps its preferences and backs
+    /// up the drawings left unsaved in it, which it offers again at the next start. (`_gl`: eframe
+    /// is built with OpenGL too, for the editor; DraftCraft draws with wgpu.)
+    fn on_exit(&mut self, _gl: Option<&eframe::glow::Context>) {
         self.persist_workspace(None);
         self.cad.cancel_screenshots();
         self.cad.shutdown_autosave();
+        if let Some(page) = self.cad.hosted.as_mut()
+            && std::panic::catch_unwind(std::panic::AssertUnwindSafe(|| page.on_exit())).is_err()
+        {
+            log::error!("the TraceDraft editor failed while closing");
+        }
     }
     /// Preferences (the interface theme) survive restarts; eframe saves the window state itself
     /// (`persist_window`); egui state is not kept.
@@ -316,7 +330,11 @@ fn version_string() -> String {
 
 /// Parse CLI options (`--control`, `--sample`, files, `--version`), install logging and I/O hooks, build the services and app, and run eframe.
 fn main() -> eframe::Result {
-    // First, so every start-up record is captured; see `logging`.
+    // Before any thread starts: the stack size of the threads the TraceDraft tab's editor starts
+    // (the standard library reads it once), its text and metafile hooks, and the system font list
+    // it needs, read in the background so the tab is ready when first shown.
+    tracedraw::prepare_process();
+    // First after that, so every start-up record is captured; see `logging`.
     let logger = logging::install();
     // The update helper relaunches this binary after a self-update; it runs and exits here.
     #[cfg(not(target_arch = "wasm32"))]
@@ -447,6 +465,8 @@ fn main() -> eframe::Result {
                 }
                 app.session.set_lisp_support_dir(Some(support));
             }
+            // The TraceDraft tab (after the layouts): the vector editor, built when first shown.
+            app.hosted = Some(Box::new(tracedraft::TraceDraftPage::new(vars.config_dir.as_deref())));
             // Once at startup, ask GitHub whether a newer DraftCraft is out (DRAFTCRAFT_NO_UPDATE_CHECK=1
             // turns it off, e.g. for scripted runs).
             if std::env::var_os("DRAFTCRAFT_NO_UPDATE_CHECK").is_none_or(|v| v.is_empty() || v == "0") {

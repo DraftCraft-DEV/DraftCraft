@@ -164,6 +164,8 @@ fn current_table_style_is_read_from_the_header_and_from_autocad_files() {
 #[test]
 fn layout_page_setup_and_paper_view_round_trip() {
     let mut d = Drawing::new_imperial();
+    // A second layout with a page setup of its own (a new drawing has Layout1 only).
+    d.layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
     let first = d.layouts.get_mut(0).expect("Layout1");
     first.page.scale = 0.5;
     first.page.plot_style_table = "monochrome.ctb".into();

@@ -938,6 +938,8 @@
 	Tools	工具
 	Torus	圆环体
 	Trace	追踪
+	TraceDraft	TraceDraft
+	TraceDraft is not available in this build	此版本不提供 TraceDraft
 	Transparency	透明度
 	Trim	修剪
 	True Color	真彩色
@@ -967,6 +969,7 @@
 	VP Freeze	视口冻结
 	Value	值
 	Value:	值:
+	Vector drawing with TraceDraft	使用 TraceDraft 绘制矢量图
 	Version	版本
 	Version {version}	版本 {version}
 	Vertical	垂直

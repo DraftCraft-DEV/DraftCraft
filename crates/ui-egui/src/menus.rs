@@ -66,6 +66,7 @@ pub const UI_COMMANDS: &[(&str, &str, &[&str], Option<&str>)] = &[
     ("ui.hidepalettes", "Hide Palettes", &["Window", "Hide Palettes"], None),
     ("ui.resetpalettes", "Reset Palettes", &["Window", "Reset Palettes"], None),
     ("ui.start", "Start", &["Window", "Start"], None),
+    ("ui.tracedraft", "TraceDraft", &["Window", "TraceDraft"], None),
     ("ui.dialog.layers", "Layer Properties Manager", &["Window", "Layers"], None),
     ("ui.dialog.blocks", "Blocks", &["Window", "Blocks"], None),
     ("ui.dialog.qselect", "Quick Select...", &[], None),
@@ -529,8 +530,10 @@ fn run_ui_command_inner(app: &mut CadApp, id: &str, params: &Value) -> Option<Re
         }
         "ui.start" => {
             app.ui.start_tab = true;
+            app.set_central(crate::hosted::CentralView::Drawing);
             Ok(Value::Null)
         }
+        "ui.tracedraft" => app.show_tracedraft(),
         // The expanded command history (AutoCAD's text window; TEXTSCR opens it).
         "ui.cmdline.lines" => {
             if let Some(n) = params.get("lines").and_then(Value::as_u64) {
@@ -717,7 +720,8 @@ pub fn tree(app: &CadApp) -> Vec<(String, Vec<Entry>)> {
     }
     for (id, label, menu, sc) in UI_COMMANDS {
         if !menu.is_empty() {
-            add(menu, label, id, *sc, true);
+            // Window ▸ TraceDraft only where the app hosts the editor (the desktop app).
+            add(menu, label, id, *sc, *id != "ui.tracedraft" || app.hosted.is_some());
         }
     }
     if let Some((_, file)) = out.iter_mut().find(|(m, _)| m == "File") {

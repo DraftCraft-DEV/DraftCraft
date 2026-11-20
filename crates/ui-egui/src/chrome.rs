@@ -69,6 +69,7 @@ pub fn file_tabs(app: &mut CadApp, ui: &mut egui::Ui) {
             tab(ui, crate::tl!("Start"), false, app.ui.start_tab || app.session.docs.is_empty(), false, 110.0, ui.scope_id().with("tab_start"));
         if c {
             app.ui.start_tab = true;
+            app.set_central(crate::hosted::CentralView::Drawing);
         }
         let mut switch_to = None;
         let mut close = None;
@@ -88,10 +89,12 @@ pub fn file_tabs(app: &mut CadApp, ui: &mut egui::Ui) {
         if new_tab_button(ui, Rect::from_min_size(pos2(x + 6.0, r.top() + 4.0), vec2(18.0, 18.0))) {
             app.start("new");
             app.ui.start_tab = false;
+            app.set_central(crate::hosted::CentralView::Drawing);
         }
         if let Some(i) = switch_to {
             let _ = app.run("document.switch", json!({ "index": i }));
             app.ui.start_tab = false;
+            app.set_central(crate::hosted::CentralView::Drawing);
         }
         if let Some(i) = close {
             app.request_close(Some(i));
@@ -140,6 +143,62 @@ fn visible_tabs(widths: &[f32], active: Option<usize>, room: f32) -> std::ops::R
         start -= 1;
     }
     start..active + 1
+}
+
+/// The status bar's readouts of the current space, right to left from `right`: the annotation
+/// scale list (model space), the drawing units, then MODEL, or MODEL / PAPER with the viewport's
+/// scale and lock on a layout. Returns where the next readout ends.
+fn space_status(app: &mut CadApp, ui: &mut egui::Ui, p: &egui::Painter, t: Tokens, r: Rect, right: f32) -> f32 {
+    let mut coord_right = annoscale::status(app, ui, right, r.center().y);
+    coord_right = units::status(app, ui, coord_right, r.center().y);
+    if matches!(app.session.layout_space(), draftcraft_doc::Space::Model) {
+        // Windows shows MODEL on the status bar in the Model tab too.
+        let br = Rect::from_min_max(pos2(coord_right - 56.0, r.center().y - 9.0), pos2(coord_right - 4.0, r.center().y + 9.0));
+        p.text(br.center(), egui::Align2::CENTER_CENTER, crate::tl!("MODEL"), crate::theme::small(), t.text);
+        coord_right = br.left() - 6.0;
+    }
+    // MODEL / PAPER (layouts only): toggles MSPACE and PSPACE like AutoCAD's status button.
+    if matches!(app.session.layout_space(), draftcraft_doc::Space::Paper(_)) {
+        let model = app.session.state().is_ok_and(|st| st.mspace.is_some());
+        let label = if model { "MODEL" } else { "PAPER" };
+        let br = Rect::from_min_max(pos2(coord_right - 52.0, r.center().y - 9.0), pos2(coord_right + 2.0, r.center().y + 9.0));
+        let resp = ui.interact(br, ui.scope_id().with("mspace_toggle"), Sense::click());
+        p.rect_filled(br, 3.0, if resp.hovered() { t.control_hover } else { t.toggle_on.gamma_multiply(0.25) });
+        p.text(br.center(), egui::Align2::CENTER_CENTER, crate::i18n::t(label), crate::theme::small(), t.text);
+        icons::describe_control(ui, &resp, label, None, false);
+        if resp.on_hover_text(crate::tl!("Switch between model space in a viewport and paper space")).clicked() {
+            let _ = app.run(if model { "pspace" } else { "mspace" }, json!({}));
+            app.canvas.list = None;
+        }
+        coord_right = br.left() - 10.0;
+        // Scale and lock of the active or selected viewport.
+        coord_right = crate::vpscale::status(app, ui, coord_right + 4.0, r.center().y) - 10.0;
+    }
+    coord_right
+}
+
+/// The hosted TraceDraft page's tab (`label`, laid out) at `x` in the status bar `r`, drawn as
+/// current while the page is shown. Returns whether it was clicked and the width it takes.
+fn tracedraft_tab(
+    ui: &egui::Ui,
+    tp: &egui::Painter,
+    t: Tokens,
+    label: std::sync::Arc<egui::Galley>,
+    (x, r, clip): (f32, Rect, Rect),
+    current: bool,
+) -> (bool, f32) {
+    let w = label.size().x + 26.0;
+    let tr = Rect::from_min_size(pos2(x, r.top() + 1.0), vec2(w, r.height() - 2.0)).intersect(clip);
+    let resp = ui.interact(tr, ui.scope_id().with("tracedraft_tab"), Sense::click());
+    if current {
+        tp.rect_filled(tr, 2.0, t.tab_active);
+    } else if resp.hovered() {
+        tp.rect_filled(tr, 2.0, t.control.gamma_multiply(0.5));
+    }
+    let text_pos = pos2(tr.left() + 13.0, tr.center().y - label.size().y / 2.0);
+    tp.galley(text_pos, label, if current { t.text } else { t.text_dim });
+    icons::describe_control(ui, &resp, crate::hosted::TAB_LABEL, Some(current), true);
+    (resp.on_hover_text(crate::tl!("Vector drawing with TraceDraft")).clicked(), w + 2.0)
 }
 
 fn draw_status_toggles(
@@ -217,10 +276,14 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
             (Icon::Workspace, false, "ui.noop", "Workspace Switching"),
             (Icon::Gear, false, "ui.dialog.dsettings", "Drafting Settings"),
         ];
+        // While the hosted TraceDraft page is shown the bar holds the tabs only: the readouts and
+        // toggles belong to the drawing.
+        let hosted_page = app.tracedraft_active();
+        let toggles = if hosted_page { Vec::new() } else { toggles };
         let size = 20.0;
         let rx = r.right() - 8.0 - toggles.len() as f32 * (size + 4.0);
         // Coordinates.
-        let coord = app.canvas.cursor.map(|c| {
+        let coord = app.canvas.cursor.filter(|_| !hosted_page).map(|c| {
             let (lu, lp) = app.session.doc().map(|d| (d.header.i64("LUNITS", 2), d.header.i64("LUPREC", 4))).unwrap_or((2, 4));
             format!(
                 "{}, {}, {}",
@@ -229,33 +292,7 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
                 draftcraft_engine::units::format_distance(0.0, lu, lp)
             )
         });
-        // MODEL / PAPER (layouts only): toggles MSPACE and PSPACE like AutoCAD's status button.
-        let mut coord_right = rx - 8.0;
-        // The annotation scale list (model space), then the drawing units.
-        coord_right = annoscale::status(app, ui, coord_right, r.center().y);
-        coord_right = units::status(app, ui, coord_right, r.center().y);
-        if matches!(app.session.layout_space(), draftcraft_doc::Space::Model) {
-            // Windows shows MODEL on the status bar in the Model tab too.
-            let br = Rect::from_min_max(pos2(coord_right - 56.0, r.center().y - 9.0), pos2(coord_right - 4.0, r.center().y + 9.0));
-            p.text(br.center(), egui::Align2::CENTER_CENTER, crate::tl!("MODEL"), crate::theme::small(), t.text);
-            coord_right = br.left() - 6.0;
-        }
-        if matches!(app.session.layout_space(), draftcraft_doc::Space::Paper(_)) {
-            let model = app.session.state().is_ok_and(|st| st.mspace.is_some());
-            let label = if model { "MODEL" } else { "PAPER" };
-            let br = Rect::from_min_max(pos2(coord_right - 52.0, r.center().y - 9.0), pos2(coord_right + 2.0, r.center().y + 9.0));
-            let resp = ui.interact(br, ui.scope_id().with("mspace_toggle"), Sense::click());
-            p.rect_filled(br, 3.0, if resp.hovered() { t.control_hover } else { t.toggle_on.gamma_multiply(0.25) });
-            p.text(br.center(), egui::Align2::CENTER_CENTER, crate::i18n::t(label), crate::theme::small(), t.text);
-            icons::describe_control(ui, &resp, label, None, false);
-            if resp.on_hover_text(crate::tl!("Switch between model space in a viewport and paper space")).clicked() {
-                let _ = app.run(if model { "pspace" } else { "mspace" }, json!({}));
-                app.canvas.list = None;
-            }
-            coord_right = br.left() - 10.0;
-            // Scale and lock of the active or selected viewport.
-            coord_right = crate::vpscale::status(app, ui, coord_right + 4.0, r.center().y) - 10.0;
-        }
+        let coord_right = if hosted_page { rx - 8.0 } else { space_status(app, ui, &p, t, r, rx - 8.0) };
         // Layout tabs: Model, "+", then the layouts that fit before the right-hand controls (the
         // current one always); the layout list reaches the rest.
         let mut tabs: Vec<String> = vec!["Model".into()];
@@ -273,10 +310,16 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
         let labels: Vec<_> =
             tabs.iter().enumerate().map(|(i, n)| elided(&p, &shown_name(i, n), crate::theme::body(), t.text, LAYOUT_TAB_TEXT)).collect();
         let widths: Vec<f32> = labels.iter().map(|(g, _)| g.size().x + 26.0 + 2.0).collect();
-        let active_tab = tabs.iter().position(|n| cur.as_deref().is_ok_and(|c| c == n));
-        // Model and "+" stay; the layouts share what is left.
+        // No layout tab is the current one while the hosted page is shown: its own tab is.
+        let active_tab = tabs.iter().position(|n| cur.as_deref().is_ok_and(|c| c == n)).filter(|_| !hosted_page);
+        // The hosted TraceDraft page's tab, after the layouts and before "+" (only where the app
+        // hosts one: the desktop app).
+        let mut tracedraft_tab_label =
+            app.hosted.is_some().then(|| elided(&p, crate::hosted::TAB_LABEL, crate::theme::body(), t.text, LAYOUT_TAB_TEXT).0);
+        let tracedraft_width = tracedraft_tab_label.as_ref().map_or(0.0, |g| g.size().x + 26.0 + 2.0);
+        // Model, TraceDraft1 and "+" stay; the layouts share what is left.
         let layouts = widths.get(1..).unwrap_or_default();
-        let room = limit - x - widths.first().copied().unwrap_or(0.0) - 22.0;
+        let room = limit - x - widths.first().copied().unwrap_or(0.0) - tracedraft_width - 22.0;
         let active_layout = active_tab.and_then(|a| a.checked_sub(1));
         let mut shown = visible_tabs(layouts, active_layout, room);
         let hidden = shown.len() < layouts.len();
@@ -286,6 +329,7 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
         let clip = Rect::from_min_max(r.min, pos2(limit.max(r.left()), r.bottom()));
         let tp = p.with_clip_rect(clip);
         let mut switch = None;
+        let mut open_tracedraft = false;
         // "+" follows the last tab shown.
         let last_shown = (0..tabs.len()).rev().find(|i| *i == 0 || shown.contains(&(i - 1))).unwrap_or(0);
         for (i, (name, (g, cut))) in tabs.iter().zip(labels).enumerate() {
@@ -310,6 +354,11 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
             crate::shortcut_menus::attach(app, &resp, |app| crate::shortcut_menus::layout_tab_entries(app, name));
             x += w + 2.0;
             if i == last_shown {
+                if let Some(g) = tracedraft_tab_label.take() {
+                    let (clicked, w) = tracedraft_tab(ui, &tp, t, g, (x, r, clip), hosted_page);
+                    open_tracedraft = clicked;
+                    x += w;
+                }
                 let pr = Rect::from_min_size(pos2(x, r.top() + 5.0), vec2(16.0, 16.0));
                 let presp = ui.interact(pr, ui.scope_id().with("layout_plus"), Sense::click());
                 icons::paint(&p, pr.shrink(2.0), Icon::Plus, false);
@@ -347,7 +396,12 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
                 });
             });
         }
+        if open_tracedraft {
+            app.set_central(crate::hosted::CentralView::TraceDraft);
+        }
         if let Some(n) = switch {
+            // A layout tab, "+" or the layout list goes back to the drawing.
+            app.set_central(crate::hosted::CentralView::Drawing);
             let _ = app.run("layout.set", json!({ "name": n }));
         }
         // A transient message occupies the same bounded readout slot as coordinates.
@@ -379,6 +433,9 @@ pub fn status_bar(app: &mut CadApp, ui: &mut egui::Ui) {
 /// unsaved drawing's name). The ribbon's title row and the desktop's title bar both show it.
 pub fn window_title(app: &CadApp) -> String {
     let product = format!("DraftCraft {}", env!("CARGO_PKG_VERSION"));
+    if app.tracedraft_active() {
+        return format!("{product}   {}", crate::tl!("TraceDraft"));
+    }
     match app.session.state() {
         Ok(st) if !app.ui.start_tab => format!("{product}   {}{}", st.title, if st.title.contains('.') { "" } else { ".dwg" }),
         _ => format!("{product}   {}", crate::tl!("Start")),

@@ -71,7 +71,8 @@ pub fn title_bar(app: &mut CadApp, ui: &mut egui::Ui) {
         // First, so the controls drawn over it keep their own clicks.
         let title = crate::chrome::window_title(app);
         craft_window::title_bar::empty_area(ui, free).on_hover_text(title.clone());
-        if app.ui.in_window_menu {
+        // The hosted TraceDraft page has its own menus.
+        if app.ui.in_window_menu && !app.tracedraft_active() {
             let menus = Rect::from_min_max(pos2(r.left() + MENU_INSET, r.top()), pos2(free.right(), r.bottom()));
             ui.scope_builder(egui::UiBuilder::new().max_rect(menus).layout(egui::Layout::left_to_right(egui::Align::Center)), |ui| {
                 ui.set_clip_rect(menus);

@@ -13,6 +13,9 @@ fn layouts(s: &Session) -> Vec<String> {
 #[test]
 fn typed_layout_options_prompt_for_names() {
     let mut s = Session::new();
+    // A new drawing has one layout; a second one as a drawing with two of them has.
+    assert_eq!(layouts(&s), ["Layout1"]);
+    s.doc_mut().unwrap().layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
     assert_eq!(layouts(&s), ["Layout1", "Layout2"]);
 
     s.cmdline("LAYOUT").unwrap();

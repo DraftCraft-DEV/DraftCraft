@@ -319,7 +319,21 @@ pub fn mono() -> FontId {
 /// interface adds a Hangul font only when the CJK font found doesn't cover Hangul
 /// ([`korean_font`]).
 pub fn install_fonts(ctx: &egui::Context, language: &str) {
+    install_fonts_with(ctx, language, |_| {});
+}
+
+/// [`install_fonts`] with `extra` adding to the definitions before they are installed: a page
+/// hosted in the central area adds the faces it draws with ([`crate::hosted::HostedPage::add_fonts`]),
+/// because egui keeps one set of fonts for the whole window.
+pub fn install_fonts_with(ctx: &egui::Context, language: &str, extra: impl FnOnce(&mut egui::FontDefinitions)) {
     crate::mtext_editor::install_diameter_glyph(ctx);
+    let mut fonts = font_definitions(language);
+    extra(&mut fonts);
+    ctx.set_fonts(fonts);
+}
+
+/// The interface fonts [`install_fonts`] installs for `language`.
+pub fn font_definitions(language: &str) -> egui::FontDefinitions {
     let mut fonts = egui::FontDefinitions::default();
     let mut added: Vec<(String, std::sync::Arc<egui::FontData>)> = Vec::new();
     #[cfg(not(target_arch = "wasm32"))]
@@ -398,7 +412,7 @@ pub fn install_fonts(ctx: &egui::Context, language: &str) {
     {
         f.push("Hack".into());
     }
-    ctx.set_fonts(fonts);
+    fonts
 }
 
 /// The system interface fonts [`install_fonts`] looks for, in order; it loads the first installed

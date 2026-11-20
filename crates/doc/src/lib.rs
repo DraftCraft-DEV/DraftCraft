@@ -192,7 +192,9 @@ impl Drawing {
             mline_styles: vec![MLineStyle::default()],
             blocks: BTreeMap::new(),
             model: EntityStore::new(),
-            layouts: vec![Layout::new("Layout1", 1), Layout::new("Layout2", 2)],
+            // One layout: a new drawing's tab bar reads Model | Layout1 (a file keeps the layouts it
+            // holds).
+            layouts: vec![Layout::new("Layout1", 1)],
             active_layout: None,
             views: Vec::new(),
             vports: Vec::new(),

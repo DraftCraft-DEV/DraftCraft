@@ -279,7 +279,9 @@ fn xdata_extension_dictionaries_and_opaque_entities_are_compared() {
 
 #[test]
 fn tables_blocks_and_layouts_are_compared_by_name() {
-    let a = drawing();
+    let mut a = drawing();
+    // A second layout for the copy to lose (a new drawing has Layout1 only).
+    a.layouts.push(Layout::new("Layout2", 2));
     let mut b = a.clone();
     b.layers.retain(|l| l.name != "Walls");
     b.linetypes.push(Linetype { name: "Dashed".into(), description: String::new(), pattern: Vec::new() });

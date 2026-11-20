@@ -36,6 +36,9 @@ jobs:
       CARGO_INCREMENTAL: 0
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          # Cargo reads the whole workspace, the desktop app's tracedraft/ path dependency too.
+          submodules: true
 
       - name: Install Rust (stable) with the wasm target
         uses: dtolnay/rust-toolchain@683b588c487a69d01f6c6ddf40f036ff682cc2c8 # v1

@@ -86,6 +86,8 @@ fn drawing_tab_menu() {
 #[test]
 fn layout_tab_menu() {
     let mut app = app();
+    // A second layout to delete (a new drawing has Layout1 only, and the last one stays).
+    app.session.doc_mut().unwrap().layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
     let before = layout_names(&app);
     assert!(before.len() >= 2, "{before:?}");
     let model = sm::layout_tab_entries(&app, "Model");

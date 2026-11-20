@@ -17,7 +17,9 @@ draftcraft-ui-egui = { workspace = true }
 draftcraft-io = { workspace = true }
 # For the shared per-session control-token helper (control_server.rs authentication).
 draftcraft-mcp = { workspace = true }
-eframe = { workspace = true, features = ["clipboard", "wgpu", "accesskit", "wayland", "x11", "links", "persistence"] }
+# "glow" as well: TraceDraft's editor builds eframe with it, which changes `App::on_exit`'s
+# signature; the window still draws with wgpu (eframe's default renderer with both).
+eframe = { workspace = true, features = ["clipboard", "wgpu", "glow", "accesskit", "wayland", "x11", "links", "persistence"] }
 egui = { workspace = true }
 serde_json = { workspace = true }
 log = { workspace = true }
@@ -27,6 +29,9 @@ chrono = { workspace = true }
 # Reads eframe's app.ron to tell whether a window state was saved (main.rs `saved_window`).
 # Already in Cargo.lock through eframe; same version so nothing is built twice.
 ron = "0.12"
+# The TraceDraft tab: the vector editor of the `tracedraft` submodule (its library; its own program
+# is not built), shown in the central area through `draftcraft_ui_egui::hosted::HostedPage`.
+tracedraw = { path = "../../tracedraft/apps/tracedraw" }
 
 [build-dependencies]
 winresource = "0.1"

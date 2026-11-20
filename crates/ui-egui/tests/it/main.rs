@@ -36,6 +36,7 @@ mod system_cursor;
 mod text_double_click;
 mod toolsets_gear;
 mod toolsets_parametric;
+mod tracedraft_tab;
 mod viewport_double_click_selection;
 mod workspace_focus;
 mod workspaces_cui;

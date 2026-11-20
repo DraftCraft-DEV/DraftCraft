@@ -51,6 +51,8 @@ fn undoing_the_current_layouts_creation_returns_to_model() {
 
     // Other layouts are left alone: undoing a rename of a layout that is not current.
     let mut s = Session::new();
+    // A second layout (a new drawing has Layout1 only).
+    s.doc_mut().unwrap().layouts.push(draftcraft_doc::Layout::new("Layout2", 2));
     s.execute("layout.set", &json!({"name": "Layout2"})).unwrap();
     s.execute("layout.rename", &json!({"from": "Layout1", "to": "A"})).unwrap();
     s.undo().unwrap();

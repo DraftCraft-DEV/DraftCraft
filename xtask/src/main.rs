@@ -189,9 +189,12 @@ fn cmd_ci() -> Result<(), String> {
         (
             "fmt",
             Box::new(|| {
+                // Every workspace package. Not `--all`, which also takes the path dependencies
+                // outside the workspace: the tracedraft submodule's code follows its own
+                // repository's formatting.
                 let mut c = cargo();
-                c.args(["fmt", "--all", "--", "--check"]);
-                run(c, "cargo fmt --all -- --check")
+                c.args(["fmt", "--", "--check"]);
+                run(c, "cargo fmt -- --check")
             }),
         ),
         (

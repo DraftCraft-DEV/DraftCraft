@@ -14,6 +14,9 @@ fn harness(width: f32, height: f32, scale: f32, message: bool) -> Harness<'stati
     app.ui.show_toolsets = true;
     app.ui.show_palettes = true;
     app.run("new", serde_json::json!({})).unwrap();
+    // Two layouts, so the bar has a layout tab besides the current one (a new drawing has Layout1
+    // only).
+    app.session.doc_mut().unwrap().layouts.push(draftcraft_engine::doc::Layout::new("Layout2", 2));
     app.ui.start_tab = false;
     app.ui.in_window_menu = false;
     app.integrated_titlebar = true;

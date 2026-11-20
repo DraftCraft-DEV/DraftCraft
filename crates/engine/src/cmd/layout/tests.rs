@@ -8,6 +8,12 @@ fn session_with_model() -> Session {
     s
 }
 
+/// A second, empty layout after Layout1, as a drawing with two layouts has (a new drawing has
+/// Layout1 only).
+fn with_layout2(s: &mut Session) {
+    s.doc_mut().unwrap().layouts.push(Layout::new("Layout2", 2));
+}
+
 fn viewports(s: &Session, layout: &str) -> Vec<(Handle, Viewport)> {
     s.doc()
         .unwrap()
@@ -23,11 +29,11 @@ fn viewports(s: &Session, layout: &str) -> Vec<(Handle, Viewport)> {
 fn new_layout_gets_viewport_zoomed_to_extents() {
     let mut s = session_with_model();
     let r = s.execute("layout.new", &json!({})).unwrap();
-    assert_eq!(r["name"], "Layout3");
-    let vps = viewports(&s, "Layout3");
+    assert_eq!(r["name"], "Layout2", "the next free name after Layout1");
+    let vps = viewports(&s, "Layout2");
     assert_eq!(vps.len(), 1);
     let (_, v) = &vps[0];
-    let sheet = draftcraft_render::sheet(s.doc().unwrap(), "Layout3").unwrap();
+    let sheet = draftcraft_render::sheet(s.doc().unwrap(), "Layout2").unwrap();
     assert!((v.width - sheet.printable.width()).abs() < 1e-9 && (v.height - sheet.printable.height()).abs() < 1e-9);
     assert!(v.id >= 2);
     // Model extents (0,0)..(100,45) are centred and fully visible.
@@ -35,7 +41,7 @@ fn new_layout_gets_viewport_zoomed_to_extents() {
     let model_w = v.view_height * v.width / v.height;
     assert!(model_w >= 100.0 && v.view_height >= 45.0);
     // The render shows model geometry inside the viewport only.
-    let list = draftcraft_render::build(s.doc().unwrap(), &Space::Paper("Layout3".into()), &draftcraft_render::Options::default());
+    let list = draftcraft_render::build(s.doc().unwrap(), &Space::Paper("Layout2".into()), &draftcraft_render::Options::default());
     let rect = Bounds2::new(v.center.xy() - Vec2::new(v.width, v.height) / 2.0, v.center.xy() + Vec2::new(v.width, v.height) / 2.0).expand(1e-9);
     let content: Vec<_> = list.prims.iter().filter(|p| p.handle == draftcraft_render::VIEWPORT_CONTENT).collect();
     assert!(content.len() >= 2);
@@ -43,7 +49,7 @@ fn new_layout_gets_viewport_zoomed_to_extents() {
     assert!(list.sheet.is_some());
     // Undo removes the layout.
     s.undo().unwrap();
-    assert!(s.doc().unwrap().layout("Layout3").is_none());
+    assert!(s.doc().unwrap().layout("Layout2").is_none());
 }
 
 #[test]
@@ -57,6 +63,7 @@ fn rename_keeps_the_active_layout_whatever_its_case() {
 #[test]
 fn rename_copy_delete() {
     let mut s = session_with_model();
+    with_layout2(&mut s);
     s.execute("layout.set", &json!({"name": "Layout1"})).unwrap();
     s.execute("layout.rename", &json!({"to": "Sheet A"})).unwrap();
     assert_eq!(s.space(), Space::Paper("Sheet A".into()));
@@ -84,7 +91,7 @@ fn rename_copy_delete() {
 fn new_layout_from_the_menu_asks_for_a_name() {
     let mut s = session_with_model();
     s.start("layout.new").unwrap();
-    assert_eq!(s.current_prompt().map(|p| p.display()).as_deref(), Some("Enter name of new layout <Layout3>:"));
+    assert_eq!(s.current_prompt().map(|p| p.display()).as_deref(), Some("Enter name of new layout <Layout2>:"));
     s.cmdline("Layout1").unwrap();
     assert!(s.running.is_some(), "a taken name asks again");
     s.cmdline("Sheet A").unwrap();
@@ -92,12 +99,13 @@ fn new_layout_from_the_menu_asks_for_a_name() {
     s.start("layout.new").unwrap();
     s.cmdline("").unwrap();
     let d = s.doc().unwrap();
-    assert!(d.layout("Sheet A").is_some() && d.layout("Layout3").is_some(), "Enter takes the default name");
+    assert!(d.layout("Sheet A").is_some() && d.layout("Layout2").is_some(), "Enter takes the default name");
 }
 
 #[test]
 fn mview_arrangements_and_interactive() {
     let mut s = session_with_model();
+    with_layout2(&mut s);
     assert!(s.execute("mview", &json!({"p1": [0, 0], "p2": [1, 1]})).is_err(), "not in model space");
     s.execute("mview", &json!({"layout": "Layout2", "count": 4})).unwrap();
     assert_eq!(viewports(&s, "Layout2").len(), 4);
@@ -168,6 +176,7 @@ fn viewport_scale_lock_and_layers() {
 #[test]
 fn pagesetup_paper_table() {
     let mut s = Session::new();
+    with_layout2(&mut s);
     let r = s.execute("pagesetup", &json!({"layout": "Layout1", "paper": "A3", "landscape": true, "margins": [5, 5, 5, 5]})).unwrap();
     assert_eq!(r["page"]["widthMm"], 297.0);
     let sheet = draftcraft_render::sheet(s.doc().unwrap(), "Layout1").unwrap();

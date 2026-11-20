@@ -75,6 +75,12 @@ impl CadApp {
         fault.last_ms = now;
         fault.broken = fault.strikes >= MAX_STRIKES;
         log::error!("the interface panicked: {message}");
+        // A panic while the hosted TraceDraft page drew: back to the drawing, without calling
+        // into the page again, and with DraftCraft's own look put back next frame.
+        if self.tracedraft_active() {
+            self.central = crate::hosted::CentralView::Drawing;
+            self.forget_shown_style();
+        }
         #[cfg(not(target_arch = "wasm32"))]
         if let Some(saver) = &mut self.autosave {
             let session = &self.session;
