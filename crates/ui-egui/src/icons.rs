@@ -189,6 +189,8 @@ pub enum Icon {
     /// CONFIGIMPORT and CONFIGEXPORT: the portable settings file.
     SettingsImport,
     SettingsExport,
+    /// `ui.tracedraft`: the vector editor of the TraceDraft tab.
+    VectorEditor,
 }
 
 struct Pen<'a> {
@@ -1418,6 +1420,27 @@ fn paint_manager_tools(pen: &Pen<'_>, icon: Icon, b: Color32, a: Color32) {
             } else {
                 pen.p.line_segment([pen.at(10.0, 19.0), pen.at(17.0, 19.0)], thick);
                 pen.big_arrow(23.0, 19.0, 1.0, 0.0, 6.0, 4.0, a);
+            }
+        }
+        VectorEditor => {
+            // A Bézier curve between two anchor squares, with its two handles drawn out.
+            let [p0, p1, p2, p3] = [(4.0, 19.0), (4.0, 8.0), (20.0, 16.0), (20.0, 5.0)];
+            pen.l(p0.0, p0.1, p1.0, p1.1);
+            pen.l(p3.0, p3.1, p2.0, p2.1);
+            let curve: Vec<(f32, f32)> = (0..=16u8)
+                .map(|i| {
+                    let s = f32::from(i) / 16.0;
+                    let u = 1.0 - s;
+                    let (k0, k1, k2, k3) = (u * u * u, 3.0 * u * u * s, 3.0 * u * s * s, s * s * s);
+                    (k0 * p0.0 + k1 * p1.0 + k2 * p2.0 + k3 * p3.0, k0 * p0.1 + k1 * p1.1 + k2 * p2.1 + k3 * p3.1)
+                })
+                .collect();
+            pen.poly(&curve, false, a);
+            for (x, y) in [p1, p2] {
+                pen.fill_c(x, y, 1.5, b);
+            }
+            for (x, y) in [p0, p3] {
+                pen.fill_rect(x - 1.8, y - 1.8, 3.6, 3.6, a);
             }
         }
         _ => {}

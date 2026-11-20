@@ -80,6 +80,8 @@ impl CadApp {
         if self.tracedraft_active() {
             self.central = crate::hosted::CentralView::Drawing;
             self.forget_shown_style();
+            // Ctrl+Q and the keyboard zoom are DraftCraft's again, also if no frame follows.
+            self.hold_window_keys(ctx, false);
         }
         #[cfg(not(target_arch = "wasm32"))]
         if let Some(saver) = &mut self.autosave {

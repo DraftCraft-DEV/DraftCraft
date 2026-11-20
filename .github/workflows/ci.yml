@@ -23,6 +23,9 @@ jobs:
     with:
       # Same craft-fonts commit as release.yml.
       craft-fonts-ref: b076417b5880bd4154bd22f00695b1d28c6bea83
+      # The TraceDraft tab's editor (tracedraft/, a path dependency of the desktop app): the gate's
+      # checkout leaves submodules out, and Cargo reads the whole workspace.
+      setup-command: git submodule update --init --depth 1 tracedraft
       timeout-minutes: 90
       packages: >-
         pkg-config libxkbcommon-dev libwayland-dev libx11-dev libxcb1-dev libxcursor-dev

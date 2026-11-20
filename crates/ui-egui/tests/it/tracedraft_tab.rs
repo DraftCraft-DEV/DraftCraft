@@ -19,6 +19,8 @@ struct Seen {
     frames: Cell<u32>,
     saves: Cell<u32>,
     leave: Cell<bool>,
+    /// The top of the area it was given, in its last frame.
+    top: Cell<f32>,
 }
 
 /// A page in place of the editor: a label, and the calls it got.
@@ -27,6 +29,7 @@ struct Stub(Rc<Seen>);
 impl HostedPage for Stub {
     fn ui(&mut self, ui: &mut egui::Ui) {
         self.0.frames.set(self.0.frames.get() + 1);
+        self.0.top.set(ui.max_rect().top());
         ui.label("Stand-in page");
     }
 
@@ -166,4 +169,92 @@ fn in_a_compact_window_the_tracedraft1_tab_keeps_its_place_before_the_add_button
             .find(|r| r.left() >= tracedraft.right() && (r.center().y - model.center().y).abs() < 8.0);
         assert!(plus.is_some(), "+ after {tracedraft:?} (TraceDraft shown: {shown})");
     }
+}
+
+/// Press `key` with Ctrl (Cmd on macOS) and let go of it, a frame each. Returns whether the press's
+/// frame asked to close the window.
+fn press_command(h: &mut Harness<'_, CadApp>, key: egui::Key) -> bool {
+    for pressed in [true, false] {
+        h.event(egui::Event::Key { key, pressed, modifiers: egui::Modifiers::COMMAND, repeat: false, physical_key: None });
+        h.step();
+        if pressed {
+            let commands = h.output().viewport_output.get(&egui::ViewportId::ROOT).map(|v| v.commands.as_slice()).unwrap_or_default();
+            if commands.iter().any(|c| matches!(c, egui::ViewportCommand::Close)) {
+                return true;
+            }
+        }
+    }
+    false
+}
+
+/// egui acts on its own window keys at the end of the frame, after the page saw them. While the
+/// page is shown Ctrl+Q (a command of the editor's there) does not close DraftCraft and Ctrl+= or
+/// Ctrl+- does not zoom the whole window; with the drawing back they are DraftCraft's again. A
+/// keyboard zoom made this session outlives a visit to the page.
+#[test]
+fn ctrl_q_and_the_keyboard_zoom_are_the_pages_while_it_is_shown() {
+    let mut h = harness(Some(Rc::default()));
+    let window_keys = |h: &Harness<'_, CadApp>| h.ctx.options(|o| !o.quit_shortcuts.is_empty() && o.zoom_with_keyboard);
+    assert!(window_keys(&h));
+    click_tab(&mut h, TAB_LABEL);
+    assert!(h.state().tracedraft_active());
+    let zoom = h.ctx.zoom_factor();
+    assert!(!press_command(&mut h, egui::Key::Q), "Ctrl+Q on the page closed the window");
+    for key in [egui::Key::Equals, egui::Key::Plus, egui::Key::Minus] {
+        press_command(&mut h, key);
+        assert_eq!(h.ctx.zoom_factor(), zoom, "{key:?} on the page zoomed the window");
+    }
+    assert!(h.state().tracedraft_active(), "still on the page");
+
+    click_tab(&mut h, "Model");
+    assert!(window_keys(&h), "DraftCraft's window keys are back with the drawing");
+    assert!(press_command(&mut h, egui::Key::Q), "Ctrl+Q closes DraftCraft again");
+
+    // egui's keyboard zoom in the drawing (as Ctrl+= leaves it) stays after the page was shown.
+    h.ctx.set_zoom_factor(1.25);
+    h.run_steps(2);
+    click_tab(&mut h, TAB_LABEL);
+    click_tab(&mut h, "Model");
+    assert!((h.ctx.zoom_factor() - 1.25).abs() < 1e-6, "zoom {}", h.ctx.zoom_factor());
+}
+
+/// On macOS the ribbon's top row is the window's title bar: the window buttons sit on its left and
+/// it moves the window. It stays while the page is shown, with the file tabs and the page below
+/// it; where the system draws the title bar, the page starts at the top.
+#[test]
+fn the_title_row_stays_above_the_page_where_it_is_the_window_title_bar() {
+    // The application bar's height (ribbon.rs).
+    const TITLE_ROW: f32 = 32.0;
+    let seen: Rc<Seen> = Rc::default();
+    let mut h = harness(Some(Rc::clone(&seen)));
+    let visual_dir = std::env::var("CRAFT_UI_VISUAL_DIR").ok();
+    if let Some(directory) = &visual_dir {
+        // The ribbon's View tab, with TraceDraft in its Interface panel.
+        h.state_mut().ui.ribbon_tab = "View".into();
+        h.run_steps(3);
+        std::fs::create_dir_all(directory).unwrap();
+        h.render().unwrap().save(format!("{directory}/tracedraft-view-tab.png")).unwrap();
+    }
+    click_tab(&mut h, TAB_LABEL);
+    assert!(h.state().tracedraft_active());
+    if let Some(directory) = &visual_dir {
+        h.render().unwrap().save(format!("{directory}/tracedraft-page-title-row.png")).unwrap();
+    }
+    // Where the system draws the title bar, and without the file tabs, the page starts at the
+    // top of the window's content.
+    h.state_mut().integrated_titlebar = false;
+    h.state_mut().ui.show_file_tabs = false;
+    h.run_steps(3);
+    let top = seen.top.get();
+    // The title row, then the page.
+    h.state_mut().integrated_titlebar = true;
+    h.run_steps(3);
+    assert!((seen.top.get() - (top + TITLE_ROW)).abs() < 0.5, "the page is below the title row: {} (top {top})", seen.top.get());
+    // The title row, the file tabs, then the page.
+    h.state_mut().ui.show_file_tabs = true;
+    h.run_steps(3);
+    let start = h.get_by_role_and_label(Role::Tab, "Start").rect();
+    assert!((start.top() - (top + TITLE_ROW)).abs() < 0.5, "the file tabs are below the title row: {start:?} (top {top})");
+    assert!(seen.top.get() >= start.bottom() - 0.5, "the page is below the file tabs: {}", seen.top.get());
+    assert!(h.state().tracedraft_active());
 }

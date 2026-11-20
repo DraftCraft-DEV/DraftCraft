@@ -12,7 +12,7 @@ How to write it (see AGENTS.md):
 ## Unreleased
 
 ### New
-- TraceDraft, a vector drawing editor, is built into DraftCraft: the TraceDraft1 tab after the layouts at the bottom of the window (or Window › TraceDraft) shows the whole editor, with its menus, tools and dockers, where the drawing was. Model or a layout tab goes back to the drawing.
+- TraceDraft, a vector drawing editor, is built into DraftCraft: the TraceDraft1 tab after the layouts at the bottom of the window (or TraceDraft on the ribbon's View tab, or Window › TraceDraft) shows the whole editor, with its menus, tools and dockers, where the drawing was. Model or a layout tab goes back to the drawing.
 
 ### Improved
 - A new drawing has one layout, so its tabs read Model, Layout1 and TraceDraft1. Drawings that have more layouts still show them all.

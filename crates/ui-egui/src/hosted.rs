@@ -48,8 +48,8 @@ impl crate::CadApp {
     }
 
     /// Show `view` in the central area. Leaving TraceDraft backs up its unsaved work and lets
-    /// DraftCraft put its own theme, animation and interface size back into egui, in case the
-    /// page changed them.
+    /// DraftCraft put its own theme and animation setting back into egui, in case the page
+    /// changed them.
     pub fn set_central(&mut self, view: CentralView) {
         if self.central == view {
             return;
@@ -70,5 +70,27 @@ impl crate::CadApp {
         }
         self.set_central(CentralView::TraceDraft);
         Ok(serde_json::Value::Null)
+    }
+
+    /// Whether the menus and the ribbon offer the command `id`: `ui.tracedraft` only where the app
+    /// hosts the page (the desktop app); elsewhere it is greyed out.
+    pub(crate) fn offers(&self, id: &str) -> bool {
+        id != "ui.tracedraft" || self.hosted.is_some()
+    }
+
+    /// egui acts on two window keys of its own at the end of each frame, after every widget saw
+    /// them: Ctrl+Q (Cmd+Q) closes the window, and Ctrl+= / Ctrl+- / Ctrl+0 zoom the whole
+    /// interface. The page uses those keys for commands of its own, so they are off on the frames
+    /// it is drawn (`page_shown`), and DraftCraft's come back with the drawing.
+    pub(crate) fn hold_window_keys(&mut self, ctx: &egui::Context, page_shown: bool) {
+        if page_shown && self.held_window_keys.is_none() {
+            let keys = ctx.options_mut(|o| (std::mem::take(&mut o.quit_shortcuts), std::mem::replace(&mut o.zoom_with_keyboard, false)));
+            self.held_window_keys = Some(keys);
+        } else if !page_shown && let Some((quit, zoom)) = self.held_window_keys.take() {
+            ctx.options_mut(|o| {
+                o.quit_shortcuts = quit;
+                o.zoom_with_keyboard = zoom;
+            });
+        }
     }
 }

@@ -572,6 +572,8 @@ pub(crate) const TABS: &[RibbonTab] = &[
                         b(Icon::Text, "ui.toggle.cmdline", "Command Line"),
                         b(Icon::Menu, "ui.toggle.menubar", "Menu Bar"),
                     ]),
+                    // The TraceDraft tab's editor, beside the layout tabs (greyed out on the web).
+                    Large(b(Icon::VectorEditor, "ui.tracedraft", "TraceDraft")),
                 ],
             },
         ],
@@ -1123,6 +1125,24 @@ pub fn title_and_ribbon(app: &mut CadApp, ui: &mut egui::Ui) {
     }
 }
 
+/// The application bar's row alone, while the hosted TraceDraft page is shown in a window whose
+/// title bar is this row (macOS, `integrated_titlebar`): the room the window buttons need on the
+/// left, the window's title and the empty bar that moves the window. The application menu, the
+/// Quick Access Toolbar, the search box and the ribbon act on the drawing, so they wait for it.
+pub fn title_row(app: &CadApp, ui: &mut egui::Ui) {
+    let t = Tokens::get();
+    egui::Panel::top("cc_title_row").exact_size(APP_BAR).frame(egui::Frame::NONE.fill(bar_color(&t))).show(ui, |ui| {
+        let bar = ui.max_rect();
+        craft_window::title_bar::empty_area(ui, bar);
+        let p = ui.painter();
+        let galley = p.layout_no_wrap(crate::chrome::window_title(app), FontId::proportional(13.0), t.text);
+        let tx = (bar.center().x - galley.size().x / 2.0).max(bar.left() + MAC_CONTENT_LEFT);
+        if tx + galley.size().x < bar.right() - 8.0 {
+            p.galley(pos2(tx, bar.center().y - galley.size().y / 2.0), galley, t.text);
+        }
+    });
+}
+
 fn app_bar(app: &mut CadApp, ui: &mut egui::Ui, bar: Rect, out: &mut Out) {
     let t = Tokens::get();
     if app.integrated_titlebar || app.own_window_frame {
@@ -1541,8 +1561,7 @@ fn ribbon(app: &mut CadApp, ui: &mut egui::Ui, area: Rect, out: &mut Out) {
 
 fn large_button(app: &CadApp, ui: &mut egui::Ui, p: &egui::Painter, br: Rect, btn: &Btn, id: egui::Id, out: &mut Out) {
     let t = Tokens::get();
-    let _ = app;
-    let enabled = known(btn.cmd);
+    let enabled = known(btn.cmd) && app.offers(btn.cmd);
     let (a, b2) = large_lines(crate::i18n::t(btn.label));
     let color = if enabled { t.text } else { t.text_faint };
     let split = !btn.more.is_empty();
@@ -2008,6 +2027,17 @@ mod tests {
             }
         }
         assert!(missing.is_empty(), "unknown ribbon commands: {missing:?}");
+    }
+
+    /// TraceDraft has its place on the View tab, with its own icon, greyed out where the app hosts
+    /// no editor (the web build).
+    #[test]
+    fn the_view_tab_opens_tracedraft() {
+        let view = TABS.iter().find(|t| t.name == "View").unwrap();
+        let interface = view.panels.iter().find(|p| p.title == "Interface").unwrap();
+        assert!(all_tools(interface).iter().any(|(icon, cmd, _)| *cmd == "ui.tracedraft" && *icon == Icon::VectorEditor));
+        let app = CadApp::new(draftcraft_engine::Session::new(), crate::Services::default());
+        assert!(!app.offers("ui.tracedraft") && app.offers("ui.start"));
     }
 
     #[test]

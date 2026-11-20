@@ -330,6 +330,9 @@ pub struct CadApp {
     shown_animations: Option<bool>,
     /// The interface scale last handed to egui (`None` until the first frame).
     shown_interface_scale: Option<f32>,
+    /// egui's own window keys, its quit shortcut and its keyboard zoom, kept here while the hosted
+    /// page is shown with them turned off ([`Self::hold_window_keys`]).
+    held_window_keys: Option<(Vec<egui::KeyboardShortcut>, bool)>,
     pub frame_ms: f64,
     pub quit_requested: bool,
     /// The app may close although drawings have unsaved changes (they were dealt with, or the
@@ -415,6 +418,7 @@ impl CadApp {
             shown_follows_system: false,
             shown_animations: None,
             shown_interface_scale: None,
+            held_window_keys: None,
             frame_ms: 0.0,
             quit_requested: false,
             quit_confirmed: false,
@@ -439,12 +443,12 @@ impl CadApp {
         }
     }
 
-    /// Forget the theme, animation setting and interface size last handed to egui, so the next
-    /// frame installs DraftCraft's own again (after the hosted page drew with its own).
+    /// Forget the theme and animation setting last handed to egui, so the next frame installs
+    /// DraftCraft's own again (after the hosted page drew with its own). The interface size stays
+    /// as it is: the page never changes it, and a keyboard zoom made this session is the user's.
     pub(crate) fn forget_shown_style(&mut self) {
         self.shown_theme = None;
         self.shown_animations = None;
-        self.shown_interface_scale = None;
     }
 
     /// The interface language shown: the chosen one, or English when this computer has no font
@@ -1022,6 +1026,10 @@ impl CadApp {
         }
         if !hosted_page {
             ribbon::title_and_ribbon(self, ui);
+        } else if self.integrated_titlebar {
+            // macOS: the ribbon's top row is the window's title bar, which keeps clear of the
+            // window buttons and moves the window; the row stays with the page, without the rest.
+            ribbon::title_row(self, ui);
         }
         #[cfg(not(target_arch = "wasm32"))]
         if self.ui.in_window_menu && !self.own_window_frame && !hosted_page {
@@ -1035,18 +1043,23 @@ impl CadApp {
             chrome::file_tabs(self, ui);
         }
         let has_doc = !self.session.docs.is_empty() && !self.ui.start_tab;
+        let mut page_shown = false;
         egui::CentralPanel::default().frame(egui::Frame::NONE.fill(t.canvas)).show(ui, |ui| {
             // Asked again: a tab clicked in the status bar this frame already counts.
             if self.tracedraft_active()
                 && let Some(page) = self.hosted.as_mut()
             {
                 page.ui(ui);
+                page_shown = true;
             } else if has_doc {
                 docking::show(self, ui);
             } else {
                 chrome::start_page(self, ui);
             }
         });
+        // After the page's frame, which puts DraftCraft's options back: egui reads these at the
+        // end of the frame.
+        self.hold_window_keys(ui.ctx(), page_shown);
         self.opening.show(ui.ctx());
         #[cfg(not(target_arch = "wasm32"))]
         updates_ui::show(self, ui.ctx());

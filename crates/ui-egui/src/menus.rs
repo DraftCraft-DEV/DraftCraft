@@ -720,8 +720,8 @@ pub fn tree(app: &CadApp) -> Vec<(String, Vec<Entry>)> {
     }
     for (id, label, menu, sc) in UI_COMMANDS {
         if !menu.is_empty() {
-            // Window ▸ TraceDraft only where the app hosts the editor (the desktop app).
-            add(menu, label, id, *sc, *id != "ui.tracedraft" || app.hosted.is_some());
+            // Window ▸ TraceDraft is greyed out where the app does not host the editor (the web).
+            add(menu, label, id, *sc, app.offers(id));
         }
     }
     if let Some((_, file)) = out.iter_mut().find(|(m, _)| m == "File") {
