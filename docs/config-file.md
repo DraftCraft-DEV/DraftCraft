@@ -29,7 +29,7 @@ follow its `noun + IMPORT/EXPORT` commands such as PDFIMPORT.
 
 The names and values are the ones SETVAR, OPTIONS, PAGESETUP and ALIASEDIT take: a value the
 file holds is checked exactly as if it were typed there. MEASUREINIT in `[profile]` makes new
-drawings metric or imperial; the `[drawing]` section changes the drawing open now. To start every
+drawings metric or imperial (MEASUREINITUNITS: metric ones in millimetres, 4, or centimetres, 5); the `[drawing]` section changes the drawing open now. To start every
 new drawing with the same drawing settings, save a drawing as a template and set QNEWTEMPLATE.
 
 ## Importing

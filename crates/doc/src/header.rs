@@ -165,4 +165,18 @@ impl Header {
         h.set("LIMMAX", HVal::Point(Vec3::new(420.0, 297.0, 0.0)));
         h
     }
+
+    /// The metric header in centimetres (INSUNITS 5): the same A3 limits and printed sizes as the
+    /// millimetre one, so text, linetypes, hatches and dimensions (DIMSCALE) are a tenth as large
+    /// in drawing units.
+    pub fn centimetres() -> Header {
+        let mut h = Header::metric();
+        h.set_i64("INSUNITS", 5);
+        h.set_f64("TEXTSIZE", 0.25);
+        h.set_f64("LTSCALE", 0.1);
+        h.set_f64("HPSCALE", 0.1);
+        h.set_f64("DIMSCALE", 0.1);
+        h.set("LIMMAX", HVal::Point(Vec3::new(42.0, 29.7, 0.0)));
+        h
+    }
 }

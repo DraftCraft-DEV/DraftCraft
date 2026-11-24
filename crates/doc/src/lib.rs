@@ -175,6 +175,28 @@ impl Drawing {
         d.header.set_str("DIMSTYLE", "ISO-25");
         d
     }
+    /// An empty metric drawing in centimetres (#34): the millimetre drawing with its default
+    /// sizes a tenth as large in drawing units (ISO-25 at DIMSCALE 0.1, multileaders, tables), so
+    /// annotation prints at the same size.
+    pub fn new_centimetres() -> Self {
+        let mut d = Drawing::new_metric();
+        d.header = Header::centimetres();
+        d.header.set_str("DIMSTYLE", "ISO-25");
+        for style in d.dim_styles.iter_mut().filter(|s| s.name == "ISO-25") {
+            style.scale = 0.1;
+        }
+        for style in &mut d.mleader_styles {
+            style.arrow_size /= 10.0;
+            style.text_height /= 10.0;
+            style.landing_gap /= 10.0;
+            style.dogleg /= 10.0;
+        }
+        for style in &mut d.table_styles {
+            style.text_height /= 10.0;
+            style.margin /= 10.0;
+        }
+        d
+    }
     fn bare() -> Self {
         Drawing {
             header: Header::default(),

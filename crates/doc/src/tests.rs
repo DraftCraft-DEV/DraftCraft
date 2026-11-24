@@ -714,3 +714,22 @@ fn space_names_its_tab() {
     assert_eq!(p.layout(), Some("Sheet A"));
     assert_eq!(p.tab_name(), "Sheet A");
 }
+
+/// #34: a centimetre drawing prints like the millimetre one, every default size a tenth as large.
+#[test]
+fn new_centimetre_drawing_is_the_metric_one_a_tenth_as_large() {
+    let (mm, cm) = (Drawing::new_metric(), Drawing::new_centimetres());
+    assert_eq!((cm.header.i64("INSUNITS", 0), cm.header.i64("MEASUREMENT", 0)), (5, 1));
+    assert_eq!(cm.header.str("DIMSTYLE", ""), "ISO-25");
+    for (name, k) in [("TEXTSIZE", 0.1), ("LTSCALE", 0.1), ("HPSCALE", 0.1), ("DIMSCALE", 0.1)] {
+        assert!((cm.header.f64(name, 1.0) - mm.header.f64(name, 1.0) * k).abs() < 1e-12, "{name}");
+    }
+    let iso = |d: &Drawing| d.dim_style("ISO-25").map(|s| s.text_height * s.effective_scale(1.0)).unwrap();
+    assert!((iso(&cm) - iso(&mm) / 10.0).abs() < 1e-12);
+    let (ml, ml_mm) = (&cm.mleader_styles[0], &mm.mleader_styles[0]);
+    assert!((ml.text_height - ml_mm.text_height / 10.0).abs() < 1e-12 && (ml.dogleg - ml_mm.dogleg / 10.0).abs() < 1e-12);
+    assert!((cm.table_styles[0].text_height - mm.table_styles[0].text_height / 10.0).abs() < 1e-12);
+    // The Standard dimension style and the tables are as in any new drawing.
+    assert_eq!(cm.dim_style("Standard"), mm.dim_style("Standard"));
+    assert_eq!(cm.layers, mm.layers);
+}

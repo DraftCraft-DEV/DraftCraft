@@ -206,7 +206,9 @@ pub fn specs() -> Vec<CommandSpec> {
             .menu(&["File", "New Drawing..."])
             .key("Cmd+N")
             .alias(&["qnew"])
-            .params("{metric?: bool (default MEASUREINIT), template?: path to a .dwt/.dxf template (\".\" for none; default QNEWTEMPLATE)}")
+            .params(
+                "{units?: in|mm|cm, metric?: bool (default MEASUREINIT; metric is MEASUREINITUNITS, mm or cm), template?: path to a .dwt/.dxf template (\".\" for none; default QNEWTEMPLATE)}",
+            )
             .enabled(always)
             .noundo(),
         CommandSpec::new("open", "Open...", run_open)
@@ -297,9 +299,26 @@ fn run_new(s: &mut Session, p: &Value) -> Result<Value> {
     if let Some(r) = template::run_new(s, p)? {
         return Ok(r);
     }
-    let metric = s.settings.measureinit;
-    let i = s.new_drawing(bool_or(p, "metric", metric));
+    let insunits = match p.get("units") {
+        Some(v) => new_units(v).ok_or_else(|| bad("new", "`units` must be in, mm or cm"))?,
+        None if bool_or(p, "metric", s.settings.measureinit) => i64::from(s.settings.measureinit_units),
+        None => 1,
+    };
+    let i = s.new_drawing_in(insunits);
     Ok(json!({ "index": i, "title": s.docs.get(i).map(|d| d.title.clone()) }))
+}
+
+/// NEW's `units`: inches, millimetres or centimetres, by name or INSUNITS code (1, 4, 5).
+fn new_units(v: &Value) -> Option<i64> {
+    if let Some(code) = v.as_i64() {
+        return [1, 4, 5].contains(&code).then_some(code);
+    }
+    match v.as_str()?.trim().to_ascii_lowercase().as_str() {
+        "in" | "inch" | "inches" => Some(1),
+        "mm" | "millimeter" | "millimeters" | "millimetre" | "millimetres" => Some(4),
+        "cm" | "centimeter" | "centimeters" | "centimetre" | "centimetres" => Some(5),
+        _ => None,
+    }
 }
 
 fn file_name(path: &str) -> String {
