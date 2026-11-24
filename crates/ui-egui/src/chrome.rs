@@ -414,16 +414,17 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     let heading = |y: f32, text: &str| {
         p.text(pos2(x, y), egui::Align2::LEFT_TOP, text, crate::theme::small(), t.text_faint);
     };
-    // New drawing: metric or imperial, as AutoCAD's two starting templates (acadiso, acad). The
-    // one picked is remembered (MEASUREINIT) for a plain New, and is outlined here.
+    // New drawing: metric (millimetres or centimetres) or imperial, as AutoCAD's two starting
+    // templates (acadiso, acad). The one picked is remembered (MEASUREINIT, MEASUREINITUNITS) for
+    // a plain New, and is outlined here.
     let mut y = left.top() + 128.0;
     heading(y, crate::tl!("NEW DRAWING"));
     y += 20.0;
-    let metric_default = app.session.settings.measureinit;
-    for (metric, title, sub, cmd) in [(true, "Metric", "Millimeters", "new.metric"), (false, "Imperial", "Inches", "new.imperial")] {
+    let units_default = default_new_units(app);
+    for (units, title, sub, cmd) in START_NEW {
         let br = Rect::from_min_size(pos2(x, y), vec2(232.0, 48.0));
         let resp = ui.interact(br, ui.scope_id().with(("start", cmd)), Sense::click());
-        let current = metric == metric_default;
+        let current = units == units_default;
         if resp.hovered() {
             p.rect_filled(br, 4.0, t.control_hover.gamma_multiply(0.5));
         }
@@ -437,7 +438,11 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
         p.rect_stroke(br, 4.0, Stroke::new(if current { 1.5 } else { 1.0 }, edge), egui::StrokeKind::Inside);
         p.text(pos2(br.left() + 16.0, br.top() + 16.0), egui::Align2::LEFT_CENTER, crate::i18n::t(title), crate::theme::body(), t.text);
         p.text(pos2(br.left() + 16.0, br.top() + 34.0), egui::Align2::LEFT_CENTER, crate::i18n::t(sub), crate::theme::small(), t.text_dim);
-        let tip = if metric { crate::tl!("A new drawing in millimeters") } else { crate::tl!("A new drawing in inches") };
+        let tip = match units {
+            4 => crate::tl!("A new drawing in millimeters"),
+            5 => crate::tl!("A new drawing in centimeters"),
+            _ => crate::tl!("A new drawing in inches"),
+        };
         if resp.on_hover_text(tip).clicked() {
             action = Some(cmd);
         }
@@ -522,24 +527,40 @@ pub fn start_page(app: &mut CadApp, ui: &mut egui::Ui) {
     }
     match action {
         Some("open") => app.start("ui.open"),
-        Some(cmd @ ("new.metric" | "new.imperial")) => {
-            if let Err(e) = start_new(app, cmd == "new.metric") {
-                app.status = Some((e, crate::now_ms()));
-            }
-        }
         Some("sample") => {
             app.start("ui.sample");
         }
-        _ => {}
+        Some(cmd) => {
+            if let Some(&(units, ..)) = START_NEW.iter().find(|n| n.3 == cmd)
+                && let Err(e) = start_new(app, units)
+            {
+                app.status = Some((e, crate::now_ms()));
+            }
+        }
+        None => {}
     }
 }
 
-/// The Start page's New: remember metric or imperial for later plain News (MEASUREINIT, as
-/// AutoCAD keeps the last template), then open a new drawing in it.
-pub(crate) fn start_new(app: &mut CadApp, metric: bool) -> Result<(), String> {
+/// The Start page's New buttons: INSUNITS (1 inches, 4 millimetres, 5 centimetres), title,
+/// subtitle and the button's id.
+const START_NEW: [(i64, &str, &str, &str); 3] =
+    [(4, "Metric", "Millimeters", "new.metric"), (5, "Metric", "Centimeters", "new.metric.cm"), (1, "Imperial", "Inches", "new.imperial")];
+
+/// The INSUNITS a plain New gives (MEASUREINIT, and MEASUREINITUNITS when that is metric).
+fn default_new_units(app: &CadApp) -> i64 {
+    if app.session.settings.measureinit { i64::from(app.session.settings.measureinit_units) } else { 1 }
+}
+
+/// The Start page's New: remember the units for later plain News (MEASUREINIT and
+/// MEASUREINITUNITS, as AutoCAD keeps the last template), then open a new drawing in them.
+pub(crate) fn start_new(app: &mut CadApp, insunits: i64) -> Result<(), String> {
+    let metric = insunits != 1;
     // New first: SETVAR needs a drawing open, and the Start page may have none.
-    app.run("new", json!({ "metric": metric }))?;
+    app.run("new", json!({ "units": insunits }))?;
     app.run("setvar", json!({ "name": "MEASUREINIT", "value": i32::from(metric) }))?;
+    if metric {
+        app.run("setvar", json!({ "name": "MEASUREINITUNITS", "value": insunits }))?;
+    }
     app.ui.start_tab = false;
     Ok(())
 }
@@ -565,12 +586,33 @@ mod tests {
         // As the desktop app starts: on the Start page, with no drawing open.
         let mut app = CadApp::new(draftcraft_engine::Session::empty(), crate::Services::default());
         app.ui.start_tab = true;
-        start_new(&mut app, false).unwrap();
+        start_new(&mut app, 1).unwrap();
         assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 1, "imperial is inches");
         assert!(!app.session.settings.measureinit);
-        start_new(&mut app, true).unwrap();
+        assert_eq!(default_new_units(&app), 1);
+        start_new(&mut app, 4).unwrap();
         assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 4, "metric is millimeters");
         assert!(app.session.settings.measureinit, "a later plain New stays metric");
+        assert_eq!(default_new_units(&app), 4);
+    }
+
+    #[test]
+    fn the_start_page_offers_centimeters_and_a_plain_new_remembers_them() {
+        // #34: millimeters, centimeters and inches, each outlined when it is what New gives.
+        assert_eq!(START_NEW.map(|n| n.0), [4, 5, 1]);
+        let mut app = CadApp::new(draftcraft_engine::Session::empty(), crate::Services::default());
+        app.ui.start_tab = true;
+        start_new(&mut app, 5).unwrap();
+        let d = app.session.doc().unwrap();
+        assert_eq!((d.header.i64("INSUNITS", -1), d.header.i64("MEASUREMENT", -1)), (5, 1), "centimeters are metric");
+        assert_eq!(default_new_units(&app), 5);
+        app.run("new", json!({})).unwrap();
+        assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 5, "a plain New stays in centimeters");
+        start_new(&mut app, 1).unwrap();
+        start_new(&mut app, 4).unwrap();
+        assert_eq!(default_new_units(&app), 4, "back to millimeters");
+        app.run("new", json!({})).unwrap();
+        assert_eq!(app.session.doc().unwrap().header.i64("INSUNITS", -1), 4);
     }
 
     #[test]

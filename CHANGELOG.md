@@ -11,6 +11,13 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### New
+- The interface is available in Traditional Chinese (繁體中文), with the terms used in Taiwan: choose it in Edit › Interface Language, or let DraftCraft pick it on a computer set to Taiwan, Hong Kong or Macau.
+- The Start page can begin a new drawing in centimeters, beside millimeters and inches; text, dimensions, linetypes and hatches are sized so the drawing prints as a millimeter one does. Options › Units of new drawings offers centimeters too, and a later New remembers the choice.
+
+### Fixed
+- DraftCraft and CADCraft can be installed side by side on Windows: installing one no longer removes the other or fails with an error. Updating DraftCraft still replaces an earlier DraftCraft.
+
 ## 2.2.2
 
 ### New

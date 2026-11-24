@@ -230,6 +230,35 @@ jobs:
           cp "$stage/draftcraft-cli.exe" "$dir/draftcraft-cli.exe"
           (cd dist/zip && 7z a -tzip "../upload/draftcraft-windows-${{ matrix.arch }}.zip" DraftCraft > /dev/null)
           ls -l dist/upload
+      - name: Update over DraftCraft 2.2.2
+        # 2.2.2 and earlier used the upgrade code DraftCraft shared with CADCraft (#35). The new
+        # setup must replace such a copy (as Update Now runs it), leaving one DraftCraft, not two.
+        if: matrix.arch == 'x64'
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $old = Join-Path $env:RUNNER_TEMP 'draftcraft-2.2.2-setup.exe'
+          Invoke-WebRequest 'https://github.com/DraftCraft-DEV/DraftCraft/releases/download/v2.2.2/draftcraft-windows-x64-setup.exe' -OutFile $old
+          $p = Start-Process $old -ArgumentList @('/quiet') -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "installing 2.2.2 failed: $($p.ExitCode)" }
+          $installer = New-Object -ComObject WindowsInstaller.Installer
+          $legacy = '{119D7D76-0167-4A9E-8F37-09DA0235F68E}'
+          $current = '{' + (Get-Content packaging/windows/install-policy.json -Raw | ConvertFrom-Json).upgradeCode + '}'
+          if (@($installer.RelatedProducts($legacy)).Count -ne 1) { throw '2.2.2 did not install' }
+          $setup = (Resolve-Path 'dist/upload/draftcraft-windows-x64-setup.exe').Path
+          $log = Join-Path $env:RUNNER_TEMP 'upgrade.log'
+          $p = Start-Process $setup -ArgumentList @('/quiet', '--scope', 'user', '/log', "`"$log`"") -Wait -PassThru
+          if ($p.ExitCode -ne 0) { if (Test-Path $log) { Get-Content $log -Tail 80 }; throw "update failed: $($p.ExitCode)" }
+          $left = @($installer.RelatedProducts($legacy)).Count
+          $now = @($installer.RelatedProducts($current)).Count
+          if ($left -ne 0) { Get-Content $log -Tail 80; throw "the update left DraftCraft 2.2.2 installed beside the new one" }
+          if ($now -ne 1) { throw "expected one new DraftCraft, found $now" }
+          $exe = (Get-ItemProperty 'HKCU:\Software\Microsoft\Windows\CurrentVersion\App Paths\draftcraft.exe').'(default)'
+          if (-not (Test-Path $exe)) { throw "App Paths names a missing exe after the update: $exe" }
+          $msi = (Resolve-Path 'dist/release/draftcraft-*-windows-x64.msi').Path
+          $p = Start-Process msiexec.exe -ArgumentList @('/x', "`"$msi`"", '/qn') -Wait -PassThru
+          if ($p.ExitCode -ne 0) { throw "uninstall failed: $($p.ExitCode)" }
+          Write-Output 'the new setup replaced DraftCraft 2.2.2 and left one copy'
       - name: Install, check and uninstall the installer
         # A real install on this throwaway runner, for this account (no administrator), as a
         # double-click with the default choice does, through the setup .exe people download.

@@ -1,7 +1,7 @@
 # Interface languages
 
 Choose **Edit → Interface Language** and select **Auto (system language)**, **English**,
-**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), or **Ελληνικά** (Greek).
+**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **繁體中文** (Traditional Chinese), **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), or **Ελληνικά** (Greek).
 The interface updates without restarting, including the native macOS menus.
 The choice is saved with the other interface preferences (`draftcraft.prefs`, beside the theme):
 eframe storage on the desktop, browser local storage on the web. Installations without a saved
@@ -11,7 +11,9 @@ Auto uses the first supported language in the operating system's preferred local
 browser's `navigator.languages` on the web. BCP 47 and POSIX tags select their primary language:
 `uk-UA` → `uk`, `de_AT.UTF-8` → `de`, `es-MX` → `es`, `pt_BR.UTF-8` → `pt-BR`,
 `cs-CZ` and `cs_CZ.UTF-8` → `cs`, `it-IT` and `it_CH.UTF-8` → `it`, `ko-KR` and `ko_KR.UTF-8` → `ko`,
-`sv-SE`, `sv-FI` and `sv_SE.UTF-8` → `sv`, `hu-HU` and `hu_HU.UTF-8` → `hu`, `tr-TR` and `tr_TR.UTF-8` → `tr`. Unsupported languages fall back to English.
+`sv-SE`, `sv-FI` and `sv_SE.UTF-8` → `sv`, `hu-HU` and `hu_HU.UTF-8` → `hu`, `tr-TR` and `tr_TR.UTF-8` → `tr`. Chinese also follows its
+script or region: `zh-TW`, `zh-HK`, `zh-MO`, `zh-Hant` and `zh_TW.UTF-8` → `zh-TW` (Traditional), any other
+`zh` tag → `zh` (Simplified). Unsupported languages fall back to English.
 Set `DRAFTCRAFT_LOCALE=cs-CZ` to override the desktop's locale for a launch.
 An explicit saved language choice takes precedence over that override.
 
@@ -22,7 +24,7 @@ Automation can select the language through the existing control channel:
 ```
 
 The `ui.set` method also accepts `{"interfaceLanguage":"cs"}`. Supported values are `auto`,
-`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, and `el`; invalid values are rejected without changing the current
+`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `zh-TW`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, and `el`; invalid values are rejected without changing the current
 selection. Resetting palettes keeps the language choice.
 
 ## Translation coverage

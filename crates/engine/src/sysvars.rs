@@ -68,6 +68,7 @@ const SESSION_VARS: &[&str] = &[
     "MAXARRAY",
     "ZOOMFACTOR",
     "MEASUREINIT",
+    "MEASUREINITUNITS",
     "LASTPOINT",
     "AREA",
     "PERIMETER",
@@ -149,6 +150,7 @@ pub fn get(s: &Session, name: &str) -> Option<Value> {
         "MAXARRAY" => json!(st.maxarray),
         "ZOOMFACTOR" => json!(st.zoomfactor),
         "MEASUREINIT" => json!(i32::from(st.measureinit)),
+        "MEASUREINITUNITS" => json!(st.measureinit_units),
         "LASTPOINT" => json!([s.last_point.x, s.last_point.y, 0.0]),
         "AREA" => json!(s.area),
         "PERIMETER" => json!(s.perimeter),
@@ -379,6 +381,7 @@ pub fn set(s: &mut Session, name: &str, v: &Value) -> Result<()> {
         "MAXARRAY" => st.maxarray = as_f64(v).ok_or_else(bad)?.clamp(100.0, 10_000_000.0) as u64,
         "ZOOMFACTOR" => st.zoomfactor = as_i(v).filter(|z| (3..=100).contains(z)).ok_or_else(bad)? as u32,
         "MEASUREINIT" => st.measureinit = small(v, 1).ok_or_else(bad)? == 1,
+        "MEASUREINITUNITS" => st.measureinit_units = small(v, 5).filter(|u| matches!(u, 4 | 5)).ok_or_else(bad)?,
         "FONTALT" => draftcraft_fonts::ttf::set_font_alt(v.as_str().ok_or_else(bad)?),
         "FONTFALLBACK" => draftcraft_fonts::ttf::set_fallback_fonts(v.as_str().ok_or_else(bad)?),
         "SAVETIME" => crate::autosave::set_savetime(

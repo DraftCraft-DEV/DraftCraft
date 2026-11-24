@@ -53,6 +53,7 @@ pub const PROFILE_VARS: &[&str] = &[
     "PICKDRAG",
     "MAXARRAY",
     "MEASUREINIT",
+    "MEASUREINITUNITS",
 ];
 
 /// The most profile entries [`restore`] reads (a saved profile is untrusted input).

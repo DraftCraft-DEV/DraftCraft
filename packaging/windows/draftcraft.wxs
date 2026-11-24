@@ -3,12 +3,19 @@
   <?ifndef HasCraftFontLicences ?>
   <?define HasCraftFontLicences=0 ?>
   <?endif?>
-  <Package Name="DraftCraft" Manufacturer="Skryx Dev" Version="$(var.Version)" UpgradeCode="119D7D76-0167-4A9E-8F37-09DA0235F68E" Scope="perUserOrMachine" Compressed="yes" Language="1033">
+  <Package Name="DraftCraft" Manufacturer="Skryx Dev" Version="$(var.Version)" UpgradeCode="858EACB4-C563-429E-B90A-2E021E448E54" Scope="perUserOrMachine" Compressed="yes" Language="1033">
     <SummaryInformation Description="DraftCraft computer-aided design" Manufacturer="Skryx Dev" />
     <?include $(sys.SOURCEFILEDIR)install-policy.wxi?>
     <!-- Same-version upgrades let successive pre-releases of one X.Y.Z replace each other
          (MSI versions are numeric, so 1.2.3-rc.1 and 1.2.3-rc.2 are both 1.2.3). -->
     <MajorUpgrade AllowSameVersionUpgrades="yes" DowngradeErrorMessage="A newer version of DraftCraft is already installed." />
+    <!-- DraftCraft 1.0.0 to 2.2.2 shipped with CADCraft's upgrade code (and component GUIDs), so
+         each installer took the other for an older or newer copy of itself and removed it or
+         refused to install (#35). This package has its own identity; it still replaces those
+         DraftCraft versions by their version range, which no CADCraft release (0.x) falls in. -->
+    <Upgrade Id="119D7D76-0167-4A9E-8F37-09DA0235F68E">
+      <UpgradeVersion Minimum="1.0.0" IncludeMinimum="yes" Maximum="2.2.2" IncludeMaximum="yes" MigrateFeatures="yes" Property="DRAFTCRAFTSHAREDCODE" />
+    </Upgrade>
     <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
 
     <Icon Id="DraftcraftIcon.ico" SourceFile="$(var.IconPath)" />
@@ -56,7 +63,7 @@
     </ComponentGroup>
     <?endif?>
     <ComponentGroup Id="DraftcraftFiles" Directory="INSTALLFOLDER">
-      <Component Id="DraftcraftApp" Guid="2AC18056-48DE-4079-AB79-4FDEF4FBB075">
+      <Component Id="DraftcraftApp" Guid="DCAD88F2-B8DE-4F1A-A1A5-5CC2F3854C68">
         <File Id="DraftcraftExe" Source="$(var.BinDir)\draftcraft.exe" KeyPath="yes">
           <Shortcut Id="StartMenuShortcut" Directory="ProgramMenuFolder" Name="DraftCraft" Description="DraftCraft computer-aided design" WorkingDirectory="INSTALLFOLDER" Advertise="yes" Icon="DraftcraftIcon.ico" IconIndex="0" />
         </File>
@@ -91,7 +98,7 @@
       <!-- Optional desktop shortcut, removed on uninstall. A non-advertised shortcut needs a registry
            key path, and one in a profile folder (DesktopFolder, even though ALLUSERS=1 makes it the
            Public desktop) must be under HKCU (ICE38, ICE43, ICE57). -->
-      <Component Id="DesktopShortcut" Directory="DesktopFolder" Guid="76029CD7-EBDB-420F-AC34-FF0E82A99E32" Condition="DESKTOPSHORTCUT = &quot;1&quot;">
+      <Component Id="DesktopShortcut" Directory="DesktopFolder" Guid="75DCDD09-131E-42A5-AE8D-30F93B9A8531" Condition="DESKTOPSHORTCUT = &quot;1&quot;">
         <Shortcut Id="DesktopShortcut" Name="DraftCraft" Description="DraftCraft computer-aided design" Target="[INSTALLFOLDER]draftcraft.exe" WorkingDirectory="INSTALLFOLDER" Icon="DraftcraftIcon.ico" IconIndex="0" />
         <RegistryValue Root="HKMU" Key="Software\Skryx Dev\DraftCraft" Name="DesktopShortcut" Value="1" Type="string" KeyPath="yes" />
       </Component>
