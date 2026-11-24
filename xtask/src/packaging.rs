@@ -35,7 +35,7 @@ mod tests {
         let code = attr(&wxs, "<Package ", "UpgradeCode");
         assert_eq!(policy["upgradeCode"], code);
         // No upgrade code or component GUID is CADCraft's, except the one Upgrade row below.
-        let package_and_components: String = wxs.lines().filter(|l| !l.contains("<Upgrade Code=")).collect();
+        let package_and_components: String = wxs.lines().filter(|l| !l.contains("<Upgrade Id=")).collect();
         for id in CADCRAFT_IDS {
             assert!(!package_and_components.to_ascii_uppercase().contains(id), "{id} is CADCraft's");
         }
@@ -43,7 +43,7 @@ mod tests {
         // from 1.0.0 (the first release; CADCraft's are 0.x) to 2.2.2 (the last with that code).
         let legacy = &policy["legacyUpgrade"];
         assert_eq!(legacy["code"], CADCRAFT_IDS[0]);
-        assert_eq!(attr(&wxs, "<Upgrade ", "Code"), CADCRAFT_IDS[0]);
+        assert_eq!(attr(&wxs, "<Upgrade ", "Id"), CADCRAFT_IDS[0]);
         let row = &wxs[wxs.find("<Upgrade ").unwrap()..];
         for (name, value) in [("Minimum", &legacy["minimum"]), ("Maximum", &legacy["maximum"])] {
             assert_eq!(attr(row, "<UpgradeVersion ", name), value.as_str().unwrap(), "{name}");

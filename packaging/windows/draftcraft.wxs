@@ -13,7 +13,7 @@
          each installer took the other for an older or newer copy of itself and removed it or
          refused to install (#35). This package has its own identity; it still replaces those
          DraftCraft versions by their version range, which no CADCraft release (0.x) falls in. -->
-    <Upgrade Code="119D7D76-0167-4A9E-8F37-09DA0235F68E">
+    <Upgrade Id="119D7D76-0167-4A9E-8F37-09DA0235F68E">
       <UpgradeVersion Minimum="1.0.0" IncludeMinimum="yes" Maximum="2.2.2" IncludeMaximum="yes" MigrateFeatures="yes" Property="DRAFTCRAFTSHAREDCODE" />
     </Upgrade>
     <MediaTemplate EmbedCab="yes" CompressionLevel="high" />
