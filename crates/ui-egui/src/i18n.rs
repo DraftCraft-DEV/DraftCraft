@@ -33,6 +33,8 @@ pub enum Preference {
     French,
     #[serde(rename = "zh")]
     Chinese,
+    #[serde(rename = "zh-TW")]
+    TraditionalChinese,
     #[serde(rename = "it")]
     Italian,
     #[serde(rename = "ko")]
@@ -52,7 +54,7 @@ pub enum Preference {
 }
 
 impl Preference {
-    pub const ALL: [Self; 19] = [
+    pub const ALL: [Self; 20] = [
         Self::Auto,
         Self::English,
         Self::Greek,
@@ -64,6 +66,7 @@ impl Preference {
         Self::Russian,
         Self::French,
         Self::Chinese,
+        Self::TraditionalChinese,
         Self::Italian,
         Self::Korean,
         Self::Swedish,
@@ -113,6 +116,7 @@ impl Preference {
             Self::Russian => "ru",
             Self::French => "fr",
             Self::Chinese => "zh",
+            Self::TraditionalChinese => "zh-TW",
             Self::Italian => "it",
             Self::Korean => "ko",
             Self::Swedish => "sv",
@@ -137,6 +141,7 @@ impl Preference {
             Self::Russian => "Русский",
             Self::French => "Français",
             Self::Chinese => "简体中文",
+            Self::TraditionalChinese => "繁體中文",
             Self::Italian => "Italiano",
             Self::Korean => {
                 if crate::theme::shows_hangul(CURRENT.with(Cell::get)) {
@@ -182,6 +187,7 @@ impl Preference {
             Self::Russian => "ru",
             Self::French => "fr",
             Self::Chinese => "zh",
+            Self::TraditionalChinese => "zh-TW",
             Self::Italian => "it",
             Self::Korean => "ko",
             Self::Swedish => "sv",
@@ -206,7 +212,7 @@ pub struct Language {
     catalog: OnceLock<Catalog<'static>>,
 }
 
-pub static LANGUAGES: [Language; 18] = [
+pub static LANGUAGES: [Language; 19] = [
     Language { code: "en", name: "English", source: "", plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     // Greek: one for exactly 1; other for zero and all other integer counts.
     Language {
@@ -237,6 +243,15 @@ pub static LANGUAGES: [Language; 18] = [
     // Chinese has no grammatical plural: both `@plural` forms read the same. Its glyphs come from
     // an installed CJK font (`theme::cjk_font`); without one the interface stays English.
     Language { code: "zh", name: "简体中文", source: include_str!("i18n/zh.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Traditional Chinese, as written in Taiwan (#33): the same font needs and plural forms.
+    Language {
+        code: "zh-TW",
+        name: "繁體中文",
+        source: include_str!("i18n/zh_tw.tsv"),
+        plural: plural_en,
+        plural_forms: 2,
+        catalog: OnceLock::new(),
+    },
     // Italian integer plurals (CLDR `it`) follow the English rule: one (1), other.
     Language { code: "it", name: "Italiano", source: include_str!("i18n/it.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     // Korean has one integer plural form and needs a Hangul-capable interface font.
@@ -263,9 +278,17 @@ pub static LANGUAGES: [Language; 18] = [
 ];
 
 /// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8` and `pt_BR.UTF-8`.
-/// A catalog is chosen by the tag's primary language, so any `pt-*` tag selects `pt-BR`.
+/// A catalog is chosen by the tag's primary language, so any `pt-*` tag selects `pt-BR`; Chinese
+/// also by its script or region: Traditional (`zh-TW`) for `Hant`, Taiwan, Hong Kong and Macau,
+/// else Simplified (`zh`).
 pub fn locale_language(tag: &str) -> Option<&'static str> {
+    // The language, script and region subtags: a POSIX codeset (`.UTF-8`) or modifier (`@…`) ends them.
+    let subtags = tag.trim().split(['.', '@']).next().unwrap_or_default();
     let primary = tag.trim().split(['-', '_', '.', '@']).next()?;
+    if primary.eq_ignore_ascii_case("zh") {
+        let has = |names: &[&str]| subtags.split(['-', '_']).skip(1).any(|s| names.iter().any(|n| s.eq_ignore_ascii_case(n)));
+        return Some(if !has(&["Hans"]) && has(&["Hant", "TW", "HK", "MO"]) { "zh-TW" } else { "zh" });
+    }
     LANGUAGES.iter().find(|l| l.code.split('-').next().is_some_and(|p| p.eq_ignore_ascii_case(primary))).map(|l| l.code)
 }
 

@@ -1,7 +1,12 @@
 {
   "id": "draftcraft",
   "name": "DraftCraft",
-  "upgradeCode": "119D7D76-0167-4A9E-8F37-09DA0235F68E",
+  "upgradeCode": "858EACB4-C563-429E-B90A-2E021E448E54",
+  "legacyUpgrade": {
+    "code": "119D7D76-0167-4A9E-8F37-09DA0235F68E",
+    "minimum": "1.0.0",
+    "maximum": "2.2.2"
+  },
   "sources": [
     "draftcraft.wxs"
   ],

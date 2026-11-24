@@ -88,6 +88,17 @@ try {
     throw 'Policy regression: new packages must default to the per-user dual-scope context.'
   }
   if ($properties['UpgradeCode'].Trim('{}') -ne $policy.upgradeCode) { throw 'The existing upgrade identity must not change.' }
+  # DraftCraft 1.0.0-2.2.2 shared CADCraft's upgrade code (#35): those versions are replaced by
+  # their version range only, both ends inclusive, so a CADCraft install (0.x) is never touched.
+  $legacy = $policy.legacyUpgrade
+  $legacyRows = @(Read-Rows $database 'SELECT `UpgradeCode`, `VersionMin`, `VersionMax`, `Attributes`, `ActionProperty` FROM `Upgrade`' 5 |
+    Where-Object { $_[0].Trim('{}') -eq $legacy.code })
+  if ($legacyRows.Count -ne 1) { throw 'Exactly one Upgrade row must replace the DraftCraft versions that shared an upgrade code.' }
+  $row = $legacyRows[0]
+  $inclusive = 256 -bor 512
+  if ([version]$row[1] -ne [version]$legacy.minimum -or [version]$row[2] -ne [version]$legacy.maximum -or ([int]$row[3] -band $inclusive) -ne $inclusive -or ([int]$row[3] -band 2)) {
+    throw "The shared upgrade code must be removed for DraftCraft $($legacy.minimum)-$($legacy.maximum) only, never CADCraft's versions."
+  }
   $directories = @{}
   foreach ($row in (Read-Rows $database 'SELECT `Directory`, `Directory_Parent`, `DefaultDir` FROM `Directory`' 3)) {
     $directories[$row[0]] = @($row[1], $row[2])

@@ -25,6 +25,9 @@ pub struct Settings {
     /// MEASUREINIT: the units of a new drawing made without a template (NEW, QNEW and the first
     /// drawing at startup): `false` (0, the default) imperial, `true` (1) metric.
     pub measureinit: bool,
+    /// MEASUREINITUNITS (DraftCraft's): the INSUNITS of such a drawing when it is metric, 4
+    /// millimetres (the default) or 5 centimetres (#34).
+    pub measureinit_units: u8,
     /// -VIEW sEttings > Layer snapshot: named views save the layer settings with them.
     pub view_layer_snapshot: bool,
     pub dynmode: bool,
@@ -147,6 +150,7 @@ impl Default for Settings {
             gridmajor: 5,
             zoomfactor: 60,
             measureinit: false,
+            measureinit_units: 4,
             view_layer_snapshot: true,
             dynmode: true,
             dyndigrip: 31,

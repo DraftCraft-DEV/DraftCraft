@@ -268,12 +268,16 @@ fn save_version_row(ui: &mut egui::Ui, app: &CadApp, changes: &mut Map<String, V
 fn units_row(ui: &mut egui::Ui, app: &CadApp, changes: &mut Map<String, Value>) {
     ui.label(crate::tl!("Units of new drawings"));
     ui.horizontal(|ui| {
-        let metric = app.session.settings.measureinit;
-        if ui.radio(!metric, crate::tl!("Imperial (inches)")).clicked() && metric {
-            changes.insert("MEASUREINIT".into(), json!(0));
-        }
-        if ui.radio(metric, crate::tl!("Metric (millimetres)")).clicked() && !metric {
-            changes.insert("MEASUREINIT".into(), json!(1));
+        let st = &app.session.settings;
+        let current = if st.measureinit { i64::from(st.measureinit_units) } else { 1 };
+        for (units, label) in [(1, crate::tl!("Imperial (inches)")), (4, crate::tl!("Metric (millimetres)")), (5, crate::tl!("Metric (centimetres)"))]
+        {
+            if ui.radio(current == units, label).clicked() && current != units {
+                changes.insert("MEASUREINIT".into(), json!(i32::from(units != 1)));
+                if units != 1 {
+                    changes.insert("MEASUREINITUNITS".into(), json!(units));
+                }
+            }
         }
     });
 }

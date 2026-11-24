@@ -24,6 +24,10 @@ The script builds x64, x86 and arm64 packages with deliberately non-executable p
 uses the actual package source and compiled database. A safe Windows Installer session checks
 24 scope/registration/maintenance cases, remembered and explicit custom folders, sequencing,
 upgrade identity and the original registration inventory recorded in `install-policy.json`.
+DraftCraft 1.0.0 to 2.2.2 were built with CADCraft's upgrade code, so the two apps replaced or
+blocked each other (#35). Packages now have their own upgrade code and replace those DraftCraft
+versions through an Upgrade row limited to 1.0.0–2.2.2 (`legacyUpgrade`), which no CADCraft
+release (0.x) falls in; the checker and `cargo xtask` tests keep it that way.
 The release packaging script runs the compiled checker before signing. Packaging CI runs the
 small fixture builds without compiling the Rust application.
 

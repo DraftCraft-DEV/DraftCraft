@@ -202,7 +202,8 @@ fn assert_additional_locale_aliases() {
         ("bs", &["bs", "bs-BA", "bs_BA.UTF-8", "BS-ba", " bs-BA ", "bs-Latn-BA"]),
         ("vi", &["vi", "vi-VN", "vi_VN.UTF-8", "VI-vn", " vi-VN "]),
         ("el", &["el", "el-GR", "el_GR.UTF-8", "EL-cy"]),
-        ("zh", &["zh", "zh-CN"]),
+        ("zh", &["zh", "zh-CN", "zh_CN.UTF-8", "zh-SG", "zh-Hans", "zh-Hans-CN", "zh-Hans-HK", "zh_CN@pinyin"]),
+        ("zh-TW", &["zh-TW", "zh_TW.UTF-8", "ZH-tw", " zh-TW ", "zh-HK", "zh_HK.UTF-8", "zh-MO", "zh-Hant", "zh-Hant-TW", "zh-Hant-HK"]),
     ] {
         for tag in tags {
             assert_eq!(locale_language(tag), Some(code), "{tag}");
@@ -481,7 +482,7 @@ fn dialogs_render_in_every_language_and_keep_their_source_ids() {
 #[test]
 fn interface_fonts_cover_every_letter_in_each_catalog() {
     for language in translated() {
-        let extra_font = ["ko", "zh", "ar", "vi"].contains(&language.code);
+        let extra_font = ["ko", "zh", "zh-TW", "ar", "vi"].contains(&language.code);
         if extra_font && !crate::theme::can_show(language.code) {
             continue;
         }
@@ -607,6 +608,32 @@ fn production_font_chain_covers_latin_and_shortcut_symbols() {
 #[test]
 fn chinese_menus_and_commands_are_fully_translated() {
     assert_eq!(missing_commands_menus_tools_and_snap_labels("zh"), Vec::<String>::new());
+}
+
+/// #33: Traditional Chinese (Taiwan) is its own interface language, with every menu and command
+/// translated, in Traditional characters, chosen by Taiwan, Hong Kong and Macau locales.
+#[test]
+fn traditional_chinese_is_complete_and_written_in_traditional_characters() {
+    assert_eq!(missing_commands_menus_tools_and_snap_labels("zh-TW"), Vec::<String>::new());
+    assert!(missing_marked_ui_literals("zh-TW").len() <= missing_marked_ui_literals("zh").len());
+    assert_eq!(tr("zh-TW", "Layer"), "圖層");
+    assert_eq!(tr("zh-TW", "Object Snap"), "物件鎖點");
+    assert_eq!(tr("zh-TW", "Centimeters"), "公分");
+    // Not one Simplified-only character among the most common ones.
+    let catalog: String = LANGUAGES.iter().find(|l| l.code == "zh-TW").map(|l| l.source).unwrap_or_default().into();
+    let simplified = "与个为么义于们会传体关内写决几击则创删别务动区单历参双发变号后图圆块处备复头对导将层带应开强当录态总扩换数断无时显机来极构标样检点电画确离积称类线组经结绘统续编缩网联节范获装见观规视览计认记设识试该语误请读调资转软载输边达过运还这进连选释长闭问间页项须预题颜";
+    let found: Vec<char> = catalog
+        .lines()
+        .filter(|l| !l.starts_with('#'))
+        .flat_map(|l| l.split('\t').nth(2).unwrap_or_default().chars())
+        .filter(|c| simplified.contains(*c))
+        .collect();
+    assert!(found.is_empty(), "Simplified characters in zh_tw.tsv: {found:?}");
+    let mut app = CadApp::new(Session::new(), Services::default());
+    let r = app.run("ui.language", json!({"lang": "zh-TW"})).unwrap();
+    assert_eq!(r["interfaceLanguage"], "zh-TW");
+    assert_eq!(app.language(), if crate::theme::can_show("zh-TW") { "zh-TW" } else { "en" });
+    assert_eq!(Preference::TraditionalChinese.native_name(), "繁體中文");
 }
 
 /// Bosnian counts: 1, 21 `one`; 2–4, 22–24 (not 12–14) `few`; everything else `other`.

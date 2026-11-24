@@ -3,10 +3,20 @@ use super::{DocState, Drawing, EngineError, Result, Session, Space, Value, Vec2,
 impl Session {
     /// Append a new untitled drawing (`DrawingN`, metric or imperial default view), end a running command, make it active, bump the document epoch and return its index.
     pub fn new_drawing(&mut self, metric: bool) -> usize {
+        self.new_drawing_in(if metric { 4 } else { 1 })
+    }
+
+    /// [`Session::new_drawing`] in the units of an INSUNITS code: 1 inches, 5 centimetres, any
+    /// other millimetres. A metric drawing opens on its A3 limits.
+    pub fn new_drawing_in(&mut self, insunits: i64) -> usize {
         self.untitled_counter += 1;
-        let d = if metric { Drawing::new_metric() } else { Drawing::new_imperial() };
+        let (d, a3) = match insunits {
+            1 => (Drawing::new_imperial(), None),
+            5 => (Drawing::new_centimetres(), Some(0.1)),
+            _ => (Drawing::new_metric(), Some(1.0)),
+        };
         let mut st = DocState::new(d, &format!("Drawing{}", self.untitled_counter), None);
-        st.set_view_quiet(if metric { View { center: Vec2::new(210.0, 148.5), height: 297.0, twist: 0.0 } } else { View::default() });
+        st.set_view_quiet(a3.map_or_else(View::default, |k| View { center: Vec2::new(210.0 * k, 148.5 * k), height: 297.0 * k, twist: 0.0 }));
         self.end_running();
         self.docs.push(st);
         self.active = self.docs.len() - 1;

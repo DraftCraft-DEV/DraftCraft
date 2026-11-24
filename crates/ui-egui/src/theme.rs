@@ -348,6 +348,10 @@ pub fn install_fonts(ctx: &egui::Context, language: &str) {
         if !chinese {
             paths.extend(japanese_font());
         }
+        // 繁體中文: a Traditional Chinese face first, for its glyph forms, where there is one.
+        if language == "zh-TW" {
+            paths.extend(traditional_chinese_font());
+        }
         paths.extend(cjk_font());
         paths.dedup();
         added.extend(
@@ -487,7 +491,10 @@ fn embedded_ui_faces<'a>(faces: &[&'a draftcraft_fonts::CraftFont], language: &s
     let cjk = |f: &&draftcraft_fonts::CraftFont| f.style == "Regular" && f.scripts.iter().any(|s| matches!(*s, "Jpan" | "Hans" | "Hant"));
     let mut out: Vec<_> = faces.iter().copied().filter(cjk).collect();
     out.sort_by_key(|f| !f.family.contains("Gothic") && !f.family.contains("Sans"));
-    if language.starts_with("zh") {
+    if language == "zh-TW" {
+        // A Simplified face before a Japanese one: it has more Traditional characters.
+        out.sort_by_key(|f| (!f.scripts.contains(&"Hant"), !f.scripts.contains(&"Hans")));
+    } else if language.starts_with("zh") {
         out.sort_by_key(|f| !f.scripts.contains(&"Hans"));
     }
     if language == "ar" {
@@ -537,6 +544,29 @@ pub fn cjk_font() -> Option<&'static std::path::Path> {
                         "/usr/share/fonts/truetype/wqy/wqy-zenhei.ttc",
                         "/usr/share/fonts/truetype/droid/DroidSansFallbackFull.ttf",
                     ]
+                };
+                candidates.iter().map(std::path::PathBuf::from).find(|p| p.is_file())
+            })
+            .as_deref()
+    }
+    #[cfg(target_arch = "wasm32")]
+    None
+}
+
+/// An installed Traditional Chinese font, put ahead of [`cjk_font`] in the 繁體中文 interface so
+/// its characters take the forms used in Taiwan; fonts are never bundled. Checked once.
+pub fn traditional_chinese_font() -> Option<&'static std::path::Path> {
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        static FOUND: std::sync::OnceLock<Option<std::path::PathBuf>> = std::sync::OnceLock::new();
+        FOUND
+            .get_or_init(|| {
+                let candidates: &[&str] = if cfg!(target_os = "macos") {
+                    &[]
+                } else if cfg!(windows) {
+                    &["C:\\Windows\\Fonts\\msjh.ttc", "C:\\Windows\\Fonts\\msjh.ttf", "C:\\Windows\\Fonts\\mingliu.ttc"]
+                } else {
+                    &["/usr/share/fonts/opentype/noto/NotoSansCJKtc-Regular.otf", "/usr/share/fonts/noto-cjk/NotoSansCJKtc-Regular.otf"]
                 };
                 candidates.iter().map(std::path::PathBuf::from).find(|p| p.is_file())
             })
@@ -734,7 +764,9 @@ pub fn can_show(language: &str) -> bool {
         "ko" => shows_hangul("ko"),
         "vi" => vietnamese_font().is_some(),
         "ar" => arabic_font().is_some() || embedded_script("Arab"),
-        l if l.starts_with("zh") => cjk_font().is_some() || embedded_script("Hans") || embedded_script("Hant"),
+        l if l.starts_with("zh") => {
+            cjk_font().is_some() || traditional_chinese_font().is_some() || embedded_script("Hans") || embedded_script("Hant")
+        }
         _ => true,
     }
 }
@@ -848,6 +880,12 @@ mod tests {
         assert_eq!(families(&super::embedded_ui_faces(&faces, "en")), ["BIZ UDPGothic", "Han Test Face"]);
         // A Chinese interface takes the Han face first: a Japanese face lacks 图 园 测.
         assert_eq!(families(&super::embedded_ui_faces(&faces, "zh")), ["Han Test Face", "BIZ UDPGothic"]);
+        // 繁體中文 takes a Traditional face first when there is one, else as Chinese (#33).
+        let traditional = face("Hant Test Face", &["Hant", "Latn"]);
+        let with_hant = [&japanese, &chinese, &traditional];
+        assert_eq!(families(&super::embedded_ui_faces(&with_hant, "zh-TW")), ["Hant Test Face", "Han Test Face", "BIZ UDPGothic"]);
+        assert_eq!(families(&super::embedded_ui_faces(&with_hant, "zh")), ["Han Test Face", "BIZ UDPGothic", "Hant Test Face"]);
+        assert_eq!(families(&super::embedded_ui_faces(&faces, "zh-TW")), ["Han Test Face", "BIZ UDPGothic"]);
         // العربية adds the Arabic face, after the CJK ones egui's bundled faces have no glyphs for.
         assert_eq!(families(&super::embedded_ui_faces(&faces, "ar")), ["BIZ UDPGothic", "Han Test Face", "Noto Sans Arabic"]);
         // Another weight is a style of a face, not an interface face of its own.

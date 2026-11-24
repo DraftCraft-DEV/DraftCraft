@@ -6,6 +6,7 @@
 mod assets;
 mod ico;
 mod layers;
+mod packaging;
 mod parity;
 mod stats;
 mod version;
