@@ -9,6 +9,56 @@ We have no shared git history with it: our history starts with a squashed import
 That rules out `git merge`; everything comes over as brand-rewritten snapshots merged per file, or as
 hand ports.
 
+## Revised policy (2026-11-26): conservative pulls
+
+This replaces the "catch up on everything" approach in sections 3.1 to 4 below. Those sections stay as the record of the first
+analysis; where they disagree with this one, this one wins.
+
+**CADCraft is a sibling, not a reference.** It was our upstream, not our standard. A change comes over only when all three hold:
+
+1. **We have the problem.** We reproduce the bug in DraftCraft (a test that fails here), or it is a feature we lack and decide we want.
+2. **It fits our design.** We port the fix into our own code. We do not take their file, structure or module layout to get it.
+3. **We can prove it here.** It lands with its test passing in our tree, and our own tests still pass.
+
+Never pulled: their DWG and DXF codec structure (`craft-dxf`, `craft-dwg`, `acadrust`), their UI runtime and window layout, their
+naming policy ("Additional Tools"), their CI and nightly pipeline, their PDF import, and whole-file replacements of our catalogs.
+
+### Where we diverge, and what it means for pulls
+
+| Area | DraftCraft | CADCraft | Rule |
+|---|---|---|---|
+| DWG | Our native codec (`crates/dwg`): every version, read and write, runs in WASM, no third-party code | `craft-dwg` on `acadrust` (MPL-2.0, cross-checked against LibreDWG), writes R2000 only | **Ours alone. Never pulled, not even fixes.** |
+| DXF | Our reader and writer (`crates/dxf`, `crates/io`), the same lineage at the fork | Moved to `craft-dxf` in craft-libs | Their fixes are re-done by hand in ours after we reproduce the bug |
+| Interface | Windows-style ribbon, our theme, What's New | Their own chrome, moving to an unmerged `craft-ui` runtime | UI is designed by us (SkryxDev). Upstream UI is at most a reference for behaviour |
+| Dynamic blocks | Authoring is ours (`bparameter`, `baction`); parametric design will be ours | Execution side only | Execution was taken (done); authoring and parametric stay ours |
+| PDF | Our underlays and PDFIMPORT | Separate PDF import | Not pulled |
+| Plot output | Keeps curves as Béziers (smaller, exact) | Flattens to line segments | We are ahead; not pulled |
+| DWG/DXF fidelity | Writes far more on DXF to DWG (30 vs 688 lost on 2D; 458 vs 2,572 on 3D) | | We are ahead |
+| Speed | DWG reads 2.3 to 2.8 times faster; display list builds faster at 1M entities | DXF read 13 to 25% faster; fence select faster | Port the specific technique only (tag slices, fence prefilter) |
+| Languages | 21, with our own ribbon strings and Traditional Chinese | 20; translations moving to `craft-i18n` | New languages only; edits to our existing catalogs only after a native speaker reviews them |
+| Release | CHANGELOG, What's New, installers for Windows, macOS, rpm, pacman, AppImage | Nightly pipeline, no CHANGELOG | Not pulled |
+| Licence rules | Attribution rule (AGENTS.md), same allowlist as theirs | `craft-contrib` standards | Shared on purpose; nothing to pull |
+
+### The re-evaluated list
+
+| Item | Status | Why |
+|---|---|---|
+| Memory, time and LISP budgets | **Second PR, done** | Crash reproduced here (a 2 KB DXF aborted on an 8.6 GB allocation) |
+| Repeated and top-of-range handles | **Second PR, done** (re-done in our DXF reader and writer) | Silent entity loss reproduced here |
+| Layer and block name index | **Second PR, done** | 200-fold slowdown reproduced here |
+| UCS | **Next, by design**: engine behaviour from upstream as reference, ribbon by SkryxDev (`docs/handoff/ucs-ribbon.md`) | We have no UCS command at all |
+| `properties.set` on locked layers; BREAK/TRIM/JOIN/PEDIT handles | Only after a failing test here | Reported by an analyst, not yet reproduced by us |
+| Plot writes PDF for `x.png`; Letter instead of A4 | Only after a failing test here | Reported by an analyst |
+| Dynamic-block grips for the new kinds | Later, our own UI work | Needs upstream engine pieces we may not want; the grip UI is ours |
+| Stroke-font accents | We draw them ourselves | The stroke font is our own asset; we don't take theirs |
+| Catalog edits for existing languages | Only with native review | Their drafts agree with ours 42 to 82% of the time |
+| Loopback-only control token, control parser hardening | Evaluate as security fixes, after a failing test | Security outranks features |
+| Automation roots, Finder-open, single instance, portable ZIP, Blocks palette | Deferred, owner's call | Features, not fixes |
+| Dimension Style Manager | Not pulled (owner: ignore) | |
+
+**Cadence:** no weekly catch-up. Once a month, read upstream's fix commits (crash, security, data loss) and check each against
+DraftCraft with a test. Everything else is a deliberate feature decision.
+
 ## 0. Decisions the owner must make before any pull
 
 These block work; each says what it blocks. Agents do not decide them.
