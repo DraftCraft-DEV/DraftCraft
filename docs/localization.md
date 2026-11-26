@@ -1,7 +1,8 @@
 # Interface languages
 
 Choose **Edit → Interface Language** and select **Auto (system language)**, **English**,
-**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **繁體中文** (Traditional Chinese), **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), or **Ελληνικά** (Greek).
+**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **繁體中文** (Traditional Chinese), **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), **Polski** (Polish), **ქართული** (Georgian) or **தமிழ்** (Tamil).
+Georgian needs the Georgian face from the optional craft-fonts build input (release and web builds have it), and Tamil an installed Tamil font (Nirmala UI on Windows, Tamil Sangam MN on macOS, Noto Sans Tamil on Linux) or the craft-fonts Tamil face; without one the choice is kept, the interface stays in English and the status line says why.
 The interface updates without restarting, including the native macOS menus.
 The choice is saved with the other interface preferences (`draftcraft.prefs`, beside the theme):
 eframe storage on the desktop, browser local storage on the web. Installations without a saved
@@ -24,7 +25,7 @@ Automation can select the language through the existing control channel:
 ```
 
 The `ui.set` method also accepts `{"interfaceLanguage":"cs"}`. Supported values are `auto`,
-`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `zh-TW`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, and `el`; invalid values are rejected without changing the current
+`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `zh-TW`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `el`, `pl`, `ka`, `ta`, `bs` and `vi`; invalid values are rejected without changing the current
 selection. Resetting palettes keeps the language choice.
 
 ## Translation coverage

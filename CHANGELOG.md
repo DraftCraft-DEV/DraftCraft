@@ -11,6 +11,9 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### New
+- The interface is available in Polish (Polski), Georgian (ქართული) and Tamil (தமிழ்): choose it in Edit › Interface Language, or let DraftCraft pick it on a computer set to one of them. Georgian needs the font that comes with release builds, and Tamil an installed Tamil font; without one the interface stays in English and the status line says so.
+
 ### Improved
 - Dynamic blocks now do more when you change a value in Properties: rotation and flip parameters turn and mirror their objects, scale actions resize them, polar stretch and array actions work, and base point and alignment parameters and lookup tables are read and kept.
 - DraftCraft no longer carries its own copies of the fourteen standard PDF fonts (Helvetica, Times, Courier and the others). A PDF that uses one of them without embedding it, in an underlay or PDFIMPORT, now shows that text in the matching font installed on your computer; PDFs that embed their fonts are unchanged.
