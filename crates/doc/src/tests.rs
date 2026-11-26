@@ -733,3 +733,14 @@ fn new_centimetre_drawing_is_the_metric_one_a_tenth_as_large() {
     assert_eq!(cm.dim_style("Standard"), mm.dim_style("Standard"));
     assert_eq!(cm.layers, mm.layers);
 }
+
+/// Several spellings of one DIM field apply once, the last in the map's order, and none is rejected.
+#[test]
+fn dim_style_spellings_of_one_field_apply_once() {
+    let mut st = DimStyle::default();
+    let m = serde_json::json!({ "textHeight": 2.5, "TEXTHEIGHT": 3.5, "DIMTXT": 4.5 });
+    let m = m.as_object().unwrap();
+    let want = m.values().next_back().and_then(serde_json::Value::as_f64).unwrap();
+    assert!(st.apply_fields(m).is_empty());
+    assert_eq!(st.text_height, want);
+}
