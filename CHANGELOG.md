@@ -11,6 +11,13 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### Fixed
+- A small drawing whose arrays, hatches or wide polylines would need billions of points no longer runs DraftCraft out of memory: the view draws what fits and stops there.
+- AutoLISP routines that walk very long lists or call functions from callbacks yield in time, so a routine cannot freeze the window.
+- Hostile names, paths and counts in xrefs, layouts, attribute extraction, MOCORO copies, tables and path arrays are refused or bounded instead of taking all the memory or time.
+- Entities with a repeated handle, or a handle at the very top of the range, are no longer dropped when a DXF file is opened or saved.
+- Drawings with tens of thousands of layers or blocks open in seconds instead of minutes.
+
 ## 2.2.4
 
 ### New
@@ -18,11 +25,6 @@ How to write it (see AGENTS.md):
 
 ### Improved
 - Dynamic blocks now do more when you change a value in Properties: rotation and flip parameters turn and mirror their objects, scale actions resize them, polar stretch and array actions work, and base point and alignment parameters and lookup tables are read and kept.
-
-### Fixed
-- A small drawing whose arrays, hatches or wide polylines would need billions of points no longer runs DraftCraft out of memory: the view draws what fits and stops there.
-- AutoLISP routines that walk very long lists or call functions from callbacks yield in time, so a routine cannot freeze the window.
-- Hostile names, paths and counts in xrefs, layouts, attribute extraction, MOCORO copies, tables and path arrays are refused or bounded instead of taking all the memory or time.
 
 ## 2.2.3
 
