@@ -28,6 +28,7 @@ mod dwt_template;
 mod dxf_versions;
 mod dynblock_dwg;
 mod dynblock_read;
+mod dynblock_rotate_flip;
 mod entity_props_roundtrip;
 mod followups_626;
 mod groups_roundtrip;

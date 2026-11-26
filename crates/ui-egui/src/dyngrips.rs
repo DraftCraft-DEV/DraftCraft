@@ -37,6 +37,11 @@ pub(crate) fn of_selection(app: &mut CadApp) -> Arc<Vec<(Handle, DynGrip)>> {
             .filter(|h| st.doc.entity(**h).is_some_and(|e| !st.doc.layer(&e.common.layer).is_some_and(|l| l.locked)))
             .take(MAX_REFERENCES)
             .flat_map(|h| draftcraft_engine::doc::dynblock::grips(&st.doc, *h).into_iter().map(move |g| (*h, g)))
+            // Rotation, flip and alignment grips are read from the block, but dragging them is not
+            // wired up yet (the engine's grip edit handles distances, positions and lists): they
+            // stay off the canvas rather than show a grip that does the wrong thing. Their
+            // parameters still change through Properties and `blocks.reference.set`.
+            .filter(|(_, g)| matches!(g.shape, GripShape::Linear | GripShape::Point | GripShape::List))
             .collect();
         app.canvas.dyn_grips = Cache { key, grips: Arc::new(grips) };
     }
@@ -61,6 +66,10 @@ fn outline(xf: &Xf, g: &DynGrip, gs: f32) -> Vec<Pos2> {
         GripShape::List => {
             let w = gs * 1.3;
             vec![c + vec2(-w, -w * 0.6), c + vec2(w, -w * 0.6), c + vec2(0.0, w * 0.9)]
+        }
+        // Not shown (see `of_selection`); a square if one ever reaches here.
+        GripShape::Rotation | GripShape::Flip | GripShape::Alignment => {
+            vec![c + vec2(-gs, -gs), c + vec2(gs, -gs), c + vec2(gs, gs), c + vec2(-gs, gs)]
         }
     }
 }
