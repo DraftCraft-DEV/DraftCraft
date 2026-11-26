@@ -25,6 +25,15 @@ These block work; each says what it blocks. Agents do not decide them.
 | D8 | Mirrors: create org-owned mirrors of `storytold/craft-libs`, `storytold/egui` and `storytold/winit` (see section 2). | dependency PR |
 | D9 | Contribute fixes back upstream? Any outward PR is a publishing action and needs a go-ahead each time. | section 8 |
 
+## Decisions made by the owner (2026-11-26)
+
+- **D5 decided: we do not take upstream's DWG or DXF reader or writer.** Our native codec stays. Their I/O fixes are
+  only ported by hand, case by case, and nothing that needs `craft-dxf`, `craft-dwg` or `acadrust` is pulled.
+- **D4 decided: remove the bundled standard PDF fonts.** Done; see `docs/clean-room-review/2026-11-26-bundled-pdf-fonts.md`.
+  The Adobe CMaps and the width tables are still open for the partners.
+- **Dynamic blocks first, then the ZWCAD parametric track** (section 3.5). Step 1 is done (section 9).
+- **Only pull what improves ours and keeps us ahead.** UI items are taken only where they fit our ribbon.
+
 ## 1. Where we stand
 
 Facts checked by me: version 2.2.3; 480 vs 482 registered commands, 458 shared; 3,840 vs 5,075 test
@@ -172,3 +181,32 @@ Baseline numbers from 2026-11-26 (this machine, 4 cores): `perf 1000000`: DXF re
 ## 8. Contributing back (optional, D9)
 
 Generic fixes of ours: `7fba4792` (current table style in the variables dictionary), `8318ca0c` (arc length and jogged radius dimension types), `d03de31b` (region bulge round trip), the DWG SAT/ACIS line-feed fixes, `a453ad03`, `c531302e`. A thin set; most of our work is UI, packaging and the DWG codec. Finish the catch-up first, then send small generic fixes one per issue from an org fork, with no DraftCraft strings or marks in them. Treat offering the DWG codec as a separate strategic conversation: it would remove the MPL dependency for both projects and also gives up a differentiator.
+
+## 9. Progress log
+
+### 2026-11-26: fonts removed, dynamic blocks pulled
+
+- **Bundled fonts removed** (commit "Remove the bundled standard PDF fonts"): `vendor/hayro-interpret`, installed-font
+  resolver in `crates/io/src/pdf_read/standard_fonts.rs`, none of the 14 Foxit fonts left in the release CLI.
+- **Dynamic blocks pulled from upstream** (`Upstream-Range: storytold/cadcraft@df659744..414e5442`, files only; no history):
+  `doc/src/dynblock.rs`, `dynblock/apply.rs` (1,088 to about 2,300 lines), `grips.rs`, `reference.rs`,
+  `engine/src/blockedit.rs`, upstream's new dynamic-block tests and four hand-written DXF fixtures
+  (rows added to `ATTRIBUTION.md`; upstream's own notes say they were written for the tests, not saved from a CAD
+  program). Our files were identical to the fork base, so the merge was clean (0 conflicts in 7 files; the 8th, an io test
+  file, had one conflict in a test that used `acadrust`, resolved by keeping our version).
+  What this gives: rotation and flip parameters and actions, scale, polar stretch, array, base point and alignment
+  parameters, lookups of angles, flips, XY distances and positions, as the reference side executes them.
+  Our authoring code (`author.rs`, `bauthor.rs`, `bparameter`, `baction`) compiled unchanged.
+- **Not pulled yet, and why:**
+  - Grip dragging for the new parameter kinds (`engine/src/cmd/blocks/dyngrip.rs`, `ui-egui/src/dyngrips.rs`,
+    `engine/tests/it/dynamic_grips.rs`). Upstream's version needs `TagKey` and `Block::attdefs_by_tag` (`a34ebd0b`),
+    the live value hook of the prompt machine, `Prompt::angle`, and the frozen-layers-in-viewport work
+    (`e43c39c5`: `Session::viewport_frozen`, `snap::nearest_with_direction`). Until those land, rotation, flip and
+    alignment grips are read but not shown (`ui-egui/src/dyngrips.rs` filters them); their values change through
+    Properties and `blocks.reference.set`.
+  - The reader fix for tilted-plane polylines (#1886), which one upstream test depends on. We kept our version of
+    `a_tilted_polyline_keeps_the_stored_vertex_list`; it will need the fix ported by hand into our reader.
+- **Verified:** fmt, clippy, i18n, assets, layers and wasm pass; the full workspace test suite passes except
+  `gpu_viewport_stencil` (no GPU adapter in this container; unrelated).
+- **Next:** the ZWCAD parametric track (3.5, steps 2 to 4), starting with samples saved by ZWCAD; then the grip
+  prerequisites above.
