@@ -11,6 +11,8 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+## 2.2.4
+
 ### New
 - The interface is available in Polish (Polski), Georgian (ქართული) and Tamil (தமிழ்): choose it in Edit › Interface Language, or let DraftCraft pick it on a computer set to one of them. Georgian needs the font that comes with release builds, and Tamil an installed Tamil font; without one the interface stays in English and the status line says so.
 
