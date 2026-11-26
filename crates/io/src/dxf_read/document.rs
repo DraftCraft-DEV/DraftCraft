@@ -37,16 +37,25 @@ fn fresh_entity_handle(d: &mut Drawing, seen: &mut HashSet<Handle>, reserved: &H
     d.new_handle()
 }
 
+/// How [`parse_entities`] treats a record's own handle: every handle given out so far (`seen`), the
+/// top-level entity handles a block entity must yield to (`reserved`), and whether this list's own
+/// handles win over earlier copies (`source_wins`: ENTITIES does, blocks don't).
+pub(super) struct HandlePolicy<'a> {
+    pub(super) seen: &'a mut HashSet<Handle>,
+    pub(super) reserved: &'a HashSet<Handle>,
+    pub(super) source_wins: bool,
+}
+
 pub(super) fn parse_entities(
     recs: &[(String, Vec<Tag>)],
     d: &mut Drawing,
     rx: &mut Rx,
     skipped: &mut usize,
     table_cells_left: &mut usize,
-    seen_handles: &mut HashSet<Handle>,
-    reserved_handles: &HashSet<Handle>,
-    source_handles_win: bool,
+    handles: &mut HandlePolicy<'_>,
 ) -> Vec<(Option<String>, bool, Entity)> {
+    let source_handles_win = handles.source_wins;
+    let (seen_handles, reserved_handles) = (&mut *handles.seen, handles.reserved);
     let mut out = Vec::new();
     let mut i = 0;
     while let Some((kind, tags)) = recs.get(i) {
@@ -149,7 +158,14 @@ pub(super) fn read_blocks(
                 j += 1;
             }
             let body = recs.get(i + 1..j).unwrap_or(&[]);
-            let ents = parse_entities(body, d, rx, &mut n, table_cells_left, seen_handles, reserved_handles, false);
+            let ents = parse_entities(
+                body,
+                d,
+                rx,
+                &mut n,
+                table_cells_left,
+                &mut HandlePolicy { seen: seen_handles, reserved: reserved_handles, source_wins: false },
+            );
             blocks.push((name, base, description, ents, xref));
             i = j + 1;
         } else {
