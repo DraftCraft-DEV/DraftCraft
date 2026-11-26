@@ -13,8 +13,7 @@
 
 use craft_pdf::interpret::font::Glyph;
 use craft_pdf::interpret::{
-    BlendMode, ClipPath, Context, Device, GlyphDrawMode, Image as PdfImage, InterpreterCache, InterpreterSettings, Paint, PathDrawMode, SoftMask,
-    TransformExt,
+    BlendMode, ClipPath, Context, Device, GlyphDrawMode, Image as PdfImage, InterpreterCache, Paint, PathDrawMode, SoftMask, TransformExt,
 };
 use craft_pdf::syntax::page::Page;
 use draftcraft_color::Rgb;
@@ -25,6 +24,8 @@ use draftcraft_geom::{PolyVertex, Spline, Vec2};
 use kurbo::{Affine, BezPath, PathEl, Point, Rect, Shape};
 
 use crate::{IoError, Result};
+
+mod standard_fonts;
 
 /// Largest PDF file read (bytes).
 pub const MAX_PDF_BYTES: usize = 256 << 20;
@@ -87,7 +88,7 @@ pub fn rasterize(bytes: &[u8], index: usize, dpi: f64) -> Result<Raster> {
     let s = raster_scale(f64::from(w), f64::from(h), (dpi / 72.0).clamp(0.05, 8.0)) as f32;
     let cache = craft_pdf::raster::RenderCache::new();
     let options = craft_pdf::raster::Options { scale: [s, s], background: [255, 255, 255, 255], ..Default::default() };
-    let r = craft_pdf::raster::render(page, &cache, &InterpreterSettings::default(), &options).map_err(bad)?;
+    let r = craft_pdf::raster::render(page, &cache, &standard_fonts::settings(), &options).map_err(bad)?;
     // Premultiplied on opaque white paper: every pixel is opaque, so the bytes are straight RGBA.
     Raster::new(r.width, r.height, r.bytes().to_vec()).ok_or_else(|| bad("the page could not be drawn"))
 }
@@ -125,7 +126,7 @@ pub fn import(bytes: &[u8], index: usize, opts: ImportOptions) -> Result<(Vec<Im
         Rect::new(0.0, 0.0, f64::from(w), f64::from(h)),
         &cache,
         page.xref(),
-        InterpreterSettings::default(),
+        standard_fonts::settings(),
     );
     let mut dev = Collector { opts, page: (f64::from(w), f64::from(h)), ..Collector::default() };
     craft_pdf::interpret_page(page, &mut ctx, &mut dev).map_err(bad)?;
@@ -733,11 +734,19 @@ BT /F1 12 Tf 72 300 Td (Hi there) Tj ET";
         assert_eq!(curve.knots, vec![0.0, 0.0, 0.0, 0.0, 1.0, 1.0, 1.0, 1.0]);
         let fill = shapes.iter().find(|s| s.class == ShapeClass::Fill).unwrap();
         assert_eq!(fill.color, Some(Rgb(255, 0, 0)));
-        let text = shapes.iter().find_map(|s| if let EntityKind::Text(t) = &s.kind { Some(t) } else { None }).unwrap();
-        assert_eq!(text.value, "Hi there");
-        assert!((text.insert.x - 72.0).abs() < 1e-6 && (text.insert.y - 300.0).abs() < 1e-6, "{:?}", text.insert);
+        let text = shapes.iter().find_map(|s| if let EntityKind::Text(t) = &s.kind { Some(t) } else { None });
         let only_text = import(&sample_pdf(), 0, ImportOptions { vectors: false, fills: false, text: true }).unwrap().0;
-        assert_eq!(only_text.len(), 1);
+        // The sample draws its text in Helvetica without embedding it, and DraftCraft bundles no
+        // font: the text is read when an installed font stands in for Helvetica, and not otherwise.
+        if standard_fonts::resolve(craft_pdf::interpret::font::StandardFont::Helvetica).is_some() {
+            let text = text.unwrap();
+            assert_eq!(text.value, "Hi there");
+            assert!((text.insert.x - 72.0).abs() < 1e-6 && (text.insert.y - 300.0).abs() < 1e-6, "{:?}", text.insert);
+            assert_eq!(only_text.len(), 1);
+        } else {
+            assert!(text.is_none());
+            assert!(only_text.is_empty());
+        }
     }
 
     #[test]
