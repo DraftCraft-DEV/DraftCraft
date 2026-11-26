@@ -210,3 +210,13 @@ Generic fixes of ours: `7fba4792` (current table style in the variables dictiona
   `gpu_viewport_stencil` (no GPU adapter in this container; unrelated).
 - **Next:** the ZWCAD parametric track (3.5, steps 2 to 4), starting with samples saved by ZWCAD; then the grip
   prerequisites above.
+
+### 2026-11-26 (later): languages, and the font question
+
+- **Polish, Georgian and Tamil pulled** from upstream (the three ArtCraft languages we lacked), with the Georgian and Tamil font handling. Strings only
+  we have fall back to English in them (79 to 85 each). Upstream's catalogs for the languages we already have have moved on too (51 catalog commits since
+  the base); that is another pull, not done.
+- **Language map** for CadCraft Studio's 75 languages: `docs/localization-roadmap.md` (measured seeds, font coverage, waves).
+- **The bundled-font question** (answered in the review note): the 14 Foxit fonts are CFF programs named "Chrom Sans/Serif/Fixed/Symbol/Dingbats OTF"
+  with no Adobe, Linotype, Monotype or URW name in any of them, under PDFium's BSD-3 licence. The real gap was that the licence notice was never
+  reproduced in our binaries. Whether they derive from fonts we may not ship cannot be told from the files.

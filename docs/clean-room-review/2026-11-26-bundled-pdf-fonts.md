@@ -59,3 +59,20 @@ installed on the computer; with none installed the text is not drawn (underlay) 
    bring the `embed-fonts` setting back; the sync gate denies `*.pfb`.
 6. **The 50 solid-model test drawings** made with an AutoCAD educational licence are a separate
    question (see `docs/upstream-sync-plan.md`, D3).
+
+## Addendum: is it a true licence issue? (checked the files themselves)
+
+- **Licence:** the text shipped with the fonts is PDFium's BSD-3-Clause ("Copyright 2014 PDFium Authors", code by Foxit Software). For binary
+  redistribution that licence requires the copyright notice, the conditions and the disclaimer to be reproduced with the distribution. Ours were
+  not: `NOTICE` and `ATTRIBUTION.md` never mentioned them. That is a real, small compliance gap, and it is the only licence breach I can show.
+- **Origin:** the vendored crate's `assets/README.md` says the files were extracted from PDFium. The fonts' own internal names are
+  "Chrom Sans OTF", "Chrom Serif OTF", "Chrom Fixed OTF", "Chrom Symbol OTF" and "Chrom Dingbats OTF" (CFF programs, not PostScript Type 1 despite the
+  `.pfb` name). They carry no copyright line. I searched all 14 files for Adobe, Linotype, Monotype, ITC, URW, Bitstream, Nimbus, Helvetica, Times and
+  Courier: the only hit is the standard glyph-name list in the Symbol font.
+- **What the files cannot tell:** whether the outlines derive from fonts someone else owns. They are built to be metric-compatible with the 14 PDF
+  standard fonts, which does not imply derivation. They have shipped in Chromium's PDF viewer for years, which is a reason for confidence, not proof.
+- **Against our own rule:** `AGENTS.md` bans Autodesk, Adobe and Avid fonts; these are Foxit's, so the rule is not triggered on its face. The rule that
+  every file asset needs an `ATTRIBUTION.md` row was not followed.
+- **So:** a documentation and notice failure, not a demonstrated prohibited-source problem. They were removed at the owner's request. If the partners
+  prefer them back (they make PDF text appear on the web build, which has no installed fonts), restore the crate's `assets/Foxit*.pfb` and
+  `StandardFont::get_font_data` from craft-libs `92d392cf`, and add the BSD-3 text to `NOTICE` and a row to `ATTRIBUTION.md` in the same change.
