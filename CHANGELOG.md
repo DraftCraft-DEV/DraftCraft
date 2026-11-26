@@ -17,6 +17,9 @@ How to write it (see AGENTS.md):
 - Hostile names, paths and counts in xrefs, layouts, attribute extraction, MOCORO copies, tables and path arrays are refused or bounded instead of taking all the memory or time.
 - Entities with a repeated handle, or a handle at the very top of the range, are no longer dropped when a DXF file is opened or saved.
 - Drawings with tens of thousands of layers or blocks open in seconds instead of minutes.
+- BREAK and TRIM keep the object's own handle, so groups, dimensions and other links stay on it; TRIM keeps a line's Z and a polyline's elevation and width, and PEDIT keeps the objects' height.
+- Changing properties leaves objects on locked layers alone and says how many were skipped.
+- JOIN joins onto the object you picked first, keeping it and its space.
 
 ## 2.2.4
 
