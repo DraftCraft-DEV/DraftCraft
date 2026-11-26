@@ -29,8 +29,9 @@ These block work; each says what it blocks. Agents do not decide them.
 
 - **D5 decided: we do not take upstream's DWG or DXF reader or writer.** Our native codec stays. Their I/O fixes are
   only ported by hand, case by case, and nothing that needs `craft-dxf`, `craft-dwg` or `acadrust` is pulled.
-- **D4 decided: remove the bundled standard PDF fonts.** Done; see `docs/clean-room-review/2026-11-26-bundled-pdf-fonts.md`.
-  The Adobe CMaps and the width tables are still open for the partners.
+- **D4 decided: keep the bundled standard PDF fonts and attribute them** (first removed, then restored the same day; see
+  `docs/clean-room-review/2026-11-26-bundled-pdf-fonts.md`). `NOTICE` and `ATTRIBUTION.md` now carry the PDFium, Adobe CMap and CMYK
+  notices, and `AGENTS.md` has an Attribution rule that follows ArtCraft's. The width tables' origin is still unchecked.
 - **Dynamic blocks first, then the ZWCAD parametric track** (section 3.5). Step 1 is done (section 9).
 - **Only pull what improves ours and keeps us ahead.** UI items are taken only where they fit our ribbon.
 
@@ -220,3 +221,4 @@ Generic fixes of ours: `7fba4792` (current table style in the variables dictiona
 - **The bundled-font question** (answered in the review note): the 14 Foxit fonts are CFF programs named "Chrom Sans/Serif/Fixed/Symbol/Dingbats OTF"
   with no Adobe, Linotype, Monotype or URW name in any of them, under PDFium's BSD-3 licence. The real gap was that the licence notice was never
   reproduced in our binaries. Whether they derive from fonts we may not ship cannot be told from the files.
+- **Fonts restored with attribution** (owner's decision): the Foxit fonts ship again through the dependency; the vendored copy and the installed-font resolver are gone.

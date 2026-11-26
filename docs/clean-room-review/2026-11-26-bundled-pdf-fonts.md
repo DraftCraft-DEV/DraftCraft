@@ -1,4 +1,19 @@
-# Review note: bundled PDF fonts removed (2026-11-26)
+# Review note: bundled PDF fonts (2026-11-26)
+
+## Decision (updated the same day): kept, with attribution
+
+The owner decided to keep the 14 Foxit fonts and write the attribution instead of removing them. They are shipped as before, through the
+`craft-pdf` dependency (not committed to this repository), and now have what was missing: BSD-3 notice text in `NOTICE`, rows in
+`ATTRIBUTION.md` for the fonts, the Adobe character maps and the CMYK profile, and a general **Attribution** rule in `AGENTS.md`
+that follows ArtCraft's (storytold/craft-contrib `standards/licences.md` and the Attribution section of `standards/clean-room.md`).
+The vendored copy of `hayro-interpret` and the installed-font resolver described below were removed again.
+
+What the rule allows and forbids is in `AGENTS.md`. In short: openly licensed material ships, whoever made it, with its notice; anything
+taken from a proprietary product (including Adobe's installed or Acrobat-bundled fonts) never does.
+
+The rest of this note is the record of the first decision (removal) and the findings behind both.
+
+---
 
 For review by the project's partners. The change is in the branch `claude/relaxed-franklin-vf134d`.
 Written by the agent that made it; the owner asked for the fonts to be removed and for this note.

@@ -16,7 +16,6 @@ How to write it (see AGENTS.md):
 
 ### Improved
 - Dynamic blocks now do more when you change a value in Properties: rotation and flip parameters turn and mirror their objects, scale actions resize them, polar stretch and array actions work, and base point and alignment parameters and lookup tables are read and kept.
-- DraftCraft no longer carries its own copies of the fourteen standard PDF fonts (Helvetica, Times, Courier and the others). A PDF that uses one of them without embedding it, in an underlay or PDFIMPORT, now shows that text in the matching font installed on your computer; PDFs that embed their fonts are unchanged.
 
 ## 2.2.3
 
