@@ -1,1 +1,1690 @@
-# placeholder
+# DraftCraft Catalan (Català) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Cancel·la  
+	  OK  	  D'acord  
+	 or [	 o [
+	% of all commits	% de totes les aportacions
+	* Wildcard Match	* Coincidència amb comodí
+	*VARIES*	*VARIA*
+	+  |  Top  |  2D Wireframe	+  |  Superior  |  Filferro 2D
+	+Bin	+Binari
+	+LOC	+LOC
+	1 Viewport	1 finestra gràfica
+	2 Points	2 punts
+	2 Viewports	2 finestres gràfiques
+	2D Solid	Sòlid 2D
+	3 Points	3 punts
+	3 Viewports	3 finestres gràfiques
+	3D Face	Cara 3D
+	3D Mouse	Ratolí 3D
+	3D Mouse Navigation	Navegació amb ratolí 3D
+	3D Mouse...	Ratolí 3D...
+	3D Operations	Operacions 3D
+	3D Polyline	Polilínia 3D
+	3D mouse busy, possibly 3DxWare or missing device permissions	Ratolí 3D ocupat, possiblement per 3DxWare o per falta de permisos del dispositiu
+	3D mouse connected	Ratolí 3D connectat
+	3D mouse disconnected	Ratolí 3D desconnectat
+	3D mouse input could not be started	No s'ha pogut iniciar l'entrada del ratolí 3D
+	3D mouse input is unavailable on this platform	L'entrada del ratolí 3D no està disponible en aquesta plataforma
+	4 Viewports	4 finestres gràfiques
+	< Less than	< Menor que
+	<> Not Equal	<> Diferent
+	= Equals	= Igual
+	> Greater than	> Major que
+	A built-in table: editing it keeps an edited copy in the drawing.	Una taula integrada: si l'editeu, es desa una còpia editada al dibuix.
+	A drawing opened from a file keeps that file's format.	Un dibuix obert des d'un fitxer conserva el format d'aquest fitxer.
+	A variable name starts with a letter and has only letters, digits and _	Un nom de variable comença amb una lletra i només té lletres, xifres i _
+	About	Quant a
+	About DraftCraft	Quant a DraftCraft
+	Absolute	Absolut
+	Accessibility	Accessibilitat
+	Add	Afegeix
+	Add Current Scale	Afegeix l'escala actual
+	Add Leader	Afegeix directriu
+	Add Vertex	Afegeix vèrtex
+	Add/Delete Scales...	Afegeix/suprimeix escales...
+	Additional angles	Angles addicionals
+	Align	Alinea
+	Align Text	Alinea el text
+	Aligned	Alineada
+	All	Tot
+	All Annotation Objects	Tots els objectes d'anotació
+	All Scales	Totes les escales
+	All Used Layers	Totes les capes usades
+	All files	Tots els fitxers
+	An array that would create more objects than this is refused.	Es rebutja una matriu que crearia més objectes que aquest nombre.
+	Angle	Angle
+	Angular	Angular
+	Annotation Visibility	Visibilitat de les anotacions
+	Annotation scale	Escala d'anotació
+	Annotative Object Scale	Escala d'objecte anotatiu
+	Annotative Update	Actualització anotativa
+	Apparent Intersection	Intersecció aparent
+	Append to current selection set	Afegeix al conjunt de selecció actual
+	Apply	Aplica
+	Apply to:	Aplica a:
+	Apply true color	Aplica color veritable
+	Arc	Arc
+	Arc Length	Longitud d'arc
+	Area	Àrea
+	Arrange Panel	Organitza el tauler
+	Array	Matriu
+	Attach	Adjunta
+	Attach DWG...	Adjunta DWG...
+	Attribute	Atribut
+	Attribute Definition	Definició d'atribut
+	Attribute Display	Visualització d'atributs
+	Audit	Audita
+	Auto (system language)	Automàtic (idioma del sistema)
+	Auto Constrain	Restricció automàtica
+	AutoConstrain	AutoRestricció
+	Automatic save every	Desament automàtic cada
+	Automatic save file location	Ubicació dels fitxers de desament automàtic
+	Axis, End	Eix, final
+	Base	Base
+	Baseline	Línia de base
+	Batch Publish	Publicació per lots
+	Batch Publish...	Publicació per lots...
+	Binary assets added	Recursos binaris afegits
+	Binary assets removed	Recursos binaris eliminats
+	Bind	Enllaça
+	Bind...	Enllaça...
+	Blend	Fusiona
+	Block	Bloc
+	Block Attribute Manager...	Gestor d'atributs de bloc...
+	Block Description...	Descripció del bloc...
+	Block Editor	Editor de blocs
+	Block Reference	Referència de bloc
+	Block...	Bloc...
+	Blocks	Blocs
+	Blue	Blau
+	Bold	Negreta
+	Boolean	Booleà
+	Boundary	Contorn
+	Boundary...	Contorn...
+	Box	Caixa
+	Break	Parteix
+	Break At Point	Parteix en un punt
+	Bring Above Objects	Porta sobre els objectes
+	Bring Annotations to Front	Porta les anotacions al davant
+	Bring to Front	Porta al davant
+	Bulleted list	Llista amb pics
+	ByBlock	PerBloc
+	ByColor	PerColor
+	ByLayer	PerCapa
+	DraftCraft Help	Ajuda de DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft desa aquestes preferències, els modes de referència a objectes i els commutadors de dibuix per al vostre compte d'usuari i els restaura en iniciar-se.
+	Calibrate	Calibra
+	Calibrate 3D Mouse	Calibra el ratolí 3D
+	Cancel	Cancel·la
+	Cartesian (x, y)	Cartesianes (x, y)
+	Center	Centre
+	Center Line	Línia de centre
+	Center Mark	Marca de centre
+	Center X	Centre X
+	Center Y	Centre Y
+	Center Z	Centre Z
+	Center, Diameter	Centre, diàmetre
+	Center, Radius	Centre, radi
+	Center, Start, Angle	Centre, inici, angle
+	Center, Start, End	Centre, inici, final
+	Center, Start, Length	Centre, inici, longitud
+	Chamfer	Xamfrà
+	Change Space	Canvia d'espai
+	Change to Current Layer	Canvia a la capa actual
+	Changed: {n}	Modificats: {n}
+	Changes apply at once and are kept for next time.	Els canvis s'apliquen immediatament i es conserven per a la propera vegada.
+	Circle	Cercle
+	Circumference	Circumferència
+	Clear	Esborra
+	Clear Command History	Esborra l'historial d'ordres
+	Reset Suggestion Order	Restableix l'ordre dels suggeriments
+	Clear History	Esborra l'historial
+	Clip	Retalla
+	Clip Viewport	Retalla la finestra gràfica
+	Clipboard	Porta-retalls
+	Close	Tanca
+	Close All	Tanca-ho tot
+	Close All Other Drawings	Tanca tots els altres dibuixos
+	Close Array Editing	Tanca l'edició de la matriu
+	Close Comparison	Tanca la comparació
+	Export Comparison	Exporta la comparació
+	Closed	Tancat
+	Coincident	Coincident
+	Collapse Palettes	Redueix les paletes
+	Collapse Tool Sets	Redueix els conjunts d'eines
+	Collinear	Col·lineal
+	Color	Color
+	Color 8	Color 8
+	Color 9	Color 9
+	Color Index	Índex de color
+	Color-dependent	Dependent del color
+	Color...	Color...
+	Command Aliases	Àlies d'ordres
+	Command History	Historial d'ordres
+	Command Line	Línia d'ordres
+	Command Line History Lines	Línies de l'historial de la línia d'ordres
+	Command Reference	Referència d'ordres
+	Command line history	Historial de la línia d'ordres
+	Commits	Aportacions
+	Company	Empresa
+	Compare Drawings...	Compara dibuixos...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Disseny i delineació assistits per ordinador: una aplicació CAD de codi obert i de sala neta escrita íntegrament en Rust.
+	Concentric	Concèntric
+	Cone	Con
+	Constraint Bars	Barres de restricció
+	Constraint Settings	Paràmetres de restricció
+	Construction Line	Línia de construcció
+	Contents	Contingut
+	Continue	Continua
+	Contributors	Col·laboradors
+	Control Vertices	Vèrtexs de control
+	Convert	Converteix
+	Convert to Arc	Converteix en arc
+	Convert to Line	Converteix en línia
+	Copy	Copia
+	Copy Full File Path	Copia el camí complet del fitxer
+	Copy History	Copia l'historial
+	Copy Layout	Copia la presentació
+	Copy Nested Objects	Copia objectes niats
+	Copy Selection	Copia la selecció
+	Copy as JSON	Copia com a JSON
+	Copy with Base Point	Copia amb punt base
+	Count	Recompte
+	Count List	Llista de recompte
+	Count Table	Taula de recompte
+	Create Block	Crea un bloc
+	Creates a user parameter	Crea un paràmetre d'usuari
+	Crosshair size	Mida de la creu
+	Ctrl+Enter to finish	Ctrl+Retorn per acabar
+	Current Scale Only	Només l'escala actual
+	Current layer	Capa actual
+	Current selection	Selecció actual
+	Current: {color}	Actual: {color}
+	Cut	Retalla
+	Cut with Base Point	Retalla amb punt base
+	Cyan	Cian
+	Cylinder	Cilindre
+	DWG	DWG
+	DWG Reference...	Referència DWG...
+	DXF	DXF
+	Dark	Fosc
+	Data Extraction...	Extracció de dades...
+	Data Link...	Enllaç de dades...
+	Default	Per defecte
+	Default Save Format	Format de desament per defecte
+	Default Save Version	Versió de desament per defecte
+	Default save version	Versió de desament per defecte
+	Define Attributes	Defineix atributs
+	Define Attributes...	Defineix atributs...
+	Defined width	Amplada definida
+	Degree	Grau
+	Degrees of Freedom	Graus de llibertat
+	Degrees of freedom: {n}	Graus de llibertat: {n}
+	Delete	Suprimeix
+	Delete Column	Suprimeix la columna
+	Delete Constraints	Suprimeix les restriccions
+	Delete Current Scale	Suprimeix l'escala actual
+	Delete Dimension Style	Suprimeix l'estil de cota
+	Delete Duplicate Objects	Suprimeix els objectes duplicats
+	Delete Layer	Suprimeix la capa
+	Delete Layer State	Suprimeix l'estat de capes
+	Delete Layout	Suprimeix la presentació
+	Delete Row	Suprimeix la fila
+	Delete Text Style	Suprimeix l'estil de text
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Descripció
+	Deselect All	Desselecciona-ho tot
+	Detach	Separa
+	Diameter	Diàmetre
+	Dim style	Estil de cota
+	Dimension	Cota
+	Dimension Break	Interrupció de cota
+	Dimension Edit	Edició de cota
+	Dimension Objects Only	Només objectes de cota
+	Dimension Space	Espaiat de cotes
+	Dimension Style Override	Modificació de l'estil de cota
+	Dimension Style...	Estil de cota...
+	Dimension Text Edit	Edició del text de cota
+	Dimension style	Estil de cota
+	Dimensional Constraint	Restricció dimensional
+	Dimensional Constraint Parameters	Paràmetres de restricció dimensional
+	Dimensional Constraints	Restriccions dimensionals
+	Disassociate Dimensions	Desassocia les cotes
+	Display	Visualització
+	Display name	Nom visible
+	Display plot styles	Mostra els estils de traçat
+	Distance	Distància
+	Divide	Divideix
+	Do not plot (click: plot)	No traçar (clic: traçar)
+	Donut	Arandela
+	Double-click to edit the description	Feu doble clic per editar la descripció
+	Down	Avall
+	Drafting	Dibuix
+	Drafting Settings	Paràmetres de dibuix
+	Drafting Settings...	Paràmetres de dibuix...
+	Draw	Dibuixa
+	Draw Order	Ordre de dibuix
+	Drawing (DWG)	Dibuix (DWG)
+	Drawing (DXF)	Dibuix (DXF)
+	Drawing Limits	Límits del dibuix
+	Drawing Recovery Manager...	Gestor de recuperació de dibuixos...
+	Drawing Template (DWT)	Plantilla de dibuix (DWT)
+	Drawing Utilities	Utilitats de dibuix
+	Drawing as bytes	Dibuix com a bytes
+	Drawings (DWG, DXF)	Dibuixos (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Els dibuixos que encara no tenen fitxer es desen en la versió per defecte. 0 minuts desactiva el desament automàtic.
+	Dynamic	Dinàmic
+	Dynamic Dimensions	Cotes dinàmiques
+	Dynamic Input	Entrada dinàmica
+	Dynamic Input (F12)	Entrada dinàmica (F12)
+	Edit	Edita
+	Edit Array	Edita la matriu
+	Edit Attributes...	Edita els atributs...
+	Edit Table Cell	Edita la cel·la de taula
+	Edit Text...	Edita el text...
+	Elevation	Elevació
+	Ellipse	El·lipse
+	Elliptical Arc	Arc el·líptic
+	Enable 3D mouse navigation	Activa la navegació amb ratolí 3D
+	Enable Dynamic Input (F12)	Activa l'entrada dinàmica (F12)
+	End Object Isolation	Finalitza l'aïllament d'objectes
+	End Width	Amplada final
+	End X	X final
+	End Y	Y final
+	End angle	Angle final
+	Endpoint	Punt final
+	Enter	Retorn
+	Enter Top, Zero or Bottom.	Introduïu Superior, Zero o Inferior.
+	Enter a fit data option	Introduïu una opció de dades d'ajust
+	Enter a pattern name	Introduïu un nom de patró
+	Enter a vertex editing option	Introduïu una opció d'edició de vèrtexs
+	Enter an option	Introduïu una opció
+	Enter angle of xline	Introduïu l'angle de la xlínia
+	Enter angle of xline (0)	Introduïu l'angle de la xlínia (0)
+	Enter area of rectangle in current units	Introduïu l'àrea del rectangle en les unitats actuals
+	Enter attribute prompt	Introduïu la sol·licitud de l'atribut
+	Enter attribute tag name	Introduïu el nom d'etiqueta de l'atribut
+	Enter attribute value	Introduïu el valor de l'atribut
+	Enter block name	Introduïu el nom del bloc
+	Enter constraint type	Introduïu el tipus de restricció
+	Enter continuity	Introduïu la continuïtat
+	Enter default attribute value	Introduïu el valor per defecte de l'atribut
+	Enter degree of spline	Introduïu el grau de la spline
+	Enter delta angle	Introduïu l'angle delta
+	Enter delta length	Introduïu la longitud delta
+	Enter dimension text	Introduïu el text de cota
+	Enter dimension text (<> = measurement)	Introduïu el text de cota (<> = mesura)
+	Enter dimension value or [name=expression]	Introduïu el valor de la cota o [nom=expressió]
+	Enter dimension variable name to override	Introduïu el nom de la variable de cota que cal modificar
+	Enter justification type	Introduïu el tipus de justificació
+	Enter leader text	Introduïu el text de la directriu
+	Enter mline scale	Introduïu l'escala de la multilínia
+	Enter mode	Introduïu el mode
+	Enter name of block to insert	Introduïu el nom del bloc que cal inserir
+	Enter new text	Introduïu el text nou
+	Enter next point	Introduïu el punt següent
+	Enter number of columns	Introduïu el nombre de columnes
+	Enter number of data rows	Introduïu el nombre de files de dades
+	Enter number of items	Introduïu el nombre d'elements
+	Enter number of items along path	Introduïu el nombre d'elements al llarg del camí
+	Enter number of sides	Introduïu el nombre de costats
+	Enter number of turns	Introduïu el nombre de voltes
+	Enter percentage length	Introduïu el percentatge de longitud
+	Enter rectangle length	Introduïu la longitud del rectangle
+	Enter rectangle width	Introduïu l'amplada del rectangle
+	Enter scale factor	Introduïu el factor d'escala
+	Enter text	Introduïu el text
+	Enter text (use \P for new paragraphs)	Introduïu el text (useu \P per a paràgrafs nous)
+	Enter the number of segments	Introduïu el nombre de segments
+	Enter twist direction of helix	Introduïu el sentit de gir de l'hèlix
+	Entire drawing	Tot el dibuix
+	Equal	Igual
+	Erase	Esborra
+	Evaluate	Avalua
+	Exclude from new selection set	Exclou del nou conjunt de selecció
+	Explode	Descompon
+	Export	Exporta
+	Export Table	Exporta la taula
+	Export to PDF...	Exporta a PDF...
+	Export...	Exporta...
+	Expression	Expressió
+	Extend	Allarga
+	Extension	Extensió
+	Extents	Extensió total
+	External Reference	Referència externa
+	External References	Referències externes
+	Extrude	Extrudeix
+	File	Fitxer
+	File Tab	Pestanya de fitxer
+	Fillet	Empalma
+	Filter	Filtre
+	Filters	Filtres
+	Find and Replace	Cerca i substitueix
+	Find...	Cerca...
+	First	Primer
+	First commit	Primera aportació
+	Fit Points	Punts d'ajust
+	Fix	Fixa
+	Flatten Objects	Aplana els objectes
+	Format	Format
+	Freehand	A mà alçada
+	Freeze	Congela
+	Freeze Layer	Congela la capa
+	Freeze in new viewports	Congela a les finestres gràfiques noves
+	Freeze/Thaw	Congela/descongela
+	Freeze/Thaw in all viewports	Congela/descongela a totes les finestres gràfiques
+	Freeze/Thaw in the current viewport	Congela/descongela a la finestra gràfica actual
+	From	Des de
+	From Template...	A partir d'una plantilla...
+	General	General
+	Geometric Center	Centre geomètric
+	Geometric Constraint	Restricció geomètrica
+	Geometric Constraints	Restriccions geomètriques
+	Geometry	Geometria
+	Get Variable	Obtén la variable
+	Get View	Obtén la vista
+	Get from the Drawing	Obtén del dibuix
+	Global	Global
+	Global width	Amplada global
+	Grab bag	Calaix de sastre
+	Gradient	Degradat
+	Gradient...	Degradat...
+	Grayscale	Escala de grisos
+	Green	Verd
+	Grid (F7)	Reixeta (F7)
+	Grid Display	Visualització de la reixeta
+	Grid On (F7)	Reixeta activada (F7)
+	Grid snap	Forçament a la reixeta
+	Grid spacing	Espaiat de la reixeta
+	Grip Edit	Edició amb nanses
+	Grip Mirror	Simetria amb nanses
+	Grip Option	Opció de nanses
+	Grip Rotate	Rotació amb nanses
+	Grip Scale	Escala amb nanses
+	Grip Stretch	Estirament amb nanses
+	Grip size	Mida de les nanses
+	Group	Grup
+	Group Edit	Edició de grup
+	Group Options	Opcions de grup
+	Group Selection	Selecció de grup
+	Hatch	Sombreig
+	Hatch Edit	Edició del sombreig
+	Hatch Pattern	Patró de sombreig
+	Hatch Patterns	Patrons de sombreig
+	Hatch...	Sombreig...
+	Height	Alçada
+	Height: {height}	Alçada: {height}
+	Helix	Hèlix
+	Help	Ajuda
+	Hide All	Amaga-ho tot
+	Hide All Constraint Bars	Amaga totes les barres de restricció
+	Hide All Dynamic Dimensions	Amaga totes les cotes dinàmiques
+	Hide DraftCraft	Amaga DraftCraft
+	Hide Layer List	Amaga la llista de capes
+	Hide Objects	Amaga objectes
+	Hide Others	Amaga els altres
+	Hide Palette	Amaga la paleta
+	Hide Palettes	Amaga les paletes
+	History	Historial
+	Hold Shift to add to the selection	Mantingueu premuda Maj per afegir a la selecció
+	Home	Inici
+	Horizontal	Horitzontal
+	HorizontalDistance	DistànciaHoritzontal
+	How to apply:	Com s'aplica:
+	ID Point	Identifica el punt
+	Import	Importa
+	Import...	Importa...
+	In	Apropa
+	In-window Menu Bar	Barra de menús a la finestra
+	Include in new selection set	Inclou al nou conjunt de selecció
+	Increment angle	Increment d'angle
+	Index Color	Color d'índex
+	Index color: {index}	Color d'índex: {index}
+	Infer Constraints	Infereix restriccions
+	Inquiry	Consulta
+	Insert	Insereix
+	Insert Block	Insereix un bloc
+	Insert Column	Insereix una columna
+	Insert Row	Insereix una fila
+	Insert Table Formula	Insereix una fórmula de taula
+	Insert tab	Insereix una tabulació
+	Insert this block	Insereix aquest bloc
+	Insertion	Inserció
+	Insertion X	Inserció X
+	Insertion Y	Inserció Y
+	Insertion Z	Inserció Z
+	Inspect Constraints	Inspecciona les restriccions
+	Inspect Drawing	Inspecciona el dibuix
+	Inspection	Inspecció
+	Interface Language	Idioma de la interfície
+	Interface Theme	Tema de la interfície
+	Interface language	Idioma de la interfície
+	Interface theme	Tema de la interfície
+	Intersect	Interseca
+	Intersection	Intersecció
+	Isolate	Aïlla
+	Isolate Layer	Aïlla la capa
+	Isolate Objects	Aïlla els objectes
+	Isometric Drafting	Dibuix isomètric
+	Isometric Plane	Pla isomètric
+	Isometric snap	Forçament isomètric
+	Jogged	Amb colze
+	Jogged Linear	Lineal amb colze
+	Join	Uneix
+	Keep an editable copy of this table in the drawing	Conserva una còpia editable d'aquesta taula al dibuix
+	Keep the system cursor visible over the drawing area	Mantén visible el cursor del sistema sobre l'àrea de dibuix
+	Language	Idioma
+	Largest array	Matriu més gran
+	Last	Darrer
+	Last commit	Darrera aportació
+	Layer	Capa
+	Layer Delete	Supressió de capa
+	Layer Match	Coincidència de capa
+	Layer Merge	Fusió de capes
+	Layer Off	Desactiva la capa
+	Layer Properties	Propietats de capa
+	Layer Properties Manager	Gestor de propietats de capa
+	Layer Properties Manager — current viewport	Gestor de propietats de capa — finestra gràfica actual
+	Layer State	Estat de capes
+	Layer States Manager...	Gestor d'estats de capes...
+	Layer Tools	Eines de capa
+	Layer contains objects (double-click to make current)	La capa conté objectes (doble clic per fer-la actual)
+	Layer is empty (double-click to make current)	La capa és buida (doble clic per fer-la actual)
+	Layers	Capes
+	Layers Palette	Paleta de capes
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Capes mostrades: {shown} de {total}.   Capa actual: {layer}
+	Layout	Presentació
+	Layout list	Llista de presentacions
+	Layout paper	Paper de la presentació
+	Layout {name}: {table}	Presentació {name}: {table}
+	Leader	Directriu
+	Leaders Only	Només directrius
+	Left	Esquerra
+	Left device button: zoom extents. Right device button: calibrate.	Botó esquerre del dispositiu: zoom extensió. Botó dret del dispositiu: calibra.
+	Length	Longitud
+	Length X	Longitud X
+	Length Y	Longitud Y
+	Lengthen	Allargament
+	Light	Clar
+	Line	Línia
+	Line delta	Delta de línies
+	Linear	Lineal
+	Lines +/−	Línies +/−
+	Lines added	Línies afegides
+	Lines deleted	Línies suprimides
+	Lines of Command History	Línies de l'historial d'ordres
+	Linetype	Tipus de línia
+	Linetype Scale	Escala del tipus de línia
+	Linetype scale	Escala del tipus de línia
+	Linetype...	Tipus de línia...
+	Lineweight	Gruix de línia
+	Lineweight...	Gruix de línia...
+	List	Llista
+	List Blocks	Llista de blocs
+	List Dimension Styles	Llista d'estils de cota
+	List Groups	Llista de grups
+	List Layer States	Llista d'estats de capes
+	List Layouts	Llista de presentacions
+	List System Variables	Llista de variables de sistema
+	List Text Styles	Llista d'estils de text
+	Load all	Carrega-ho tot
+	Load...	Carrega...
+	Loaded	Carregat
+	Loaded linetypes	Tipus de línia carregats
+	Lock	Bloqueja
+	Lock Layer	Bloqueja la capa
+	Lock viewport	Bloqueja la finestra gràfica
+	Lock/Unlock	Bloqueja/desbloqueja
+	Loft	Solevació
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Sense afiliació amb Autodesk, Inc.
+	MODEL	MODEL
+	MText	TextM
+	Magenta	Magenta
+	Major line every	Línia principal cada
+	Make Current	Fes actual
+	Make Object's Layer Current	Fes actual la capa de l'objecte
+	Make it a block of this drawing, keeping its layer names	Converteix-lo en un bloc d'aquest dibuix, conservant els noms de les capes
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Converteix-lo en un bloc d'aquest dibuix; les seves capes passen a ser NAME$0$LAYER
+	Make...	Crea...
+	Match Layer	Iguala la capa
+	Match Properties	Iguala les propietats
+	Measure	Mesura
+	Measure Distance	Mesura la distància
+	Measure Geometry	Mesura la geometria
+	Merge Cells	Combina les cel·les
+	Merged PRs	PR fusionades
+	Mid Between 2 Points	Punt mitjà entre 2 punts
+	Midpoint	Punt mitjà
+	Mirror	Simetria
+	Model	Model
+	Model Space (in viewport)	Espai model (a la finestra gràfica)
+	Model background	Fons del model
+	Modeling	Modelatge
+	Models	Models
+	Modify	Modifica
+	More toolbar commands	Més ordres de la barra d'eines
+	Move	Desplaça
+	Move sideways to pan; push/pull or twist to zoom.	Moveu lateralment per desplaçar la vista; empenyeu/estireu o gireu per fer zoom.
+	Multileader	Directriu múltiple
+	Multileader Style...	Estil de directriu múltiple...
+	Multileader style	Estil de directriu múltiple
+	Multiline	Multilínia
+	Multiline Style...	Estil de multilínia...
+	Multiline Text	Text de diverses línies
+	Multiline Text...	Text de diverses línies...
+	Multiline...	Multilínia...
+	Multiple	Múltiple
+	Multiple Point	Punt múltiple
+	My	Les meves
+	My properties: not available yet	Les meves propietats: encara no disponible
+	Name	Nom
+	Name (A–Z)	Nom (A–Z)
+	Named	Amb nom
+	Named Viewports...	Finestres gràfiques amb nom...
+	Named Views...	Vistes amb nom...
+	Nearest	Més proper
+	New	Nou
+	New (metric)	Nou (mètric)
+	New CTB	CTB nova
+	New Drawing	Dibuix nou
+	New Drawing (⌘N)	Dibuix nou (⌘N)
+	New Drawing...	Dibuix nou...
+	New Layer	Capa nova
+	New Layout	Presentació nova
+	New STB	STB nova
+	New VP Freeze	Congelació en FG noves
+	New Viewports...	Finestres gràfiques noves...
+	New from Template...	Nou a partir d'una plantilla...
+	New layout	Presentació nova
+	New state name	Nom de l'estat nou
+	New style	Estil nou
+	Next Change	Canvi següent
+	No	No
+	No blocks defined in this drawing.	No hi ha cap bloc definit en aquest dibuix.
+	No contributor data was built into this copy.	Aquesta còpia no inclou dades de col·laboradors.
+	No external references are attached.	No hi ha cap referència externa adjunta.
+	No model credits were built into this copy.	Aquesta còpia no inclou crèdits de models.
+	No plot style tables.	No hi ha taules d'estils de traçat.
+	No saved layer states	No hi ha estats de capes desats
+	No selection	Cap selecció
+	No supported 3D mouse found	No s'ha trobat cap ratolí 3D compatible
+	Node	Node
+	None	Cap
+	Normal	Normal
+	Not Found	No trobat
+	Not available	No disponible
+	Not available yet	Encara no disponible
+	Not loaded	No carregat
+	Numbered list	Llista numerada
+	OK	D'acord
+	Object	Objecte
+	Object Snap	Referència a objectes
+	Object Snap (F3)	Referència a objectes (F3)
+	Object Snap On (F3)	Referència a objectes activada (F3)
+	Object Snap Tracking	Rastreig de referència a objectes
+	Object Snap Tracking (F11)	Rastreig de referència a objectes (F11)
+	Object Snap Tracking Settings	Paràmetres del rastreig de referència a objectes
+	Object snap aperture	Obertura de referència a objectes
+	Object snap marker size	Mida del marcador de referència a objectes
+	Object type:	Tipus d'objecte:
+	Oblique	Oblic
+	Off	Desactivat
+	Offset	Equidistància
+	On	Activat
+	On/Off	Activat/desactivat
+	Only in this drawing: {n}	Només en aquest dibuix: {n}
+	Only in {name}: {n}	Només a {name}: {n}
+	Oops	Vaja
+	Open	Obre
+	Open (⌘O)	Obre (⌘O)
+	Open Sample Drawing	Obre el dibuix de mostra
+	Open Xref	Obre la refX
+	Open a drawing first.	Primer obriu un dibuix.
+	Open and Save	Obertura i desament
+	Open sample drawing	Obre el dibuix de mostra
+	Open...	Obre...
+	Operator:	Operador:
+	Options	Opcions
+	Options...	Opcions...
+	Orbit	Òrbita
+	Ordinate	Coordenada
+	Ortho (F8)	Orto (F8)
+	Ortho Mode	Mode orto
+	Ortho Mode (F8)	Mode orto (F8)
+	Osnap Settings...	Paràmetres de referència a objectes...
+	Out	Allunya
+	Over-constrained	Sobrerestringit
+	Overlay	Superposició
+	Override	Modificació
+	PAPER	PAPER
+	PRs	PR
+	Page Setup Manager	Gestor de configuració de pàgina
+	Page Setup Manager...	Gestor de configuració de pàgina...
+	Pan	Enquadrament
+	Pan Down	Enquadra avall
+	Pan Left	Enquadra a l'esquerra
+	Pan Right	Enquadra a la dreta
+	Pan Up	Enquadra amunt
+	Pan sensitivity	Sensibilitat de l'enquadrament
+	Paper Space	Espai paper
+	Parallel	Paral·lel
+	Parameters Manager	Gestor de paràmetres
+	Parametric	Paramètric
+	Paste	Enganxa
+	Paste as Block	Enganxa com a bloc
+	Paste to Command Line	Enganxa a la línia d'ordres
+	Paste to Original Coordinates	Enganxa a les coordenades originals
+	Path Array	Matriu al llarg d'un camí
+	Pattern	Patró
+	Percent	Percentatge
+	Perpendicular	Perpendicular
+	Pickbox size	Mida del quadre de selecció
+	Plot	Traça
+	Plot (click: do not plot)	Traçar (clic: no traçar)
+	Plot Preview	Vista prèvia del traçat
+	Plot Style Manager	Gestor d'estils de traçat
+	Plot Style Manager...	Gestor d'estils de traçat...
+	Plot Style...	Estil de traçat...
+	Plot Styles...	Estils de traçat...
+	Plot Window	Finestra de traçat
+	Plot style	Estil de traçat
+	Plot style attached to	Estil de traçat adjunt a
+	Plot style table	Taula d'estils de traçat
+	Plot table type	Tipus de taula de traçat
+	Plotter Manager	Gestor de traçadors
+	Plotter Manager...	Gestor de traçadors...
+	Plus/minus	Més/menys
+	Point	Punt
+	Point Filters	Filtres de punt
+	Point Style...	Estil de punt...
+	Polar (distance < angle)	Polars (distància < angle)
+	Polar Array	Matriu polar
+	Polar Tracking	Rastreig polar
+	Polar Tracking (F10)	Rastreig polar (F10)
+	Polar Tracking On (F10)	Rastreig polar activat (F10)
+	Polar angle measurement	Mesura de l'angle polar
+	Polar distance	Distància polar
+	Polar: {distance} < {angle}°	Polar: {distance} < {angle}°
+	PolarSnap	Forçament polar
+	Polygon	Polígon
+	Polygonal	Poligonal
+	Polygonal Viewport	Finestra gràfica poligonal
+	Polyline	Polilínia
+	Polyline Edit	Edició de polilínia
+	Position X	Posició X
+	Position Y	Posició Y
+	Position Z	Posició Z
+	Previous	Anterior
+	Previous Change	Canvi anterior
+	Previous Layer	Capa anterior
+	Primitives	Primitives
+	Print	Imprimeix
+	Print...	Imprimeix...
+	Profiles	Perfils
+	Properties	Propietats
+	Properties Inspector	Inspector de propietats
+	Properties:	Propietats:
+	Proxy	Intermediari
+	Purge	Neteja
+	Pyramid	Piràmide
+	Quadrant	Quadrant
+	Query Entities	Consulta d'entitats
+	Quick	Ràpid
+	Quick Dimension	Cota ràpida
+	Quick Properties	Propietats ràpides
+	Quick Select	Selecció ràpida
+	Quick Select Properties	Propietats de selecció ràpida
+	Quick Select...	Selecció ràpida...
+	QuickCalc	CalcRàpida
+	QuickCalc Pick	Selecció de CalcRàpida
+	Quit DraftCraft	Surt de DraftCraft
+	Radius	Radi
+	Raster Image	Imatge ràster
+	Ray	Raig
+	Read-only	Només lectura
+	Real name	Nom real
+	Realtime	En temps real
+	Reassociate Dimensions	Reassocia les cotes
+	Recalculate Table Formulas	Recalcula les fórmules de taula
+	Recent	Recents
+	Recent Commands	Ordres recents
+	Recent Input	Entrada recent
+	Recover...	Recupera...
+	Rectangle	Rectangle
+	Rectangular	Rectangular
+	Rectangular Array	Matriu rectangular
+	Rectangular snap	Forçament rectangular
+	Red	Vermell
+	Redo	Refés
+	Redo (⇧⌘Z)	Refés (⇧⌘Z)
+	Redraw	Redibuixa
+	Reference Manager	Gestor de referències
+	Reference Name	Nom de referència
+	References: {n}	Referències: {n}
+	Regen	Regenera
+	Regen All	Regenera-ho tot
+	Region	Regió
+	Region/Mass Properties	Propietats de regió/massa
+	Reinitialize	Reinicialitza
+	Relative	Relatiu
+	Relative to last segment	Relatiu a l'últim segment
+	Release the 3D mouse to calibrate its resting position	Deixeu anar el ratolí 3D per calibrar-ne la posició de repòs
+	Reload	Torna a carregar
+	Reload All	Torna a carregar-ho tot
+	Remove	Elimina
+	Remove Leader	Elimina la directriu
+	Remove Vertex	Elimina el vèrtex
+	Remove the viewport override	Elimina la modificació de la finestra gràfica
+	Rename Dimension Style	Canvia el nom de l'estil de cota
+	Rename Layer	Canvia el nom de la capa
+	Rename Layer State	Canvia el nom de l'estat de capes
+	Rename Layout	Canvia el nom de la presentació
+	Rename Text Style	Canvia el nom de l'estil de text
+	Rename...	Canvia el nom...
+	Repeat {command}	Repeteix {command}
+	Replace Block...	Substitueix el bloc...
+	Requires a point (x,y, @dx,dy or @d<a).	Cal un punt (x,y, @dx,dy o @d<a).
+	Reset Palettes	Restableix les paletes
+	Reset Panel Layout	Restableix la disposició dels taulers
+	Reset keeps the interface language.	El restabliment conserva l'idioma de la interfície.
+	Reset to Defaults	Restableix els valors per defecte
+	Restore	Restaura
+	Restore Layer State	Restaura l'estat de capes
+	Reverse	Inverteix
+	Reverse the order	Inverteix l'ordre
+	Reverse zoom direction	Inverteix el sentit del zoom
+	Revision Cloud	Núvol de revisió
+	Revolve	Revoluciona
+	Right	Dreta
+	Rotate	Gira
+	Rotation	Rotació
+	Run Script...	Executa un script...
+	SVG drawings (SVG, SVGZ)	Dibuixos SVG (SVG, SVGZ)
+	Save	Desa
+	Save (⌘S)	Desa (⌘S)
+	Save As	Anomena i desa
+	Save As...	Anomena i desa...
+	Save Layer State	Desa l'estat de capes
+	Save State	Desa l'estat
+	Save new drawings as	Desa els dibuixos nous com a
+	Saved Path	Camí desat
+	Scale	Escala
+	Scale List...	Llista d'escales...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Les lupes de pantalla, els lectors de pantalla i els enregistradors segueixen el cursor del sistema.
+	Screening	Tramat de pantalla
+	Search for layer	Cerca una capa
+	Search for parameter	Cerca un paràmetre
+	Search for pattern	Cerca un patró
+	Second and next points:	Segon punt i següents:
+	Select	Selecciona
+	Select 2D polyline	Seleccioneu una polilínia 2D
+	Select All	Selecciona-ho tot
+	Select Objects	Selecciona objectes
+	Select Similar	Selecciona similars
+	Select a 2D polyline.	Seleccioneu una polilínia 2D.
+	Select a block reference.	Seleccioneu una referència de bloc.
+	Select a circle or arc.	Seleccioneu un cercle o un arc.
+	Select a closed polyline	Seleccioneu una polilínia tancada
+	Select a closed polyline, circle, ellipse or closed spline.	Seleccioneu una polilínia tancada, un cercle, una el·lipse o una spline tancada.
+	Select a closed polyline.	Seleccioneu una polilínia tancada.
+	Select a curve as the path.	Seleccioneu una corba com a camí.
+	Select a dimension constraint type	Seleccioneu un tipus de restricció de cota
+	Select a line object	Seleccioneu un objecte línia
+	Select a line object.	Seleccioneu un objecte línia.
+	Select a line or an arc.	Seleccioneu una línia o un arc.
+	Select a line or polyline segment	Seleccioneu una línia o un segment de polilínia
+	Select a line, arc or open polyline.	Seleccioneu una línia, un arc o una polilínia oberta.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Seleccioneu una línia, un arc, un cercle, una polilínia, una el·lipse o una spline com a camí.
+	Select a line, circle, arc or polyline segment.	Seleccioneu una línia, un cercle, un arc o un segment de polilínia.
+	Select a line.	Seleccioneu una línia.
+	Select a polyline.	Seleccioneu una polilínia.
+	Select a text, mtext, attribute definition or dimension.	Seleccioneu un text, un textM, una definició d'atribut o una cota.
+	Select an annotation object	Seleccioneu un objecte d'anotació
+	Select an arc or circle	Seleccioneu un arc o un cercle
+	Select an arc.	Seleccioneu un arc.
+	Select an object	Seleccioneu un objecte
+	Select an object to change	Seleccioneu un objecte per canviar
+	Select an object to measure	Seleccioneu un objecte per mesurar
+	Select an object.	Seleccioneu un objecte.
+	Select an open curve.	Seleccioneu una corba oberta.
+	Select an open line, arc, polyline, ellipse arc or spline.	Seleccioneu una línia, un arc, una polilínia, un arc d'el·lipse o una spline oberts.
+	Select arc or circle	Seleccioneu un arc o un cercle
+	Select arc or polyline arc segment	Seleccioneu un arc o un segment d'arc de polilínia
+	Select arc style	Seleccioneu l'estil d'arc
+	Select arc, circle, line	Seleccioneu arc, cercle, línia
+	Select at least two objects to join.	Seleccioneu almenys dos objectes per unir.
+	Select circle or arc to add center mark	Seleccioneu un cercle o un arc per afegir-hi una marca de centre
+	Select closed objects (regions, closed polylines, circles).	Seleccioneu objectes tancats (regions, polilínies tancades, cercles).
+	Select first line	Seleccioneu la primera línia
+	Select first line or arc	Seleccioneu la primera línia o arc
+	Select first object	Seleccioneu el primer objecte
+	Select first point	Seleccioneu el primer punt
+	Select nested objects to copy	Seleccioneu els objectes niats que cal copiar
+	Select object	Seleccioneu un objecte
+	Select object to dimension	Seleccioneu l'objecte que cal acotar
+	Select object to divide	Seleccioneu l'objecte que cal dividir
+	Select object to extend or shift-select to trim	Seleccioneu l'objecte que cal allargar o Maj+selecció per retallar
+	Select object to measure	Seleccioneu l'objecte que cal mesurar
+	Select object to offset	Seleccioneu l'objecte que cal desplaçar en paral·lel
+	Select object to trim or shift-select to extend	Seleccioneu l'objecte que cal retallar o Maj+selecció per allargar
+	Select objects	Seleccioneu objectes
+	Select objects (crossing window first corner)	Seleccioneu objectes (primera cantonada de la finestra de captura)
+	Select objects first, then choose a command	Primer seleccioneu objectes i després trieu una ordre
+	Select objects to array.	Seleccioneu els objectes de la matriu.
+	Select objects to stretch by crossing-window or crossing-polygon...	Seleccioneu els objectes que cal estirar amb una finestra o un polígon de captura...
+	Select objects:	Seleccioneu objectes:
+	Select one polyline (Multiple is available through the JSON form).	Seleccioneu una polilínia (Múltiple està disponible a través del format JSON).
+	Select path curve	Seleccioneu la corba del camí
+	Select point or object	Seleccioneu un punt o un objecte
+	Select polyline	Seleccioneu una polilínia
+	Select second line	Seleccioneu la segona línia
+	Select second line or shift-select to apply corner	Seleccioneu la segona línia o Maj+selecció per aplicar la cantonada
+	Select second object	Seleccioneu el segon objecte
+	Select second object or shift-select to apply corner	Seleccioneu el segon objecte o Maj+selecció per aplicar la cantonada
+	Select second point	Seleccioneu el segon punt
+	Select spline	Seleccioneu una spline
+	Select symmetry line	Seleccioneu la línia de simetria
+	Select two points	Seleccioneu dos punts
+	Selection	Selecció
+	Selection Cycling	Selecció cíclica
+	Send Hatches to Back	Envia els sombreigs al fons
+	Send Under Objects	Envia sota els objectes
+	Send to Back	Envia al fons
+	Services	Serveis
+	Set Current	Estableix com a actual
+	Set Current Dimension Style	Estableix l'estil de cota actual
+	Set Current Text Style	Estableix l'estil de text actual
+	Set Current Viewport	Estableix la finestra gràfica actual
+	Set Layer Properties	Estableix les propietats de capa
+	Set Properties	Estableix les propietats
+	Set Table Cell	Estableix la cel·la de taula
+	Set Table Cell Style	Estableix l'estil de cel·la de taula
+	Set Variable	Estableix la variable
+	Set View	Estableix la vista
+	Settings...	Paràmetres...
+	Share	Comparteix
+	Show	Mostra
+	Show All	Mostra-ho tot
+	Show All Constraint Bars	Mostra totes les barres de restricció
+	Show All Dynamic Dimensions	Mostra totes les cotes dinàmiques
+	Show Annotative Objects	Mostra els objectes anotatius
+	Show Layer List	Mostra la llista de capes
+	Show Quick Properties for selected objects	Mostra les propietats ràpides dels objectes seleccionats
+	Show System Cursor	Mostra el cursor del sistema
+	Show and hide the tools of this category	Mostra i amaga les eines d'aquesta categoria
+	Show command prompting near the crosshairs	Mostra les sol·licituds d'ordres a prop de la creu
+	Show in Tool Sets	Mostra als conjunts d'eines
+	Show/Hide Lineweight	Mostra/amaga el gruix de línia
+	Show/Hide Transparency	Mostra/amaga la transparència
+	Single Line Text	Text d'una línia
+	Single Point	Punt únic
+	Single...	Únic...
+	Smooth	Suavitza
+	Snap	Forçament
+	Snap Mode	Mode de forçament
+	Snap Mode (F9)	Mode de forçament (F9)
+	Snap On (F9)	Forçament activat (F9)
+	Snap Overrides	Modificacions de referència
+	Snap X spacing	Espaiat X del forçament
+	Snap and Grid	Forçament i reixeta
+	Snap type	Tipus de forçament
+	Snap, grid, polar tracking and Dynamic Input:	Forçament, reixeta, rastreig polar i entrada dinàmica:
+	Solid	Sòlid
+	Solid Editing	Edició de sòlids
+	Sort	Ordena
+	Specify a point	Indiqueu un punt
+	Specify a scale for the hatch pattern	Indiqueu una escala per al patró de sombreig
+	Specify a second extension line origin	Indiqueu l'origen de la segona línia d'extensió
+	Specify an angle for the hatch pattern	Indiqueu un angle per al patró de sombreig
+	Specify angle end point	Indiqueu el punt final de l'angle
+	Specify angle of dimension line	Indiqueu l'angle de la línia de cota
+	Specify angle of dimension text	Indiqueu l'angle del text de cota
+	Specify angle start point	Indiqueu el punt inicial de l'angle
+	Specify angle vertex	Indiqueu el vèrtex de l'angle
+	Specify angle vertex point	Indiqueu el punt del vèrtex de l'angle
+	Specify arc length dimension location	Indiqueu la ubicació de la cota de longitud d'arc
+	Specify axis endpoint of ellipse	Indiqueu el punt final de l'eix de l'el·lipse
+	Specify base diameter	Indiqueu el diàmetre de la base
+	Specify base point	Indiqueu el punt base
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Indiqueu el punt base o el desplaçament (arrossegueu amb el botó central per enquadrar en temps real)
+	Specify base radius	Indiqueu el radi de la base
+	Specify center of donut	Indiqueu el centre de l'arandela
+	Specify center of ellipse	Indiqueu el centre de l'el·lipse
+	Specify center of polygon	Indiqueu el centre del polígon
+	Specify center point for circle	Indiqueu el punt central del cercle
+	Specify center point of arc	Indiqueu el punt central de l'arc
+	Specify center point of arc (hold Ctrl to switch direction)	Indiqueu el punt central de l'arc (mantingueu Ctrl per canviar el sentit)
+	Specify center point of array	Indiqueu el punt central de la matriu
+	Specify center point of base	Indiqueu el punt central de la base
+	Specify corner of viewport	Indiqueu la cantonada de la finestra gràfica
+	Specify corner of window, enter a scale factor (nX or nXP)	Indiqueu la cantonada de la finestra, introduïu un factor d'escala (nX o nXP)
+	Specify diameter of circle	Indiqueu el diàmetre del cercle
+	Specify dimension arc line location	Indiqueu la ubicació de l'arc de cota
+	Specify dimension line location	Indiqueu la ubicació de la línia de cota
+	Specify distance between turns	Indiqueu la distància entre voltes
+	Specify distance to other axis	Indiqueu la distància a l'altre eix
+	Specify end angle	Indiqueu l'angle final
+	Specify end point of arc	Indiqueu el punt final de l'arc
+	Specify end point of arc (hold Ctrl to switch direction)	Indiqueu el punt final de l'arc (mantingueu Ctrl per canviar el sentit)
+	Specify ending width	Indiqueu l'amplada final
+	Specify ending width for next segment	Indiqueu l'amplada final del segment següent
+	Specify endpoint of arc	Indiqueu l'extrem de l'arc
+	Specify endpoint of axis	Indiqueu l'extrem de l'eix
+	Specify endpoint of line	Indiqueu l'extrem de la línia
+	Specify feature location	Indiqueu la ubicació de la característica
+	Specify fillet radius	Indiqueu el radi d'empalmament
+	Specify fillet radius for rectangles	Indiqueu el radi d'empalmament dels rectangles
+	Specify first angle endpoint	Indiqueu el primer extrem de l'angle
+	Specify first chamfer distance	Indiqueu la primera distància del xamfrà
+	Specify first chamfer distance for rectangles	Indiqueu la primera distància del xamfrà dels rectangles
+	Specify first constraint point	Indiqueu el primer punt de restricció
+	Specify first corner	Indiqueu la primera cantonada
+	Specify first corner point	Indiqueu el punt de la primera cantonada
+	Specify first destination point	Indiqueu el primer punt de destinació
+	Specify first end point of circle's diameter	Indiqueu el primer extrem del diàmetre del cercle
+	Specify first endpoint of edge	Indiqueu el primer extrem de l'aresta
+	Specify first extension line origin	Indiqueu l'origen de la primera línia d'extensió
+	Specify first point	Indiqueu el primer punt
+	Specify first point of mirror line	Indiqueu el primer punt de la línia de simetria
+	Specify first point on circle	Indiqueu el primer punt del cercle
+	Specify first point on circle: _tan to	Indiqueu el primer punt del cercle: _tan a
+	Specify first source point	Indiqueu el primer punt d'origen
+	Specify height	Indiqueu l'alçada
+	Specify helix height	Indiqueu l'alçada de l'hèlix
+	Specify included angle	Indiqueu l'angle inclòs
+	Specify included angle (hold Ctrl to switch direction)	Indiqueu l'angle inclòs (mantingueu Ctrl per canviar el sentit)
+	Specify insertion base point	Indiqueu el punt base d'inserció
+	Specify insertion point	Indiqueu el punt d'inserció
+	Specify inside diameter of donut	Indiqueu el diàmetre interior de l'arandela
+	Specify leader arrowhead location	Indiqueu la ubicació de la punta de fletxa de la directriu
+	Specify leader endpoint	Indiqueu l'extrem de la directriu
+	Specify leader landing location	Indiqueu la ubicació del replà de la directriu
+	Specify length for rectangles	Indiqueu la longitud dels rectangles
+	Specify length of chord	Indiqueu la longitud de la corda
+	Specify length of chord (hold Ctrl to switch direction)	Indiqueu la longitud de la corda (mantingueu Ctrl per canviar el sentit)
+	Specify length of segment	Indiqueu la longitud del segment
+	Specify line width for rectangles	Indiqueu el gruix de línia dels rectangles
+	Specify location for new vertex	Indiqueu la ubicació del vèrtex nou
+	Specify minimum length of arc	Indiqueu la longitud mínima de l'arc
+	Specify new end point	Indiqueu el punt final nou
+	Specify new location for marked vertex	Indiqueu la ubicació nova del vèrtex marcat
+	Specify new width for all segments	Indiqueu l'amplada nova de tots els segments
+	Specify next point	Indiqueu el punt següent
+	Specify offset distance	Indiqueu la distància d'equidistància
+	Specify opposite corner	Indiqueu la cantonada oposada
+	Specify other corner point	Indiqueu el punt de l'altra cantonada
+	Specify other endpoint of axis	Indiqueu l'altre extrem de l'eix
+	Specify outside diameter of donut	Indiqueu el diàmetre exterior de l'arandela
+	Specify point	Indiqueu un punt
+	Specify point on object for first tangent of circle	Indiqueu un punt de l'objecte per a la primera tangent del cercle
+	Specify point on object for second tangent of circle	Indiqueu un punt de l'objecte per a la segona tangent del cercle
+	Specify point on side to offset	Indiqueu un punt al costat cap on desplaçar
+	Specify radius of arc	Indiqueu el radi de l'arc
+	Specify radius of arc (hold Ctrl to switch direction)	Indiqueu el radi de l'arc (mantingueu Ctrl per canviar el sentit)
+	Specify radius of circle	Indiqueu el radi del cercle
+	Specify rotation angle	Indiqueu l'angle de rotació
+	Specify rotation angle of text	Indiqueu l'angle de rotació del text
+	Specify scale factor	Indiqueu el factor d'escala
+	Specify second angle endpoint	Indiqueu el segon extrem de l'angle
+	Specify second break point	Indiqueu el segon punt de partició
+	Specify second chamfer distance for rectangles	Indiqueu la segona distància del xamfrà dels rectangles
+	Specify second constraint point	Indiqueu el segon punt de restricció
+	Specify second destination point	Indiqueu el segon punt de destinació
+	Specify second end point of circle's diameter	Indiqueu el segon extrem del diàmetre del cercle
+	Specify second endpoint of edge	Indiqueu el segon extrem de l'aresta
+	Specify second extension line origin	Indiqueu l'origen de la segona línia d'extensió
+	Specify second point	Indiqueu el segon punt
+	Specify second point of arc	Indiqueu el segon punt de l'arc
+	Specify second point of mirror line	Indiqueu el segon punt de la línia de simetria
+	Specify second point on circle	Indiqueu el segon punt del cercle
+	Specify second point on circle: _tan to	Indiqueu el segon punt del cercle: _tan a
+	Specify second point or <use first point as displacement>	Indiqueu el segon punt o <useu el primer punt com a desplaçament>
+	Specify second source point	Indiqueu el segon punt d'origen
+	Specify side to offset	Indiqueu el costat cap on desplaçar
+	Specify start angle	Indiqueu l'angle inicial
+	Specify start point	Indiqueu el punt inicial
+	Specify start point of arc	Indiqueu el punt inicial de l'arc
+	Specify start point of polyline	Indiqueu el punt inicial de la polilínia
+	Specify start point of text	Indiqueu el punt inicial del text
+	Specify starting width	Indiqueu l'amplada inicial
+	Specify starting width for next segment	Indiqueu l'amplada inicial del segment següent
+	Specify tangent direction for the start point of arc	Indiqueu la direcció tangent al punt inicial de l'arc
+	Specify the elevation for rectangles	Indiqueu l'elevació dels rectangles
+	Specify thickness for rectangles	Indiqueu el gruix dels rectangles
+	Specify third point on circle	Indiqueu el tercer punt del cercle
+	Specify third point on circle: _tan to	Indiqueu el tercer punt del cercle: _tan a
+	Specify third source point or <continue>	Indiqueu el tercer punt d'origen o <continua>
+	Specify through point	Indiqueu el punt de pas
+	Specify top diameter	Indiqueu el diàmetre superior
+	Specify top radius	Indiqueu el radi superior
+	Specify total angle	Indiqueu l'angle total
+	Specify total length	Indiqueu la longitud total
+	Specify width for rectangles	Indiqueu l'amplada dels rectangles
+	Sphere	Esfera
+	Spline	Spline
+	Spline Edit	Edició de spline
+	Stack (type 1/2 then select)	Apila (escriviu 1/2 i després seleccioneu)
+	Standard	Estàndard
+	Start	Inici
+	Start Width	Amplada inicial
+	Start X	X inicial
+	Start Y	Y inicial
+	Start angle	Angle inicial
+	Start, Center, Angle	Inici, centre, angle
+	Start, Center, End	Inici, centre, final
+	Start, Center, Length	Inici, centre, longitud
+	Start, End, Angle	Inici, final, angle
+	Start, End, Direction	Inici, final, direcció
+	Start, End, Radius	Inici, final, radi
+	Status	Estat
+	Status Bar	Barra d'estat
+	Stretch	Estira
+	Stretch Vertex	Estira el vèrtex
+	Style: Standard	Estil: Estàndard
+	Subtract	Resta
+	Sweep	Escombrat
+	Switch Drawing	Canvia de dibuix
+	Switch Layout	Canvia de presentació
+	Switch between model space in a viewport and paper space	Commuta entre l'espai model d'una finestra gràfica i l'espai paper
+	Symmetric	Simètric
+	Synchronize Attributes	Sincronitza els atributs
+	Synchronize Multiple-scale Positions	Sincronitza les posicions de múltiples escales
+	TOP	SUPERIOR
+	Table	Taula
+	Table Breaks	Divisions de taula
+	Table Cell Style	Estil de cel·la de taula
+	Table Style...	Estil de taula...
+	Table style	Estil de taula
+	Table...	Taula...
+	Tan, Tan, Radius	Tan, tan, radi
+	Tan, Tan, Tan	Tan, tan, tan
+	Tangent	Tangent
+	Temporary track point	Punt de rastreig temporal
+	Text	Text
+	Text Editor	Editor de text
+	Text Height	Alçada del text
+	Text Objects Only	Només objectes de text
+	Text Style...	Estil de text...
+	Text height	Alçada del text
+	Text override	Text substitutiu
+	Text style	Estil de text
+	Thaw All Layers	Descongela totes les capes
+	Thaw Layer	Descongela la capa
+	The aperture is how near the cursor must come to a point for an object snap to find it.	L'obertura és la distància a què el cursor s'ha d'acostar a un punt perquè la referència a objectes el trobi.
+	There is nothing here yet.	Encara no hi ha res aquí.
+	Thickness	Gruix
+	Time	Hora
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Clic dret sensible al temps: un clic ràpid és Retorn, mantenir premut obre el menú
+	To	Fins a
+	To get started, create or open a drawing.	Per començar, creeu o obriu un dibuix.
+	Toggle PICKADD (off: each pick replaces the selection)	Commuta PICKADD (desactivat: cada selecció substitueix la selecció)
+	Toggle PICKADD (on: picks add to the selection)	Commuta PICKADD (activat: les seleccions s'afegeixen a la selecció)
+	Tolerance...	Tolerància...
+	Tool Bar	Barra d'eines
+	Tool Sets	Conjunts d'eines
+	Tools	Eines
+	Torus	Tor
+	Trace	Traç
+	Track orthogonally only	Rastreja només ortogonalment
+	Track using all polar angle settings	Rastreja amb tots els paràmetres d'angle polar
+	Transparency	Transparència
+	Trim	Retalla
+	True Color	Color veritable
+	Turn All Layers On	Activa totes les capes
+	Turn Off Layer	Desactiva la capa
+	Turn On Layer	Activa la capa
+	Turn Quick Properties off (QPMODE)	Desactiva les propietats ràpides (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Si es desactiva, un clic dret durant una ordre sempre obre el menú contextual.
+	Type	Tipus
+	Type a command	Escriviu una ordre
+	Type text; Enter starts a new paragraph	Escriviu text; Retorn comença un paràgraf nou
+	UCS Icon	Icona UCS
+	Undo	Desfés
+	Undo (⌘Z)	Desfés (⌘Z)
+	Ungroup	Desagrupa
+	Union	Unió
+	Unisolate Layer	Desaïlla la capa
+	Units Conversion	Conversió d'unitats
+	Units...	Unitats...
+	Unload	Descarrega
+	Unloaded	Descarregat
+	Unlock Layer	Desbloqueja la capa
+	Unlock viewport	Desbloqueja la finestra gràfica
+	Unmerge Cells	Separa les cel·les
+	Unreferenced	Sense referència
+	Unresolved	No resolt
+	Unsaved Layer State	Estat de capes no desat
+	Up	Amunt
+	Update	Actualitza
+	Update Data Links	Actualitza els enllaços de dades
+	Use System Setting	Usa el paràmetre del sistema
+	Use for this layout	Usa per a aquesta presentació
+	Use object linetype	Usa el tipus de línia de l'objecte
+	Use object lineweight	Usa el gruix de línia de l'objecte
+	User	Usuari
+	User Parameters	Paràmetres d'usuari
+	User Preferences	Preferències d'usuari
+	Username	Nom d'usuari
+	VP Color	Color FG
+	VP Freeze	Congelació FG
+	Value	Valor
+	Value:	Valor:
+	Variables	Variables
+	Version	Versió
+	Version 2000	Versió 2000
+	Version 2004	Versió 2004
+	Version 2007	Versió 2007
+	Version 2010	Versió 2010
+	Version 2013	Versió 2013
+	Version 2018	Versió 2018
+	Version {version}	Versió {version}
+	Vertical	Vertical
+	VerticalDistance	DistànciaVertical
+	View	Vista
+	ViewCube	ViewCube
+	Viewport	Finestra gràfica
+	Viewport Layer Freeze	Congelació de capes a la finestra gràfica
+	Viewport Properties	Propietats de la finestra gràfica
+	Viewport is locked	La finestra gràfica està bloquejada
+	Viewport scale	Escala de la finestra gràfica
+	Viewport {id}	Finestra gràfica {id}
+	Viewports	Finestres gràfiques
+	Volume	Volum
+	WCS	WCS
+	White	Blanc
+	Width factor	Factor d'amplada
+	Window	Finestra
+	Wipeout	Màscara
+	Workspace Switching	Canvi d'espai de treball
+	Write Block	Escriu el bloc
+	X	X
+	Xline	Xlínia
+	Y	Y
+	Yellow	Groc
+	Yes	Sí
+	Zoom	Zoom
+	Zoom All	Zoom tot
+	Zoom Dynamic	Zoom dinàmic
+	Zoom Extents	Zoom extensió
+	Zoom In	Apropa
+	Zoom Object	Zoom objecte
+	Zoom Out	Allunya
+	Zoom Previous	Zoom anterior
+	Zoom Realtime	Zoom en temps real
+	Zoom Window	Zoom finestra
+	Zoom sensitivity	Sensibilitat del zoom
+	error	error
+	min	min
+	objects	objectes
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (restricció {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	Restricció {kind} {name} = {expression}  (doble clic per editar)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Paràmetre d'usuari nou
+	ΔLOC	ΔLOC
+	−Bin	−Binari
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ per acabar
+@plural	{n} commit	{n} aportació|{n} aportacions
+@plural	{n} contributor	{n} col·laborador|{n} col·laboradors
+	Check for Updates…	Cerca actualitzacions…
+	DraftCraft is up to date.	DraftCraft està actualitzat.
+	Could not check for updates.	No s'han pogut cercar actualitzacions.
+	Add to Working Set	Afegeix al conjunt de treball
+	Add: Pick points	Afegeix: designa punts
+	Add: Select objects	Afegeix: selecciona objectes
+	Add…	Afegeix…
+	Alias	Àlies
+	Alias file: {file}	Fitxer d'àlies: {file}
+	Align Multileaders	Alinea les directrius múltiples
+	Analyze Shapes	Analitza les formes
+	Analyze Usage	Analitza l'ús
+	Animation Effects	Efectes d'animació
+	Animation effects	Efectes d'animació
+	Associative	Associativa
+	Backup copy	Còpia de seguretat
+	Block to create or edit	Bloc que cal crear o editar
+	Bottom left	A baix a l'esquerra
+	Bottom right	A baix a la dreta
+	Boundaries	Contorns
+	Boundaries picked: {n}	Contorns designats: {n}
+	Break-line Symbol	Símbol de línia de trencament
+	Centered	Centrat
+	Change Properties	Canvia les propietats
+	Choose the command the alias starts.	Trieu l'ordre que inicia l'àlies.
+	Click the ruler to add a tab stop, right-click to remove one	Feu clic al regle per afegir una tabulació, clic dret per eliminar-ne una
+	Click to set new origin	Feu clic per establir l'origen nou
+	Close Block Editor	Tanca l'editor de blocs
+	Collect	Recull
+	Collect Multileaders	Recull les directrius múltiples
+	Color 1	Color 1
+	Color 2	Color 2
+	Command	Ordre
+	Convert Text to Mtext	Converteix el text en textM
+	Create backup copy with each save	Crea una còpia de seguretat en cada desament
+	Create separate hatches	Crea sombreigs separats
+	Crossing selection color:	Color de selecció per captura:
+	Curved	Corbat
+	Customize	Personalitza
+	Default to boundary extents	Per defecte a l'extensió del contorn
+	Define each corner of the selection window with a separate click.	Definiu cada cantonada de la finestra de selecció amb un clic separat.
+	Discard	Descarta
+	Drag Dynamic Grip	Arrossega la nansa dinàmica
+	Dynamic Block Data	Dades de bloc dinàmic
+	Dynamic Block Grips	Nanses de bloc dinàmic
+	Dynamic Block Reference	Referència de bloc dinàmic
+	Edit Block Definition	Edita la definició del bloc
+	Edit Command Aliases (PGP)...	Edita els àlies d'ordres (PGP)...
+	Edit Multileader	Edita la directriu múltiple
+	Edit Reference In-Place	Edita la referència in situ
+	Edit…	Edita…
+	Evaluate LISP	Avalua LISP
+	Exclude:	Exclou:
+	Explode Attributes to Text	Descompon els atributs en text
+	Express Tools	Express Tools
+	Font	Tipus de lletra
+	Grips	Nanses
+	Groups	Grups
+	Hatch Pick	Designació de sombreig
+	Hatch and Gradient	Sombreig i degradat
+	Hatch origin	Origen del sombreig
+	Hatches	Sombreigs
+	Hemispherical	Hemisfèric
+	Ignore	Ignora
+	Imperial (inches)	Imperial (polzades)
+	Implied Loops	Bucles implícits
+	Indicate selection area	Indica l'àrea de selecció
+	Interface scale	Escala de la interfície
+	Inverted	Invertit
+	Island	Illa
+	Island detection	Detecció d'illes
+	Italic	Cursiva
+	Justify	Justifica
+	Load Application...	Carrega una aplicació...
+	Metric (millimetres)	Mètric (mil·límetres)
+	More than {n} aliases.	Més de {n} àlies.
+	Move/Copy/Rotate	Desplaça/copia/gira
+	Multiline text	Text de diverses línies
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	L'ordre Nou i el primer dibuix en iniciar fan servir aquestes unitats tret que s'hagi definit una plantilla per defecte (QNEWTEMPLATE).
+	New block	Bloc nou
+	No alias file loaded. REINIT replaces these aliases with a file's.	No s'ha carregat cap fitxer d'àlies. REINIT substitueix aquests àlies pels d'un fitxer.
+	Not a number or distance: {text}	No és un nombre ni una distància: {text}
+	Object grouping	Agrupació d'objectes
+	Object selection limit for display of grips	Límit de selecció d'objectes per mostrar nanses
+	Objects on locked layers	Objectes en capes bloquejades
+	Open in Block Editor	Obre a l'editor de blocs
+	Origin: {x}, {y}	Origen: {x}, {y}
+	Outer	Exterior
+	Overline	Sobreratllat
+	Preview	Vista prèvia
+	Query Texts	Consulta de textos
+	Save Block	Desa el bloc
+	Save Block As	Anomena i desa el bloc
+	Save Layout as Template	Desa la presentació com a plantilla
+	Save Reference Edits	Desa les edicions de referència
+	Save alias	Desa l'àlies
+	Save changes to block "{name}"?	Voleu desar els canvis al bloc "{name}"?
+	Select boundaries to remove	Seleccioneu els contorns que cal eliminar
+	Select using two clicks only	Selecciona només amb dos clics
+	Selection Area Effect	Efecte de l'àrea de selecció
+	Selection Preview Filter	Filtre de vista prèvia de la selecció
+	Selection area opacity:	Opacitat de l'àrea de selecció:
+	Selection effect color	Color de l'efecte de selecció
+	Selection modes	Modes de selecció
+	Selection preview	Vista prèvia de la selecció
+	Set Dynamic Property	Estableix la propietat dinàmica
+	Shape	Forma
+	Sheet Books to PDF...	Llibres de fulls a PDF...
+	Show grips	Mostra les nanses
+	Specified origin	Origen especificat
+	Spherical	Esfèric
+	Tables	Taules
+	Text color	Color del text
+	Top left	A dalt a l'esquerra
+	Top right	A dalt a la dreta
+	Type an alias name.	Escriviu un nom d'àlies.
+	Underline	Subratllat
+	Units of new drawings	Unitats dels dibuixos nous
+	Unsaved changes	Canvis no desats
+	Use current origin	Usa l'origen actual
+	Visual Effect Settings	Paràmetres dels efectes visuals
+	Visual Effect Settings...	Paràmetres dels efectes visuals...
+	When a command is active	Quan hi ha una ordre activa
+	When no command is active	Quan no hi ha cap ordre activa
+	Window selection color:	Color de selecció per finestra:
+	Working Set	Conjunt de treball
+	Xref and Block In-place Editing	Edició in situ de referències externes i blocs
+	Xrefs	Referències externes
+	built-in	integrat
+	overrides built-in	substitueix l'integrat
+	{alias} is already defined; select it and use Edit.	{alias} ja està definit; seleccioneu-lo i useu Edita.
+	{command} is an unknown command.	{command} és una ordre desconeguda.
+	Find All	Cerca-ho tot
+	Find what:	Cerca:
+	Match case	Coincidència de majúscules
+	Replace	Substitueix
+	Replace All	Substitueix-ho tot
+	Replace with:	Substitueix per:
+	Replacement text	Text de substitució
+	Results	Resultats
+	Searches the current space.	Cerca a l'espai actual.
+	Text to find	Text que cal cercar
+	Whole words	Paraules senceres
+	Nothing found	No s'ha trobat res
+	E	E
+	N	N
+	S	S
+	W	O
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Esborra els fitxers recents
+	contains authoring elements. Open in Block Editor?	conté elements d'autoria. Voleu obrir-lo a l'editor de blocs?
+	Custom	Personalitzat
+	Open Recent	Obre un recent
+	This drawing	Aquest dibuix
+	Arrow size	Mida de la fletxa
+	Dim scale overall	Escala global de cota
+	Precision	Precisió
+	Apply to Layout	Aplica a la presentació
+	Center the plot	Centra el traçat
+	Enter block names to extract	Introduïu els noms dels blocs que cal extreure
+	Enter geometric characteristic	Introduïu la característica geomètrica
+	Enter name of LISP file to load	Introduïu el nom del fitxer LISP que cal carregar
+	First corner	Primera cantonada
+	Fit to paper	Ajusta al paper
+	Landscape	Horitzontal
+	Limits	Límits
+	Opposite corner	Cantonada oposada
+	Orientation	Orientació
+	Paper size	Mida del paper
+	Plot area	Àrea de traçat
+	Plot object lineweights	Traça els gruixos de línia dels objectes
+	Plot offset	Desplaçament del traçat
+	Plot transparency	Traça la transparència
+	Portrait	Vertical
+	Printer/plotter	Impressora/traçador
+	Window <	Finestra <
+	X offset (mm)	Desplaçament X (mm)
+	Y offset (mm)	Desplaçament Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Àngstroms
+	Architectural	Arquitectòniques
+	Astronomical Units	Unitats astronòmiques
+	Centimeters	Centímetres
+	Decameters	Decàmetres
+	Decimal	Decimals
+	Decimal Degrees	Graus decimals
+	Decimeters	Decímetres
+	Deg/Min/Sec	Graus/minuts/segons
+	Don't Save	No desis
+	Drawing Units	Unitats del dibuix
+	Engineering	Enginyeria
+	Feet	Peus
+	Fractional	Fraccionàries
+	Gigameters	Gigàmetres
+	Grads	Graus centesimals
+	Hectometers	Hectòmetres
+	Inches	Polzades
+	Insertion scale	Escala d'inserció
+	Kilometers	Quilòmetres
+	Light Years	Anys llum
+	Meters	Metres
+	Microinches	Micropolzades
+	Microns	Micres
+	Miles	Milles
+	Millimeters	Mil·límetres
+	Mils	Mils
+	Nanometers	Nanòmetres
+	Parsecs	Pàrsecs
+	Radians	Radians
+	Sample output	Mostra del resultat
+	Save changes to {name}?	Voleu desar els canvis a {name}?
+	Scientific	Científiques
+	Surveyor's Units	Unitats topogràfiques
+	Unitless	Sense unitats
+	Units to scale inserted content	Unitats per escalar el contingut inserit
+	US Survey Feet	Peus topogràfics dels EUA
+	US Survey Inch	Polzada topogràfica dels EUA
+	US Survey Mile	Milla topogràfica dels EUA
+	US Survey Yard	Iarda topogràfica dels EUA
+	Yards	Iardes
+	Your changes will be lost if you don't save them.	Si no els deseu, es perdran els canvis.
+	Layouts	Presentacions
+	Associate	Associa
+	Clip Xref	Retalla la refX
+	Xref Clip Frame	Marc de retall de refX
+	Minimize	Minimitza
+	Maximize	Maximitza
+	Restore Down	Restaura avall
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft i el logotip de DraftCraft són marques comercials de DraftCraft Engineering Ventures.
+	Conic	Cònica
+	Spline Fit	Spline per ajust
+	Spline CV	Spline per VC
+	Specify start point of conic	Indiqueu el punt inicial de la cònica
+	Specify apex (where the end tangents meet)	Indiqueu el vèrtex (on es troben les tangents finals)
+	Specify end point of conic	Indiqueu el punt final de la cònica
+	Specify rho or a point on the conic	Indiqueu rho o un punt de la cònica
+	Check for Updates...	Cerca actualitzacions...
+	Check for Updates	Cerca actualitzacions
+	Update Available	Actualització disponible
+	DraftCraft {version} is available.	DraftCraft {version} està disponible.
+	You have version {version}.	Teniu la versió {version}.
+	Do you want to download the update?	Voleu baixar l'actualització?
+	What's new	Novetats
+	What's New	Novetats
+	Download	Baixa
+	Later	Més tard
+	Skip This Version	Omet aquesta versió
+	DraftCraft is up to date (version {version}).	DraftCraft està actualitzat (versió {version}).
+	Do you want to install the update now?	Voleu instal·lar l'actualització ara?
+	Update Now	Actualitza ara
+	Open the release page	Obre la pàgina de la versió
+	This copy of DraftCraft can't update itself.	Aquesta còpia de DraftCraft no es pot actualitzar sola.
+	Updating DraftCraft	S'està actualitzant DraftCraft
+	Update Failed	Ha fallat l'actualització
+	Installing DraftCraft {version}	S'està instal·lant DraftCraft {version}
+	Downloading: {done} of {total} MB	S'està baixant: {done} de {total} MB
+	Installing…	S'està instal·lant…
+	Starting the download…	S'està iniciant la baixada…
+	The connection dropped; trying again…	S'ha perdut la connexió; s'està tornant a provar…
+	DraftCraft {version} is installed.	DraftCraft {version} està instal·lat.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Reinicieu DraftCraft per usar-lo. Si el reinicieu més tard, s'obrirà la propera vegada que inicieu DraftCraft.
+	Restart Now	Reinicia ara
+	The update could not be installed.	No s'ha pogut instal·lar l'actualització.
+	You can download it from the release page instead.	En lloc d'això, la podeu baixar des de la pàgina de la versió.
+	2D Wireframe	Filferro 2D
+	Annotate	Anota
+	Blocks Palette	Paleta de blocs
+	CAD Standards	Estàndards CAD
+	Commands	Ordres
+	2D Drafting	Dibuix 2D
+	Edit Aliases	Edita els àlies
+	Image	Imatge
+	Palettes	Paletes
+	Top	Superior
+	Units	Unitats
+	Workspace	Espai de treball
+	Ribbon	Cinta
+	PDF Underlay...	Calc subjacent PDF...
+	PDF Import	Importació de PDF
+	PDF Underlay	Calc subjacent PDF
+	Underlay Layers	Capes del calc subjacent
+	Raster Image Reference...	Referència d'imatge ràster...
+	Close Text Editor	Tanca l'editor de text
+	Image Clip	Retall d'imatge
+	PDF Clip	Retall de PDF
+	Image Adjust	Ajust d'imatge
+	PDF Adjust	Ajust de PDF
+	Adjust...	Ajusta...
+	Parameter	Paràmetre
+	Action	Acció
+	DesignCenter	DesignCenter
+	Tool Palettes	Paletes d'eines
+	Sheet Set Manager	Gestor de conjunts de fulls
+	Type the drawing's path, then press Enter.	Escriviu el camí del dibuix i premeu Retorn.
+	Drawing file	Fitxer de dibuix
+	Folder	Carpeta
+	Linetypes	Tipus de línia
+	Text Styles	Estils de text
+	Dimension Styles	Estils de cota
+	Table Styles	Estils de taula
+	Multileader Styles	Estils de directriu múltiple
+	Multiline Styles	Estils de multilínia
+	Add to Drawing	Afegeix al dibuix
+	Create Tool Palette	Crea una paleta d'eines
+	Nothing of this kind in the file.	No hi ha res d'aquest tipus al fitxer.
+	Open a drawing to see its blocks, layers and styles.	Obriu un dibuix per veure'n els blocs, les capes i els estils.
+	Delete Palette	Suprimeix la paleta
+	New Palette	Paleta nova
+	No tool palettes.	No hi ha paletes d'eines.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Aquesta paleta és buida: afegiu-hi una ordre a sota o creeu una paleta des de DesignCenter.
+	Delete Tool	Suprimeix l'eina
+	Add Command	Afegeix una ordre
+	New Sheet Set...	Conjunt de fulls nou...
+	Open Sheet Set...	Obre un conjunt de fulls...
+	Sheet sets (DCSS)	Conjunts de fulls (DCSS)
+	Sheet set file	Fitxer del conjunt de fulls
+	Make or open a sheet set to list its sheets.	Creeu o obriu un conjunt de fulls per llistar-ne els fulls.
+	Add Drawing...	Afegeix un dibuix...
+	Publish to PDF...	Publica a PDF...
+	No sheets yet: add a drawing's layouts.	Encara no hi ha fulls: afegiu-hi les presentacions d'un dibuix.
+	Number	Número
+	Title	Títol
+	Move Up	Mou amunt
+	Move Down	Mou avall
+	Sheet Set (DCSS)	Conjunt de fulls (DCSS)
+	Close Tool Palettes	Tanca les paletes d'eines
+	Close DesignCenter	Tanca DesignCenter
+	Close Sheet Set Manager	Tanca el gestor de conjunts de fulls
+	Manage Tool Palettes	Gestiona les paletes d'eines
+	Changes apply at once; Save Current As keeps them in a workspace.	Els canvis s'apliquen immediatament; Desa l'actual com a els conserva en un espai de treball.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Feu clic a les capes per mostrar només aquestes; Ctrl o Maj afegeix a l'elecció.
+	Current Workspace	Espai de treball actual
+	Customize Interface	Personalitza la interfície
+	Customize User Interface	Personalitza la interfície d'usuari
+	Customize...	Personalitza...
+	Edit Aliases...	Edita els àlies...
+	Force object color and linetype to ByLayer	Força el color i el tipus de línia dels objectes a PerCapa
+	Geographic Location	Ubicació geogràfica
+	Geographic Location...	Ubicació geogràfica...
+	Latitude	Latitud
+	Longitude	Longitud
+	North direction	Direcció del nord
+	Layer Translation Mappings	Correspondències de traducció de capes
+	Layer Translator	Traductor de capes
+	Layer Translator...	Traductor de capes...
+	Layer Walk	Recorregut de capes
+	Layer Walk...	Recorregut de capes...
+	Location	Ubicació
+	Set Location	Estableix la ubicació
+	Remove Location	Elimina la ubicació
+	The drawing's origin is at this place (WGS 84 degrees).	L'origen del dibuix és en aquest lloc (graus WGS 84).
+	Map	Fes correspondre
+	New layer name	Nom de capa nou
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Encara no hi ha correspondències: trieu capes a l'esquerra, un nom a la dreta i després Fes correspondre.
+	Translate	Tradueix
+	Translate From	Tradueix des de
+	Translate To	Tradueix a
+	Restore on exit	Restaura en sortir
+	Point Cloud	Núvol de punts
+	Point Cloud...	Núvol de punts...
+	Point clouds (XYZ, LAS)	Núvols de punts (XYZ, LAS)
+	ZIP archive	Arxiu ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Barra d'eines d'accés ràpid
+	Rename	Canvia el nom
+	Reset to Standard	Restableix l'estàndard
+	Ribbon Tabs	Pestanyes de la cinta
+	Save Current As	Desa l'actual com a
+	Save Current As...	Desa l'actual com a...
+	Save Workspace	Desa l'espai de treball
+	User Interface	Interfície d'usuari
+	Workspace Settings	Paràmetres de l'espai de treball
+	Workspace Settings...	Paràmetres de l'espai de treball...
+	Workspace name	Nom de l'espai de treball
+	Workspace:	Espai de treball:
+	Workspaces	Espais de treball
+	Interface...	Interfície...
+	Export Attribute Information...	Exporta la informació d'atributs...
+	Import Attribute Information...	Importa la informació d'atributs...
+	Export Attributes	Exporta els atributs
+	Import Attributes	Importa els atributs
+	Text, tab-delimited (TXT)	Text delimitat per tabulacions (TXT)
+	Import Settings	Importa la configuració
+	Export Settings	Exporta la configuració
+	Import Settings...	Importa la configuració...
+	Export Settings...	Exporta la configuració...
+	DraftCraft settings (TOML)	Configuració de DraftCraft (TOML)
+	Total Area and Length	Àrea i longitud totals
+	Total Area	Àrea total
+	Specify point to place the totals as text	Indiqueu el punt on col·locar els totals com a text
+	Metric	Mètric
+	Imperial	Imperial
+	A new drawing in millimeters	Un dibuix nou en mil·límetres
+	A new drawing in inches	Un dibuix nou en polzades
+	A new drawing in centimeters	Un dibuix nou en centímetres
+	Metric (centimetres)	Mètric (centímetres)
+	Join the ArtCraft Discord…	Uniu-vos al Discord d'ArtCraft…
+	Join us on Discord	Uniu-vos a nosaltres a Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Una de les Crafting Apps de l'equip i la comunitat d'ArtCraft.
+	Change	Canvia
+	Multiple Insert	Inserció múltiple
+	Ctrl+Enter to apply	Ctrl+Retorn per aplicar
+	Edit Text	Edita el text
+	The drawing changed. Close the window and open it again.	El dibuix ha canviat. Tanqueu la finestra i torneu-la a obrir.
+	DView	DView
+	Raster Images	Imatges ràster
+	Xref	RefX
+	Backup copies are off, so the current file will be replaced.	Les còpies de seguretat estan desactivades, de manera que se substituirà el fitxer actual.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 i anteriors els conserven. Useu Anomena i desa per conservar-los al dibuix.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF els conserva. Useu Anomena i desa per conservar-los al dibuix.
+	Save Anyway	Desa igualment
+	Save cancelled: {path} was not changed.	Desament cancel·lat: {path} no s'ha modificat.
+	Saving {name} will remove content	En desar {name} s'eliminarà contingut
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	El fitxer actual no sembla complet, de manera que {name} es queda com està i se substituirà el fitxer actual.
+	The current file is kept as {name} until the next save.	El fitxer actual es conserva com a {name} fins al proper desament.
+	This format can't keep these objects yet: {objects}.	Aquest format encara no pot conservar aquests objectes: {objects}.
+	{count} more types	{count} tipus més
+	Additional Tools	Eines addicionals
+	Keyboard Shortcuts...	Dreceres de teclat...
+	Keyboard Shortcuts	Dreceres de teclat
+	Replaces the shortcut of {commands}	Substitueix la drecera de {commands}
+	Needs Ctrl, Alt or a function key	Cal Ctrl, Alt o una tecla de funció
+	Press the keys	Premeu les tecles
+	Back to DraftCraft's shortcut	Torna a la drecera de DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Una drecera que definiu té prioritat sobre la de DraftCraft. Els canvis s'apliquen immediatament i es conserven per a la propera vegada.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Si es desactiva, un clic dret durant una ordre fa el que estableix la personalització del clic dret per al mode d'ordre.
+	Right-Click Customization...	Personalització del clic dret...
+	Right-Click Customization	Personalització del clic dret
+	Turn on time-sensitive right-click	Activa el clic dret sensible al temps
+	Longer click duration:	Durada del clic llarg:
+	milliseconds	mil·lisegons
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Durant una ordre, un clic ràpid és Retorn i un clic més llarg obre el menú contextual.
+	Default Mode	Mode per defecte
+	No objects selected and no command running:	Cap objecte seleccionat i cap ordre en execució:
+	Edit Mode	Mode d'edició
+	Objects selected and no command running:	Objectes seleccionats i cap ordre en execució:
+	Repeat last command	Repeteix l'última ordre
+	Shortcut Menu	Menú contextual
+	Command Mode	Mode d'ordre
+	While a command runs:	Durant una ordre:
+	ENTER	RETORN
+	Shortcut Menu: always enabled	Menú contextual: sempre activat
+	Shortcut Menu: enabled when command options are present	Menú contextual: activat quan hi ha opcions d'ordre
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Importa: aquí no hi ha diàleg de fitxers; executeu ALIASEDIT amb el contingut del fitxer mitjançant el paràmetre text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Els àlies es desen al vostre perfil de DraftCraft i es conserven en reiniciar.
+	Import…	Importa…
+	Run ALIASEDIT with the file's contents using its text parameter.	Executeu ALIASEDIT amb el contingut del fitxer mitjançant el paràmetre text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	En importar un fitxer se substitueixen els vostres {n} àlies i qualsevol canvi encara no aplicat.
+	Import and replace	Importa i substitueix
+	Keep my aliases	Conserva els meus àlies
+	{n} more warnings; see the command line.	{n} avisos més; vegeu la línia d'ordres.
