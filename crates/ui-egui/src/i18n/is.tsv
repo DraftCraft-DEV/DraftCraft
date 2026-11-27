@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Icelandic (Íslenska) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Hætta við  
+	  OK  	  Í lagi  
+	 or [	 eða [
+	% of all commits	% allra innsendinga
+	* Wildcard Match	* Samsvörun með algildisstöfum
+	*VARIES*	*BREYTILEGT*
+	+  |  Top  |  2D Wireframe	+  |  Ofan  |  2D-vírnet
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 skoðunargluggi
+	2 Points	2 punktar
+	2 Viewports	2 skoðunargluggar
+	2D Solid	2D-fylling
+	3 Points	3 punktar
+	3 Viewports	3 skoðunargluggar
+	3D Face	3D-flötur
+	3D Mouse	3D-mús
+	3D Mouse Navigation	Stýring með 3D-mús
+	3D Mouse...	3D-mús...
+	3D Operations	3D-aðgerðir
+	3D Polyline	3D-fjöllína
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D-mús upptekin, hugsanlega af 3DxWare eða vegna þess að heimildir tækis vantar
+	3D mouse connected	3D-mús tengd
+	3D mouse disconnected	3D-mús aftengd
+	3D mouse input could not be started	Ekki tókst að ræsa inntak 3D-músar
+	3D mouse input is unavailable on this platform	Inntak 3D-músar er ekki tiltækt á þessu kerfi
+	4 Viewports	4 skoðunargluggar
+	< Less than	< Minna en
+	<> Not Equal	<> Ekki jafnt
+	= Equals	= Jafnt og
+	> Greater than	> Stærra en
+	A built-in table: editing it keeps an edited copy in the drawing.	Innbyggð tafla: ef henni er breytt er breytt afrit geymt í teikningunni.
+	A drawing opened from a file keeps that file's format.	Teikning sem er opnuð úr skrá heldur sniði þeirrar skrár.
+	A variable name starts with a letter and has only letters, digits and _	Breytuheiti byrjar á bókstaf og inniheldur aðeins bókstafi, tölustafi og _
+	About	Um
+	About DraftCraft	Um DraftCraft
+	Absolute	Algilt
+	Accessibility	Aðgengi
+	Add	Bæta við
+	Add Current Scale	Bæta við núverandi kvarða
+	Add Leader	Bæta við tilvísunarlínu
+	Add Vertex	Bæta við hornpunkti
+	Add/Delete Scales...	Bæta við/Eyða kvörðum...
+	Additional angles	Viðbótarhorn
+	Align	Jafna
+	Align Text	Jafna texta
+	Aligned	Jafnað
+	All	Allt
+	All Annotation Objects	Allir skýringarhlutir
+	All Scales	Allir kvarðar
+	All Used Layers	Öll notuð lög
+	All files	Allar skrár
+	An array that would create more objects than this is refused.	Fylki sem myndi búa til fleiri hluti en þetta er hafnað.
+	Angle	Horn
+	Angular	Hornmál
+	Annotation Visibility	Sýnileiki skýringa
+	Annotation scale	Skýringarkvarði
+	Annotative Object Scale	Kvarði skýringarhlutar
+	Annotative Update	Skýringauppfærsla
+	Apparent Intersection	Sýndarskurðpunktur
+	Append to current selection set	Bæta við núverandi valmengi
+	Apply	Nota
+	Apply to:	Nota á:
+	Apply true color	Nota raunlit
+	Arc	Bogi
+	Arc Length	Bogalengd
+	Area	Flatarmál
+	Arrange Panel	Raða spjaldi
+	Array	Fylki
+	Attach	Tengja
+	Attach DWG...	Tengja DWG...
+	Attribute	Eigind
+	Attribute Definition	Skilgreining eigindar
+	Attribute Display	Birting eiginda
+	Audit	Endurskoða
+	Auto (system language)	Sjálfvirkt (tungumál kerfisins)
+	Auto Constrain	Skorða sjálfvirkt
+	AutoConstrain	Sjálfvirk skorðun
+	Automatic save every	Sjálfvirk vistun á
+	Automatic save file location	Staðsetning sjálfvirkra vistunarskráa
+	Axis, End	Ás, endi
+	Base	Grunnur
+	Baseline	Grunnlína
+	Batch Publish	Runuútgáfa
+	Batch Publish...	Runuútgáfa...
+	Binary assets added	Tvíundargögnum bætt við
+	Binary assets removed	Tvíundargögn fjarlægð
+	Bind	Binda
+	Bind...	Binda...
+	Blend	Brúa
+	Block	Blokk
+	Block Attribute Manager...	Eigindastjórnun blokka...
+	Block Description...	Lýsing blokkar...
+	Block Editor	Blokkaritill
+	Block Reference	Blokkartilvísun
+	Block...	Blokk...
+	Blocks	Blokkir
+	Blue	Blár
+	Bold	Feitletrað
+	Boolean	Bólskar aðgerðir
+	Boundary	Jaðar
+	Boundary...	Jaðar...
+	Box	Kassi
+	Break	Rjúfa
+	Break At Point	Rjúfa í punkti
+	Bring Above Objects	Færa ofar hlutum
+	Bring Annotations to Front	Færa skýringar fremst
+	Bring to Front	Færa fremst
+	Bulleted list	Punktalisti
+	ByBlock	EftirBlokk
+	ByColor	EftirLit
+	ByLayer	EftirLagi
+	DraftCraft Help	DraftCraft-hjálp
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft geymir þessar kjörstillingar, hlutafestingarhami og teiknirofa fyrir notandaaðganginn þinn og endurheimtir þær við ræsingu.
+	Calibrate	Kvarða
+	Calibrate 3D Mouse	Kvarða 3D-mús
+	Cancel	Hætta við
+	Cartesian (x, y)	Kartesísk (x, y)
+	Center	Miðja
+	Center Line	Miðlína
+	Center Mark	Miðjumerki
+	Center X	Miðja X
+	Center Y	Miðja Y
+	Center Z	Miðja Z
+	Center, Diameter	Miðja, þvermál
+	Center, Radius	Miðja, geisli
+	Center, Start, Angle	Miðja, upphaf, horn
+	Center, Start, End	Miðja, upphaf, endi
+	Center, Start, Length	Miðja, upphaf, lengd
+	Chamfer	Skásneiðing
+	Change Space	Skipta um rými
+	Change to Current Layer	Færa í núverandi lag
+	Changed: {n}	Breytt: {n}
+	Changes apply at once and are kept for next time.	Breytingar taka gildi strax og eru geymdar til næsta skiptis.
+	Circle	Hringur
+	Circumference	Ummál
+	Clear	Hreinsa
+	Clear Command History	Hreinsa skipanaferil
+	Reset Suggestion Order	Endurstilla röð tillagna
+	Clear History	Hreinsa feril
+	Clip	Skera af
+	Clip Viewport	Skera af skoðunarglugga
+	Clipboard	Klippiborð
+	Close	Loka
+	Close All	Loka öllu
+	Close All Other Drawings	Loka öllum öðrum teikningum
+	Close Array Editing	Loka fylkisvinnslu
+	Close Comparison	Loka samanburði
+	Export Comparison	Flytja út samanburð
+	Closed	Lokað
+	Coincident	Samfallandi
+	Collapse Palettes	Fella saman spjöld
+	Collapse Tool Sets	Fella saman verkfærasett
+	Collinear	Samlína
+	Color	Litur
+	Color 8	Litur 8
+	Color 9	Litur 9
+	Color Index	Litavísir
+	Color-dependent	Litaháð
+	Color...	Litur...
+	Command Aliases	Samheiti skipana
+	Command History	Skipanaferill
+	Command Line	Skipanalína
+	Command Line History Lines	Línur í ferli skipanalínu
+	Command Reference	Skipanahandbók
+	Command line history	Ferill skipanalínu
+	Commits	Innsendingar
+	Company	Fyrirtæki
+	Compare Drawings...	Bera saman teikningar...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Tölvustudd hönnun og teiknun: CAD-forrit með opnum frumkóða, þróað með hreinherbergisaðferð og skrifað alfarið í Rust.
+	Concentric	Sammiðja
+	Cone	Keila
+	Constraint Bars	Skorðustikur
+	Constraint Settings	Skorðustillingar
+	Construction Line	Hjálparlína
+	Contents	Efni
+	Continue	Halda áfram
+	Contributors	Þátttakendur
+	Control Vertices	Stýripunktar
+	Convert	Umbreyta
+	Convert to Arc	Umbreyta í boga
+	Convert to Line	Umbreyta í línu
+	Copy	Afrita
+	Copy Full File Path	Afrita fulla slóð skrár
+	Copy History	Afrita feril
+	Copy Layout	Afrita útlit
+	Copy Nested Objects	Afrita hreiðraða hluti
+	Copy Selection	Afrita val
+	Copy as JSON	Afrita sem JSON
+	Copy with Base Point	Afrita með grunnpunkti
+	Count	Telja
+	Count List	Talningarlisti
+	Count Table	Talningartafla
+	Create Block	Búa til blokk
+	Creates a user parameter	Býr til notandastika
+	Crosshair size	Stærð krossbendils
+	Ctrl+Enter to finish	Ctrl+Enter til að ljúka
+	Current Scale Only	Aðeins núverandi kvarði
+	Current layer	Núverandi lag
+	Current selection	Núverandi val
+	Current: {color}	Núverandi: {color}
+	Cut	Klippa
+	Cut with Base Point	Klippa með grunnpunkti
+	Cyan	Blágrænn
+	Cylinder	Sívalningur
+	DWG	DWG
+	DWG Reference...	DWG-tilvísun...
+	DXF	DXF
+	Dark	Dökkt
+	Data Extraction...	Gagnaútdráttur...
+	Data Link...	Gagnatenging...
+	Default	Sjálfgefið
+	Default Save Format	Sjálfgefið vistunarsnið
+	Default Save Version	Sjálfgefin vistunarútgáfa
+	Default save version	Sjálfgefin vistunarútgáfa
+	Define Attributes	Skilgreina eigindir
+	Define Attributes...	Skilgreina eigindir...
+	Defined width	Skilgreind breidd
+	Degree	Stig
+	Degrees of Freedom	Frelsisgráður
+	Degrees of freedom: {n}	Frelsisgráður: {n}
+	Delete	Eyða
+	Delete Column	Eyða dálki
+	Delete Constraints	Eyða skorðum
+	Delete Current Scale	Eyða núverandi kvarða
+	Delete Dimension Style	Eyða málsetningarstíl
+	Delete Duplicate Objects	Eyða tvíteknum hlutum
+	Delete Layer	Eyða lagi
+	Delete Layer State	Eyða lagastöðu
+	Delete Layout	Eyða útliti
+	Delete Row	Eyða röð
+	Delete Text Style	Eyða textastíl
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Lýsing
+	Deselect All	Afvelja allt
+	Detach	Aftengja
+	Diameter	Þvermál
+	Dim style	Málsetningarstíll
+	Dimension	Málsetning
+	Dimension Break	Rjúfa málsetningu
+	Dimension Edit	Breyta málsetningu
+	Dimension Objects Only	Aðeins málsetningarhlutir
+	Dimension Space	Bil milli málsetninga
+	Dimension Style Override	Hnekking málsetningarstíls
+	Dimension Style...	Málsetningarstíll...
+	Dimension Text Edit	Breyta texta málsetningar
+	Dimension style	Málsetningarstíll
+	Dimensional Constraint	Málskorða
+	Dimensional Constraint Parameters	Stikar málskorða
+	Dimensional Constraints	Málskorður
+	Disassociate Dimensions	Aftengja málsetningar
+	Display	Birting
+	Display name	Birtingarheiti
+	Display plot styles	Sýna prentstíla
+	Distance	Fjarlægð
+	Divide	Deila
+	Do not plot (click: plot)	Ekki prenta (smella: prenta)
+	Donut	Kleinuhringur
+	Double-click to edit the description	Tvísmelltu til að breyta lýsingunni
+	Down	Niður
+	Drafting	Teiknun
+	Drafting Settings	Teiknistillingar
+	Drafting Settings...	Teiknistillingar...
+	Draw	Teikna
+	Draw Order	Teikniröð
+	Drawing (DWG)	Teikning (DWG)
+	Drawing (DXF)	Teikning (DXF)
+	Drawing Limits	Mörk teikningar
+	Drawing Recovery Manager...	Endurheimt teikninga...
+	Drawing Template (DWT)	Teiknisniðmát (DWT)
+	Drawing Utilities	Teikningatól
+	Drawing as bytes	Teikning sem bæti
+	Drawings (DWG, DXF)	Teikningar (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Teikningar sem hafa enn enga skrá eru vistaðar í sjálfgefinni útgáfu. 0 mínútur slökkva á sjálfvirkri vistun.
+	Dynamic	Kvikt
+	Dynamic Dimensions	Kvikar málsetningar
+	Dynamic Input	Kvikt inntak
+	Dynamic Input (F12)	Kvikt inntak (F12)
+	Edit	Breyta
+	Edit Array	Breyta fylki
+	Edit Attributes...	Breyta eigindum...
+	Edit Table Cell	Breyta töflureit
+	Edit Text...	Breyta texta...
+	Elevation	Hæðarstaða
+	Ellipse	Sporbaugur
+	Elliptical Arc	Sporbaugsbogi
+	Enable 3D mouse navigation	Virkja stýringu með 3D-mús
+	Enable Dynamic Input (F12)	Virkja kvikt inntak (F12)
+	End Object Isolation	Ljúka einangrun hluta
+	End Width	Lokabreidd
+	End X	Loka-X
+	End Y	Loka-Y
+	End angle	Lokahorn
+	Endpoint	Endapunktur
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Sláðu inn Top, Zero eða Bottom.
+	Enter a fit data option	Sláðu inn valkost fyrir aðlögunargögn
+	Enter a pattern name	Sláðu inn heiti mynsturs
+	Enter a vertex editing option	Sláðu inn valkost fyrir breytingu hornpunkta
+	Enter an option	Sláðu inn valkost
+	Enter angle of xline	Sláðu inn horn hjálparlínu
+	Enter angle of xline (0)	Sláðu inn horn hjálparlínu (0)
+	Enter area of rectangle in current units	Sláðu inn flatarmál rétthyrnings í núverandi einingum
+	Enter attribute prompt	Sláðu inn kvaðningu eigindar
+	Enter attribute tag name	Sláðu inn merkisheiti eigindar
+	Enter attribute value	Sláðu inn gildi eigindar
+	Enter block name	Sláðu inn heiti blokkar
+	Enter constraint type	Sláðu inn gerð skorðu
+	Enter continuity	Sláðu inn samfellu
+	Enter default attribute value	Sláðu inn sjálfgefið gildi eigindar
+	Enter degree of spline	Sláðu inn stig splínu
+	Enter delta angle	Sláðu inn hornbreytingu
+	Enter delta length	Sláðu inn lengdarbreytingu
+	Enter dimension text	Sláðu inn texta málsetningar
+	Enter dimension text (<> = measurement)	Sláðu inn texta málsetningar (<> = mæling)
+	Enter dimension value or [name=expression]	Sláðu inn málgildi eða [heiti=segð]
+	Enter dimension variable name to override	Sláðu inn heiti málsetningarbreytu sem á að hnekkja
+	Enter justification type	Sláðu inn gerð jöfnunar
+	Enter leader text	Sláðu inn texta tilvísunarlínu
+	Enter mline scale	Sláðu inn kvarða marglínu
+	Enter mode	Sláðu inn ham
+	Enter name of block to insert	Sláðu inn heiti blokkar sem á að setja inn
+	Enter new text	Sláðu inn nýjan texta
+	Enter next point	Sláðu inn næsta punkt
+	Enter number of columns	Sláðu inn fjölda dálka
+	Enter number of data rows	Sláðu inn fjölda gagnaraða
+	Enter number of items	Sláðu inn fjölda atriða
+	Enter number of items along path	Sláðu inn fjölda atriða eftir slóðinni
+	Enter number of sides	Sláðu inn fjölda hliða
+	Enter number of turns	Sláðu inn fjölda snúninga
+	Enter percentage length	Sláðu inn hlutfall af lengd
+	Enter rectangle length	Sláðu inn lengd rétthyrnings
+	Enter rectangle width	Sláðu inn breidd rétthyrnings
+	Enter scale factor	Sláðu inn kvarðastuðul
+	Enter text	Sláðu inn texta
+	Enter text (use \P for new paragraphs)	Sláðu inn texta (notaðu \P fyrir nýjar málsgreinar)
+	Enter the number of segments	Sláðu inn fjölda búta
+	Enter twist direction of helix	Sláðu inn snúningsstefnu gormlínu
+	Entire drawing	Öll teikningin
+	Equal	Jafnt
+	Erase	Þurrka út
+	Evaluate	Reikna
+	Exclude from new selection set	Útiloka úr nýju valmengi
+	Explode	Sundra
+	Export	Flytja út
+	Export Table	Flytja út töflu
+	Export to PDF...	Flytja út í PDF...
+	Export...	Flytja út...
+	Expression	Segð
+	Extend	Lengja
+	Extension	Framlenging
+	Extents	Umfang
+	External Reference	Ytri tilvísun
+	External References	Ytri tilvísanir
+	Extrude	Pressa út
+	File	Skrá
+	File Tab	Skráarflipi
+	Fillet	Rúnnun
+	Filter	Sía
+	Filters	Síur
+	Find and Replace	Finna og skipta út
+	Find...	Finna...
+	First	Fyrsti
+	First commit	Fyrsta innsending
+	Fit Points	Aðlögunarpunktar
+	Fix	Festa
+	Flatten Objects	Fletja hluti
+	Format	Snið
+	Freehand	Fríhendis
+	Freeze	Frysta
+	Freeze Layer	Frysta lag
+	Freeze in new viewports	Frysta í nýjum skoðunargluggum
+	Freeze/Thaw	Frysta/Þíða
+	Freeze/Thaw in all viewports	Frysta/Þíða í öllum skoðunargluggum
+	Freeze/Thaw in the current viewport	Frysta/Þíða í núverandi skoðunarglugga
+	From	Frá
+	From Template...	Úr sniðmáti...
+	General	Almennt
+	Geometric Center	Rúmfræðileg miðja
+	Geometric Constraint	Rúmfræðiskorða
+	Geometric Constraints	Rúmfræðiskorður
+	Geometry	Rúmfræði
+	Get Variable	Sækja breytu
+	Get View	Sækja sýn
+	Get from the Drawing	Sækja úr teikningunni
+	Global	Altækt
+	Global width	Heildarbreidd
+	Grab bag	Ýmislegt
+	Gradient	Litstigull
+	Gradient...	Litstigull...
+	Grayscale	Grátóna
+	Green	Grænn
+	Grid (F7)	Hnitanet (F7)
+	Grid Display	Birting hnitanets
+	Grid On (F7)	Hnitanet virkt (F7)
+	Grid snap	Festing við hnitanet
+	Grid spacing	Bil hnitanets
+	Grip Edit	Breyting með handföngum
+	Grip Mirror	Speglun með handföngum
+	Grip Option	Valkostur handfanga
+	Grip Rotate	Snúningur með handföngum
+	Grip Scale	Skölun með handföngum
+	Grip Stretch	Teyging með handföngum
+	Grip size	Stærð handfanga
+	Group	Hópur
+	Group Edit	Breyta hópi
+	Group Options	Hópvalkostir
+	Group Selection	Hópval
+	Hatch	Skástrikun
+	Hatch Edit	Breyta skástrikun
+	Hatch Pattern	Skástrikunarmynstur
+	Hatch Patterns	Skástrikunarmynstur
+	Hatch...	Skástrikun...
+	Height	Hæð
+	Height: {height}	Hæð: {height}
+	Helix	Gormlína
+	Help	Hjálp
+	Hide All	Fela allt
+	Hide All Constraint Bars	Fela allar skorðustikur
+	Hide All Dynamic Dimensions	Fela allar kvikar málsetningar
+	Hide DraftCraft	Fela DraftCraft
+	Hide Layer List	Fela lagalista
+	Hide Objects	Fela hluti
+	Hide Others	Fela önnur
+	Hide Palette	Fela spjald
+	Hide Palettes	Fela spjöld
+	History	Ferill
+	Hold Shift to add to the selection	Haltu Shift niðri til að bæta við valið
+	Home	Heim
+	Horizontal	Lárétt
+	HorizontalDistance	LáréttFjarlægð
+	How to apply:	Notkunarmáti:
+	ID Point	ID-punktur
+	Import	Flytja inn
+	Import...	Flytja inn...
+	In	Inn
+	In-window Menu Bar	Valmyndastika í glugga
+	Include in new selection set	Taka með í nýtt valmengi
+	Increment angle	Hornþrep
+	Index Color	Vísislitur
+	Index color: {index}	Vísislitur: {index}
+	Infer Constraints	Álykta skorður
+	Inquiry	Fyrirspurn
+	Insert	Setja inn
+	Insert Block	Setja inn blokk
+	Insert Column	Setja inn dálk
+	Insert Row	Setja inn röð
+	Insert Table Formula	Setja inn töfluformúlu
+	Insert tab	Flipinn Setja inn
+	Insert this block	Setja inn þessa blokk
+	Insertion	Innsetning
+	Insertion X	Innsetning X
+	Insertion Y	Innsetning Y
+	Insertion Z	Innsetning Z
+	Inspect Constraints	Skoða skorður
+	Inspect Drawing	Skoða teikningu
+	Inspection	Skoðun
+	Interface Language	Tungumál viðmóts
+	Interface Theme	Þema viðmóts
+	Interface language	Tungumál viðmóts
+	Interface theme	Þema viðmóts
+	Intersect	Skera
+	Intersection	Skurðpunktur
+	Isolate	Einangra
+	Isolate Layer	Einangra lag
+	Isolate Objects	Einangra hluti
+	Isometric Drafting	Ísómetrísk teiknun
+	Isometric Plane	Ísómetrískt plan
+	Isometric snap	Ísómetrísk festing
+	Jogged	Brotið
+	Jogged Linear	Brotið línulegt
+	Join	Sameina
+	Keep an editable copy of this table in the drawing	Geyma breytanlegt afrit af þessari töflu í teikningunni
+	Keep the system cursor visible over the drawing area	Hafa kerfisbendilinn sýnilegan yfir teiknisvæðinu
+	Language	Tungumál
+	Largest array	Stærsta fylki
+	Last	Síðasti
+	Last commit	Síðasta innsending
+	Layer	Lag
+	Layer Delete	Eyða lagi
+	Layer Match	Samræma lag
+	Layer Merge	Sameina lög
+	Layer Off	Slökkva á lagi
+	Layer Properties	Eiginleikar lags
+	Layer Properties Manager	Stjórnun eiginleika laga
+	Layer Properties Manager — current viewport	Stjórnun eiginleika laga — núverandi skoðunargluggi
+	Layer State	Lagastaða
+	Layer States Manager...	Stjórnun lagastaða...
+	Layer Tools	Lagaverkfæri
+	Layer contains objects (double-click to make current)	Lagið inniheldur hluti (tvísmelltu til að gera það núverandi)
+	Layer is empty (double-click to make current)	Lagið er tómt (tvísmelltu til að gera það núverandi)
+	Layers	Lög
+	Layers Palette	Lagaspjald
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Birt lög: {shown} af {total}.   Núverandi lag: {layer}
+	Layout	Útlit
+	Layout list	Listi útlita
+	Layout paper	Pappír útlits
+	Layout {name}: {table}	Útlit {name}: {table}
+	Leader	Tilvísunarlína
+	Leaders Only	Aðeins tilvísunarlínur
+	Left	Vinstri
+	Left device button: zoom extents. Right device button: calibrate.	Vinstri hnappur tækis: aðdráttur að umfangi. Hægri hnappur tækis: kvörðun.
+	Length	Lengd
+	Length X	Lengd X
+	Length Y	Lengd Y
+	Lengthen	Breyta lengd
+	Light	Ljóst
+	Line	Lína
+	Line delta	Línumunur
+	Linear	Línulegt
+	Lines +/−	Línur +/−
+	Lines added	Línum bætt við
+	Lines deleted	Línum eytt
+	Lines of Command History	Línur í skipanaferli
+	Linetype	Línugerð
+	Linetype Scale	Kvarði línugerðar
+	Linetype scale	Kvarði línugerðar
+	Linetype...	Línugerð...
+	Lineweight	Línuþykkt
+	Lineweight...	Línuþykkt...
+	List	Listi
+	List Blocks	Telja upp blokkir
+	List Dimension Styles	Telja upp málsetningarstíla
+	List Groups	Telja upp hópa
+	List Layer States	Telja upp lagastöður
+	List Layouts	Telja upp útlit
+	List System Variables	Telja upp kerfisbreytur
+	List Text Styles	Telja upp textastíla
+	Load all	Hlaða öllu
+	Load...	Hlaða...
+	Loaded	Hlaðið
+	Loaded linetypes	Hlaðnar línugerðir
+	Lock	Læsa
+	Lock Layer	Læsa lagi
+	Lock viewport	Læsa skoðunarglugga
+	Lock/Unlock	Læsa/Aflæsa
+	Loft	Loft
+	Ltscale	Kvarði línugerðar
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Ótengt Autodesk, Inc.
+	MODEL	LÍKAN
+	MText	MTexti
+	Magenta	Blárauður
+	Major line every	Aðallína við hverja
+	Make Current	Gera núverandi
+	Make Object's Layer Current	Gera lag hlutarins núverandi
+	Make it a block of this drawing, keeping its layer names	Gerir það að blokk í þessari teikningu og heldur heitum laganna
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Gerir það að blokk í þessari teikningu; lög þess verða HEITI$0$LAG
+	Make...	Búa til...
+	Match Layer	Samræma lag
+	Match Properties	Samræma eiginleika
+	Measure	Mæla
+	Measure Distance	Mæla fjarlægð
+	Measure Geometry	Mæla rúmfræði
+	Merge Cells	Sameina reiti
+	Merged PRs	Sameinaðar PR-beiðnir
+	Mid Between 2 Points	Miðja milli 2 punkta
+	Midpoint	Miðpunktur
+	Mirror	Spegla
+	Model	Líkan
+	Model Space (in viewport)	Líkanrými (í skoðunarglugga)
+	Model background	Bakgrunnur líkanrýmis
+	Modeling	Líkanagerð
+	Models	Líkön
+	Modify	Lagfæra
+	More toolbar commands	Fleiri skipanir á tækjastiku
+	Move	Færa
+	Move sideways to pan; push/pull or twist to zoom.	Hreyfðu til hliðar til að færa sýnina; ýttu/togaðu eða snúðu til að þysja.
+	Multileader	Fjöltilvísunarlína
+	Multileader Style...	Stíll fjöltilvísunarlínu...
+	Multileader style	Stíll fjöltilvísunarlínu
+	Multiline	Marglína
+	Multiline Style...	Marglínustíll...
+	Multiline Text	Margra lína texti
+	Multiline Text...	Margra lína texti...
+	Multiline...	Marglína...
+	Multiple	Margfalt
+	Multiple Point	Margir punktar
+	My	Mitt
+	My properties: not available yet	Mínir eiginleikar: ekki tiltækt enn
+	Name	Heiti
+	Name (A–Z)	Heiti (A–Ö)
+	Named	Nefnd
+	Named Viewports...	Nefndir skoðunargluggar...
+	Named Views...	Nefndar sýnir...
+	Nearest	Næst
+	New	Nýtt
+	New (metric)	Nýtt (metrakerfi)
+	New CTB	Nýtt CTB
+	New Drawing	Ný teikning
+	New Drawing (⌘N)	Ný teikning (⌘N)
+	New Drawing...	Ný teikning...
+	New Layer	Nýtt lag
+	New Layout	Nýtt útlit
+	New STB	Nýtt STB
+	New VP Freeze	Frysta í nýjum gluggum
+	New Viewports...	Nýir skoðunargluggar...
+	New from Template...	Nýtt úr sniðmáti...
+	New layout	Nýtt útlit
+	New state name	Heiti nýrrar stöðu
+	New style	Nýr stíll
+	Next Change	Næsta breyting
+	No	Nei
+	No blocks defined in this drawing.	Engar blokkir skilgreindar í þessari teikningu.
+	No contributor data was built into this copy.	Engin gögn um þátttakendur eru innbyggð í þetta eintak.
+	No external references are attached.	Engar ytri tilvísanir eru tengdar.
+	No model credits were built into this copy.	Engar þakkir til líkana eru innbyggðar í þetta eintak.
+	No plot style tables.	Engar prentstílatöflur.
+	No saved layer states	Engar vistaðar lagastöður
+	No selection	Ekkert valið
+	No supported 3D mouse found	Engin studd 3D-mús fannst
+	Node	Hnútur
+	None	Ekkert
+	Normal	Venjulegt
+	Not Found	Fannst ekki
+	Not available	Ekki tiltækt
+	Not available yet	Ekki tiltækt enn
+	Not loaded	Ekki hlaðið
+	Numbered list	Númeraður listi
+	OK	Í lagi
+	Object	Hlutur
+	Object Snap	Hlutafesting
+	Object Snap (F3)	Hlutafesting (F3)
+	Object Snap On (F3)	Hlutafesting virk (F3)
+	Object Snap Tracking	Rakning hlutafestingar
+	Object Snap Tracking (F11)	Rakning hlutafestingar (F11)
+	Object Snap Tracking Settings	Stillingar rakningar hlutafestingar
+	Object snap aperture	Leitarsvæði hlutafestingar
+	Object snap marker size	Stærð merkis hlutafestingar
+	Object type:	Gerð hlutar:
+	Oblique	Skáhallt
+	Off	Óvirkt
+	Offset	Hliðra
+	On	Virkt
+	On/Off	Kveikt/Slökkt
+	Only in this drawing: {n}	Aðeins í þessari teikningu: {n}
+	Only in {name}: {n}	Aðeins í {name}: {n}
+	Oops	Endurheimta eydda hluti
+	Open	Opna
+	Open (⌘O)	Opna (⌘O)
+	Open Sample Drawing	Opna sýnisteikningu
+	Open Xref	Opna ytri tilvísun
+	Open a drawing first.	Opnaðu fyrst teikningu.
+	Open and Save	Opnun og vistun
+	Open sample drawing	Opna sýnisteikningu
+	Open...	Opna...
+	Operator:	Virki:
+	Options	Valkostir
+	Options...	Valkostir...
+	Orbit	Hringsnúningur
+	Ordinate	Hnitamál
+	Ortho (F8)	Hornrétt (F8)
+	Ortho Mode	Hornréttur hamur
+	Ortho Mode (F8)	Hornréttur hamur (F8)
+	Osnap Settings...	Stillingar hlutafestingar...
+	Out	Út
+	Over-constrained	Ofskorðað
+	Overlay	Yfirlögn
+	Override	Hnekkja
+	PAPER	PAPPÍR
+	PRs	PR-beiðnir
+	Page Setup Manager	Stjórnun síðuuppsetningar
+	Page Setup Manager...	Stjórnun síðuuppsetningar...
+	Pan	Færa sýn
+	Pan Down	Færa sýn niður
+	Pan Left	Færa sýn til vinstri
+	Pan Right	Færa sýn til hægri
+	Pan Up	Færa sýn upp
+	Pan sensitivity	Næmi sýnarfærslu
+	Paper Space	Pappírsrými
+	Parallel	Samsíða
+	Parameters Manager	Stjórnun stika
+	Parametric	Stikabundið
+	Paste	Líma
+	Paste as Block	Líma sem blokk
+	Paste to Command Line	Líma í skipanalínu
+	Paste to Original Coordinates	Líma á upprunaleg hnit
+	Path Array	Fylki eftir slóð
+	Pattern	Mynstur
+	Percent	Prósent
+	Perpendicular	Þverstætt
+	Pickbox size	Stærð valkassa
+	Plot	Prenta
+	Plot (click: do not plot)	Prenta (smella: ekki prenta)
+	Plot Preview	Prentforskoðun
+	Plot Style Manager	Stjórnun prentstíla
+	Plot Style Manager...	Stjórnun prentstíla...
+	Plot Style...	Prentstíll...
+	Plot Styles...	Prentstílar...
+	Plot Window	Prentgluggi
+	Plot style	Prentstíll
+	Plot style attached to	Prentstíll tengdur við
+	Plot style table	Prentstílatafla
+	Plot table type	Gerð prentstílatöflu
+	Plotter Manager	Stjórnun prentara
+	Plotter Manager...	Stjórnun prentara...
+	Plus/minus	Plús/mínus
+	Point	Punktur
+	Point Filters	Punktasíur
+	Point Style...	Punktastíll...
+	Polar (distance < angle)	Pólhnit (fjarlægð < horn)
+	Polar Array	Pólfylki
+	Polar Tracking	Pólrakning
+	Polar Tracking (F10)	Pólrakning (F10)
+	Polar Tracking On (F10)	Pólrakning virk (F10)
+	Polar angle measurement	Mæling pólhorns
+	Polar distance	Pólfjarlægð
+	Polar: {distance} < {angle}°	Pól: {distance} < {angle}°
+	PolarSnap	Pólfesting
+	Polygon	Marghyrningur
+	Polygonal	Marghyrnt
+	Polygonal Viewport	Marghyrndur skoðunargluggi
+	Polyline	Fjöllína
+	Polyline Edit	Breyta fjöllínu
+	Position X	Staðsetning X
+	Position Y	Staðsetning Y
+	Position Z	Staðsetning Z
+	Previous	Fyrra
+	Previous Change	Fyrri breyting
+	Previous Layer	Fyrra lag
+	Primitives	Grunnform
+	Print	Prenta
+	Print...	Prenta...
+	Profiles	Prófílar
+	Properties	Eiginleikar
+	Properties Inspector	Eiginleikaskoðari
+	Properties:	Eiginleikar:
+	Proxy	Staðgengill
+	Purge	Hreinsa burt
+	Pyramid	Píramídi
+	Quadrant	Fjórðungspunktur
+	Query Entities	Fyrirspurn um einingar
+	Quick	Fljótt
+	Quick Dimension	Fljótleg málsetning
+	Quick Properties	Fljótlegir eiginleikar
+	Quick Select	Fljótlegt val
+	Quick Select Properties	Eiginleikar fljótlegs vals
+	Quick Select...	Fljótlegt val...
+	QuickCalc	Flýtireiknir
+	QuickCalc Pick	Flýtireiknir – punktur
+	Quit DraftCraft	Hætta í DraftCraft
+	Radius	Geisli
+	Raster Image	Rastamynd
+	Ray	Hálflína
+	Read-only	Skrifvarið
+	Real name	Fullt nafn
+	Realtime	Rauntími
+	Reassociate Dimensions	Endurtengja málsetningar
+	Recalculate Table Formulas	Endurreikna töfluformúlur
+	Recent	Nýlegt
+	Recent Commands	Nýlegar skipanir
+	Recent Input	Nýlegt inntak
+	Recover...	Endurheimta...
+	Rectangle	Rétthyrningur
+	Rectangular	Rétthyrnt
+	Rectangular Array	Rétthyrnt fylki
+	Rectangular snap	Rétthyrnd festing
+	Red	Rauður
+	Redo	Endurgera
+	Redo (⇧⌘Z)	Endurgera (⇧⌘Z)
+	Redraw	Endurteikna
+	Reference Manager	Stjórnun tilvísana
+	Reference Name	Heiti tilvísunar
+	References: {n}	Tilvísanir: {n}
+	Regen	Endurmynda
+	Regen All	Endurmynda allt
+	Region	Svæði
+	Region/Mass Properties	Eiginleikar svæðis/massa
+	Reinitialize	Endurræsa
+	Relative	Afstætt
+	Relative to last segment	Miðað við síðasta bút
+	Release the 3D mouse to calibrate its resting position	Slepptu 3D-músinni til að kvarða hvíldarstöðu hennar
+	Reload	Endurhlaða
+	Reload All	Endurhlaða öllu
+	Remove	Fjarlægja
+	Remove Leader	Fjarlægja tilvísunarlínu
+	Remove Vertex	Fjarlægja hornpunkt
+	Remove the viewport override	Fjarlægja hnekkingu skoðunarglugga
+	Rename Dimension Style	Endurnefna málsetningarstíl
+	Rename Layer	Endurnefna lag
+	Rename Layer State	Endurnefna lagastöðu
+	Rename Layout	Endurnefna útlit
+	Rename Text Style	Endurnefna textastíl
+	Rename...	Endurnefna...
+	Repeat {command}	Endurtaka {command}
+	Replace Block...	Skipta út blokk...
+	Requires a point (x,y, @dx,dy or @d<a).	Krefst punkts (x,y, @dx,dy eða @d<a).
+	Reset Palettes	Endurstilla spjöld
+	Reset Panel Layout	Endurstilla uppröðun spjalda
+	Reset keeps the interface language.	Endurstilling heldur tungumáli viðmótsins.
+	Reset to Defaults	Endurstilla í sjálfgefið
+	Restore	Endurheimta
+	Restore Layer State	Endurheimta lagastöðu
+	Reverse	Snúa við
+	Reverse the order	Snúa röðinni við
+	Reverse zoom direction	Snúa við stefnu aðdráttar
+	Revision Cloud	Endurskoðunarský
+	Revolve	Snúningsform
+	Right	Hægri
+	Rotate	Snúa
+	Rotation	Snúningur
+	Run Script...	Keyra skriftu...
+	SVG drawings (SVG, SVGZ)	SVG-teikningar (SVG, SVGZ)
+	Save	Vista
+	Save (⌘S)	Vista (⌘S)
+	Save As	Vista sem
+	Save As...	Vista sem...
+	Save Layer State	Vista lagastöðu
+	Save State	Vista stöðu
+	Save new drawings as	Vista nýjar teikningar sem
+	Saved Path	Vistuð slóð
+	Scale	Kvarði
+	Scale List...	Kvarðalisti...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Skjástækkarar, skjálesarar og upptökuforrit fylgja kerfisbendlinum.
+	Screening	Dofnun
+	Search for layer	Leita að lagi
+	Search for parameter	Leita að stika
+	Search for pattern	Leita að mynstri
+	Second and next points:	Annar punktur og þeir næstu:
+	Select	Velja
+	Select 2D polyline	Veldu 2D-fjöllínu
+	Select All	Velja allt
+	Select Objects	Velja hluti
+	Select Similar	Velja svipaða
+	Select a 2D polyline.	Veldu 2D-fjöllínu.
+	Select a block reference.	Veldu blokkartilvísun.
+	Select a circle or arc.	Veldu hring eða boga.
+	Select a closed polyline	Veldu lokaða fjöllínu
+	Select a closed polyline, circle, ellipse or closed spline.	Veldu lokaða fjöllínu, hring, sporbaug eða lokaða splínu.
+	Select a closed polyline.	Veldu lokaða fjöllínu.
+	Select a curve as the path.	Veldu feril sem slóð.
+	Select a dimension constraint type	Veldu gerð málskorðu
+	Select a line object	Veldu línuhlut
+	Select a line object.	Veldu línuhlut.
+	Select a line or an arc.	Veldu línu eða boga.
+	Select a line or polyline segment	Veldu línu eða fjöllínubút
+	Select a line, arc or open polyline.	Veldu línu, boga eða opna fjöllínu.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Veldu línu, boga, hring, fjöllínu, sporbaug eða splínu sem slóð.
+	Select a line, circle, arc or polyline segment.	Veldu línu, hring, boga eða fjöllínubút.
+	Select a line.	Veldu línu.
+	Select a polyline.	Veldu fjöllínu.
+	Select a text, mtext, attribute definition or dimension.	Veldu texta, margra lína texta, skilgreiningu eigindar eða málsetningu.
+	Select an annotation object	Veldu skýringarhlut
+	Select an arc or circle	Veldu boga eða hring
+	Select an arc.	Veldu boga.
+	Select an object	Veldu hlut
+	Select an object to change	Veldu hlut til að breyta
+	Select an object to measure	Veldu hlut til að mæla
+	Select an object.	Veldu hlut.
+	Select an open curve.	Veldu opinn feril.
+	Select an open line, arc, polyline, ellipse arc or spline.	Veldu opna línu, boga, fjöllínu, sporbaugsboga eða splínu.
+	Select arc or circle	Veldu boga eða hring
+	Select arc or polyline arc segment	Veldu boga eða bogabút fjöllínu
+	Select arc style	Veldu bogastíl
+	Select arc, circle, line	Veldu boga, hring, línu
+	Select at least two objects to join.	Veldu að minnsta kosti tvo hluti til að sameina.
+	Select circle or arc to add center mark	Veldu hring eða boga til að bæta við miðjumerki
+	Select closed objects (regions, closed polylines, circles).	Veldu lokaða hluti (svæði, lokaðar fjöllínur, hringi).
+	Select first line	Veldu fyrstu línu
+	Select first line or arc	Veldu fyrstu línu eða fyrsta boga
+	Select first object	Veldu fyrsta hlut
+	Select first point	Veldu fyrsta punkt
+	Select nested objects to copy	Veldu hreiðraða hluti til að afrita
+	Select object	Veldu hlut
+	Select object to dimension	Veldu hlut til að málsetja
+	Select object to divide	Veldu hlut til að deila
+	Select object to extend or shift-select to trim	Veldu hlut til að lengja eða veldu með Shift til að snyrta
+	Select object to measure	Veldu hlut til að mæla
+	Select object to offset	Veldu hlut til að hliðra
+	Select object to trim or shift-select to extend	Veldu hlut til að snyrta eða veldu með Shift til að lengja
+	Select objects	Veldu hluti
+	Select objects (crossing window first corner)	Veldu hluti (fyrsta horn skurðarglugga)
+	Select objects first, then choose a command	Veldu fyrst hluti og síðan skipun
+	Select objects to array.	Veldu hluti í fylki.
+	Select objects to stretch by crossing-window or crossing-polygon...	Veldu hluti til að teygja með skurðarglugga eða skurðarmarghyrningi...
+	Select objects:	Veldu hluti:
+	Select one polyline (Multiple is available through the JSON form).	Veldu eina fjöllínu (Multiple er tiltækt í gegnum JSON-formið).
+	Select path curve	Veldu feril slóðar
+	Select point or object	Veldu punkt eða hlut
+	Select polyline	Veldu fjöllínu
+	Select second line	Veldu aðra línu
+	Select second line or shift-select to apply corner	Veldu aðra línu eða veldu með Shift til að mynda horn
+	Select second object	Veldu annan hlut
+	Select second object or shift-select to apply corner	Veldu annan hlut eða veldu með Shift til að mynda horn
+	Select second point	Veldu annan punkt
+	Select spline	Veldu splínu
+	Select symmetry line	Veldu samhverfulínu
+	Select two points	Veldu tvo punkta
+	Selection	Val
+	Selection Cycling	Hringval
+	Send Hatches to Back	Færa skástrikanir aftast
+	Send Under Objects	Færa undir hluti
+	Send to Back	Færa aftast
+	Services	Þjónustur
+	Set Current	Gera núverandi
+	Set Current Dimension Style	Gera málsetningarstíl núverandi
+	Set Current Text Style	Gera textastíl núverandi
+	Set Current Viewport	Gera skoðunarglugga núverandi
+	Set Layer Properties	Stilla eiginleika lags
+	Set Properties	Stilla eiginleika
+	Set Table Cell	Stilla töflureit
+	Set Table Cell Style	Stilla stíl töflureits
+	Set Variable	Stilla breytu
+	Set View	Stilla sýn
+	Settings...	Stillingar...
+	Share	Deila
+	Show	Sýna
+	Show All	Sýna allt
+	Show All Constraint Bars	Sýna allar skorðustikur
+	Show All Dynamic Dimensions	Sýna allar kvikar málsetningar
+	Show Annotative Objects	Sýna skýringarhluti
+	Show Layer List	Sýna lagalista
+	Show Quick Properties for selected objects	Sýna fljótlega eiginleika valinna hluta
+	Show System Cursor	Sýna kerfisbendil
+	Show and hide the tools of this category	Sýna og fela verkfæri þessa flokks
+	Show command prompting near the crosshairs	Sýna kvaðningar skipana nálægt krossbendlinum
+	Show in Tool Sets	Sýna í verkfærasettum
+	Show/Hide Lineweight	Sýna/Fela línuþykkt
+	Show/Hide Transparency	Sýna/Fela gegnsæi
+	Single Line Text	Einnar línu texti
+	Single Point	Stakur punktur
+	Single...	Stakt...
+	Smooth	Mjúkt
+	Snap	Festing
+	Snap Mode	Festingarhamur
+	Snap Mode (F9)	Festingarhamur (F9)
+	Snap On (F9)	Festing virk (F9)
+	Snap Overrides	Hnekkingar festingar
+	Snap X spacing	X-bil festingar
+	Snap and Grid	Festing og hnitanet
+	Snap type	Gerð festingar
+	Snap, grid, polar tracking and Dynamic Input:	Festing, hnitanet, pólrakning og kvikt inntak:
+	Solid	Gegnheilt
+	Solid Editing	Breyting á gegnheilum hlutum
+	Sort	Raða
+	Specify a point	Tilgreindu punkt
+	Specify a scale for the hatch pattern	Tilgreindu kvarða fyrir skástrikunarmynstrið
+	Specify a second extension line origin	Tilgreindu upphaf annarrar hjálparmállínu
+	Specify an angle for the hatch pattern	Tilgreindu horn fyrir skástrikunarmynstrið
+	Specify angle end point	Tilgreindu endapunkt hornsins
+	Specify angle of dimension line	Tilgreindu horn mállínu
+	Specify angle of dimension text	Tilgreindu horn málsetningartexta
+	Specify angle start point	Tilgreindu upphafspunkt hornsins
+	Specify angle vertex	Tilgreindu hornpunkt hornsins
+	Specify angle vertex point	Tilgreindu oddpunkt hornsins
+	Specify arc length dimension location	Tilgreindu staðsetningu bogalengdarmáls
+	Specify axis endpoint of ellipse	Tilgreindu endapunkt áss sporbaugsins
+	Specify base diameter	Tilgreindu þvermál grunnflatar
+	Specify base point	Tilgreindu grunnpunkt
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Tilgreindu grunnpunkt eða tilfærslu (dragðu með miðhnappi músarinnar til að færa sýn í rauntíma)
+	Specify base radius	Tilgreindu geisla grunnflatar
+	Specify center of donut	Tilgreindu miðju kleinuhringsins
+	Specify center of ellipse	Tilgreindu miðju sporbaugsins
+	Specify center of polygon	Tilgreindu miðju marghyrningsins
+	Specify center point for circle	Tilgreindu miðpunkt hringsins
+	Specify center point of arc	Tilgreindu miðpunkt bogans
+	Specify center point of arc (hold Ctrl to switch direction)	Tilgreindu miðpunkt bogans (haltu Ctrl niðri til að skipta um stefnu)
+	Specify center point of array	Tilgreindu miðpunkt fylkisins
+	Specify center point of base	Tilgreindu miðpunkt grunnflatar
+	Specify corner of viewport	Tilgreindu horn skoðunargluggans
+	Specify corner of window, enter a scale factor (nX or nXP)	Tilgreindu horn gluggans, sláðu inn kvarðastuðul (nX eða nXP)
+	Specify diameter of circle	Tilgreindu þvermál hringsins
+	Specify dimension arc line location	Tilgreindu staðsetningu málboga
+	Specify dimension line location	Tilgreindu staðsetningu mállínu
+	Specify distance between turns	Tilgreindu fjarlægð milli snúninga
+	Specify distance to other axis	Tilgreindu fjarlægð að hinum ásnum
+	Specify end angle	Tilgreindu lokahorn
+	Specify end point of arc	Tilgreindu endapunkt bogans
+	Specify end point of arc (hold Ctrl to switch direction)	Tilgreindu endapunkt bogans (haltu Ctrl niðri til að skipta um stefnu)
+	Specify ending width	Tilgreindu lokabreidd
+	Specify ending width for next segment	Tilgreindu lokabreidd næsta búts
+	Specify endpoint of arc	Tilgreindu enda bogans
+	Specify endpoint of axis	Tilgreindu endapunkt ássins
+	Specify endpoint of line	Tilgreindu endapunkt línunnar
+	Specify feature location	Tilgreindu staðsetningu einkennis
+	Specify fillet radius	Tilgreindu rúnnunargeisla
+	Specify fillet radius for rectangles	Tilgreindu rúnnunargeisla fyrir rétthyrninga
+	Specify first angle endpoint	Tilgreindu fyrri endapunkt hornsins
+	Specify first chamfer distance	Tilgreindu fyrri skásneiðingarfjarlægð
+	Specify first chamfer distance for rectangles	Tilgreindu fyrri skásneiðingarfjarlægð fyrir rétthyrninga
+	Specify first constraint point	Tilgreindu fyrsta skorðupunkt
+	Specify first corner	Tilgreindu fyrsta horn
+	Specify first corner point	Tilgreindu fyrsta hornpunkt
+	Specify first destination point	Tilgreindu fyrsta áfangapunkt
+	Specify first end point of circle's diameter	Tilgreindu fyrri endapunkt þvermáls hringsins
+	Specify first endpoint of edge	Tilgreindu fyrri endapunkt brúnar
+	Specify first extension line origin	Tilgreindu upphaf fyrri hjálparmállínu
+	Specify first point	Tilgreindu fyrsta punkt
+	Specify first point of mirror line	Tilgreindu fyrsta punkt speglunarlínu
+	Specify first point on circle	Tilgreindu fyrsta punkt á hringnum
+	Specify first point on circle: _tan to	Tilgreindu fyrsta punkt á hringnum: _tan að
+	Specify first source point	Tilgreindu fyrsta upprunapunkt
+	Specify height	Tilgreindu hæð
+	Specify helix height	Tilgreindu hæð gormlínu
+	Specify included angle	Tilgreindu innihorn
+	Specify included angle (hold Ctrl to switch direction)	Tilgreindu innihorn (haltu Ctrl niðri til að skipta um stefnu)
+	Specify insertion base point	Tilgreindu grunnpunkt innsetningar
+	Specify insertion point	Tilgreindu innsetningarpunkt
+	Specify inside diameter of donut	Tilgreindu innra þvermál kleinuhringsins
+	Specify leader arrowhead location	Tilgreindu staðsetningu örvaroddar tilvísunarlínu
+	Specify leader endpoint	Tilgreindu endapunkt tilvísunarlínu
+	Specify leader landing location	Tilgreindu staðsetningu lárétts hluta tilvísunarlínu
+	Specify length for rectangles	Tilgreindu lengd fyrir rétthyrninga
+	Specify length of chord	Tilgreindu lengd strengs
+	Specify length of chord (hold Ctrl to switch direction)	Tilgreindu lengd strengs (haltu Ctrl niðri til að skipta um stefnu)
+	Specify length of segment	Tilgreindu lengd búts
+	Specify line width for rectangles	Tilgreindu línubreidd fyrir rétthyrninga
+	Specify location for new vertex	Tilgreindu staðsetningu nýs hornpunkts
+	Specify minimum length of arc	Tilgreindu lágmarkslengd boga
+	Specify new end point	Tilgreindu nýjan endapunkt
+	Specify new location for marked vertex	Tilgreindu nýja staðsetningu merkts hornpunkts
+	Specify new width for all segments	Tilgreindu nýja breidd fyrir alla búta
+	Specify next point	Tilgreindu næsta punkt
+	Specify offset distance	Tilgreindu hliðrunarfjarlægð
+	Specify opposite corner	Tilgreindu gagnstætt horn
+	Specify other corner point	Tilgreindu hinn hornpunktinn
+	Specify other endpoint of axis	Tilgreindu hinn endapunkt ássins
+	Specify outside diameter of donut	Tilgreindu ytra þvermál kleinuhringsins
+	Specify point	Tilgreindu punkt
+	Specify point on object for first tangent of circle	Tilgreindu punkt á hlut fyrir fyrsta snertil hringsins
+	Specify point on object for second tangent of circle	Tilgreindu punkt á hlut fyrir annan snertil hringsins
+	Specify point on side to offset	Tilgreindu punkt á hliðinni sem á að hliðra til
+	Specify radius of arc	Tilgreindu geisla bogans
+	Specify radius of arc (hold Ctrl to switch direction)	Tilgreindu geisla bogans (haltu Ctrl niðri til að skipta um stefnu)
+	Specify radius of circle	Tilgreindu geisla hringsins
+	Specify rotation angle	Tilgreindu snúningshorn
+	Specify rotation angle of text	Tilgreindu snúningshorn textans
+	Specify scale factor	Tilgreindu kvarðastuðul
+	Specify second angle endpoint	Tilgreindu seinni endapunkt hornsins
+	Specify second break point	Tilgreindu annan rofpunkt
+	Specify second chamfer distance for rectangles	Tilgreindu seinni skásneiðingarfjarlægð fyrir rétthyrninga
+	Specify second constraint point	Tilgreindu annan skorðupunkt
+	Specify second destination point	Tilgreindu annan áfangapunkt
+	Specify second end point of circle's diameter	Tilgreindu seinni endapunkt þvermáls hringsins
+	Specify second endpoint of edge	Tilgreindu seinni endapunkt brúnar
+	Specify second extension line origin	Tilgreindu upphaf seinni hjálparmállínu
+	Specify second point	Tilgreindu annan punkt
+	Specify second point of arc	Tilgreindu annan punkt bogans
+	Specify second point of mirror line	Tilgreindu annan punkt speglunarlínu
+	Specify second point on circle	Tilgreindu annan punkt á hringnum
+	Specify second point on circle: _tan to	Tilgreindu annan punkt á hringnum: _tan að
+	Specify second point or <use first point as displacement>	Tilgreindu annan punkt eða <nota fyrsta punkt sem tilfærslu>
+	Specify second source point	Tilgreindu annan upprunapunkt
+	Specify side to offset	Tilgreindu hliðina sem á að hliðra til
+	Specify start angle	Tilgreindu upphafshorn
+	Specify start point	Tilgreindu upphafspunkt
+	Specify start point of arc	Tilgreindu upphafspunkt bogans
+	Specify start point of polyline	Tilgreindu upphafspunkt fjöllínunnar
+	Specify start point of text	Tilgreindu upphafspunkt textans
+	Specify starting width	Tilgreindu upphafsbreidd
+	Specify starting width for next segment	Tilgreindu upphafsbreidd næsta búts
+	Specify tangent direction for the start point of arc	Tilgreindu snertilstefnu í upphafspunkti bogans
+	Specify the elevation for rectangles	Tilgreindu hæðarstöðu fyrir rétthyrninga
+	Specify thickness for rectangles	Tilgreindu þykkt fyrir rétthyrninga
+	Specify third point on circle	Tilgreindu þriðja punkt á hringnum
+	Specify third point on circle: _tan to	Tilgreindu þriðja punkt á hringnum: _tan að
+	Specify third source point or <continue>	Tilgreindu þriðja upprunapunkt eða <halda áfram>
+	Specify through point	Tilgreindu gegnumpunkt
+	Specify top diameter	Tilgreindu efra þvermál
+	Specify top radius	Tilgreindu efri geisla
+	Specify total angle	Tilgreindu heildarhorn
+	Specify total length	Tilgreindu heildarlengd
+	Specify width for rectangles	Tilgreindu breidd fyrir rétthyrninga
+	Sphere	Kúla
+	Spline	Splína
+	Spline Edit	Breyta splínu
+	Stack (type 1/2 then select)	Stafla (sláðu inn 1/2 og veldu síðan)
+	Standard	Standard
+	Start	Byrja
+	Start Width	Upphafsbreidd
+	Start X	Upphafs-X
+	Start Y	Upphafs-Y
+	Start angle	Upphafshorn
+	Start, Center, Angle	Upphaf, miðja, horn
+	Start, Center, End	Upphaf, miðja, endi
+	Start, Center, Length	Upphaf, miðja, lengd
+	Start, End, Angle	Upphaf, endi, horn
+	Start, End, Direction	Upphaf, endi, stefna
+	Start, End, Radius	Upphaf, endi, geisli
+	Status	Staða
+	Status Bar	Stöðustika
+	Stretch	Teygja
+	Stretch Vertex	Teygja hornpunkt
+	Style: Standard	Stíll: Standard
+	Subtract	Draga frá
+	Sweep	Sópa
+	Switch Drawing	Skipta um teikningu
+	Switch Layout	Skipta um útlit
+	Switch between model space in a viewport and paper space	Skipta á milli líkanrýmis í skoðunarglugga og pappírsrýmis
+	Symmetric	Samhverft
+	Synchronize Attributes	Samstilla eigindir
+	Synchronize Multiple-scale Positions	Samstilla staðsetningar fyrir marga kvarða
+	TOP	OFAN
+	Table	Tafla
+	Table Breaks	Töflurof
+	Table Cell Style	Stíll töflureits
+	Table Style...	Töflustíll...
+	Table style	Töflustíll
+	Table...	Tafla...
+	Tan, Tan, Radius	Snertill, snertill, geisli
+	Tan, Tan, Tan	Snertill, snertill, snertill
+	Tangent	Snertill
+	Temporary track point	Tímabundinn rakningarpunktur
+	Text	Texti
+	Text Editor	Textaritill
+	Text Height	Hæð texta
+	Text Objects Only	Aðeins textahlutir
+	Text Style...	Textastíll...
+	Text height	Hæð texta
+	Text override	Hnekking texta
+	Text style	Textastíll
+	Thaw All Layers	Þíða öll lög
+	Thaw Layer	Þíða lag
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Leitarsvæðið segir til um hversu nálægt punkti bendillinn þarf að koma til að hlutafesting finni hann.
+	There is nothing here yet.	Hér er ekkert enn.
+	Thickness	Þykkt
+	Time	Tími
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Tímanæmur hægrismellur: stuttur smellur er Enter, að halda inni opnar valmyndina
+	To	Til
+	To get started, create or open a drawing.	Til að byrja skaltu búa til eða opna teikningu.
+	Toggle PICKADD (off: each pick replaces the selection)	Víxla PICKADD (óvirkt: hvert val kemur í stað fyrra vals)
+	Toggle PICKADD (on: picks add to the selection)	Víxla PICKADD (virkt: hvert val bætist við valið)
+	Tolerance...	Vikmörk...
+	Tool Bar	Tækjastika
+	Tool Sets	Verkfærasett
+	Tools	Verkfæri
+	Torus	Torus
+	Trace	Rekja
+	Track orthogonally only	Aðeins hornrétt rakning
+	Track using all polar angle settings	Rakning með öllum pólhornastillingum
+	Transparency	Gegnsæi
+	Trim	Snyrta
+	True Color	Raunlitur
+	Turn All Layers On	Kveikja á öllum lögum
+	Turn Off Layer	Slökkva á lagi
+	Turn On Layer	Kveikja á lagi
+	Turn Quick Properties off (QPMODE)	Slökkva á fljótlegum eiginleikum (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Ef slökkt er á þessu opnar hægrismellur meðan skipun er í gangi alltaf flýtivalmyndina.
+	Type	Gerð
+	Type a command	Sláðu inn skipun
+	Type text; Enter starts a new paragraph	Sláðu inn texta; Enter byrjar nýja málsgrein
+	UCS Icon	UCS-tákn
+	Undo	Afturkalla
+	Undo (⌘Z)	Afturkalla (⌘Z)
+	Ungroup	Leysa upp hóp
+	Union	Sameining
+	Unisolate Layer	Hætta einangrun lags
+	Units Conversion	Umreikningur eininga
+	Units...	Einingar...
+	Unload	Afhlaða
+	Unloaded	Afhlaðið
+	Unlock Layer	Aflæsa lagi
+	Unlock viewport	Aflæsa skoðunarglugga
+	Unmerge Cells	Aðskilja reiti
+	Unreferenced	Án tilvísana
+	Unresolved	Óleyst
+	Unsaved Layer State	Óvistuð lagastaða
+	Up	Upp
+	Update	Uppfæra
+	Update Data Links	Uppfæra gagnatengingar
+	Use System Setting	Nota kerfisstillingu
+	Use for this layout	Nota fyrir þetta útlit
+	Use object linetype	Nota línugerð hlutarins
+	Use object lineweight	Nota línuþykkt hlutarins
+	User	Notandi
+	User Parameters	Notandastikar
+	User Preferences	Kjörstillingar notanda
+	Username	Notandanafn
+	VP Color	Gluggalitur
+	VP Freeze	Gluggafrysting
+	Value	Gildi
+	Value:	Gildi:
+	Variables	Breytur
+	Version	Útgáfa
+	Version 2000	Útgáfa 2000
+	Version 2004	Útgáfa 2004
+	Version 2007	Útgáfa 2007
+	Version 2010	Útgáfa 2010
+	Version 2013	Útgáfa 2013
+	Version 2018	Útgáfa 2018
+	Version {version}	Útgáfa {version}
+	Vertical	Lóðrétt
+	VerticalDistance	LóðréttFjarlægð
+	View	Skoða
+	ViewCube	ViewCube
+	Viewport	Skoðunargluggi
+	Viewport Layer Freeze	Lagafrysting í skoðunarglugga
+	Viewport Properties	Eiginleikar skoðunarglugga
+	Viewport is locked	Skoðunarglugginn er læstur
+	Viewport scale	Kvarði skoðunarglugga
+	Viewport {id}	Skoðunargluggi {id}
+	Viewports	Skoðunargluggar
+	Volume	Rúmmál
+	WCS	WCS
+	White	Hvítur
+	Width factor	Breiddarstuðull
+	Window	Gluggi
+	Wipeout	Hulning
+	Workspace Switching	Skipta um vinnusvæði
+	Write Block	Skrifa blokk
+	X	X
+	Xline	X-lína
+	Y	Y
+	Yellow	Gulur
+	Yes	Já
+	Zoom	Aðdráttur
+	Zoom All	Þysja að öllu
+	Zoom Dynamic	Kvikur aðdráttur
+	Zoom Extents	Þysja að umfangi
+	Zoom In	Þysja inn
+	Zoom Object	Þysja að hlut
+	Zoom Out	Þysja út
+	Zoom Previous	Fyrri aðdráttur
+	Zoom Realtime	Aðdráttur í rauntíma
+	Zoom Window	Þysja að glugga
+	Zoom sensitivity	Næmi aðdráttar
+	error	villa
+	min	min
+	objects	hlutir
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (skorða {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	Skorða {kind} {name} = {expression}  (tvísmelltu til að breyta)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Nýr notandastiki
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ til að ljúka
+@plural	{n} commit	{n} innsending|{n} innsendingar
+@plural	{n} contributor	{n} þátttakandi|{n} þátttakendur
+	Check for Updates…	Leita að uppfærslum…
+	DraftCraft is up to date.	DraftCraft er uppfært.
+	Could not check for updates.	Ekki tókst að leita að uppfærslum.
+	Add to Working Set	Bæta við vinnusett
+	Add: Pick points	Bæta við: velja punkta
+	Add: Select objects	Bæta við: velja hluti
+	Add…	Bæta við…
+	Alias	Samheiti
+	Alias file: {file}	Samheitaskrá: {file}
+	Align Multileaders	Jafna fjöltilvísunarlínur
+	Analyze Shapes	Greina form
+	Analyze Usage	Greina notkun
+	Animation Effects	Hreyfiáhrif
+	Animation effects	Hreyfiáhrif
+	Associative	Tengt
+	Backup copy	Öryggisafrit
+	Block to create or edit	Blokk til að búa til eða breyta
+	Bottom left	Neðst til vinstri
+	Bottom right	Neðst til hægri
+	Boundaries	Jaðrar
+	Boundaries picked: {n}	Valdir jaðrar: {n}
+	Break-line Symbol	Brotlínutákn
+	Centered	Miðjað
+	Change Properties	Breyta eiginleikum
+	Choose the command the alias starts.	Veldu skipunina sem samheitið ræsir.
+	Click the ruler to add a tab stop, right-click to remove one	Smelltu á reglustikuna til að bæta við dálkstoppi, hægrismelltu til að fjarlægja það
+	Click to set new origin	Smelltu til að setja nýjan upphafspunkt
+	Close Block Editor	Loka blokkaritli
+	Collect	Safna
+	Collect Multileaders	Safna fjöltilvísunarlínum
+	Color 1	Litur 1
+	Color 2	Litur 2
+	Command	Skipun
+	Convert Text to Mtext	Umbreyta texta í margra lína texta
+	Create backup copy with each save	Búa til öryggisafrit við hverja vistun
+	Create separate hatches	Búa til aðskildar skástrikanir
+	Crossing selection color:	Litur skurðarvals:
+	Curved	Bogið
+	Customize	Sérsníða
+	Default to boundary extents	Sjálfgefið að umfangi jaðars
+	Define each corner of the selection window with a separate click.	Skilgreindu hvert horn valgluggans með sérstökum smelli.
+	Discard	Henda
+	Drag Dynamic Grip	Draga kvikt handfang
+	Dynamic Block Data	Gögn kvikrar blokkar
+	Dynamic Block Grips	Handföng kvikrar blokkar
+	Dynamic Block Reference	Tilvísun í kvika blokk
+	Edit Block Definition	Breyta skilgreiningu blokkar
+	Edit Command Aliases (PGP)...	Breyta samheitum skipana (PGP)...
+	Edit Multileader	Breyta fjöltilvísunarlínu
+	Edit Reference In-Place	Breyta tilvísun á staðnum
+	Edit…	Breyta…
+	Evaluate LISP	Meta LISP
+	Exclude:	Útiloka:
+	Explode Attributes to Text	Sundra eigindum í texta
+	Express Tools	Express-verkfæri
+	Font	Letur
+	Grips	Handföng
+	Groups	Hópar
+	Hatch Pick	Val skástrikunar
+	Hatch and Gradient	Skástrikun og litstigull
+	Hatch origin	Upphafspunktur skástrikunar
+	Hatches	Skástrikanir
+	Hemispherical	Hálfkúlulaga
+	Ignore	Hunsa
+	Imperial (inches)	Breskt (tommur)
+	Implied Loops	Óbeinar lykkjur
+	Indicate selection area	Tilgreindu valsvæði
+	Interface scale	Kvarði viðmóts
+	Inverted	Viðsnúið
+	Island	Eyja
+	Island detection	Greining eyja
+	Italic	Skáletrað
+	Justify	Hliðjafna
+	Load Application...	Hlaða forriti...
+	Metric (millimetres)	Metrakerfi (millimetrar)
+	More than {n} aliases.	Fleiri en {n} samheiti.
+	Move/Copy/Rotate	Færa/Afrita/Snúa
+	Multiline text	Margra lína texti
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Nýjar teikningar og fyrsta teikningin við ræsingu nota þessar einingar nema sjálfgefið sniðmát sé stillt (QNEWTEMPLATE).
+	New block	Ný blokk
+	No alias file loaded. REINIT replaces these aliases with a file's.	Engin samheitaskrá hlaðin. REINIT setur samheiti úr skrá í stað þessara.
+	Not a number or distance: {text}	Hvorki tala né fjarlægð: {text}
+	Object grouping	Hópun hluta
+	Object selection limit for display of grips	Hámarksfjöldi valinna hluta fyrir birtingu handfanga
+	Objects on locked layers	Hlutir á læstum lögum
+	Open in Block Editor	Opna í blokkaritli
+	Origin: {x}, {y}	Upphafspunktur: {x}, {y}
+	Outer	Ytra
+	Overline	Yfirstrikað
+	Preview	Forskoðun
+	Query Texts	Fyrirspurn um texta
+	Save Block	Vista blokk
+	Save Block As	Vista blokk sem
+	Save Layout as Template	Vista útlit sem sniðmát
+	Save Reference Edits	Vista breytingar á tilvísun
+	Save alias	Vista samheiti
+	Save changes to block "{name}"?	Vista breytingar á blokkinni „{name}“?
+	Select boundaries to remove	Veldu jaðra til að fjarlægja
+	Select using two clicks only	Velja aðeins með tveimur smellum
+	Selection Area Effect	Áhrif valsvæðis
+	Selection Preview Filter	Sía forskoðunar vals
+	Selection area opacity:	Ógegnsæi valsvæðis:
+	Selection effect color	Litur valáhrifa
+	Selection modes	Valhamir
+	Selection preview	Forskoðun vals
+	Set Dynamic Property	Stilla kvikan eiginleika
+	Shape	Form
+	Sheet Books to PDF...	Blaðasöfn í PDF...
+	Show grips	Sýna handföng
+	Specified origin	Tilgreindur upphafspunktur
+	Spherical	Kúlulaga
+	Tables	Töflur
+	Text color	Litur texta
+	Top left	Efst til vinstri
+	Top right	Efst til hægri
+	Type an alias name.	Sláðu inn heiti samheitis.
+	Underline	Undirstrikað
+	Units of new drawings	Einingar nýrra teikninga
+	Unsaved changes	Óvistaðar breytingar
+	Use current origin	Nota núverandi upphafspunkt
+	Visual Effect Settings	Stillingar sjónrænna áhrifa
+	Visual Effect Settings...	Stillingar sjónrænna áhrifa...
+	When a command is active	Þegar skipun er virk
+	When no command is active	Þegar engin skipun er virk
+	Window selection color:	Litur gluggavals:
+	Working Set	Vinnusett
+	Xref and Block In-place Editing	Breyting á ytri tilvísunum og blokkum á staðnum
+	Xrefs	Ytri tilvísanir
+	built-in	innbyggt
+	overrides built-in	hnekkir innbyggðu
+	{alias} is already defined; select it and use Edit.	{alias} er þegar skilgreint; veldu það og notaðu Breyta.
+	{command} is an unknown command.	{command} er óþekkt skipun.
+	Find All	Finna allt
+	Find what:	Finna:
+	Match case	Hástafanæmt
+	Replace	Skipta út
+	Replace All	Skipta út öllu
+	Replace with:	Skipta út fyrir:
+	Replacement text	Nýr texti
+	Results	Niðurstöður
+	Searches the current space.	Leitar í núverandi rými.
+	Text to find	Texti til að finna
+	Whole words	Heil orð
+	Nothing found	Ekkert fannst
+	E	A
+	N	N
+	S	S
+	W	V
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Hreinsa nýlegar skrár
+	contains authoring elements. Open in Block Editor?	inniheldur hönnunareiningar. Opna í blokkaritli?
+	Custom	Sérsniðið
+	Open Recent	Opna nýlegt
+	This drawing	Þessi teikning
+	Arrow size	Stærð örvar
+	Dim scale overall	Heildarkvarði málsetningar
+	Precision	Nákvæmni
+	Apply to Layout	Nota á útlit
+	Center the plot	Miðja útprentun
+	Enter block names to extract	Sláðu inn heiti blokka sem á að draga út
+	Enter geometric characteristic	Sláðu inn rúmfræðieinkenni
+	Enter name of LISP file to load	Sláðu inn heiti LISP-skrár sem á að hlaða
+	First corner	Fyrsta horn
+	Fit to paper	Laga að pappír
+	Landscape	Langsnið
+	Limits	Mörk
+	Opposite corner	Gagnstætt horn
+	Orientation	Stefna
+	Paper size	Pappírsstærð
+	Plot area	Prentsvæði
+	Plot object lineweights	Prenta línuþykkt hluta
+	Plot offset	Hliðrun útprentunar
+	Plot transparency	Prenta gegnsæi
+	Portrait	Skammsnið
+	Printer/plotter	Prentari/plotter
+	Window <	Gluggi <
+	X offset (mm)	X-hliðrun (mm)
+	Y offset (mm)	Y-hliðrun (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angström
+	Architectural	Arkitektúr
+	Astronomical Units	Stjarnfræðieiningar
+	Centimeters	Sentimetrar
+	Decameters	Dekametrar
+	Decimal	Tugabrot
+	Decimal Degrees	Tugabrotsgráður
+	Decimeters	Desimetrar
+	Deg/Min/Sec	Gráður/Mín/Sek
+	Don't Save	Ekki vista
+	Drawing Units	Einingar teikningar
+	Engineering	Verkfræði
+	Feet	Fet
+	Fractional	Almenn brot
+	Gigameters	Gígametrar
+	Grads	Nýgráður
+	Hectometers	Hektómetrar
+	Inches	Tommur
+	Insertion scale	Innsetningarkvarði
+	Kilometers	Kílómetrar
+	Light Years	Ljósár
+	Meters	Metrar
+	Microinches	Míkrótommur
+	Microns	Míkron
+	Miles	Mílur
+	Millimeters	Millimetrar
+	Mils	Mil
+	Nanometers	Nanómetrar
+	Parsecs	Parsek
+	Radians	Radíanar
+	Sample output	Sýnishorn
+	Save changes to {name}?	Vista breytingar á {name}?
+	Scientific	Vísindalegt
+	Surveyor's Units	Landmælingaeiningar
+	Unitless	Án eininga
+	Units to scale inserted content	Einingar til að skala innsett efni
+	US Survey Feet	Bandarísk landmælingafet
+	US Survey Inch	Bandarísk landmælingatomma
+	US Survey Mile	Bandarísk landmælingamíla
+	US Survey Yard	Bandarískt landmælingayard
+	Yards	Yardar
+	Your changes will be lost if you don't save them.	Breytingarnar tapast ef þú vistar þær ekki.
+	Layouts	Útlit
+	Associate	Tengja
+	Clip Xref	Skera af ytri tilvísun
+	Xref Clip Frame	Afskurðarrammi ytri tilvísunar
+	Minimize	Lágmarka
+	Maximize	Hámarka
+	Restore Down	Endurheimta niður
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft og DraftCraft-merkið eru vörumerki DraftCraft Engineering Ventures.
+	Conic	Keilusnið
+	Spline Fit	Splína um aðlögunarpunkta
+	Spline CV	Splína um stýripunkta
+	Specify start point of conic	Tilgreindu upphafspunkt keilusniðsins
+	Specify apex (where the end tangents meet)	Tilgreindu topppunkt (þar sem endasnertlarnir mætast)
+	Specify end point of conic	Tilgreindu endapunkt keilusniðsins
+	Specify rho or a point on the conic	Tilgreindu rho eða punkt á keilusniðinu
+	Check for Updates...	Leita að uppfærslum...
+	Check for Updates	Leita að uppfærslum
+	Update Available	Uppfærsla í boði
+	DraftCraft {version} is available.	DraftCraft {version} er í boði.
+	You have version {version}.	Þú ert með útgáfu {version}.
+	Do you want to download the update?	Viltu sækja uppfærsluna?
+	What's new	Nýjungar
+	What's New	Nýjungar
+	Download	Sækja
+	Later	Síðar
+	Skip This Version	Sleppa þessari útgáfu
+	DraftCraft is up to date (version {version}).	DraftCraft er uppfært (útgáfa {version}).
+	Do you want to install the update now?	Viltu setja upp uppfærsluna núna?
+	Update Now	Uppfæra núna
+	Open the release page	Opna útgáfusíðuna
+	This copy of DraftCraft can't update itself.	Þetta eintak af DraftCraft getur ekki uppfært sig sjálft.
+	Updating DraftCraft	Uppfæri DraftCraft
+	Update Failed	Uppfærsla mistókst
+	Installing DraftCraft {version}	Set upp DraftCraft {version}
+	Downloading: {done} of {total} MB	Sæki: {done} af {total} MB
+	Installing…	Set upp…
+	Starting the download…	Ræsi niðurhal…
+	The connection dropped; trying again…	Tengingin rofnaði; reyni aftur…
+	DraftCraft {version} is installed.	DraftCraft {version} er uppsett.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Endurræstu DraftCraft til að nota hana. Ef þú endurræsir síðar opnast hún næst þegar þú ræsir DraftCraft.
+	Restart Now	Endurræsa núna
+	The update could not be installed.	Ekki tókst að setja upp uppfærsluna.
+	You can download it from the release page instead.	Þú getur í staðinn sótt hana af útgáfusíðunni.
+	2D Wireframe	2D-vírnet
+	Annotate	Skýringar
+	Blocks Palette	Blokkaspjald
+	CAD Standards	CAD-staðlar
+	Commands	Skipanir
+	2D Drafting	2D-teiknun
+	Edit Aliases	Breyta samheitum
+	Image	Mynd
+	Palettes	Spjöld
+	Top	Ofan
+	Units	Einingar
+	Workspace	Vinnusvæði
+	Ribbon	Borði
+	PDF Underlay...	PDF-undirlag...
+	PDF Import	Flytja inn PDF
+	PDF Underlay	PDF-undirlag
+	Underlay Layers	Lög undirlags
+	Raster Image Reference...	Tilvísun í rastamynd...
+	Close Text Editor	Loka textaritli
+	Image Clip	Afskurður myndar
+	PDF Clip	Afskurður PDF
+	Image Adjust	Stilling myndar
+	PDF Adjust	Stilling PDF
+	Adjust...	Stilla...
+	Parameter	Stiki
+	Action	Aðgerð
+	DesignCenter	DesignCenter
+	Tool Palettes	Verkfæraspjöld
+	Sheet Set Manager	Stjórnun blaðasafna
+	Type the drawing's path, then press Enter.	Sláðu inn slóð teikningarinnar og ýttu síðan á Enter.
+	Drawing file	Teikniskrá
+	Folder	Mappa
+	Linetypes	Línugerðir
+	Text Styles	Textastílar
+	Dimension Styles	Málsetningarstílar
+	Table Styles	Töflustílar
+	Multileader Styles	Stílar fjöltilvísunarlína
+	Multiline Styles	Marglínustílar
+	Add to Drawing	Bæta við teikningu
+	Create Tool Palette	Búa til verkfæraspjald
+	Nothing of this kind in the file.	Ekkert af þessu tagi í skránni.
+	Open a drawing to see its blocks, layers and styles.	Opnaðu teikningu til að sjá blokkir hennar, lög og stíla.
+	Delete Palette	Eyða spjaldi
+	New Palette	Nýtt spjald
+	No tool palettes.	Engin verkfæraspjöld.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Þetta spjald er tómt: bættu við skipun hér fyrir neðan eða búðu til spjald úr DesignCenter.
+	Delete Tool	Eyða verkfæri
+	Add Command	Bæta við skipun
+	New Sheet Set...	Nýtt blaðasafn...
+	Open Sheet Set...	Opna blaðasafn...
+	Sheet sets (DCSS)	Blaðasöfn (DCSS)
+	Sheet set file	Blaðasafnsskrá
+	Make or open a sheet set to list its sheets.	Búðu til eða opnaðu blaðasafn til að sjá lista yfir blöð þess.
+	Add Drawing...	Bæta við teikningu...
+	Publish to PDF...	Gefa út í PDF...
+	No sheets yet: add a drawing's layouts.	Engin blöð enn: bættu við útlitum teikningar.
+	Number	Númer
+	Title	Titill
+	Move Up	Færa upp
+	Move Down	Færa niður
+	Sheet Set (DCSS)	Blaðasafn (DCSS)
+	Close Tool Palettes	Loka verkfæraspjöldum
+	Close DesignCenter	Loka DesignCenter
+	Close Sheet Set Manager	Loka stjórnun blaðasafna
+	Manage Tool Palettes	Stjórna verkfæraspjöldum
+	Changes apply at once; Save Current As keeps them in a workspace.	Breytingar taka gildi strax; Vista núverandi sem geymir þær í vinnusvæði.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Smelltu á lög til að sýna aðeins þau; Ctrl eða Shift bætir við valið.
+	Current Workspace	Núverandi vinnusvæði
+	Customize Interface	Sérsníða viðmót
+	Customize User Interface	Sérsníða notendaviðmót
+	Customize...	Sérsníða...
+	Edit Aliases...	Breyta samheitum...
+	Force object color and linetype to ByLayer	Þvinga lit og línugerð hluta í EftirLagi
+	Geographic Location	Landfræðileg staðsetning
+	Geographic Location...	Landfræðileg staðsetning...
+	Latitude	Breiddargráða
+	Longitude	Lengdargráða
+	North direction	Norðurátt
+	Layer Translation Mappings	Vörpun lagaþýðingar
+	Layer Translator	Lagaþýðandi
+	Layer Translator...	Lagaþýðandi...
+	Layer Walk	Fletta lögum
+	Layer Walk...	Fletta lögum...
+	Location	Staðsetning
+	Set Location	Stilla staðsetningu
+	Remove Location	Fjarlægja staðsetningu
+	The drawing's origin is at this place (WGS 84 degrees).	Upphafspunktur teikningarinnar er á þessum stað (WGS 84 gráður).
+	Map	Varpa
+	New layer name	Heiti nýs lags
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Engar varpanir enn: veldu lög vinstra megin, heiti hægra megin og síðan Varpa.
+	Translate	Þýða
+	Translate From	Þýða úr
+	Translate To	Þýða í
+	Restore on exit	Endurheimta við lokun
+	Point Cloud	Punktaský
+	Point Cloud...	Punktaský...
+	Point clouds (XYZ, LAS)	Punktaský (XYZ, LAS)
+	ZIP archive	ZIP-safnskrá
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Flýtiaðgangsstika
+	Rename	Endurnefna
+	Reset to Standard	Endurstilla í staðlað
+	Ribbon Tabs	Flipar borðans
+	Save Current As	Vista núverandi sem
+	Save Current As...	Vista núverandi sem...
+	Save Workspace	Vista vinnusvæði
+	User Interface	Notendaviðmót
+	Workspace Settings	Stillingar vinnusvæðis
+	Workspace Settings...	Stillingar vinnusvæðis...
+	Workspace name	Heiti vinnusvæðis
+	Workspace:	Vinnusvæði:
+	Workspaces	Vinnusvæði
+	Interface...	Viðmót...
+	Export Attribute Information...	Flytja út upplýsingar eiginda...
+	Import Attribute Information...	Flytja inn upplýsingar eiginda...
+	Export Attributes	Flytja út eigindir
+	Import Attributes	Flytja inn eigindir
+	Text, tab-delimited (TXT)	Texti aðgreindur með dálkstoppum (TXT)
+	Import Settings	Flytja inn stillingar
+	Export Settings	Flytja út stillingar
+	Import Settings...	Flytja inn stillingar...
+	Export Settings...	Flytja út stillingar...
+	DraftCraft settings (TOML)	DraftCraft-stillingar (TOML)
+	Total Area and Length	Heildarflatarmál og -lengd
+	Total Area	Heildarflatarmál
+	Specify point to place the totals as text	Tilgreindu punkt þar sem samtölur eru settar sem texti
+	Metric	Metrakerfi
+	Imperial	Breskt
+	A new drawing in millimeters	Ný teikning í millimetrum
+	A new drawing in inches	Ný teikning í tommum
+	A new drawing in centimeters	Ný teikning í sentimetrum
+	Metric (centimetres)	Metrakerfi (sentimetrar)
+	Join the ArtCraft Discord…	Taktu þátt í ArtCraft á Discord…
+	Join us on Discord	Vertu með okkur á Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Eitt af Crafting-forritunum frá ArtCraft-teyminu og samfélaginu.
+	Change	Breyta
+	Multiple Insert	Margföld innsetning
+	Ctrl+Enter to apply	Ctrl+Enter til að nota
+	Edit Text	Breyta texta
+	The drawing changed. Close the window and open it again.	Teikningin breyttist. Lokaðu glugganum og opnaðu hann aftur.
+	DView	DView
+	Raster Images	Rastamyndir
+	Xref	Ytri tilvísun
+	Backup copies are off, so the current file will be replaced.	Slökkt er á öryggisafritum, svo núverandi skrá verður skipt út.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 og eldri halda þeim. Notaðu Vista sem til að halda þeim í teikningunni.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF heldur þeim. Notaðu Vista sem til að halda þeim í teikningunni.
+	Save Anyway	Vista samt
+	Save cancelled: {path} was not changed.	Hætt við vistun: {path} var ekki breytt.
+	Saving {name} will remove content	Vistun {name} mun fjarlægja efni
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Núverandi skrá virðist ekki heil, svo {name} helst óbreytt og núverandi skrá verður skipt út.
+	The current file is kept as {name} until the next save.	Núverandi skrá er geymd sem {name} fram að næstu vistun.
+	This format can't keep these objects yet: {objects}.	Þetta snið getur ekki enn haldið þessum hlutum: {objects}.
+	{count} more types	{count} gerðir í viðbót
+	Additional Tools	Viðbótarverkfæri
+	Keyboard Shortcuts...	Flýtilyklar...
+	Keyboard Shortcuts	Flýtilyklar
+	Replaces the shortcut of {commands}	Kemur í stað flýtilykils fyrir {commands}
+	Needs Ctrl, Alt or a function key	Þarf Ctrl, Alt eða aðgerðarlykil
+	Press the keys	Ýttu á lyklana
+	Back to DraftCraft's shortcut	Aftur í flýtilykil DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Flýtilykill sem þú velur gengur framar flýtilykli DraftCraft. Breytingar taka gildi strax og eru geymdar til næsta skiptis.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Ef slökkt er á þessu gerir hægrismellur meðan skipun er í gangi það sem Sérsnið hægrismells stillir fyrir Skipanaham.
+	Right-Click Customization...	Sérsnið hægrismells...
+	Right-Click Customization	Sérsnið hægrismells
+	Turn on time-sensitive right-click	Kveikja á tímanæmum hægrismelli
+	Longer click duration:	Lengd langs smells:
+	milliseconds	millisekúndur
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Meðan skipun er í gangi er stuttur smellur Enter og lengri smellur opnar flýtivalmyndina.
+	Default Mode	Sjálfgefinn hamur
+	No objects selected and no command running:	Engir hlutir valdir og engin skipun í gangi:
+	Edit Mode	Breytingahamur
+	Objects selected and no command running:	Hlutir valdir og engin skipun í gangi:
+	Repeat last command	Endurtaka síðustu skipun
+	Shortcut Menu	Flýtivalmynd
+	Command Mode	Skipanahamur
+	While a command runs:	Meðan skipun er í gangi:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Flýtivalmynd: alltaf virk
+	Shortcut Menu: enabled when command options are present	Flýtivalmynd: virk þegar skipun hefur valkosti
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Innflutningur: hér er enginn skráagluggi; keyrðu ALIASEDIT með innihaldi skrárinnar í text-stikanum.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Samheiti eru vistuð í DraftCraft-prófílnum þínum og haldast við endurræsingu.
+	Import…	Flytja inn…
+	Run ALIASEDIT with the file's contents using its text parameter.	Keyrðu ALIASEDIT með innihaldi skrárinnar í text-stikanum.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Innflutningur skrár kemur í stað {n} samheita þinna og allra breytinga sem ekki hafa verið notaðar enn.
+	Import and replace	Flytja inn og skipta út
+	Keep my aliases	Halda mínum samheitum
+	{n} more warnings; see the command line.	{n} viðvaranir í viðbót; sjá skipanalínuna.
+	Unit	Eining
+	Drawing units: {unit}, {format}	Einingar teikningar: {unit}, {format}
+	NEW DRAWING	NÝ TEIKNING
+	OPEN	OPNA
+	WORKSPACE	VINNUSVÆÐI
