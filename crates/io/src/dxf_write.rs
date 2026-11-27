@@ -74,12 +74,20 @@ impl W {
         format!("{:X}", self.next_handle())
     }
     /// A new handle for a record the drawing doesn't hold (as [`W::h`]).
+    ///
+    /// Skips every handle an entity holds, and off the top of the range goes on at the bottom of
+    /// the reserved band above [`draftcraft_doc::HANDLE_LIMIT`] instead of repeating the last
+    /// handle: a file whose own handles sit near the top would otherwise be written with
+    /// structural records sharing one handle (#913).
     fn next_handle(&mut self) -> u64 {
-        while self.taken.remove(&self.next) {
-            self.next = self.next.saturating_add(1);
+        let step = |h: u64| h.checked_add(1).unwrap_or(draftcraft_doc::HANDLE_LIMIT);
+        let mut left = self.taken.len();
+        while left > 0 && self.taken.contains(&self.next) {
+            self.next = step(self.next);
+            left -= 1;
         }
         let h = self.next;
-        self.next = self.next.saturating_add(1);
+        self.next = step(self.next);
         h
     }
     /// A `102 {NAME` … `102 }` group of handles.

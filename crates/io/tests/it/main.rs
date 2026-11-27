@@ -30,6 +30,7 @@ mod dynblock_dwg;
 mod dynblock_read;
 mod dynblock_rotate_flip;
 mod entity_props_roundtrip;
+mod exhausted_handseed;
 mod followups_626;
 mod groups_roundtrip;
 mod hatch_assoc_roundtrip;
