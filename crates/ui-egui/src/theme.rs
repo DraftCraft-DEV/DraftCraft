@@ -506,6 +506,9 @@ fn embedded_ui_faces<'a>(faces: &[&'a draftcraft_fonts::CraftFont], language: &s
         out.sort_by_key(|f| (!f.scripts.contains(&"Hant"), !f.scripts.contains(&"Hans")));
     } else if language.starts_with("zh") {
         out.sort_by_key(|f| !f.scripts.contains(&"Hans"));
+    } else if language == "ja" {
+        // 日本語: a Japanese face first, for its kana and Japanese glyph forms.
+        out.sort_by_key(|f| !f.scripts.contains(&"Jpan"));
     }
     out.extend(faces.iter().copied().filter(|f| f.style == "Regular" && f.scripts.contains(&"Geor")));
     if language == "ar" {
@@ -858,6 +861,8 @@ pub fn can_show(language: &str) -> bool {
         "ar" => arabic_font().is_some() || embedded_script("Arab"),
         "ka" => embedded_script("Geor"),
         "ta" => tamil_font().is_some() || embedded_script("Taml"),
+        // 日本語: kana and kanji from an installed Japanese face or a CJK face that has kana.
+        "ja" => japanese_font().is_some() || cjk_font().is_some() || embedded_script("Jpan"),
         l if l.starts_with("zh") => {
             cjk_font().is_some() || traditional_chinese_font().is_some() || embedded_script("Hans") || embedded_script("Hant")
         }

@@ -1,0 +1,1690 @@
+# DraftCraft Filipino (Filipino) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Kanselahin  
+	  OK  	  OK  
+	 or [	 o [
+	% of all commits	% ng lahat ng commit
+	* Wildcard Match	* Pagtutugma ng Wildcard
+	*VARIES*	*IBA-IBA*
+	+  |  Top  |  2D Wireframe	+  |  Itaas  |  2D Wireframe
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 Viewport
+	2 Points	2 Punto
+	2 Viewports	2 Viewport
+	2D Solid	2D Solid
+	3 Points	3 Punto
+	3 Viewports	3 Viewport
+	3D Face	3D Face
+	3D Mouse	3D Mouse
+	3D Mouse Navigation	Nabigasyon gamit ang 3D Mouse
+	3D Mouse...	3D Mouse...
+	3D Operations	Mga 3D Operasyon
+	3D Polyline	3D Polyline
+	3D mouse busy, possibly 3DxWare or missing device permissions	Abala ang 3D mouse, maaaring dahil sa 3DxWare o kulang na pahintulot sa device
+	3D mouse connected	Nakakonekta ang 3D mouse
+	3D mouse disconnected	Nadiskonekta ang 3D mouse
+	3D mouse input could not be started	Hindi masimulan ang input ng 3D mouse
+	3D mouse input is unavailable on this platform	Hindi available ang input ng 3D mouse sa platform na ito
+	4 Viewports	4 Viewport
+	< Less than	< Mas mababa sa
+	<> Not Equal	<> Hindi Katumbas
+	= Equals	= Katumbas
+	> Greater than	> Mas mataas sa
+	A built-in table: editing it keeps an edited copy in the drawing.	Built-in na table: kapag in-edit ito, may naka-edit na kopya sa drawing.
+	A drawing opened from a file keeps that file's format.	Ang drawing na binuksan mula sa file ay nananatili sa format ng file na iyon.
+	A variable name starts with a letter and has only letters, digits and _	Ang pangalan ng variable ay nagsisimula sa titik at may mga titik, digit at _ lamang
+	About	Tungkol sa
+	About DraftCraft	Tungkol sa DraftCraft
+	Absolute	Absolute
+	Accessibility	Accessibility
+	Add	Idagdag
+	Add Current Scale	Idagdag ang Kasalukuyang Scale
+	Add Leader	Magdagdag ng Leader
+	Add Vertex	Magdagdag ng Vertex
+	Add/Delete Scales...	Magdagdag/Magbura ng Scale...
+	Additional angles	Mga karagdagang anggulo
+	Align	I-align
+	Align Text	I-align ang Teksto
+	Aligned	Nakahanay
+	All	Lahat
+	All Annotation Objects	Lahat ng Annotation Object
+	All Scales	Lahat ng Scale
+	All Used Layers	Lahat ng Ginagamit na Layer
+	All files	Lahat ng file
+	An array that would create more objects than this is refused.	Tinatanggihan ang array na lilikha ng mas maraming object kaysa rito.
+	Angle	Anggulo
+	Angular	Angular
+	Annotation Visibility	Visibility ng Annotation
+	Annotation scale	Scale ng annotation
+	Annotative Object Scale	Scale ng Annotative Object
+	Annotative Update	Update ng Annotative
+	Apparent Intersection	Maliwanag na Intersection
+	Append to current selection set	Idagdag sa kasalukuyang selection set
+	Apply	Ilapat
+	Apply to:	Ilapat sa:
+	Apply true color	Ilapat ang true color
+	Arc	Arko
+	Arc Length	Haba ng Arko
+	Area	Area
+	Arrange Panel	Ayusin ang Panel
+	Array	Array
+	Attach	Ikabit
+	Attach DWG...	Ikabit ang DWG...
+	Attribute	Attribute
+	Attribute Definition	Depinisyon ng Attribute
+	Attribute Display	Pagpapakita ng Attribute
+	Audit	Audit
+	Auto (system language)	Auto (wika ng system)
+	Auto Constrain	Awtomatikong Constraint
+	AutoConstrain	AutoConstrain
+	Automatic save every	Awtomatikong pag-save tuwing
+	Automatic save file location	Lokasyon ng file ng awtomatikong pag-save
+	Axis, End	Axis, Dulo
+	Base	Base
+	Baseline	Baseline
+	Batch Publish	Batch Publish
+	Batch Publish...	Batch Publish...
+	Binary assets added	Mga binary asset na idinagdag
+	Binary assets removed	Mga binary asset na inalis
+	Bind	I-bind
+	Bind...	I-bind...
+	Blend	Blend
+	Block	Block
+	Block Attribute Manager...	Block Attribute Manager...
+	Block Description...	Paglalarawan ng Block...
+	Block Editor	Block Editor
+	Block Reference	Block Reference
+	Block...	Block...
+	Blocks	Mga Block
+	Blue	Asul
+	Bold	Bold
+	Boolean	Boolean
+	Boundary	Hangganan
+	Boundary...	Hangganan...
+	Box	Kahon
+	Break	Putulin
+	Break At Point	Putulin sa Punto
+	Bring Above Objects	Dalhin sa Ibabaw ng mga Object
+	Bring Annotations to Front	Dalhin sa Harap ang mga Annotation
+	Bring to Front	Dalhin sa Harap
+	Bulleted list	Listahang may bullet
+	ByBlock	ByBlock
+	ByColor	ByColor
+	ByLayer	ByLayer
+	DraftCraft Help	Tulong sa DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	Itinatago ng DraftCraft ang mga preference, object snap mode at drafting toggle na ito para sa iyong user account at ibinabalik ang mga ito kapag nagsimula ito.
+	Calibrate	I-calibrate
+	Calibrate 3D Mouse	I-calibrate ang 3D Mouse
+	Cancel	Kanselahin
+	Cartesian (x, y)	Cartesian (x, y)
+	Center	Gitna
+	Center Line	Linya sa Gitna
+	Center Mark	Marka ng Gitna
+	Center X	Gitna X
+	Center Y	Gitna Y
+	Center Z	Gitna Z
+	Center, Diameter	Gitna, Diameter
+	Center, Radius	Gitna, Radius
+	Center, Start, Angle	Gitna, Simula, Anggulo
+	Center, Start, End	Gitna, Simula, Dulo
+	Center, Start, Length	Gitna, Simula, Haba
+	Chamfer	Chamfer
+	Change Space	Palitan ang Space
+	Change to Current Layer	Ilipat sa Kasalukuyang Layer
+	Changed: {n}	Binago: {n}
+	Changes apply at once and are kept for next time.	Agad na nailalapat ang mga pagbabago at itinatago para sa susunod.
+	Circle	Bilog
+	Circumference	Circumference
+	Clear	I-clear
+	Clear Command History	I-clear ang History ng Command
+	Reset Suggestion Order	I-reset ang Pagkakasunod ng Mungkahi
+	Clear History	I-clear ang History
+	Clip	I-clip
+	Clip Viewport	I-clip ang Viewport
+	Clipboard	Clipboard
+	Close	Isara
+	Close All	Isara Lahat
+	Close All Other Drawings	Isara ang Lahat ng Ibang Drawing
+	Close Array Editing	Isara ang Pag-edit ng Array
+	Close Comparison	Isara ang Paghahambing
+	Export Comparison	I-export ang Paghahambing
+	Closed	Sarado
+	Coincident	Coincident
+	Collapse Palettes	I-collapse ang mga Palette
+	Collapse Tool Sets	I-collapse ang Tool Sets
+	Collinear	Collinear
+	Color	Kulay
+	Color 8	Kulay 8
+	Color 9	Kulay 9
+	Color Index	Color Index
+	Color-dependent	Nakadepende sa kulay
+	Color...	Kulay...
+	Command Aliases	Mga Alias ng Command
+	Command History	History ng Command
+	Command Line	Command Line
+	Command Line History Lines	Mga Linya ng History ng Command Line
+	Command Reference	Sanggunian ng Command
+	Command line history	History ng command line
+	Commits	Mga Commit
+	Company	Kumpanya
+	Compare Drawings...	Ihambing ang mga Drawing...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Computer-aided design at drafting: isang open-source, clean-room na CAD application na isinulat sa purong Rust.
+	Concentric	Concentric
+	Cone	Kono
+	Constraint Bars	Mga Constraint Bar
+	Constraint Settings	Mga Setting ng Constraint
+	Construction Line	Construction Line
+	Contents	Nilalaman
+	Continue	Magpatuloy
+	Contributors	Mga Kontribyutor
+	Control Vertices	Mga Control Vertex
+	Convert	I-convert
+	Convert to Arc	I-convert sa Arko
+	Convert to Line	I-convert sa Linya
+	Copy	Kopyahin
+	Copy Full File Path	Kopyahin ang Buong File Path
+	Copy History	Kopyahin ang History
+	Copy Layout	Kopyahin ang Layout
+	Copy Nested Objects	Kopyahin ang mga Nested Object
+	Copy Selection	Kopyahin ang Pinili
+	Copy as JSON	Kopyahin bilang JSON
+	Copy with Base Point	Kopyahin na may Base Point
+	Count	Bilang
+	Count List	Listahan ng Bilang
+	Count Table	Table ng Bilang
+	Create Block	Gumawa ng Block
+	Creates a user parameter	Gumagawa ng user parameter
+	Crosshair size	Laki ng crosshair
+	Ctrl+Enter to finish	Ctrl+Enter para tapusin
+	Current Scale Only	Kasalukuyang Scale Lamang
+	Current layer	Kasalukuyang layer
+	Current selection	Kasalukuyang pinili
+	Current: {color}	Kasalukuyan: {color}
+	Cut	I-cut
+	Cut with Base Point	I-cut na may Base Point
+	Cyan	Cyan
+	Cylinder	Silindro
+	DWG	DWG
+	DWG Reference...	DWG Reference...
+	DXF	DXF
+	Dark	Madilim
+	Data Extraction...	Data Extraction...
+	Data Link...	Data Link...
+	Default	Default
+	Default Save Format	Default na Format ng Pag-save
+	Default Save Version	Default na Bersyon ng Pag-save
+	Default save version	Default na bersyon ng pag-save
+	Define Attributes	Tukuyin ang mga Attribute
+	Define Attributes...	Tukuyin ang mga Attribute...
+	Defined width	Itinakdang lapad
+	Degree	Degree
+	Degrees of Freedom	Degrees of Freedom
+	Degrees of freedom: {n}	Degrees of freedom: {n}
+	Delete	Burahin
+	Delete Column	Burahin ang Column
+	Delete Constraints	Burahin ang mga Constraint
+	Delete Current Scale	Burahin ang Kasalukuyang Scale
+	Delete Dimension Style	Burahin ang Dimension Style
+	Delete Duplicate Objects	Burahin ang mga Dobleng Object
+	Delete Layer	Burahin ang Layer
+	Delete Layer State	Burahin ang Layer State
+	Delete Layout	Burahin ang Layout
+	Delete Row	Burahin ang Row
+	Delete Text Style	Burahin ang Text Style
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Paglalarawan
+	Deselect All	Alisin ang Pagpili sa Lahat
+	Detach	Tanggalin
+	Diameter	Diameter
+	Dim style	Dim style
+	Dimension	Dimension
+	Dimension Break	Dimension Break
+	Dimension Edit	I-edit ang Dimension
+	Dimension Objects Only	Mga Dimension Object Lamang
+	Dimension Space	Dimension Space
+	Dimension Style Override	Override ng Dimension Style
+	Dimension Style...	Dimension Style...
+	Dimension Text Edit	I-edit ang Teksto ng Dimension
+	Dimension style	Dimension style
+	Dimensional Constraint	Dimensional Constraint
+	Dimensional Constraint Parameters	Mga Parameter ng Dimensional Constraint
+	Dimensional Constraints	Mga Dimensional Constraint
+	Disassociate Dimensions	Ihiwalay ang mga Dimension
+	Display	Display
+	Display name	Pangalang ipinapakita
+	Display plot styles	Ipakita ang mga plot style
+	Distance	Distansya
+	Divide	Hatiin
+	Do not plot (click: plot)	Huwag i-plot (i-click: i-plot)
+	Donut	Donut
+	Double-click to edit the description	I-double-click para i-edit ang paglalarawan
+	Down	Pababa
+	Drafting	Drafting
+	Drafting Settings	Mga Setting ng Drafting
+	Drafting Settings...	Mga Setting ng Drafting...
+	Draw	Gumuhit
+	Draw Order	Pagkakasunod ng Pagguhit
+	Drawing (DWG)	Drawing (DWG)
+	Drawing (DXF)	Drawing (DXF)
+	Drawing Limits	Mga Limitasyon ng Drawing
+	Drawing Recovery Manager...	Drawing Recovery Manager...
+	Drawing Template (DWT)	Drawing Template (DWT)
+	Drawing Utilities	Mga Utility ng Drawing
+	Drawing as bytes	Drawing bilang bytes
+	Drawings (DWG, DXF)	Mga Drawing (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Ang mga drawing na wala pang file ay sine-save sa default na bersyon. Pinapatay ng 0 minuto ang awtomatikong pag-save.
+	Dynamic	Dynamic
+	Dynamic Dimensions	Mga Dynamic Dimension
+	Dynamic Input	Dynamic Input
+	Dynamic Input (F12)	Dynamic Input (F12)
+	Edit	I-edit
+	Edit Array	I-edit ang Array
+	Edit Attributes...	I-edit ang mga Attribute...
+	Edit Table Cell	I-edit ang Cell ng Table
+	Edit Text...	I-edit ang Teksto...
+	Elevation	Elevation
+	Ellipse	Ellipse
+	Elliptical Arc	Elliptical na Arko
+	Enable 3D mouse navigation	Paganahin ang nabigasyon gamit ang 3D mouse
+	Enable Dynamic Input (F12)	Paganahin ang Dynamic Input (F12)
+	End Object Isolation	Tapusin ang Object Isolation
+	End Width	Lapad sa Dulo
+	End X	Dulo X
+	End Y	Dulo Y
+	End angle	Anggulo sa dulo
+	Endpoint	Endpoint
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Ilagay ang Top, Zero o Bottom.
+	Enter a fit data option	Ilagay ang opsyon ng fit data
+	Enter a pattern name	Ilagay ang pangalan ng pattern
+	Enter a vertex editing option	Ilagay ang opsyon sa pag-edit ng vertex
+	Enter an option	Ilagay ang opsyon
+	Enter angle of xline	Ilagay ang anggulo ng xline
+	Enter angle of xline (0)	Ilagay ang anggulo ng xline (0)
+	Enter area of rectangle in current units	Ilagay ang area ng rectangle sa kasalukuyang unit
+	Enter attribute prompt	Ilagay ang prompt ng attribute
+	Enter attribute tag name	Ilagay ang pangalan ng tag ng attribute
+	Enter attribute value	Ilagay ang halaga ng attribute
+	Enter block name	Ilagay ang pangalan ng block
+	Enter constraint type	Ilagay ang uri ng constraint
+	Enter continuity	Ilagay ang continuity
+	Enter default attribute value	Ilagay ang default na halaga ng attribute
+	Enter degree of spline	Ilagay ang degree ng spline
+	Enter delta angle	Ilagay ang delta na anggulo
+	Enter delta length	Ilagay ang delta na haba
+	Enter dimension text	Ilagay ang teksto ng dimension
+	Enter dimension text (<> = measurement)	Ilagay ang teksto ng dimension (<> = sukat)
+	Enter dimension value or [name=expression]	Ilagay ang halaga ng dimension o [pangalan=expression]
+	Enter dimension variable name to override	Ilagay ang pangalan ng dimension variable na io-override
+	Enter justification type	Ilagay ang uri ng justification
+	Enter leader text	Ilagay ang teksto ng leader
+	Enter mline scale	Ilagay ang scale ng mline
+	Enter mode	Ilagay ang mode
+	Enter name of block to insert	Ilagay ang pangalan ng block na ipapasok
+	Enter new text	Ilagay ang bagong teksto
+	Enter next point	Ilagay ang susunod na punto
+	Enter number of columns	Ilagay ang bilang ng column
+	Enter number of data rows	Ilagay ang bilang ng data row
+	Enter number of items	Ilagay ang bilang ng item
+	Enter number of items along path	Ilagay ang bilang ng item sa kahabaan ng path
+	Enter number of sides	Ilagay ang bilang ng gilid
+	Enter number of turns	Ilagay ang bilang ng ikot
+	Enter percentage length	Ilagay ang porsyento ng haba
+	Enter rectangle length	Ilagay ang haba ng rectangle
+	Enter rectangle width	Ilagay ang lapad ng rectangle
+	Enter scale factor	Ilagay ang scale factor
+	Enter text	Ilagay ang teksto
+	Enter text (use \P for new paragraphs)	Ilagay ang teksto (gamitin ang \P para sa bagong talata)
+	Enter the number of segments	Ilagay ang bilang ng segment
+	Enter twist direction of helix	Ilagay ang direksyon ng pag-ikot ng helix
+	Entire drawing	Buong drawing
+	Equal	Pantay
+	Erase	Burahin
+	Evaluate	Suriin
+	Exclude from new selection set	Huwag isama sa bagong selection set
+	Explode	I-explode
+	Export	I-export
+	Export Table	I-export ang Table
+	Export to PDF...	I-export sa PDF...
+	Export...	I-export...
+	Expression	Expression
+	Extend	Palawigin
+	Extension	Extension
+	Extents	Extents
+	External Reference	External Reference
+	External References	Mga External Reference
+	Extrude	I-extrude
+	File	File
+	File Tab	File Tab
+	Fillet	Fillet
+	Filter	Filter
+	Filters	Mga Filter
+	Find and Replace	Hanapin at Palitan
+	Find...	Hanapin...
+	First	Una
+	First commit	Unang commit
+	Fit Points	Mga Fit Point
+	Fix	Ayusin
+	Flatten Objects	I-flatten ang mga Object
+	Format	Format
+	Freehand	Freehand
+	Freeze	I-freeze
+	Freeze Layer	I-freeze ang Layer
+	Freeze in new viewports	I-freeze sa mga bagong viewport
+	Freeze/Thaw	I-freeze/I-thaw
+	Freeze/Thaw in all viewports	I-freeze/I-thaw sa lahat ng viewport
+	Freeze/Thaw in the current viewport	I-freeze/I-thaw sa kasalukuyang viewport
+	From	Mula sa
+	From Template...	Mula sa Template...
+	General	Pangkalahatan
+	Geometric Center	Geometric na Gitna
+	Geometric Constraint	Geometric Constraint
+	Geometric Constraints	Mga Geometric Constraint
+	Geometry	Geometry
+	Get Variable	Kunin ang Variable
+	Get View	Kunin ang View
+	Get from the Drawing	Kunin mula sa Drawing
+	Global	Global
+	Global width	Global na lapad
+	Grab bag	Sari-sari
+	Gradient	Gradient
+	Gradient...	Gradient...
+	Grayscale	Grayscale
+	Green	Berde
+	Grid (F7)	Grid (F7)
+	Grid Display	Pagpapakita ng Grid
+	Grid On (F7)	Naka-on ang Grid (F7)
+	Grid snap	Grid snap
+	Grid spacing	Espasyo ng grid
+	Grip Edit	Grip Edit
+	Grip Mirror	Grip Mirror
+	Grip Option	Opsyon ng Grip
+	Grip Rotate	Grip Rotate
+	Grip Scale	Grip Scale
+	Grip Stretch	Grip Stretch
+	Grip size	Laki ng grip
+	Group	Grupo
+	Group Edit	I-edit ang Grupo
+	Group Options	Mga Opsyon ng Grupo
+	Group Selection	Pagpili ng Grupo
+	Hatch	Hatch
+	Hatch Edit	I-edit ang Hatch
+	Hatch Pattern	Hatch Pattern
+	Hatch Patterns	Mga Hatch Pattern
+	Hatch...	Hatch...
+	Height	Taas
+	Height: {height}	Taas: {height}
+	Helix	Helix
+	Help	Tulong
+	Hide All	Itago Lahat
+	Hide All Constraint Bars	Itago ang Lahat ng Constraint Bar
+	Hide All Dynamic Dimensions	Itago ang Lahat ng Dynamic Dimension
+	Hide DraftCraft	Itago ang DraftCraft
+	Hide Layer List	Itago ang Listahan ng Layer
+	Hide Objects	Itago ang mga Object
+	Hide Others	Itago ang Iba
+	Hide Palette	Itago ang Palette
+	Hide Palettes	Itago ang mga Palette
+	History	History
+	Hold Shift to add to the selection	Pindutin ang Shift para idagdag sa pinili
+	Home	Home
+	Horizontal	Pahalang
+	HorizontalDistance	Pahalang na Distansya
+	How to apply:	Paano ilalapat:
+	ID Point	ID Point
+	Import	Mag-import
+	Import...	Mag-import...
+	In	Papasok
+	In-window Menu Bar	Menu Bar sa loob ng window
+	Include in new selection set	Isama sa bagong selection set
+	Increment angle	Increment na anggulo
+	Index Color	Index Color
+	Index color: {index}	Index color: {index}
+	Infer Constraints	Hulaan ang mga Constraint
+	Inquiry	Pagtatanong
+	Insert	Ipasok
+	Insert Block	Ipasok ang Block
+	Insert Column	Ipasok ang Column
+	Insert Row	Ipasok ang Row
+	Insert Table Formula	Ipasok ang Formula ng Table
+	Insert tab	Tab na Insert
+	Insert this block	Ipasok ang block na ito
+	Insertion	Pagpasok
+	Insertion X	Pagpasok X
+	Insertion Y	Pagpasok Y
+	Insertion Z	Pagpasok Z
+	Inspect Constraints	Siyasatin ang mga Constraint
+	Inspect Drawing	Siyasatin ang Drawing
+	Inspection	Pagsisiyasat
+	Interface Language	Wika ng Interface
+	Interface Theme	Tema ng Interface
+	Interface language	Wika ng interface
+	Interface theme	Tema ng interface
+	Intersect	Intersect
+	Intersection	Intersection
+	Isolate	Ihiwalay
+	Isolate Layer	Ihiwalay ang Layer
+	Isolate Objects	Ihiwalay ang mga Object
+	Isometric Drafting	Isometric na Drafting
+	Isometric Plane	Isometric na Plane
+	Isometric snap	Isometric snap
+	Jogged	Jogged
+	Jogged Linear	Jogged Linear
+	Join	Pagdugtungin
+	Keep an editable copy of this table in the drawing	Panatilihin ang nae-edit na kopya ng table na ito sa drawing
+	Keep the system cursor visible over the drawing area	Panatilihing nakikita ang system cursor sa ibabaw ng drawing area
+	Language	Wika
+	Largest array	Pinakamalaking array
+	Last	Huli
+	Last commit	Huling commit
+	Layer	Layer
+	Layer Delete	Burahin ang Layer
+	Layer Match	Itugma ang Layer
+	Layer Merge	Pagsamahin ang Layer
+	Layer Off	I-off ang Layer
+	Layer Properties	Mga Property ng Layer
+	Layer Properties Manager	Layer Properties Manager
+	Layer Properties Manager — current viewport	Layer Properties Manager — kasalukuyang viewport
+	Layer State	Layer State
+	Layer States Manager...	Layer States Manager...
+	Layer Tools	Mga Tool ng Layer
+	Layer contains objects (double-click to make current)	May mga object ang layer (i-double-click para gawing kasalukuyan)
+	Layer is empty (double-click to make current)	Walang laman ang layer (i-double-click para gawing kasalukuyan)
+	Layers	Mga Layer
+	Layers Palette	Palette ng mga Layer
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Ipinapakitang layer: {shown} sa {total}.   Kasalukuyang layer: {layer}
+	Layout	Layout
+	Layout list	Listahan ng layout
+	Layout paper	Papel ng layout
+	Layout {name}: {table}	Layout {name}: {table}
+	Leader	Leader
+	Leaders Only	Mga Leader Lamang
+	Left	Kaliwa
+	Left device button: zoom extents. Right device button: calibrate.	Kaliwang button ng device: zoom extents. Kanang button ng device: i-calibrate.
+	Length	Haba
+	Length X	Haba X
+	Length Y	Haba Y
+	Lengthen	Pahabain
+	Light	Maliwanag
+	Line	Linya
+	Line delta	Delta ng linya
+	Linear	Linear
+	Lines +/−	Mga linya +/−
+	Lines added	Mga linyang idinagdag
+	Lines deleted	Mga linyang binura
+	Lines of Command History	Mga Linya ng History ng Command
+	Linetype	Linetype
+	Linetype Scale	Scale ng Linetype
+	Linetype scale	Scale ng linetype
+	Linetype...	Linetype...
+	Lineweight	Lineweight
+	Lineweight...	Lineweight...
+	List	Ilista
+	List Blocks	Ilista ang mga Block
+	List Dimension Styles	Ilista ang mga Dimension Style
+	List Groups	Ilista ang mga Grupo
+	List Layer States	Ilista ang mga Layer State
+	List Layouts	Ilista ang mga Layout
+	List System Variables	Ilista ang mga System Variable
+	List Text Styles	Ilista ang mga Text Style
+	Load all	I-load lahat
+	Load...	I-load...
+	Loaded	Na-load
+	Loaded linetypes	Mga na-load na linetype
+	Lock	I-lock
+	Lock Layer	I-lock ang Layer
+	Lock viewport	I-lock ang viewport
+	Lock/Unlock	I-lock/I-unlock
+	Loft	Loft
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Walang kaugnayan sa Autodesk, Inc.
+	MODEL	MODEL
+	MText	MText
+	Magenta	Magenta
+	Major line every	Pangunahing linya bawat
+	Make Current	Gawing Kasalukuyan
+	Make Object's Layer Current	Gawing Kasalukuyan ang Layer ng Object
+	Make it a block of this drawing, keeping its layer names	Gawin itong block ng drawing na ito, pinapanatili ang mga pangalan ng layer
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Gawin itong block ng drawing na ito; nagiging NAME$0$LAYER ang mga layer nito
+	Make...	Gumawa...
+	Match Layer	Itugma ang Layer
+	Match Properties	Itugma ang mga Property
+	Measure	Sukatin
+	Measure Distance	Sukatin ang Distansya
+	Measure Geometry	Sukatin ang Geometry
+	Merge Cells	Pagsamahin ang mga Cell
+	Merged PRs	Mga na-merge na PR
+	Mid Between 2 Points	Gitna sa Pagitan ng 2 Punto
+	Midpoint	Midpoint
+	Mirror	I-mirror
+	Model	Model
+	Model Space (in viewport)	Model Space (sa viewport)
+	Model background	Background ng model
+	Modeling	Pagmomodelo
+	Models	Mga Modelo
+	Modify	Baguhin
+	More toolbar commands	Higit pang command sa toolbar
+	Move	Ilipat
+	Move sideways to pan; push/pull or twist to zoom.	Igalaw patagilid para mag-pan; itulak/hilahin o pilipitin para mag-zoom.
+	Multileader	Multileader
+	Multileader Style...	Multileader Style...
+	Multileader style	Multileader style
+	Multiline	Multiline
+	Multiline Style...	Multiline Style...
+	Multiline Text	Multiline Text
+	Multiline Text...	Multiline Text...
+	Multiline...	Multiline...
+	Multiple	Marami
+	Multiple Point	Maramihang Punto
+	My	Akin
+	My properties: not available yet	Aking mga property: hindi pa available
+	Name	Pangalan
+	Name (A–Z)	Pangalan (A–Z)
+	Named	May pangalan
+	Named Viewports...	Mga Viewport na may Pangalan...
+	Named Views...	Mga View na may Pangalan...
+	Nearest	Pinakamalapit
+	New	Bago
+	New (metric)	Bago (metric)
+	New CTB	Bagong CTB
+	New Drawing	Bagong Drawing
+	New Drawing (⌘N)	Bagong Drawing (⌘N)
+	New Drawing...	Bagong Drawing...
+	New Layer	Bagong Layer
+	New Layout	Bagong Layout
+	New STB	Bagong STB
+	New VP Freeze	New VP Freeze
+	New Viewports...	Mga Bagong Viewport...
+	New from Template...	Bago mula sa Template...
+	New layout	Bagong layout
+	New state name	Pangalan ng bagong state
+	New style	Bagong style
+	Next Change	Susunod na Pagbabago
+	No	Hindi
+	No blocks defined in this drawing.	Walang block na nakatakda sa drawing na ito.
+	No contributor data was built into this copy.	Walang datos ng kontribyutor na kasama sa kopyang ito.
+	No external references are attached.	Walang nakakabit na external reference.
+	No model credits were built into this copy.	Walang credit ng modelo na kasama sa kopyang ito.
+	No plot style tables.	Walang plot style table.
+	No saved layer states	Walang naka-save na layer state
+	No selection	Walang pinili
+	No supported 3D mouse found	Walang nakitang suportadong 3D mouse
+	Node	Node
+	None	Wala
+	Normal	Normal
+	Not Found	Hindi Nakita
+	Not available	Hindi available
+	Not available yet	Hindi pa available
+	Not loaded	Hindi na-load
+	Numbered list	Listahang may numero
+	OK	OK
+	Object	Object
+	Object Snap	Object Snap
+	Object Snap (F3)	Object Snap (F3)
+	Object Snap On (F3)	Naka-on ang Object Snap (F3)
+	Object Snap Tracking	Object Snap Tracking
+	Object Snap Tracking (F11)	Object Snap Tracking (F11)
+	Object Snap Tracking Settings	Mga Setting ng Object Snap Tracking
+	Object snap aperture	Aperture ng object snap
+	Object snap marker size	Laki ng marker ng object snap
+	Object type:	Uri ng object:
+	Oblique	Pahilis
+	Off	Naka-off
+	Offset	Offset
+	On	Naka-on
+	On/Off	On/Off
+	Only in this drawing: {n}	Sa drawing na ito lamang: {n}
+	Only in {name}: {n}	Sa {name} lamang: {n}
+	Oops	Naku
+	Open	Buksan
+	Open (⌘O)	Buksan (⌘O)
+	Open Sample Drawing	Buksan ang Sample na Drawing
+	Open Xref	Buksan ang Xref
+	Open a drawing first.	Magbukas muna ng drawing.
+	Open and Save	Pagbukas at Pag-save
+	Open sample drawing	Buksan ang sample na drawing
+	Open...	Buksan...
+	Operator:	Operator:
+	Options	Mga Opsyon
+	Options...	Mga Opsyon...
+	Orbit	Orbit
+	Ordinate	Ordinate
+	Ortho (F8)	Ortho (F8)
+	Ortho Mode	Ortho Mode
+	Ortho Mode (F8)	Ortho Mode (F8)
+	Osnap Settings...	Mga Setting ng Osnap...
+	Out	Palabas
+	Over-constrained	Sobra ang constraint
+	Overlay	Overlay
+	Override	Override
+	PAPER	PAPER
+	PRs	Mga PR
+	Page Setup Manager	Page Setup Manager
+	Page Setup Manager...	Page Setup Manager...
+	Pan	I-pan
+	Pan Down	I-pan Pababa
+	Pan Left	I-pan sa Kaliwa
+	Pan Right	I-pan sa Kanan
+	Pan Up	I-pan Pataas
+	Pan sensitivity	Sensitivity ng pan
+	Paper Space	Paper Space
+	Parallel	Parallel
+	Parameters Manager	Parameters Manager
+	Parametric	Parametric
+	Paste	I-paste
+	Paste as Block	I-paste bilang Block
+	Paste to Command Line	I-paste sa Command Line
+	Paste to Original Coordinates	I-paste sa Orihinal na Coordinate
+	Path Array	Path Array
+	Pattern	Pattern
+	Percent	Porsyento
+	Perpendicular	Perpendicular
+	Pickbox size	Laki ng pickbox
+	Plot	I-plot
+	Plot (click: do not plot)	I-plot (i-click: huwag i-plot)
+	Plot Preview	Preview ng Plot
+	Plot Style Manager	Plot Style Manager
+	Plot Style Manager...	Plot Style Manager...
+	Plot Style...	Plot Style...
+	Plot Styles...	Mga Plot Style...
+	Plot Window	Window ng Plot
+	Plot style	Plot style
+	Plot style attached to	Plot style na nakakabit sa
+	Plot style table	Plot style table
+	Plot table type	Uri ng plot table
+	Plotter Manager	Plotter Manager
+	Plotter Manager...	Plotter Manager...
+	Plus/minus	Plus/minus
+	Point	Punto
+	Point Filters	Mga Point Filter
+	Point Style...	Point Style...
+	Polar (distance < angle)	Polar (distansya < anggulo)
+	Polar Array	Polar Array
+	Polar Tracking	Polar Tracking
+	Polar Tracking (F10)	Polar Tracking (F10)
+	Polar Tracking On (F10)	Naka-on ang Polar Tracking (F10)
+	Polar angle measurement	Pagsukat ng polar na anggulo
+	Polar distance	Polar na distansya
+	Polar: {distance} < {angle}°	Polar: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	Polygon
+	Polygonal	Polygonal
+	Polygonal Viewport	Polygonal na Viewport
+	Polyline	Polyline
+	Polyline Edit	I-edit ang Polyline
+	Position X	Posisyon X
+	Position Y	Posisyon Y
+	Position Z	Posisyon Z
+	Previous	Nakaraan
+	Previous Change	Nakaraang Pagbabago
+	Previous Layer	Nakaraang Layer
+	Primitives	Mga Primitive
+	Print	I-print
+	Print...	I-print...
+	Profiles	Mga Profile
+	Properties	Mga Property
+	Properties Inspector	Properties Inspector
+	Properties:	Mga Property:
+	Proxy	Proxy
+	Purge	Linisin
+	Pyramid	Piramide
+	Quadrant	Quadrant
+	Query Entities	Mag-query ng mga Entity
+	Quick	Mabilis
+	Quick Dimension	Mabilis na Dimension
+	Quick Properties	Mabilis na Property
+	Quick Select	Quick Select
+	Quick Select Properties	Mga Property ng Quick Select
+	Quick Select...	Quick Select...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	Pagpili sa QuickCalc
+	Quit DraftCraft	Umalis sa DraftCraft
+	Radius	Radius
+	Raster Image	Raster Image
+	Ray	Ray
+	Read-only	Read-only
+	Real name	Tunay na pangalan
+	Realtime	Realtime
+	Reassociate Dimensions	Muling Iugnay ang mga Dimension
+	Recalculate Table Formulas	Muling Kalkulahin ang mga Formula ng Table
+	Recent	Kamakailan
+	Recent Commands	Mga Kamakailang Command
+	Recent Input	Kamakailang Input
+	Recover...	I-recover...
+	Rectangle	Rectangle
+	Rectangular	Rectangular
+	Rectangular Array	Rectangular Array
+	Rectangular snap	Rectangular snap
+	Red	Pula
+	Redo	Ulitin
+	Redo (⇧⌘Z)	Ulitin (⇧⌘Z)
+	Redraw	I-redraw
+	Reference Manager	Reference Manager
+	Reference Name	Pangalan ng Reference
+	References: {n}	Mga Reference: {n}
+	Regen	Regen
+	Regen All	Regen Lahat
+	Region	Region
+	Region/Mass Properties	Mga Property ng Region/Mass
+	Reinitialize	I-reinitialize
+	Relative	Relative
+	Relative to last segment	Kaugnay sa huling segment
+	Release the 3D mouse to calibrate its resting position	Bitawan ang 3D mouse para i-calibrate ang posisyon nito sa pahinga
+	Reload	I-reload
+	Reload All	I-reload Lahat
+	Remove	Alisin
+	Remove Leader	Alisin ang Leader
+	Remove Vertex	Alisin ang Vertex
+	Remove the viewport override	Alisin ang override ng viewport
+	Rename Dimension Style	Palitan ang Pangalan ng Dimension Style
+	Rename Layer	Palitan ang Pangalan ng Layer
+	Rename Layer State	Palitan ang Pangalan ng Layer State
+	Rename Layout	Palitan ang Pangalan ng Layout
+	Rename Text Style	Palitan ang Pangalan ng Text Style
+	Rename...	Palitan ang Pangalan...
+	Repeat {command}	Ulitin ang {command}
+	Replace Block...	Palitan ang Block...
+	Requires a point (x,y, @dx,dy or @d<a).	Kailangan ng punto (x,y, @dx,dy o @d<a).
+	Reset Palettes	I-reset ang mga Palette
+	Reset Panel Layout	I-reset ang Layout ng Panel
+	Reset keeps the interface language.	Pinapanatili ng reset ang wika ng interface.
+	Reset to Defaults	I-reset sa Default
+	Restore	Ibalik
+	Restore Layer State	Ibalik ang Layer State
+	Reverse	Baligtarin
+	Reverse the order	Baligtarin ang pagkakasunod
+	Reverse zoom direction	Baligtarin ang direksyon ng zoom
+	Revision Cloud	Revision Cloud
+	Revolve	I-revolve
+	Right	Kanan
+	Rotate	I-rotate
+	Rotation	Pag-ikot
+	Run Script...	Patakbuhin ang Script...
+	SVG drawings (SVG, SVGZ)	Mga SVG drawing (SVG, SVGZ)
+	Save	I-save
+	Save (⌘S)	I-save (⌘S)
+	Save As	I-save Bilang
+	Save As...	I-save Bilang...
+	Save Layer State	I-save ang Layer State
+	Save State	I-save ang State
+	Save new drawings as	I-save ang mga bagong drawing bilang
+	Saved Path	Naka-save na Path
+	Scale	I-scale
+	Scale List...	Listahan ng Scale...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Sinusundan ng mga screen magnifier, screen reader at recorder ang system cursor.
+	Screening	Screening
+	Search for layer	Maghanap ng layer
+	Search for parameter	Maghanap ng parameter
+	Search for pattern	Maghanap ng pattern
+	Second and next points:	Ikalawa at susunod na punto:
+	Select	Pumili
+	Select 2D polyline	Pumili ng 2D polyline
+	Select All	Piliin Lahat
+	Select Objects	Pumili ng mga Object
+	Select Similar	Piliin ang Magkatulad
+	Select a 2D polyline.	Pumili ng 2D polyline.
+	Select a block reference.	Pumili ng block reference.
+	Select a circle or arc.	Pumili ng bilog o arko.
+	Select a closed polyline	Pumili ng saradong polyline
+	Select a closed polyline, circle, ellipse or closed spline.	Pumili ng saradong polyline, bilog, ellipse o saradong spline.
+	Select a closed polyline.	Pumili ng saradong polyline.
+	Select a curve as the path.	Pumili ng curve bilang path.
+	Select a dimension constraint type	Pumili ng uri ng dimension constraint
+	Select a line object	Pumili ng line object
+	Select a line object.	Pumili ng line object.
+	Select a line or an arc.	Pumili ng linya o arko.
+	Select a line or polyline segment	Pumili ng linya o segment ng polyline
+	Select a line, arc or open polyline.	Pumili ng linya, arko o bukas na polyline.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Pumili ng linya, arko, bilog, polyline, ellipse o spline bilang path.
+	Select a line, circle, arc or polyline segment.	Pumili ng linya, bilog, arko o segment ng polyline.
+	Select a line.	Pumili ng linya.
+	Select a polyline.	Pumili ng polyline.
+	Select a text, mtext, attribute definition or dimension.	Pumili ng text, mtext, attribute definition o dimension.
+	Select an annotation object	Pumili ng annotation object
+	Select an arc or circle	Pumili ng arko o bilog
+	Select an arc.	Pumili ng arko.
+	Select an object	Pumili ng object
+	Select an object to change	Pumili ng object na babaguhin
+	Select an object to measure	Pumili ng object na susukatin
+	Select an object.	Pumili ng object.
+	Select an open curve.	Pumili ng bukas na curve.
+	Select an open line, arc, polyline, ellipse arc or spline.	Pumili ng bukas na linya, arko, polyline, ellipse arc o spline.
+	Select arc or circle	Pumili ng arko o bilog
+	Select arc or polyline arc segment	Pumili ng arko o arc segment ng polyline
+	Select arc style	Pumili ng istilo ng arko
+	Select arc, circle, line	Pumili ng arko, bilog, linya
+	Select at least two objects to join.	Pumili ng hindi bababa sa dalawang object na pagdurugtungin.
+	Select circle or arc to add center mark	Pumili ng bilog o arko para magdagdag ng center mark
+	Select closed objects (regions, closed polylines, circles).	Pumili ng mga saradong object (region, saradong polyline, bilog).
+	Select first line	Pumili ng unang linya
+	Select first line or arc	Pumili ng unang linya o arko
+	Select first object	Pumili ng unang object
+	Select first point	Pumili ng unang punto
+	Select nested objects to copy	Pumili ng mga nested object na kokopyahin
+	Select object	Pumili ng object
+	Select object to dimension	Pumili ng object na lalagyan ng dimension
+	Select object to divide	Pumili ng object na hahatiin
+	Select object to extend or shift-select to trim	Pumili ng object na palalawigin o shift-select para i-trim
+	Select object to measure	Pumili ng object na susukatin
+	Select object to offset	Pumili ng object na io-offset
+	Select object to trim or shift-select to extend	Pumili ng object na ita-trim o shift-select para palawigin
+	Select objects	Pumili ng mga object
+	Select objects (crossing window first corner)	Pumili ng mga object (unang sulok ng crossing window)
+	Select objects first, then choose a command	Pumili muna ng mga object, pagkatapos ay pumili ng command
+	Select objects to array.	Pumili ng mga object na ia-array.
+	Select objects to stretch by crossing-window or crossing-polygon...	Pumili ng mga object na ii-stretch gamit ang crossing-window o crossing-polygon...
+	Select objects:	Pumili ng mga object:
+	Select one polyline (Multiple is available through the JSON form).	Pumili ng isang polyline (available ang Multiple sa JSON form).
+	Select path curve	Pumili ng path curve
+	Select point or object	Pumili ng punto o object
+	Select polyline	Pumili ng polyline
+	Select second line	Pumili ng ikalawang linya
+	Select second line or shift-select to apply corner	Pumili ng ikalawang linya o shift-select para ilapat ang sulok
+	Select second object	Pumili ng ikalawang object
+	Select second object or shift-select to apply corner	Pumili ng ikalawang object o shift-select para ilapat ang sulok
+	Select second point	Pumili ng ikalawang punto
+	Select spline	Pumili ng spline
+	Select symmetry line	Pumili ng linya ng simetriya
+	Select two points	Pumili ng dalawang punto
+	Selection	Pagpili
+	Selection Cycling	Selection Cycling
+	Send Hatches to Back	Ipadala sa Likod ang mga Hatch
+	Send Under Objects	Ipadala sa Ilalim ng mga Object
+	Send to Back	Ipadala sa Likod
+	Services	Mga Serbisyo
+	Set Current	Itakda bilang Kasalukuyan
+	Set Current Dimension Style	Itakda ang Kasalukuyang Dimension Style
+	Set Current Text Style	Itakda ang Kasalukuyang Text Style
+	Set Current Viewport	Itakda ang Kasalukuyang Viewport
+	Set Layer Properties	Itakda ang mga Property ng Layer
+	Set Properties	Itakda ang mga Property
+	Set Table Cell	Itakda ang Cell ng Table
+	Set Table Cell Style	Itakda ang Style ng Cell ng Table
+	Set Variable	Itakda ang Variable
+	Set View	Itakda ang View
+	Settings...	Mga Setting...
+	Share	Ibahagi
+	Show	Ipakita
+	Show All	Ipakita Lahat
+	Show All Constraint Bars	Ipakita ang Lahat ng Constraint Bar
+	Show All Dynamic Dimensions	Ipakita ang Lahat ng Dynamic Dimension
+	Show Annotative Objects	Ipakita ang mga Annotative Object
+	Show Layer List	Ipakita ang Listahan ng Layer
+	Show Quick Properties for selected objects	Ipakita ang Quick Properties para sa mga napiling object
+	Show System Cursor	Ipakita ang System Cursor
+	Show and hide the tools of this category	Ipakita at itago ang mga tool ng kategoryang ito
+	Show command prompting near the crosshairs	Ipakita ang prompt ng command malapit sa crosshair
+	Show in Tool Sets	Ipakita sa Tool Sets
+	Show/Hide Lineweight	Ipakita/Itago ang Lineweight
+	Show/Hide Transparency	Ipakita/Itago ang Transparency
+	Single Line Text	Single Line Text
+	Single Point	Iisang Punto
+	Single...	Iisa...
+	Smooth	Pakinisin
+	Snap	Snap
+	Snap Mode	Snap Mode
+	Snap Mode (F9)	Snap Mode (F9)
+	Snap On (F9)	Naka-on ang Snap (F9)
+	Snap Overrides	Mga Snap Override
+	Snap X spacing	Snap X spacing
+	Snap and Grid	Snap at Grid
+	Snap type	Uri ng snap
+	Snap, grid, polar tracking and Dynamic Input:	Snap, grid, polar tracking at Dynamic Input:
+	Solid	Solid
+	Solid Editing	Pag-edit ng Solid
+	Sort	Ayusin
+	Specify a point	Tukuyin ang punto
+	Specify a scale for the hatch pattern	Tukuyin ang scale para sa hatch pattern
+	Specify a second extension line origin	Tukuyin ang pinagmulan ng ikalawang extension line
+	Specify an angle for the hatch pattern	Tukuyin ang anggulo para sa hatch pattern
+	Specify angle end point	Tukuyin ang dulong punto ng anggulo
+	Specify angle of dimension line	Tukuyin ang anggulo ng dimension line
+	Specify angle of dimension text	Tukuyin ang anggulo ng teksto ng dimension
+	Specify angle start point	Tukuyin ang panimulang punto ng anggulo
+	Specify angle vertex	Tukuyin ang vertex ng anggulo
+	Specify angle vertex point	Tukuyin ang vertex point ng anggulo
+	Specify arc length dimension location	Tukuyin ang lokasyon ng arc length dimension
+	Specify axis endpoint of ellipse	Tukuyin ang endpoint ng axis ng ellipse
+	Specify base diameter	Tukuyin ang diameter ng base
+	Specify base point	Tukuyin ang base point
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Tukuyin ang base point o displacement (i-drag gamit ang gitnang button ng mouse para sa realtime pan)
+	Specify base radius	Tukuyin ang radius ng base
+	Specify center of donut	Tukuyin ang gitna ng donut
+	Specify center of ellipse	Tukuyin ang gitna ng ellipse
+	Specify center of polygon	Tukuyin ang gitna ng polygon
+	Specify center point for circle	Tukuyin ang gitnang punto ng bilog
+	Specify center point of arc	Tukuyin ang gitnang punto ng arko
+	Specify center point of arc (hold Ctrl to switch direction)	Tukuyin ang gitnang punto ng arko (pindutin ang Ctrl para palitan ang direksyon)
+	Specify center point of array	Tukuyin ang gitnang punto ng array
+	Specify center point of base	Tukuyin ang gitnang punto ng base
+	Specify corner of viewport	Tukuyin ang sulok ng viewport
+	Specify corner of window, enter a scale factor (nX or nXP)	Tukuyin ang sulok ng window, ilagay ang scale factor (nX o nXP)
+	Specify diameter of circle	Tukuyin ang diameter ng bilog
+	Specify dimension arc line location	Tukuyin ang lokasyon ng dimension arc line
+	Specify dimension line location	Tukuyin ang lokasyon ng dimension line
+	Specify distance between turns	Tukuyin ang distansya sa pagitan ng mga ikot
+	Specify distance to other axis	Tukuyin ang distansya sa kabilang axis
+	Specify end angle	Tukuyin ang anggulo sa dulo
+	Specify end point of arc	Tukuyin ang dulong punto ng arko
+	Specify end point of arc (hold Ctrl to switch direction)	Tukuyin ang dulong punto ng arko (pindutin ang Ctrl para palitan ang direksyon)
+	Specify ending width	Tukuyin ang lapad sa dulo
+	Specify ending width for next segment	Tukuyin ang lapad sa dulo para sa susunod na segment
+	Specify endpoint of arc	Tukuyin ang endpoint ng arko
+	Specify endpoint of axis	Tukuyin ang endpoint ng axis
+	Specify endpoint of line	Tukuyin ang endpoint ng linya
+	Specify feature location	Tukuyin ang lokasyon ng feature
+	Specify fillet radius	Tukuyin ang radius ng fillet
+	Specify fillet radius for rectangles	Tukuyin ang radius ng fillet para sa mga rectangle
+	Specify first angle endpoint	Tukuyin ang unang endpoint ng anggulo
+	Specify first chamfer distance	Tukuyin ang unang distansya ng chamfer
+	Specify first chamfer distance for rectangles	Tukuyin ang unang distansya ng chamfer para sa mga rectangle
+	Specify first constraint point	Tukuyin ang unang punto ng constraint
+	Specify first corner	Tukuyin ang unang sulok
+	Specify first corner point	Tukuyin ang unang corner point
+	Specify first destination point	Tukuyin ang unang destination point
+	Specify first end point of circle's diameter	Tukuyin ang unang endpoint ng diameter ng bilog
+	Specify first endpoint of edge	Tukuyin ang unang endpoint ng gilid
+	Specify first extension line origin	Tukuyin ang pinagmulan ng unang extension line
+	Specify first point	Tukuyin ang unang punto
+	Specify first point of mirror line	Tukuyin ang unang punto ng mirror line
+	Specify first point on circle	Tukuyin ang unang punto sa bilog
+	Specify first point on circle: _tan to	Tukuyin ang unang punto sa bilog: _tan to
+	Specify first source point	Tukuyin ang unang source point
+	Specify height	Tukuyin ang taas
+	Specify helix height	Tukuyin ang taas ng helix
+	Specify included angle	Tukuyin ang kasamang anggulo
+	Specify included angle (hold Ctrl to switch direction)	Tukuyin ang kasamang anggulo (pindutin ang Ctrl para palitan ang direksyon)
+	Specify insertion base point	Tukuyin ang base point ng pagpasok
+	Specify insertion point	Tukuyin ang insertion point
+	Specify inside diameter of donut	Tukuyin ang panloob na diameter ng donut
+	Specify leader arrowhead location	Tukuyin ang lokasyon ng arrowhead ng leader
+	Specify leader endpoint	Tukuyin ang endpoint ng leader
+	Specify leader landing location	Tukuyin ang lokasyon ng landing ng leader
+	Specify length for rectangles	Tukuyin ang haba para sa mga rectangle
+	Specify length of chord	Tukuyin ang haba ng chord
+	Specify length of chord (hold Ctrl to switch direction)	Tukuyin ang haba ng chord (pindutin ang Ctrl para palitan ang direksyon)
+	Specify length of segment	Tukuyin ang haba ng segment
+	Specify line width for rectangles	Tukuyin ang lapad ng linya para sa mga rectangle
+	Specify location for new vertex	Tukuyin ang lokasyon para sa bagong vertex
+	Specify minimum length of arc	Tukuyin ang pinakamaikling haba ng arko
+	Specify new end point	Tukuyin ang bagong dulong punto
+	Specify new location for marked vertex	Tukuyin ang bagong lokasyon para sa minarkahang vertex
+	Specify new width for all segments	Tukuyin ang bagong lapad para sa lahat ng segment
+	Specify next point	Tukuyin ang susunod na punto
+	Specify offset distance	Tukuyin ang distansya ng offset
+	Specify opposite corner	Tukuyin ang kabilang sulok
+	Specify other corner point	Tukuyin ang kabilang corner point
+	Specify other endpoint of axis	Tukuyin ang kabilang endpoint ng axis
+	Specify outside diameter of donut	Tukuyin ang panlabas na diameter ng donut
+	Specify point	Tukuyin ang punto
+	Specify point on object for first tangent of circle	Tukuyin ang punto sa object para sa unang tangent ng bilog
+	Specify point on object for second tangent of circle	Tukuyin ang punto sa object para sa ikalawang tangent ng bilog
+	Specify point on side to offset	Tukuyin ang punto sa panig na io-offset
+	Specify radius of arc	Tukuyin ang radius ng arko
+	Specify radius of arc (hold Ctrl to switch direction)	Tukuyin ang radius ng arko (pindutin ang Ctrl para palitan ang direksyon)
+	Specify radius of circle	Tukuyin ang radius ng bilog
+	Specify rotation angle	Tukuyin ang anggulo ng pag-ikot
+	Specify rotation angle of text	Tukuyin ang anggulo ng pag-ikot ng teksto
+	Specify scale factor	Tukuyin ang scale factor
+	Specify second angle endpoint	Tukuyin ang ikalawang endpoint ng anggulo
+	Specify second break point	Tukuyin ang ikalawang break point
+	Specify second chamfer distance for rectangles	Tukuyin ang ikalawang distansya ng chamfer para sa mga rectangle
+	Specify second constraint point	Tukuyin ang ikalawang punto ng constraint
+	Specify second destination point	Tukuyin ang ikalawang destination point
+	Specify second end point of circle's diameter	Tukuyin ang ikalawang endpoint ng diameter ng bilog
+	Specify second endpoint of edge	Tukuyin ang ikalawang endpoint ng gilid
+	Specify second extension line origin	Tukuyin ang pinagmulan ng ikalawang extension line
+	Specify second point	Tukuyin ang ikalawang punto
+	Specify second point of arc	Tukuyin ang ikalawang punto ng arko
+	Specify second point of mirror line	Tukuyin ang ikalawang punto ng mirror line
+	Specify second point on circle	Tukuyin ang ikalawang punto sa bilog
+	Specify second point on circle: _tan to	Tukuyin ang ikalawang punto sa bilog: _tan to
+	Specify second point or <use first point as displacement>	Tukuyin ang ikalawang punto o <gamitin ang unang punto bilang displacement>
+	Specify second source point	Tukuyin ang ikalawang source point
+	Specify side to offset	Tukuyin ang panig na io-offset
+	Specify start angle	Tukuyin ang panimulang anggulo
+	Specify start point	Tukuyin ang panimulang punto
+	Specify start point of arc	Tukuyin ang panimulang punto ng arko
+	Specify start point of polyline	Tukuyin ang panimulang punto ng polyline
+	Specify start point of text	Tukuyin ang panimulang punto ng teksto
+	Specify starting width	Tukuyin ang panimulang lapad
+	Specify starting width for next segment	Tukuyin ang panimulang lapad para sa susunod na segment
+	Specify tangent direction for the start point of arc	Tukuyin ang direksyon ng tangent para sa panimulang punto ng arko
+	Specify the elevation for rectangles	Tukuyin ang elevation para sa mga rectangle
+	Specify thickness for rectangles	Tukuyin ang kapal para sa mga rectangle
+	Specify third point on circle	Tukuyin ang ikatlong punto sa bilog
+	Specify third point on circle: _tan to	Tukuyin ang ikatlong punto sa bilog: _tan to
+	Specify third source point or <continue>	Tukuyin ang ikatlong source point o <magpatuloy>
+	Specify through point	Tukuyin ang through point
+	Specify top diameter	Tukuyin ang diameter sa itaas
+	Specify top radius	Tukuyin ang radius sa itaas
+	Specify total angle	Tukuyin ang kabuuang anggulo
+	Specify total length	Tukuyin ang kabuuang haba
+	Specify width for rectangles	Tukuyin ang lapad para sa mga rectangle
+	Sphere	Globo
+	Spline	Spline
+	Spline Edit	I-edit ang Spline
+	Stack (type 1/2 then select)	Stack (i-type ang 1/2 at piliin)
+	Standard	Standard
+	Start	Simula
+	Start Width	Panimulang Lapad
+	Start X	Simula X
+	Start Y	Simula Y
+	Start angle	Panimulang anggulo
+	Start, Center, Angle	Simula, Gitna, Anggulo
+	Start, Center, End	Simula, Gitna, Dulo
+	Start, Center, Length	Simula, Gitna, Haba
+	Start, End, Angle	Simula, Dulo, Anggulo
+	Start, End, Direction	Simula, Dulo, Direksyon
+	Start, End, Radius	Simula, Dulo, Radius
+	Status	Status
+	Status Bar	Status Bar
+	Stretch	I-stretch
+	Stretch Vertex	I-stretch ang Vertex
+	Style: Standard	Style: Standard
+	Subtract	Ibawas
+	Sweep	Sweep
+	Switch Drawing	Lumipat ng Drawing
+	Switch Layout	Lumipat ng Layout
+	Switch between model space in a viewport and paper space	Lumipat sa pagitan ng model space sa viewport at paper space
+	Symmetric	Simetriko
+	Synchronize Attributes	I-synchronize ang mga Attribute
+	Synchronize Multiple-scale Positions	I-synchronize ang mga Posisyon ng Multiple-scale
+	TOP	ITAAS
+	Table	Table
+	Table Breaks	Mga Break ng Table
+	Table Cell Style	Style ng Cell ng Table
+	Table Style...	Table Style...
+	Table style	Table style
+	Table...	Table...
+	Tan, Tan, Radius	Tan, Tan, Radius
+	Tan, Tan, Tan	Tan, Tan, Tan
+	Tangent	Tangent
+	Temporary track point	Pansamantalang track point
+	Text	Teksto
+	Text Editor	Text Editor
+	Text Height	Taas ng Teksto
+	Text Objects Only	Mga Text Object Lamang
+	Text Style...	Text Style...
+	Text height	Taas ng teksto
+	Text override	Override ng teksto
+	Text style	Text style
+	Thaw All Layers	I-thaw ang Lahat ng Layer
+	Thaw Layer	I-thaw ang Layer
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Ang aperture ay kung gaano kalapit ang cursor sa isang punto para mahanap ito ng object snap.
+	There is nothing here yet.	Wala pang laman dito.
+	Thickness	Kapal
+	Time	Oras
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Right-click na sensitibo sa oras: mabilis na pag-click ay Enter, ang pagpindot nang matagal ay nagbubukas ng menu
+	To	Hanggang
+	To get started, create or open a drawing.	Para magsimula, gumawa o magbukas ng drawing.
+	Toggle PICKADD (off: each pick replaces the selection)	I-toggle ang PICKADD (naka-off: pinapalitan ng bawat pili ang pinili)
+	Toggle PICKADD (on: picks add to the selection)	I-toggle ang PICKADD (naka-on: idinadagdag ang mga pili sa pinili)
+	Tolerance...	Tolerance...
+	Tool Bar	Tool Bar
+	Tool Sets	Tool Sets
+	Tools	Mga Tool
+	Torus	Torus
+	Trace	Trace
+	Track orthogonally only	Mag-track nang orthogonal lamang
+	Track using all polar angle settings	Mag-track gamit ang lahat ng setting ng polar na anggulo
+	Transparency	Transparency
+	Trim	I-trim
+	True Color	True Color
+	Turn All Layers On	I-on ang Lahat ng Layer
+	Turn Off Layer	I-off ang Layer
+	Turn On Layer	I-on ang Layer
+	Turn Quick Properties off (QPMODE)	I-off ang Quick Properties (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Kapag naka-off, laging binubuksan ng right-click habang tumatakbo ang command ang shortcut menu.
+	Type	Uri
+	Type a command	Mag-type ng command
+	Type text; Enter starts a new paragraph	Mag-type ng teksto; nagsisimula ng bagong talata ang Enter
+	UCS Icon	UCS Icon
+	Undo	I-undo
+	Undo (⌘Z)	I-undo (⌘Z)
+	Ungroup	I-ungroup
+	Union	Union
+	Unisolate Layer	Alisin ang Isolation ng Layer
+	Units Conversion	Pag-convert ng Unit
+	Units...	Mga Unit...
+	Unload	I-unload
+	Unloaded	Na-unload
+	Unlock Layer	I-unlock ang Layer
+	Unlock viewport	I-unlock ang viewport
+	Unmerge Cells	Ihiwalay ang mga Cell
+	Unreferenced	Hindi naka-reference
+	Unresolved	Hindi nalutas
+	Unsaved Layer State	Hindi Naka-save na Layer State
+	Up	Pataas
+	Update	I-update
+	Update Data Links	I-update ang mga Data Link
+	Use System Setting	Gamitin ang Setting ng System
+	Use for this layout	Gamitin para sa layout na ito
+	Use object linetype	Gamitin ang linetype ng object
+	Use object lineweight	Gamitin ang lineweight ng object
+	User	User
+	User Parameters	Mga User Parameter
+	User Preferences	Mga Preference ng User
+	Username	Username
+	VP Color	Kulay ng VP
+	VP Freeze	VP Freeze
+	Value	Halaga
+	Value:	Halaga:
+	Variables	Mga Variable
+	Version	Bersyon
+	Version 2000	Bersyon 2000
+	Version 2004	Bersyon 2004
+	Version 2007	Bersyon 2007
+	Version 2010	Bersyon 2010
+	Version 2013	Bersyon 2013
+	Version 2018	Bersyon 2018
+	Version {version}	Bersyon {version}
+	Vertical	Patayo
+	VerticalDistance	Patayong Distansya
+	View	View
+	ViewCube	ViewCube
+	Viewport	Viewport
+	Viewport Layer Freeze	Viewport Layer Freeze
+	Viewport Properties	Mga Property ng Viewport
+	Viewport is locked	Naka-lock ang viewport
+	Viewport scale	Scale ng viewport
+	Viewport {id}	Viewport {id}
+	Viewports	Mga Viewport
+	Volume	Volume
+	WCS	WCS
+	White	Puti
+	Width factor	Width factor
+	Window	Window
+	Wipeout	Wipeout
+	Workspace Switching	Paglipat ng Workspace
+	Write Block	Isulat ang Block
+	X	X
+	Xline	Xline
+	Y	Y
+	Yellow	Dilaw
+	Yes	Oo
+	Zoom	Zoom
+	Zoom All	Zoom Lahat
+	Zoom Dynamic	Zoom Dynamic
+	Zoom Extents	Zoom Extents
+	Zoom In	Mag-zoom In
+	Zoom Object	Zoom Object
+	Zoom Out	Mag-zoom Out
+	Zoom Previous	Zoom Previous
+	Zoom Realtime	Zoom Realtime
+	Zoom Window	Zoom Window
+	Zoom sensitivity	Sensitivity ng zoom
+	error	error
+	min	min
+	objects	mga object
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (constraint {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} constraint {name} = {expression}  (i-double-click para i-edit)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Bagong User Parameter
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ para tapusin
+@plural	{n} commit	{n} commit|{n} na commit
+@plural	{n} contributor	{n} kontribyutor|{n} na kontribyutor
+	Check for Updates…	Tingnan kung may Update…
+	DraftCraft is up to date.	Updated ang DraftCraft.
+	Could not check for updates.	Hindi matingnan kung may update.
+	Add to Working Set	Idagdag sa Working Set
+	Add: Pick points	Idagdag: Pumili ng mga punto
+	Add: Select objects	Idagdag: Pumili ng mga object
+	Add…	Idagdag…
+	Alias	Alias
+	Alias file: {file}	Alias file: {file}
+	Align Multileaders	I-align ang mga Multileader
+	Analyze Shapes	Suriin ang mga Hugis
+	Analyze Usage	Suriin ang Paggamit
+	Animation Effects	Mga Animation Effect
+	Animation effects	Mga animation effect
+	Associative	Associative
+	Backup copy	Backup na kopya
+	Block to create or edit	Block na gagawin o ie-edit
+	Bottom left	Ibabang kaliwa
+	Bottom right	Ibabang kanan
+	Boundaries	Mga Hangganan
+	Boundaries picked: {n}	Mga napiling hangganan: {n}
+	Break-line Symbol	Simbolo ng Break-line
+	Centered	Nakagitna
+	Change Properties	Baguhin ang mga Property
+	Choose the command the alias starts.	Piliin ang command na sinisimulan ng alias.
+	Click the ruler to add a tab stop, right-click to remove one	I-click ang ruler para magdagdag ng tab stop, right-click para mag-alis
+	Click to set new origin	I-click para itakda ang bagong origin
+	Close Block Editor	Isara ang Block Editor
+	Collect	Kolektahin
+	Collect Multileaders	Kolektahin ang mga Multileader
+	Color 1	Kulay 1
+	Color 2	Kulay 2
+	Command	Command
+	Convert Text to Mtext	I-convert ang Text sa Mtext
+	Create backup copy with each save	Gumawa ng backup na kopya sa bawat pag-save
+	Create separate hatches	Gumawa ng hiwalay na mga hatch
+	Crossing selection color:	Kulay ng crossing selection:
+	Curved	Kurbado
+	Customize	I-customize
+	Default to boundary extents	Default sa extents ng hangganan
+	Define each corner of the selection window with a separate click.	Tukuyin ang bawat sulok ng selection window sa hiwalay na pag-click.
+	Discard	Itapon
+	Drag Dynamic Grip	I-drag ang Dynamic Grip
+	Dynamic Block Data	Datos ng Dynamic Block
+	Dynamic Block Grips	Mga Grip ng Dynamic Block
+	Dynamic Block Reference	Dynamic Block Reference
+	Edit Block Definition	I-edit ang Depinisyon ng Block
+	Edit Command Aliases (PGP)...	I-edit ang mga Alias ng Command (PGP)...
+	Edit Multileader	I-edit ang Multileader
+	Edit Reference In-Place	I-edit ang Reference sa Lugar
+	Edit…	I-edit…
+	Evaluate LISP	Suriin ang LISP
+	Exclude:	Huwag isama:
+	Explode Attributes to Text	I-explode ang mga Attribute bilang Teksto
+	Express Tools	Express Tools
+	Font	Font
+	Grips	Mga Grip
+	Groups	Mga Grupo
+	Hatch Pick	Hatch Pick
+	Hatch and Gradient	Hatch at Gradient
+	Hatch origin	Origin ng hatch
+	Hatches	Mga Hatch
+	Hemispherical	Hemispherical
+	Ignore	Huwag pansinin
+	Imperial (inches)	Imperial (pulgada)
+	Implied Loops	Mga Implied Loop
+	Indicate selection area	Ipahiwatig ang selection area
+	Interface scale	Scale ng interface
+	Inverted	Baligtad
+	Island	Isla
+	Island detection	Pagtukoy ng isla
+	Italic	Italic
+	Justify	I-justify
+	Load Application...	I-load ang Application...
+	Metric (millimetres)	Metric (milimetro)
+	More than {n} aliases.	Higit sa {n} alias.
+	Move/Copy/Rotate	Ilipat/Kopyahin/I-rotate
+	Multiline text	Multiline text
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Ginagamit ng New at ng unang drawing sa pagsisimula ang mga unit na ito maliban kung may default na template (QNEWTEMPLATE).
+	New block	Bagong block
+	No alias file loaded. REINIT replaces these aliases with a file's.	Walang na-load na alias file. Pinapalitan ng REINIT ang mga alias na ito ng nasa isang file.
+	Not a number or distance: {text}	Hindi numero o distansya: {text}
+	Object grouping	Pag-grupo ng object
+	Object selection limit for display of grips	Limitasyon ng pagpili ng object para sa pagpapakita ng grip
+	Objects on locked layers	Mga object sa naka-lock na layer
+	Open in Block Editor	Buksan sa Block Editor
+	Origin: {x}, {y}	Origin: {x}, {y}
+	Outer	Panlabas
+	Overline	Overline
+	Preview	Preview
+	Query Texts	Mag-query ng mga Teksto
+	Save Block	I-save ang Block
+	Save Block As	I-save ang Block Bilang
+	Save Layout as Template	I-save ang Layout bilang Template
+	Save Reference Edits	I-save ang mga Edit ng Reference
+	Save alias	I-save ang alias
+	Save changes to block "{name}"?	I-save ang mga pagbabago sa block na "{name}"?
+	Select boundaries to remove	Pumili ng mga hangganang aalisin
+	Select using two clicks only	Pumili gamit ang dalawang click lamang
+	Selection Area Effect	Epekto ng Selection Area
+	Selection Preview Filter	Selection Preview Filter
+	Selection area opacity:	Opacity ng selection area:
+	Selection effect color	Kulay ng selection effect
+	Selection modes	Mga mode ng pagpili
+	Selection preview	Preview ng pagpili
+	Set Dynamic Property	Itakda ang Dynamic Property
+	Shape	Hugis
+	Sheet Books to PDF...	Sheet Books sa PDF...
+	Show grips	Ipakita ang mga grip
+	Specified origin	Itinakdang origin
+	Spherical	Spherical
+	Tables	Mga Table
+	Text color	Kulay ng teksto
+	Top left	Itaas na kaliwa
+	Top right	Itaas na kanan
+	Type an alias name.	Mag-type ng pangalan ng alias.
+	Underline	Underline
+	Units of new drawings	Mga unit ng bagong drawing
+	Unsaved changes	Mga hindi naka-save na pagbabago
+	Use current origin	Gamitin ang kasalukuyang origin
+	Visual Effect Settings	Mga Setting ng Visual Effect
+	Visual Effect Settings...	Mga Setting ng Visual Effect...
+	When a command is active	Kapag may aktibong command
+	When no command is active	Kapag walang aktibong command
+	Window selection color:	Kulay ng window selection:
+	Working Set	Working Set
+	Xref and Block In-place Editing	Pag-edit ng Xref at Block sa Lugar
+	Xrefs	Mga Xref
+	built-in	built-in
+	overrides built-in	pinapalitan ang built-in
+	{alias} is already defined; select it and use Edit.	Nakatakda na ang {alias}; piliin ito at gamitin ang I-edit.
+	{command} is an unknown command.	Ang {command} ay hindi kilalang command.
+	Find All	Hanapin Lahat
+	Find what:	Hanapin ang:
+	Match case	Itugma ang case
+	Replace	Palitan
+	Replace All	Palitan Lahat
+	Replace with:	Palitan ng:
+	Replacement text	Kapalit na teksto
+	Results	Mga Resulta
+	Searches the current space.	Naghahanap sa kasalukuyang space.
+	Text to find	Tekstong hahanapin
+	Whole words	Buong salita
+	Nothing found	Walang nakita
+	E	S
+	N	H
+	S	T
+	W	K
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	I-clear ang mga Kamakailang File
+	contains authoring elements. Open in Block Editor?	ay may authoring element. Buksan sa Block Editor?
+	Custom	Custom
+	Open Recent	Buksan ang Kamakailan
+	This drawing	Ang drawing na ito
+	Arrow size	Laki ng arrow
+	Dim scale overall	Kabuuang dim scale
+	Precision	Precision
+	Apply to Layout	Ilapat sa Layout
+	Center the plot	Igitna ang plot
+	Enter block names to extract	Ilagay ang mga pangalan ng block na kukunin
+	Enter geometric characteristic	Ilagay ang geometric characteristic
+	Enter name of LISP file to load	Ilagay ang pangalan ng LISP file na ilo-load
+	First corner	Unang sulok
+	Fit to paper	Ipagkasya sa papel
+	Landscape	Landscape
+	Limits	Mga Limitasyon
+	Opposite corner	Kabilang sulok
+	Orientation	Oryentasyon
+	Paper size	Laki ng papel
+	Plot area	Area ng plot
+	Plot object lineweights	I-plot ang lineweight ng object
+	Plot offset	Offset ng plot
+	Plot transparency	I-plot ang transparency
+	Portrait	Portrait
+	Printer/plotter	Printer/plotter
+	Window <	Window <
+	X offset (mm)	X offset (mm)
+	Y offset (mm)	Y offset (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstrom
+	Architectural	Arkitektural
+	Astronomical Units	Astronomical Unit
+	Centimeters	Sentimetro
+	Decameters	Dekametro
+	Decimal	Decimal
+	Decimal Degrees	Decimal na Degree
+	Decimeters	Desimetro
+	Deg/Min/Sec	Deg/Min/Seg
+	Don't Save	Huwag I-save
+	Drawing Units	Mga Unit ng Drawing
+	Engineering	Engineering
+	Feet	Talampakan
+	Fractional	Fractional
+	Gigameters	Gigametro
+	Grads	Grad
+	Hectometers	Hektometro
+	Inches	Pulgada
+	Insertion scale	Scale ng pagpasok
+	Kilometers	Kilometro
+	Light Years	Light Year
+	Meters	Metro
+	Microinches	Micropulgada
+	Microns	Micron
+	Miles	Milya
+	Millimeters	Milimetro
+	Mils	Mil
+	Nanometers	Nanometro
+	Parsecs	Parsec
+	Radians	Radian
+	Sample output	Halimbawang output
+	Save changes to {name}?	I-save ang mga pagbabago sa {name}?
+	Scientific	Scientific
+	Surveyor's Units	Surveyor's Units
+	Unitless	Walang unit
+	Units to scale inserted content	Mga unit para i-scale ang ipinasok na nilalaman
+	US Survey Feet	US Survey Feet
+	US Survey Inch	US Survey Inch
+	US Survey Mile	US Survey Mile
+	US Survey Yard	US Survey Yard
+	Yards	Yarda
+	Your changes will be lost if you don't save them.	Mawawala ang iyong mga pagbabago kapag hindi mo sine-save ang mga ito.
+	Layouts	Mga Layout
+	Associate	Iugnay
+	Clip Xref	I-clip ang Xref
+	Xref Clip Frame	Frame ng Xref Clip
+	Minimize	I-minimize
+	Maximize	I-maximize
+	Restore Down	Ibalik sa Dating Laki
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	Ang DraftCraft at ang DraftCraft logo ay mga trademark ng DraftCraft Engineering Ventures.
+	Conic	Conic
+	Spline Fit	Spline Fit
+	Spline CV	Spline CV
+	Specify start point of conic	Tukuyin ang panimulang punto ng conic
+	Specify apex (where the end tangents meet)	Tukuyin ang apex (kung saan nagtatagpo ang mga dulong tangent)
+	Specify end point of conic	Tukuyin ang dulong punto ng conic
+	Specify rho or a point on the conic	Tukuyin ang rho o isang punto sa conic
+	Check for Updates...	Tingnan kung may Update...
+	Check for Updates	Tingnan kung may Update
+	Update Available	May Available na Update
+	DraftCraft {version} is available.	Available na ang DraftCraft {version}.
+	You have version {version}.	Nasa bersyon {version} ka.
+	Do you want to download the update?	Gusto mo bang i-download ang update?
+	What's new	Ano ang bago
+	What's New	Ano ang Bago
+	Download	I-download
+	Later	Mamaya
+	Skip This Version	Laktawan ang Bersyong Ito
+	DraftCraft is up to date (version {version}).	Updated ang DraftCraft (bersyon {version}).
+	Do you want to install the update now?	Gusto mo bang i-install ang update ngayon?
+	Update Now	I-update Ngayon
+	Open the release page	Buksan ang release page
+	This copy of DraftCraft can't update itself.	Hindi kayang i-update ng kopyang ito ng DraftCraft ang sarili nito.
+	Updating DraftCraft	Ina-update ang DraftCraft
+	Update Failed	Nabigo ang Update
+	Installing DraftCraft {version}	Ini-install ang DraftCraft {version}
+	Downloading: {done} of {total} MB	Dina-download: {done} sa {total} MB
+	Installing…	Ini-install…
+	Starting the download…	Sinisimulan ang pag-download…
+	The connection dropped; trying again…	Naputol ang koneksyon; sinusubukang muli…
+	DraftCraft {version} is installed.	Na-install na ang DraftCraft {version}.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	I-restart ang DraftCraft para gamitin ito. Kung mamaya ka magre-restart, bubukas ito sa susunod na pagsimula mo ng DraftCraft.
+	Restart Now	I-restart Ngayon
+	The update could not be installed.	Hindi ma-install ang update.
+	You can download it from the release page instead.	Maaari mo itong i-download mula sa release page sa halip.
+	2D Wireframe	2D Wireframe
+	Annotate	Mag-annotate
+	Blocks Palette	Palette ng mga Block
+	CAD Standards	Mga CAD Standard
+	Commands	Mga Command
+	2D Drafting	2D Drafting
+	Edit Aliases	I-edit ang mga Alias
+	Image	Larawan
+	Palettes	Mga Palette
+	Top	Itaas
+	Units	Mga Unit
+	Workspace	Workspace
+	Ribbon	Ribbon
+	PDF Underlay...	PDF Underlay...
+	PDF Import	Pag-import ng PDF
+	PDF Underlay	PDF Underlay
+	Underlay Layers	Mga Layer ng Underlay
+	Raster Image Reference...	Raster Image Reference...
+	Close Text Editor	Isara ang Text Editor
+	Image Clip	Image Clip
+	PDF Clip	PDF Clip
+	Image Adjust	Ayusin ang Larawan
+	PDF Adjust	Ayusin ang PDF
+	Adjust...	Ayusin...
+	Parameter	Parameter
+	Action	Aksyon
+	DesignCenter	DesignCenter
+	Tool Palettes	Tool Palettes
+	Sheet Set Manager	Sheet Set Manager
+	Type the drawing's path, then press Enter.	I-type ang path ng drawing, pagkatapos ay pindutin ang Enter.
+	Drawing file	File ng drawing
+	Folder	Folder
+	Linetypes	Mga Linetype
+	Text Styles	Mga Text Style
+	Dimension Styles	Mga Dimension Style
+	Table Styles	Mga Table Style
+	Multileader Styles	Mga Multileader Style
+	Multiline Styles	Mga Multiline Style
+	Add to Drawing	Idagdag sa Drawing
+	Create Tool Palette	Gumawa ng Tool Palette
+	Nothing of this kind in the file.	Walang ganitong uri sa file.
+	Open a drawing to see its blocks, layers and styles.	Magbukas ng drawing para makita ang mga block, layer at style nito.
+	Delete Palette	Burahin ang Palette
+	New Palette	Bagong Palette
+	No tool palettes.	Walang tool palette.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Walang laman ang palette na ito: magdagdag ng command sa ibaba, o gumawa ng palette mula sa DesignCenter.
+	Delete Tool	Burahin ang Tool
+	Add Command	Magdagdag ng Command
+	New Sheet Set...	Bagong Sheet Set...
+	Open Sheet Set...	Buksan ang Sheet Set...
+	Sheet sets (DCSS)	Mga sheet set (DCSS)
+	Sheet set file	File ng sheet set
+	Make or open a sheet set to list its sheets.	Gumawa o magbukas ng sheet set para ilista ang mga sheet nito.
+	Add Drawing...	Magdagdag ng Drawing...
+	Publish to PDF...	I-publish sa PDF...
+	No sheets yet: add a drawing's layouts.	Wala pang sheet: idagdag ang mga layout ng isang drawing.
+	Number	Numero
+	Title	Pamagat
+	Move Up	Itaas
+	Move Down	Ibaba
+	Sheet Set (DCSS)	Sheet Set (DCSS)
+	Close Tool Palettes	Isara ang Tool Palettes
+	Close DesignCenter	Isara ang DesignCenter
+	Close Sheet Set Manager	Isara ang Sheet Set Manager
+	Manage Tool Palettes	Pamahalaan ang Tool Palettes
+	Changes apply at once; Save Current As keeps them in a workspace.	Agad na nailalapat ang mga pagbabago; itinatago ito ng I-save ang Kasalukuyan Bilang sa isang workspace.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	I-click ang mga layer para sila lamang ang ipakita; nagdadagdag sa pinili ang Ctrl o Shift.
+	Current Workspace	Kasalukuyang Workspace
+	Customize Interface	I-customize ang Interface
+	Customize User Interface	I-customize ang User Interface
+	Customize...	I-customize...
+	Edit Aliases...	I-edit ang mga Alias...
+	Force object color and linetype to ByLayer	Pilitin ang kulay at linetype ng object sa ByLayer
+	Geographic Location	Heograpikong Lokasyon
+	Geographic Location...	Heograpikong Lokasyon...
+	Latitude	Latitude
+	Longitude	Longitude
+	North direction	Direksyon ng hilaga
+	Layer Translation Mappings	Mga Mapping ng Layer Translation
+	Layer Translator	Layer Translator
+	Layer Translator...	Layer Translator...
+	Layer Walk	Layer Walk
+	Layer Walk...	Layer Walk...
+	Location	Lokasyon
+	Set Location	Itakda ang Lokasyon
+	Remove Location	Alisin ang Lokasyon
+	The drawing's origin is at this place (WGS 84 degrees).	Nasa lugar na ito ang origin ng drawing (WGS 84 degree).
+	Map	I-map
+	New layer name	Pangalan ng bagong layer
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Wala pang mapping: pumili ng mga layer sa kaliwa, pangalan sa kanan, pagkatapos ay I-map.
+	Translate	Isalin
+	Translate From	Isalin Mula
+	Translate To	Isalin Sa
+	Restore on exit	Ibalik sa paglabas
+	Point Cloud	Point Cloud
+	Point Cloud...	Point Cloud...
+	Point clouds (XYZ, LAS)	Mga point cloud (XYZ, LAS)
+	ZIP archive	ZIP archive
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Quick Access Toolbar
+	Rename	Palitan ang pangalan
+	Reset to Standard	I-reset sa Standard
+	Ribbon Tabs	Mga Ribbon Tab
+	Save Current As	I-save ang Kasalukuyan Bilang
+	Save Current As...	I-save ang Kasalukuyan Bilang...
+	Save Workspace	I-save ang Workspace
+	User Interface	User Interface
+	Workspace Settings	Mga Setting ng Workspace
+	Workspace Settings...	Mga Setting ng Workspace...
+	Workspace name	Pangalan ng workspace
+	Workspace:	Workspace:
+	Workspaces	Mga Workspace
+	Interface...	Interface...
+	Export Attribute Information...	I-export ang Impormasyon ng Attribute...
+	Import Attribute Information...	I-import ang Impormasyon ng Attribute...
+	Export Attributes	I-export ang mga Attribute
+	Import Attributes	I-import ang mga Attribute
+	Text, tab-delimited (TXT)	Teksto, tab-delimited (TXT)
+	Import Settings	I-import ang mga Setting
+	Export Settings	I-export ang mga Setting
+	Import Settings...	I-import ang mga Setting...
+	Export Settings...	I-export ang mga Setting...
+	DraftCraft settings (TOML)	Mga setting ng DraftCraft (TOML)
+	Total Area and Length	Kabuuang Area at Haba
+	Total Area	Kabuuang Area
+	Specify point to place the totals as text	Tukuyin ang punto kung saan ilalagay ang mga kabuuan bilang teksto
+	Metric	Metric
+	Imperial	Imperial
+	A new drawing in millimeters	Bagong drawing sa milimetro
+	A new drawing in inches	Bagong drawing sa pulgada
+	A new drawing in centimeters	Bagong drawing sa sentimetro
+	Metric (centimetres)	Metric (sentimetro)
+	Join the ArtCraft Discord…	Sumali sa ArtCraft Discord…
+	Join us on Discord	Sumali sa amin sa Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Isa sa mga Crafting App ng ArtCraft team at komunidad.
+	Change	Baguhin
+	Multiple Insert	Maramihang Pagpasok
+	Ctrl+Enter to apply	Ctrl+Enter para ilapat
+	Edit Text	I-edit ang Teksto
+	The drawing changed. Close the window and open it again.	Nagbago ang drawing. Isara ang window at buksan itong muli.
+	DView	DView
+	Raster Images	Mga Raster Image
+	Xref	Xref
+	Backup copies are off, so the current file will be replaced.	Naka-off ang mga backup na kopya, kaya papalitan ang kasalukuyang file.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	Pinapanatili ito ng DXF 2010 at mas luma. Gamitin ang I-save Bilang para panatilihin ito sa drawing.
+	DXF keeps them. Use Save As to keep them in the drawing.	Pinapanatili ito ng DXF. Gamitin ang I-save Bilang para panatilihin ito sa drawing.
+	Save Anyway	I-save Pa Rin
+	Save cancelled: {path} was not changed.	Kinansela ang pag-save: hindi binago ang {path}.
+	Saving {name} will remove content	Mag-aalis ng nilalaman ang pag-save ng {name}
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Mukhang hindi buo ang kasalukuyang file, kaya mananatili ang {name} at papalitan ang kasalukuyang file.
+	The current file is kept as {name} until the next save.	Itinatago ang kasalukuyang file bilang {name} hanggang sa susunod na pag-save.
+	This format can't keep these objects yet: {objects}.	Hindi pa kayang panatilihin ng format na ito ang mga object na ito: {objects}.
+	{count} more types	{count} pang uri
+	Additional Tools	Mga Karagdagang Tool
+	Keyboard Shortcuts...	Mga Keyboard Shortcut...
+	Keyboard Shortcuts	Mga Keyboard Shortcut
+	Replaces the shortcut of {commands}	Pinapalitan ang shortcut ng {commands}
+	Needs Ctrl, Alt or a function key	Kailangan ng Ctrl, Alt o function key
+	Press the keys	Pindutin ang mga key
+	Back to DraftCraft's shortcut	Bumalik sa shortcut ng DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Mas nangingibabaw ang shortcut na itinakda mo kaysa sa sariling shortcut ng DraftCraft. Agad na nailalapat ang mga pagbabago at itinatago para sa susunod.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Kapag naka-off, ang right-click habang tumatakbo ang command ay gagawin ang itinakda ng Right-Click Customization para sa Command mode.
+	Right-Click Customization...	Right-Click Customization...
+	Right-Click Customization	Right-Click Customization
+	Turn on time-sensitive right-click	I-on ang right-click na sensitibo sa oras
+	Longer click duration:	Mas matagal na tagal ng click:
+	milliseconds	millisecond
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Habang tumatakbo ang command, ang mabilis na click ay Enter at ang mas matagal na click ay nagbubukas ng shortcut menu.
+	Default Mode	Default Mode
+	No objects selected and no command running:	Walang napiling object at walang tumatakbong command:
+	Edit Mode	Edit Mode
+	Objects selected and no command running:	May napiling object at walang tumatakbong command:
+	Repeat last command	Ulitin ang huling command
+	Shortcut Menu	Shortcut Menu
+	Command Mode	Command Mode
+	While a command runs:	Habang tumatakbo ang command:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Shortcut Menu: laging naka-enable
+	Shortcut Menu: enabled when command options are present	Shortcut Menu: naka-enable kapag may mga opsyon ang command
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Import: walang file dialog dito; patakbuhin ang ALIASEDIT kasama ang nilalaman ng file gamit ang text parameter nito.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Naka-save ang mga alias sa iyong DraftCraft profile at nananatili kahit mag-restart.
+	Import…	Mag-import…
+	Run ALIASEDIT with the file's contents using its text parameter.	Patakbuhin ang ALIASEDIT kasama ang nilalaman ng file gamit ang text parameter nito.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Papalitan ng pag-import ng file ang iyong {n} alias, at anumang pagbabagong hindi pa nailalapat.
+	Import and replace	I-import at palitan
+	Keep my aliases	Panatilihin ang aking mga alias
+	{n} more warnings; see the command line.	{n} pang babala; tingnan ang command line.

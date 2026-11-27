@@ -1,0 +1,1690 @@
+# DraftCraft Danish (Dansk) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Annuller  
+	  OK  	  OK  
+	 or [	 eller [
+	% of all commits	% af alle commits
+	* Wildcard Match	* Jokertegnsmatch
+	*VARIES*	*VARIERER*
+	+  |  Top  |  2D Wireframe	+  |  Ovenfra  |  2D-trådramme
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 visningsport
+	2 Points	2 punkter
+	2 Viewports	2 visningsporte
+	2D Solid	2D-flade
+	3 Points	3 punkter
+	3 Viewports	3 visningsporte
+	3D Face	3D-flade
+	3D Mouse	3D-mus
+	3D Mouse Navigation	3D-musenavigation
+	3D Mouse...	3D-mus...
+	3D Operations	3D-operationer
+	3D Polyline	3D-polylinje
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D-musen er optaget, muligvis af 3DxWare, eller der mangler enhedstilladelser
+	3D mouse connected	3D-mus tilsluttet
+	3D mouse disconnected	3D-mus frakoblet
+	3D mouse input could not be started	3D-musinput kunne ikke startes
+	3D mouse input is unavailable on this platform	3D-musinput er ikke tilgængeligt på denne platform
+	4 Viewports	4 visningsporte
+	< Less than	< Mindre end
+	<> Not Equal	<> Ikke lig med
+	= Equals	= Lig med
+	> Greater than	> Større end
+	A built-in table: editing it keeps an edited copy in the drawing.	En indbygget tabel: redigering gemmer en redigeret kopi i tegningen.
+	A drawing opened from a file keeps that file's format.	En tegning åbnet fra en fil beholder filens format.
+	A variable name starts with a letter and has only letters, digits and _	Et variabelnavn starter med et bogstav og indeholder kun bogstaver, cifre og _
+	About	Om
+	About DraftCraft	Om DraftCraft
+	Absolute	Absolut
+	Accessibility	Tilgængelighed
+	Add	Tilføj
+	Add Current Scale	Tilføj aktuel skala
+	Add Leader	Tilføj henvisningslinje
+	Add Vertex	Tilføj knudepunkt
+	Add/Delete Scales...	Tilføj/slet skalaer...
+	Additional angles	Yderligere vinkler
+	Align	Juster
+	Align Text	Juster tekst
+	Aligned	Justeret
+	All	Alle
+	All Annotation Objects	Alle annotationsobjekter
+	All Scales	Alle skalaer
+	All Used Layers	Alle brugte lag
+	All files	Alle filer
+	An array that would create more objects than this is refused.	Et array, der ville oprette flere objekter end dette, afvises.
+	Angle	Vinkel
+	Angular	Vinkel
+	Annotation Visibility	Annotationssynlighed
+	Annotation scale	Annotationsskala
+	Annotative Object Scale	Annotativ objektskala
+	Annotative Update	Annotativ opdatering
+	Apparent Intersection	Tilsyneladende skæring
+	Append to current selection set	Føj til det aktuelle markeringssæt
+	Apply	Anvend
+	Apply to:	Anvend på:
+	Apply true color	Anvend ægte farve
+	Arc	Bue
+	Arc Length	Buelængde
+	Area	Areal
+	Arrange Panel	Arranger panel
+	Array	Array
+	Attach	Vedhæft
+	Attach DWG...	Vedhæft DWG...
+	Attribute	Attribut
+	Attribute Definition	Attributdefinition
+	Attribute Display	Attributvisning
+	Audit	Kontroller
+	Auto (system language)	Auto (systemsprog)
+	Auto Constrain	Automatisk begrænsning
+	AutoConstrain	AutoBegræns
+	Automatic save every	Gem automatisk hver
+	Automatic save file location	Placering af automatisk gemte filer
+	Axis, End	Akse, ende
+	Base	Basis
+	Baseline	Basislinje
+	Batch Publish	Batchudgivelse
+	Batch Publish...	Batchudgivelse...
+	Binary assets added	Binære aktiver tilføjet
+	Binary assets removed	Binære aktiver fjernet
+	Bind	Bind
+	Bind...	Bind...
+	Blend	Bland
+	Block	Blok
+	Block Attribute Manager...	Blokattributstyring...
+	Block Description...	Blokbeskrivelse...
+	Block Editor	Blokeditor
+	Block Reference	Blokreference
+	Block...	Blok...
+	Blocks	Blokke
+	Blue	Blå
+	Bold	Fed
+	Boolean	Boolesk
+	Boundary	Afgrænsning
+	Boundary...	Afgrænsning...
+	Box	Kasse
+	Break	Bryd
+	Break At Point	Bryd ved punkt
+	Bring Above Objects	Placer over objekter
+	Bring Annotations to Front	Placer annotationer forrest
+	Bring to Front	Placer forrest
+	Bulleted list	Punktopstilling
+	ByBlock	ByBlock
+	ByColor	ByColor
+	ByLayer	ByLayer
+	DraftCraft Help	DraftCraft Hjælp
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft gemmer disse indstillinger, objektsnaptilstande og tegnehjælpemidler for din brugerkonto og gendanner dem, når programmet starter.
+	Calibrate	Kalibrer
+	Calibrate 3D Mouse	Kalibrer 3D-mus
+	Cancel	Annuller
+	Cartesian (x, y)	Kartesisk (x, y)
+	Center	Centrum
+	Center Line	Centerlinje
+	Center Mark	Centermærke
+	Center X	Centrum X
+	Center Y	Centrum Y
+	Center Z	Centrum Z
+	Center, Diameter	Centrum, diameter
+	Center, Radius	Centrum, radius
+	Center, Start, Angle	Centrum, start, vinkel
+	Center, Start, End	Centrum, start, slut
+	Center, Start, Length	Centrum, start, længde
+	Chamfer	Affas
+	Change Space	Skift rum
+	Change to Current Layer	Skift til aktuelt lag
+	Changed: {n}	Ændret: {n}
+	Changes apply at once and are kept for next time.	Ændringer træder i kraft med det samme og gemmes til næste gang.
+	Circle	Cirkel
+	Circumference	Omkreds
+	Clear	Ryd
+	Clear Command History	Ryd kommandohistorik
+	Reset Suggestion Order	Nulstil rækkefølge for forslag
+	Clear History	Ryd historik
+	Clip	Klip
+	Clip Viewport	Klip visningsport
+	Clipboard	Udklipsholder
+	Close	Luk
+	Close All	Luk alle
+	Close All Other Drawings	Luk alle andre tegninger
+	Close Array Editing	Luk arrayredigering
+	Close Comparison	Luk sammenligning
+	Export Comparison	Eksporter sammenligning
+	Closed	Lukket
+	Coincident	Sammenfaldende
+	Collapse Palettes	Skjul paletter
+	Collapse Tool Sets	Skjul værktøjssæt
+	Collinear	Kollineær
+	Color	Farve
+	Color 8	Farve 8
+	Color 9	Farve 9
+	Color Index	Farveindeks
+	Color-dependent	Farveafhængig
+	Color...	Farve...
+	Command Aliases	Kommandoaliasser
+	Command History	Kommandohistorik
+	Command Line	Kommandolinje
+	Command Line History Lines	Linjer i kommandolinjehistorik
+	Command Reference	Kommandoreference
+	Command line history	Kommandolinjehistorik
+	Commits	Commits
+	Company	Firma
+	Compare Drawings...	Sammenlign tegninger...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Computerstøttet design og tegning: et open source-CAD-program udviklet i clean room og skrevet i ren Rust.
+	Concentric	Koncentrisk
+	Cone	Kegle
+	Constraint Bars	Begrænsningslinjer
+	Constraint Settings	Begrænsningsindstillinger
+	Construction Line	Konstruktionslinje
+	Contents	Indhold
+	Continue	Fortsæt
+	Contributors	Bidragydere
+	Control Vertices	Kontrolpunkter
+	Convert	Konverter
+	Convert to Arc	Konverter til bue
+	Convert to Line	Konverter til linje
+	Copy	Kopier
+	Copy Full File Path	Kopier fuld filsti
+	Copy History	Kopier historik
+	Copy Layout	Kopier layout
+	Copy Nested Objects	Kopier indlejrede objekter
+	Copy Selection	Kopier markering
+	Copy as JSON	Kopier som JSON
+	Copy with Base Point	Kopier med basispunkt
+	Count	Antal
+	Count List	Optællingsliste
+	Count Table	Optællingstabel
+	Create Block	Opret blok
+	Creates a user parameter	Opretter en brugerparameter
+	Crosshair size	Trådkorsets størrelse
+	Ctrl+Enter to finish	Ctrl+Enter for at afslutte
+	Current Scale Only	Kun aktuel skala
+	Current layer	Aktuelt lag
+	Current selection	Aktuel markering
+	Current: {color}	Aktuel: {color}
+	Cut	Klip
+	Cut with Base Point	Klip med basispunkt
+	Cyan	Cyan
+	Cylinder	Cylinder
+	DWG	DWG
+	DWG Reference...	DWG-reference...
+	DXF	DXF
+	Dark	Mørk
+	Data Extraction...	Dataudtræk...
+	Data Link...	Datalink...
+	Default	Standard
+	Default Save Format	Standardformat for gem
+	Default Save Version	Standardversion for gem
+	Default save version	Standardversion for gem
+	Define Attributes	Definer attributter
+	Define Attributes...	Definer attributter...
+	Defined width	Defineret bredde
+	Degree	Grad
+	Degrees of Freedom	Frihedsgrader
+	Degrees of freedom: {n}	Frihedsgrader: {n}
+	Delete	Slet
+	Delete Column	Slet kolonne
+	Delete Constraints	Slet begrænsninger
+	Delete Current Scale	Slet aktuel skala
+	Delete Dimension Style	Slet dimensionstypografi
+	Delete Duplicate Objects	Slet dublerede objekter
+	Delete Layer	Slet lag
+	Delete Layer State	Slet lagtilstand
+	Delete Layout	Slet layout
+	Delete Row	Slet række
+	Delete Text Style	Slet teksttypografi
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Beskrivelse
+	Deselect All	Fravælg alle
+	Detach	Frakobl
+	Diameter	Diameter
+	Dim style	Dim.-typografi
+	Dimension	Dimension
+	Dimension Break	Dimensionsbrud
+	Dimension Edit	Rediger dimension
+	Dimension Objects Only	Kun dimensionsobjekter
+	Dimension Space	Dimensionsafstand
+	Dimension Style Override	Tilsidesættelse af dimensionstypografi
+	Dimension Style...	Dimensionstypografi...
+	Dimension Text Edit	Rediger dimensionstekst
+	Dimension style	Dimensionstypografi
+	Dimensional Constraint	Dimensionsbegrænsning
+	Dimensional Constraint Parameters	Parametre for dimensionsbegrænsning
+	Dimensional Constraints	Dimensionsbegrænsninger
+	Disassociate Dimensions	Fjern tilknytning af dimensioner
+	Display	Visning
+	Display name	Visningsnavn
+	Display plot styles	Vis plottypografier
+	Distance	Afstand
+	Divide	Del
+	Do not plot (click: plot)	Plot ikke (klik: plot)
+	Donut	Ring
+	Double-click to edit the description	Dobbeltklik for at redigere beskrivelsen
+	Down	Ned
+	Drafting	Tegning
+	Drafting Settings	Tegneindstillinger
+	Drafting Settings...	Tegneindstillinger...
+	Draw	Tegn
+	Draw Order	Tegnerækkefølge
+	Drawing (DWG)	Tegning (DWG)
+	Drawing (DXF)	Tegning (DXF)
+	Drawing Limits	Tegningsgrænser
+	Drawing Recovery Manager...	Tegningsgendannelse...
+	Drawing Template (DWT)	Tegningsskabelon (DWT)
+	Drawing Utilities	Tegningsværktøjer
+	Drawing as bytes	Tegning som bytes
+	Drawings (DWG, DXF)	Tegninger (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Tegninger uden fil gemmes i standardversionen. 0 minutter slår automatisk gem fra.
+	Dynamic	Dynamisk
+	Dynamic Dimensions	Dynamiske dimensioner
+	Dynamic Input	Dynamisk input
+	Dynamic Input (F12)	Dynamisk input (F12)
+	Edit	Rediger
+	Edit Array	Rediger array
+	Edit Attributes...	Rediger attributter...
+	Edit Table Cell	Rediger tabelcelle
+	Edit Text...	Rediger tekst...
+	Elevation	Kote
+	Ellipse	Ellipse
+	Elliptical Arc	Elliptisk bue
+	Enable 3D mouse navigation	Aktiver 3D-musenavigation
+	Enable Dynamic Input (F12)	Aktiver dynamisk input (F12)
+	End Object Isolation	Afslut objektisolering
+	End Width	Slutbredde
+	End X	Slut X
+	End Y	Slut Y
+	End angle	Slutvinkel
+	Endpoint	Endepunkt
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Angiv Top, Nul eller Bund.
+	Enter a fit data option	Angiv en tilpasningsdataindstilling
+	Enter a pattern name	Angiv et mønsternavn
+	Enter a vertex editing option	Angiv en indstilling for redigering af knudepunkter
+	Enter an option	Angiv en indstilling
+	Enter angle of xline	Angiv vinkel for konstruktionslinje
+	Enter angle of xline (0)	Angiv vinkel for konstruktionslinje (0)
+	Enter area of rectangle in current units	Angiv rektanglets areal i aktuelle enheder
+	Enter attribute prompt	Angiv attributprompt
+	Enter attribute tag name	Angiv attributtagnavn
+	Enter attribute value	Angiv attributværdi
+	Enter block name	Angiv bloknavn
+	Enter constraint type	Angiv begrænsningstype
+	Enter continuity	Angiv kontinuitet
+	Enter default attribute value	Angiv standardattributværdi
+	Enter degree of spline	Angiv splinens grad
+	Enter delta angle	Angiv deltavinkel
+	Enter delta length	Angiv deltalængde
+	Enter dimension text	Angiv dimensionstekst
+	Enter dimension text (<> = measurement)	Angiv dimensionstekst (<> = måling)
+	Enter dimension value or [name=expression]	Angiv dimensionsværdi eller [navn=udtryk]
+	Enter dimension variable name to override	Angiv navn på dimensionsvariabel, der skal tilsidesættes
+	Enter justification type	Angiv justeringstype
+	Enter leader text	Angiv henvisningstekst
+	Enter mline scale	Angiv mline-skala
+	Enter mode	Angiv tilstand
+	Enter name of block to insert	Angiv navn på blok, der skal indsættes
+	Enter new text	Angiv ny tekst
+	Enter next point	Angiv næste punkt
+	Enter number of columns	Angiv antal kolonner
+	Enter number of data rows	Angiv antal datarækker
+	Enter number of items	Angiv antal elementer
+	Enter number of items along path	Angiv antal elementer langs stien
+	Enter number of sides	Angiv antal sider
+	Enter number of turns	Angiv antal omdrejninger
+	Enter percentage length	Angiv procentlængde
+	Enter rectangle length	Angiv rektanglets længde
+	Enter rectangle width	Angiv rektanglets bredde
+	Enter scale factor	Angiv skalafaktor
+	Enter text	Angiv tekst
+	Enter text (use \P for new paragraphs)	Angiv tekst (brug \P til nye afsnit)
+	Enter the number of segments	Angiv antal segmenter
+	Enter twist direction of helix	Angiv spiralens drejningsretning
+	Entire drawing	Hele tegningen
+	Equal	Lig med
+	Erase	Slet
+	Evaluate	Evaluer
+	Exclude from new selection set	Udelad fra nyt markeringssæt
+	Explode	Opløs
+	Export	Eksporter
+	Export Table	Eksporter tabel
+	Export to PDF...	Eksporter til PDF...
+	Export...	Eksporter...
+	Expression	Udtryk
+	Extend	Forlæng
+	Extension	Forlængelse
+	Extents	Udstrækning
+	External Reference	Ekstern reference
+	External References	Eksterne referencer
+	Extrude	Ekstruder
+	File	Fil
+	File Tab	Fanen Fil
+	Fillet	Afrund
+	Filter	Filter
+	Filters	Filtre
+	Find and Replace	Søg og erstat
+	Find...	Søg...
+	First	Første
+	First commit	Første commit
+	Fit Points	Tilpasningspunkter
+	Fix	Fastlås
+	Flatten Objects	Udjævn objekter
+	Format	Formater
+	Freehand	Frihånd
+	Freeze	Frys
+	Freeze Layer	Frys lag
+	Freeze in new viewports	Frys i nye visningsporte
+	Freeze/Thaw	Frys/tø
+	Freeze/Thaw in all viewports	Frys/tø i alle visningsporte
+	Freeze/Thaw in the current viewport	Frys/tø i den aktuelle visningsport
+	From	Fra
+	From Template...	Fra skabelon...
+	General	Generelt
+	Geometric Center	Geometrisk centrum
+	Geometric Constraint	Geometrisk begrænsning
+	Geometric Constraints	Geometriske begrænsninger
+	Geometry	Geometri
+	Get Variable	Hent variabel
+	Get View	Hent visning
+	Get from the Drawing	Hent fra tegningen
+	Global	Global
+	Global width	Global bredde
+	Grab bag	Diverse
+	Gradient	Gradient
+	Gradient...	Gradient...
+	Grayscale	Gråtoner
+	Green	Grøn
+	Grid (F7)	Gitter (F7)
+	Grid Display	Gittervisning
+	Grid On (F7)	Gitter til (F7)
+	Grid snap	Gittersnap
+	Grid spacing	Gitterafstand
+	Grip Edit	Grebsredigering
+	Grip Mirror	Grebsspejling
+	Grip Option	Grebsindstilling
+	Grip Rotate	Grebsrotation
+	Grip Scale	Grebsskalering
+	Grip Stretch	Grebsstrækning
+	Grip size	Grebsstørrelse
+	Group	Gruppe
+	Group Edit	Rediger gruppe
+	Group Options	Gruppeindstillinger
+	Group Selection	Gruppemarkering
+	Hatch	Skravering
+	Hatch Edit	Rediger skravering
+	Hatch Pattern	Skraveringsmønster
+	Hatch Patterns	Skraveringsmønstre
+	Hatch...	Skravering...
+	Height	Højde
+	Height: {height}	Højde: {height}
+	Helix	Spiral
+	Help	Hjælp
+	Hide All	Skjul alle
+	Hide All Constraint Bars	Skjul alle begrænsningslinjer
+	Hide All Dynamic Dimensions	Skjul alle dynamiske dimensioner
+	Hide DraftCraft	Skjul DraftCraft
+	Hide Layer List	Skjul lagliste
+	Hide Objects	Skjul objekter
+	Hide Others	Skjul andre
+	Hide Palette	Skjul palet
+	Hide Palettes	Skjul paletter
+	History	Historik
+	Hold Shift to add to the selection	Hold Skift nede for at føje til markeringen
+	Home	Start
+	Horizontal	Vandret
+	HorizontalDistance	Vandret afstand
+	How to apply:	Sådan anvendes:
+	ID Point	ID-punkt
+	Import	Importer
+	Import...	Importer...
+	In	Ind
+	In-window Menu Bar	Menulinje i vinduet
+	Include in new selection set	Medtag i nyt markeringssæt
+	Increment angle	Vinkeltrin
+	Index Color	Indeksfarve
+	Index color: {index}	Indeksfarve: {index}
+	Infer Constraints	Udled begrænsninger
+	Inquiry	Forespørgsel
+	Insert	Indsæt
+	Insert Block	Indsæt blok
+	Insert Column	Indsæt kolonne
+	Insert Row	Indsæt række
+	Insert Table Formula	Indsæt tabelformel
+	Insert tab	Fanen Indsæt
+	Insert this block	Indsæt denne blok
+	Insertion	Indsættelse
+	Insertion X	Indsættelse X
+	Insertion Y	Indsættelse Y
+	Insertion Z	Indsættelse Z
+	Inspect Constraints	Undersøg begrænsninger
+	Inspect Drawing	Undersøg tegning
+	Inspection	Inspektion
+	Interface Language	Grænsefladesprog
+	Interface Theme	Grænsefladetema
+	Interface language	Grænsefladesprog
+	Interface theme	Grænsefladetema
+	Intersect	Skær
+	Intersection	Skæring
+	Isolate	Isoler
+	Isolate Layer	Isoler lag
+	Isolate Objects	Isoler objekter
+	Isometric Drafting	Isometrisk tegning
+	Isometric Plane	Isometrisk plan
+	Isometric snap	Isometrisk snap
+	Jogged	Knækket
+	Jogged Linear	Knækket lineær
+	Join	Sammenføj
+	Keep an editable copy of this table in the drawing	Behold en redigerbar kopi af denne tabel i tegningen
+	Keep the system cursor visible over the drawing area	Hold systemmarkøren synlig over tegneområdet
+	Language	Sprog
+	Largest array	Største array
+	Last	Sidste
+	Last commit	Seneste commit
+	Layer	Lag
+	Layer Delete	Slet lag
+	Layer Match	Match lag
+	Layer Merge	Flet lag
+	Layer Off	Lag fra
+	Layer Properties	Lagegenskaber
+	Layer Properties Manager	Lagegenskabsstyring
+	Layer Properties Manager — current viewport	Lagegenskabsstyring — aktuel visningsport
+	Layer State	Lagtilstand
+	Layer States Manager...	Lagtilstandsstyring...
+	Layer Tools	Lagværktøjer
+	Layer contains objects (double-click to make current)	Laget indeholder objekter (dobbeltklik for at gøre det aktuelt)
+	Layer is empty (double-click to make current)	Laget er tomt (dobbeltklik for at gøre det aktuelt)
+	Layers	Lag
+	Layers Palette	Lagpalet
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Viste lag: {shown} af {total}.   Aktuelt lag: {layer}
+	Layout	Layout
+	Layout list	Layoutliste
+	Layout paper	Layoutpapir
+	Layout {name}: {table}	Layout {name}: {table}
+	Leader	Henvisningslinje
+	Leaders Only	Kun henvisningslinjer
+	Left	Venstre
+	Left device button: zoom extents. Right device button: calibrate.	Venstre enhedsknap: zoom til udstrækning. Højre enhedsknap: kalibrer.
+	Length	Længde
+	Length X	Længde X
+	Length Y	Længde Y
+	Lengthen	Forlæng med længde
+	Light	Lys
+	Line	Linje
+	Line delta	Linjedelta
+	Linear	Lineær
+	Lines +/−	Linjer +/−
+	Lines added	Linjer tilføjet
+	Lines deleted	Linjer slettet
+	Lines of Command History	Linjer i kommandohistorik
+	Linetype	Linjetype
+	Linetype Scale	Linjetypeskala
+	Linetype scale	Linjetypeskala
+	Linetype...	Linjetype...
+	Lineweight	Linjetykkelse
+	Lineweight...	Linjetykkelse...
+	List	Liste
+	List Blocks	Vis blokke
+	List Dimension Styles	Vis dimensionstypografier
+	List Groups	Vis grupper
+	List Layer States	Vis lagtilstande
+	List Layouts	Vis layouts
+	List System Variables	Vis systemvariabler
+	List Text Styles	Vis teksttypografier
+	Load all	Indlæs alle
+	Load...	Indlæs...
+	Loaded	Indlæst
+	Loaded linetypes	Indlæste linjetyper
+	Lock	Lås
+	Lock Layer	Lås lag
+	Lock viewport	Lås visningsport
+	Lock/Unlock	Lås/lås op
+	Loft	Loft
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Ikke tilknyttet Autodesk, Inc.
+	MODEL	MODEL
+	MText	MText
+	Magenta	Magenta
+	Major line every	Hovedlinje hver
+	Make Current	Gør aktuel
+	Make Object's Layer Current	Gør objektets lag aktuelt
+	Make it a block of this drawing, keeping its layer names	Gør den til en blok i denne tegning med bevarede lagnavne
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Gør den til en blok i denne tegning; dens lag bliver NAME$0$LAYER
+	Make...	Opret...
+	Match Layer	Match lag
+	Match Properties	Match egenskaber
+	Measure	Mål
+	Measure Distance	Mål afstand
+	Measure Geometry	Mål geometri
+	Merge Cells	Flet celler
+	Merged PRs	Flettede PR'er
+	Mid Between 2 Points	Midt mellem 2 punkter
+	Midpoint	Midtpunkt
+	Mirror	Spejl
+	Model	Model
+	Model Space (in viewport)	Modelrum (i visningsport)
+	Model background	Modelbaggrund
+	Modeling	Modellering
+	Models	Modeller
+	Modify	Rediger
+	More toolbar commands	Flere værktøjslinjekommandoer
+	Move	Flyt
+	Move sideways to pan; push/pull or twist to zoom.	Bevæg sidelæns for at panorere; skub/træk eller drej for at zoome.
+	Multileader	Multihenvisningslinje
+	Multileader Style...	Multihenvisningstypografi...
+	Multileader style	Multihenvisningstypografi
+	Multiline	Multilinje
+	Multiline Style...	Multilinjetypografi...
+	Multiline Text	Flerlinjet tekst
+	Multiline Text...	Flerlinjet tekst...
+	Multiline...	Multilinje...
+	Multiple	Flere
+	Multiple Point	Flere punkter
+	My	Min
+	My properties: not available yet	Mine egenskaber: endnu ikke tilgængelige
+	Name	Navn
+	Name (A–Z)	Navn (A–Å)
+	Named	Navngivet
+	Named Viewports...	Navngivne visningsporte...
+	Named Views...	Navngivne visninger...
+	Nearest	Nærmeste
+	New	Ny
+	New (metric)	Ny (metrisk)
+	New CTB	Ny CTB
+	New Drawing	Ny tegning
+	New Drawing (⌘N)	Ny tegning (⌘N)
+	New Drawing...	Ny tegning...
+	New Layer	Nyt lag
+	New Layout	Nyt layout
+	New STB	Ny STB
+	New VP Freeze	Frys i ny VP
+	New Viewports...	Nye visningsporte...
+	New from Template...	Ny fra skabelon...
+	New layout	Nyt layout
+	New state name	Navn på ny tilstand
+	New style	Ny typografi
+	Next Change	Næste ændring
+	No	Nej
+	No blocks defined in this drawing.	Der er ingen blokke defineret i denne tegning.
+	No contributor data was built into this copy.	Der er ikke indbygget bidragyderdata i denne kopi.
+	No external references are attached.	Der er ingen eksterne referencer vedhæftet.
+	No model credits were built into this copy.	Der er ikke indbygget modelkreditering i denne kopi.
+	No plot style tables.	Ingen plottypografitabeller.
+	No saved layer states	Ingen gemte lagtilstande
+	No selection	Ingen markering
+	No supported 3D mouse found	Der blev ikke fundet nogen understøttet 3D-mus
+	Node	Knude
+	None	Ingen
+	Normal	Normal
+	Not Found	Ikke fundet
+	Not available	Ikke tilgængelig
+	Not available yet	Endnu ikke tilgængelig
+	Not loaded	Ikke indlæst
+	Numbered list	Nummereret liste
+	OK	OK
+	Object	Objekt
+	Object Snap	Objektsnap
+	Object Snap (F3)	Objektsnap (F3)
+	Object Snap On (F3)	Objektsnap til (F3)
+	Object Snap Tracking	Objektsnapsporing
+	Object Snap Tracking (F11)	Objektsnapsporing (F11)
+	Object Snap Tracking Settings	Indstillinger for objektsnapsporing
+	Object snap aperture	Objektsnapåbning
+	Object snap marker size	Størrelse på objektsnapmarkør
+	Object type:	Objekttype:
+	Oblique	Skrå
+	Off	Fra
+	Offset	Forskyd
+	On	Til
+	On/Off	Til/fra
+	Only in this drawing: {n}	Kun i denne tegning: {n}
+	Only in {name}: {n}	Kun i {name}: {n}
+	Oops	Ups
+	Open	Åbn
+	Open (⌘O)	Åbn (⌘O)
+	Open Sample Drawing	Åbn eksempeltegning
+	Open Xref	Åbn xref
+	Open a drawing first.	Åbn en tegning først.
+	Open and Save	Åbn og gem
+	Open sample drawing	Åbn eksempeltegning
+	Open...	Åbn...
+	Operator:	Operator:
+	Options	Indstillinger
+	Options...	Indstillinger...
+	Orbit	Kredsløb
+	Ordinate	Ordinat
+	Ortho (F8)	Ortho (F8)
+	Ortho Mode	Ortho-tilstand
+	Ortho Mode (F8)	Ortho-tilstand (F8)
+	Osnap Settings...	Osnap-indstillinger...
+	Out	Ud
+	Over-constrained	Overbegrænset
+	Overlay	Overlejring
+	Override	Tilsidesæt
+	PAPER	PAPIR
+	PRs	PR'er
+	Page Setup Manager	Sideopsætningsstyring
+	Page Setup Manager...	Sideopsætningsstyring...
+	Pan	Panorer
+	Pan Down	Panorer ned
+	Pan Left	Panorer til venstre
+	Pan Right	Panorer til højre
+	Pan Up	Panorer op
+	Pan sensitivity	Panoreringsfølsomhed
+	Paper Space	Paperspace
+	Parallel	Parallel
+	Parameters Manager	Parameterstyring
+	Parametric	Parametrisk
+	Paste	Sæt ind
+	Paste as Block	Sæt ind som blok
+	Paste to Command Line	Sæt ind på kommandolinjen
+	Paste to Original Coordinates	Sæt ind ved oprindelige koordinater
+	Path Array	Stiarray
+	Pattern	Mønster
+	Percent	Procent
+	Perpendicular	Vinkelret
+	Pickbox size	Størrelse på markeringsfelt
+	Plot	Plot
+	Plot (click: do not plot)	Plot (klik: plot ikke)
+	Plot Preview	Plotvisning
+	Plot Style Manager	Plottypografistyring
+	Plot Style Manager...	Plottypografistyring...
+	Plot Style...	Plottypografi...
+	Plot Styles...	Plottypografier...
+	Plot Window	Plotvindue
+	Plot style	Plottypografi
+	Plot style attached to	Plottypografi tilknyttet
+	Plot style table	Plottypografitabel
+	Plot table type	Plottabeltype
+	Plotter Manager	Plotterstyring
+	Plotter Manager...	Plotterstyring...
+	Plus/minus	Plus/minus
+	Point	Punkt
+	Point Filters	Punktfiltre
+	Point Style...	Punkttypografi...
+	Polar (distance < angle)	Polær (afstand < vinkel)
+	Polar Array	Polært array
+	Polar Tracking	Polær sporing
+	Polar Tracking (F10)	Polær sporing (F10)
+	Polar Tracking On (F10)	Polær sporing til (F10)
+	Polar angle measurement	Polær vinkelmåling
+	Polar distance	Polær afstand
+	Polar: {distance} < {angle}°	Polær: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	Polygon
+	Polygonal	Polygonal
+	Polygonal Viewport	Polygonal visningsport
+	Polyline	Polylinje
+	Polyline Edit	Rediger polylinje
+	Position X	Position X
+	Position Y	Position Y
+	Position Z	Position Z
+	Previous	Forrige
+	Previous Change	Forrige ændring
+	Previous Layer	Forrige lag
+	Primitives	Primitiver
+	Print	Udskriv
+	Print...	Udskriv...
+	Profiles	Profiler
+	Properties	Egenskaber
+	Properties Inspector	Egenskabsinspektør
+	Properties:	Egenskaber:
+	Proxy	Proxy
+	Purge	Rens
+	Pyramid	Pyramide
+	Quadrant	Kvadrant
+	Query Entities	Forespørg på enheder
+	Quick	Hurtig
+	Quick Dimension	Hurtig dimension
+	Quick Properties	Hurtige egenskaber
+	Quick Select	Hurtig markering
+	Quick Select Properties	Egenskaber for hurtig markering
+	Quick Select...	Hurtig markering...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	QuickCalc-udpegning
+	Quit DraftCraft	Afslut DraftCraft
+	Radius	Radius
+	Raster Image	Rasterbillede
+	Ray	Stråle
+	Read-only	Skrivebeskyttet
+	Real name	Rigtigt navn
+	Realtime	Realtid
+	Reassociate Dimensions	Gentilknyt dimensioner
+	Recalculate Table Formulas	Genberegn tabelformler
+	Recent	Seneste
+	Recent Commands	Seneste kommandoer
+	Recent Input	Seneste input
+	Recover...	Gendan...
+	Rectangle	Rektangel
+	Rectangular	Rektangulær
+	Rectangular Array	Rektangulært array
+	Rectangular snap	Rektangulær snap
+	Red	Rød
+	Redo	Annuller fortryd
+	Redo (⇧⌘Z)	Annuller fortryd (⇧⌘Z)
+	Redraw	Gentegn
+	Reference Manager	Referencestyring
+	Reference Name	Referencenavn
+	References: {n}	Referencer: {n}
+	Regen	Regen
+	Regen All	Regen alle
+	Region	Område
+	Region/Mass Properties	Område-/masseegenskaber
+	Reinitialize	Geninitialiser
+	Relative	Relativ
+	Relative to last segment	I forhold til sidste segment
+	Release the 3D mouse to calibrate its resting position	Slip 3D-musen for at kalibrere dens hvileposition
+	Reload	Genindlæs
+	Reload All	Genindlæs alle
+	Remove	Fjern
+	Remove Leader	Fjern henvisningslinje
+	Remove Vertex	Fjern knudepunkt
+	Remove the viewport override	Fjern tilsidesættelsen for visningsporten
+	Rename Dimension Style	Omdøb dimensionstypografi
+	Rename Layer	Omdøb lag
+	Rename Layer State	Omdøb lagtilstand
+	Rename Layout	Omdøb layout
+	Rename Text Style	Omdøb teksttypografi
+	Rename...	Omdøb...
+	Repeat {command}	Gentag {command}
+	Replace Block...	Erstat blok...
+	Requires a point (x,y, @dx,dy or @d<a).	Kræver et punkt (x,y, @dx,dy eller @d<a).
+	Reset Palettes	Nulstil paletter
+	Reset Panel Layout	Nulstil panellayout
+	Reset keeps the interface language.	Nulstilling bevarer grænsefladesproget.
+	Reset to Defaults	Gendan standarder
+	Restore	Gendan
+	Restore Layer State	Gendan lagtilstand
+	Reverse	Vend
+	Reverse the order	Vend rækkefølgen
+	Reverse zoom direction	Omvendt zoomretning
+	Revision Cloud	Revisionssky
+	Revolve	Drej om akse
+	Right	Højre
+	Rotate	Roter
+	Rotation	Rotation
+	Run Script...	Kør script...
+	SVG drawings (SVG, SVGZ)	SVG-tegninger (SVG, SVGZ)
+	Save	Gem
+	Save (⌘S)	Gem (⌘S)
+	Save As	Gem som
+	Save As...	Gem som...
+	Save Layer State	Gem lagtilstand
+	Save State	Gem tilstand
+	Save new drawings as	Gem nye tegninger som
+	Saved Path	Gemt sti
+	Scale	Skaler
+	Scale List...	Skalaliste...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Skærmlupper, skærmlæsere og optagere følger systemmarkøren.
+	Screening	Nedtoning
+	Search for layer	Søg efter lag
+	Search for parameter	Søg efter parameter
+	Search for pattern	Søg efter mønster
+	Second and next points:	Andet og næste punkter:
+	Select	Vælg
+	Select 2D polyline	Vælg 2D-polylinje
+	Select All	Vælg alle
+	Select Objects	Vælg objekter
+	Select Similar	Vælg lignende
+	Select a 2D polyline.	Vælg en 2D-polylinje.
+	Select a block reference.	Vælg en blokreference.
+	Select a circle or arc.	Vælg en cirkel eller bue.
+	Select a closed polyline	Vælg en lukket polylinje
+	Select a closed polyline, circle, ellipse or closed spline.	Vælg en lukket polylinje, cirkel, ellipse eller lukket spline.
+	Select a closed polyline.	Vælg en lukket polylinje.
+	Select a curve as the path.	Vælg en kurve som sti.
+	Select a dimension constraint type	Vælg en dimensionsbegrænsningstype
+	Select a line object	Vælg et linjeobjekt
+	Select a line object.	Vælg et linjeobjekt.
+	Select a line or an arc.	Vælg en linje eller en bue.
+	Select a line or polyline segment	Vælg en linje eller et polylinjesegment
+	Select a line, arc or open polyline.	Vælg en linje, bue eller åben polylinje.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Vælg en linje, bue, cirkel, polylinje, ellipse eller spline som sti.
+	Select a line, circle, arc or polyline segment.	Vælg en linje, cirkel, bue eller et polylinjesegment.
+	Select a line.	Vælg en linje.
+	Select a polyline.	Vælg en polylinje.
+	Select a text, mtext, attribute definition or dimension.	Vælg en tekst, mtekst, attributdefinition eller dimension.
+	Select an annotation object	Vælg et annotationsobjekt
+	Select an arc or circle	Vælg en bue eller cirkel
+	Select an arc.	Vælg en bue.
+	Select an object	Vælg et objekt
+	Select an object to change	Vælg et objekt, der skal ændres
+	Select an object to measure	Vælg et objekt, der skal måles
+	Select an object.	Vælg et objekt.
+	Select an open curve.	Vælg en åben kurve.
+	Select an open line, arc, polyline, ellipse arc or spline.	Vælg en åben linje, bue, polylinje, ellipsebue eller spline.
+	Select arc or circle	Vælg bue eller cirkel
+	Select arc or polyline arc segment	Vælg bue eller buesegment i polylinje
+	Select arc style	Vælg buetypografi
+	Select arc, circle, line	Vælg bue, cirkel, linje
+	Select at least two objects to join.	Vælg mindst to objekter, der skal sammenføjes.
+	Select circle or arc to add center mark	Vælg cirkel eller bue for at tilføje centermærke
+	Select closed objects (regions, closed polylines, circles).	Vælg lukkede objekter (områder, lukkede polylinjer, cirkler).
+	Select first line	Vælg første linje
+	Select first line or arc	Vælg første linje eller bue
+	Select first object	Vælg første objekt
+	Select first point	Vælg første punkt
+	Select nested objects to copy	Vælg indlejrede objekter, der skal kopieres
+	Select object	Vælg objekt
+	Select object to dimension	Vælg objekt, der skal dimensioneres
+	Select object to divide	Vælg objekt, der skal deles
+	Select object to extend or shift-select to trim	Vælg objekt, der skal forlænges, eller Skift-vælg for at trimme
+	Select object to measure	Vælg objekt, der skal måles
+	Select object to offset	Vælg objekt, der skal forskydes
+	Select object to trim or shift-select to extend	Vælg objekt, der skal trimmes, eller Skift-vælg for at forlænge
+	Select objects	Vælg objekter
+	Select objects (crossing window first corner)	Vælg objekter (første hjørne af krydsvindue)
+	Select objects first, then choose a command	Vælg objekter først, og vælg derefter en kommando
+	Select objects to array.	Vælg objekter til array.
+	Select objects to stretch by crossing-window or crossing-polygon...	Vælg objekter, der skal strækkes, med krydsvindue eller krydspolygon...
+	Select objects:	Vælg objekter:
+	Select one polyline (Multiple is available through the JSON form).	Vælg én polylinje (Flere er tilgængelig via JSON-formen).
+	Select path curve	Vælg stikurve
+	Select point or object	Vælg punkt eller objekt
+	Select polyline	Vælg polylinje
+	Select second line	Vælg anden linje
+	Select second line or shift-select to apply corner	Vælg anden linje, eller Skift-vælg for at anvende hjørne
+	Select second object	Vælg andet objekt
+	Select second object or shift-select to apply corner	Vælg andet objekt, eller Skift-vælg for at anvende hjørne
+	Select second point	Vælg andet punkt
+	Select spline	Vælg spline
+	Select symmetry line	Vælg symmetrilinje
+	Select two points	Vælg to punkter
+	Selection	Markering
+	Selection Cycling	Gennemløb af markering
+	Send Hatches to Back	Placer skraveringer bagerst
+	Send Under Objects	Placer under objekter
+	Send to Back	Placer bagerst
+	Services	Tjenester
+	Set Current	Gør aktuel
+	Set Current Dimension Style	Gør dimensionstypografi aktuel
+	Set Current Text Style	Gør teksttypografi aktuel
+	Set Current Viewport	Gør visningsport aktuel
+	Set Layer Properties	Angiv lagegenskaber
+	Set Properties	Angiv egenskaber
+	Set Table Cell	Angiv tabelcelle
+	Set Table Cell Style	Angiv tabelcelletypografi
+	Set Variable	Angiv variabel
+	Set View	Angiv visning
+	Settings...	Indstillinger...
+	Share	Del
+	Show	Vis
+	Show All	Vis alle
+	Show All Constraint Bars	Vis alle begrænsningslinjer
+	Show All Dynamic Dimensions	Vis alle dynamiske dimensioner
+	Show Annotative Objects	Vis annotative objekter
+	Show Layer List	Vis lagliste
+	Show Quick Properties for selected objects	Vis hurtige egenskaber for markerede objekter
+	Show System Cursor	Vis systemmarkør
+	Show and hide the tools of this category	Vis og skjul værktøjerne i denne kategori
+	Show command prompting near the crosshairs	Vis kommandoprompter ved trådkorset
+	Show in Tool Sets	Vis i værktøjssæt
+	Show/Hide Lineweight	Vis/skjul linjetykkelse
+	Show/Hide Transparency	Vis/skjul gennemsigtighed
+	Single Line Text	Enkeltlinjet tekst
+	Single Point	Enkelt punkt
+	Single...	Enkelt...
+	Smooth	Udglat
+	Snap	Snap
+	Snap Mode	Snaptilstand
+	Snap Mode (F9)	Snaptilstand (F9)
+	Snap On (F9)	Snap til (F9)
+	Snap Overrides	Snaptilsidesættelser
+	Snap X spacing	Snapafstand X
+	Snap and Grid	Snap og gitter
+	Snap type	Snaptype
+	Snap, grid, polar tracking and Dynamic Input:	Snap, gitter, polær sporing og dynamisk input:
+	Solid	Massiv
+	Solid Editing	Redigering af solider
+	Sort	Sorter
+	Specify a point	Angiv et punkt
+	Specify a scale for the hatch pattern	Angiv en skala for skraveringsmønstret
+	Specify a second extension line origin	Angiv udgangspunkt for anden hjælpelinje
+	Specify an angle for the hatch pattern	Angiv en vinkel for skraveringsmønstret
+	Specify angle end point	Angiv vinklens slutpunkt
+	Specify angle of dimension line	Angiv dimensionslinjens vinkel
+	Specify angle of dimension text	Angiv dimensionstekstens vinkel
+	Specify angle start point	Angiv vinklens startpunkt
+	Specify angle vertex	Angiv vinklens toppunkt
+	Specify angle vertex point	Angiv vinklens toppunkt
+	Specify arc length dimension location	Angiv placering af buelængdedimension
+	Specify axis endpoint of ellipse	Angiv ellipsens akseendepunkt
+	Specify base diameter	Angiv grundfladens diameter
+	Specify base point	Angiv basispunkt
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Angiv basispunkt eller forskydning (træk med midterste museknap for at panorere i realtid)
+	Specify base radius	Angiv grundfladens radius
+	Specify center of donut	Angiv ringens centrum
+	Specify center of ellipse	Angiv ellipsens centrum
+	Specify center of polygon	Angiv polygonens centrum
+	Specify center point for circle	Angiv cirklens centerpunkt
+	Specify center point of arc	Angiv buens centerpunkt
+	Specify center point of arc (hold Ctrl to switch direction)	Angiv buens centerpunkt (hold Ctrl nede for at skifte retning)
+	Specify center point of array	Angiv arrayets centerpunkt
+	Specify center point of base	Angiv grundfladens centerpunkt
+	Specify corner of viewport	Angiv visningsportens hjørne
+	Specify corner of window, enter a scale factor (nX or nXP)	Angiv vindueshjørne, angiv en skalafaktor (nX eller nXP)
+	Specify diameter of circle	Angiv cirklens diameter
+	Specify dimension arc line location	Angiv placering af dimensionsbuelinje
+	Specify dimension line location	Angiv placering af dimensionslinje
+	Specify distance between turns	Angiv afstand mellem omdrejninger
+	Specify distance to other axis	Angiv afstand til den anden akse
+	Specify end angle	Angiv slutvinkel
+	Specify end point of arc	Angiv buens slutpunkt
+	Specify end point of arc (hold Ctrl to switch direction)	Angiv buens slutpunkt (hold Ctrl nede for at skifte retning)
+	Specify ending width	Angiv slutbredde
+	Specify ending width for next segment	Angiv slutbredde for næste segment
+	Specify endpoint of arc	Angiv buens endepunkt
+	Specify endpoint of axis	Angiv aksens endepunkt
+	Specify endpoint of line	Angiv linjens endepunkt
+	Specify feature location	Angiv elementets placering
+	Specify fillet radius	Angiv afrundingsradius
+	Specify fillet radius for rectangles	Angiv afrundingsradius for rektangler
+	Specify first angle endpoint	Angiv første vinkelendepunkt
+	Specify first chamfer distance	Angiv første affasningsafstand
+	Specify first chamfer distance for rectangles	Angiv første affasningsafstand for rektangler
+	Specify first constraint point	Angiv første begrænsningspunkt
+	Specify first corner	Angiv første hjørne
+	Specify first corner point	Angiv første hjørnepunkt
+	Specify first destination point	Angiv første destinationspunkt
+	Specify first end point of circle's diameter	Angiv første endepunkt af cirklens diameter
+	Specify first endpoint of edge	Angiv første endepunkt af kanten
+	Specify first extension line origin	Angiv udgangspunkt for første hjælpelinje
+	Specify first point	Angiv første punkt
+	Specify first point of mirror line	Angiv første punkt på spejlingslinjen
+	Specify first point on circle	Angiv første punkt på cirklen
+	Specify first point on circle: _tan to	Angiv første punkt på cirklen: _tan til
+	Specify first source point	Angiv første kildepunkt
+	Specify height	Angiv højde
+	Specify helix height	Angiv spiralens højde
+	Specify included angle	Angiv den indesluttede vinkel
+	Specify included angle (hold Ctrl to switch direction)	Angiv den indesluttede vinkel (hold Ctrl nede for at skifte retning)
+	Specify insertion base point	Angiv indsættelsesbasispunkt
+	Specify insertion point	Angiv indsættelsespunkt
+	Specify inside diameter of donut	Angiv ringens indvendige diameter
+	Specify leader arrowhead location	Angiv placering af henvisningspil
+	Specify leader endpoint	Angiv henvisningslinjens endepunkt
+	Specify leader landing location	Angiv placering af henvisningsafsats
+	Specify length for rectangles	Angiv længde for rektangler
+	Specify length of chord	Angiv kordelængde
+	Specify length of chord (hold Ctrl to switch direction)	Angiv kordelængde (hold Ctrl nede for at skifte retning)
+	Specify length of segment	Angiv segmentlængde
+	Specify line width for rectangles	Angiv linjebredde for rektangler
+	Specify location for new vertex	Angiv placering af nyt knudepunkt
+	Specify minimum length of arc	Angiv buens minimumlængde
+	Specify new end point	Angiv nyt slutpunkt
+	Specify new location for marked vertex	Angiv ny placering af markeret knudepunkt
+	Specify new width for all segments	Angiv ny bredde for alle segmenter
+	Specify next point	Angiv næste punkt
+	Specify offset distance	Angiv forskydningsafstand
+	Specify opposite corner	Angiv modsat hjørne
+	Specify other corner point	Angiv andet hjørnepunkt
+	Specify other endpoint of axis	Angiv aksens andet endepunkt
+	Specify outside diameter of donut	Angiv ringens udvendige diameter
+	Specify point	Angiv punkt
+	Specify point on object for first tangent of circle	Angiv punkt på objekt for cirklens første tangent
+	Specify point on object for second tangent of circle	Angiv punkt på objekt for cirklens anden tangent
+	Specify point on side to offset	Angiv punkt på den side, der skal forskydes til
+	Specify radius of arc	Angiv buens radius
+	Specify radius of arc (hold Ctrl to switch direction)	Angiv buens radius (hold Ctrl nede for at skifte retning)
+	Specify radius of circle	Angiv cirklens radius
+	Specify rotation angle	Angiv rotationsvinkel
+	Specify rotation angle of text	Angiv tekstens rotationsvinkel
+	Specify scale factor	Angiv skalafaktor
+	Specify second angle endpoint	Angiv andet vinkelendepunkt
+	Specify second break point	Angiv andet brudpunkt
+	Specify second chamfer distance for rectangles	Angiv anden affasningsafstand for rektangler
+	Specify second constraint point	Angiv andet begrænsningspunkt
+	Specify second destination point	Angiv andet destinationspunkt
+	Specify second end point of circle's diameter	Angiv andet endepunkt af cirklens diameter
+	Specify second endpoint of edge	Angiv andet endepunkt af kanten
+	Specify second extension line origin	Angiv udgangspunkt for anden hjælpelinje
+	Specify second point	Angiv andet punkt
+	Specify second point of arc	Angiv buens andet punkt
+	Specify second point of mirror line	Angiv andet punkt på spejlingslinjen
+	Specify second point on circle	Angiv andet punkt på cirklen
+	Specify second point on circle: _tan to	Angiv andet punkt på cirklen: _tan til
+	Specify second point or <use first point as displacement>	Angiv andet punkt eller <brug første punkt som forskydning>
+	Specify second source point	Angiv andet kildepunkt
+	Specify side to offset	Angiv side, der skal forskydes til
+	Specify start angle	Angiv startvinkel
+	Specify start point	Angiv startpunkt
+	Specify start point of arc	Angiv buens startpunkt
+	Specify start point of polyline	Angiv polylinjens startpunkt
+	Specify start point of text	Angiv tekstens startpunkt
+	Specify starting width	Angiv startbredde
+	Specify starting width for next segment	Angiv startbredde for næste segment
+	Specify tangent direction for the start point of arc	Angiv tangentretning for buens startpunkt
+	Specify the elevation for rectangles	Angiv koten for rektangler
+	Specify thickness for rectangles	Angiv tykkelse for rektangler
+	Specify third point on circle	Angiv tredje punkt på cirklen
+	Specify third point on circle: _tan to	Angiv tredje punkt på cirklen: _tan til
+	Specify third source point or <continue>	Angiv tredje kildepunkt eller <fortsæt>
+	Specify through point	Angiv gennemgangspunkt
+	Specify top diameter	Angiv topdiameter
+	Specify top radius	Angiv topradius
+	Specify total angle	Angiv samlet vinkel
+	Specify total length	Angiv samlet længde
+	Specify width for rectangles	Angiv bredde for rektangler
+	Sphere	Kugle
+	Spline	Spline
+	Spline Edit	Rediger spline
+	Stack (type 1/2 then select)	Stak (skriv 1/2, og marker derefter)
+	Standard	Standard
+	Start	Start
+	Start Width	Startbredde
+	Start X	Start X
+	Start Y	Start Y
+	Start angle	Startvinkel
+	Start, Center, Angle	Start, centrum, vinkel
+	Start, Center, End	Start, centrum, slut
+	Start, Center, Length	Start, centrum, længde
+	Start, End, Angle	Start, slut, vinkel
+	Start, End, Direction	Start, slut, retning
+	Start, End, Radius	Start, slut, radius
+	Status	Status
+	Status Bar	Statuslinje
+	Stretch	Stræk
+	Stretch Vertex	Stræk knudepunkt
+	Style: Standard	Typografi: Standard
+	Subtract	Subtraher
+	Sweep	Sweep
+	Switch Drawing	Skift tegning
+	Switch Layout	Skift layout
+	Switch between model space in a viewport and paper space	Skift mellem modelrum i en visningsport og paperspace
+	Symmetric	Symmetrisk
+	Synchronize Attributes	Synkroniser attributter
+	Synchronize Multiple-scale Positions	Synkroniser positioner for flere skalaer
+	TOP	TOP
+	Table	Tabel
+	Table Breaks	Tabelbrud
+	Table Cell Style	Tabelcelletypografi
+	Table Style...	Tabeltypografi...
+	Table style	Tabeltypografi
+	Table...	Tabel...
+	Tan, Tan, Radius	Tan, tan, radius
+	Tan, Tan, Tan	Tan, tan, tan
+	Tangent	Tangent
+	Temporary track point	Midlertidigt sporingspunkt
+	Text	Tekst
+	Text Editor	Teksteditor
+	Text Height	Teksthøjde
+	Text Objects Only	Kun tekstobjekter
+	Text Style...	Teksttypografi...
+	Text height	Teksthøjde
+	Text override	Teksttilsidesættelse
+	Text style	Teksttypografi
+	Thaw All Layers	Tø alle lag
+	Thaw Layer	Tø lag
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Åbningen er, hvor tæt markøren skal komme på et punkt, før objektsnap finder det.
+	There is nothing here yet.	Der er ikke noget her endnu.
+	Thickness	Tykkelse
+	Time	Tid
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Tidsfølsomt højreklik: et hurtigt klik er Enter, hold nede åbner menuen
+	To	Til
+	To get started, create or open a drawing.	Opret eller åbn en tegning for at komme i gang.
+	Toggle PICKADD (off: each pick replaces the selection)	Slå PICKADD til/fra (fra: hvert valg erstatter markeringen)
+	Toggle PICKADD (on: picks add to the selection)	Slå PICKADD til/fra (til: valg føjes til markeringen)
+	Tolerance...	Tolerance...
+	Tool Bar	Værktøjslinje
+	Tool Sets	Værktøjssæt
+	Tools	Værktøjer
+	Torus	Torus
+	Trace	Spor
+	Track orthogonally only	Spor kun ortogonalt
+	Track using all polar angle settings	Spor med alle indstillinger for polære vinkler
+	Transparency	Gennemsigtighed
+	Trim	Trim
+	True Color	Ægte farve
+	Turn All Layers On	Slå alle lag til
+	Turn Off Layer	Slå lag fra
+	Turn On Layer	Slå lag til
+	Turn Quick Properties off (QPMODE)	Slå hurtige egenskaber fra (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Når det er slået fra, åbner et højreklik under en kommando altid genvejsmenuen.
+	Type	Type
+	Type a command	Skriv en kommando
+	Type text; Enter starts a new paragraph	Skriv tekst; Enter starter et nyt afsnit
+	UCS Icon	UCS-ikon
+	Undo	Fortryd
+	Undo (⌘Z)	Fortryd (⌘Z)
+	Ungroup	Opløs gruppe
+	Union	Foren
+	Unisolate Layer	Ophæv isolering af lag
+	Units Conversion	Enhedskonvertering
+	Units...	Enheder...
+	Unload	Fjern indlæsning
+	Unloaded	Ikke indlæst
+	Unlock Layer	Lås lag op
+	Unlock viewport	Lås visningsport op
+	Unmerge Cells	Ophæv fletning af celler
+	Unreferenced	Ikke refereret
+	Unresolved	Ikke løst
+	Unsaved Layer State	Ikke-gemt lagtilstand
+	Up	Op
+	Update	Opdater
+	Update Data Links	Opdater datalinks
+	Use System Setting	Brug systemindstilling
+	Use for this layout	Brug til dette layout
+	Use object linetype	Brug objektets linjetype
+	Use object lineweight	Brug objektets linjetykkelse
+	User	Bruger
+	User Parameters	Brugerparametre
+	User Preferences	Brugerindstillinger
+	Username	Brugernavn
+	VP Color	VP-farve
+	VP Freeze	Frys i VP
+	Value	Værdi
+	Value:	Værdi:
+	Variables	Variabler
+	Version	Version
+	Version 2000	Version 2000
+	Version 2004	Version 2004
+	Version 2007	Version 2007
+	Version 2010	Version 2010
+	Version 2013	Version 2013
+	Version 2018	Version 2018
+	Version {version}	Version {version}
+	Vertical	Lodret
+	VerticalDistance	Lodret afstand
+	View	Vis
+	ViewCube	ViewCube
+	Viewport	Visningsport
+	Viewport Layer Freeze	Frys lag i visningsport
+	Viewport Properties	Visningsportegenskaber
+	Viewport is locked	Visningsporten er låst
+	Viewport scale	Visningsportskala
+	Viewport {id}	Visningsport {id}
+	Viewports	Visningsporte
+	Volume	Volumen
+	WCS	WCS
+	White	Hvid
+	Width factor	Breddefaktor
+	Window	Vindue
+	Wipeout	Afdækning
+	Workspace Switching	Skift af arbejdsområde
+	Write Block	Skriv blok
+	X	X
+	Xline	Konstruktionslinje
+	Y	Y
+	Yellow	Gul
+	Yes	Ja
+	Zoom	Zoom
+	Zoom All	Zoom alt
+	Zoom Dynamic	Zoom dynamisk
+	Zoom Extents	Zoom til udstrækning
+	Zoom In	Zoom ind
+	Zoom Object	Zoom til objekt
+	Zoom Out	Zoom ud
+	Zoom Previous	Zoom forrige
+	Zoom Realtime	Zoom i realtid
+	Zoom Window	Zoom vindue
+	Zoom sensitivity	Zoomfølsomhed
+	error	fejl
+	min	min
+	objects	objekter
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (begrænsning {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind}-begrænsning {name} = {expression}  (dobbeltklik for at redigere)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Ny brugerparameter
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ for at afslutte
+@plural	{n} commit	{n} commit|{n} commits
+@plural	{n} contributor	{n} bidragyder|{n} bidragydere
+	Check for Updates…	Søg efter opdateringer…
+	DraftCraft is up to date.	DraftCraft er opdateret.
+	Could not check for updates.	Kunne ikke søge efter opdateringer.
+	Add to Working Set	Føj til arbejdssæt
+	Add: Pick points	Tilføj: Udpeg punkter
+	Add: Select objects	Tilføj: Vælg objekter
+	Add…	Tilføj…
+	Alias	Alias
+	Alias file: {file}	Aliasfil: {file}
+	Align Multileaders	Juster multihenvisningslinjer
+	Analyze Shapes	Analyser figurer
+	Analyze Usage	Analyser brug
+	Animation Effects	Animationseffekter
+	Animation effects	Animationseffekter
+	Associative	Associativ
+	Backup copy	Sikkerhedskopi
+	Block to create or edit	Blok, der skal oprettes eller redigeres
+	Bottom left	Nederst til venstre
+	Bottom right	Nederst til højre
+	Boundaries	Afgrænsninger
+	Boundaries picked: {n}	Udpegede afgrænsninger: {n}
+	Break-line Symbol	Brudlinjesymbol
+	Centered	Centreret
+	Change Properties	Skift egenskaber
+	Choose the command the alias starts.	Vælg den kommando, som aliasset starter.
+	Click the ruler to add a tab stop, right-click to remove one	Klik på linealen for at tilføje et tabulatorstop, højreklik for at fjerne et
+	Click to set new origin	Klik for at angive nyt nulpunkt
+	Close Block Editor	Luk blokeditor
+	Collect	Saml
+	Collect Multileaders	Saml multihenvisningslinjer
+	Color 1	Farve 1
+	Color 2	Farve 2
+	Command	Kommando
+	Convert Text to Mtext	Konverter tekst til mtekst
+	Create backup copy with each save	Opret sikkerhedskopi ved hver gemning
+	Create separate hatches	Opret separate skraveringer
+	Crossing selection color:	Farve for krydsmarkering:
+	Curved	Buet
+	Customize	Tilpas
+	Default to boundary extents	Brug afgrænsningens udstrækning som standard
+	Define each corner of the selection window with a separate click.	Definer hvert hjørne af markeringsvinduet med et separat klik.
+	Discard	Kassér
+	Drag Dynamic Grip	Træk dynamisk greb
+	Dynamic Block Data	Data for dynamisk blok
+	Dynamic Block Grips	Greb for dynamisk blok
+	Dynamic Block Reference	Dynamisk blokreference
+	Edit Block Definition	Rediger blokdefinition
+	Edit Command Aliases (PGP)...	Rediger kommandoaliasser (PGP)...
+	Edit Multileader	Rediger multihenvisningslinje
+	Edit Reference In-Place	Rediger reference på stedet
+	Edit…	Rediger…
+	Evaluate LISP	Evaluer LISP
+	Exclude:	Udelad:
+	Explode Attributes to Text	Opløs attributter til tekst
+	Express Tools	Express Tools
+	Font	Skrifttype
+	Grips	Greb
+	Groups	Grupper
+	Hatch Pick	Skraveringsudpegning
+	Hatch and Gradient	Skravering og gradient
+	Hatch origin	Skraveringens nulpunkt
+	Hatches	Skraveringer
+	Hemispherical	Halvkugleformet
+	Ignore	Ignorer
+	Imperial (inches)	Britisk (tommer)
+	Implied Loops	Underforståede løkker
+	Indicate selection area	Angiv markeringsområde
+	Interface scale	Grænsefladeskala
+	Inverted	Omvendt
+	Island	Ø
+	Island detection	Ø-registrering
+	Italic	Kursiv
+	Justify	Lige margener
+	Load Application...	Indlæs program...
+	Metric (millimetres)	Metrisk (millimeter)
+	More than {n} aliases.	Mere end {n} aliasser.
+	Move/Copy/Rotate	Flyt/kopier/roter
+	Multiline text	Flerlinjet tekst
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Ny og den første tegning ved opstart bruger disse enheder, medmindre der er angivet en standardskabelon (QNEWTEMPLATE).
+	New block	Ny blok
+	No alias file loaded. REINIT replaces these aliases with a file's.	Der er ikke indlæst nogen aliasfil. REINIT erstatter disse aliasser med en fils.
+	Not a number or distance: {text}	Ikke et tal eller en afstand: {text}
+	Object grouping	Objektgruppering
+	Object selection limit for display of grips	Grænse for antal markerede objekter ved visning af greb
+	Objects on locked layers	Objekter på låste lag
+	Open in Block Editor	Åbn i blokeditor
+	Origin: {x}, {y}	Nulpunkt: {x}, {y}
+	Outer	Ydre
+	Overline	Overstregning
+	Preview	Forhåndsvisning
+	Query Texts	Forespørg på tekster
+	Save Block	Gem blok
+	Save Block As	Gem blok som
+	Save Layout as Template	Gem layout som skabelon
+	Save Reference Edits	Gem referenceredigeringer
+	Save alias	Gem alias
+	Save changes to block "{name}"?	Gem ændringer i blokken "{name}"?
+	Select boundaries to remove	Vælg afgrænsninger, der skal fjernes
+	Select using two clicks only	Marker kun med to klik
+	Selection Area Effect	Effekt for markeringsområde
+	Selection Preview Filter	Filter for markeringsvisning
+	Selection area opacity:	Markeringsområdets uigennemsigtighed:
+	Selection effect color	Farve for markeringseffekt
+	Selection modes	Markeringstilstande
+	Selection preview	Markeringsvisning
+	Set Dynamic Property	Angiv dynamisk egenskab
+	Shape	Figur
+	Sheet Books to PDF...	Arkbøger til PDF...
+	Show grips	Vis greb
+	Specified origin	Angivet nulpunkt
+	Spherical	Sfærisk
+	Tables	Tabeller
+	Text color	Tekstfarve
+	Top left	Øverst til venstre
+	Top right	Øverst til højre
+	Type an alias name.	Skriv et aliasnavn.
+	Underline	Understregning
+	Units of new drawings	Enheder for nye tegninger
+	Unsaved changes	Ikke-gemte ændringer
+	Use current origin	Brug aktuelt nulpunkt
+	Visual Effect Settings	Indstillinger for visuelle effekter
+	Visual Effect Settings...	Indstillinger for visuelle effekter...
+	When a command is active	Når en kommando er aktiv
+	When no command is active	Når ingen kommando er aktiv
+	Window selection color:	Farve for vinduesmarkering:
+	Working Set	Arbejdssæt
+	Xref and Block In-place Editing	Redigering af xref og blok på stedet
+	Xrefs	Xrefs
+	built-in	indbygget
+	overrides built-in	tilsidesætter indbygget
+	{alias} is already defined; select it and use Edit.	{alias} er allerede defineret; vælg det, og brug Rediger.
+	{command} is an unknown command.	{command} er en ukendt kommando.
+	Find All	Søg alle
+	Find what:	Søg efter:
+	Match case	Forskel på store og små bogstaver
+	Replace	Erstat
+	Replace All	Erstat alle
+	Replace with:	Erstat med:
+	Replacement text	Erstatningstekst
+	Results	Resultater
+	Searches the current space.	Søger i det aktuelle rum.
+	Text to find	Tekst, der skal findes
+	Whole words	Hele ord
+	Nothing found	Intet fundet
+	E	Ø
+	N	N
+	S	S
+	W	V
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Ryd seneste filer
+	contains authoring elements. Open in Block Editor?	indeholder redigeringselementer. Åbn i blokeditor?
+	Custom	Brugerdefineret
+	Open Recent	Åbn seneste
+	This drawing	Denne tegning
+	Arrow size	Pilestørrelse
+	Dim scale overall	Samlet dimensionsskala
+	Precision	Præcision
+	Apply to Layout	Anvend på layout
+	Center the plot	Centrer plottet
+	Enter block names to extract	Angiv navne på blokke, der skal udtrækkes
+	Enter geometric characteristic	Angiv geometrisk egenskab
+	Enter name of LISP file to load	Angiv navnet på LISP-filen, der skal indlæses
+	First corner	Første hjørne
+	Fit to paper	Tilpas til papir
+	Landscape	Liggende
+	Limits	Grænser
+	Opposite corner	Modsat hjørne
+	Orientation	Retning
+	Paper size	Papirstørrelse
+	Plot area	Plotområde
+	Plot object lineweights	Plot objekters linjetykkelser
+	Plot offset	Plotforskydning
+	Plot transparency	Plot gennemsigtighed
+	Portrait	Stående
+	Printer/plotter	Printer/plotter
+	Window <	Vindue <
+	X offset (mm)	X-forskydning (mm)
+	Y offset (mm)	Y-forskydning (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Ångstrøm
+	Architectural	Arkitektonisk
+	Astronomical Units	Astronomiske enheder
+	Centimeters	Centimeter
+	Decameters	Dekameter
+	Decimal	Decimal
+	Decimal Degrees	Decimalgrader
+	Decimeters	Decimeter
+	Deg/Min/Sec	Gra/Min/Sek
+	Don't Save	Gem ikke
+	Drawing Units	Tegningsenheder
+	Engineering	Teknisk
+	Feet	Fod
+	Fractional	Brøk
+	Gigameters	Gigameter
+	Grads	Nygrader
+	Hectometers	Hektometer
+	Inches	Tommer
+	Insertion scale	Indsættelsesskala
+	Kilometers	Kilometer
+	Light Years	Lysår
+	Meters	Meter
+	Microinches	Mikrotommer
+	Microns	Mikron
+	Miles	Miles
+	Millimeters	Millimeter
+	Mils	Mils
+	Nanometers	Nanometer
+	Parsecs	Parsec
+	Radians	Radianer
+	Sample output	Eksempel på output
+	Save changes to {name}?	Gem ændringer i {name}?
+	Scientific	Videnskabelig
+	Surveyor's Units	Landmålerenheder
+	Unitless	Uden enhed
+	Units to scale inserted content	Enheder til skalering af indsat indhold
+	US Survey Feet	US-landmålerfod
+	US Survey Inch	US-landmålertomme
+	US Survey Mile	US-landmålermile
+	US Survey Yard	US-landmåleryard
+	Yards	Yards
+	Your changes will be lost if you don't save them.	Dine ændringer går tabt, hvis du ikke gemmer dem.
+	Layouts	Layouts
+	Associate	Tilknyt
+	Clip Xref	Klip xref
+	Xref Clip Frame	Klipramme for xref
+	Minimize	Minimer
+	Maximize	Maksimer
+	Restore Down	Gendan
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft og DraftCraft-logoet er varemærker tilhørende DraftCraft Engineering Ventures.
+	Conic	Keglesnit
+	Spline Fit	Spline-tilpasning
+	Spline CV	Spline-kontrolpunkter
+	Specify start point of conic	Angiv keglesnittets startpunkt
+	Specify apex (where the end tangents meet)	Angiv toppunkt (hvor endetangenterne mødes)
+	Specify end point of conic	Angiv keglesnittets slutpunkt
+	Specify rho or a point on the conic	Angiv rho eller et punkt på keglesnittet
+	Check for Updates...	Søg efter opdateringer...
+	Check for Updates	Søg efter opdateringer
+	Update Available	Opdatering tilgængelig
+	DraftCraft {version} is available.	DraftCraft {version} er tilgængelig.
+	You have version {version}.	Du har version {version}.
+	Do you want to download the update?	Vil du hente opdateringen?
+	What's new	Nyheder
+	What's New	Nyheder
+	Download	Hent
+	Later	Senere
+	Skip This Version	Spring denne version over
+	DraftCraft is up to date (version {version}).	DraftCraft er opdateret (version {version}).
+	Do you want to install the update now?	Vil du installere opdateringen nu?
+	Update Now	Opdater nu
+	Open the release page	Åbn udgivelsessiden
+	This copy of DraftCraft can't update itself.	Denne kopi af DraftCraft kan ikke opdatere sig selv.
+	Updating DraftCraft	Opdaterer DraftCraft
+	Update Failed	Opdatering mislykkedes
+	Installing DraftCraft {version}	Installerer DraftCraft {version}
+	Downloading: {done} of {total} MB	Henter: {done} af {total} MB
+	Installing…	Installerer…
+	Starting the download…	Starter overførslen…
+	The connection dropped; trying again…	Forbindelsen blev afbrudt; prøver igen…
+	DraftCraft {version} is installed.	DraftCraft {version} er installeret.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Genstart DraftCraft for at bruge den. Hvis du genstarter senere, åbnes den næste gang, du starter DraftCraft.
+	Restart Now	Genstart nu
+	The update could not be installed.	Opdateringen kunne ikke installeres.
+	You can download it from the release page instead.	Du kan i stedet hente den fra udgivelsessiden.
+	2D Wireframe	2D-trådramme
+	Annotate	Annoter
+	Blocks Palette	Blokpalet
+	CAD Standards	CAD-standarder
+	Commands	Kommandoer
+	2D Drafting	2D-tegning
+	Edit Aliases	Rediger aliasser
+	Image	Billede
+	Palettes	Paletter
+	Top	Ovenfra
+	Units	Enheder
+	Workspace	Arbejdsområde
+	Ribbon	Bånd
+	PDF Underlay...	PDF-underlag...
+	PDF Import	PDF-import
+	PDF Underlay	PDF-underlag
+	Underlay Layers	Underlagslag
+	Raster Image Reference...	Rasterbilledreference...
+	Close Text Editor	Luk teksteditor
+	Image Clip	Klip billede
+	PDF Clip	Klip PDF
+	Image Adjust	Juster billede
+	PDF Adjust	Juster PDF
+	Adjust...	Juster...
+	Parameter	Parameter
+	Action	Handling
+	DesignCenter	DesignCenter
+	Tool Palettes	Værktøjspaletter
+	Sheet Set Manager	Arksætstyring
+	Type the drawing's path, then press Enter.	Skriv tegningens sti, og tryk derefter på Enter.
+	Drawing file	Tegningsfil
+	Folder	Mappe
+	Linetypes	Linjetyper
+	Text Styles	Teksttypografier
+	Dimension Styles	Dimensionstypografier
+	Table Styles	Tabeltypografier
+	Multileader Styles	Multihenvisningstypografier
+	Multiline Styles	Multilinjetypografier
+	Add to Drawing	Føj til tegning
+	Create Tool Palette	Opret værktøjspalet
+	Nothing of this kind in the file.	Der er intet af denne slags i filen.
+	Open a drawing to see its blocks, layers and styles.	Åbn en tegning for at se dens blokke, lag og typografier.
+	Delete Palette	Slet palet
+	New Palette	Ny palet
+	No tool palettes.	Ingen værktøjspaletter.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Denne palet er tom: tilføj en kommando nedenfor, eller lav en palet fra DesignCenter.
+	Delete Tool	Slet værktøj
+	Add Command	Tilføj kommando
+	New Sheet Set...	Nyt arksæt...
+	Open Sheet Set...	Åbn arksæt...
+	Sheet sets (DCSS)	Arksæt (DCSS)
+	Sheet set file	Arksætfil
+	Make or open a sheet set to list its sheets.	Opret eller åbn et arksæt for at vise dets ark.
+	Add Drawing...	Tilføj tegning...
+	Publish to PDF...	Udgiv til PDF...
+	No sheets yet: add a drawing's layouts.	Ingen ark endnu: tilføj en tegnings layouts.
+	Number	Nummer
+	Title	Titel
+	Move Up	Flyt op
+	Move Down	Flyt ned
+	Sheet Set (DCSS)	Arksæt (DCSS)
+	Close Tool Palettes	Luk værktøjspaletter
+	Close DesignCenter	Luk DesignCenter
+	Close Sheet Set Manager	Luk arksætstyring
+	Manage Tool Palettes	Administrer værktøjspaletter
+	Changes apply at once; Save Current As keeps them in a workspace.	Ændringer træder i kraft med det samme; Gem aktuelle som bevarer dem i et arbejdsområde.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Klik på lag for kun at vise dem; Ctrl eller Skift føjer til valget.
+	Current Workspace	Aktuelt arbejdsområde
+	Customize Interface	Tilpas grænseflade
+	Customize User Interface	Tilpas brugergrænseflade
+	Customize...	Tilpas...
+	Edit Aliases...	Rediger aliasser...
+	Force object color and linetype to ByLayer	Tving objektfarve og linjetype til ByLayer
+	Geographic Location	Geografisk placering
+	Geographic Location...	Geografisk placering...
+	Latitude	Breddegrad
+	Longitude	Længdegrad
+	North direction	Nordretning
+	Layer Translation Mappings	Tilknytninger til lagoversættelse
+	Layer Translator	Lagoversætter
+	Layer Translator...	Lagoversætter...
+	Layer Walk	Lagvandring
+	Layer Walk...	Lagvandring...
+	Location	Placering
+	Set Location	Angiv placering
+	Remove Location	Fjern placering
+	The drawing's origin is at this place (WGS 84 degrees).	Tegningens nulpunkt ligger på dette sted (WGS 84-grader).
+	Map	Tilknyt
+	New layer name	Nyt lagnavn
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Ingen tilknytninger endnu: vælg lag til venstre, et navn til højre, og klik derefter på Tilknyt.
+	Translate	Oversæt
+	Translate From	Oversæt fra
+	Translate To	Oversæt til
+	Restore on exit	Gendan ved afslutning
+	Point Cloud	Punktsky
+	Point Cloud...	Punktsky...
+	Point clouds (XYZ, LAS)	Punktskyer (XYZ, LAS)
+	ZIP archive	ZIP-arkiv
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Værktøjslinjen Hurtig adgang
+	Rename	Omdøb
+	Reset to Standard	Nulstil til standard
+	Ribbon Tabs	Båndfaner
+	Save Current As	Gem aktuelle som
+	Save Current As...	Gem aktuelle som...
+	Save Workspace	Gem arbejdsområde
+	User Interface	Brugergrænseflade
+	Workspace Settings	Indstillinger for arbejdsområde
+	Workspace Settings...	Indstillinger for arbejdsområde...
+	Workspace name	Navn på arbejdsområde
+	Workspace:	Arbejdsområde:
+	Workspaces	Arbejdsområder
+	Interface...	Grænseflade...
+	Export Attribute Information...	Eksporter attributinformation...
+	Import Attribute Information...	Importer attributinformation...
+	Export Attributes	Eksporter attributter
+	Import Attributes	Importer attributter
+	Text, tab-delimited (TXT)	Tekst, tabulatorsepareret (TXT)
+	Import Settings	Importer indstillinger
+	Export Settings	Eksporter indstillinger
+	Import Settings...	Importer indstillinger...
+	Export Settings...	Eksporter indstillinger...
+	DraftCraft settings (TOML)	DraftCraft-indstillinger (TOML)
+	Total Area and Length	Samlet areal og længde
+	Total Area	Samlet areal
+	Specify point to place the totals as text	Angiv punkt, hvor totalerne skal placeres som tekst
+	Metric	Metrisk
+	Imperial	Britisk
+	A new drawing in millimeters	En ny tegning i millimeter
+	A new drawing in inches	En ny tegning i tommer
+	A new drawing in centimeters	En ny tegning i centimeter
+	Metric (centimetres)	Metrisk (centimeter)
+	Join the ArtCraft Discord…	Deltag i ArtCraft-Discorden…
+	Join us on Discord	Mød os på Discord
+	One of the Crafting Apps by the ArtCraft team and community.	En af Crafting Apps fra ArtCraft-teamet og -fællesskabet.
+	Change	Skift
+	Multiple Insert	Flere indsættelser
+	Ctrl+Enter to apply	Ctrl+Enter for at anvende
+	Edit Text	Rediger tekst
+	The drawing changed. Close the window and open it again.	Tegningen er ændret. Luk vinduet, og åbn det igen.
+	DView	DView
+	Raster Images	Rasterbilleder
+	Xref	Xref
+	Backup copies are off, so the current file will be replaced.	Sikkerhedskopier er slået fra, så den aktuelle fil bliver erstattet.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 og tidligere bevarer dem. Brug Gem som for at bevare dem i tegningen.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF bevarer dem. Brug Gem som for at bevare dem i tegningen.
+	Save Anyway	Gem alligevel
+	Save cancelled: {path} was not changed.	Gem annulleret: {path} blev ikke ændret.
+	Saving {name} will remove content	Når {name} gemmes, fjernes indhold
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Den aktuelle fil ser ikke ud til at være hel, så {name} forbliver uændret, og den aktuelle fil bliver erstattet.
+	The current file is kept as {name} until the next save.	Den aktuelle fil bevares som {name} indtil næste gemning.
+	This format can't keep these objects yet: {objects}.	Dette format kan endnu ikke bevare disse objekter: {objects}.
+	{count} more types	{count} typer mere
+	Additional Tools	Yderligere værktøjer
+	Keyboard Shortcuts...	Tastaturgenveje...
+	Keyboard Shortcuts	Tastaturgenveje
+	Replaces the shortcut of {commands}	Erstatter genvejen for {commands}
+	Needs Ctrl, Alt or a function key	Kræver Ctrl, Alt eller en funktionstast
+	Press the keys	Tryk på tasterne
+	Back to DraftCraft's shortcut	Tilbage til DraftCrafts genvej
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	En genvej, du angiver, har forrang for DraftCrafts egen. Ændringer træder i kraft med det samme og gemmes til næste gang.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Når det er slået fra, gør et højreklik under en kommando det, som Tilpasning af højreklik angiver for kommandotilstand.
+	Right-Click Customization...	Tilpasning af højreklik...
+	Right-Click Customization	Tilpasning af højreklik
+	Turn on time-sensitive right-click	Slå tidsfølsomt højreklik til
+	Longer click duration:	Længere klikvarighed:
+	milliseconds	millisekunder
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Mens en kommando kører, er et hurtigt klik Enter, og et længere klik åbner genvejsmenuen.
+	Default Mode	Standardtilstand
+	No objects selected and no command running:	Ingen objekter markeret og ingen kommando kører:
+	Edit Mode	Redigeringstilstand
+	Objects selected and no command running:	Objekter markeret og ingen kommando kører:
+	Repeat last command	Gentag sidste kommando
+	Shortcut Menu	Genvejsmenu
+	Command Mode	Kommandotilstand
+	While a command runs:	Mens en kommando kører:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Genvejsmenu: altid aktiveret
+	Shortcut Menu: enabled when command options are present	Genvejsmenu: aktiveret, når der er kommandoindstillinger
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Import: der er ingen fildialog her; kør ALIASEDIT med filens indhold i dens text-parameter.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Aliasser gemmes i din DraftCraft-profil og bevares efter genstart.
+	Import…	Importer…
+	Run ALIASEDIT with the file's contents using its text parameter.	Kør ALIASEDIT med filens indhold i dens text-parameter.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Import af en fil erstatter dine {n} aliasser og alle ændringer, der endnu ikke er anvendt.
+	Import and replace	Importer og erstat
+	Keep my aliases	Behold mine aliasser
+	{n} more warnings; see the command line.	{n} advarsler mere; se kommandolinjen.
