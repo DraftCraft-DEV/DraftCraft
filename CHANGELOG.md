@@ -12,6 +12,7 @@ How to write it (see AGENTS.md):
 ## Unreleased
 
 ### New
+- The interface in 17 more languages: Bengali, Guarani, Hebrew, Hindi, Icelandic, Lao, Latvian, Lithuanian, Macedonian, Marathi, Nepali, Persian, Romanian, Slovenian, Telugu, Thai and Urdu. Languages in their own script need a font for it, installed or built in; they have not been reviewed by native speakers yet.
 - The interface in 28 more languages: Afrikaans, Albanian, Azerbaijani, Belarusian, Bulgarian, Catalan, Croatian, Danish, Dutch, Estonian, Filipino, Finnish, Galician, Indonesian, Japanese, Kazakh, Kyrgyz, Malay, Mongolian, Norwegian Bokmål, Serbian (Cyrillic and Latin), Slovak, Somali, Swahili, Tajik, Uzbek and Zulu. They have not been reviewed by native speakers yet.
 
 ### Fixed

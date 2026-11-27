@@ -1,7 +1,8 @@
 # Interface languages
 
 Choose **Edit → Interface Language** and select **Auto (system language)**, **English**,
-**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **繁體中文** (Traditional Chinese), **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), **Polski** (Polish), **ქართული** (Georgian), **தமிழ்** (Tamil), **Afrikaans**, **Azərbaycan dili** (Azerbaijani), **Беларуская** (Belarusian), **Български** (Bulgarian), **Català** (Catalan), **Dansk** (Danish), **Eesti** (Estonian), **Suomi** (Finnish), **Filipino**, **Galego** (Galician), **Hrvatski** (Croatian), **Bahasa Indonesia**, **日本語** (Japanese), **Қазақ тілі** (Kazakh), **Кыргызча** (Kyrgyz), **Монгол** (Mongolian), **Bahasa Melayu** (Malay), **Norsk bokmål** (Norwegian), **Nederlands** (Dutch), **Slovenčina** (Slovak), **Soomaali** (Somali), **Shqip** (Albanian), **Српски (ћирилица)** and **Srpski (latinica)** (Serbian), **Kiswahili** (Swahili), **Тоҷикӣ** (Tajik), **O‘zbekcha** (Uzbek) or **isiZulu** (Zulu).
+**Українська**, **Português (Brasil)**, **Deutsch**, **Español**, **Čeština** (Czech), **Русский**, **Français**, **简体中文**, **繁體中文** (Traditional Chinese), **Italiano**, **한국어** (Korean), **Svenska** (Swedish), **العربية** (Arabic), **Magyar** (Hungarian), **Türkçe** (Turkish), **Ελληνικά** (Greek), **Polski** (Polish), **ქართული** (Georgian), **தமிழ்** (Tamil), **Afrikaans**, **Azərbaycan dili** (Azerbaijani), **Беларуская** (Belarusian), **Български** (Bulgarian), **Català** (Catalan), **Dansk** (Danish), **Eesti** (Estonian), **Suomi** (Finnish), **Filipino**, **Galego** (Galician), **Hrvatski** (Croatian), **Bahasa Indonesia**, **日本語** (Japanese), **Қазақ тілі** (Kazakh), **Кыргызча** (Kyrgyz), **Монгол** (Mongolian), **Bahasa Melayu** (Malay), **Norsk bokmål** (Norwegian), **Nederlands** (Dutch), **Slovenčina** (Slovak), **Soomaali** (Somali), **Shqip** (Albanian), **Српски (ћирилица)** and **Srpski (latinica)** (Serbian), **Kiswahili** (Swahili), **Тоҷикӣ** (Tajik), **O‘zbekcha** (Uzbek), **isiZulu** (Zulu), **বাংলা** (Bengali), **فارسی** (Persian), **Avañe'ẽ** (Guarani), **עברית** (Hebrew), **हिन्दी** (Hindi), **Íslenska** (Icelandic), **ລາວ** (Lao), **Lietuvių** (Lithuanian), **Latviešu** (Latvian), **Македонски** (Macedonian), **मराठी** (Marathi), **नेपाली** (Nepali), **Română** (Romanian), **Slovenščina** (Slovenian), **తెలుగు** (Telugu), **ไทย** (Thai) or **اردو** (Urdu).
+Hebrew, Hindi, Marathi, Nepali, Bengali, Telugu, Thai, Lao, Persian and Urdu need a font for their script: an installed one (Segoe UI or Arial Hebrew; Nirmala UI or Kohinoor; Leelawadee UI or Thonburi; Noto Sans for the script on Linux) or the craft-fonts face that carries it, which release builds embed. Guarani, like Azerbaijani, needs an installed interface font with its letters ẽ and ỹ. Without one, the interface stays in English and the status line says why. Hebrew, Persian and Urdu are right-to-left and are laid out as Arabic is.
 Japanese needs an installed Japanese or CJK font (Yu Gothic or Meiryo on Windows, Hiragino on macOS, IPAGothic or Noto Sans CJK on Linux) or a craft-fonts Japanese face; without one it behaves like Georgian and Tamil below. Azerbaijani needs an installed interface font with the letter ə (Segoe UI, Arial, SF, DejaVu Sans or Noto Sans; egui's bundled faces lack it), as Vietnamese needs one with its letters. Uzbek is written with ‘ (U+2018) for oʻ and gʻ, which every bundled face has.
 Georgian needs the Georgian face from the optional craft-fonts build input (release and web builds have it), and Tamil an installed Tamil font (Nirmala UI on Windows, Tamil Sangam MN on macOS, Noto Sans Tamil on Linux) or the craft-fonts Tamil face; without one the choice is kept, the interface stays in English and the status line says why.
 The interface updates without restarting, including the native macOS menus.
@@ -15,7 +16,7 @@ browser's `navigator.languages` on the web. BCP 47 and POSIX tags select their p
 `cs-CZ` and `cs_CZ.UTF-8` → `cs`, `it-IT` and `it_CH.UTF-8` → `it`, `ko-KR` and `ko_KR.UTF-8` → `ko`,
 `sv-SE`, `sv-FI` and `sv_SE.UTF-8` → `sv`, `hu-HU` and `hu_HU.UTF-8` → `hu`, `tr-TR` and `tr_TR.UTF-8` → `tr`. Chinese also follows its
 script or region: `zh-TW`, `zh-HK`, `zh-MO`, `zh-Hant` and `zh_TW.UTF-8` → `zh-TW` (Traditional), any other
-`zh` tag → `zh` (Simplified). Serbian follows its script: `sr-Latn` and `sr_RS@latin` → `sr-Latn`, any other `sr` tag → `sr` (Cyrillic). `no` and `nn` select Norwegian Bokmål (`nb`), `tl` Filipino (`fil`) and `in` Indonesian (`id`). Unsupported languages fall back to English.
+`zh` tag → `zh` (Simplified). Serbian follows its script: `sr-Latn` and `sr_RS@latin` → `sr-Latn`, any other `sr` tag → `sr` (Cyrillic). `no` and `nn` select Norwegian Bokmål (`nb`), `tl` Filipino (`fil`), `in` Indonesian (`id`) and `iw` Hebrew (`he`). Unsupported languages fall back to English.
 Set `DRAFTCRAFT_LOCALE=cs-CZ` to override the desktop's locale for a launch.
 An explicit saved language choice takes precedence over that override.
 
@@ -26,7 +27,7 @@ Automation can select the language through the existing control channel:
 ```
 
 The `ui.set` method also accepts `{"interfaceLanguage":"cs"}`. Supported values are `auto`,
-`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `zh-TW`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `el`, `pl`, `ka`, `ta`, `bs`, `vi`, `af`, `az`, `be`, `bg`, `ca`, `da`, `et`, `fi`, `fil`, `gl`, `hr`, `id`, `ja`, `kk`, `ky`, `mn`, `ms`, `nb`, `nl`, `sk`, `so`, `sq`, `sr`, `sr-Latn`, `sw`, `tg`, `uz` and `zu`; invalid values are rejected without changing the current
+`en`, `uk`, `pt-BR`, `de`, `es`, `cs`, `ru`, `fr`, `zh`, `zh-TW`, `it`, `ko`, `sv`, `ar`, `hu`, `tr`, `el`, `pl`, `ka`, `ta`, `bs`, `vi`, `af`, `az`, `be`, `bg`, `ca`, `da`, `et`, `fi`, `fil`, `gl`, `hr`, `id`, `ja`, `kk`, `ky`, `mn`, `ms`, `nb`, `nl`, `sk`, `so`, `sq`, `sr`, `sr-Latn`, `sw`, `tg`, `uz`, `zu`, `bn`, `fa`, `gn`, `he`, `hi`, `is`, `lo`, `lt`, `lv`, `mk`, `mr`, `ne`, `ro`, `sl`, `te`, `th` and `ur`; invalid values are rejected without changing the current
 selection. Resetting palettes keeps the language choice.
 
 ## Translation coverage
@@ -35,6 +36,10 @@ selection. Resetting palettes keeps the language choice.
 nl, sk, so, sq, sr, sr-Latn, sw, tg, uz, zu) were written by WithShalom (Shalom) with Claude Code, straight from
 DraftCraft's English strings, about 1,690 rows each. No other product's translations were used. None has been
 reviewed by a native speaker yet; `docs/localization-roadmap.md` lists what to check in each.
+
+**The 17 languages of wave 2** (bn, fa, gn, he, hi, is, lo, lt, lv, mk, mr, ne, ro, sl, te, th, ur) were written the
+same way. Seven of them brought new plural rules: Lithuanian and Latvian (three forms), Slovenian (four), Romanian (three,
+with "de" from 20), Hebrew (one, two, other), and Icelandic and Macedonian (one for counts ending in 1 except 11).
 
 The catalogs cover command and menu labels, tool groups and tooltips, the Start page,
 file and model-space tabs, status controls, object snaps, drafting prompts, property labels,
