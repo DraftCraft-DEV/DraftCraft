@@ -252,6 +252,23 @@ fn assert_additional_locale_aliases() {
         ("tg", &["tg", "tg-TJ", "tg_TJ.UTF-8"]),
         ("uz", &["uz", "uz-UZ", "uz-Latn-UZ", "uz_UZ.UTF-8"]),
         ("zu", &["zu", "zu-ZA", "zu_ZA.UTF-8"]),
+        ("bn", &["bn", "bn-BD", "bn_IN.UTF-8", "BN-in"]),
+        ("fa", &["fa", "fa-IR", "fa_IR.UTF-8", "fa-AF"]),
+        ("gn", &["gn", "gn-PY", "gn_PY.UTF-8"]),
+        ("he", &["he", "he-IL", "he_IL.UTF-8", "iw", "iw-IL"]),
+        ("hi", &["hi", "hi-IN", "hi_IN.UTF-8"]),
+        ("is", &["is", "is-IS", "is_IS.UTF-8"]),
+        ("lo", &["lo", "lo-LA", "lo_LA.UTF-8"]),
+        ("lt", &["lt", "lt-LT", "lt_LT.UTF-8"]),
+        ("lv", &["lv", "lv-LV", "lv_LV.UTF-8"]),
+        ("mk", &["mk", "mk-MK", "mk_MK.UTF-8"]),
+        ("mr", &["mr", "mr-IN", "mr_IN.UTF-8"]),
+        ("ne", &["ne", "ne-NP", "ne_NP.UTF-8", "ne-IN"]),
+        ("ro", &["ro", "ro-RO", "ro_RO.UTF-8", "ro-MD"]),
+        ("sl", &["sl", "sl-SI", "sl_SI.UTF-8"]),
+        ("te", &["te", "te-IN", "te_IN.UTF-8"]),
+        ("th", &["th", "th-TH", "th_TH.UTF-8"]),
+        ("ur", &["ur", "ur-PK", "ur_PK.UTF-8", "ur-IN"]),
         ("zh", &["zh", "zh-CN", "zh_CN.UTF-8", "zh-SG", "zh-Hans", "zh-Hans-CN", "zh-Hans-HK", "zh_CN@pinyin"]),
         ("zh-TW", &["zh-TW", "zh_TW.UTF-8", "ZH-tw", " zh-TW ", "zh-HK", "zh_HK.UTF-8", "zh-MO", "zh-Hant", "zh-Hant-TW", "zh-Hant-HK"]),
     ] {
@@ -338,6 +355,16 @@ fn plural_rules_pick_the_cldr_form() {
     let uk = [0, 1, 2, 4, 5, 11, 12, 14, 21, 22, 25, 101, 111, 114, u64::MAX].map(plural_uk);
     assert_eq!(uk, [2, 0, 1, 1, 2, 2, 2, 2, 0, 1, 2, 0, 2, 2, 2]);
     assert_eq!([0, 1, 2, 5, 21, u64::MAX].map(plural_pt), [0, 0, 1, 1, 1, 1]);
+    let counts = [0, 1, 2, 3, 4, 5, 10, 11, 12, 19, 20, 21, 22, 101, 102, 103, 111, 112, 120];
+    assert_eq!(counts.map(plural_lt), [2, 0, 1, 1, 1, 1, 2, 2, 2, 2, 2, 0, 1, 0, 1, 1, 2, 2, 2]);
+    assert_eq!(counts.map(plural_lv), [0, 1, 2, 2, 2, 2, 0, 0, 0, 0, 0, 1, 2, 1, 2, 2, 0, 0, 0]);
+    assert_eq!(counts.map(plural_sl), [3, 0, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 0, 1, 2, 3, 3, 3]);
+    assert_eq!(counts.map(plural_ro), [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 1, 1, 1, 1, 1, 2]);
+    assert_eq!(counts.map(plural_he), [2, 0, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2]);
+    assert_eq!(counts.map(plural_is), [1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 0, 1, 1, 1, 1, 1]);
+    assert_eq!([u64::MAX].map(plural_lt), [2]);
+    // u64::MAX ends in 15: few.
+    assert_eq!([u64::MAX].map(plural_ro), [1]);
     let fil = [0, 1, 2, 3, 4, 5, 6, 9, 10, 14, 16, 19, 24, 101, u64::MAX].map(crate::i18n::plural_fil);
     assert_eq!(fil, [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0]);
     assert_eq!([0, 1, 2, 4, 5, 11, 21, 22, 25, u64::MAX].map(plural_cs), [2, 0, 1, 1, 2, 2, 2, 2, 2, 2]);
@@ -538,7 +565,7 @@ fn dialogs_render_in_every_language_and_keep_their_source_ids() {
 #[test]
 fn interface_fonts_cover_every_letter_in_each_catalog() {
     for language in translated() {
-        let extra_font = ["ko", "zh", "zh-TW", "ar", "vi", "ka", "ta", "ja", "az"].contains(&language.code);
+        let extra_font = ["ko", "zh", "zh-TW", "ar", "vi", "ka", "ta", "ja", "az", "gn", "he", "hi", "mr", "ne", "bn", "te", "th", "lo", "fa", "ur"].contains(&language.code);
         if extra_font && !crate::theme::can_show(language.code) {
             continue;
         }
@@ -771,5 +798,58 @@ fn polish_plural_forms() {
     for (n, expected) in [(0, 2), (1, 0), (2, 1), (4, 1), (5, 2), (12, 2), (14, 2), (21, 2), (22, 1), (24, 1), (25, 2), (101, 2), (102, 1), (112, 2)]
     {
         assert_eq!(plural_pl(n), expected, "n={n}");
+    }
+}
+
+/// Every language in a script egui's bundled faces lack shows only with a font for it, an installed
+/// one ([`crate::theme::script_font`], [`crate::theme::latin_font`]) or the craft-fonts face that
+/// carries the script. Without one the interface stays English, the status line says why and the
+/// picker reads the English name; with one the interface switches and reads the native name.
+#[test]
+fn languages_in_other_scripts_need_a_font_and_say_why() {
+    let cases = [
+        (Preference::Hebrew, "he", "עברית", "Hebrew", "No Hebrew font"),
+        (Preference::Hindi, "hi", "हिन्दी", "Hindi", "No Devanagari font"),
+        (Preference::Marathi, "mr", "मराठी", "Marathi", "No Devanagari font"),
+        (Preference::Nepali, "ne", "नेपाली", "Nepali", "No Devanagari font"),
+        (Preference::Bengali, "bn", "বাংলা", "Bengali", "No Bengali font"),
+        (Preference::Telugu, "te", "తెలుగు", "Telugu", "No Telugu font"),
+        (Preference::Thai, "th", "ไทย", "Thai", "No Thai font"),
+        (Preference::Lao, "lo", "ລາວ", "Lao", "No Lao font"),
+        (Preference::Persian, "fa", "فارسی", "Persian", "Arabic-script font"),
+        (Preference::Urdu, "ur", "اردو", "Urdu", "Arabic-script font"),
+        (Preference::Guarani, "gn", "Avañe'ẽ", "Guarani", "ẽ and ỹ"),
+    ];
+    for (preference, code, native, english, why) in cases {
+        assert_eq!(Preference::parse(code), Some(preference));
+        assert_eq!(preference.native_name(), native);
+        // A Latin-script name shows wherever the loaded system font has its letters (as Tiếng Việt
+        // does); a name in another script only in an interface in that script.
+        let in_english = if code == "gn" && crate::theme::shows_latin("gn", "en") { native } else { english };
+        assert_eq!(with_language("en", || preference.name()), in_english, "{code}");
+        let mut app = CadApp::new(Session::new(), Services::default());
+        let r = app.run("ui.language", json!({"lang": code})).unwrap();
+        let shown = crate::theme::can_show(code);
+        assert_eq!(r["interfaceLanguage"], code);
+        assert_eq!(r["shown"], if shown { code } else { "en" }, "{code}");
+        if shown {
+            assert_eq!(with_language(code, || preference.name()), native, "{code}");
+        } else {
+            assert!(app.status.as_ref().is_some_and(|(s, _)| s.contains(why)), "{code}: {:?}", app.status);
+            assert_eq!(with_language(code, || preference.name()), english, "{code}");
+        }
+    }
+}
+
+/// Latin and Cyrillic languages added with wave 2 need no extra font, and their counts take the
+/// forms of their own plural rule.
+#[test]
+fn wave_two_counts_take_their_own_forms() {
+    for (code, forms) in [("lt", 3), ("lv", 3), ("sl", 4), ("ro", 3), ("he", 3), ("is", 2), ("mk", 2), ("fa", 2), ("ur", 2), ("gn", 1)] {
+        let language = LANGUAGES.iter().find(|l| l.code == code).unwrap();
+        assert_eq!(language.plural_forms, forms, "{code}");
+    }
+    for code in ["lt", "lv", "sl", "ro", "is", "mk"] {
+        assert!(crate::theme::can_show(code), "{code}");
     }
 }

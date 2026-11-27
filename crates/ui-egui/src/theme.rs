@@ -333,8 +333,8 @@ pub fn install_fonts(ctx: &egui::Context, language: &str) {
             if language == "vi" && vietnamese_font() != Some(std::path::Path::new(path)) {
                 continue;
             }
-            // Azərbaycan dili likewise takes the first one with ə.
-            if language == "az" && azerbaijani_font() != Some(std::path::Path::new(path)) {
+            // Azərbaycan dili and Avañe'ẽ likewise take the first one with their letters.
+            if !extra_latin_letters(language).is_empty() && latin_font(language) != Some(std::path::Path::new(path)) {
                 continue;
             }
             if let Ok(bytes) = std::fs::read(path) {
@@ -379,6 +379,11 @@ pub fn install_fonts(ctx: &egui::Context, language: &str) {
             && let Some(bytes) = tamil_font().and_then(|p| read_capped(p, MAX_UI_FONT_BYTES))
         {
             added.push(("system-tamil".into(), std::sync::Arc::new(egui::FontData::from_owned(bytes))));
+        }
+        // עברית, हिन्दी, বাংলা, తెలుగు, ไทย, ລາວ, فارسی, اردو: an installed face for the script, for
+        // that interface only.
+        if let Some(bytes) = script_font(language).and_then(|p| read_capped(p, MAX_UI_FONT_BYTES)) {
+            added.push(("system-script".into(), std::sync::Arc::new(egui::FontData::from_owned(bytes))));
         }
     }
     let embedded: Vec<_> = draftcraft_fonts::CRAFT_FONTS.iter().collect();
@@ -477,46 +482,58 @@ pub fn vietnamese_font() -> Option<&'static std::path::Path> {
     None
 }
 
-/// Whether `face` has ə and Ə, the one Azerbaijani letter egui's bundled faces lack.
-#[cfg(not(target_arch = "wasm32"))]
-fn covers_azerbaijani(face: &draftcraft_fonts::ttf::Face) -> bool {
-    ['ə', 'Ə'].into_iter().all(|c| face.has_glyph(c))
+/// The letters a Latin-script interface needs beyond egui's bundled faces: Azerbaijani ə, and
+/// Guarani's nasal ẽ and ỹ with the combining tilde of g̃ (the bundled Hack face has those, but only
+/// as a monospaced fallback that cannot place the tilde on a proportional g).
+fn extra_latin_letters(language: &str) -> &'static [char] {
+    match language {
+        "az" => &['ə', 'Ə'],
+        "gn" => &['ẽ', 'Ẽ', 'ỹ', 'Ỹ', '\u{303}'],
+        _ => &[],
+    }
 }
 
-/// The system interface font the Azerbaijani interface takes: the first of
-/// [`system_ui_candidates`] whose first face has ə (Segoe UI, Arial, SF, DejaVu Sans and Noto Sans
-/// do). Without one the interface stays English, as for Vietnamese. Checked once.
-pub fn azerbaijani_font() -> Option<&'static std::path::Path> {
+/// The system interface font a Latin-script interface with [`extra_latin_letters`] takes: the
+/// first of [`system_ui_candidates`] whose first face has them (Segoe UI, Arial, SF, DejaVu Sans
+/// and Noto Sans do). Without one the interface stays English, as for Vietnamese. Checked once
+/// per language.
+pub fn latin_font(language: &str) -> Option<&'static std::path::Path> {
     #[cfg(not(target_arch = "wasm32"))]
     {
-        static FOUND: std::sync::OnceLock<Option<std::path::PathBuf>> = std::sync::OnceLock::new();
-        FOUND
+        const LANGUAGES: [&str; 2] = ["az", "gn"];
+        static FOUND: [std::sync::OnceLock<Option<std::path::PathBuf>>; LANGUAGES.len()] = [const { std::sync::OnceLock::new() }; LANGUAGES.len()];
+        let found = FOUND.get(LANGUAGES.iter().position(|l| *l == language)?)?;
+        let letters = extra_latin_letters(language);
+        found
             .get_or_init(|| {
-                let has_schwa = |p: &str| {
+                let covers = |p: &str| {
                     read_capped(std::path::Path::new(p), MAX_UI_FONT_BYTES)
                         .and_then(|bytes| draftcraft_fonts::ttf::faces(&std::sync::Arc::new(bytes)).into_iter().next())
-                        .is_some_and(|face| covers_azerbaijani(&face))
+                        .is_some_and(|face| letters.iter().all(|c| face.has_glyph(*c)))
                 };
-                ui_font_choice(system_ui_candidates(), true, |p| std::path::Path::new(p).is_file(), has_schwa).map(std::path::PathBuf::from)
+                ui_font_choice(system_ui_candidates(), true, |p| std::path::Path::new(p).is_file(), covers).map(std::path::PathBuf::from)
             })
             .as_deref()
     }
     #[cfg(target_arch = "wasm32")]
-    None
+    {
+        let _ = language;
+        None
+    }
 }
 
-/// Whether the interface in `language` shows ə (Azərbaycan dili in the language picker): the
-/// Azerbaijani interface with [`azerbaijani_font`], any other when the system interface font it
-/// loads is that one.
-pub fn shows_azerbaijani(language: &str) -> bool {
+/// Whether the interface in `current` shows the letters of `language` (Azərbaycan dili, Avañe'ẽ in
+/// the language picker): that interface with its [`latin_font`], any other when the system
+/// interface font it loads is that one.
+pub fn shows_latin(language: &str, current: &str) -> bool {
     #[cfg(not(target_arch = "wasm32"))]
     {
         let loaded = || ui_font_choice(system_ui_candidates(), false, |p| std::path::Path::new(p).is_file(), |_| true);
-        azerbaijani_font().is_some_and(|a| language == "az" || loaded().is_some_and(|p| std::path::Path::new(p) == a))
+        latin_font(language).is_some_and(|a| current == language || loaded().is_some_and(|p| std::path::Path::new(p) == a))
     }
     #[cfg(target_arch = "wasm32")]
     {
-        let _ = language;
+        let _ = (language, current);
         false
     }
 }
@@ -564,6 +581,10 @@ fn embedded_ui_faces<'a>(faces: &[&'a draftcraft_fonts::CraftFont], language: &s
     }
     if language == "ta" {
         out.extend(faces.iter().copied().filter(|f| f.style == "Regular" && f.scripts.contains(&"Taml")));
+    }
+    // עברית, हिन्दी, বাংলা, తెలుగు, ไทย, ລາວ, فارسی and اردو: the face for their script.
+    if let Some(script) = ui_script(language) {
+        out.extend(faces.iter().copied().filter(|f| f.style == "Regular" && f.scripts.contains(&script.script)));
     }
     out
 }
@@ -641,44 +662,245 @@ pub fn traditional_chinese_font() -> Option<&'static std::path::Path> {
     None
 }
 
+/// A script some interface languages are written in that egui's bundled faces lack: its ISO 15924
+/// code (the craft-fonts face that carries it), its Unicode block, and where macOS, Windows and
+/// Linux keep fonts for it, in order of preference. Fonts are never bundled; these are only looked
+/// for where the OS or common packages put them.
+pub struct UiScript {
+    pub script: &'static str,
+    block: std::ops::RangeInclusive<char>,
+    macos: &'static [&'static str],
+    windows: &'static [&'static str],
+    linux: &'static [&'static str],
+}
+
+impl UiScript {
+    #[cfg_attr(target_arch = "wasm32", allow(dead_code))]
+    fn candidates(&self) -> &'static [&'static str] {
+        if cfg!(target_os = "macos") {
+            self.macos
+        } else if cfg!(windows) {
+            self.windows
+        } else {
+            self.linux
+        }
+    }
+}
+
+const ARABIC: UiScript = UiScript {
+    script: "Arab",
+    block: '\u{0600}'..='\u{06ff}',
+    macos: &[
+        "/System/Library/Fonts/GeezaPro.ttc",
+        "/System/Library/Fonts/Supplemental/Geeza Pro.ttf",
+        "/System/Library/Fonts/Supplemental/Al Nile.ttc",
+        "/System/Library/Fonts/Supplemental/Baghdad.ttf",
+    ],
+    windows: &[
+        "C:\\Windows\\Fonts\\segoeui.ttf",
+        "C:\\Windows\\Fonts\\tahoma.ttf",
+        "C:\\Windows\\Fonts\\trado.ttf",
+        "C:\\Windows\\Fonts\\arabtype.ttf",
+        "C:\\Windows\\Fonts\\arial.ttf",
+    ],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansArabic-Regular.ttf",
+        "/usr/share/fonts/opentype/noto/NotoSansArabic-Regular.ttf",
+        "/usr/share/fonts/truetype/noto/NotoNaskhArabic-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/TTF/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/amiri/Amiri-Regular.ttf",
+        "/usr/share/fonts/truetype/kacst/KacstOne.ttf",
+    ],
+};
+
+const HEBREW: UiScript = UiScript {
+    script: "Hebr",
+    block: '\u{0590}'..='\u{05ff}',
+    macos: &[
+        "/System/Library/Fonts/ArialHB.ttc",
+        "/System/Library/Fonts/Supplemental/Arial Hebrew.ttc",
+        "/System/Library/Fonts/Supplemental/Raanana.ttc",
+    ],
+    windows: &["C:\\Windows\\Fonts\\segoeui.ttf", "C:\\Windows\\Fonts\\arial.ttf", "C:\\Windows\\Fonts\\tahoma.ttf", "C:\\Windows\\Fonts\\david.ttf"],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansHebrew-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansHebrew-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansHebrew-Regular.ttf",
+        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
+        "/usr/share/fonts/TTF/DejaVuSans.ttf",
+        "/usr/share/fonts/truetype/culmus/NachlieliCLM-Light.otf",
+        "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+    ],
+};
+
+const DEVANAGARI: UiScript = UiScript {
+    script: "Deva",
+    block: '\u{0900}'..='\u{097f}',
+    macos: &[
+        "/System/Library/Fonts/Kohinoor.ttc",
+        "/System/Library/Fonts/Supplemental/Devanagari Sangam MN.ttc",
+        "/System/Library/Fonts/Supplemental/DevanagariMT.ttc",
+    ],
+    windows: &[
+        "C:\\Windows\\Fonts\\Nirmala.ttc",
+        "C:\\Windows\\Fonts\\Nirmala.ttf",
+        "C:\\Windows\\Fonts\\mangal.ttf",
+        "C:\\Windows\\Fonts\\aparaj.ttf",
+    ],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansDevanagari-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansDevanagari-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansDevanagari-Regular.ttf",
+        "/usr/share/fonts/truetype/lohit-devanagari/Lohit-Devanagari.ttf",
+        "/usr/share/fonts/lohit-devanagari/Lohit-Devanagari.ttf",
+        "/usr/share/fonts/truetype/lohit-marathi/Lohit-Marathi.ttf",
+        "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+    ],
+};
+
+const BENGALI: UiScript = UiScript {
+    script: "Beng",
+    block: '\u{0980}'..='\u{09ff}',
+    macos: &[
+        "/System/Library/Fonts/KohinoorBangla.ttc",
+        "/System/Library/Fonts/Supplemental/Bangla Sangam MN.ttc",
+        "/System/Library/Fonts/Supplemental/Bangla MN.ttc",
+    ],
+    windows: &["C:\\Windows\\Fonts\\Nirmala.ttc", "C:\\Windows\\Fonts\\Nirmala.ttf", "C:\\Windows\\Fonts\\vrinda.ttf"],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansBengali-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansBengali-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansBengali-Regular.ttf",
+        "/usr/share/fonts/truetype/lohit-bengali/Lohit-Bengali.ttf",
+        "/usr/share/fonts/lohit-bengali/Lohit-Bengali.ttf",
+        "/usr/share/fonts/truetype/freefont/FreeSans.ttf",
+    ],
+};
+
+const TELUGU: UiScript = UiScript {
+    script: "Telu",
+    block: '\u{0c00}'..='\u{0c7f}',
+    macos: &[
+        "/System/Library/Fonts/KohinoorTelugu.ttc",
+        "/System/Library/Fonts/Supplemental/Telugu Sangam MN.ttc",
+        "/System/Library/Fonts/Supplemental/Telugu MN.ttc",
+    ],
+    windows: &["C:\\Windows\\Fonts\\Nirmala.ttc", "C:\\Windows\\Fonts\\Nirmala.ttf", "C:\\Windows\\Fonts\\gautami.ttf"],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansTelugu-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansTelugu-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansTelugu-Regular.ttf",
+        "/usr/share/fonts/truetype/lohit-telugu/Lohit-Telugu.ttf",
+        "/usr/share/fonts/lohit-telugu/Lohit-Telugu.ttf",
+    ],
+};
+
+const THAI: UiScript = UiScript {
+    script: "Thai",
+    block: '\u{0e00}'..='\u{0e7f}',
+    macos: &[
+        "/System/Library/Fonts/Thonburi.ttc",
+        "/System/Library/Fonts/Supplemental/Ayuthaya.ttf",
+        "/System/Library/Fonts/Supplemental/Krungthep.ttf",
+    ],
+    windows: &["C:\\Windows\\Fonts\\LeelawUI.ttf", "C:\\Windows\\Fonts\\leelawad.ttf", "C:\\Windows\\Fonts\\tahoma.ttf"],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansThai-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansThai-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansThai-Regular.ttf",
+        "/usr/share/fonts/opentype/tlwg/Loma.otf",
+        "/usr/share/fonts/truetype/tlwg/Loma.ttf",
+        "/usr/share/fonts/truetype/tlwg/Garuda.ttf",
+    ],
+};
+
+const LAO: UiScript = UiScript {
+    script: "Laoo",
+    block: '\u{0e80}'..='\u{0eff}',
+    macos: &["/System/Library/Fonts/Supplemental/Lao Sangam MN.ttf", "/System/Library/Fonts/Supplemental/LaoMN.ttc"],
+    windows: &["C:\\Windows\\Fonts\\LeelawUI.ttf", "C:\\Windows\\Fonts\\leelawad.ttf", "C:\\Windows\\Fonts\\DokChamp.ttf"],
+    linux: &[
+        "/usr/share/fonts/truetype/noto/NotoSansLao-Regular.ttf",
+        "/usr/share/fonts/noto/NotoSansLao-Regular.ttf",
+        "/usr/share/fonts/google-noto/NotoSansLao-Regular.ttf",
+        "/usr/share/fonts/truetype/lao/Phetsarath_OT.ttf",
+        "/usr/share/fonts/truetype/fonts-lao/Phetsarath_OT.ttf",
+    ],
+};
+
+/// The interface languages that take a [`UiScript`] font, in the order of [`script_font`]'s cache.
+const SCRIPT_LANGUAGES: [&str; 10] = ["he", "hi", "mr", "ne", "bn", "te", "th", "lo", "fa", "ur"];
+
+/// The script `language`'s interface needs a font for, if it is one of [`SCRIPT_LANGUAGES`].
+pub fn ui_script(language: &str) -> Option<&'static UiScript> {
+    match language {
+        "he" => Some(&HEBREW),
+        "hi" | "mr" | "ne" => Some(&DEVANAGARI),
+        "bn" => Some(&BENGALI),
+        "te" => Some(&TELUGU),
+        "th" => Some(&THAI),
+        "lo" => Some(&LAO),
+        "fa" | "ur" => Some(&ARABIC),
+        _ => None,
+    }
+}
+
+/// The letters of `script` that `language`'s interface shows: its catalog and its own name.
+#[cfg_attr(target_arch = "wasm32", allow(dead_code))]
+fn script_letters(language: &str, script: &UiScript) -> std::collections::BTreeSet<char> {
+    crate::i18n::LANGUAGES
+        .iter()
+        .filter(|l| l.code == language)
+        .flat_map(|l| l.source.lines().filter(|line| !line.starts_with('#')).filter_map(|line| line.split('\t').nth(2)).chain([l.name]))
+        .flat_map(str::chars)
+        .filter(|c| script.block.contains(c))
+        .collect()
+}
+
+/// An installed font for the script of `language`'s interface (עברית, हिन्दी, मराठी, नेपाली, বাংলা,
+/// తెలుగు, ไทย, ລາວ, فارسی, اردو): the first of the script's candidates whose first face, the one
+/// egui uses, has every letter of that script the interface shows. Checked once per language.
+pub fn script_font(language: &str) -> Option<&'static std::path::Path> {
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        static FOUND: [std::sync::OnceLock<Option<std::path::PathBuf>>; SCRIPT_LANGUAGES.len()] =
+            [const { std::sync::OnceLock::new() }; SCRIPT_LANGUAGES.len()];
+        let found = FOUND.get(SCRIPT_LANGUAGES.iter().position(|l| *l == language)?)?;
+        let script = ui_script(language)?;
+        found
+            .get_or_init(|| {
+                let letters = script_letters(language, script);
+                let covers = |p: &std::path::Path| {
+                    read_capped(p, MAX_UI_FONT_BYTES)
+                        .and_then(|bytes| draftcraft_fonts::ttf::faces(&std::sync::Arc::new(bytes)).into_iter().next())
+                        .is_some_and(|face| letters.iter().all(|c| face.has_glyph(*c)))
+                };
+                script.candidates().iter().map(std::path::PathBuf::from).find(|p| covers(p))
+            })
+            .as_deref()
+    }
+    #[cfg(target_arch = "wasm32")]
+    {
+        let _ = language;
+        None
+    }
+}
+
+/// Whether the interface in `current` shows the letters of `language`'s own name: only an
+/// interface in the same script loads a font for it, so only there.
+pub fn shows_script(language: &str, current: &str) -> bool {
+    ui_script(language).is_some_and(|s| ui_script(current).is_some_and(|c| c.script == s.script)) && can_show(current) && can_show(language)
+}
+
 /// An installed font with Arabic glyphs, for the العربية interface; fonts are never bundled
 /// (only looked for where the OS or common packages put them). Checked once.
 pub fn arabic_font() -> Option<&'static std::path::Path> {
     #[cfg(not(target_arch = "wasm32"))]
     {
         static FOUND: std::sync::OnceLock<Option<std::path::PathBuf>> = std::sync::OnceLock::new();
-        FOUND
-            .get_or_init(|| {
-                let candidates: &[&str] = if cfg!(target_os = "macos") {
-                    &[
-                        "/System/Library/Fonts/GeezaPro.ttc",
-                        "/System/Library/Fonts/Supplemental/Geeza Pro.ttf",
-                        "/System/Library/Fonts/Supplemental/Al Nile.ttc",
-                        "/System/Library/Fonts/Supplemental/Baghdad.ttf",
-                    ]
-                } else if cfg!(windows) {
-                    &[
-                        "C:\\Windows\\Fonts\\segoeui.ttf",
-                        "C:\\Windows\\Fonts\\tahoma.ttf",
-                        "C:\\Windows\\Fonts\\trado.ttf",
-                        "C:\\Windows\\Fonts\\arabtype.ttf",
-                        "C:\\Windows\\Fonts\\arial.ttf",
-                    ]
-                } else {
-                    &[
-                        "/usr/share/fonts/truetype/noto/NotoSansArabic-Regular.ttf",
-                        "/usr/share/fonts/noto/NotoSansArabic-Regular.ttf",
-                        "/usr/share/fonts/opentype/noto/NotoSansArabic-Regular.ttf",
-                        "/usr/share/fonts/truetype/noto/NotoNaskhArabic-Regular.ttf",
-                        "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
-                        "/usr/share/fonts/TTF/DejaVuSans.ttf",
-                        "/usr/share/fonts/truetype/amiri/Amiri-Regular.ttf",
-                        "/usr/share/fonts/truetype/kacst/KacstOne.ttf",
-                    ]
-                };
-                candidates.iter().map(std::path::PathBuf::from).find(|p| p.is_file())
-            })
-            .as_deref()
+        FOUND.get_or_init(|| ARABIC.candidates().iter().map(std::path::PathBuf::from).find(|p| p.is_file())).as_deref()
     }
     #[cfg(target_arch = "wasm32")]
     None
@@ -906,7 +1128,7 @@ pub fn can_show(language: &str) -> bool {
     match language {
         "ko" => shows_hangul("ko"),
         "vi" => vietnamese_font().is_some(),
-        "az" => azerbaijani_font().is_some(),
+        "az" | "gn" => latin_font(language).is_some(),
         "ar" => arabic_font().is_some() || embedded_script("Arab"),
         "ka" => embedded_script("Geor"),
         "ta" => tamil_font().is_some() || embedded_script("Taml"),
@@ -915,7 +1137,9 @@ pub fn can_show(language: &str) -> bool {
         l if l.starts_with("zh") => {
             cjk_font().is_some() || traditional_chinese_font().is_some() || embedded_script("Hans") || embedded_script("Hant")
         }
-        _ => true,
+        // עברית, हिन्दी, मराठी, नेपाली, বাংলা, తెలుగు, ไทย, ລາວ, فارسی, اردو: an installed font for
+        // the script ([`script_font`]) or the craft-fonts face that carries it.
+        l => ui_script(l).is_none_or(|s| script_font(l).is_some() || embedded_script(s.script)),
     }
 }
 

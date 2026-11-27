@@ -113,9 +113,43 @@ pub enum Preference {
     Uzbek,
     #[serde(rename = "zu")]
     Zulu,
+    #[serde(rename = "bn")]
+    Bengali,
+    #[serde(rename = "fa")]
+    Persian,
+    #[serde(rename = "gn")]
+    Guarani,
+    #[serde(rename = "he")]
+    Hebrew,
+    #[serde(rename = "hi")]
+    Hindi,
+    #[serde(rename = "is")]
+    Icelandic,
+    #[serde(rename = "lo")]
+    Lao,
+    #[serde(rename = "lt")]
+    Lithuanian,
+    #[serde(rename = "lv")]
+    Latvian,
+    #[serde(rename = "mk")]
+    Macedonian,
+    #[serde(rename = "mr")]
+    Marathi,
+    #[serde(rename = "ne")]
+    Nepali,
+    #[serde(rename = "ro")]
+    Romanian,
+    #[serde(rename = "sl")]
+    Slovenian,
+    #[serde(rename = "te")]
+    Telugu,
+    #[serde(rename = "th")]
+    Thai,
+    #[serde(rename = "ur")]
+    Urdu,
 }
 impl Preference {
-    pub const ALL: [Self; 51] = [
+    pub const ALL: [Self; 68] = [
         Self::Auto,
         Self::English,
         Self::Greek,
@@ -167,6 +201,23 @@ impl Preference {
         Self::Tajik,
         Self::Uzbek,
         Self::Zulu,
+        Self::Bengali,
+        Self::Persian,
+        Self::Guarani,
+        Self::Hebrew,
+        Self::Hindi,
+        Self::Icelandic,
+        Self::Lao,
+        Self::Lithuanian,
+        Self::Latvian,
+        Self::Macedonian,
+        Self::Marathi,
+        Self::Nepali,
+        Self::Romanian,
+        Self::Slovenian,
+        Self::Telugu,
+        Self::Thai,
+        Self::Urdu,
     ];
 
     /// Every preference in the order the Interface Language dialog lists them: Auto, then English
@@ -248,6 +299,23 @@ impl Preference {
             Self::Tajik => "tg",
             Self::Uzbek => "uz",
             Self::Zulu => "zu",
+            Self::Bengali => "bn",
+            Self::Persian => "fa",
+            Self::Guarani => "gn",
+            Self::Hebrew => "he",
+            Self::Hindi => "hi",
+            Self::Icelandic => "is",
+            Self::Lao => "lo",
+            Self::Lithuanian => "lt",
+            Self::Latvian => "lv",
+            Self::Macedonian => "mk",
+            Self::Marathi => "mr",
+            Self::Nepali => "ne",
+            Self::Romanian => "ro",
+            Self::Slovenian => "sl",
+            Self::Telugu => "te",
+            Self::Thai => "th",
+            Self::Urdu => "ur",
         }
     }
 
@@ -306,9 +374,9 @@ impl Preference {
                 }
             }
             Self::Afrikaans => "Afrikaans",
-            // ə needs a system interface font that has it ([`crate::theme::azerbaijani_font`]).
+            // ə needs a system interface font that has it ([`crate::theme::latin_font`]).
             Self::Azerbaijani => {
-                if crate::theme::shows_azerbaijani(CURRENT.with(Cell::get)) {
+                if crate::theme::shows_latin("az", CURRENT.with(Cell::get)) {
                     "Azərbaycan dili"
                 } else {
                     "Azerbaijani"
@@ -339,6 +407,91 @@ impl Preference {
             Self::Tajik => "Тоҷикӣ",
             Self::Uzbek => "O‘zbekcha",
             Self::Zulu => "isiZulu",
+            // Languages in a script egui's bundled faces lack read their own name only where a font
+            // for it is loaded ([`crate::theme::shows_script`]); elsewhere the English one.
+            Self::Bengali => {
+                if crate::theme::shows_script("bn", CURRENT.with(Cell::get)) {
+                    "বাংলা"
+                } else {
+                    "Bengali"
+                }
+            }
+            Self::Persian => {
+                if crate::theme::shows_script("fa", CURRENT.with(Cell::get)) {
+                    "فارسی"
+                } else {
+                    "Persian"
+                }
+            }
+            Self::Guarani => {
+                if crate::theme::shows_latin("gn", CURRENT.with(Cell::get)) {
+                    "Avañe'ẽ"
+                } else {
+                    "Guarani"
+                }
+            }
+            Self::Hebrew => {
+                if crate::theme::shows_script("he", CURRENT.with(Cell::get)) {
+                    "עברית"
+                } else {
+                    "Hebrew"
+                }
+            }
+            Self::Hindi => {
+                if crate::theme::shows_script("hi", CURRENT.with(Cell::get)) {
+                    "हिन्दी"
+                } else {
+                    "Hindi"
+                }
+            }
+            Self::Icelandic => "Íslenska",
+            Self::Lao => {
+                if crate::theme::shows_script("lo", CURRENT.with(Cell::get)) {
+                    "ລາວ"
+                } else {
+                    "Lao"
+                }
+            }
+            Self::Lithuanian => "Lietuvių",
+            Self::Latvian => "Latviešu",
+            Self::Macedonian => "Македонски",
+            Self::Marathi => {
+                if crate::theme::shows_script("mr", CURRENT.with(Cell::get)) {
+                    "मराठी"
+                } else {
+                    "Marathi"
+                }
+            }
+            Self::Nepali => {
+                if crate::theme::shows_script("ne", CURRENT.with(Cell::get)) {
+                    "नेपाली"
+                } else {
+                    "Nepali"
+                }
+            }
+            Self::Romanian => "Română",
+            Self::Slovenian => "Slovenščina",
+            Self::Telugu => {
+                if crate::theme::shows_script("te", CURRENT.with(Cell::get)) {
+                    "తెలుగు"
+                } else {
+                    "Telugu"
+                }
+            }
+            Self::Thai => {
+                if crate::theme::shows_script("th", CURRENT.with(Cell::get)) {
+                    "ไทย"
+                } else {
+                    "Thai"
+                }
+            }
+            Self::Urdu => {
+                if crate::theme::shows_script("ur", CURRENT.with(Cell::get)) {
+                    "اردو"
+                } else {
+                    "Urdu"
+                }
+            }
             // Its letters need a Japanese or CJK font; without one the picker reads the English name.
             Self::Japanese => {
                 if crate::theme::can_show("ja") {
@@ -411,6 +564,23 @@ impl Preference {
             Self::Tajik => "tg",
             Self::Uzbek => "uz",
             Self::Zulu => "zu",
+            Self::Bengali => "bn",
+            Self::Persian => "fa",
+            Self::Guarani => "gn",
+            Self::Hebrew => "he",
+            Self::Hindi => "hi",
+            Self::Icelandic => "is",
+            Self::Lao => "lo",
+            Self::Lithuanian => "lt",
+            Self::Latvian => "lv",
+            Self::Macedonian => "mk",
+            Self::Marathi => "mr",
+            Self::Nepali => "ne",
+            Self::Romanian => "ro",
+            Self::Slovenian => "sl",
+            Self::Telugu => "te",
+            Self::Thai => "th",
+            Self::Urdu => "ur",
             Self::Auto => locales.iter().find_map(|s| locale_language(s)).unwrap_or("en"),
         }
     }
@@ -427,7 +597,7 @@ pub struct Language {
     catalog: OnceLock<Catalog<'static>>,
 }
 
-pub static LANGUAGES: [Language; 50] = [
+pub static LANGUAGES: [Language; 67] = [
     Language { code: "en", name: "English", source: "", plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     Language { code: "pl", name: "Polski", source: include_str!("i18n/pl.tsv"), plural: plural_pl, plural_forms: 3, catalog: OnceLock::new() },
     // Greek: one for exactly 1; other for zero and all other integer counts.
@@ -595,6 +765,53 @@ pub static LANGUAGES: [Language; 50] = [
     Language { code: "uz", name: "O‘zbekcha", source: include_str!("i18n/uz.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     // Zulu (CLDR `zu`): one (0, 1), other, the Portuguese rule.
     Language { code: "zu", name: "isiZulu", source: include_str!("i18n/zu.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new() },
+    // বাংলা (Bengali, CLDR `bn`): one (0, 1), other, the Portuguese rule.
+    Language {
+        code: "bn", name: "বাংলা", source: include_str!("i18n/bn.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // فارسی (Persian) is right-to-left like Arabic; CLDR `fa`: one (0, 1), other, the Portuguese rule.
+    Language { code: "fa", name: "فارسی", source: include_str!("i18n/fa.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new() },
+    // Avañe'ẽ (Guarani) rarely marks number on a counted noun, so one form; CLDR has no rule for it.
+    // Its ẽ and ỹ need a system interface font that has them (`theme::can_show`).
+    Language { code: "gn", name: "Avañe'ẽ", source: include_str!("i18n/gn.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // עברית (Hebrew) is right-to-left like Arabic; CLDR `he`: one (1), two (2), other.
+    Language { code: "he", name: "עברית", source: include_str!("i18n/he.tsv"), plural: plural_he, plural_forms: 3, catalog: OnceLock::new() },
+    // हिन्दी (Hindi, CLDR `hi`): one (0, 1), other, the Portuguese rule.
+    Language {
+        code: "hi", name: "हिन्दी", source: include_str!("i18n/hi.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // Icelandic (CLDR `is`): one for counts ending in 1 except 11, other.
+    Language { code: "is", name: "Íslenska", source: include_str!("i18n/is.tsv"), plural: plural_is, plural_forms: 2, catalog: OnceLock::new() },
+    // ລາວ (Lao) doesn't inflect a noun for number, so like Korean it has one form.
+    Language { code: "lo", name: "ລາວ", source: include_str!("i18n/lo.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // Lithuanian (CLDR `lt`): one (1, 21, not 11), few (2–9, 22–29, not 12–19), other.
+    Language { code: "lt", name: "Lietuvių", source: include_str!("i18n/lt.tsv"), plural: plural_lt, plural_forms: 3, catalog: OnceLock::new() },
+    // Latvian (CLDR `lv`): zero (0, 10–20, 30…), one (1, 21, not 11), other.
+    Language { code: "lv", name: "Latviešu", source: include_str!("i18n/lv.tsv"), plural: plural_lv, plural_forms: 3, catalog: OnceLock::new() },
+    // Macedonian (CLDR `mk`, integers): one for counts ending in 1 except 11, other — the Icelandic rule.
+    Language {
+        code: "mk", name: "Македонски", source: include_str!("i18n/mk.tsv"), plural: plural_is, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // मराठी (Marathi, CLDR `mr`): one (1), other, the English rule.
+    Language {
+        code: "mr", name: "मराठी", source: include_str!("i18n/mr.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // नेपाली (Nepali, CLDR `ne`): one (1), other, the English rule.
+    Language {
+        code: "ne", name: "नेपाली", source: include_str!("i18n/ne.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // Romanian (CLDR `ro`): one (1), few (0, 2–19, 101–119…), other (20 and up, "20 de").
+    Language { code: "ro", name: "Română", source: include_str!("i18n/ro.tsv"), plural: plural_ro, plural_forms: 3, catalog: OnceLock::new() },
+    // Slovenian (CLDR `sl`): one (…01), two (…02), few (…03, …04), other.
+    Language { code: "sl", name: "Slovenščina", source: include_str!("i18n/sl.tsv"), plural: plural_sl, plural_forms: 4, catalog: OnceLock::new() },
+    // తెలుగు (Telugu, CLDR `te`): one (1), other, the English rule.
+    Language {
+        code: "te", name: "తెలుగు", source: include_str!("i18n/te.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // ไทย (Thai) doesn't inflect a noun for number, so like Korean it has one form.
+    Language { code: "th", name: "ไทย", source: include_str!("i18n/th.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // اردو (Urdu) is right-to-left like Arabic; CLDR `ur`: one (1), other, the English rule.
+    Language { code: "ur", name: "اردو", source: include_str!("i18n/ur.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
 ];
 
 /// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8`, `pt_BR.UTF-8` and `sr_RS@latin`.
@@ -607,7 +824,7 @@ pub fn locale_language(tag: &str) -> Option<&'static str> {
     let primary = tag.trim().split(['-', '_', '.', '@']).next()?;
     let has = |names: &[&str]| subtags.split(['-', '_']).skip(1).any(|s| names.iter().any(|n| s.eq_ignore_ascii_case(n)));
     // Serbian: Latin script for `Latn` or `@latin`, else Cyrillic. Norwegian `no` and Nynorsk `nn` read
-    // Bokmål; the older `tl` (Tagalog) reads Filipino and `in` Indonesian.
+    // Bokmål; the older `tl` (Tagalog) reads Filipino, `in` Indonesian and `iw` Hebrew.
     if primary.eq_ignore_ascii_case("sr") {
         // POSIX writes the script as a modifier: `sr_RS@latin`.
         let latin = has(&["Latn"]) || tag.to_ascii_lowercase().contains("@latin");
@@ -617,6 +834,7 @@ pub fn locale_language(tag: &str) -> Option<&'static str> {
         "no" | "nn" => "nb",
         "tl" => "fil",
         "in" => "id",
+        "iw" => "he",
         _ => primary,
     };
     if primary.eq_ignore_ascii_case("zh") {
@@ -754,6 +972,62 @@ pub fn plural_arabic(n: u64) -> usize {
         (_, 11..=99) => 4,
         _ => 5,
     }
+}
+
+/// Lithuanian (CLDR `lt`, integers): one (1, 21, not 11), few (2–9, 22–29, not 12–19), other.
+pub fn plural_lt(n: u64) -> usize {
+    let teen = (11..=19).contains(&(n % 100));
+    match n % 10 {
+        1 if !teen => 0,
+        2..=9 if !teen => 1,
+        _ => 2,
+    }
+}
+
+/// Latvian (CLDR `lv`, integers): zero (0, 10–20, 30…), one (1, 21, not 11), other.
+pub fn plural_lv(n: u64) -> usize {
+    if n.is_multiple_of(10) || (11..=19).contains(&(n % 100)) {
+        0
+    } else if n % 10 == 1 {
+        1
+    } else {
+        2
+    }
+}
+
+/// Slovenian (CLDR `sl`): one (…01), two (…02), few (…03, …04), other.
+pub fn plural_sl(n: u64) -> usize {
+    match n % 100 {
+        1 => 0,
+        2 => 1,
+        3 | 4 => 2,
+        _ => 3,
+    }
+}
+
+/// Romanian (CLDR `ro`, integers): one (1), few (0, 2–19, 101–119…), other (20–100, 120…).
+pub fn plural_ro(n: u64) -> usize {
+    if n == 1 {
+        0
+    } else if n == 0 || (1..=19).contains(&(n % 100)) {
+        1
+    } else {
+        2
+    }
+}
+
+/// Hebrew (CLDR `he`, integers): one (1), two (2), other.
+pub fn plural_he(n: u64) -> usize {
+    match n {
+        1 => 0,
+        2 => 1,
+        _ => 2,
+    }
+}
+
+/// Icelandic and Macedonian (CLDR `is`, `mk`, integers): one for counts ending in 1 except 11, other.
+pub fn plural_is(n: u64) -> usize {
+    usize::from(n % 10 != 1 || n % 100 == 11)
 }
 
 /// Filipino (CLDR `fil`): one for 1, 2 and 3 and for any count whose last digit is not 4, 6 or 9.

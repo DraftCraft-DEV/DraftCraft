@@ -34,7 +34,7 @@ concurrency:
 env:
   CARGO_TERM_COLOR: always
   # Open-licensed (SIL OFL 1.1) interface fonts embedded in the build; their licences ship in the packages.
-  CRAFT_FONTS_REF: b076417b5880bd4154bd22f00695b1d28c6bea83
+  CRAFT_FONTS_REF: baf0f2ccd1745893aa6337a35141ec12a23d4fc1
 
 jobs:
   linux:

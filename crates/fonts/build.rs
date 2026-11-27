@@ -4,9 +4,10 @@
 //! (no network). A bad checkout is a warning, or an error with `CRAFT_FONTS_REQUIRED=1`.
 //!
 //! On wasm32 it embeds only BIZ UDPGothic Regular, the `Arab`, `Geor` and `Taml` faces and the
-//! `Thai` Regular faces (about 6.4 MB), to keep the web build within hosting limits (Cloudflare
-//! Pages: 25 MiB per file). The web build has no system fonts, so these are its only fallback for
-//! Japanese, Arabic-script, Georgian, Tamil and Thai text.
+//! `Thai`, `Hebr`, `Deva`, `Beng`, `Telu` and `Laoo` Regular faces (about 8.2 MB), to keep the web
+//! build within hosting limits (Cloudflare Pages: 25 MiB per file). The web build has no system
+//! fonts, so these are its only fallback for Japanese, Arabic-script, Georgian, Tamil, Thai,
+//! Hebrew, Devanagari, Bengali, Telugu and Lao text.
 
 use std::fmt::Write as _;
 use std::path::PathBuf;
@@ -59,8 +60,11 @@ fn craft_fonts(dir: &std::path::Path) -> Result<String, String> {
             continue;
         }
         let has = |script: &str| scripts.split(',').any(|s| s.trim() == script);
-        let web_face =
-            (*family == "BIZ UDPGothic" && *style == "Regular") || has("Arab") || has("Geor") || has("Taml") || (has("Thai") && *style == "Regular");
+        let web_face = (*family == "BIZ UDPGothic" && *style == "Regular")
+            || has("Arab")
+            || has("Geor")
+            || has("Taml")
+            || (["Thai", "Hebr", "Deva", "Beng", "Telu", "Laoo"].iter().any(|s| has(s)) && *style == "Regular");
         if wasm && !web_face {
             continue;
         }
