@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Hebrew (עברית) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  ביטול  
+	  OK  	  אישור  
+	 or [	 או [
+	% of all commits	% מכל הקומיטים
+	* Wildcard Match	* התאמת תווים כלליים
+	*VARIES*	*משתנה*
+	+  |  Top  |  2D Wireframe	+  |  עליון  |  מסגרת תיל דו-ממדית
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	חלון תצוגה אחד
+	2 Points	2 נקודות
+	2 Viewports	2 חלונות תצוגה
+	2D Solid	מוצק דו-ממדי
+	3 Points	3 נקודות
+	3 Viewports	3 חלונות תצוגה
+	3D Face	פאה תלת-ממדית
+	3D Mouse	עכבר תלת-ממדי
+	3D Mouse Navigation	ניווט בעכבר תלת-ממדי
+	3D Mouse...	עכבר תלת-ממדי...
+	3D Operations	פעולות תלת-ממדיות
+	3D Polyline	פוליליין תלת-ממדי
+	3D mouse busy, possibly 3DxWare or missing device permissions	העכבר התלת-ממדי תפוס, ייתכן בגלל 3DxWare או הרשאות התקן חסרות
+	3D mouse connected	העכבר התלת-ממדי מחובר
+	3D mouse disconnected	העכבר התלת-ממדי נותק
+	3D mouse input could not be started	לא ניתן היה להפעיל קלט מעכבר תלת-ממדי
+	3D mouse input is unavailable on this platform	קלט מעכבר תלת-ממדי אינו זמין בפלטפורמה זו
+	4 Viewports	4 חלונות תצוגה
+	< Less than	< קטן מ-
+	<> Not Equal	<> לא שווה
+	= Equals	= שווה
+	> Greater than	> גדול מ-
+	A built-in table: editing it keeps an edited copy in the drawing.	טבלה מובנית: עריכתה שומרת עותק ערוך בשרטוט.
+	A drawing opened from a file keeps that file's format.	שרטוט שנפתח מקובץ שומר על הפורמט של אותו קובץ.
+	A variable name starts with a letter and has only letters, digits and _	שם משתנה מתחיל באות ומכיל רק אותיות, ספרות ו-_
+	About	אודות
+	About DraftCraft	אודות DraftCraft
+	Absolute	מוחלט
+	Accessibility	נגישות
+	Add	הוספה
+	Add Current Scale	הוספת קנה המידה הנוכחי
+	Add Leader	הוספת קו מוביל
+	Add Vertex	הוספת קודקוד
+	Add/Delete Scales...	הוספה/מחיקה של קני מידה...
+	Additional angles	זוויות נוספות
+	Align	יישור
+	Align Text	יישור טקסט
+	Aligned	מיושר
+	All	הכול
+	All Annotation Objects	כל אובייקטי הביאור
+	All Scales	כל קני המידה
+	All Used Layers	כל השכבות שבשימוש
+	All files	כל הקבצים
+	An array that would create more objects than this is refused.	מערך שייצור יותר אובייקטים ממספר זה יידחה.
+	Angle	זווית
+	Angular	זוויתי
+	Annotation Visibility	נראות ביאורים
+	Annotation scale	קנה מידה לביאור
+	Annotative Object Scale	קנה מידה של אובייקט ביאורי
+	Annotative Update	עדכון ביאורי
+	Apparent Intersection	חיתוך נראה
+	Append to current selection set	הוספה לקבוצת הבחירה הנוכחית
+	Apply	החלה
+	Apply to:	החלה על:
+	Apply true color	החלת צבע אמיתי
+	Arc	קשת
+	Arc Length	אורך קשת
+	Area	שטח
+	Arrange Panel	לוח סידור
+	Array	מערך
+	Attach	צירוף
+	Attach DWG...	צירוף DWG...
+	Attribute	תכונה
+	Attribute Definition	הגדרת תכונה
+	Attribute Display	תצוגת תכונות
+	Audit	ביקורת
+	Auto (system language)	אוטומטי (שפת המערכת)
+	Auto Constrain	אילוץ אוטומטי
+	AutoConstrain	אילוץ אוטומטי
+	Automatic save every	שמירה אוטומטית כל
+	Automatic save file location	מיקום קובץ השמירה האוטומטית
+	Axis, End	ציר, קצה
+	Base	בסיס
+	Baseline	קו בסיס
+	Batch Publish	פרסום אצווה
+	Batch Publish...	פרסום אצווה...
+	Binary assets added	נכסים בינאריים שנוספו
+	Binary assets removed	נכסים בינאריים שהוסרו
+	Bind	קשירה
+	Bind...	קשירה...
+	Blend	מיזוג
+	Block	בלוק
+	Block Attribute Manager...	מנהל תכונות בלוק...
+	Block Description...	תיאור בלוק...
+	Block Editor	עורך בלוקים
+	Block Reference	הפניה לבלוק
+	Block...	בלוק...
+	Blocks	בלוקים
+	Blue	כחול
+	Bold	מודגש
+	Boolean	בוליאני
+	Boundary	גבול
+	Boundary...	גבול...
+	Box	תיבה
+	Break	שבירה
+	Break At Point	שבירה בנקודה
+	Bring Above Objects	הבאה מעל אובייקטים
+	Bring Annotations to Front	הבאת ביאורים לחזית
+	Bring to Front	הבאה לחזית
+	Bulleted list	רשימת תבליטים
+	ByBlock	לפי בלוק
+	ByColor	לפי צבע
+	ByLayer	לפי שכבה
+	DraftCraft Help	עזרה של DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft שומר את ההעדפות האלה, את מצבי ההצמדה לאובייקט ואת מתגי השרטוט עבור חשבון המשתמש שלך ומשחזר אותם בעת ההפעלה.
+	Calibrate	כיול
+	Calibrate 3D Mouse	כיול עכבר תלת-ממדי
+	Cancel	ביטול
+	Cartesian (x, y)	קרטזי (x, y)
+	Center	מרכז
+	Center Line	קו מרכז
+	Center Mark	סימון מרכז
+	Center X	מרכז X
+	Center Y	מרכז Y
+	Center Z	מרכז Z
+	Center, Diameter	מרכז, קוטר
+	Center, Radius	מרכז, רדיוס
+	Center, Start, Angle	מרכז, התחלה, זווית
+	Center, Start, End	מרכז, התחלה, סוף
+	Center, Start, Length	מרכז, התחלה, אורך
+	Chamfer	שיפוע
+	Change Space	שינוי מרחב
+	Change to Current Layer	העברה לשכבה הנוכחית
+	Changed: {n}	שונו: {n}
+	Changes apply at once and are kept for next time.	השינויים חלים מיד ונשמרים לפעם הבאה.
+	Circle	עיגול
+	Circumference	היקף
+	Clear	ניקוי
+	Clear Command History	ניקוי היסטוריית הפקודות
+	Reset Suggestion Order	איפוס סדר ההצעות
+	Clear History	ניקוי היסטוריה
+	Clip	קיטום
+	Clip Viewport	קיטום חלון תצוגה
+	Clipboard	לוח העריכה
+	Close	סגירה
+	Close All	סגירת הכול
+	Close All Other Drawings	סגירת כל השרטוטים האחרים
+	Close Array Editing	סגירת עריכת מערך
+	Close Comparison	סגירת ההשוואה
+	Export Comparison	ייצוא ההשוואה
+	Closed	סגור
+	Coincident	מתלכד
+	Collapse Palettes	כיווץ החלוניות
+	Collapse Tool Sets	כיווץ ערכות הכלים
+	Collinear	קולינארי
+	Color	צבע
+	Color 8	צבע 8
+	Color 9	צבע 9
+	Color Index	אינדקס צבע
+	Color-dependent	תלוי צבע
+	Color...	צבע...
+	Command Aliases	כינויי פקודות
+	Command History	היסטוריית פקודות
+	Command Line	שורת הפקודה
+	Command Line History Lines	שורות היסטוריה בשורת הפקודה
+	Command Reference	מדריך פקודות
+	Command line history	היסטוריית שורת הפקודה
+	Commits	קומיטים
+	Company	חברה
+	Compare Drawings...	השוואת שרטוטים...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	תיכון ושרטוט בעזרת מחשב: יישום CAD בקוד פתוח, שפותח בשיטת חדר נקי ונכתב כולו ב-Rust.
+	Concentric	קונצנטרי
+	Cone	חרוט
+	Constraint Bars	סרגלי אילוצים
+	Constraint Settings	הגדרות אילוצים
+	Construction Line	קו עזר
+	Contents	תוכן העניינים
+	Continue	המשך
+	Contributors	תורמים
+	Control Vertices	קודקודי בקרה
+	Convert	המרה
+	Convert to Arc	המרה לקשת
+	Convert to Line	המרה לקו
+	Copy	העתקה
+	Copy Full File Path	העתקת הנתיב המלא של הקובץ
+	Copy History	העתקת ההיסטוריה
+	Copy Layout	העתקת פריסה
+	Copy Nested Objects	העתקת אובייקטים מקוננים
+	Copy Selection	העתקת הבחירה
+	Copy as JSON	העתקה כ-JSON
+	Copy with Base Point	העתקה עם נקודת בסיס
+	Count	ספירה
+	Count List	רשימת ספירה
+	Count Table	טבלת ספירה
+	Create Block	יצירת בלוק
+	Creates a user parameter	יוצר פרמטר משתמש
+	Crosshair size	גודל הסמן הצולב
+	Ctrl+Enter to finish	Ctrl+Enter לסיום
+	Current Scale Only	קנה המידה הנוכחי בלבד
+	Current layer	שכבה נוכחית
+	Current selection	בחירה נוכחית
+	Current: {color}	נוכחי: {color}
+	Cut	גזירה
+	Cut with Base Point	גזירה עם נקודת בסיס
+	Cyan	ציאן
+	Cylinder	גליל
+	DWG	DWG
+	DWG Reference...	הפניית DWG...
+	DXF	DXF
+	Dark	כהה
+	Data Extraction...	חילוץ נתונים...
+	Data Link...	קישור נתונים...
+	Default	ברירת מחדל
+	Default Save Format	פורמט שמירה כברירת מחדל
+	Default Save Version	גרסת שמירה כברירת מחדל
+	Default save version	גרסת שמירה כברירת מחדל
+	Define Attributes	הגדרת תכונות
+	Define Attributes...	הגדרת תכונות...
+	Defined width	רוחב מוגדר
+	Degree	דרגה
+	Degrees of Freedom	דרגות חופש
+	Degrees of freedom: {n}	דרגות חופש: {n}
+	Delete	מחיקה
+	Delete Column	מחיקת עמודה
+	Delete Constraints	מחיקת אילוצים
+	Delete Current Scale	מחיקת קנה המידה הנוכחי
+	Delete Dimension Style	מחיקת סגנון מידה
+	Delete Duplicate Objects	מחיקת אובייקטים כפולים
+	Delete Layer	מחיקת שכבה
+	Delete Layer State	מחיקת מצב שכבות
+	Delete Layout	מחיקת פריסה
+	Delete Row	מחיקת שורה
+	Delete Text Style	מחיקת סגנון טקסט
+	Delta X	דלתא X
+	Delta Y	דלתא Y
+	Description	תיאור
+	Deselect All	ביטול בחירת הכול
+	Detach	ניתוק
+	Diameter	קוטר
+	Dim style	סגנון מידה
+	Dimension	מידה
+	Dimension Break	שבירת מידה
+	Dimension Edit	עריכת מידה
+	Dimension Objects Only	אובייקטי מידה בלבד
+	Dimension Space	ריווח מידות
+	Dimension Style Override	עקיפת סגנון מידה
+	Dimension Style...	סגנון מידה...
+	Dimension Text Edit	עריכת טקסט מידה
+	Dimension style	סגנון מידה
+	Dimensional Constraint	אילוץ ממדי
+	Dimensional Constraint Parameters	פרמטרים של אילוץ ממדי
+	Dimensional Constraints	אילוצים ממדיים
+	Disassociate Dimensions	ניתוק שיוך מידות
+	Display	תצוגה
+	Display name	שם תצוגה
+	Display plot styles	הצגת סגנונות הדפסה
+	Distance	מרחק
+	Divide	חלוקה
+	Do not plot (click: plot)	ללא הדפסה (לחיצה: הדפסה)
+	Donut	טבעת
+	Double-click to edit the description	לחיצה כפולה לעריכת התיאור
+	Down	למטה
+	Drafting	שרטוט
+	Drafting Settings	הגדרות שרטוט
+	Drafting Settings...	הגדרות שרטוט...
+	Draw	ציור
+	Draw Order	סדר ציור
+	Drawing (DWG)	שרטוט (DWG)
+	Drawing (DXF)	שרטוט (DXF)
+	Drawing Limits	גבולות השרטוט
+	Drawing Recovery Manager...	מנהל שחזור שרטוטים...
+	Drawing Template (DWT)	תבנית שרטוט (DWT)
+	Drawing Utilities	כלי שרטוט
+	Drawing as bytes	השרטוט כבתים
+	Drawings (DWG, DXF)	שרטוטים (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	שרטוטים שעדיין אין להם קובץ נשמרים בגרסת ברירת המחדל. 0 דקות מכבה את השמירה האוטומטית.
+	Dynamic	דינמי
+	Dynamic Dimensions	מידות דינמיות
+	Dynamic Input	קלט דינמי
+	Dynamic Input (F12)	קלט דינמי (F12)
+	Edit	עריכה
+	Edit Array	עריכת מערך
+	Edit Attributes...	עריכת תכונות...
+	Edit Table Cell	עריכת תא בטבלה
+	Edit Text...	עריכת טקסט...
+	Elevation	מפלס
+	Ellipse	אליפסה
+	Elliptical Arc	קשת אליפטית
+	Enable 3D mouse navigation	הפעלת ניווט בעכבר תלת-ממדי
+	Enable Dynamic Input (F12)	הפעלת קלט דינמי (F12)
+	End Object Isolation	סיום בידוד אובייקטים
+	End Width	רוחב סיום
+	End X	סוף X
+	End Y	סוף Y
+	End angle	זווית סיום
+	Endpoint	נקודת קצה
+	Enter	Enter
+	Enter Top, Zero or Bottom.	הזן עליון, אפס או תחתון.
+	Enter a fit data option	הזן אפשרות נתוני התאמה
+	Enter a pattern name	הזן שם דוגמה
+	Enter a vertex editing option	הזן אפשרות לעריכת קודקוד
+	Enter an option	הזן אפשרות
+	Enter angle of xline	הזן זווית של קו העזר
+	Enter angle of xline (0)	הזן זווית של קו העזר (0)
+	Enter area of rectangle in current units	הזן שטח מלבן ביחידות הנוכחיות
+	Enter attribute prompt	הזן הנחיית תכונה
+	Enter attribute tag name	הזן שם תגית תכונה
+	Enter attribute value	הזן ערך תכונה
+	Enter block name	הזן שם בלוק
+	Enter constraint type	הזן סוג אילוץ
+	Enter continuity	הזן רציפות
+	Enter default attribute value	הזן ערך ברירת מחדל לתכונה
+	Enter degree of spline	הזן דרגת ספליין
+	Enter delta angle	הזן זווית דלתא
+	Enter delta length	הזן אורך דלתא
+	Enter dimension text	הזן טקסט מידה
+	Enter dimension text (<> = measurement)	הזן טקסט מידה (<> = ערך המדידה)
+	Enter dimension value or [name=expression]	הזן ערך מידה או [name=expression]
+	Enter dimension variable name to override	הזן שם משתנה מידה לעקיפה
+	Enter justification type	הזן סוג יישור
+	Enter leader text	הזן טקסט לקו המוביל
+	Enter mline scale	הזן קנה מידה לקו המרובה
+	Enter mode	הזן מצב
+	Enter name of block to insert	הזן שם בלוק להכנסה
+	Enter new text	הזן טקסט חדש
+	Enter next point	הזן את הנקודה הבאה
+	Enter number of columns	הזן מספר עמודות
+	Enter number of data rows	הזן מספר שורות נתונים
+	Enter number of items	הזן מספר פריטים
+	Enter number of items along path	הזן מספר פריטים לאורך המסלול
+	Enter number of sides	הזן מספר צלעות
+	Enter number of turns	הזן מספר סיבובים
+	Enter percentage length	הזן אורך באחוזים
+	Enter rectangle length	הזן אורך מלבן
+	Enter rectangle width	הזן רוחב מלבן
+	Enter scale factor	הזן מקדם קנה מידה
+	Enter text	הזן טקסט
+	Enter text (use \P for new paragraphs)	הזן טקסט (השתמש ב-\P לפסקאות חדשות)
+	Enter the number of segments	הזן את מספר המקטעים
+	Enter twist direction of helix	הזן כיוון פיתול הסליל
+	Entire drawing	השרטוט כולו
+	Equal	שוויון
+	Erase	מחיקה
+	Evaluate	חישוב
+	Exclude from new selection set	החרגה מקבוצת הבחירה החדשה
+	Explode	פירוק
+	Export	ייצוא
+	Export Table	ייצוא טבלה
+	Export to PDF...	ייצוא ל-PDF...
+	Export...	ייצוא...
+	Expression	ביטוי
+	Extend	הארכה
+	Extension	המשך
+	Extents	היקף מלא
+	External Reference	הפניה חיצונית
+	External References	הפניות חיצוניות
+	Extrude	שיחול
+	File	קובץ
+	File Tab	כרטיסיית קובץ
+	Fillet	עיגול פינה
+	Filter	סינון
+	Filters	מסננים
+	Find and Replace	חיפוש והחלפה
+	Find...	חיפוש...
+	First	ראשון
+	First commit	קומיט ראשון
+	Fit Points	נקודות התאמה
+	Fix	קיבוע
+	Flatten Objects	שיטוח אובייקטים
+	Format	עיצוב
+	Freehand	יד חופשית
+	Freeze	הקפאה
+	Freeze Layer	הקפאת שכבה
+	Freeze in new viewports	הקפאה בחלונות תצוגה חדשים
+	Freeze/Thaw	הקפאה/הפשרה
+	Freeze/Thaw in all viewports	הקפאה/הפשרה בכל חלונות התצוגה
+	Freeze/Thaw in the current viewport	הקפאה/הפשרה בחלון התצוגה הנוכחי
+	From	מנקודה
+	From Template...	מתבנית...
+	General	כללי
+	Geometric Center	מרכז גאומטרי
+	Geometric Constraint	אילוץ גאומטרי
+	Geometric Constraints	אילוצים גאומטריים
+	Geometry	גאומטריה
+	Get Variable	קבלת משתנה
+	Get View	קבלת תצוגה
+	Get from the Drawing	קבלה מהשרטוט
+	Global	גלובלי
+	Global width	רוחב כללי
+	Grab bag	שונות
+	Gradient	מעבר צבעים
+	Gradient...	מעבר צבעים...
+	Grayscale	גווני אפור
+	Green	ירוק
+	Grid (F7)	רשת (F7)
+	Grid Display	תצוגת רשת
+	Grid On (F7)	רשת פעילה (F7)
+	Grid snap	הצמדה לרשת
+	Grid spacing	מרווח רשת
+	Grip Edit	עריכה בידיות
+	Grip Mirror	שיקוף בידית
+	Grip Option	אפשרות ידית
+	Grip Rotate	סיבוב בידית
+	Grip Scale	שינוי קנה מידה בידית
+	Grip Stretch	מתיחה בידית
+	Grip size	גודל ידית
+	Group	קבוצה
+	Group Edit	עריכת קבוצה
+	Group Options	אפשרויות קבוצה
+	Group Selection	בחירת קבוצה
+	Hatch	קווקוו
+	Hatch Edit	עריכת קווקוו
+	Hatch Pattern	דוגמת קווקוו
+	Hatch Patterns	דוגמאות קווקוו
+	Hatch...	קווקוו...
+	Height	גובה
+	Height: {height}	גובה: {height}
+	Helix	סליל
+	Help	עזרה
+	Hide All	הסתרת הכול
+	Hide All Constraint Bars	הסתרת כל סרגלי האילוצים
+	Hide All Dynamic Dimensions	הסתרת כל המידות הדינמיות
+	Hide DraftCraft	הסתרת DraftCraft
+	Hide Layer List	הסתרת רשימת השכבות
+	Hide Objects	הסתרת אובייקטים
+	Hide Others	הסתרת האחרים
+	Hide Palette	הסתרת החלונית
+	Hide Palettes	הסתרת החלוניות
+	History	היסטוריה
+	Hold Shift to add to the selection	החזק Shift כדי להוסיף לבחירה
+	Home	בית
+	Horizontal	אופקי
+	HorizontalDistance	מרחק אופקי
+	How to apply:	אופן ההחלה:
+	ID Point	זיהוי נקודה
+	Import	ייבוא
+	Import...	ייבוא...
+	In	פנימה
+	In-window Menu Bar	שורת תפריטים בתוך החלון
+	Include in new selection set	הכללה בקבוצת הבחירה החדשה
+	Increment angle	זווית תוספת
+	Index Color	צבע אינדקס
+	Index color: {index}	צבע אינדקס: {index}
+	Infer Constraints	הסקת אילוצים
+	Inquiry	בירור
+	Insert	הכנסה
+	Insert Block	הכנסת בלוק
+	Insert Column	הכנסת עמודה
+	Insert Row	הכנסת שורה
+	Insert Table Formula	הכנסת נוסחה לטבלה
+	Insert tab	כרטיסיית הכנסה
+	Insert this block	הכנסת בלוק זה
+	Insertion	נקודת הכנסה
+	Insertion X	הכנסה X
+	Insertion Y	הכנסה Y
+	Insertion Z	הכנסה Z
+	Inspect Constraints	בדיקת אילוצים
+	Inspect Drawing	בדיקת השרטוט
+	Inspection	בדיקה
+	Interface Language	שפת הממשק
+	Interface Theme	ערכת נושא לממשק
+	Interface language	שפת הממשק
+	Interface theme	ערכת נושא לממשק
+	Intersect	חיתוך
+	Intersection	חיתוך
+	Isolate	בידוד
+	Isolate Layer	בידוד שכבה
+	Isolate Objects	בידוד אובייקטים
+	Isometric Drafting	שרטוט איזומטרי
+	Isometric Plane	מישור איזומטרי
+	Isometric snap	הצמדה איזומטרית
+	Jogged	מקוטע
+	Jogged Linear	ליניארי מקוטע
+	Join	חיבור
+	Keep an editable copy of this table in the drawing	שמירת עותק בר-עריכה של טבלה זו בשרטוט
+	Keep the system cursor visible over the drawing area	השארת סמן המערכת גלוי מעל אזור השרטוט
+	Language	שפה
+	Largest array	המערך הגדול ביותר
+	Last	אחרון
+	Last commit	קומיט אחרון
+	Layer	שכבה
+	Layer Delete	מחיקת שכבה
+	Layer Match	התאמת שכבה
+	Layer Merge	מיזוג שכבות
+	Layer Off	כיבוי שכבה
+	Layer Properties	מאפייני שכבה
+	Layer Properties Manager	מנהל מאפייני שכבות
+	Layer Properties Manager — current viewport	מנהל מאפייני שכבות — חלון התצוגה הנוכחי
+	Layer State	מצב שכבות
+	Layer States Manager...	מנהל מצבי שכבות...
+	Layer Tools	כלי שכבות
+	Layer contains objects (double-click to make current)	השכבה מכילה אובייקטים (לחיצה כפולה להפיכתה לנוכחית)
+	Layer is empty (double-click to make current)	השכבה ריקה (לחיצה כפולה להפיכתה לנוכחית)
+	Layers	שכבות
+	Layers Palette	חלונית שכבות
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	שכבות מוצגות: {shown} מתוך {total}.   שכבה נוכחית: {layer}
+	Layout	פריסה
+	Layout list	רשימת פריסות
+	Layout paper	נייר הפריסה
+	Layout {name}: {table}	פריסה {name}: {table}
+	Leader	קו מוביל
+	Leaders Only	קווים מובילים בלבד
+	Left	שמאל
+	Left device button: zoom extents. Right device button: calibrate.	לחצן ההתקן השמאלי: זום להיקף מלא. לחצן ההתקן הימני: כיול.
+	Length	אורך
+	Length X	אורך X
+	Length Y	אורך Y
+	Lengthen	שינוי אורך
+	Light	בהיר
+	Line	קו
+	Line delta	הפרש שורות
+	Linear	ליניארי
+	Lines +/−	שורות +/−
+	Lines added	שורות שנוספו
+	Lines deleted	שורות שנמחקו
+	Lines of Command History	שורות של היסטוריית הפקודות
+	Linetype	סוג קו
+	Linetype Scale	קנה מידה לסוג קו
+	Linetype scale	קנה מידה לסוג קו
+	Linetype...	סוג קו...
+	Lineweight	עובי קו
+	Lineweight...	עובי קו...
+	List	רשימה
+	List Blocks	רשימת בלוקים
+	List Dimension Styles	רשימת סגנונות מידה
+	List Groups	רשימת קבוצות
+	List Layer States	רשימת מצבי שכבות
+	List Layouts	רשימת פריסות
+	List System Variables	רשימת משתני מערכת
+	List Text Styles	רשימת סגנונות טקסט
+	Load all	טעינת הכול
+	Load...	טעינה...
+	Loaded	טעון
+	Loaded linetypes	סוגי קו טעונים
+	Lock	נעילה
+	Lock Layer	נעילת שכבה
+	Lock viewport	נעילת חלון תצוגה
+	Lock/Unlock	נעילה/ביטול נעילה
+	Loft	לופט
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. אינו קשור ל-Autodesk, Inc.
+	MODEL	מודל
+	MText	טקסט מרובה שורות
+	Magenta	מגנטה
+	Major line every	קו ראשי כל
+	Make Current	הפיכה לנוכחי
+	Make Object's Layer Current	הפיכת שכבת האובייקט לנוכחית
+	Make it a block of this drawing, keeping its layer names	הפיכתו לבלוק של שרטוט זה, תוך שמירת שמות השכבות שלו
+	Make it a block of this drawing; its layers become NAME$0$LAYER	הפיכתו לבלוק של שרטוט זה; שכבותיו הופכות ל-NAME$0$LAYER
+	Make...	יצירה...
+	Match Layer	התאמת שכבה
+	Match Properties	התאמת מאפיינים
+	Measure	מדידה
+	Measure Distance	מדידת מרחק
+	Measure Geometry	מדידת גאומטריה
+	Merge Cells	מיזוג תאים
+	Merged PRs	בקשות משיכה שמוזגו
+	Mid Between 2 Points	אמצע בין 2 נקודות
+	Midpoint	נקודת אמצע
+	Mirror	שיקוף
+	Model	מודל
+	Model Space (in viewport)	מרחב המודל (בחלון תצוגה)
+	Model background	רקע המודל
+	Modeling	מידול
+	Models	מודלים
+	Modify	שינוי
+	More toolbar commands	פקודות נוספות בסרגל הכלים
+	Move	הזזה
+	Move sideways to pan; push/pull or twist to zoom.	הזזה לצדדים להזזת התצוגה; דחיפה/משיכה או סיבוב לזום.
+	Multileader	קו מוביל מרובה
+	Multileader Style...	סגנון קו מוביל מרובה...
+	Multileader style	סגנון קו מוביל מרובה
+	Multiline	קו מרובה
+	Multiline Style...	סגנון קו מרובה...
+	Multiline Text	טקסט מרובה שורות
+	Multiline Text...	טקסט מרובה שורות...
+	Multiline...	קו מרובה...
+	Multiple	מרובה
+	Multiple Point	נקודות מרובות
+	My	שלי
+	My properties: not available yet	המאפיינים שלי: עדיין לא זמין
+	Name	שם
+	Name (A–Z)	שם (א–ת)
+	Named	בעלי שם
+	Named Viewports...	חלונות תצוגה בעלי שם...
+	Named Views...	תצוגות בעלות שם...
+	Nearest	הקרוב ביותר
+	New	חדש
+	New (metric)	חדש (מטרי)
+	New CTB	CTB חדש
+	New Drawing	שרטוט חדש
+	New Drawing (⌘N)	שרטוט חדש (⌘N)
+	New Drawing...	שרטוט חדש...
+	New Layer	שכבה חדשה
+	New Layout	פריסה חדשה
+	New STB	STB חדש
+	New VP Freeze	הקפאה בחלונות תצוגה חדשים
+	New Viewports...	חלונות תצוגה חדשים...
+	New from Template...	חדש מתבנית...
+	New layout	פריסה חדשה
+	New state name	שם מצב חדש
+	New style	סגנון חדש
+	Next Change	השינוי הבא
+	No	לא
+	No blocks defined in this drawing.	לא הוגדרו בלוקים בשרטוט זה.
+	No contributor data was built into this copy.	נתוני התורמים לא נכללו בעותק זה.
+	No external references are attached.	לא מצורפות הפניות חיצוניות.
+	No model credits were built into this copy.	קרדיטים של מודלים לא נכללו בעותק זה.
+	No plot style tables.	אין טבלאות סגנונות הדפסה.
+	No saved layer states	אין מצבי שכבות שמורים
+	No selection	אין בחירה
+	No supported 3D mouse found	לא נמצא עכבר תלת-ממדי נתמך
+	Node	צומת
+	None	ללא
+	Normal	רגיל
+	Not Found	לא נמצא
+	Not available	לא זמין
+	Not available yet	עדיין לא זמין
+	Not loaded	לא טעון
+	Numbered list	רשימה ממוספרת
+	OK	אישור
+	Object	אובייקט
+	Object Snap	הצמדה לאובייקט
+	Object Snap (F3)	הצמדה לאובייקט (F3)
+	Object Snap On (F3)	הצמדה לאובייקט פעילה (F3)
+	Object Snap Tracking	מעקב הצמדה לאובייקט
+	Object Snap Tracking (F11)	מעקב הצמדה לאובייקט (F11)
+	Object Snap Tracking Settings	הגדרות מעקב הצמדה לאובייקט
+	Object snap aperture	צמצם הצמדה לאובייקט
+	Object snap marker size	גודל סמן ההצמדה לאובייקט
+	Object type:	סוג אובייקט:
+	Oblique	אלכסוני
+	Off	כבוי
+	Offset	היסט
+	On	פועל
+	On/Off	הפעלה/כיבוי
+	Only in this drawing: {n}	רק בשרטוט זה: {n}
+	Only in {name}: {n}	רק ב-{name}: {n}
+	Oops	שחזור מחוקים
+	Open	פתיחה
+	Open (⌘O)	פתיחה (⌘O)
+	Open Sample Drawing	פתיחת שרטוט לדוגמה
+	Open Xref	פתיחת הפניה חיצונית
+	Open a drawing first.	יש לפתוח שרטוט תחילה.
+	Open and Save	פתיחה ושמירה
+	Open sample drawing	פתיחת שרטוט לדוגמה
+	Open...	פתיחה...
+	Operator:	אופרטור:
+	Options	אפשרויות
+	Options...	אפשרויות...
+	Orbit	סיבוב מסלולי
+	Ordinate	אורדינטה
+	Ortho (F8)	ניצב (F8)
+	Ortho Mode	מצב ניצב
+	Ortho Mode (F8)	מצב ניצב (F8)
+	Osnap Settings...	הגדרות הצמדה לאובייקט...
+	Out	החוצה
+	Over-constrained	מאולץ יתר על המידה
+	Overlay	שכבת על
+	Override	עקיפה
+	PAPER	נייר
+	PRs	בקשות משיכה
+	Page Setup Manager	מנהל הגדרת עמוד
+	Page Setup Manager...	מנהל הגדרת עמוד...
+	Pan	הזזת תצוגה
+	Pan Down	הזזת תצוגה למטה
+	Pan Left	הזזת תצוגה שמאלה
+	Pan Right	הזזת תצוגה ימינה
+	Pan Up	הזזת תצוגה למעלה
+	Pan sensitivity	רגישות הזזת התצוגה
+	Paper Space	מרחב הנייר
+	Parallel	מקביל
+	Parameters Manager	מנהל פרמטרים
+	Parametric	פרמטרי
+	Paste	הדבקה
+	Paste as Block	הדבקה כבלוק
+	Paste to Command Line	הדבקה לשורת הפקודה
+	Paste to Original Coordinates	הדבקה בקואורדינטות המקוריות
+	Path Array	מערך לאורך מסלול
+	Pattern	דוגמה
+	Percent	אחוז
+	Perpendicular	מאונך
+	Pickbox size	גודל תיבת הבחירה
+	Plot	הדפסה
+	Plot (click: do not plot)	הדפסה (לחיצה: ללא הדפסה)
+	Plot Preview	תצוגה מקדימה להדפסה
+	Plot Style Manager	מנהל סגנונות הדפסה
+	Plot Style Manager...	מנהל סגנונות הדפסה...
+	Plot Style...	סגנון הדפסה...
+	Plot Styles...	סגנונות הדפסה...
+	Plot Window	חלון הדפסה
+	Plot style	סגנון הדפסה
+	Plot style attached to	סגנון ההדפסה מצורף אל
+	Plot style table	טבלת סגנונות הדפסה
+	Plot table type	סוג טבלת הדפסה
+	Plotter Manager	מנהל פלוטרים
+	Plotter Manager...	מנהל פלוטרים...
+	Plus/minus	פלוס/מינוס
+	Point	נקודה
+	Point Filters	מסנני נקודה
+	Point Style...	סגנון נקודה...
+	Polar (distance < angle)	קוטבי (מרחק < זווית)
+	Polar Array	מערך קוטבי
+	Polar Tracking	מעקב קוטבי
+	Polar Tracking (F10)	מעקב קוטבי (F10)
+	Polar Tracking On (F10)	מעקב קוטבי פעיל (F10)
+	Polar angle measurement	מדידת זווית קוטבית
+	Polar distance	מרחק קוטבי
+	Polar: {distance} < {angle}°	קוטבי: {distance} < {angle}°
+	PolarSnap	הצמדה קוטבית
+	Polygon	מצולע
+	Polygonal	מצולע
+	Polygonal Viewport	חלון תצוגה מצולע
+	Polyline	פוליליין
+	Polyline Edit	עריכת פוליליין
+	Position X	מיקום X
+	Position Y	מיקום Y
+	Position Z	מיקום Z
+	Previous	הקודם
+	Previous Change	השינוי הקודם
+	Previous Layer	השכבה הקודמת
+	Primitives	גופים בסיסיים
+	Print	הדפסה
+	Print...	הדפסה...
+	Profiles	פרופילים
+	Properties	מאפיינים
+	Properties Inspector	בוחן המאפיינים
+	Properties:	מאפיינים:
+	Proxy	פרוקסי
+	Purge	טיהור
+	Pyramid	פירמידה
+	Quadrant	רביע
+	Query Entities	שאילתת ישויות
+	Quick	מהיר
+	Quick Dimension	מידה מהירה
+	Quick Properties	מאפיינים מהירים
+	Quick Select	בחירה מהירה
+	Quick Select Properties	מאפייני בחירה מהירה
+	Quick Select...	בחירה מהירה...
+	QuickCalc	מחשבון מהיר
+	QuickCalc Pick	בחירה למחשבון המהיר
+	Quit DraftCraft	יציאה מ-DraftCraft
+	Radius	רדיוס
+	Raster Image	תמונת רסטר
+	Ray	קרן
+	Read-only	לקריאה בלבד
+	Real name	שם אמיתי
+	Realtime	בזמן אמת
+	Reassociate Dimensions	שיוך מחדש של מידות
+	Recalculate Table Formulas	חישוב מחדש של נוסחאות הטבלה
+	Recent	אחרונים
+	Recent Commands	פקודות אחרונות
+	Recent Input	קלט אחרון
+	Recover...	שחזור...
+	Rectangle	מלבן
+	Rectangular	מלבני
+	Rectangular Array	מערך מלבני
+	Rectangular snap	הצמדה מלבנית
+	Red	אדום
+	Redo	ביצוע חוזר
+	Redo (⇧⌘Z)	ביצוע חוזר (⇧⌘Z)
+	Redraw	ציור מחדש
+	Reference Manager	מנהל הפניות
+	Reference Name	שם ההפניה
+	References: {n}	הפניות: {n}
+	Regen	יצירה מחדש
+	Regen All	יצירה מחדש של הכול
+	Region	אזור
+	Region/Mass Properties	מאפייני אזור/מסה
+	Reinitialize	אתחול מחדש
+	Relative	יחסי
+	Relative to last segment	יחסית למקטע האחרון
+	Release the 3D mouse to calibrate its resting position	שחרר את העכבר התלת-ממדי כדי לכייל את מצב המנוחה שלו
+	Reload	טעינה מחדש
+	Reload All	טעינה מחדש של הכול
+	Remove	הסרה
+	Remove Leader	הסרת קו מוביל
+	Remove Vertex	הסרת קודקוד
+	Remove the viewport override	הסרת העקיפה של חלון התצוגה
+	Rename Dimension Style	שינוי שם סגנון מידה
+	Rename Layer	שינוי שם שכבה
+	Rename Layer State	שינוי שם מצב שכבות
+	Rename Layout	שינוי שם פריסה
+	Rename Text Style	שינוי שם סגנון טקסט
+	Rename...	שינוי שם...
+	Repeat {command}	חזרה על {command}
+	Replace Block...	החלפת בלוק...
+	Requires a point (x,y, @dx,dy or @d<a).	נדרשת נקודה (x,y, @dx,dy או @d<a).
+	Reset Palettes	איפוס החלוניות
+	Reset Panel Layout	איפוס פריסת הלוחות
+	Reset keeps the interface language.	האיפוס שומר על שפת הממשק.
+	Reset to Defaults	איפוס לברירות המחדל
+	Restore	שחזור
+	Restore Layer State	שחזור מצב שכבות
+	Reverse	היפוך
+	Reverse the order	היפוך הסדר
+	Reverse zoom direction	היפוך כיוון הזום
+	Revision Cloud	ענן תיקונים
+	Revolve	סיבוב סביב ציר
+	Right	ימין
+	Rotate	סיבוב
+	Rotation	סיבוב
+	Run Script...	הרצת סקריפט...
+	SVG drawings (SVG, SVGZ)	שרטוטי SVG (SVG, SVGZ)
+	Save	שמירה
+	Save (⌘S)	שמירה (⌘S)
+	Save As	שמירה בשם
+	Save As...	שמירה בשם...
+	Save Layer State	שמירת מצב שכבות
+	Save State	שמירת מצב
+	Save new drawings as	שמירת שרטוטים חדשים בתור
+	Saved Path	נתיב שמור
+	Scale	קנה מידה
+	Scale List...	רשימת קני מידה...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	זכוכיות מגדלת, קוראי מסך ותוכנות הקלטה עוקבים אחר סמן המערכת.
+	Screening	הבהרה
+	Search for layer	חיפוש שכבה
+	Search for parameter	חיפוש פרמטר
+	Search for pattern	חיפוש דוגמה
+	Second and next points:	נקודה שנייה ונקודות הבאות:
+	Select	בחירה
+	Select 2D polyline	בחר פוליליין דו-ממדי
+	Select All	בחירת הכול
+	Select Objects	בחירת אובייקטים
+	Select Similar	בחירת דומים
+	Select a 2D polyline.	בחר פוליליין דו-ממדי.
+	Select a block reference.	בחר הפניה לבלוק.
+	Select a circle or arc.	בחר עיגול או קשת.
+	Select a closed polyline	בחר פוליליין סגור
+	Select a closed polyline, circle, ellipse or closed spline.	בחר פוליליין סגור, עיגול, אליפסה או ספליין סגור.
+	Select a closed polyline.	בחר פוליליין סגור.
+	Select a curve as the path.	בחר עקומה כמסלול.
+	Select a dimension constraint type	בחר סוג אילוץ ממדי
+	Select a line object	בחר אובייקט קו
+	Select a line object.	בחר אובייקט קו.
+	Select a line or an arc.	בחר קו או קשת.
+	Select a line or polyline segment	בחר קו או מקטע פוליליין
+	Select a line, arc or open polyline.	בחר קו, קשת או פוליליין פתוח.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	בחר קו, קשת, עיגול, פוליליין, אליפסה או ספליין כמסלול.
+	Select a line, circle, arc or polyline segment.	בחר קו, עיגול, קשת או מקטע פוליליין.
+	Select a line.	בחר קו.
+	Select a polyline.	בחר פוליליין.
+	Select a text, mtext, attribute definition or dimension.	בחר טקסט, טקסט מרובה שורות, הגדרת תכונה או מידה.
+	Select an annotation object	בחר אובייקט ביאור
+	Select an arc or circle	בחר קשת או עיגול
+	Select an arc.	בחר קשת.
+	Select an object	בחר אובייקט
+	Select an object to change	בחר אובייקט לשינוי
+	Select an object to measure	בחר אובייקט למדידה
+	Select an object.	בחר אובייקט.
+	Select an open curve.	בחר עקומה פתוחה.
+	Select an open line, arc, polyline, ellipse arc or spline.	בחר קו, קשת, פוליליין, קשת אליפטית או ספליין פתוחים.
+	Select arc or circle	בחר קשת או עיגול
+	Select arc or polyline arc segment	בחר קשת או מקטע קשת של פוליליין
+	Select arc style	בחר סגנון קשת
+	Select arc, circle, line	בחר קשת, עיגול, קו
+	Select at least two objects to join.	בחר לפחות שני אובייקטים לחיבור.
+	Select circle or arc to add center mark	בחר עיגול או קשת להוספת סימון מרכז
+	Select closed objects (regions, closed polylines, circles).	בחר אובייקטים סגורים (אזורים, פוליליינים סגורים, עיגולים).
+	Select first line	בחר קו ראשון
+	Select first line or arc	בחר קו או קשת ראשונים
+	Select first object	בחר אובייקט ראשון
+	Select first point	בחר נקודה ראשונה
+	Select nested objects to copy	בחר אובייקטים מקוננים להעתקה
+	Select object	בחר אובייקט
+	Select object to dimension	בחר אובייקט למתן מידה
+	Select object to divide	בחר אובייקט לחלוקה
+	Select object to extend or shift-select to trim	בחר אובייקט להארכה או בחר עם Shift לקיצוץ
+	Select object to measure	בחר אובייקט למדידה
+	Select object to offset	בחר אובייקט להיסט
+	Select object to trim or shift-select to extend	בחר אובייקט לקיצוץ או בחר עם Shift להארכה
+	Select objects	בחר אובייקטים
+	Select objects (crossing window first corner)	בחר אובייקטים (פינה ראשונה של חלון חוצה)
+	Select objects first, then choose a command	בחר תחילה אובייקטים ולאחר מכן בחר פקודה
+	Select objects to array.	בחר אובייקטים למערך.
+	Select objects to stretch by crossing-window or crossing-polygon...	בחר אובייקטים למתיחה באמצעות חלון חוצה או מצולע חוצה...
+	Select objects:	בחר אובייקטים:
+	Select one polyline (Multiple is available through the JSON form).	בחר פוליליין אחד (בחירה מרובה זמינה דרך צורת JSON).
+	Select path curve	בחר עקומת מסלול
+	Select point or object	בחר נקודה או אובייקט
+	Select polyline	בחר פוליליין
+	Select second line	בחר קו שני
+	Select second line or shift-select to apply corner	בחר קו שני או בחר עם Shift ליצירת פינה
+	Select second object	בחר אובייקט שני
+	Select second object or shift-select to apply corner	בחר אובייקט שני או בחר עם Shift ליצירת פינה
+	Select second point	בחר נקודה שנייה
+	Select spline	בחר ספליין
+	Select symmetry line	בחר קו סימטריה
+	Select two points	בחר שתי נקודות
+	Selection	בחירה
+	Selection Cycling	מעבר מחזורי בין בחירות
+	Send Hatches to Back	שליחת קווקווים לרקע
+	Send Under Objects	שליחה מתחת לאובייקטים
+	Send to Back	שליחה לרקע
+	Services	שירותים
+	Set Current	הגדרה כנוכחי
+	Set Current Dimension Style	הגדרת סגנון המידה הנוכחי
+	Set Current Text Style	הגדרת סגנון הטקסט הנוכחי
+	Set Current Viewport	הגדרת חלון התצוגה הנוכחי
+	Set Layer Properties	הגדרת מאפייני שכבה
+	Set Properties	הגדרת מאפיינים
+	Set Table Cell	הגדרת תא בטבלה
+	Set Table Cell Style	הגדרת סגנון תא בטבלה
+	Set Variable	הגדרת משתנה
+	Set View	הגדרת תצוגה
+	Settings...	הגדרות...
+	Share	שיתוף
+	Show	הצגה
+	Show All	הצגת הכול
+	Show All Constraint Bars	הצגת כל סרגלי האילוצים
+	Show All Dynamic Dimensions	הצגת כל המידות הדינמיות
+	Show Annotative Objects	הצגת אובייקטים ביאוריים
+	Show Layer List	הצגת רשימת השכבות
+	Show Quick Properties for selected objects	הצגת מאפיינים מהירים לאובייקטים שנבחרו
+	Show System Cursor	הצגת סמן המערכת
+	Show and hide the tools of this category	הצגה והסתרה של הכלים בקטגוריה זו
+	Show command prompting near the crosshairs	הצגת הנחיות הפקודה ליד הסמן הצולב
+	Show in Tool Sets	הצגה בערכות הכלים
+	Show/Hide Lineweight	הצגה/הסתרה של עובי קו
+	Show/Hide Transparency	הצגה/הסתרה של שקיפות
+	Single Line Text	טקסט בשורה אחת
+	Single Point	נקודה בודדת
+	Single...	יחיד...
+	Smooth	החלקה
+	Snap	הצמדה
+	Snap Mode	מצב הצמדה
+	Snap Mode (F9)	מצב הצמדה (F9)
+	Snap On (F9)	הצמדה פעילה (F9)
+	Snap Overrides	עקיפות הצמדה
+	Snap X spacing	מרווח הצמדה X
+	Snap and Grid	הצמדה ורשת
+	Snap type	סוג הצמדה
+	Snap, grid, polar tracking and Dynamic Input:	הצמדה, רשת, מעקב קוטבי וקלט דינמי:
+	Solid	מלא
+	Solid Editing	עריכת גופים מוצקים
+	Sort	מיון
+	Specify a point	ציין נקודה
+	Specify a scale for the hatch pattern	ציין קנה מידה לדוגמת הקווקוו
+	Specify a second extension line origin	ציין ראשית של קו הארכה שני
+	Specify an angle for the hatch pattern	ציין זווית לדוגמת הקווקוו
+	Specify angle end point	ציין נקודת סיום של הזווית
+	Specify angle of dimension line	ציין זווית של קו המידה
+	Specify angle of dimension text	ציין זווית של טקסט המידה
+	Specify angle start point	ציין נקודת התחלה של הזווית
+	Specify angle vertex	ציין קודקוד הזווית
+	Specify angle vertex point	ציין נקודת קודקוד הזווית
+	Specify arc length dimension location	ציין מיקום מידת אורך הקשת
+	Specify axis endpoint of ellipse	ציין נקודת קצה של ציר האליפסה
+	Specify base diameter	ציין קוטר בסיס
+	Specify base point	ציין נקודת בסיס
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	ציין נקודת בסיס או תזוזה (גרור עם לחצן העכבר האמצעי להזזת תצוגה בזמן אמת)
+	Specify base radius	ציין רדיוס בסיס
+	Specify center of donut	ציין מרכז הטבעת
+	Specify center of ellipse	ציין מרכז האליפסה
+	Specify center of polygon	ציין מרכז המצולע
+	Specify center point for circle	ציין נקודת מרכז לעיגול
+	Specify center point of arc	ציין נקודת מרכז של הקשת
+	Specify center point of arc (hold Ctrl to switch direction)	ציין נקודת מרכז של הקשת (החזק Ctrl להחלפת כיוון)
+	Specify center point of array	ציין נקודת מרכז של המערך
+	Specify center point of base	ציין נקודת מרכז של הבסיס
+	Specify corner of viewport	ציין פינה של חלון התצוגה
+	Specify corner of window, enter a scale factor (nX or nXP)	ציין פינת חלון, הזן מקדם קנה מידה (nX או nXP)
+	Specify diameter of circle	ציין קוטר העיגול
+	Specify dimension arc line location	ציין מיקום קשת קו המידה
+	Specify dimension line location	ציין מיקום קו המידה
+	Specify distance between turns	ציין מרחק בין סיבובים
+	Specify distance to other axis	ציין מרחק לציר השני
+	Specify end angle	ציין זווית סיום
+	Specify end point of arc	ציין נקודת סיום של הקשת
+	Specify end point of arc (hold Ctrl to switch direction)	ציין נקודת סיום של הקשת (החזק Ctrl להחלפת כיוון)
+	Specify ending width	ציין רוחב סיום
+	Specify ending width for next segment	ציין רוחב סיום למקטע הבא
+	Specify endpoint of arc	ציין נקודת קצה של הקשת
+	Specify endpoint of axis	ציין נקודת קצה של הציר
+	Specify endpoint of line	ציין נקודת קצה של הקו
+	Specify feature location	ציין מיקום הפריט
+	Specify fillet radius	ציין רדיוס עיגול פינה
+	Specify fillet radius for rectangles	ציין רדיוס עיגול פינה למלבנים
+	Specify first angle endpoint	ציין נקודת קצה ראשונה של הזווית
+	Specify first chamfer distance	ציין מרחק שיפוע ראשון
+	Specify first chamfer distance for rectangles	ציין מרחק שיפוע ראשון למלבנים
+	Specify first constraint point	ציין נקודת אילוץ ראשונה
+	Specify first corner	ציין פינה ראשונה
+	Specify first corner point	ציין נקודת פינה ראשונה
+	Specify first destination point	ציין נקודת יעד ראשונה
+	Specify first end point of circle's diameter	ציין נקודת קצה ראשונה של קוטר העיגול
+	Specify first endpoint of edge	ציין נקודת קצה ראשונה של הצלע
+	Specify first extension line origin	ציין ראשית של קו הארכה ראשון
+	Specify first point	ציין נקודה ראשונה
+	Specify first point of mirror line	ציין נקודה ראשונה של קו השיקוף
+	Specify first point on circle	ציין נקודה ראשונה על העיגול
+	Specify first point on circle: _tan to	ציין נקודה ראשונה על העיגול: _tan to
+	Specify first source point	ציין נקודת מקור ראשונה
+	Specify height	ציין גובה
+	Specify helix height	ציין גובה הסליל
+	Specify included angle	ציין זווית מרכזית
+	Specify included angle (hold Ctrl to switch direction)	ציין זווית מרכזית (החזק Ctrl להחלפת כיוון)
+	Specify insertion base point	ציין נקודת בסיס להכנסה
+	Specify insertion point	ציין נקודת הכנסה
+	Specify inside diameter of donut	ציין קוטר פנימי של הטבעת
+	Specify leader arrowhead location	ציין מיקום ראש החץ של הקו המוביל
+	Specify leader endpoint	ציין נקודת קצה של הקו המוביל
+	Specify leader landing location	ציין מיקום הכתף של הקו המוביל
+	Specify length for rectangles	ציין אורך למלבנים
+	Specify length of chord	ציין אורך מיתר
+	Specify length of chord (hold Ctrl to switch direction)	ציין אורך מיתר (החזק Ctrl להחלפת כיוון)
+	Specify length of segment	ציין אורך מקטע
+	Specify line width for rectangles	ציין רוחב קו למלבנים
+	Specify location for new vertex	ציין מיקום לקודקוד חדש
+	Specify minimum length of arc	ציין אורך מינימלי לקשת
+	Specify new end point	ציין נקודת סיום חדשה
+	Specify new location for marked vertex	ציין מיקום חדש לקודקוד המסומן
+	Specify new width for all segments	ציין רוחב חדש לכל המקטעים
+	Specify next point	ציין את הנקודה הבאה
+	Specify offset distance	ציין מרחק היסט
+	Specify opposite corner	ציין פינה נגדית
+	Specify other corner point	ציין נקודת פינה אחרת
+	Specify other endpoint of axis	ציין נקודת קצה אחרת של הציר
+	Specify outside diameter of donut	ציין קוטר חיצוני של הטבעת
+	Specify point	ציין נקודה
+	Specify point on object for first tangent of circle	ציין נקודה על אובייקט עבור המשיק הראשון של העיגול
+	Specify point on object for second tangent of circle	ציין נקודה על אובייקט עבור המשיק השני של העיגול
+	Specify point on side to offset	ציין נקודה בצד שאליו יש להסיט
+	Specify radius of arc	ציין רדיוס של הקשת
+	Specify radius of arc (hold Ctrl to switch direction)	ציין רדיוס של הקשת (החזק Ctrl להחלפת כיוון)
+	Specify radius of circle	ציין רדיוס של העיגול
+	Specify rotation angle	ציין זווית סיבוב
+	Specify rotation angle of text	ציין זווית סיבוב של הטקסט
+	Specify scale factor	ציין מקדם קנה מידה
+	Specify second angle endpoint	ציין נקודת קצה שנייה של הזווית
+	Specify second break point	ציין נקודת שבירה שנייה
+	Specify second chamfer distance for rectangles	ציין מרחק שיפוע שני למלבנים
+	Specify second constraint point	ציין נקודת אילוץ שנייה
+	Specify second destination point	ציין נקודת יעד שנייה
+	Specify second end point of circle's diameter	ציין נקודת קצה שנייה של קוטר העיגול
+	Specify second endpoint of edge	ציין נקודת קצה שנייה של הצלע
+	Specify second extension line origin	ציין ראשית של קו הארכה שני
+	Specify second point	ציין נקודה שנייה
+	Specify second point of arc	ציין נקודה שנייה של הקשת
+	Specify second point of mirror line	ציין נקודה שנייה של קו השיקוף
+	Specify second point on circle	ציין נקודה שנייה על העיגול
+	Specify second point on circle: _tan to	ציין נקודה שנייה על העיגול: _tan to
+	Specify second point or <use first point as displacement>	ציין נקודה שנייה או <שימוש בנקודה הראשונה כתזוזה>
+	Specify second source point	ציין נקודת מקור שנייה
+	Specify side to offset	ציין את הצד להיסט
+	Specify start angle	ציין זווית התחלה
+	Specify start point	ציין נקודת התחלה
+	Specify start point of arc	ציין נקודת התחלה של הקשת
+	Specify start point of polyline	ציין נקודת התחלה של הפוליליין
+	Specify start point of text	ציין נקודת התחלה של הטקסט
+	Specify starting width	ציין רוחב התחלה
+	Specify starting width for next segment	ציין רוחב התחלה למקטע הבא
+	Specify tangent direction for the start point of arc	ציין כיוון משיק לנקודת ההתחלה של הקשת
+	Specify the elevation for rectangles	ציין את המפלס למלבנים
+	Specify thickness for rectangles	ציין עובי למלבנים
+	Specify third point on circle	ציין נקודה שלישית על העיגול
+	Specify third point on circle: _tan to	ציין נקודה שלישית על העיגול: _tan to
+	Specify third source point or <continue>	ציין נקודת מקור שלישית או <המשך>
+	Specify through point	ציין נקודת מעבר
+	Specify top diameter	ציין קוטר עליון
+	Specify top radius	ציין רדיוס עליון
+	Specify total angle	ציין זווית כוללת
+	Specify total length	ציין אורך כולל
+	Specify width for rectangles	ציין רוחב למלבנים
+	Sphere	כדור
+	Spline	ספליין
+	Spline Edit	עריכת ספליין
+	Stack (type 1/2 then select)	ערימה (הקלד 1/2 ואז בחר)
+	Standard	תקני
+	Start	התחלה
+	Start Width	רוחב התחלה
+	Start X	התחלה X
+	Start Y	התחלה Y
+	Start angle	זווית התחלה
+	Start, Center, Angle	התחלה, מרכז, זווית
+	Start, Center, End	התחלה, מרכז, סוף
+	Start, Center, Length	התחלה, מרכז, אורך
+	Start, End, Angle	התחלה, סוף, זווית
+	Start, End, Direction	התחלה, סוף, כיוון
+	Start, End, Radius	התחלה, סוף, רדיוס
+	Status	מצב
+	Status Bar	שורת המצב
+	Stretch	מתיחה
+	Stretch Vertex	מתיחת קודקוד
+	Style: Standard	סגנון: Standard
+	Subtract	חיסור
+	Sweep	סחיפה
+	Switch Drawing	החלפת שרטוט
+	Switch Layout	החלפת פריסה
+	Switch between model space in a viewport and paper space	מעבר בין מרחב המודל בחלון תצוגה לבין מרחב הנייר
+	Symmetric	סימטרי
+	Synchronize Attributes	סנכרון תכונות
+	Synchronize Multiple-scale Positions	סנכרון מיקומים מרובי קני מידה
+	TOP	עליון
+	Table	טבלה
+	Table Breaks	שבירות טבלה
+	Table Cell Style	סגנון תא בטבלה
+	Table Style...	סגנון טבלה...
+	Table style	סגנון טבלה
+	Table...	טבלה...
+	Tan, Tan, Radius	משיק, משיק, רדיוס
+	Tan, Tan, Tan	משיק, משיק, משיק
+	Tangent	משיק
+	Temporary track point	נקודת מעקב זמנית
+	Text	טקסט
+	Text Editor	עורך טקסט
+	Text Height	גובה טקסט
+	Text Objects Only	אובייקטי טקסט בלבד
+	Text Style...	סגנון טקסט...
+	Text height	גובה טקסט
+	Text override	עקיפת טקסט
+	Text style	סגנון טקסט
+	Thaw All Layers	הפשרת כל השכבות
+	Thaw Layer	הפשרת שכבה
+	The aperture is how near the cursor must come to a point for an object snap to find it.	הצמצם קובע כמה קרוב הסמן צריך להגיע לנקודה כדי שההצמדה לאובייקט תמצא אותה.
+	There is nothing here yet.	אין כאן עדיין כלום.
+	Thickness	עובי
+	Time	זמן
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	לחיצה ימנית תלוית זמן: לחיצה מהירה היא Enter, החזקה פותחת את התפריט
+	To	אל
+	To get started, create or open a drawing.	כדי להתחיל, צור או פתח שרטוט.
+	Toggle PICKADD (off: each pick replaces the selection)	החלפת מצב PICKADD (כבוי: כל בחירה מחליפה את הבחירה הקיימת)
+	Toggle PICKADD (on: picks add to the selection)	החלפת מצב PICKADD (פועל: בחירות מתווספות לבחירה)
+	Tolerance...	טולרנס...
+	Tool Bar	סרגל כלים
+	Tool Sets	ערכות כלים
+	Tools	כלים
+	Torus	טורוס
+	Trace	עקיבה
+	Track orthogonally only	מעקב אורתוגונלי בלבד
+	Track using all polar angle settings	מעקב לפי כל הגדרות הזווית הקוטבית
+	Transparency	שקיפות
+	Trim	קיצוץ
+	True Color	צבע אמיתי
+	Turn All Layers On	הפעלת כל השכבות
+	Turn Off Layer	כיבוי שכבה
+	Turn On Layer	הפעלת שכבה
+	Turn Quick Properties off (QPMODE)	כיבוי מאפיינים מהירים (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	כשהאפשרות כבויה, לחיצה ימנית בזמן הרצת פקודה פותחת תמיד את תפריט הקיצורים.
+	Type	סוג
+	Type a command	הקלד פקודה
+	Type text; Enter starts a new paragraph	הקלד טקסט; Enter מתחיל פסקה חדשה
+	UCS Icon	סמל UCS
+	Undo	ביטול פעולה
+	Undo (⌘Z)	ביטול פעולה (⌘Z)
+	Ungroup	פירוק קבוצה
+	Union	איחוד
+	Unisolate Layer	ביטול בידוד שכבה
+	Units Conversion	המרת יחידות
+	Units...	יחידות...
+	Unload	פריקה
+	Unloaded	לא טעון
+	Unlock Layer	ביטול נעילת שכבה
+	Unlock viewport	ביטול נעילת חלון תצוגה
+	Unmerge Cells	ביטול מיזוג תאים
+	Unreferenced	ללא הפניה
+	Unresolved	לא פוענח
+	Unsaved Layer State	מצב שכבות לא שמור
+	Up	למעלה
+	Update	עדכון
+	Update Data Links	עדכון קישורי נתונים
+	Use System Setting	שימוש בהגדרת המערכת
+	Use for this layout	שימוש עבור פריסה זו
+	Use object linetype	שימוש בסוג הקו של האובייקט
+	Use object lineweight	שימוש בעובי הקו של האובייקט
+	User	משתמש
+	User Parameters	פרמטרי משתמש
+	User Preferences	העדפות משתמש
+	Username	שם משתמש
+	VP Color	צבע בחלון תצוגה
+	VP Freeze	הקפאה בחלון תצוגה
+	Value	ערך
+	Value:	ערך:
+	Variables	משתנים
+	Version	גרסה
+	Version 2000	גרסה 2000
+	Version 2004	גרסה 2004
+	Version 2007	גרסה 2007
+	Version 2010	גרסה 2010
+	Version 2013	גרסה 2013
+	Version 2018	גרסה 2018
+	Version {version}	גרסה {version}
+	Vertical	אנכי
+	VerticalDistance	מרחק אנכי
+	View	תצוגה
+	ViewCube	ViewCube
+	Viewport	חלון תצוגה
+	Viewport Layer Freeze	הקפאת שכבה בחלון תצוגה
+	Viewport Properties	מאפייני חלון תצוגה
+	Viewport is locked	חלון התצוגה נעול
+	Viewport scale	קנה מידה של חלון התצוגה
+	Viewport {id}	חלון תצוגה {id}
+	Viewports	חלונות תצוגה
+	Volume	נפח
+	WCS	WCS
+	White	לבן
+	Width factor	מקדם רוחב
+	Window	חלון
+	Wipeout	מיסוך
+	Workspace Switching	החלפת סביבת עבודה
+	Write Block	כתיבת בלוק
+	X	X
+	Xline	קו עזר
+	Y	Y
+	Yellow	צהוב
+	Yes	כן
+	Zoom	זום
+	Zoom All	זום לכול
+	Zoom Dynamic	זום דינמי
+	Zoom Extents	זום להיקף מלא
+	Zoom In	התקרבות
+	Zoom Object	זום לאובייקט
+	Zoom Out	התרחקות
+	Zoom Previous	זום קודם
+	Zoom Realtime	זום בזמן אמת
+	Zoom Window	זום לחלון
+	Zoom sensitivity	רגישות הזום
+	error	שגיאה
+	min	דקות
+	objects	אובייקטים
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (אילוץ {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	אילוץ {kind} {name} = {expression}  (לחיצה כפולה לעריכה)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  פרמטר משתמש חדש
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ לסיום
+@plural	{n} commit	{n} קומיט|{n} קומיטים|{n} קומיטים
+@plural	{n} contributor	{n} תורם|{n} תורמים|{n} תורמים
+	Check for Updates…	בדיקת עדכונים…
+	DraftCraft is up to date.	DraftCraft מעודכן.
+	Could not check for updates.	לא ניתן היה לבדוק אם יש עדכונים.
+	Add to Working Set	הוספה לערכת העבודה
+	Add: Pick points	הוספה: בחירת נקודות
+	Add: Select objects	הוספה: בחירת אובייקטים
+	Add…	הוספה…
+	Alias	כינוי
+	Alias file: {file}	קובץ כינויים: {file}
+	Align Multileaders	יישור קווים מובילים מרובים
+	Analyze Shapes	ניתוח צורות
+	Analyze Usage	ניתוח שימוש
+	Animation Effects	אפקטי אנימציה
+	Animation effects	אפקטי אנימציה
+	Associative	אסוציאטיבי
+	Backup copy	עותק גיבוי
+	Block to create or edit	בלוק ליצירה או לעריכה
+	Bottom left	שמאל למטה
+	Bottom right	ימין למטה
+	Boundaries	גבולות
+	Boundaries picked: {n}	גבולות שנבחרו: {n}
+	Break-line Symbol	סמל קו שבירה
+	Centered	ממורכז
+	Change Properties	שינוי מאפיינים
+	Choose the command the alias starts.	בחר את הפקודה שהכינוי מפעיל.
+	Click the ruler to add a tab stop, right-click to remove one	לחץ על הסרגל כדי להוסיף עצירת טאב, לחיצה ימנית מסירה אותה
+	Click to set new origin	לחץ כדי לקבוע ראשית חדשה
+	Close Block Editor	סגירת עורך הבלוקים
+	Collect	איסוף
+	Collect Multileaders	איסוף קווים מובילים מרובים
+	Color 1	צבע 1
+	Color 2	צבע 2
+	Command	פקודה
+	Convert Text to Mtext	המרת טקסט לטקסט מרובה שורות
+	Create backup copy with each save	יצירת עותק גיבוי בכל שמירה
+	Create separate hatches	יצירת קווקווים נפרדים
+	Crossing selection color:	צבע בחירה חוצה:
+	Curved	מעוקל
+	Customize	התאמה אישית
+	Default to boundary extents	ברירת מחדל: היקף הגבולות
+	Define each corner of the selection window with a separate click.	הגדר כל פינה של חלון הבחירה בלחיצה נפרדת.
+	Discard	ביטול שינויים
+	Drag Dynamic Grip	גרירת ידית דינמית
+	Dynamic Block Data	נתוני בלוק דינמי
+	Dynamic Block Grips	ידיות בלוק דינמי
+	Dynamic Block Reference	הפניה לבלוק דינמי
+	Edit Block Definition	עריכת הגדרת בלוק
+	Edit Command Aliases (PGP)...	עריכת כינויי פקודות (PGP)...
+	Edit Multileader	עריכת קו מוביל מרובה
+	Edit Reference In-Place	עריכת הפניה במקום
+	Edit…	עריכה…
+	Evaluate LISP	הערכת LISP
+	Exclude:	החרגה:
+	Explode Attributes to Text	פירוק תכונות לטקסט
+	Express Tools	כלי Express
+	Font	גופן
+	Grips	ידיות
+	Groups	קבוצות
+	Hatch Pick	בחירת קווקוו
+	Hatch and Gradient	קווקוו ומעבר צבעים
+	Hatch origin	ראשית הקווקוו
+	Hatches	קווקווים
+	Hemispherical	חצי כדורי
+	Ignore	התעלמות
+	Imperial (inches)	אימפריאלי (אינצ'ים)
+	Implied Loops	לולאות משתמעות
+	Indicate selection area	הצגת אזור הבחירה
+	Interface scale	קנה מידה של הממשק
+	Inverted	הפוך
+	Island	אי
+	Island detection	זיהוי איים
+	Italic	נטוי
+	Justify	יישור לשני הצדדים
+	Load Application...	טעינת יישום...
+	Metric (millimetres)	מטרי (מילימטרים)
+	More than {n} aliases.	יותר מ-{n} כינויים.
+	Move/Copy/Rotate	הזזה/העתקה/סיבוב
+	Multiline text	טקסט מרובה שורות
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	שרטוטים חדשים והשרטוט הראשון בעת ההפעלה משתמשים ביחידות אלה, אלא אם הוגדרה תבנית ברירת מחדל (QNEWTEMPLATE).
+	New block	בלוק חדש
+	No alias file loaded. REINIT replaces these aliases with a file's.	לא נטען קובץ כינויים. REINIT מחליף כינויים אלה בכינויים מקובץ.
+	Not a number or distance: {text}	לא מספר או מרחק: {text}
+	Object grouping	קיבוץ אובייקטים
+	Object selection limit for display of grips	מגבלת בחירת אובייקטים להצגת ידיות
+	Objects on locked layers	אובייקטים בשכבות נעולות
+	Open in Block Editor	פתיחה בעורך הבלוקים
+	Origin: {x}, {y}	ראשית: {x}, {y}
+	Outer	חיצוני
+	Overline	קו עילי
+	Preview	תצוגה מקדימה
+	Query Texts	שאילתת טקסטים
+	Save Block	שמירת בלוק
+	Save Block As	שמירת בלוק בשם
+	Save Layout as Template	שמירת פריסה כתבנית
+	Save Reference Edits	שמירת עריכות ההפניה
+	Save alias	שמירת כינוי
+	Save changes to block "{name}"?	לשמור את השינויים בבלוק "{name}"?
+	Select boundaries to remove	בחר גבולות להסרה
+	Select using two clicks only	בחירה בשתי לחיצות בלבד
+	Selection Area Effect	אפקט אזור הבחירה
+	Selection Preview Filter	מסנן תצוגה מקדימה של בחירה
+	Selection area opacity:	אטימות אזור הבחירה:
+	Selection effect color	צבע אפקט הבחירה
+	Selection modes	מצבי בחירה
+	Selection preview	תצוגה מקדימה של בחירה
+	Set Dynamic Property	הגדרת מאפיין דינמי
+	Shape	צורה
+	Sheet Books to PDF...	ספרי גיליונות ל-PDF...
+	Show grips	הצגת ידיות
+	Specified origin	ראשית מוגדרת
+	Spherical	כדורי
+	Tables	טבלאות
+	Text color	צבע טקסט
+	Top left	שמאל למעלה
+	Top right	ימין למעלה
+	Type an alias name.	הקלד שם כינוי.
+	Underline	קו תחתון
+	Units of new drawings	יחידות של שרטוטים חדשים
+	Unsaved changes	שינויים שלא נשמרו
+	Use current origin	שימוש בראשית הנוכחית
+	Visual Effect Settings	הגדרות אפקטים חזותיים
+	Visual Effect Settings...	הגדרות אפקטים חזותיים...
+	When a command is active	כאשר פקודה פעילה
+	When no command is active	כאשר אין פקודה פעילה
+	Window selection color:	צבע בחירת חלון:
+	Working Set	ערכת עבודה
+	Xref and Block In-place Editing	עריכה במקום של הפניות חיצוניות ובלוקים
+	Xrefs	הפניות חיצוניות
+	built-in	מובנה
+	overrides built-in	עוקף את המובנה
+	{alias} is already defined; select it and use Edit.	{alias} כבר מוגדר; בחר אותו והשתמש בעריכה.
+	{command} is an unknown command.	{command} היא פקודה לא מוכרת.
+	Find All	חיפוש הכול
+	Find what:	חפש את:
+	Match case	התאמת רישיות
+	Replace	החלפה
+	Replace All	החלפת הכול
+	Replace with:	החלף ב:
+	Replacement text	טקסט חלופי
+	Results	תוצאות
+	Searches the current space.	מחפש במרחב הנוכחי.
+	Text to find	טקסט לחיפוש
+	Whole words	מילים שלמות
+	Nothing found	לא נמצא דבר
+	E	מז
+	N	צ
+	S	ד
+	W	מע
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	ניקוי קבצים אחרונים
+	contains authoring elements. Open in Block Editor?	מכיל רכיבי עריכה. לפתוח בעורך הבלוקים?
+	Custom	מותאם אישית
+	Open Recent	פתיחת קובץ אחרון
+	This drawing	שרטוט זה
+	Arrow size	גודל חץ
+	Dim scale overall	קנה מידה כולל של מידות
+	Precision	דיוק
+	Apply to Layout	החלה על הפריסה
+	Center the plot	מרכוז ההדפסה
+	Enter block names to extract	הזן שמות בלוקים לחילוץ
+	Enter geometric characteristic	הזן מאפיין גאומטרי
+	Enter name of LISP file to load	הזן שם קובץ LISP לטעינה
+	First corner	פינה ראשונה
+	Fit to paper	התאמה לנייר
+	Landscape	לרוחב
+	Limits	גבולות שרטוט
+	Opposite corner	פינה נגדית
+	Orientation	כיוון
+	Paper size	גודל נייר
+	Plot area	אזור ההדפסה
+	Plot object lineweights	הדפסת עובי הקו של האובייקטים
+	Plot offset	היסט הדפסה
+	Plot transparency	הדפסת שקיפות
+	Portrait	לאורך
+	Printer/plotter	מדפסת/פלוטר
+	Window <	חלון <
+	X offset (mm)	היסט X (מ"מ)
+	Y offset (mm)	היסט Y (מ"מ)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	אנגסטרום
+	Architectural	אדריכלי
+	Astronomical Units	יחידות אסטרונומיות
+	Centimeters	סנטימטרים
+	Decameters	דקמטרים
+	Decimal	עשרוני
+	Decimal Degrees	מעלות עשרוניות
+	Decimeters	דצימטרים
+	Deg/Min/Sec	מעלות/דקות/שניות
+	Don't Save	אל תשמור
+	Drawing Units	יחידות שרטוט
+	Engineering	הנדסי
+	Feet	רגל
+	Fractional	שברים
+	Gigameters	גיגה-מטרים
+	Grads	גראדים
+	Hectometers	הקטומטרים
+	Inches	אינצ'ים
+	Insertion scale	קנה מידה להכנסה
+	Kilometers	קילומטרים
+	Light Years	שנות אור
+	Meters	מטרים
+	Microinches	מיקרו-אינצ'ים
+	Microns	מיקרונים
+	Miles	מיילים
+	Millimeters	מילימטרים
+	Mils	מילס
+	Nanometers	ננומטרים
+	Parsecs	פרסקים
+	Radians	רדיאנים
+	Sample output	פלט לדוגמה
+	Save changes to {name}?	לשמור את השינויים ב-{name}?
+	Scientific	מדעי
+	Surveyor's Units	יחידות מדידת קרקע
+	Unitless	ללא יחידות
+	Units to scale inserted content	יחידות לשינוי קנה המידה של תוכן שמוכנס
+	US Survey Feet	רגל מדידה אמריקאית
+	US Survey Inch	אינץ' מדידה אמריקאי
+	US Survey Mile	מייל מדידה אמריקאי
+	US Survey Yard	יארד מדידה אמריקאי
+	Yards	יארדים
+	Your changes will be lost if you don't save them.	השינויים שלך יאבדו אם לא תשמור אותם.
+	Layouts	פריסות
+	Associate	שיוך
+	Clip Xref	קיטום הפניה חיצונית
+	Xref Clip Frame	מסגרת קיטום של הפניה חיצונית
+	Minimize	מזעור
+	Maximize	הגדלה
+	Restore Down	שחזור גודל
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft והלוגו של DraftCraft הם סימנים מסחריים של DraftCraft Engineering Ventures.
+	Conic	חתך חרוט
+	Spline Fit	ספליין התאמה
+	Spline CV	ספליין קודקודי בקרה
+	Specify start point of conic	ציין נקודת התחלה של חתך החרוט
+	Specify apex (where the end tangents meet)	ציין קודקוד (המקום שבו המשיקים בקצוות נפגשים)
+	Specify end point of conic	ציין נקודת סיום של חתך החרוט
+	Specify rho or a point on the conic	ציין rho או נקודה על חתך החרוט
+	Check for Updates...	בדיקת עדכונים...
+	Check for Updates	בדיקת עדכונים
+	Update Available	זמין עדכון
+	DraftCraft {version} is available.	DraftCraft {version} זמין.
+	You have version {version}.	הגרסה שלך היא {version}.
+	Do you want to download the update?	להוריד את העדכון?
+	What's new	מה חדש
+	What's New	מה חדש
+	Download	הורדה
+	Later	מאוחר יותר
+	Skip This Version	דילוג על גרסה זו
+	DraftCraft is up to date (version {version}).	DraftCraft מעודכן (גרסה {version}).
+	Do you want to install the update now?	להתקין את העדכון עכשיו?
+	Update Now	עדכון עכשיו
+	Open the release page	פתיחת דף הגרסה
+	This copy of DraftCraft can't update itself.	עותק זה של DraftCraft אינו יכול לעדכן את עצמו.
+	Updating DraftCraft	מעדכן את DraftCraft
+	Update Failed	העדכון נכשל
+	Installing DraftCraft {version}	מתקין את DraftCraft {version}
+	Downloading: {done} of {total} MB	מוריד: {done} מתוך {total} MB
+	Installing…	מתקין…
+	Starting the download…	מתחיל את ההורדה…
+	The connection dropped; trying again…	החיבור נותק; מנסה שוב…
+	DraftCraft {version} is installed.	DraftCraft {version} הותקן.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	הפעל מחדש את DraftCraft כדי להשתמש בו. אם תפעיל מחדש מאוחר יותר, הוא ייפתח בפעם הבאה שתפעיל את DraftCraft.
+	Restart Now	הפעלה מחדש עכשיו
+	The update could not be installed.	לא ניתן היה להתקין את העדכון.
+	You can download it from the release page instead.	ניתן להוריד אותו מדף הגרסה במקום זאת.
+	2D Wireframe	מסגרת תיל דו-ממדית
+	Annotate	ביאור
+	Blocks Palette	חלונית בלוקים
+	CAD Standards	תקני CAD
+	Commands	פקודות
+	2D Drafting	שרטוט דו-ממדי
+	Edit Aliases	עריכת כינויים
+	Image	תמונה
+	Palettes	חלוניות
+	Top	עליון
+	Units	יחידות
+	Workspace	סביבת עבודה
+	Ribbon	רצועת הכלים
+	PDF Underlay...	תשתית PDF...
+	PDF Import	ייבוא PDF
+	PDF Underlay	תשתית PDF
+	Underlay Layers	שכבות תשתית
+	Raster Image Reference...	הפניה לתמונת רסטר...
+	Close Text Editor	סגירת עורך הטקסט
+	Image Clip	קיטום תמונה
+	PDF Clip	קיטום PDF
+	Image Adjust	כוונון תמונה
+	PDF Adjust	כוונון PDF
+	Adjust...	כוונון...
+	Parameter	פרמטר
+	Action	פעולה
+	DesignCenter	DesignCenter
+	Tool Palettes	לוחות כלים
+	Sheet Set Manager	מנהל ערכות גיליונות
+	Type the drawing's path, then press Enter.	הקלד את נתיב השרטוט ולאחר מכן הקש Enter.
+	Drawing file	קובץ שרטוט
+	Folder	תיקייה
+	Linetypes	סוגי קו
+	Text Styles	סגנונות טקסט
+	Dimension Styles	סגנונות מידה
+	Table Styles	סגנונות טבלה
+	Multileader Styles	סגנונות קו מוביל מרובה
+	Multiline Styles	סגנונות קו מרובה
+	Add to Drawing	הוספה לשרטוט
+	Create Tool Palette	יצירת לוח כלים
+	Nothing of this kind in the file.	אין בקובץ פריטים מסוג זה.
+	Open a drawing to see its blocks, layers and styles.	פתח שרטוט כדי לראות את הבלוקים, השכבות והסגנונות שלו.
+	Delete Palette	מחיקת לוח
+	New Palette	לוח חדש
+	No tool palettes.	אין לוחות כלים.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	לוח זה ריק: הוסף פקודה למטה, או צור לוח מ-DesignCenter.
+	Delete Tool	מחיקת כלי
+	Add Command	הוספת פקודה
+	New Sheet Set...	ערכת גיליונות חדשה...
+	Open Sheet Set...	פתיחת ערכת גיליונות...
+	Sheet sets (DCSS)	ערכות גיליונות (DCSS)
+	Sheet set file	קובץ ערכת גיליונות
+	Make or open a sheet set to list its sheets.	צור או פתח ערכת גיליונות כדי להציג את הגיליונות שלה.
+	Add Drawing...	הוספת שרטוט...
+	Publish to PDF...	פרסום ל-PDF...
+	No sheets yet: add a drawing's layouts.	אין עדיין גיליונות: הוסף פריסות של שרטוט.
+	Number	מספר
+	Title	כותרת
+	Move Up	הזזה למעלה
+	Move Down	הזזה למטה
+	Sheet Set (DCSS)	ערכת גיליונות (DCSS)
+	Close Tool Palettes	סגירת לוחות הכלים
+	Close DesignCenter	סגירת DesignCenter
+	Close Sheet Set Manager	סגירת מנהל ערכות הגיליונות
+	Manage Tool Palettes	ניהול לוחות כלים
+	Changes apply at once; Save Current As keeps them in a workspace.	השינויים חלים מיד; "שמירת הנוכחית בשם" שומרת אותם בסביבת עבודה.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	לחץ על שכבות כדי להציג רק אותן; Ctrl או Shift מוסיפים לבחירה.
+	Current Workspace	סביבת העבודה הנוכחית
+	Customize Interface	התאמה אישית של הממשק
+	Customize User Interface	התאמה אישית של ממשק המשתמש
+	Customize...	התאמה אישית...
+	Edit Aliases...	עריכת כינויים...
+	Force object color and linetype to ByLayer	אכיפת צבע וסוג קו של אובייקטים ל'לפי שכבה'
+	Geographic Location	מיקום גאוגרפי
+	Geographic Location...	מיקום גאוגרפי...
+	Latitude	קו רוחב
+	Longitude	קו אורך
+	North direction	כיוון הצפון
+	Layer Translation Mappings	מיפויי תרגום שכבות
+	Layer Translator	מתרגם שכבות
+	Layer Translator...	מתרגם שכבות...
+	Layer Walk	סיור בשכבות
+	Layer Walk...	סיור בשכבות...
+	Location	מיקום
+	Set Location	קביעת מיקום
+	Remove Location	הסרת מיקום
+	The drawing's origin is at this place (WGS 84 degrees).	ראשית השרטוט נמצאת במקום זה (מעלות WGS 84).
+	Map	מיפוי
+	New layer name	שם שכבה חדש
+	No mappings yet: pick layers on the left, a name on the right, then Map.	אין עדיין מיפויים: בחר שכבות משמאל, שם מימין, ואז מיפוי.
+	Translate	תרגום
+	Translate From	תרגום מ-
+	Translate To	תרגום אל
+	Restore on exit	שחזור ביציאה
+	Point Cloud	ענן נקודות
+	Point Cloud...	ענן נקודות...
+	Point clouds (XYZ, LAS)	ענני נקודות (XYZ, LAS)
+	ZIP archive	ארכיון ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	סרגל כלים לגישה מהירה
+	Rename	שינוי שם
+	Reset to Standard	איפוס לתקן
+	Ribbon Tabs	כרטיסיות רצועת הכלים
+	Save Current As	שמירת הנוכחית בשם
+	Save Current As...	שמירת הנוכחית בשם...
+	Save Workspace	שמירת סביבת עבודה
+	User Interface	ממשק משתמש
+	Workspace Settings	הגדרות סביבת עבודה
+	Workspace Settings...	הגדרות סביבת עבודה...
+	Workspace name	שם סביבת העבודה
+	Workspace:	סביבת עבודה:
+	Workspaces	סביבות עבודה
+	Interface...	ממשק...
+	Export Attribute Information...	ייצוא מידע תכונות...
+	Import Attribute Information...	ייבוא מידע תכונות...
+	Export Attributes	ייצוא תכונות
+	Import Attributes	ייבוא תכונות
+	Text, tab-delimited (TXT)	טקסט מופרד בטאבים (TXT)
+	Import Settings	ייבוא הגדרות
+	Export Settings	ייצוא הגדרות
+	Import Settings...	ייבוא הגדרות...
+	Export Settings...	ייצוא הגדרות...
+	DraftCraft settings (TOML)	הגדרות DraftCraft (TOML)
+	Total Area and Length	סך שטח ואורך
+	Total Area	סך שטח
+	Specify point to place the totals as text	ציין נקודה למיקום הסכומים כטקסט
+	Metric	מטרי
+	Imperial	אימפריאלי
+	A new drawing in millimeters	שרטוט חדש במילימטרים
+	A new drawing in inches	שרטוט חדש באינצ'ים
+	A new drawing in centimeters	שרטוט חדש בסנטימטרים
+	Metric (centimetres)	מטרי (סנטימטרים)
+	Join the ArtCraft Discord…	הצטרפות ל-Discord של ArtCraft…
+	Join us on Discord	הצטרפו אלינו ב-Discord
+	One of the Crafting Apps by the ArtCraft team and community.	אחת מאפליקציות ה-Crafting של צוות ArtCraft והקהילה.
+	Change	שינוי
+	Multiple Insert	הכנסה מרובה
+	Ctrl+Enter to apply	Ctrl+Enter להחלה
+	Edit Text	עריכת טקסט
+	The drawing changed. Close the window and open it again.	השרטוט השתנה. סגור את החלון ופתח אותו שוב.
+	DView	DView
+	Raster Images	תמונות רסטר
+	Xref	הפניה חיצונית
+	Backup copies are off, so the current file will be replaced.	עותקי גיבוי כבויים, ולכן הקובץ הנוכחי יוחלף.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 ומוקדם יותר שומרים אותם. השתמש ב"שמירה בשם" כדי לשמור אותם בשרטוט.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF שומר אותם. השתמש ב"שמירה בשם" כדי לשמור אותם בשרטוט.
+	Save Anyway	שמירה בכל זאת
+	Save cancelled: {path} was not changed.	השמירה בוטלה: {path} לא שונה.
+	Saving {name} will remove content	שמירת {name} תסיר תוכן
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	הקובץ הנוכחי אינו נראה שלם, ולכן {name} יישאר כפי שהוא והקובץ הנוכחי יוחלף.
+	The current file is kept as {name} until the next save.	הקובץ הנוכחי נשמר בשם {name} עד השמירה הבאה.
+	This format can't keep these objects yet: {objects}.	פורמט זה עדיין אינו יכול לשמור את האובייקטים האלה: {objects}.
+	{count} more types	{count} סוגים נוספים
+	Additional Tools	כלים נוספים
+	Keyboard Shortcuts...	קיצורי מקשים...
+	Keyboard Shortcuts	קיצורי מקשים
+	Replaces the shortcut of {commands}	מחליף את הקיצור של {commands}
+	Needs Ctrl, Alt or a function key	נדרש Ctrl, Alt או מקש פונקציה
+	Press the keys	הקש על המקשים
+	Back to DraftCraft's shortcut	חזרה לקיצור של DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	קיצור שאתה מגדיר גובר על הקיצור של DraftCraft עצמו. השינויים חלים מיד ונשמרים לפעם הבאה.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	כשהאפשרות כבויה, לחיצה ימנית בזמן הרצת פקודה מבצעת את מה שמוגדר במצב פקודה בהתאמה האישית של הלחיצה הימנית.
+	Right-Click Customization...	התאמה אישית של לחיצה ימנית...
+	Right-Click Customization	התאמה אישית של לחיצה ימנית
+	Turn on time-sensitive right-click	הפעלת לחיצה ימנית תלוית זמן
+	Longer click duration:	משך לחיצה ארוכה:
+	milliseconds	אלפיות שנייה
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	בזמן הרצת פקודה, לחיצה מהירה היא Enter ולחיצה ארוכה יותר פותחת את תפריט הקיצורים.
+	Default Mode	מצב ברירת מחדל
+	No objects selected and no command running:	לא נבחרו אובייקטים ואין פקודה פעילה:
+	Edit Mode	מצב עריכה
+	Objects selected and no command running:	נבחרו אובייקטים ואין פקודה פעילה:
+	Repeat last command	חזרה על הפקודה האחרונה
+	Shortcut Menu	תפריט קיצורים
+	Command Mode	מצב פקודה
+	While a command runs:	בזמן הרצת פקודה:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	תפריט קיצורים: מופעל תמיד
+	Shortcut Menu: enabled when command options are present	תפריט קיצורים: מופעל כשיש אפשרויות לפקודה
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	ייבוא: אין כאן תיבת דו-שיח לקבצים; הרץ ALIASEDIT עם תוכן הקובץ בפרמטר text שלה.
+	Aliases are saved in your DraftCraft profile and survive restarts.	הכינויים נשמרים בפרופיל DraftCraft שלך ונשמרים גם לאחר הפעלה מחדש.
+	Import…	ייבוא…
+	Run ALIASEDIT with the file's contents using its text parameter.	הרץ ALIASEDIT עם תוכן הקובץ בפרמטר text שלה.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	ייבוא קובץ מחליף את {n} הכינויים שלך ואת כל השינויים שטרם הוחלו.
+	Import and replace	ייבוא והחלפה
+	Keep my aliases	שמירת הכינויים שלי
+	{n} more warnings; see the command line.	{n} אזהרות נוספות; ראה בשורת הפקודה.
+	Unit	יחידה
+	Drawing units: {unit}, {format}	יחידות שרטוט: {unit}, {format}
+	NEW DRAWING	שרטוט חדש
+	OPEN	פתיחה
+	WORKSPACE	סביבת עבודה

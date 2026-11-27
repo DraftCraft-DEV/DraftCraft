@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Persian (فارسی) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  لغو  
+	  OK  	  تأیید  
+	 or [	 یا [
+	% of all commits	% از همه کامیت‌ها
+	* Wildcard Match	* تطبیق با نویسه‌های عام
+	*VARIES*	*متغیر*
+	+  |  Top  |  2D Wireframe	+  |  بالا  |  قاب سیمی دوبعدی
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	یک پنجره دید
+	2 Points	2 نقطه
+	2 Viewports	2 پنجره دید
+	2D Solid	جامد دوبعدی
+	3 Points	3 نقطه
+	3 Viewports	3 پنجره دید
+	3D Face	وجه سه‌بعدی
+	3D Mouse	ماوس سه‌بعدی
+	3D Mouse Navigation	پیمایش با ماوس سه‌بعدی
+	3D Mouse...	ماوس سه‌بعدی...
+	3D Operations	عملیات سه‌بعدی
+	3D Polyline	چندخطی سه‌بعدی
+	3D mouse busy, possibly 3DxWare or missing device permissions	ماوس سه‌بعدی مشغول است، احتمالاً به دلیل 3DxWare یا نبود مجوزهای دستگاه
+	3D mouse connected	ماوس سه‌بعدی متصل شد
+	3D mouse disconnected	اتصال ماوس سه‌بعدی قطع شد
+	3D mouse input could not be started	ورودی ماوس سه‌بعدی راه‌اندازی نشد
+	3D mouse input is unavailable on this platform	ورودی ماوس سه‌بعدی در این پلتفرم در دسترس نیست
+	4 Viewports	4 پنجره دید
+	< Less than	< کوچک‌تر از
+	<> Not Equal	<> نابرابر
+	= Equals	= برابر
+	> Greater than	> بزرگ‌تر از
+	A built-in table: editing it keeps an edited copy in the drawing.	جدول داخلی: ویرایش آن یک نسخه ویرایش‌شده در نقشه نگه می‌دارد.
+	A drawing opened from a file keeps that file's format.	نقشه‌ای که از یک فایل باز شود، قالب همان فایل را حفظ می‌کند.
+	A variable name starts with a letter and has only letters, digits and _	نام متغیر با یک حرف شروع می‌شود و فقط شامل حروف، ارقام و _ است
+	About	درباره
+	About DraftCraft	درباره DraftCraft
+	Absolute	مطلق
+	Accessibility	دسترس‌پذیری
+	Add	افزودن
+	Add Current Scale	افزودن مقیاس فعلی
+	Add Leader	افزودن خط راهنما
+	Add Vertex	افزودن رأس
+	Add/Delete Scales...	افزودن/حذف مقیاس‌ها...
+	Additional angles	زاویه‌های اضافی
+	Align	تراز کردن
+	Align Text	تراز کردن متن
+	Aligned	هم‌راستا
+	All	همه
+	All Annotation Objects	همه اشیای حاشیه‌نویسی
+	All Scales	همه مقیاس‌ها
+	All Used Layers	همه لایه‌های استفاده‌شده
+	All files	همه فایل‌ها
+	An array that would create more objects than this is refused.	آرایه‌ای که بیش از این تعداد شیء ایجاد کند، پذیرفته نمی‌شود.
+	Angle	زاویه
+	Angular	زاویه‌ای
+	Annotation Visibility	نمایش حاشیه‌نویسی
+	Annotation scale	مقیاس حاشیه‌نویسی
+	Annotative Object Scale	مقیاس شیء حاشیه‌نویسی
+	Annotative Update	به‌روزرسانی حاشیه‌نویسی
+	Apparent Intersection	تقاطع ظاهری
+	Append to current selection set	افزودن به مجموعه انتخاب فعلی
+	Apply	اعمال
+	Apply to:	اعمال روی:
+	Apply true color	اعمال رنگ واقعی
+	Arc	کمان
+	Arc Length	طول کمان
+	Area	مساحت
+	Arrange Panel	پانل چیدمان
+	Array	آرایه
+	Attach	پیوست
+	Attach DWG...	پیوست DWG...
+	Attribute	صفت
+	Attribute Definition	تعریف صفت
+	Attribute Display	نمایش صفت‌ها
+	Audit	ممیزی
+	Auto (system language)	خودکار (زبان سیستم)
+	Auto Constrain	قید خودکار
+	AutoConstrain	قیدگذاری خودکار
+	Automatic save every	ذخیره خودکار هر
+	Automatic save file location	محل فایل ذخیره خودکار
+	Axis, End	محور، انتها
+	Base	پایه
+	Baseline	خط مبنا
+	Batch Publish	انتشار دسته‌ای
+	Batch Publish...	انتشار دسته‌ای...
+	Binary assets added	دارایی‌های دودویی افزوده‌شده
+	Binary assets removed	دارایی‌های دودویی حذف‌شده
+	Bind	الحاق
+	Bind...	الحاق...
+	Blend	ترکیب
+	Block	بلوک
+	Block Attribute Manager...	مدیر صفت‌های بلوک...
+	Block Description...	توضیح بلوک...
+	Block Editor	ویرایشگر بلوک
+	Block Reference	ارجاع بلوک
+	Block...	بلوک...
+	Blocks	بلوک‌ها
+	Blue	آبی
+	Bold	پررنگ
+	Boolean	بولی
+	Boundary	مرز
+	Boundary...	مرز...
+	Box	جعبه
+	Break	شکستن
+	Break At Point	شکستن در نقطه
+	Bring Above Objects	آوردن بالای اشیا
+	Bring Annotations to Front	آوردن حاشیه‌نویسی‌ها به جلو
+	Bring to Front	آوردن به جلو
+	Bulleted list	فهرست گلوله‌ای
+	ByBlock	طبق بلوک
+	ByColor	طبق رنگ
+	ByLayer	طبق لایه
+	DraftCraft Help	راهنمای DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft این ترجیحات، حالت‌های گیره شیء و کلیدهای نقشه‌کشی را برای حساب کاربری شما نگه می‌دارد و هنگام شروع بازیابی می‌کند.
+	Calibrate	کالیبره کردن
+	Calibrate 3D Mouse	کالیبره کردن ماوس سه‌بعدی
+	Cancel	لغو
+	Cartesian (x, y)	دکارتی (x, y)
+	Center	مرکز
+	Center Line	خط مرکز
+	Center Mark	علامت مرکز
+	Center X	مرکز X
+	Center Y	مرکز Y
+	Center Z	مرکز Z
+	Center, Diameter	مرکز، قطر
+	Center, Radius	مرکز، شعاع
+	Center, Start, Angle	مرکز، شروع، زاویه
+	Center, Start, End	مرکز، شروع، پایان
+	Center, Start, Length	مرکز، شروع، طول
+	Chamfer	پخ
+	Change Space	تغییر فضا
+	Change to Current Layer	تغییر به لایه فعلی
+	Changed: {n}	تغییریافته: {n}
+	Changes apply at once and are kept for next time.	تغییرات بی‌درنگ اعمال و برای دفعه بعد حفظ می‌شوند.
+	Circle	دایره
+	Circumference	محیط
+	Clear	پاک کردن
+	Clear Command History	پاک کردن تاریخچه فرمان‌ها
+	Reset Suggestion Order	بازنشانی ترتیب پیشنهادها
+	Clear History	پاک کردن تاریخچه
+	Clip	برش‌دهی
+	Clip Viewport	برش‌دهی پنجره دید
+	Clipboard	کلیپ‌بورد
+	Close	بستن
+	Close All	بستن همه
+	Close All Other Drawings	بستن همه نقشه‌های دیگر
+	Close Array Editing	بستن ویرایش آرایه
+	Close Comparison	بستن مقایسه
+	Export Comparison	صدور مقایسه
+	Closed	بسته
+	Coincident	منطبق
+	Collapse Palettes	جمع کردن پالت‌ها
+	Collapse Tool Sets	جمع کردن مجموعه‌ابزارها
+	Collinear	هم‌خط
+	Color	رنگ
+	Color 8	رنگ 8
+	Color 9	رنگ 9
+	Color Index	شاخص رنگ
+	Color-dependent	وابسته به رنگ
+	Color...	رنگ...
+	Command Aliases	نام‌های مستعار فرمان‌ها
+	Command History	تاریخچه فرمان‌ها
+	Command Line	خط فرمان
+	Command Line History Lines	تعداد خطوط تاریخچه خط فرمان
+	Command Reference	مرجع فرمان‌ها
+	Command line history	تاریخچه خط فرمان
+	Commits	کامیت‌ها
+	Company	شرکت
+	Compare Drawings...	مقایسه نقشه‌ها...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	طراحی و نقشه‌کشی به کمک رایانه: یک برنامه CAD متن‌باز با روش اتاق تمیز که تماماً با Rust نوشته شده است.
+	Concentric	هم‌مرکز
+	Cone	مخروط
+	Constraint Bars	نوارهای قید
+	Constraint Settings	تنظیمات قید
+	Construction Line	خط کمکی
+	Contents	فهرست مطالب
+	Continue	ادامه
+	Contributors	مشارکت‌کنندگان
+	Control Vertices	رئوس کنترلی
+	Convert	تبدیل
+	Convert to Arc	تبدیل به کمان
+	Convert to Line	تبدیل به خط
+	Copy	کپی
+	Copy Full File Path	کپی مسیر کامل فایل
+	Copy History	کپی تاریخچه
+	Copy Layout	کپی طرح‌بندی
+	Copy Nested Objects	کپی اشیای تودرتو
+	Copy Selection	کپی انتخاب
+	Copy as JSON	کپی به‌صورت JSON
+	Copy with Base Point	کپی با نقطه پایه
+	Count	شمارش
+	Count List	فهرست شمارش
+	Count Table	جدول شمارش
+	Create Block	ایجاد بلوک
+	Creates a user parameter	یک پارامتر کاربر ایجاد می‌کند
+	Crosshair size	اندازه نشانگر متقاطع
+	Ctrl+Enter to finish	Ctrl+Enter برای پایان
+	Current Scale Only	فقط مقیاس فعلی
+	Current layer	لایه فعلی
+	Current selection	انتخاب فعلی
+	Current: {color}	فعلی: {color}
+	Cut	برش
+	Cut with Base Point	برش با نقطه پایه
+	Cyan	فیروزه‌ای
+	Cylinder	استوانه
+	DWG	DWG
+	DWG Reference...	ارجاع DWG...
+	DXF	DXF
+	Dark	تیره
+	Data Extraction...	استخراج داده...
+	Data Link...	پیوند داده...
+	Default	پیش‌فرض
+	Default Save Format	قالب ذخیره پیش‌فرض
+	Default Save Version	نسخه ذخیره پیش‌فرض
+	Default save version	نسخه ذخیره پیش‌فرض
+	Define Attributes	تعریف صفت‌ها
+	Define Attributes...	تعریف صفت‌ها...
+	Defined width	عرض تعریف‌شده
+	Degree	درجه
+	Degrees of Freedom	درجات آزادی
+	Degrees of freedom: {n}	درجات آزادی: {n}
+	Delete	حذف
+	Delete Column	حذف ستون
+	Delete Constraints	حذف قیدها
+	Delete Current Scale	حذف مقیاس فعلی
+	Delete Dimension Style	حذف سبک اندازه‌گذاری
+	Delete Duplicate Objects	حذف اشیای تکراری
+	Delete Layer	حذف لایه
+	Delete Layer State	حذف وضعیت لایه
+	Delete Layout	حذف طرح‌بندی
+	Delete Row	حذف ردیف
+	Delete Text Style	حذف سبک متن
+	Delta X	دلتا X
+	Delta Y	دلتا Y
+	Description	توضیحات
+	Deselect All	لغو انتخاب همه
+	Detach	جدا کردن
+	Diameter	قطر
+	Dim style	سبک اندازه‌گذاری
+	Dimension	اندازه‌گذاری
+	Dimension Break	شکستن اندازه‌گذاری
+	Dimension Edit	ویرایش اندازه‌گذاری
+	Dimension Objects Only	فقط اشیای اندازه‌گذاری
+	Dimension Space	فاصله‌گذاری اندازه‌ها
+	Dimension Style Override	بازنویسی سبک اندازه‌گذاری
+	Dimension Style...	سبک اندازه‌گذاری...
+	Dimension Text Edit	ویرایش متن اندازه‌گذاری
+	Dimension style	سبک اندازه‌گذاری
+	Dimensional Constraint	قید ابعادی
+	Dimensional Constraint Parameters	پارامترهای قید ابعادی
+	Dimensional Constraints	قیدهای ابعادی
+	Disassociate Dimensions	قطع وابستگی اندازه‌ها
+	Display	نمایش
+	Display name	نام نمایشی
+	Display plot styles	نمایش سبک‌های چاپ
+	Distance	فاصله
+	Divide	تقسیم
+	Do not plot (click: plot)	چاپ نشود (کلیک: چاپ)
+	Donut	حلقه
+	Double-click to edit the description	برای ویرایش توضیحات دوبار کلیک کنید
+	Down	پایین
+	Drafting	نقشه‌کشی
+	Drafting Settings	تنظیمات نقشه‌کشی
+	Drafting Settings...	تنظیمات نقشه‌کشی...
+	Draw	ترسیم
+	Draw Order	ترتیب ترسیم
+	Drawing (DWG)	نقشه (DWG)
+	Drawing (DXF)	نقشه (DXF)
+	Drawing Limits	محدوده نقشه
+	Drawing Recovery Manager...	مدیر بازیابی نقشه‌ها...
+	Drawing Template (DWT)	الگوی نقشه (DWT)
+	Drawing Utilities	ابزارهای نقشه
+	Drawing as bytes	نقشه به‌صورت بایت
+	Drawings (DWG, DXF)	نقشه‌ها (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	نقشه‌هایی که هنوز فایلی ندارند با نسخه پیش‌فرض ذخیره می‌شوند. 0 دقیقه ذخیره خودکار را خاموش می‌کند.
+	Dynamic	پویا
+	Dynamic Dimensions	اندازه‌های پویا
+	Dynamic Input	ورودی پویا
+	Dynamic Input (F12)	ورودی پویا (F12)
+	Edit	ویرایش
+	Edit Array	ویرایش آرایه
+	Edit Attributes...	ویرایش صفت‌ها...
+	Edit Table Cell	ویرایش خانه جدول
+	Edit Text...	ویرایش متن...
+	Elevation	تراز
+	Ellipse	بیضی
+	Elliptical Arc	کمان بیضوی
+	Enable 3D mouse navigation	فعال کردن پیمایش با ماوس سه‌بعدی
+	Enable Dynamic Input (F12)	فعال کردن ورودی پویا (F12)
+	End Object Isolation	پایان جداسازی اشیا
+	End Width	عرض پایانی
+	End X	پایان X
+	End Y	پایان Y
+	End angle	زاویه پایان
+	Endpoint	نقطه انتهایی
+	Enter	Enter
+	Enter Top, Zero or Bottom.	بالا، صفر یا پایین را وارد کنید.
+	Enter a fit data option	یک گزینه داده برازش وارد کنید
+	Enter a pattern name	نام یک الگو را وارد کنید
+	Enter a vertex editing option	یک گزینه ویرایش رأس وارد کنید
+	Enter an option	یک گزینه وارد کنید
+	Enter angle of xline	زاویه خط کمکی را وارد کنید
+	Enter angle of xline (0)	زاویه خط کمکی را وارد کنید (0)
+	Enter area of rectangle in current units	مساحت مستطیل را به واحدهای فعلی وارد کنید
+	Enter attribute prompt	اعلان صفت را وارد کنید
+	Enter attribute tag name	نام برچسب صفت را وارد کنید
+	Enter attribute value	مقدار صفت را وارد کنید
+	Enter block name	نام بلوک را وارد کنید
+	Enter constraint type	نوع قید را وارد کنید
+	Enter continuity	پیوستگی را وارد کنید
+	Enter default attribute value	مقدار پیش‌فرض صفت را وارد کنید
+	Enter degree of spline	درجه اسپلاین را وارد کنید
+	Enter delta angle	زاویه دلتا را وارد کنید
+	Enter delta length	طول دلتا را وارد کنید
+	Enter dimension text	متن اندازه را وارد کنید
+	Enter dimension text (<> = measurement)	متن اندازه را وارد کنید (<> = مقدار اندازه‌گیری)
+	Enter dimension value or [name=expression]	مقدار اندازه یا [name=expression] را وارد کنید
+	Enter dimension variable name to override	نام متغیر اندازه‌گذاری را برای بازنویسی وارد کنید
+	Enter justification type	نوع تراز را وارد کنید
+	Enter leader text	متن خط راهنما را وارد کنید
+	Enter mline scale	مقیاس خط چندگانه را وارد کنید
+	Enter mode	حالت را وارد کنید
+	Enter name of block to insert	نام بلوک برای درج را وارد کنید
+	Enter new text	متن جدید را وارد کنید
+	Enter next point	نقطه بعدی را وارد کنید
+	Enter number of columns	تعداد ستون‌ها را وارد کنید
+	Enter number of data rows	تعداد ردیف‌های داده را وارد کنید
+	Enter number of items	تعداد اقلام را وارد کنید
+	Enter number of items along path	تعداد اقلام در طول مسیر را وارد کنید
+	Enter number of sides	تعداد اضلاع را وارد کنید
+	Enter number of turns	تعداد دورها را وارد کنید
+	Enter percentage length	طول را به درصد وارد کنید
+	Enter rectangle length	طول مستطیل را وارد کنید
+	Enter rectangle width	عرض مستطیل را وارد کنید
+	Enter scale factor	ضریب مقیاس را وارد کنید
+	Enter text	متن را وارد کنید
+	Enter text (use \P for new paragraphs)	متن را وارد کنید (برای پاراگراف جدید از \P استفاده کنید)
+	Enter the number of segments	تعداد قطعه‌ها را وارد کنید
+	Enter twist direction of helix	جهت پیچش مارپیچ را وارد کنید
+	Entire drawing	کل نقشه
+	Equal	برابر
+	Erase	پاک کردن
+	Evaluate	ارزیابی
+	Exclude from new selection set	حذف از مجموعه انتخاب جدید
+	Explode	تجزیه
+	Export	صدور
+	Export Table	صدور جدول
+	Export to PDF...	صدور به PDF...
+	Export...	صدور...
+	Expression	عبارت
+	Extend	امتداد دادن
+	Extension	امتداد
+	Extents	گستره کامل
+	External Reference	ارجاع خارجی
+	External References	ارجاع‌های خارجی
+	Extrude	اکسترود
+	File	فایل
+	File Tab	زبانه فایل
+	Fillet	گردکردن گوشه
+	Filter	فیلتر
+	Filters	فیلترها
+	Find and Replace	جستجو و جایگزینی
+	Find...	جستجو...
+	First	اول
+	First commit	نخستین کامیت
+	Fit Points	نقاط برازش
+	Fix	تثبیت
+	Flatten Objects	مسطح کردن اشیا
+	Format	قالب
+	Freehand	دست‌آزاد
+	Freeze	منجمد کردن
+	Freeze Layer	منجمد کردن لایه
+	Freeze in new viewports	منجمد در پنجره‌های دید جدید
+	Freeze/Thaw	انجماد/ذوب
+	Freeze/Thaw in all viewports	انجماد/ذوب در همه پنجره‌های دید
+	Freeze/Thaw in the current viewport	انجماد/ذوب در پنجره دید فعلی
+	From	از
+	From Template...	از الگو...
+	General	عمومی
+	Geometric Center	مرکز هندسی
+	Geometric Constraint	قید هندسی
+	Geometric Constraints	قیدهای هندسی
+	Geometry	هندسه
+	Get Variable	دریافت متغیر
+	Get View	دریافت نما
+	Get from the Drawing	دریافت از نقشه
+	Global	سراسری
+	Global width	عرض سراسری
+	Grab bag	متفرقه
+	Gradient	گرادیان
+	Gradient...	گرادیان...
+	Grayscale	خاکستری
+	Green	سبز
+	Grid (F7)	شبکه (F7)
+	Grid Display	نمایش شبکه
+	Grid On (F7)	شبکه روشن (F7)
+	Grid snap	گیره شبکه
+	Grid spacing	فاصله شبکه
+	Grip Edit	ویرایش با دستگیره
+	Grip Mirror	قرینه با دستگیره
+	Grip Option	گزینه دستگیره
+	Grip Rotate	چرخش با دستگیره
+	Grip Scale	مقیاس با دستگیره
+	Grip Stretch	کشش با دستگیره
+	Grip size	اندازه دستگیره
+	Group	گروه
+	Group Edit	ویرایش گروه
+	Group Options	گزینه‌های گروه
+	Group Selection	انتخاب گروهی
+	Hatch	هاشور
+	Hatch Edit	ویرایش هاشور
+	Hatch Pattern	الگوی هاشور
+	Hatch Patterns	الگوهای هاشور
+	Hatch...	هاشور...
+	Height	ارتفاع
+	Height: {height}	ارتفاع: {height}
+	Helix	مارپیچ
+	Help	راهنما
+	Hide All	پنهان کردن همه
+	Hide All Constraint Bars	پنهان کردن همه نوارهای قید
+	Hide All Dynamic Dimensions	پنهان کردن همه اندازه‌های پویا
+	Hide DraftCraft	پنهان کردن DraftCraft
+	Hide Layer List	پنهان کردن فهرست لایه‌ها
+	Hide Objects	پنهان کردن اشیا
+	Hide Others	پنهان کردن بقیه
+	Hide Palette	پنهان کردن پالت
+	Hide Palettes	پنهان کردن پالت‌ها
+	History	تاریخچه
+	Hold Shift to add to the selection	برای افزودن به انتخاب، Shift را نگه دارید
+	Home	خانه
+	Horizontal	افقی
+	HorizontalDistance	فاصله افقی
+	How to apply:	نحوه اعمال:
+	ID Point	شناسایی نقطه
+	Import	وارد کردن
+	Import...	وارد کردن...
+	In	داخل
+	In-window Menu Bar	نوار منو درون پنجره
+	Include in new selection set	گنجاندن در مجموعه انتخاب جدید
+	Increment angle	زاویه افزایشی
+	Index Color	رنگ شاخص
+	Index color: {index}	رنگ شاخص: {index}
+	Infer Constraints	استنتاج قیدها
+	Inquiry	پرس‌وجو
+	Insert	درج
+	Insert Block	درج بلوک
+	Insert Column	درج ستون
+	Insert Row	درج ردیف
+	Insert Table Formula	درج فرمول جدول
+	Insert tab	زبانه درج
+	Insert this block	درج این بلوک
+	Insertion	نقطه درج
+	Insertion X	درج X
+	Insertion Y	درج Y
+	Insertion Z	درج Z
+	Inspect Constraints	بررسی قیدها
+	Inspect Drawing	بررسی نقشه
+	Inspection	بازرسی
+	Interface Language	زبان رابط
+	Interface Theme	پوسته رابط
+	Interface language	زبان رابط
+	Interface theme	پوسته رابط
+	Intersect	اشتراک
+	Intersection	تقاطع
+	Isolate	جداسازی
+	Isolate Layer	جداسازی لایه
+	Isolate Objects	جداسازی اشیا
+	Isometric Drafting	نقشه‌کشی ایزومتریک
+	Isometric Plane	صفحه ایزومتریک
+	Isometric snap	گیره ایزومتریک
+	Jogged	شکسته
+	Jogged Linear	خطی شکسته
+	Join	پیوستن
+	Keep an editable copy of this table in the drawing	نگه داشتن یک نسخه قابل ویرایش از این جدول در نقشه
+	Keep the system cursor visible over the drawing area	نمایان ماندن نشانگر سیستم روی ناحیه ترسیم
+	Language	زبان
+	Largest array	بزرگ‌ترین آرایه
+	Last	آخرین
+	Last commit	آخرین کامیت
+	Layer	لایه
+	Layer Delete	حذف لایه
+	Layer Match	تطبیق لایه
+	Layer Merge	ادغام لایه
+	Layer Off	خاموش کردن لایه
+	Layer Properties	ویژگی‌های لایه
+	Layer Properties Manager	مدیر ویژگی‌های لایه
+	Layer Properties Manager — current viewport	مدیر ویژگی‌های لایه — پنجره دید فعلی
+	Layer State	وضعیت لایه
+	Layer States Manager...	مدیر وضعیت‌های لایه...
+	Layer Tools	ابزارهای لایه
+	Layer contains objects (double-click to make current)	لایه دارای شیء است (برای فعال کردن دوبار کلیک کنید)
+	Layer is empty (double-click to make current)	لایه خالی است (برای فعال کردن دوبار کلیک کنید)
+	Layers	لایه‌ها
+	Layers Palette	پالت لایه‌ها
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	لایه‌های نمایش‌داده‌شده: {shown} از {total}.   لایه فعلی: {layer}
+	Layout	طرح‌بندی
+	Layout list	فهرست طرح‌بندی‌ها
+	Layout paper	کاغذ طرح‌بندی
+	Layout {name}: {table}	طرح‌بندی {name}: {table}
+	Leader	خط راهنما
+	Leaders Only	فقط خطوط راهنما
+	Left	چپ
+	Left device button: zoom extents. Right device button: calibrate.	دکمه چپ دستگاه: بزرگ‌نمایی گستره کامل. دکمه راست دستگاه: کالیبره کردن.
+	Length	طول
+	Length X	طول X
+	Length Y	طول Y
+	Lengthen	تغییر طول
+	Light	روشن
+	Line	خط
+	Line delta	تغییر خطوط
+	Linear	خطی
+	Lines +/−	خطوط +/−
+	Lines added	خطوط افزوده‌شده
+	Lines deleted	خطوط حذف‌شده
+	Lines of Command History	خطوط تاریخچه فرمان‌ها
+	Linetype	نوع خط
+	Linetype Scale	مقیاس نوع خط
+	Linetype scale	مقیاس نوع خط
+	Linetype...	نوع خط...
+	Lineweight	ضخامت خط
+	Lineweight...	ضخامت خط...
+	List	فهرست
+	List Blocks	فهرست بلوک‌ها
+	List Dimension Styles	فهرست سبک‌های اندازه‌گذاری
+	List Groups	فهرست گروه‌ها
+	List Layer States	فهرست وضعیت‌های لایه
+	List Layouts	فهرست طرح‌بندی‌ها
+	List System Variables	فهرست متغیرهای سیستم
+	List Text Styles	فهرست سبک‌های متن
+	Load all	بارگذاری همه
+	Load...	بارگذاری...
+	Loaded	بارگذاری‌شده
+	Loaded linetypes	انواع خط بارگذاری‌شده
+	Lock	قفل
+	Lock Layer	قفل کردن لایه
+	Lock viewport	قفل کردن پنجره دید
+	Lock/Unlock	قفل/باز کردن قفل
+	Loft	لافت
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. وابسته به Autodesk, Inc. نیست.
+	MODEL	مدل
+	MText	متن چندسطری
+	Magenta	سرخابی
+	Major line every	خط اصلی هر
+	Make Current	تنظیم به‌عنوان فعلی
+	Make Object's Layer Current	فعال کردن لایه شیء
+	Make it a block of this drawing, keeping its layer names	تبدیل آن به بلوکی از این نقشه با حفظ نام لایه‌هایش
+	Make it a block of this drawing; its layers become NAME$0$LAYER	تبدیل آن به بلوکی از این نقشه؛ لایه‌هایش NAME$0$LAYER می‌شوند
+	Make...	ساختن...
+	Match Layer	تطبیق لایه
+	Match Properties	تطبیق ویژگی‌ها
+	Measure	اندازه‌گیری
+	Measure Distance	اندازه‌گیری فاصله
+	Measure Geometry	اندازه‌گیری هندسه
+	Merge Cells	ادغام خانه‌ها
+	Merged PRs	درخواست‌های ادغام پذیرفته‌شده
+	Mid Between 2 Points	وسط بین 2 نقطه
+	Midpoint	نقطه میانی
+	Mirror	قرینه
+	Model	مدل
+	Model Space (in viewport)	فضای مدل (در پنجره دید)
+	Model background	پس‌زمینه مدل
+	Modeling	مدل‌سازی
+	Models	مدل‌ها
+	Modify	اصلاح
+	More toolbar commands	فرمان‌های بیشتر نوار ابزار
+	Move	جابه‌جایی
+	Move sideways to pan; push/pull or twist to zoom.	برای جابه‌جایی دید به پهلو حرکت دهید؛ برای بزرگ‌نمایی فشار دهید/بکشید یا بچرخانید.
+	Multileader	خط راهنمای چندگانه
+	Multileader Style...	سبک خط راهنمای چندگانه...
+	Multileader style	سبک خط راهنمای چندگانه
+	Multiline	خط چندگانه
+	Multiline Style...	سبک خط چندگانه...
+	Multiline Text	متن چندسطری
+	Multiline Text...	متن چندسطری...
+	Multiline...	خط چندگانه...
+	Multiple	چندگانه
+	Multiple Point	چند نقطه
+	My	من
+	My properties: not available yet	ویژگی‌های من: هنوز در دسترس نیست
+	Name	نام
+	Name (A–Z)	نام (الف–ی)
+	Named	نام‌دار
+	Named Viewports...	پنجره‌های دید نام‌دار...
+	Named Views...	نماهای نام‌دار...
+	Nearest	نزدیک‌ترین
+	New	جدید
+	New (metric)	جدید (متریک)
+	New CTB	CTB جدید
+	New Drawing	نقشه جدید
+	New Drawing (⌘N)	نقشه جدید (⌘N)
+	New Drawing...	نقشه جدید...
+	New Layer	لایه جدید
+	New Layout	طرح‌بندی جدید
+	New STB	STB جدید
+	New VP Freeze	انجماد در پنجره‌های دید جدید
+	New Viewports...	پنجره‌های دید جدید...
+	New from Template...	جدید از الگو...
+	New layout	طرح‌بندی جدید
+	New state name	نام وضعیت جدید
+	New style	سبک جدید
+	Next Change	تغییر بعدی
+	No	خیر
+	No blocks defined in this drawing.	هیچ بلوکی در این نقشه تعریف نشده است.
+	No contributor data was built into this copy.	داده‌های مشارکت‌کنندگان در این نسخه گنجانده نشده است.
+	No external references are attached.	هیچ ارجاع خارجی پیوست نشده است.
+	No model credits were built into this copy.	فهرست قدردانی از مدل‌ها در این نسخه گنجانده نشده است.
+	No plot style tables.	هیچ جدول سبک چاپی وجود ندارد.
+	No saved layer states	هیچ وضعیت لایه ذخیره‌شده‌ای وجود ندارد
+	No selection	بدون انتخاب
+	No supported 3D mouse found	هیچ ماوس سه‌بعدی پشتیبانی‌شده‌ای یافت نشد
+	Node	گره
+	None	هیچ
+	Normal	عادی
+	Not Found	یافت نشد
+	Not available	در دسترس نیست
+	Not available yet	هنوز در دسترس نیست
+	Not loaded	بارگذاری نشده
+	Numbered list	فهرست شماره‌دار
+	OK	تأیید
+	Object	شیء
+	Object Snap	گیره شیء
+	Object Snap (F3)	گیره شیء (F3)
+	Object Snap On (F3)	گیره شیء روشن (F3)
+	Object Snap Tracking	ردیابی گیره شیء
+	Object Snap Tracking (F11)	ردیابی گیره شیء (F11)
+	Object Snap Tracking Settings	تنظیمات ردیابی گیره شیء
+	Object snap aperture	دریچه گیره شیء
+	Object snap marker size	اندازه نشانگر گیره شیء
+	Object type:	نوع شیء:
+	Oblique	مایل
+	Off	خاموش
+	Offset	آفست
+	On	روشن
+	On/Off	روشن/خاموش
+	Only in this drawing: {n}	فقط در این نقشه: {n}
+	Only in {name}: {n}	فقط در {name}: {n}
+	Oops	بازگردانی پاک‌شده‌ها
+	Open	باز کردن
+	Open (⌘O)	باز کردن (⌘O)
+	Open Sample Drawing	باز کردن نقشه نمونه
+	Open Xref	باز کردن ارجاع خارجی
+	Open a drawing first.	ابتدا یک نقشه باز کنید.
+	Open and Save	باز کردن و ذخیره
+	Open sample drawing	باز کردن نقشه نمونه
+	Open...	باز کردن...
+	Operator:	عملگر:
+	Options	گزینه‌ها
+	Options...	گزینه‌ها...
+	Orbit	چرخش مداری
+	Ordinate	مختصاتی
+	Ortho (F8)	متعامد (F8)
+	Ortho Mode	حالت متعامد
+	Ortho Mode (F8)	حالت متعامد (F8)
+	Osnap Settings...	تنظیمات گیره شیء...
+	Out	بیرون
+	Over-constrained	بیش از حد مقید
+	Overlay	هم‌پوشانی
+	Override	بازنویسی
+	PAPER	کاغذ
+	PRs	درخواست‌های ادغام
+	Page Setup Manager	مدیر تنظیم صفحه
+	Page Setup Manager...	مدیر تنظیم صفحه...
+	Pan	جابه‌جایی دید
+	Pan Down	جابه‌جایی دید به پایین
+	Pan Left	جابه‌جایی دید به چپ
+	Pan Right	جابه‌جایی دید به راست
+	Pan Up	جابه‌جایی دید به بالا
+	Pan sensitivity	حساسیت جابه‌جایی دید
+	Paper Space	فضای کاغذ
+	Parallel	موازی
+	Parameters Manager	مدیر پارامترها
+	Parametric	پارامتری
+	Paste	چسباندن
+	Paste as Block	چسباندن به‌صورت بلوک
+	Paste to Command Line	چسباندن در خط فرمان
+	Paste to Original Coordinates	چسباندن در مختصات اصلی
+	Path Array	آرایه مسیری
+	Pattern	الگو
+	Percent	درصد
+	Perpendicular	عمود
+	Pickbox size	اندازه کادر انتخاب
+	Plot	چاپ
+	Plot (click: do not plot)	چاپ (کلیک: چاپ نشود)
+	Plot Preview	پیش‌نمایش چاپ
+	Plot Style Manager	مدیر سبک‌های چاپ
+	Plot Style Manager...	مدیر سبک‌های چاپ...
+	Plot Style...	سبک چاپ...
+	Plot Styles...	سبک‌های چاپ...
+	Plot Window	پنجره چاپ
+	Plot style	سبک چاپ
+	Plot style attached to	سبک چاپ پیوست‌شده به
+	Plot style table	جدول سبک چاپ
+	Plot table type	نوع جدول چاپ
+	Plotter Manager	مدیر پلاتر
+	Plotter Manager...	مدیر پلاتر...
+	Plus/minus	به‌علاوه/منها
+	Point	نقطه
+	Point Filters	فیلترهای نقطه
+	Point Style...	سبک نقطه...
+	Polar (distance < angle)	قطبی (فاصله < زاویه)
+	Polar Array	آرایه قطبی
+	Polar Tracking	ردیابی قطبی
+	Polar Tracking (F10)	ردیابی قطبی (F10)
+	Polar Tracking On (F10)	ردیابی قطبی روشن (F10)
+	Polar angle measurement	اندازه‌گیری زاویه قطبی
+	Polar distance	فاصله قطبی
+	Polar: {distance} < {angle}°	قطبی: {distance} < {angle}°
+	PolarSnap	گیره قطبی
+	Polygon	چندضلعی
+	Polygonal	چندضلعی
+	Polygonal Viewport	پنجره دید چندضلعی
+	Polyline	چندخطی
+	Polyline Edit	ویرایش چندخطی
+	Position X	موقعیت X
+	Position Y	موقعیت Y
+	Position Z	موقعیت Z
+	Previous	قبلی
+	Previous Change	تغییر قبلی
+	Previous Layer	لایه قبلی
+	Primitives	احجام پایه
+	Print	چاپ
+	Print...	چاپ...
+	Profiles	نمایه‌ها
+	Properties	ویژگی‌ها
+	Properties Inspector	بازرس ویژگی‌ها
+	Properties:	ویژگی‌ها:
+	Proxy	پراکسی
+	Purge	پاک‌سازی
+	Pyramid	هرم
+	Quadrant	ربع
+	Query Entities	پرس‌وجوی موجودیت‌ها
+	Quick	سریع
+	Quick Dimension	اندازه‌گذاری سریع
+	Quick Properties	ویژگی‌های سریع
+	Quick Select	انتخاب سریع
+	Quick Select Properties	ویژگی‌های انتخاب سریع
+	Quick Select...	انتخاب سریع...
+	QuickCalc	ماشین‌حساب سریع
+	QuickCalc Pick	انتخاب برای ماشین‌حساب سریع
+	Quit DraftCraft	خروج از DraftCraft
+	Radius	شعاع
+	Raster Image	تصویر رستری
+	Ray	پرتو
+	Read-only	فقط خواندنی
+	Real name	نام واقعی
+	Realtime	بلادرنگ
+	Reassociate Dimensions	وابسته‌سازی دوباره اندازه‌ها
+	Recalculate Table Formulas	محاسبه دوباره فرمول‌های جدول
+	Recent	اخیر
+	Recent Commands	فرمان‌های اخیر
+	Recent Input	ورودی‌های اخیر
+	Recover...	بازیابی...
+	Rectangle	مستطیل
+	Rectangular	مستطیلی
+	Rectangular Array	آرایه مستطیلی
+	Rectangular snap	گیره مستطیلی
+	Red	قرمز
+	Redo	انجام دوباره
+	Redo (⇧⌘Z)	انجام دوباره (⇧⌘Z)
+	Redraw	ترسیم دوباره
+	Reference Manager	مدیر ارجاع‌ها
+	Reference Name	نام ارجاع
+	References: {n}	ارجاع‌ها: {n}
+	Regen	بازسازی
+	Regen All	بازسازی همه
+	Region	ناحیه
+	Region/Mass Properties	ویژگی‌های ناحیه/جرم
+	Reinitialize	راه‌اندازی دوباره
+	Relative	نسبی
+	Relative to last segment	نسبت به آخرین قطعه
+	Release the 3D mouse to calibrate its resting position	ماوس سه‌بعدی را رها کنید تا موقعیت سکون آن کالیبره شود
+	Reload	بارگذاری دوباره
+	Reload All	بارگذاری دوباره همه
+	Remove	برداشتن
+	Remove Leader	برداشتن خط راهنما
+	Remove Vertex	برداشتن رأس
+	Remove the viewport override	برداشتن بازنویسی پنجره دید
+	Rename Dimension Style	تغییر نام سبک اندازه‌گذاری
+	Rename Layer	تغییر نام لایه
+	Rename Layer State	تغییر نام وضعیت لایه
+	Rename Layout	تغییر نام طرح‌بندی
+	Rename Text Style	تغییر نام سبک متن
+	Rename...	تغییر نام...
+	Repeat {command}	تکرار {command}
+	Replace Block...	جایگزینی بلوک...
+	Requires a point (x,y, @dx,dy or @d<a).	یک نقطه لازم است (x,y یا @dx,dy یا @d<a).
+	Reset Palettes	بازنشانی پالت‌ها
+	Reset Panel Layout	بازنشانی چیدمان پانل‌ها
+	Reset keeps the interface language.	بازنشانی، زبان رابط را حفظ می‌کند.
+	Reset to Defaults	بازنشانی به پیش‌فرض‌ها
+	Restore	بازگردانی
+	Restore Layer State	بازگردانی وضعیت لایه
+	Reverse	وارونه کردن
+	Reverse the order	وارونه کردن ترتیب
+	Reverse zoom direction	وارونه کردن جهت بزرگ‌نمایی
+	Revision Cloud	ابر بازبینی
+	Revolve	دوران
+	Right	راست
+	Rotate	چرخش
+	Rotation	چرخش
+	Run Script...	اجرای اسکریپت...
+	SVG drawings (SVG, SVGZ)	نقشه‌های SVG (SVG, SVGZ)
+	Save	ذخیره
+	Save (⌘S)	ذخیره (⌘S)
+	Save As	ذخیره با نام
+	Save As...	ذخیره با نام...
+	Save Layer State	ذخیره وضعیت لایه
+	Save State	ذخیره وضعیت
+	Save new drawings as	ذخیره نقشه‌های جدید به‌صورت
+	Saved Path	مسیر ذخیره‌شده
+	Scale	مقیاس
+	Scale List...	فهرست مقیاس‌ها...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	ذره‌بین‌های صفحه، صفحه‌خوان‌ها و ضبط‌کننده‌ها نشانگر سیستم را دنبال می‌کنند.
+	Screening	کم‌رنگ‌سازی
+	Search for layer	جستجوی لایه
+	Search for parameter	جستجوی پارامتر
+	Search for pattern	جستجوی الگو
+	Second and next points:	نقطه دوم و نقاط بعدی:
+	Select	انتخاب
+	Select 2D polyline	چندخطی دوبعدی را انتخاب کنید
+	Select All	انتخاب همه
+	Select Objects	انتخاب اشیا
+	Select Similar	انتخاب موارد مشابه
+	Select a 2D polyline.	یک چندخطی دوبعدی انتخاب کنید.
+	Select a block reference.	یک ارجاع بلوک انتخاب کنید.
+	Select a circle or arc.	یک دایره یا کمان انتخاب کنید.
+	Select a closed polyline	یک چندخطی بسته انتخاب کنید
+	Select a closed polyline, circle, ellipse or closed spline.	یک چندخطی بسته، دایره، بیضی یا اسپلاین بسته انتخاب کنید.
+	Select a closed polyline.	یک چندخطی بسته انتخاب کنید.
+	Select a curve as the path.	یک منحنی به‌عنوان مسیر انتخاب کنید.
+	Select a dimension constraint type	نوع قید ابعادی را انتخاب کنید
+	Select a line object	یک شیء خط انتخاب کنید
+	Select a line object.	یک شیء خط انتخاب کنید.
+	Select a line or an arc.	یک خط یا کمان انتخاب کنید.
+	Select a line or polyline segment	یک خط یا قطعه چندخطی انتخاب کنید
+	Select a line, arc or open polyline.	یک خط، کمان یا چندخطی باز انتخاب کنید.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	یک خط، کمان، دایره، چندخطی، بیضی یا اسپلاین به‌عنوان مسیر انتخاب کنید.
+	Select a line, circle, arc or polyline segment.	یک خط، دایره، کمان یا قطعه چندخطی انتخاب کنید.
+	Select a line.	یک خط انتخاب کنید.
+	Select a polyline.	یک چندخطی انتخاب کنید.
+	Select a text, mtext, attribute definition or dimension.	یک متن، متن چندسطری، تعریف صفت یا اندازه انتخاب کنید.
+	Select an annotation object	یک شیء حاشیه‌نویسی انتخاب کنید
+	Select an arc or circle	یک کمان یا دایره انتخاب کنید
+	Select an arc.	یک کمان انتخاب کنید.
+	Select an object	یک شیء انتخاب کنید
+	Select an object to change	شیئی را برای تغییر انتخاب کنید
+	Select an object to measure	شیئی را برای اندازه‌گیری انتخاب کنید
+	Select an object.	یک شیء انتخاب کنید.
+	Select an open curve.	یک منحنی باز انتخاب کنید.
+	Select an open line, arc, polyline, ellipse arc or spline.	یک خط، کمان، چندخطی، کمان بیضوی یا اسپلاین باز انتخاب کنید.
+	Select arc or circle	کمان یا دایره را انتخاب کنید
+	Select arc or polyline arc segment	کمان یا قطعه کمانی چندخطی را انتخاب کنید
+	Select arc style	سبک کمان را انتخاب کنید
+	Select arc, circle, line	کمان، دایره یا خط را انتخاب کنید
+	Select at least two objects to join.	دست‌کم دو شیء برای پیوستن انتخاب کنید.
+	Select circle or arc to add center mark	دایره یا کمان را برای افزودن علامت مرکز انتخاب کنید
+	Select closed objects (regions, closed polylines, circles).	اشیای بسته (ناحیه‌ها، چندخطی‌های بسته، دایره‌ها) را انتخاب کنید.
+	Select first line	خط اول را انتخاب کنید
+	Select first line or arc	خط یا کمان اول را انتخاب کنید
+	Select first object	شیء اول را انتخاب کنید
+	Select first point	نقطه اول را انتخاب کنید
+	Select nested objects to copy	اشیای تودرتو را برای کپی انتخاب کنید
+	Select object	شیء را انتخاب کنید
+	Select object to dimension	شیء را برای اندازه‌گذاری انتخاب کنید
+	Select object to divide	شیء را برای تقسیم انتخاب کنید
+	Select object to extend or shift-select to trim	شیء را برای امتداد دادن انتخاب کنید یا برای بریدن با Shift انتخاب کنید
+	Select object to measure	شیء را برای اندازه‌گیری انتخاب کنید
+	Select object to offset	شیء را برای آفست انتخاب کنید
+	Select object to trim or shift-select to extend	شیء را برای بریدن انتخاب کنید یا برای امتداد دادن با Shift انتخاب کنید
+	Select objects	اشیا را انتخاب کنید
+	Select objects (crossing window first corner)	اشیا را انتخاب کنید (گوشه اول پنجره متقاطع)
+	Select objects first, then choose a command	ابتدا اشیا را انتخاب کنید، سپس یک فرمان برگزینید
+	Select objects to array.	اشیا را برای آرایه انتخاب کنید.
+	Select objects to stretch by crossing-window or crossing-polygon...	اشیا را برای کشش با پنجره متقاطع یا چندضلعی متقاطع انتخاب کنید...
+	Select objects:	اشیا را انتخاب کنید:
+	Select one polyline (Multiple is available through the JSON form).	یک چندخطی انتخاب کنید (حالت چندگانه از طریق قالب JSON در دسترس است).
+	Select path curve	منحنی مسیر را انتخاب کنید
+	Select point or object	نقطه یا شیء را انتخاب کنید
+	Select polyline	چندخطی را انتخاب کنید
+	Select second line	خط دوم را انتخاب کنید
+	Select second line or shift-select to apply corner	خط دوم را انتخاب کنید یا برای اعمال گوشه با Shift انتخاب کنید
+	Select second object	شیء دوم را انتخاب کنید
+	Select second object or shift-select to apply corner	شیء دوم را انتخاب کنید یا برای اعمال گوشه با Shift انتخاب کنید
+	Select second point	نقطه دوم را انتخاب کنید
+	Select spline	اسپلاین را انتخاب کنید
+	Select symmetry line	خط تقارن را انتخاب کنید
+	Select two points	دو نقطه انتخاب کنید
+	Selection	انتخاب
+	Selection Cycling	چرخه انتخاب
+	Send Hatches to Back	فرستادن هاشورها به عقب
+	Send Under Objects	فرستادن زیر اشیا
+	Send to Back	فرستادن به عقب
+	Services	خدمات
+	Set Current	تنظیم به‌عنوان فعلی
+	Set Current Dimension Style	تنظیم سبک اندازه‌گذاری فعلی
+	Set Current Text Style	تنظیم سبک متن فعلی
+	Set Current Viewport	تنظیم پنجره دید فعلی
+	Set Layer Properties	تنظیم ویژگی‌های لایه
+	Set Properties	تنظیم ویژگی‌ها
+	Set Table Cell	تنظیم خانه جدول
+	Set Table Cell Style	تنظیم سبک خانه جدول
+	Set Variable	تنظیم متغیر
+	Set View	تنظیم نما
+	Settings...	تنظیمات...
+	Share	اشتراک‌گذاری
+	Show	نمایش
+	Show All	نمایش همه
+	Show All Constraint Bars	نمایش همه نوارهای قید
+	Show All Dynamic Dimensions	نمایش همه اندازه‌های پویا
+	Show Annotative Objects	نمایش اشیای حاشیه‌نویسی
+	Show Layer List	نمایش فهرست لایه‌ها
+	Show Quick Properties for selected objects	نمایش ویژگی‌های سریع برای اشیای انتخاب‌شده
+	Show System Cursor	نمایش نشانگر سیستم
+	Show and hide the tools of this category	نمایش و پنهان کردن ابزارهای این دسته
+	Show command prompting near the crosshairs	نمایش اعلان فرمان نزدیک نشانگر متقاطع
+	Show in Tool Sets	نمایش در مجموعه‌ابزارها
+	Show/Hide Lineweight	نمایش/پنهان کردن ضخامت خط
+	Show/Hide Transparency	نمایش/پنهان کردن شفافیت
+	Single Line Text	متن تک‌سطری
+	Single Point	تک نقطه
+	Single...	تکی...
+	Smooth	هموارسازی
+	Snap	گیره
+	Snap Mode	حالت گیره
+	Snap Mode (F9)	حالت گیره (F9)
+	Snap On (F9)	گیره روشن (F9)
+	Snap Overrides	بازنویسی‌های گیره
+	Snap X spacing	فاصله گیره X
+	Snap and Grid	گیره و شبکه
+	Snap type	نوع گیره
+	Snap, grid, polar tracking and Dynamic Input:	گیره، شبکه، ردیابی قطبی و ورودی پویا:
+	Solid	توپر
+	Solid Editing	ویرایش احجام
+	Sort	مرتب‌سازی
+	Specify a point	یک نقطه مشخص کنید
+	Specify a scale for the hatch pattern	مقیاس الگوی هاشور را مشخص کنید
+	Specify a second extension line origin	مبدأ خط امتداد دوم را مشخص کنید
+	Specify an angle for the hatch pattern	زاویه الگوی هاشور را مشخص کنید
+	Specify angle end point	نقطه پایانی زاویه را مشخص کنید
+	Specify angle of dimension line	زاویه خط اندازه را مشخص کنید
+	Specify angle of dimension text	زاویه متن اندازه را مشخص کنید
+	Specify angle start point	نقطه شروع زاویه را مشخص کنید
+	Specify angle vertex	رأس زاویه را مشخص کنید
+	Specify angle vertex point	نقطه رأس زاویه را مشخص کنید
+	Specify arc length dimension location	محل اندازه طول کمان را مشخص کنید
+	Specify axis endpoint of ellipse	نقطه انتهایی محور بیضی را مشخص کنید
+	Specify base diameter	قطر پایه را مشخص کنید
+	Specify base point	نقطه پایه را مشخص کنید
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	نقطه پایه یا جابه‌جایی را مشخص کنید (برای جابه‌جایی بلادرنگ دید، با دکمه میانی ماوس بکشید)
+	Specify base radius	شعاع پایه را مشخص کنید
+	Specify center of donut	مرکز حلقه را مشخص کنید
+	Specify center of ellipse	مرکز بیضی را مشخص کنید
+	Specify center of polygon	مرکز چندضلعی را مشخص کنید
+	Specify center point for circle	نقطه مرکز دایره را مشخص کنید
+	Specify center point of arc	نقطه مرکز کمان را مشخص کنید
+	Specify center point of arc (hold Ctrl to switch direction)	نقطه مرکز کمان را مشخص کنید (برای تغییر جهت Ctrl را نگه دارید)
+	Specify center point of array	نقطه مرکز آرایه را مشخص کنید
+	Specify center point of base	نقطه مرکز پایه را مشخص کنید
+	Specify corner of viewport	گوشه پنجره دید را مشخص کنید
+	Specify corner of window, enter a scale factor (nX or nXP)	گوشه پنجره را مشخص کنید، ضریب مقیاس را وارد کنید (nX یا nXP)
+	Specify diameter of circle	قطر دایره را مشخص کنید
+	Specify dimension arc line location	محل کمان خط اندازه را مشخص کنید
+	Specify dimension line location	محل خط اندازه را مشخص کنید
+	Specify distance between turns	فاصله بین دورها را مشخص کنید
+	Specify distance to other axis	فاصله تا محور دیگر را مشخص کنید
+	Specify end angle	زاویه پایان را مشخص کنید
+	Specify end point of arc	نقطه پایان کمان را مشخص کنید
+	Specify end point of arc (hold Ctrl to switch direction)	نقطه پایان کمان را مشخص کنید (برای تغییر جهت Ctrl را نگه دارید)
+	Specify ending width	عرض پایانی را مشخص کنید
+	Specify ending width for next segment	عرض پایانی قطعه بعدی را مشخص کنید
+	Specify endpoint of arc	نقطه انتهایی کمان را مشخص کنید
+	Specify endpoint of axis	نقطه انتهایی محور را مشخص کنید
+	Specify endpoint of line	نقطه انتهایی خط را مشخص کنید
+	Specify feature location	محل عارضه را مشخص کنید
+	Specify fillet radius	شعاع گردکردن گوشه را مشخص کنید
+	Specify fillet radius for rectangles	شعاع گردکردن گوشه مستطیل‌ها را مشخص کنید
+	Specify first angle endpoint	نخستین نقطه انتهایی زاویه را مشخص کنید
+	Specify first chamfer distance	نخستین فاصله پخ را مشخص کنید
+	Specify first chamfer distance for rectangles	نخستین فاصله پخ مستطیل‌ها را مشخص کنید
+	Specify first constraint point	نخستین نقطه قید را مشخص کنید
+	Specify first corner	گوشه اول را مشخص کنید
+	Specify first corner point	نقطه گوشه اول را مشخص کنید
+	Specify first destination point	نخستین نقطه مقصد را مشخص کنید
+	Specify first end point of circle's diameter	نخستین نقطه انتهایی قطر دایره را مشخص کنید
+	Specify first endpoint of edge	نخستین نقطه انتهایی لبه را مشخص کنید
+	Specify first extension line origin	مبدأ خط امتداد اول را مشخص کنید
+	Specify first point	نقطه اول را مشخص کنید
+	Specify first point of mirror line	نقطه اول خط قرینه را مشخص کنید
+	Specify first point on circle	نقطه اول روی دایره را مشخص کنید
+	Specify first point on circle: _tan to	نقطه اول روی دایره را مشخص کنید: _tan to
+	Specify first source point	نخستین نقطه مبدأ را مشخص کنید
+	Specify height	ارتفاع را مشخص کنید
+	Specify helix height	ارتفاع مارپیچ را مشخص کنید
+	Specify included angle	زاویه مرکزی را مشخص کنید
+	Specify included angle (hold Ctrl to switch direction)	زاویه مرکزی را مشخص کنید (برای تغییر جهت Ctrl را نگه دارید)
+	Specify insertion base point	نقطه پایه درج را مشخص کنید
+	Specify insertion point	نقطه درج را مشخص کنید
+	Specify inside diameter of donut	قطر داخلی حلقه را مشخص کنید
+	Specify leader arrowhead location	محل سرپیکان خط راهنما را مشخص کنید
+	Specify leader endpoint	نقطه انتهایی خط راهنما را مشخص کنید
+	Specify leader landing location	محل شانه خط راهنما را مشخص کنید
+	Specify length for rectangles	طول مستطیل‌ها را مشخص کنید
+	Specify length of chord	طول وتر را مشخص کنید
+	Specify length of chord (hold Ctrl to switch direction)	طول وتر را مشخص کنید (برای تغییر جهت Ctrl را نگه دارید)
+	Specify length of segment	طول قطعه را مشخص کنید
+	Specify line width for rectangles	عرض خط مستطیل‌ها را مشخص کنید
+	Specify location for new vertex	محل رأس جدید را مشخص کنید
+	Specify minimum length of arc	حداقل طول کمان را مشخص کنید
+	Specify new end point	نقطه پایانی جدید را مشخص کنید
+	Specify new location for marked vertex	محل جدید رأس علامت‌خورده را مشخص کنید
+	Specify new width for all segments	عرض جدید همه قطعه‌ها را مشخص کنید
+	Specify next point	نقطه بعدی را مشخص کنید
+	Specify offset distance	فاصله آفست را مشخص کنید
+	Specify opposite corner	گوشه مقابل را مشخص کنید
+	Specify other corner point	نقطه گوشه دیگر را مشخص کنید
+	Specify other endpoint of axis	نقطه انتهایی دیگر محور را مشخص کنید
+	Specify outside diameter of donut	قطر خارجی حلقه را مشخص کنید
+	Specify point	نقطه را مشخص کنید
+	Specify point on object for first tangent of circle	نقطه‌ای روی شیء برای نخستین مماس دایره مشخص کنید
+	Specify point on object for second tangent of circle	نقطه‌ای روی شیء برای دومین مماس دایره مشخص کنید
+	Specify point on side to offset	نقطه‌ای در سمت آفست مشخص کنید
+	Specify radius of arc	شعاع کمان را مشخص کنید
+	Specify radius of arc (hold Ctrl to switch direction)	شعاع کمان را مشخص کنید (برای تغییر جهت Ctrl را نگه دارید)
+	Specify radius of circle	شعاع دایره را مشخص کنید
+	Specify rotation angle	زاویه چرخش را مشخص کنید
+	Specify rotation angle of text	زاویه چرخش متن را مشخص کنید
+	Specify scale factor	ضریب مقیاس را مشخص کنید
+	Specify second angle endpoint	دومین نقطه انتهایی زاویه را مشخص کنید
+	Specify second break point	دومین نقطه شکست را مشخص کنید
+	Specify second chamfer distance for rectangles	دومین فاصله پخ مستطیل‌ها را مشخص کنید
+	Specify second constraint point	دومین نقطه قید را مشخص کنید
+	Specify second destination point	دومین نقطه مقصد را مشخص کنید
+	Specify second end point of circle's diameter	دومین نقطه انتهایی قطر دایره را مشخص کنید
+	Specify second endpoint of edge	دومین نقطه انتهایی لبه را مشخص کنید
+	Specify second extension line origin	مبدأ خط امتداد دوم را مشخص کنید
+	Specify second point	نقطه دوم را مشخص کنید
+	Specify second point of arc	نقطه دوم کمان را مشخص کنید
+	Specify second point of mirror line	نقطه دوم خط قرینه را مشخص کنید
+	Specify second point on circle	نقطه دوم روی دایره را مشخص کنید
+	Specify second point on circle: _tan to	نقطه دوم روی دایره را مشخص کنید: _tan to
+	Specify second point or <use first point as displacement>	نقطه دوم را مشخص کنید یا <استفاده از نقطه اول به‌عنوان جابه‌جایی>
+	Specify second source point	دومین نقطه مبدأ را مشخص کنید
+	Specify side to offset	سمت آفست را مشخص کنید
+	Specify start angle	زاویه شروع را مشخص کنید
+	Specify start point	نقطه شروع را مشخص کنید
+	Specify start point of arc	نقطه شروع کمان را مشخص کنید
+	Specify start point of polyline	نقطه شروع چندخطی را مشخص کنید
+	Specify start point of text	نقطه شروع متن را مشخص کنید
+	Specify starting width	عرض آغازین را مشخص کنید
+	Specify starting width for next segment	عرض آغازین قطعه بعدی را مشخص کنید
+	Specify tangent direction for the start point of arc	جهت مماس در نقطه شروع کمان را مشخص کنید
+	Specify the elevation for rectangles	تراز مستطیل‌ها را مشخص کنید
+	Specify thickness for rectangles	ضخامت مستطیل‌ها را مشخص کنید
+	Specify third point on circle	نقطه سوم روی دایره را مشخص کنید
+	Specify third point on circle: _tan to	نقطه سوم روی دایره را مشخص کنید: _tan to
+	Specify third source point or <continue>	سومین نقطه مبدأ را مشخص کنید یا <ادامه>
+	Specify through point	نقطه عبور را مشخص کنید
+	Specify top diameter	قطر بالایی را مشخص کنید
+	Specify top radius	شعاع بالایی را مشخص کنید
+	Specify total angle	زاویه کل را مشخص کنید
+	Specify total length	طول کل را مشخص کنید
+	Specify width for rectangles	عرض مستطیل‌ها را مشخص کنید
+	Sphere	کره
+	Spline	اسپلاین
+	Spline Edit	ویرایش اسپلاین
+	Stack (type 1/2 then select)	انباشتن (1/2 را تایپ و سپس انتخاب کنید)
+	Standard	استاندارد
+	Start	شروع
+	Start Width	عرض آغازین
+	Start X	شروع X
+	Start Y	شروع Y
+	Start angle	زاویه شروع
+	Start, Center, Angle	شروع، مرکز، زاویه
+	Start, Center, End	شروع، مرکز، پایان
+	Start, Center, Length	شروع، مرکز، طول
+	Start, End, Angle	شروع، پایان، زاویه
+	Start, End, Direction	شروع، پایان، جهت
+	Start, End, Radius	شروع، پایان، شعاع
+	Status	وضعیت
+	Status Bar	نوار وضعیت
+	Stretch	کشش
+	Stretch Vertex	کشش رأس
+	Style: Standard	سبک: Standard
+	Subtract	تفریق
+	Sweep	جاروب
+	Switch Drawing	تعویض نقشه
+	Switch Layout	تعویض طرح‌بندی
+	Switch between model space in a viewport and paper space	جابه‌جایی میان فضای مدل در پنجره دید و فضای کاغذ
+	Symmetric	متقارن
+	Synchronize Attributes	همگام‌سازی صفت‌ها
+	Synchronize Multiple-scale Positions	همگام‌سازی موقعیت‌های چندمقیاسی
+	TOP	بالا
+	Table	جدول
+	Table Breaks	شکست‌های جدول
+	Table Cell Style	سبک خانه جدول
+	Table Style...	سبک جدول...
+	Table style	سبک جدول
+	Table...	جدول...
+	Tan, Tan, Radius	مماس، مماس، شعاع
+	Tan, Tan, Tan	مماس، مماس، مماس
+	Tangent	مماس
+	Temporary track point	نقطه ردیابی موقت
+	Text	متن
+	Text Editor	ویرایشگر متن
+	Text Height	ارتفاع متن
+	Text Objects Only	فقط اشیای متنی
+	Text Style...	سبک متن...
+	Text height	ارتفاع متن
+	Text override	بازنویسی متن
+	Text style	سبک متن
+	Thaw All Layers	ذوب همه لایه‌ها
+	Thaw Layer	ذوب لایه
+	The aperture is how near the cursor must come to a point for an object snap to find it.	دریچه تعیین می‌کند نشانگر چقدر باید به یک نقطه نزدیک شود تا گیره شیء آن را پیدا کند.
+	There is nothing here yet.	هنوز چیزی اینجا نیست.
+	Thickness	ضخامت
+	Time	زمان
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	کلیک راست وابسته به زمان: کلیک سریع یعنی Enter و نگه داشتن، منو را باز می‌کند
+	To	به
+	To get started, create or open a drawing.	برای شروع، یک نقشه بسازید یا باز کنید.
+	Toggle PICKADD (off: each pick replaces the selection)	تغییر وضعیت PICKADD (خاموش: هر انتخاب جایگزین انتخاب قبلی می‌شود)
+	Toggle PICKADD (on: picks add to the selection)	تغییر وضعیت PICKADD (روشن: انتخاب‌ها به انتخاب افزوده می‌شوند)
+	Tolerance...	تلرانس...
+	Tool Bar	نوار ابزار
+	Tool Sets	مجموعه‌ابزارها
+	Tools	ابزارها
+	Torus	چنبره
+	Trace	ردگیری
+	Track orthogonally only	فقط ردیابی متعامد
+	Track using all polar angle settings	ردیابی با همه تنظیمات زاویه قطبی
+	Transparency	شفافیت
+	Trim	بریدن
+	True Color	رنگ واقعی
+	Turn All Layers On	روشن کردن همه لایه‌ها
+	Turn Off Layer	خاموش کردن لایه
+	Turn On Layer	روشن کردن لایه
+	Turn Quick Properties off (QPMODE)	خاموش کردن ویژگی‌های سریع (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	اگر خاموش باشد، کلیک راست هنگام اجرای فرمان همیشه منوی میان‌بر را باز می‌کند.
+	Type	نوع
+	Type a command	یک فرمان تایپ کنید
+	Type text; Enter starts a new paragraph	متن را تایپ کنید؛ Enter یک پاراگراف جدید آغاز می‌کند
+	UCS Icon	نماد UCS
+	Undo	واگرد
+	Undo (⌘Z)	واگرد (⌘Z)
+	Ungroup	لغو گروه
+	Union	اجتماع
+	Unisolate Layer	لغو جداسازی لایه
+	Units Conversion	تبدیل واحدها
+	Units...	واحدها...
+	Unload	تخلیه
+	Unloaded	تخلیه‌شده
+	Unlock Layer	باز کردن قفل لایه
+	Unlock viewport	باز کردن قفل پنجره دید
+	Unmerge Cells	لغو ادغام خانه‌ها
+	Unreferenced	بدون ارجاع
+	Unresolved	حل‌نشده
+	Unsaved Layer State	وضعیت لایه ذخیره‌نشده
+	Up	بالا
+	Update	به‌روزرسانی
+	Update Data Links	به‌روزرسانی پیوندهای داده
+	Use System Setting	استفاده از تنظیم سیستم
+	Use for this layout	استفاده برای این طرح‌بندی
+	Use object linetype	استفاده از نوع خط شیء
+	Use object lineweight	استفاده از ضخامت خط شیء
+	User	کاربر
+	User Parameters	پارامترهای کاربر
+	User Preferences	ترجیحات کاربر
+	Username	نام کاربری
+	VP Color	رنگ پنجره دید
+	VP Freeze	انجماد در پنجره دید
+	Value	مقدار
+	Value:	مقدار:
+	Variables	متغیرها
+	Version	نسخه
+	Version 2000	نسخه 2000
+	Version 2004	نسخه 2004
+	Version 2007	نسخه 2007
+	Version 2010	نسخه 2010
+	Version 2013	نسخه 2013
+	Version 2018	نسخه 2018
+	Version {version}	نسخه {version}
+	Vertical	عمودی
+	VerticalDistance	فاصله عمودی
+	View	نما
+	ViewCube	ViewCube
+	Viewport	پنجره دید
+	Viewport Layer Freeze	انجماد لایه در پنجره دید
+	Viewport Properties	ویژگی‌های پنجره دید
+	Viewport is locked	پنجره دید قفل است
+	Viewport scale	مقیاس پنجره دید
+	Viewport {id}	پنجره دید {id}
+	Viewports	پنجره‌های دید
+	Volume	حجم
+	WCS	WCS
+	White	سفید
+	Width factor	ضریب عرض
+	Window	پنجره
+	Wipeout	پوشاننده
+	Workspace Switching	تعویض فضای کار
+	Write Block	نوشتن بلوک
+	X	X
+	Xline	خط کمکی
+	Y	Y
+	Yellow	زرد
+	Yes	بله
+	Zoom	بزرگ‌نمایی
+	Zoom All	بزرگ‌نمایی همه
+	Zoom Dynamic	بزرگ‌نمایی پویا
+	Zoom Extents	بزرگ‌نمایی گستره کامل
+	Zoom In	بزرگ‌نمایی به داخل
+	Zoom Object	بزرگ‌نمایی شیء
+	Zoom Out	کوچک‌نمایی
+	Zoom Previous	بزرگ‌نمایی قبلی
+	Zoom Realtime	بزرگ‌نمایی بلادرنگ
+	Zoom Window	بزرگ‌نمایی پنجره
+	Zoom sensitivity	حساسیت بزرگ‌نمایی
+	error	خطا
+	min	دقیقه
+	objects	شیء
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (قید {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	قید {kind} {name} = {expression}  (برای ویرایش دوبار کلیک کنید)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  پارامتر کاربر جدید
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ برای پایان
+@plural	{n} commit	{n} کامیت|{n} کامیت
+@plural	{n} contributor	{n} مشارکت‌کننده|{n} مشارکت‌کننده
+	Check for Updates…	بررسی به‌روزرسانی‌ها…
+	DraftCraft is up to date.	DraftCraft به‌روز است.
+	Could not check for updates.	بررسی به‌روزرسانی‌ها ممکن نشد.
+	Add to Working Set	افزودن به مجموعه کاری
+	Add: Pick points	افزودن: برگزیدن نقاط
+	Add: Select objects	افزودن: انتخاب اشیا
+	Add…	افزودن…
+	Alias	نام مستعار
+	Alias file: {file}	فایل نام‌های مستعار: {file}
+	Align Multileaders	تراز کردن خطوط راهنمای چندگانه
+	Analyze Shapes	تحلیل شکل‌ها
+	Analyze Usage	تحلیل استفاده
+	Animation Effects	جلوه‌های پویانمایی
+	Animation effects	جلوه‌های پویانمایی
+	Associative	وابسته
+	Backup copy	نسخه پشتیبان
+	Block to create or edit	بلوک برای ایجاد یا ویرایش
+	Bottom left	پایین چپ
+	Bottom right	پایین راست
+	Boundaries	مرزها
+	Boundaries picked: {n}	مرزهای برگزیده: {n}
+	Break-line Symbol	نماد خط شکست
+	Centered	وسط‌چین
+	Change Properties	تغییر ویژگی‌ها
+	Choose the command the alias starts.	فرمانی را که این نام مستعار اجرا می‌کند انتخاب کنید.
+	Click the ruler to add a tab stop, right-click to remove one	برای افزودن نقطه توقف تب روی خط‌کش کلیک کنید و برای حذف آن کلیک راست کنید
+	Click to set new origin	برای تعیین مبدأ جدید کلیک کنید
+	Close Block Editor	بستن ویرایشگر بلوک
+	Collect	جمع‌آوری
+	Collect Multileaders	جمع‌آوری خطوط راهنمای چندگانه
+	Color 1	رنگ 1
+	Color 2	رنگ 2
+	Command	فرمان
+	Convert Text to Mtext	تبدیل متن به متن چندسطری
+	Create backup copy with each save	ایجاد نسخه پشتیبان در هر ذخیره
+	Create separate hatches	ایجاد هاشورهای جداگانه
+	Crossing selection color:	رنگ انتخاب متقاطع:
+	Curved	منحنی
+	Customize	سفارشی‌سازی
+	Default to boundary extents	پیش‌فرض: گستره مرزها
+	Define each corner of the selection window with a separate click.	هر گوشه پنجره انتخاب را با یک کلیک جداگانه تعیین کنید.
+	Discard	دور انداختن
+	Drag Dynamic Grip	کشیدن دستگیره پویا
+	Dynamic Block Data	داده‌های بلوک پویا
+	Dynamic Block Grips	دستگیره‌های بلوک پویا
+	Dynamic Block Reference	ارجاع بلوک پویا
+	Edit Block Definition	ویرایش تعریف بلوک
+	Edit Command Aliases (PGP)...	ویرایش نام‌های مستعار فرمان‌ها (PGP)...
+	Edit Multileader	ویرایش خط راهنمای چندگانه
+	Edit Reference In-Place	ویرایش ارجاع در محل
+	Edit…	ویرایش…
+	Evaluate LISP	ارزیابی LISP
+	Exclude:	استثنا:
+	Explode Attributes to Text	تجزیه صفت‌ها به متن
+	Express Tools	ابزارهای Express
+	Font	قلم
+	Grips	دستگیره‌ها
+	Groups	گروه‌ها
+	Hatch Pick	برگزیدن هاشور
+	Hatch and Gradient	هاشور و گرادیان
+	Hatch origin	مبدأ هاشور
+	Hatches	هاشورها
+	Hemispherical	نیم‌کره‌ای
+	Ignore	نادیده گرفتن
+	Imperial (inches)	امپریال (اینچ)
+	Implied Loops	حلقه‌های ضمنی
+	Indicate selection area	نمایش ناحیه انتخاب
+	Interface scale	مقیاس رابط
+	Inverted	وارونه
+	Island	جزیره
+	Island detection	تشخیص جزیره‌ها
+	Italic	مورب
+	Justify	تراز دوطرفه
+	Load Application...	بارگذاری برنامه...
+	Metric (millimetres)	متریک (میلی‌متر)
+	More than {n} aliases.	بیش از {n} نام مستعار.
+	Move/Copy/Rotate	جابه‌جایی/کپی/چرخش
+	Multiline text	متن چندسطری
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	نقشه‌های جدید و نخستین نقشه هنگام شروع از این واحدها استفاده می‌کنند، مگر اینکه الگوی پیش‌فرض تعیین شده باشد (QNEWTEMPLATE).
+	New block	بلوک جدید
+	No alias file loaded. REINIT replaces these aliases with a file's.	هیچ فایل نام مستعاری بارگذاری نشده است. REINIT این نام‌های مستعار را با نام‌های یک فایل جایگزین می‌کند.
+	Not a number or distance: {text}	عدد یا فاصله نیست: {text}
+	Object grouping	گروه‌بندی اشیا
+	Object selection limit for display of grips	حد انتخاب اشیا برای نمایش دستگیره‌ها
+	Objects on locked layers	اشیا روی لایه‌های قفل‌شده
+	Open in Block Editor	باز کردن در ویرایشگر بلوک
+	Origin: {x}, {y}	مبدأ: {x}, {y}
+	Outer	بیرونی
+	Overline	خط بالا
+	Preview	پیش‌نمایش
+	Query Texts	پرس‌وجوی متن‌ها
+	Save Block	ذخیره بلوک
+	Save Block As	ذخیره بلوک با نام
+	Save Layout as Template	ذخیره طرح‌بندی به‌عنوان الگو
+	Save Reference Edits	ذخیره ویرایش‌های ارجاع
+	Save alias	ذخیره نام مستعار
+	Save changes to block "{name}"?	تغییرات بلوک «{name}» ذخیره شود؟
+	Select boundaries to remove	مرزهای مورد حذف را انتخاب کنید
+	Select using two clicks only	انتخاب فقط با دو کلیک
+	Selection Area Effect	جلوه ناحیه انتخاب
+	Selection Preview Filter	فیلتر پیش‌نمایش انتخاب
+	Selection area opacity:	کدری ناحیه انتخاب:
+	Selection effect color	رنگ جلوه انتخاب
+	Selection modes	حالت‌های انتخاب
+	Selection preview	پیش‌نمایش انتخاب
+	Set Dynamic Property	تنظیم ویژگی پویا
+	Shape	شکل
+	Sheet Books to PDF...	دفترچه‌های برگه به PDF...
+	Show grips	نمایش دستگیره‌ها
+	Specified origin	مبدأ تعیین‌شده
+	Spherical	کروی
+	Tables	جدول‌ها
+	Text color	رنگ متن
+	Top left	بالا چپ
+	Top right	بالا راست
+	Type an alias name.	یک نام مستعار تایپ کنید.
+	Underline	زیرخط
+	Units of new drawings	واحدهای نقشه‌های جدید
+	Unsaved changes	تغییرات ذخیره‌نشده
+	Use current origin	استفاده از مبدأ فعلی
+	Visual Effect Settings	تنظیمات جلوه‌های بصری
+	Visual Effect Settings...	تنظیمات جلوه‌های بصری...
+	When a command is active	هنگامی که فرمانی فعال است
+	When no command is active	هنگامی که هیچ فرمانی فعال نیست
+	Window selection color:	رنگ انتخاب پنجره‌ای:
+	Working Set	مجموعه کاری
+	Xref and Block In-place Editing	ویرایش درجای ارجاع‌های خارجی و بلوک‌ها
+	Xrefs	ارجاع‌های خارجی
+	built-in	داخلی
+	overrides built-in	جایگزین داخلی
+	{alias} is already defined; select it and use Edit.	{alias} از پیش تعریف شده است؛ آن را انتخاب و از «ویرایش» استفاده کنید.
+	{command} is an unknown command.	{command} فرمانی ناشناخته است.
+	Find All	یافتن همه
+	Find what:	یافتن:
+	Match case	تطبیق بزرگی و کوچکی حروف
+	Replace	جایگزینی
+	Replace All	جایگزینی همه
+	Replace with:	جایگزینی با:
+	Replacement text	متن جایگزین
+	Results	نتایج
+	Searches the current space.	در فضای فعلی جستجو می‌کند.
+	Text to find	متن مورد جستجو
+	Whole words	کلمات کامل
+	Nothing found	چیزی یافت نشد
+	E	خ
+	N	ش
+	S	ج
+	W	ب
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	پاک کردن فایل‌های اخیر
+	contains authoring elements. Open in Block Editor?	دارای اجزای تألیف است. در ویرایشگر بلوک باز شود؟
+	Custom	سفارشی
+	Open Recent	باز کردن فایل اخیر
+	This drawing	این نقشه
+	Arrow size	اندازه پیکان
+	Dim scale overall	مقیاس کلی اندازه‌گذاری
+	Precision	دقت
+	Apply to Layout	اعمال روی طرح‌بندی
+	Center the plot	وسط‌چین کردن چاپ
+	Enter block names to extract	نام بلوک‌ها را برای استخراج وارد کنید
+	Enter geometric characteristic	مشخصه هندسی را وارد کنید
+	Enter name of LISP file to load	نام فایل LISP را برای بارگذاری وارد کنید
+	First corner	گوشه اول
+	Fit to paper	متناسب با کاغذ
+	Landscape	افقی
+	Limits	محدوده‌ها
+	Opposite corner	گوشه مقابل
+	Orientation	جهت
+	Paper size	اندازه کاغذ
+	Plot area	ناحیه چاپ
+	Plot object lineweights	چاپ ضخامت خط اشیا
+	Plot offset	آفست چاپ
+	Plot transparency	چاپ شفافیت
+	Portrait	عمودی
+	Printer/plotter	چاپگر/پلاتر
+	Window <	پنجره <
+	X offset (mm)	آفست X (mm)
+	Y offset (mm)	آفست Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	آنگستروم
+	Architectural	معماری
+	Astronomical Units	واحد نجومی
+	Centimeters	سانتی‌متر
+	Decameters	دکامتر
+	Decimal	اعشاری
+	Decimal Degrees	درجه اعشاری
+	Decimeters	دسی‌متر
+	Deg/Min/Sec	درجه/دقیقه/ثانیه
+	Don't Save	ذخیره نکن
+	Drawing Units	واحدهای نقشه
+	Engineering	مهندسی
+	Feet	فوت
+	Fractional	کسری
+	Gigameters	گیگامتر
+	Grads	گراد
+	Hectometers	هکتومتر
+	Inches	اینچ
+	Insertion scale	مقیاس درج
+	Kilometers	کیلومتر
+	Light Years	سال نوری
+	Meters	متر
+	Microinches	میکرواینچ
+	Microns	میکرون
+	Miles	مایل
+	Millimeters	میلی‌متر
+	Mils	میل
+	Nanometers	نانومتر
+	Parsecs	پارسک
+	Radians	رادیان
+	Sample output	خروجی نمونه
+	Save changes to {name}?	تغییرات {name} ذخیره شود؟
+	Scientific	علمی
+	Surveyor's Units	واحدهای نقشه‌برداری
+	Unitless	بدون واحد
+	Units to scale inserted content	واحدها برای مقیاس محتوای درج‌شده
+	US Survey Feet	فوت نقشه‌برداری آمریکا
+	US Survey Inch	اینچ نقشه‌برداری آمریکا
+	US Survey Mile	مایل نقشه‌برداری آمریکا
+	US Survey Yard	یارد نقشه‌برداری آمریکا
+	Yards	یارد
+	Your changes will be lost if you don't save them.	اگر تغییرات را ذخیره نکنید، از دست خواهند رفت.
+	Layouts	طرح‌بندی‌ها
+	Associate	وابسته کردن
+	Clip Xref	برش‌دهی ارجاع خارجی
+	Xref Clip Frame	قاب برش‌دهی ارجاع خارجی
+	Minimize	کوچک کردن
+	Maximize	بزرگ کردن
+	Restore Down	بازگرداندن اندازه
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft و نشان DraftCraft علامت‌های تجاری DraftCraft Engineering Ventures هستند.
+	Conic	مقطع مخروطی
+	Spline Fit	اسپلاین برازشی
+	Spline CV	اسپلاین با رئوس کنترلی
+	Specify start point of conic	نقطه شروع مقطع مخروطی را مشخص کنید
+	Specify apex (where the end tangents meet)	رأس را مشخص کنید (جایی که مماس‌های دو سر به هم می‌رسند)
+	Specify end point of conic	نقطه پایان مقطع مخروطی را مشخص کنید
+	Specify rho or a point on the conic	rho یا نقطه‌ای روی مقطع مخروطی را مشخص کنید
+	Check for Updates...	بررسی به‌روزرسانی‌ها...
+	Check for Updates	بررسی به‌روزرسانی‌ها
+	Update Available	به‌روزرسانی در دسترس است
+	DraftCraft {version} is available.	DraftCraft {version} در دسترس است.
+	You have version {version}.	نسخه شما {version} است.
+	Do you want to download the update?	آیا می‌خواهید به‌روزرسانی را دانلود کنید؟
+	What's new	تازه‌ها
+	What's New	تازه‌ها
+	Download	دانلود
+	Later	بعداً
+	Skip This Version	رد کردن این نسخه
+	DraftCraft is up to date (version {version}).	DraftCraft به‌روز است (نسخه {version}).
+	Do you want to install the update now?	آیا می‌خواهید به‌روزرسانی را اکنون نصب کنید؟
+	Update Now	اکنون به‌روزرسانی کن
+	Open the release page	باز کردن صفحه انتشار
+	This copy of DraftCraft can't update itself.	این نسخه از DraftCraft نمی‌تواند خودش را به‌روزرسانی کند.
+	Updating DraftCraft	در حال به‌روزرسانی DraftCraft
+	Update Failed	به‌روزرسانی ناموفق بود
+	Installing DraftCraft {version}	در حال نصب DraftCraft {version}
+	Downloading: {done} of {total} MB	در حال دانلود: {done} از {total} MB
+	Installing…	در حال نصب…
+	Starting the download…	در حال شروع دانلود…
+	The connection dropped; trying again…	اتصال قطع شد؛ تلاش دوباره…
+	DraftCraft {version} is installed.	DraftCraft {version} نصب شد.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	برای استفاده، DraftCraft را دوباره راه‌اندازی کنید. اگر بعداً راه‌اندازی کنید، دفعه بعد که DraftCraft را اجرا کنید باز می‌شود.
+	Restart Now	اکنون راه‌اندازی دوباره
+	The update could not be installed.	به‌روزرسانی نصب نشد.
+	You can download it from the release page instead.	به‌جای آن می‌توانید آن را از صفحه انتشار دانلود کنید.
+	2D Wireframe	قاب سیمی دوبعدی
+	Annotate	حاشیه‌نویسی
+	Blocks Palette	پالت بلوک‌ها
+	CAD Standards	استانداردهای CAD
+	Commands	فرمان‌ها
+	2D Drafting	نقشه‌کشی دوبعدی
+	Edit Aliases	ویرایش نام‌های مستعار
+	Image	تصویر
+	Palettes	پالت‌ها
+	Top	بالا
+	Units	واحدها
+	Workspace	فضای کار
+	Ribbon	نوار ریبون
+	PDF Underlay...	زیرلایه PDF...
+	PDF Import	وارد کردن PDF
+	PDF Underlay	زیرلایه PDF
+	Underlay Layers	لایه‌های زیرلایه
+	Raster Image Reference...	ارجاع تصویر رستری...
+	Close Text Editor	بستن ویرایشگر متن
+	Image Clip	برش‌دهی تصویر
+	PDF Clip	برش‌دهی PDF
+	Image Adjust	تنظیم تصویر
+	PDF Adjust	تنظیم PDF
+	Adjust...	تنظیم...
+	Parameter	پارامتر
+	Action	کنش
+	DesignCenter	DesignCenter
+	Tool Palettes	پالت‌های ابزار
+	Sheet Set Manager	مدیر مجموعه برگه‌ها
+	Type the drawing's path, then press Enter.	مسیر نقشه را تایپ کنید، سپس Enter را بزنید.
+	Drawing file	فایل نقشه
+	Folder	پوشه
+	Linetypes	انواع خط
+	Text Styles	سبک‌های متن
+	Dimension Styles	سبک‌های اندازه‌گذاری
+	Table Styles	سبک‌های جدول
+	Multileader Styles	سبک‌های خط راهنمای چندگانه
+	Multiline Styles	سبک‌های خط چندگانه
+	Add to Drawing	افزودن به نقشه
+	Create Tool Palette	ایجاد پالت ابزار
+	Nothing of this kind in the file.	چیزی از این نوع در فایل نیست.
+	Open a drawing to see its blocks, layers and styles.	یک نقشه باز کنید تا بلوک‌ها، لایه‌ها و سبک‌های آن را ببینید.
+	Delete Palette	حذف پالت
+	New Palette	پالت جدید
+	No tool palettes.	هیچ پالت ابزاری وجود ندارد.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	این پالت خالی است: یک فرمان در پایین اضافه کنید یا از DesignCenter یک پالت بسازید.
+	Delete Tool	حذف ابزار
+	Add Command	افزودن فرمان
+	New Sheet Set...	مجموعه برگه جدید...
+	Open Sheet Set...	باز کردن مجموعه برگه...
+	Sheet sets (DCSS)	مجموعه‌های برگه (DCSS)
+	Sheet set file	فایل مجموعه برگه
+	Make or open a sheet set to list its sheets.	برای فهرست کردن برگه‌ها، یک مجموعه برگه بسازید یا باز کنید.
+	Add Drawing...	افزودن نقشه...
+	Publish to PDF...	انتشار به PDF...
+	No sheets yet: add a drawing's layouts.	هنوز برگه‌ای نیست: طرح‌بندی‌های یک نقشه را اضافه کنید.
+	Number	شماره
+	Title	عنوان
+	Move Up	انتقال به بالا
+	Move Down	انتقال به پایین
+	Sheet Set (DCSS)	مجموعه برگه (DCSS)
+	Close Tool Palettes	بستن پالت‌های ابزار
+	Close DesignCenter	بستن DesignCenter
+	Close Sheet Set Manager	بستن مدیر مجموعه برگه‌ها
+	Manage Tool Palettes	مدیریت پالت‌های ابزار
+	Changes apply at once; Save Current As keeps them in a workspace.	تغییرات بی‌درنگ اعمال می‌شوند؛ «ذخیره فعلی با نام» آن‌ها را در یک فضای کار نگه می‌دارد.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	روی لایه‌ها کلیک کنید تا فقط آن‌ها نمایش داده شوند؛ Ctrl یا Shift به انتخاب می‌افزاید.
+	Current Workspace	فضای کار فعلی
+	Customize Interface	سفارشی‌سازی رابط
+	Customize User Interface	سفارشی‌سازی رابط کاربری
+	Customize...	سفارشی‌سازی...
+	Edit Aliases...	ویرایش نام‌های مستعار...
+	Force object color and linetype to ByLayer	اجبار رنگ و نوع خط اشیا به «طبق لایه»
+	Geographic Location	موقعیت جغرافیایی
+	Geographic Location...	موقعیت جغرافیایی...
+	Latitude	عرض جغرافیایی
+	Longitude	طول جغرافیایی
+	North direction	جهت شمال
+	Layer Translation Mappings	نگاشت‌های ترجمه لایه
+	Layer Translator	مترجم لایه
+	Layer Translator...	مترجم لایه...
+	Layer Walk	مرور لایه‌ها
+	Layer Walk...	مرور لایه‌ها...
+	Location	موقعیت
+	Set Location	تعیین موقعیت
+	Remove Location	حذف موقعیت
+	The drawing's origin is at this place (WGS 84 degrees).	مبدأ نقشه در این مکان است (درجه WGS 84).
+	Map	نگاشت
+	New layer name	نام لایه جدید
+	No mappings yet: pick layers on the left, a name on the right, then Map.	هنوز نگاشتی نیست: لایه‌ها را در چپ و یک نام را در راست برگزینید، سپس نگاشت.
+	Translate	ترجمه
+	Translate From	ترجمه از
+	Translate To	ترجمه به
+	Restore on exit	بازگردانی هنگام خروج
+	Point Cloud	ابر نقاط
+	Point Cloud...	ابر نقاط...
+	Point clouds (XYZ, LAS)	ابرهای نقاط (XYZ, LAS)
+	ZIP archive	بایگانی ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	نوار ابزار دسترسی سریع
+	Rename	تغییر نام
+	Reset to Standard	بازنشانی به استاندارد
+	Ribbon Tabs	زبانه‌های ریبون
+	Save Current As	ذخیره فعلی با نام
+	Save Current As...	ذخیره فعلی با نام...
+	Save Workspace	ذخیره فضای کار
+	User Interface	رابط کاربری
+	Workspace Settings	تنظیمات فضای کار
+	Workspace Settings...	تنظیمات فضای کار...
+	Workspace name	نام فضای کار
+	Workspace:	فضای کار:
+	Workspaces	فضاهای کار
+	Interface...	رابط...
+	Export Attribute Information...	صدور اطلاعات صفت‌ها...
+	Import Attribute Information...	وارد کردن اطلاعات صفت‌ها...
+	Export Attributes	صدور صفت‌ها
+	Import Attributes	وارد کردن صفت‌ها
+	Text, tab-delimited (TXT)	متن جداشده با تب (TXT)
+	Import Settings	وارد کردن تنظیمات
+	Export Settings	صدور تنظیمات
+	Import Settings...	وارد کردن تنظیمات...
+	Export Settings...	صدور تنظیمات...
+	DraftCraft settings (TOML)	تنظیمات DraftCraft (TOML)
+	Total Area and Length	مجموع مساحت و طول
+	Total Area	مجموع مساحت
+	Specify point to place the totals as text	نقطه‌ای برای قرار دادن مجموع‌ها به‌صورت متن مشخص کنید
+	Metric	متریک
+	Imperial	امپریال
+	A new drawing in millimeters	نقشه جدید به میلی‌متر
+	A new drawing in inches	نقشه جدید به اینچ
+	A new drawing in centimeters	نقشه جدید به سانتی‌متر
+	Metric (centimetres)	متریک (سانتی‌متر)
+	Join the ArtCraft Discord…	پیوستن به Discord ArtCraft…
+	Join us on Discord	در Discord به ما بپیوندید
+	One of the Crafting Apps by the ArtCraft team and community.	یکی از برنامه‌های Crafting از تیم و جامعه ArtCraft.
+	Change	تغییر
+	Multiple Insert	درج چندگانه
+	Ctrl+Enter to apply	Ctrl+Enter برای اعمال
+	Edit Text	ویرایش متن
+	The drawing changed. Close the window and open it again.	نقشه تغییر کرد. پنجره را ببندید و دوباره باز کنید.
+	DView	DView
+	Raster Images	تصاویر رستری
+	Xref	ارجاع خارجی
+	Backup copies are off, so the current file will be replaced.	نسخه‌های پشتیبان خاموش هستند، بنابراین فایل فعلی جایگزین می‌شود.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 و نسخه‌های قدیمی‌تر آن‌ها را نگه می‌دارند. برای نگه داشتن آن‌ها در نقشه از «ذخیره با نام» استفاده کنید.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF آن‌ها را نگه می‌دارد. برای نگه داشتن آن‌ها در نقشه از «ذخیره با نام» استفاده کنید.
+	Save Anyway	در هر حال ذخیره کن
+	Save cancelled: {path} was not changed.	ذخیره لغو شد: {path} تغییر نکرد.
+	Saving {name} will remove content	ذخیره {name} محتوایی را حذف می‌کند
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	فایل فعلی کامل به نظر نمی‌رسد، بنابراین {name} همان‌طور که هست می‌ماند و فایل فعلی جایگزین می‌شود.
+	The current file is kept as {name} until the next save.	فایل فعلی تا ذخیره بعدی با نام {name} نگه داشته می‌شود.
+	This format can't keep these objects yet: {objects}.	این قالب هنوز نمی‌تواند این اشیا را نگه دارد: {objects}.
+	{count} more types	{count} نوع دیگر
+	Additional Tools	ابزارهای بیشتر
+	Keyboard Shortcuts...	میان‌برهای صفحه‌کلید...
+	Keyboard Shortcuts	میان‌برهای صفحه‌کلید
+	Replaces the shortcut of {commands}	جایگزین میان‌بر {commands} می‌شود
+	Needs Ctrl, Alt or a function key	به Ctrl، Alt یا یک کلید تابعی نیاز دارد
+	Press the keys	کلیدها را فشار دهید
+	Back to DraftCraft's shortcut	بازگشت به میان‌بر DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	میان‌بری که شما تعیین کنید بر میان‌بر خود DraftCraft مقدم است. تغییرات بی‌درنگ اعمال و برای دفعه بعد حفظ می‌شوند.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	اگر خاموش باشد، کلیک راست هنگام اجرای فرمان همان کاری را می‌کند که سفارشی‌سازی کلیک راست برای حالت فرمان تعیین کرده است.
+	Right-Click Customization...	سفارشی‌سازی کلیک راست...
+	Right-Click Customization	سفارشی‌سازی کلیک راست
+	Turn on time-sensitive right-click	روشن کردن کلیک راست وابسته به زمان
+	Longer click duration:	مدت کلیک طولانی:
+	milliseconds	میلی‌ثانیه
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	هنگام اجرای فرمان، کلیک سریع یعنی Enter و کلیک طولانی‌تر منوی میان‌بر را باز می‌کند.
+	Default Mode	حالت پیش‌فرض
+	No objects selected and no command running:	هیچ شیئی انتخاب نشده و هیچ فرمانی در حال اجرا نیست:
+	Edit Mode	حالت ویرایش
+	Objects selected and no command running:	اشیایی انتخاب شده و هیچ فرمانی در حال اجرا نیست:
+	Repeat last command	تکرار آخرین فرمان
+	Shortcut Menu	منوی میان‌بر
+	Command Mode	حالت فرمان
+	While a command runs:	هنگام اجرای فرمان:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	منوی میان‌بر: همیشه فعال
+	Shortcut Menu: enabled when command options are present	منوی میان‌بر: فعال هنگامی که فرمان گزینه دارد
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	وارد کردن: اینجا پنجره انتخاب فایل وجود ندارد؛ ALIASEDIT را با محتوای فایل در پارامتر text آن اجرا کنید.
+	Aliases are saved in your DraftCraft profile and survive restarts.	نام‌های مستعار در نمایه DraftCraft شما ذخیره می‌شوند و پس از راه‌اندازی دوباره باقی می‌مانند.
+	Import…	وارد کردن…
+	Run ALIASEDIT with the file's contents using its text parameter.	ALIASEDIT را با محتوای فایل در پارامتر text آن اجرا کنید.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	وارد کردن یک فایل، {n} نام مستعار شما و هر تغییری را که هنوز اعمال نشده جایگزین می‌کند.
+	Import and replace	وارد کردن و جایگزینی
+	Keep my aliases	نگه داشتن نام‌های مستعار من
+	{n} more warnings; see the command line.	{n} هشدار دیگر؛ خط فرمان را ببینید.
+	Unit	واحد
+	Drawing units: {unit}, {format}	واحدهای نقشه: {unit}، {format}
+	NEW DRAWING	نقشه جدید
+	OPEN	باز کردن
+	WORKSPACE	فضای کار
