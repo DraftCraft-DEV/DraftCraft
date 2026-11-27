@@ -1,6 +1,6 @@
 # DraftCraft Malay (Malaysia) (Bahasa Melayu) interface catalog — original translations.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
 # No proprietary translations or other products' string tables were consulted or copied.
 # UTF-8: context<TAB>English source<TAB>translation.
 # Empty context = ordinary label; @plural = |-separated plural forms with {n}.
@@ -1688,3 +1688,8 @@
 	Import and replace	Import dan ganti
 	Keep my aliases	Kekalkan alias saya
 	{n} more warnings; see the command line.	{n} amaran lagi; lihat baris arahan.
+	Unit	Unit
+	Drawing units: {unit}, {format}	Unit lukisan: {unit}, {format}
+	NEW DRAWING	LUKISAN BAHARU
+	OPEN	BUKA
+	WORKSPACE	RUANG KERJA

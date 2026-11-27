@@ -306,7 +306,14 @@ impl Preference {
                 }
             }
             Self::Afrikaans => "Afrikaans",
-            Self::Azerbaijani => "Azərbaycan dili",
+            // ə needs a system interface font that has it ([`crate::theme::azerbaijani_font`]).
+            Self::Azerbaijani => {
+                if crate::theme::shows_azerbaijani(CURRENT.with(Cell::get)) {
+                    "Azərbaycan dili"
+                } else {
+                    "Azerbaijani"
+                }
+            }
             Self::Belarusian => "Беларуская",
             Self::Bulgarian => "Български",
             Self::Catalan => "Català",
@@ -330,7 +337,7 @@ impl Preference {
             Self::SerbianLatin => "Srpski (latinica)",
             Self::Swahili => "Kiswahili",
             Self::Tajik => "Тоҷикӣ",
-            Self::Uzbek => "Oʻzbekcha",
+            Self::Uzbek => "O‘zbekcha",
             Self::Zulu => "isiZulu",
             // Its letters need a Japanese or CJK font; without one the picker reads the English name.
             Self::Japanese => {
@@ -496,7 +503,8 @@ pub static LANGUAGES: [Language; 50] = [
     },
     // Afrikaans plurals follow the English rule: one (1), other.
     Language { code: "af", name: "Afrikaans", source: include_str!("i18n/af.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
-    // Azerbaijani (Latin script): one (1), other, the English rule.
+    // Azerbaijani (Latin script): one (1), other, the English rule. Its ə needs a system
+    // interface font that has it (`theme::can_show`).
     Language {
         code: "az",
         name: "Azərbaycan dili",
@@ -584,7 +592,7 @@ pub static LANGUAGES: [Language; 50] = [
     // Tajik keeps a noun singular after a numeral, so like Korean it has one form.
     Language { code: "tg", name: "Тоҷикӣ", source: include_str!("i18n/tg.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
     // Uzbek (Latin script): one (1), other, the English rule.
-    Language { code: "uz", name: "Oʻzbekcha", source: include_str!("i18n/uz.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    Language { code: "uz", name: "O‘zbekcha", source: include_str!("i18n/uz.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     // Zulu (CLDR `zu`): one (0, 1), other, the Portuguese rule.
     Language { code: "zu", name: "isiZulu", source: include_str!("i18n/zu.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new() },
 ];

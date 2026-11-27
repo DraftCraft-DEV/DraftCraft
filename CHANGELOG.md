@@ -11,6 +11,9 @@ How to write it (see AGENTS.md):
 
 ## Unreleased
 
+### New
+- The interface in 28 more languages: Afrikaans, Albanian, Azerbaijani, Belarusian, Bulgarian, Catalan, Croatian, Danish, Dutch, Estonian, Filipino, Finnish, Galician, Indonesian, Japanese, Kazakh, Kyrgyz, Malay, Mongolian, Norwegian Bokmål, Serbian (Cyrillic and Latin), Slovak, Somali, Swahili, Tajik, Uzbek and Zulu. They have not been reviewed by native speakers yet.
+
 ## 2.2.4
 
 ### New

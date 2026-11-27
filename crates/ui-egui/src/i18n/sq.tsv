@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Albanian (Shqip) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Anulo  
+	  OK  	  OK  
+	 or [	 ose [
+	% of all commits	% e të gjitha ndryshimeve
+	* Wildcard Match	* Përputhje me shabllon
+	*VARIES*	*TË NDRYSHME*
+	+  |  Top  |  2D Wireframe	+  |  Sipër  |  Kornizë teli 2D
+	+Bin	+Binarë
+	+LOC	+Rreshta
+	1 Viewport	1 dritare pamjeje
+	2 Points	2 pika
+	2 Viewports	2 dritare pamjeje
+	2D Solid	Trup 2D
+	3 Points	3 pika
+	3 Viewports	3 dritare pamjeje
+	3D Face	Faqe 3D
+	3D Mouse	Mi 3D
+	3D Mouse Navigation	Navigim me mi 3D
+	3D Mouse...	Mi 3D...
+	3D Operations	Veprime 3D
+	3D Polyline	Polivijë 3D
+	3D mouse busy, possibly 3DxWare or missing device permissions	Miu 3D është i zënë, ndoshta nga 3DxWare ose mungojnë lejet e pajisjes
+	3D mouse connected	Miu 3D u lidh
+	3D mouse disconnected	Miu 3D u shkëput
+	3D mouse input could not be started	Hyrja e miut 3D nuk mund të nisej
+	3D mouse input is unavailable on this platform	Hyrja e miut 3D nuk ofrohet në këtë platformë
+	4 Viewports	4 dritare pamjeje
+	< Less than	< Më e vogël se
+	<> Not Equal	<> Jo e barabartë
+	= Equals	= E barabartë
+	> Greater than	> Më e madhe se
+	A built-in table: editing it keeps an edited copy in the drawing.	Tabelë e integruar: redaktimi i saj mban një kopje të redaktuar në vizatim.
+	A drawing opened from a file keeps that file's format.	Një vizatim i hapur nga një skedar ruan formatin e atij skedari.
+	A variable name starts with a letter and has only letters, digits and _	Emri i ndryshores fillon me shkronjë dhe ka vetëm shkronja, shifra dhe _
+	About	Rreth
+	About DraftCraft	Rreth DraftCraft
+	Absolute	Absolute
+	Accessibility	Aksesueshmëria
+	Add	Shto
+	Add Current Scale	Shto shkallën aktuale
+	Add Leader	Shto udhëzues
+	Add Vertex	Shto kulm
+	Add/Delete Scales...	Shto/Fshi shkallë...
+	Additional angles	Kënde shtesë
+	Align	Rreshto
+	Align Text	Rreshto tekstin
+	Aligned	I rreshtuar
+	All	Të gjitha
+	All Annotation Objects	Të gjitha objektet e shënimit
+	All Scales	Të gjitha shkallët
+	All Used Layers	Të gjitha shtresat e përdorura
+	All files	Të gjithë skedarët
+	An array that would create more objects than this is refused.	Një varg që do të krijonte më shumë objekte se kaq refuzohet.
+	Angle	Kënd
+	Angular	Këndor
+	Annotation Visibility	Dukshmëria e shënimeve
+	Annotation scale	Shkalla e shënimeve
+	Annotative Object Scale	Shkalla e objektit shënues
+	Annotative Update	Përditësim i shënimeve
+	Apparent Intersection	Prerje e dukshme
+	Append to current selection set	Shto te përzgjedhja aktuale
+	Apply	Zbato
+	Apply to:	Zbato te:
+	Apply true color	Zbato ngjyrë të vërtetë
+	Arc	Hark
+	Arc Length	Gjatësia e harkut
+	Area	Sipërfaqe
+	Arrange Panel	Rregullo panelin
+	Array	Varg
+	Attach	Bashkëngjit
+	Attach DWG...	Bashkëngjit DWG...
+	Attribute	Atribut
+	Attribute Definition	Përkufizim atributi
+	Attribute Display	Shfaqja e atributeve
+	Audit	Kontrollo
+	Auto (system language)	Automatike (gjuha e sistemit)
+	Auto Constrain	Kufizime automatike
+	AutoConstrain	AutoKufizim
+	Automatic save every	Ruaj automatikisht çdo
+	Automatic save file location	Vendndodhja e skedarit të ruajtjes automatike
+	Axis, End	Bosht, fund
+	Base	Bazë
+	Baseline	Vijë bazë
+	Batch Publish	Publikim në grup
+	Batch Publish...	Publikim në grup...
+	Binary assets added	Asete binare të shtuara
+	Binary assets removed	Asete binare të hequra
+	Bind	Lidh
+	Bind...	Lidh...
+	Blend	Gërshetim
+	Block	Bllok
+	Block Attribute Manager...	Menaxheri i atributeve të blloqeve...
+	Block Description...	Përshkrimi i bllokut...
+	Block Editor	Redaktori i blloqeve
+	Block Reference	Referencë blloku
+	Block...	Bllok...
+	Blocks	Blloqe
+	Blue	Blu
+	Bold	I trashë
+	Boolean	Bulian
+	Boundary	Kufi
+	Boundary...	Kufi...
+	Box	Kuti
+	Break	Ndërprit
+	Break At Point	Ndërprit në pikë
+	Bring Above Objects	Sill mbi objektet
+	Bring Annotations to Front	Sill shënimet përpara
+	Bring to Front	Sill përpara
+	Bulleted list	Listë me pika
+	ByBlock	SipasBllokut
+	ByColor	SipasNgjyrës
+	ByLayer	SipasShtresës
+	DraftCraft Help	Ndihma e DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft i ruan këto preferenca, mënyrat e kapjes së objekteve dhe çelësat e vizatimit për llogarinë tuaj dhe i rikthen kur niset.
+	Calibrate	Kalibro
+	Calibrate 3D Mouse	Kalibro miun 3D
+	Cancel	Anulo
+	Cartesian (x, y)	Karteziane (x, y)
+	Center	Qendër
+	Center Line	Vijë qendrore
+	Center Mark	Shenjë qendre
+	Center X	Qendra X
+	Center Y	Qendra Y
+	Center Z	Qendra Z
+	Center, Diameter	Qendër, diametër
+	Center, Radius	Qendër, rreze
+	Center, Start, Angle	Qendër, fillim, kënd
+	Center, Start, End	Qendër, fillim, fund
+	Center, Start, Length	Qendër, fillim, gjatësi
+	Chamfer	Prerje këndi
+	Change Space	Ndrysho hapësirën
+	Change to Current Layer	Kalo në shtresën aktuale
+	Changed: {n}	Ndryshuar: {n}
+	Changes apply at once and are kept for next time.	Ndryshimet zbatohen menjëherë dhe ruhen për herën tjetër.
+	Circle	Rreth
+	Circumference	Perimetër
+	Clear	Pastro
+	Clear Command History	Pastro historikun e komandave
+	Reset Suggestion Order	Rivendos renditjen e sugjerimeve
+	Clear History	Pastro historikun
+	Clip	Prit
+	Clip Viewport	Prit dritaren e pamjes
+	Clipboard	Kujtesa
+	Close	Mbyll
+	Close All	Mbyll të gjitha
+	Close All Other Drawings	Mbyll të gjitha vizatimet e tjera
+	Close Array Editing	Mbyll redaktimin e vargut
+	Close Comparison	Mbyll krahasimin
+	Export Comparison	Eksporto krahasimin
+	Closed	I mbyllur
+	Coincident	Përputhje pikash
+	Collapse Palettes	Palos paletat
+	Collapse Tool Sets	Palos grupet e mjeteve
+	Collinear	Kolinearitet
+	Color	Ngjyrë
+	Color 8	Ngjyra 8
+	Color 9	Ngjyra 9
+	Color Index	Indeksi i ngjyrës
+	Color-dependent	Të varura nga ngjyra
+	Color...	Ngjyrë...
+	Command Aliases	Pseudonimet e komandave
+	Command History	Historiku i komandave
+	Command Line	Rreshti i komandave
+	Command Line History Lines	Rreshtat e historikut të rreshtit të komandave
+	Command Reference	Referenca e komandave
+	Command line history	Historiku i rreshtit të komandave
+	Commits	Ndryshime
+	Company	Kompania
+	Compare Drawings...	Krahaso vizatimet...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Projektim dhe vizatim me kompjuter: një aplikacion CAD me burim të hapur, i krijuar nga e para dhe i shkruar tërësisht në Rust.
+	Concentric	Koncentrik
+	Cone	Kon
+	Constraint Bars	Shiritat e kufizimeve
+	Constraint Settings	Cilësimet e kufizimeve
+	Construction Line	Vijë ndërtimi
+	Contents	Përmbajtja
+	Continue	Vazhdo
+	Contributors	Kontribues
+	Control Vertices	Kulme kontrolli
+	Convert	Konverto
+	Convert to Arc	Konverto në hark
+	Convert to Line	Konverto në vijë
+	Copy	Kopjo
+	Copy Full File Path	Kopjo shtegun e plotë të skedarit
+	Copy History	Kopjo historikun
+	Copy Layout	Kopjo faqosjen
+	Copy Nested Objects	Kopjo objektet e përfshira
+	Copy Selection	Kopjo përzgjedhjen
+	Copy as JSON	Kopjo si JSON
+	Copy with Base Point	Kopjo me pikë bazë
+	Count	Numëro
+	Count List	Lista e numërimit
+	Count Table	Tabela e numërimit
+	Create Block	Krijo bllok
+	Creates a user parameter	Krijon një parametër përdoruesi
+	Crosshair size	Madhësia e kryqit
+	Ctrl+Enter to finish	Ctrl+Enter për të përfunduar
+	Current Scale Only	Vetëm shkalla aktuale
+	Current layer	Shtresa aktuale
+	Current selection	Përzgjedhja aktuale
+	Current: {color}	Aktuale: {color}
+	Cut	Prit
+	Cut with Base Point	Prit me pikë bazë
+	Cyan	Cian
+	Cylinder	Cilindër
+	DWG	DWG
+	DWG Reference...	Referencë DWG...
+	DXF	DXF
+	Dark	E errët
+	Data Extraction...	Nxjerrja e të dhënave...
+	Data Link...	Lidhje të dhënash...
+	Default	Parazgjedhje
+	Default Save Format	Formati i parazgjedhur i ruajtjes
+	Default Save Version	Versioni i parazgjedhur i ruajtjes
+	Default save version	Versioni i parazgjedhur i ruajtjes
+	Define Attributes	Përkufizo atributet
+	Define Attributes...	Përkufizo atributet...
+	Defined width	Gjerësi e përcaktuar
+	Degree	Shkalla e polinomit
+	Degrees of Freedom	Shkallët e lirisë
+	Degrees of freedom: {n}	Shkallët e lirisë: {n}
+	Delete	Fshi
+	Delete Column	Fshi kolonën
+	Delete Constraints	Fshi kufizimet
+	Delete Current Scale	Fshi shkallën aktuale
+	Delete Dimension Style	Fshi stilin e përmasave
+	Delete Duplicate Objects	Fshi objektet e dyfishta
+	Delete Layer	Fshi shtresën
+	Delete Layer State	Fshi gjendjen e shtresave
+	Delete Layout	Fshi faqosjen
+	Delete Row	Fshi rreshtin
+	Delete Text Style	Fshi stilin e tekstit
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Përshkrim
+	Deselect All	Hiq përzgjedhjen
+	Detach	Shkëput
+	Diameter	Diametër
+	Dim style	Stili i përmasave
+	Dimension	Përmasë
+	Dimension Break	Ndërprerje përmase
+	Dimension Edit	Redakto përmasën
+	Dimension Objects Only	Vetëm objektet e përmasave
+	Dimension Space	Hapësira e përmasave
+	Dimension Style Override	Mbishkrim i stilit të përmasave
+	Dimension Style...	Stili i përmasave...
+	Dimension Text Edit	Redakto tekstin e përmasës
+	Dimension style	Stili i përmasave
+	Dimensional Constraint	Kufizim përmasor
+	Dimensional Constraint Parameters	Parametrat e kufizimeve përmasore
+	Dimensional Constraints	Kufizime përmasore
+	Disassociate Dimensions	Shkëput përmasat
+	Display	Shfaqja
+	Display name	Emri i shfaqur
+	Display plot styles	Shfaq stilet e printimit
+	Distance	Distancë
+	Divide	Ndaj
+	Do not plot (click: plot)	Mos printo (kliko: printo)
+	Donut	Unazë
+	Double-click to edit the description	Kliko dy herë për të redaktuar përshkrimin
+	Down	Poshtë
+	Drafting	Vizatim teknik
+	Drafting Settings	Cilësimet e vizatimit
+	Drafting Settings...	Cilësimet e vizatimit...
+	Draw	Vizato
+	Draw Order	Rendi i vizatimit
+	Drawing (DWG)	Vizatim (DWG)
+	Drawing (DXF)	Vizatim (DXF)
+	Drawing Limits	Kufijtë e vizatimit
+	Drawing Recovery Manager...	Menaxheri i rikuperimit të vizatimeve...
+	Drawing Template (DWT)	Shabllon vizatimi (DWT)
+	Drawing Utilities	Mjete ndihmëse të vizatimit
+	Drawing as bytes	Vizatim si bajte
+	Drawings (DWG, DXF)	Vizatime (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Vizatimet pa skedar ende ruhen në versionin e parazgjedhur. 0 minuta e çaktivizon ruajtjen automatike.
+	Dynamic	Dinamik
+	Dynamic Dimensions	Përmasa dinamike
+	Dynamic Input	Hyrje dinamike
+	Dynamic Input (F12)	Hyrje dinamike (F12)
+	Edit	Redakto
+	Edit Array	Redakto vargun
+	Edit Attributes...	Redakto atributet...
+	Edit Table Cell	Redakto qelizën e tabelës
+	Edit Text...	Redakto tekstin...
+	Elevation	Lartësia
+	Ellipse	Elips
+	Elliptical Arc	Hark eliptik
+	Enable 3D mouse navigation	Aktivizo navigimin me mi 3D
+	Enable Dynamic Input (F12)	Aktivizo hyrjen dinamike (F12)
+	End Object Isolation	Përfundo izolimin e objekteve
+	End Width	Gjerësia në fund
+	End X	Fundi X
+	End Y	Fundi Y
+	End angle	Këndi i fundit
+	Endpoint	Pikë fundore
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Fut Top, Zero ose Bottom.
+	Enter a fit data option	Fut një opsion të të dhënave të përshtatjes
+	Enter a pattern name	Fut emrin e motivit
+	Enter a vertex editing option	Fut një opsion për redaktimin e kulmeve
+	Enter an option	Fut një opsion
+	Enter angle of xline	Fut këndin e vijës së ndërtimit
+	Enter angle of xline (0)	Fut këndin e vijës së ndërtimit (0)
+	Enter area of rectangle in current units	Fut sipërfaqen e drejtkëndëshit në njësitë aktuale
+	Enter attribute prompt	Fut kërkesën e atributit
+	Enter attribute tag name	Fut etiketën e atributit
+	Enter attribute value	Fut vlerën e atributit
+	Enter block name	Fut emrin e bllokut
+	Enter constraint type	Fut llojin e kufizimit
+	Enter continuity	Fut vazhdimësinë
+	Enter default attribute value	Fut vlerën e parazgjedhur të atributit
+	Enter degree of spline	Fut shkallën e splajnit
+	Enter delta angle	Fut këndin delta
+	Enter delta length	Fut gjatësinë delta
+	Enter dimension text	Fut tekstin e përmasës
+	Enter dimension text (<> = measurement)	Fut tekstin e përmasës (<> = matja)
+	Enter dimension value or [name=expression]	Fut vlerën e përmasës ose [emër=shprehje]
+	Enter dimension variable name to override	Fut emrin e ndryshores së përmasës për mbishkrim
+	Enter justification type	Fut llojin e rreshtimit
+	Enter leader text	Fut tekstin e udhëzuesit
+	Enter mline scale	Fut shkallën e shumëvijës
+	Enter mode	Fut mënyrën
+	Enter name of block to insert	Fut emrin e bllokut për të futur
+	Enter new text	Fut tekstin e ri
+	Enter next point	Fut pikën tjetër
+	Enter number of columns	Fut numrin e kolonave
+	Enter number of data rows	Fut numrin e rreshtave të të dhënave
+	Enter number of items	Fut numrin e elementeve
+	Enter number of items along path	Fut numrin e elementeve përgjatë shtegut
+	Enter number of sides	Fut numrin e brinjëve
+	Enter number of turns	Fut numrin e rrotullimeve
+	Enter percentage length	Fut gjatësinë në përqindje
+	Enter rectangle length	Fut gjatësinë e drejtkëndëshit
+	Enter rectangle width	Fut gjerësinë e drejtkëndëshit
+	Enter scale factor	Fut faktorin e shkallës
+	Enter text	Fut tekstin
+	Enter text (use \P for new paragraphs)	Fut tekstin (përdor \P për paragraf të ri)
+	Enter the number of segments	Fut numrin e segmenteve
+	Enter twist direction of helix	Fut drejtimin e përdredhjes së spirales
+	Entire drawing	I gjithë vizatimi
+	Equal	Barazi
+	Erase	Fshij
+	Evaluate	Vlerëso
+	Exclude from new selection set	Përjashto nga përzgjedhja e re
+	Explode	Shpërthe
+	Export	Eksporto
+	Export Table	Eksporto tabelën
+	Export to PDF...	Eksporto në PDF...
+	Export...	Eksporto...
+	Expression	Shprehje
+	Extend	Zgjat
+	Extension	Zgjatim
+	Extents	Shtrirja
+	External Reference	Referencë e jashtme
+	External References	Referenca të jashtme
+	Extrude	Ekstrudo
+	File	Skedar
+	File Tab	Skeda e skedarit
+	Fillet	Rrumbullako
+	Filter	Filtër
+	Filters	Filtra
+	Find and Replace	Gjej dhe zëvendëso
+	Find...	Gjej...
+	First	I pari
+	First commit	Ndryshimi i parë
+	Fit Points	Pika përshtatjeje
+	Fix	Fikso
+	Flatten Objects	Rrafsho objektet
+	Format	Formati
+	Freehand	Dorë e lirë
+	Freeze	Ngri
+	Freeze Layer	Ngri shtresën
+	Freeze in new viewports	Ngri në dritaret e reja të pamjes
+	Freeze/Thaw	Ngri/Shkri
+	Freeze/Thaw in all viewports	Ngri/Shkri në të gjitha dritaret e pamjes
+	Freeze/Thaw in the current viewport	Ngri/Shkri në dritaren aktuale të pamjes
+	From	Nga
+	From Template...	Nga shablloni...
+	General	Të përgjithshme
+	Geometric Center	Qendra gjeometrike
+	Geometric Constraint	Kufizim gjeometrik
+	Geometric Constraints	Kufizime gjeometrike
+	Geometry	Gjeometria
+	Get Variable	Merr ndryshoren
+	Get View	Merr pamjen
+	Get from the Drawing	Merr nga vizatimi
+	Global	Global
+	Global width	Gjerësia globale
+	Grab bag	Të ndryshme
+	Gradient	Gradient
+	Gradient...	Gradient...
+	Grayscale	Shkallë gri
+	Green	E gjelbër
+	Grid (F7)	Rrjeta (F7)
+	Grid Display	Shfaqja e rrjetës
+	Grid On (F7)	Rrjeta aktive (F7)
+	Grid snap	Kapje në rrjetë
+	Grid spacing	Hapësira e rrjetës
+	Grip Edit	Redaktim me doreza
+	Grip Mirror	Pasqyrim me doreza
+	Grip Option	Opsion dorezash
+	Grip Rotate	Rrotullim me doreza
+	Grip Scale	Shkallëzim me doreza
+	Grip Stretch	Shtrirje me doreza
+	Grip size	Madhësia e dorezave
+	Group	Grup
+	Group Edit	Redakto grupin
+	Group Options	Opsionet e grupit
+	Group Selection	Përzgjedhje grupi
+	Hatch	Vijëzim
+	Hatch Edit	Redakto vijëzimin
+	Hatch Pattern	Motiv vijëzimi
+	Hatch Patterns	Motive vijëzimi
+	Hatch...	Vijëzim...
+	Height	Lartësia
+	Height: {height}	Lartësia: {height}
+	Helix	Spirale
+	Help	Ndihmë
+	Hide All	Fshih të gjitha
+	Hide All Constraint Bars	Fshih të gjithë shiritat e kufizimeve
+	Hide All Dynamic Dimensions	Fshih të gjitha përmasat dinamike
+	Hide DraftCraft	Fshih DraftCraft
+	Hide Layer List	Fshih listën e shtresave
+	Hide Objects	Fshih objektet
+	Hide Others	Fshih të tjerat
+	Hide Palette	Fshih paletën
+	Hide Palettes	Fshih paletat
+	History	Historiku
+	Hold Shift to add to the selection	Mbaj Shift për të shtuar te përzgjedhja
+	Home	Kreu
+	Horizontal	Horizontal
+	HorizontalDistance	Distancë horizontale
+	How to apply:	Si të zbatohet:
+	ID Point	Pika ID
+	Import	Importo
+	Import...	Importo...
+	In	Afro
+	In-window Menu Bar	Shiriti i menysë në dritare
+	Include in new selection set	Përfshi në përzgjedhjen e re
+	Increment angle	Hapi i këndit
+	Index Color	Ngjyrë indeksi
+	Index color: {index}	Ngjyrë indeksi: {index}
+	Infer Constraints	Nxirr kufizimet
+	Inquiry	Pyetje
+	Insert	Fut
+	Insert Block	Fut bllok
+	Insert Column	Fut kolonë
+	Insert Row	Fut rresht
+	Insert Table Formula	Fut formulë tabele
+	Insert tab	Skeda Fut
+	Insert this block	Fut këtë bllok
+	Insertion	Pika e futjes
+	Insertion X	Futja X
+	Insertion Y	Futja Y
+	Insertion Z	Futja Z
+	Inspect Constraints	Inspekto kufizimet
+	Inspect Drawing	Inspekto vizatimin
+	Inspection	Inspektim
+	Interface Language	Gjuha e ndërfaqes
+	Interface Theme	Tema e ndërfaqes
+	Interface language	Gjuha e ndërfaqes
+	Interface theme	Tema e ndërfaqes
+	Intersect	Ndërprerje
+	Intersection	Prerje
+	Isolate	Izolo
+	Isolate Layer	Izolo shtresën
+	Isolate Objects	Izolo objektet
+	Isometric Drafting	Vizatim izometrik
+	Isometric Plane	Rrafsh izometrik
+	Isometric snap	Kapje izometrike
+	Jogged	I thyer
+	Jogged Linear	Linear i thyer
+	Join	Bashko
+	Keep an editable copy of this table in the drawing	Mbaj një kopje të redaktueshme të kësaj tabele në vizatim
+	Keep the system cursor visible over the drawing area	Mbaje kursorin e sistemit të dukshëm mbi zonën e vizatimit
+	Language	Gjuha
+	Largest array	Vargu më i madh
+	Last	I fundit
+	Last commit	Ndryshimi i fundit
+	Layer	Shtresë
+	Layer Delete	Fshirje shtrese
+	Layer Match	Përputh shtresën
+	Layer Merge	Bashko shtresat
+	Layer Off	Fik shtresën
+	Layer Properties	Vetitë e shtresave
+	Layer Properties Manager	Menaxheri i vetive të shtresave
+	Layer Properties Manager — current viewport	Menaxheri i vetive të shtresave — dritarja aktuale e pamjes
+	Layer State	Gjendja e shtresave
+	Layer States Manager...	Menaxheri i gjendjeve të shtresave...
+	Layer Tools	Mjetet e shtresave
+	Layer contains objects (double-click to make current)	Shtresa përmban objekte (kliko dy herë për ta bërë aktuale)
+	Layer is empty (double-click to make current)	Shtresa është bosh (kliko dy herë për ta bërë aktuale)
+	Layers	Shtresa
+	Layers Palette	Paleta e shtresave
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Shtresa të shfaqura: {shown} nga {total}.   Shtresa aktuale: {layer}
+	Layout	Faqosje
+	Layout list	Lista e faqosjeve
+	Layout paper	Letra e faqosjes
+	Layout {name}: {table}	Faqosja {name}: {table}
+	Leader	Udhëzues
+	Leaders Only	Vetëm udhëzuesit
+	Left	Majtas
+	Left device button: zoom extents. Right device button: calibrate.	Butoni i majtë i pajisjes: zmadhim në shtrirje. Butoni i djathtë: kalibrim.
+	Length	Gjatësi
+	Length X	Gjatësia X
+	Length Y	Gjatësia Y
+	Lengthen	Zgjat gjatësinë
+	Light	E çelët
+	Line	Vijë
+	Line delta	Diferenca e rreshtave
+	Linear	Linear
+	Lines +/−	Rreshta +/−
+	Lines added	Rreshta të shtuar
+	Lines deleted	Rreshta të fshirë
+	Lines of Command History	Rreshtat e historikut të komandave
+	Linetype	Lloji i vijës
+	Linetype Scale	Shkalla e llojit të vijës
+	Linetype scale	Shkalla e llojit të vijës
+	Linetype...	Lloji i vijës...
+	Lineweight	Trashësia e vijës
+	Lineweight...	Trashësia e vijës...
+	List	Listo
+	List Blocks	Listo blloqet
+	List Dimension Styles	Listo stilet e përmasave
+	List Groups	Listo grupet
+	List Layer States	Listo gjendjet e shtresave
+	List Layouts	Listo faqosjet
+	List System Variables	Listo ndryshoret e sistemit
+	List Text Styles	Listo stilet e tekstit
+	Load all	Ngarko të gjitha
+	Load...	Ngarko...
+	Loaded	I ngarkuar
+	Loaded linetypes	Llojet e vijave të ngarkuara
+	Lock	Kyç
+	Lock Layer	Kyç shtresën
+	Lock viewport	Kyç dritaren e pamjes
+	Lock/Unlock	Kyç/Shkyç
+	Loft	Kalim
+	Ltscale	Shkalla e vijave
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Nuk ka lidhje me Autodesk, Inc.
+	MODEL	MODEL
+	MText	Tekst shumërreshtor
+	Magenta	Magenta
+	Major line every	Vijë kryesore çdo
+	Make Current	Bëje aktuale
+	Make Object's Layer Current	Bëje aktuale shtresën e objektit
+	Make it a block of this drawing, keeping its layer names	Bëje bllok të këtij vizatimi, duke mbajtur emrat e shtresave
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Bëje bllok të këtij vizatimi; shtresat e tij bëhen NAME$0$LAYER
+	Make...	Krijo...
+	Match Layer	Përputh shtresën
+	Match Properties	Përputh vetitë
+	Measure	Mat
+	Measure Distance	Mat distancën
+	Measure Geometry	Mat gjeometrinë
+	Merge Cells	Bashko qelizat
+	Merged PRs	PR të bashkuara
+	Mid Between 2 Points	Mesi midis 2 pikave
+	Midpoint	Mesi
+	Mirror	Pasqyro
+	Model	Model
+	Model Space (in viewport)	Hapësira e modelit (në dritare pamjeje)
+	Model background	Sfondi i modelit
+	Modeling	Modelim
+	Models	Modele
+	Modify	Modifiko
+	More toolbar commands	Më shumë komanda të shiritit
+	Move	Lëviz
+	Move sideways to pan; push/pull or twist to zoom.	Lëvize anash për zhvendosje; shtyje/tërhiqe ose rrotulloje për zmadhim.
+	Multileader	Shumudhëzues
+	Multileader Style...	Stili i shumudhëzuesve...
+	Multileader style	Stili i shumudhëzuesve
+	Multiline	Shumëvijë
+	Multiline Style...	Stili i shumëvijave...
+	Multiline Text	Tekst shumërreshtor
+	Multiline Text...	Tekst shumërreshtor...
+	Multiline...	Shumëvijë...
+	Multiple	Shumëfish
+	Multiple Point	Pika të shumta
+	My	Të miat
+	My properties: not available yet	Vetitë e mia: nuk ofrohen ende
+	Name	Emri
+	Name (A–Z)	Emri (A–Zh)
+	Named	I emërtuar
+	Named Viewports...	Dritare pamjeje të emërtuara...
+	Named Views...	Pamje të emërtuara...
+	Nearest	Më e afërta
+	New	I ri
+	New (metric)	I ri (metrik)
+	New CTB	CTB e re
+	New Drawing	Vizatim i ri
+	New Drawing (⌘N)	Vizatim i ri (⌘N)
+	New Drawing...	Vizatim i ri...
+	New Layer	Shtresë e re
+	New Layout	Faqosje e re
+	New STB	STB e re
+	New VP Freeze	Ngrirje në DP të reja
+	New Viewports...	Dritare të reja pamjeje...
+	New from Template...	I ri nga shablloni...
+	New layout	Faqosje e re
+	New state name	Emri i gjendjes së re
+	New style	Stil i ri
+	Next Change	Ndryshimi tjetër
+	No	Jo
+	No blocks defined in this drawing.	Nuk ka blloqe të përkufizuara në këtë vizatim.
+	No contributor data was built into this copy.	Në këtë kopje nuk janë përfshirë të dhëna për kontribuesit.
+	No external references are attached.	Nuk ka referenca të jashtme të bashkëngjitura.
+	No model credits were built into this copy.	Në këtë kopje nuk janë përfshirë falënderime për modelet.
+	No plot style tables.	Nuk ka tabela stilesh printimi.
+	No saved layer states	Nuk ka gjendje shtresash të ruajtura
+	No selection	Asnjë përzgjedhje
+	No supported 3D mouse found	Nuk u gjet asnjë mi 3D i mbështetur
+	Node	Nyje
+	None	Asnjë
+	Normal	Normal
+	Not Found	Nuk u gjet
+	Not available	Nuk ofrohet
+	Not available yet	Nuk ofrohet ende
+	Not loaded	Nuk është ngarkuar
+	Numbered list	Listë e numëruar
+	OK	OK
+	Object	Objekt
+	Object Snap	Kapje objekti
+	Object Snap (F3)	Kapje objekti (F3)
+	Object Snap On (F3)	Kapje objekti aktive (F3)
+	Object Snap Tracking	Gjurmim i kapjes së objektit
+	Object Snap Tracking (F11)	Gjurmim i kapjes së objektit (F11)
+	Object Snap Tracking Settings	Cilësimet e gjurmimit të kapjes së objektit
+	Object snap aperture	Apertura e kapjes së objektit
+	Object snap marker size	Madhësia e shenjës së kapjes së objektit
+	Object type:	Lloji i objektit:
+	Oblique	I pjerrët
+	Off	Joaktiv
+	Offset	Zhvendos paralelisht
+	On	Aktiv
+	On/Off	Aktiv/Joaktiv
+	Only in this drawing: {n}	Vetëm në këtë vizatim: {n}
+	Only in {name}: {n}	Vetëm në {name}: {n}
+	Oops	Oops
+	Open	Hap
+	Open (⌘O)	Hap (⌘O)
+	Open Sample Drawing	Hap vizatimin shembull
+	Open Xref	Hap referencën e jashtme
+	Open a drawing first.	Hap fillimisht një vizatim.
+	Open and Save	Hapja dhe ruajtja
+	Open sample drawing	Hap vizatimin shembull
+	Open...	Hap...
+	Operator:	Operatori:
+	Options	Opsione
+	Options...	Opsione...
+	Orbit	Orbitë
+	Ordinate	Ordinatë
+	Ortho (F8)	Orto (F8)
+	Ortho Mode	Mënyra Orto
+	Ortho Mode (F8)	Mënyra Orto (F8)
+	Osnap Settings...	Cilësimet e kapjes së objektit...
+	Out	Largo
+	Over-constrained	I mbikufizuar
+	Overlay	Mbivendosje
+	Override	Mbishkrim
+	PAPER	LETËR
+	PRs	PR
+	Page Setup Manager	Menaxheri i konfigurimit të faqes
+	Page Setup Manager...	Menaxheri i konfigurimit të faqes...
+	Pan	Zhvendos pamjen
+	Pan Down	Zhvendos poshtë
+	Pan Left	Zhvendos majtas
+	Pan Right	Zhvendos djathtas
+	Pan Up	Zhvendos lart
+	Pan sensitivity	Ndjeshmëria e zhvendosjes
+	Paper Space	Hapësira e letrës
+	Parallel	Paralel
+	Parameters Manager	Menaxheri i parametrave
+	Parametric	Parametrik
+	Paste	Ngjit
+	Paste as Block	Ngjit si bllok
+	Paste to Command Line	Ngjit në rreshtin e komandave
+	Paste to Original Coordinates	Ngjit në koordinatat origjinale
+	Path Array	Varg sipas shtegut
+	Pattern	Motiv
+	Percent	Përqindje
+	Perpendicular	Pingul
+	Pickbox size	Madhësia e kutisë së zgjedhjes
+	Plot	Printo
+	Plot (click: do not plot)	Printo (kliko: mos printo)
+	Plot Preview	Parapamja e printimit
+	Plot Style Manager	Menaxheri i stileve të printimit
+	Plot Style Manager...	Menaxheri i stileve të printimit...
+	Plot Style...	Stili i printimit...
+	Plot Styles...	Stilet e printimit...
+	Plot Window	Dritarja e printimit
+	Plot style	Stili i printimit
+	Plot style attached to	Stili i printimit i bashkëngjitur te
+	Plot style table	Tabela e stileve të printimit
+	Plot table type	Lloji i tabelës së printimit
+	Plotter Manager	Menaxheri i ploterëve
+	Plotter Manager...	Menaxheri i ploterëve...
+	Plus/minus	Plus/minus
+	Point	Pikë
+	Point Filters	Filtrat e pikave
+	Point Style...	Stili i pikave...
+	Polar (distance < angle)	Polare (distancë < kënd)
+	Polar Array	Varg polar
+	Polar Tracking	Gjurmim polar
+	Polar Tracking (F10)	Gjurmim polar (F10)
+	Polar Tracking On (F10)	Gjurmim polar aktiv (F10)
+	Polar angle measurement	Matja e këndit polar
+	Polar distance	Distancë polare
+	Polar: {distance} < {angle}°	Polare: {distance} < {angle}°
+	PolarSnap	Kapje polare
+	Polygon	Shumëkëndësh
+	Polygonal	Shumëkëndor
+	Polygonal Viewport	Dritare pamjeje shumëkëndore
+	Polyline	Polivijë
+	Polyline Edit	Redakto polivijën
+	Position X	Pozicioni X
+	Position Y	Pozicioni Y
+	Position Z	Pozicioni Z
+	Previous	I mëparshëm
+	Previous Change	Ndryshimi i mëparshëm
+	Previous Layer	Shtresa e mëparshme
+	Primitives	Primitivë
+	Print	Printo
+	Print...	Printo...
+	Profiles	Profile
+	Properties	Vetitë
+	Properties Inspector	Inspektori i vetive
+	Properties:	Vetitë:
+	Proxy	Proxy
+	Purge	Spastro
+	Pyramid	Piramidë
+	Quadrant	Kuadrant
+	Query Entities	Kërko entitetet
+	Quick	I shpejtë
+	Quick Dimension	Përmasë e shpejtë
+	Quick Properties	Veti të shpejta
+	Quick Select	Përzgjedhje e shpejtë
+	Quick Select Properties	Vetitë e përzgjedhjes së shpejtë
+	Quick Select...	Përzgjedhje e shpejtë...
+	QuickCalc	Llogaritësi i shpejtë
+	QuickCalc Pick	Zgjedhje me llogaritësin e shpejtë
+	Quit DraftCraft	Dil nga DraftCraft
+	Radius	Rreze
+	Raster Image	Imazh raster
+	Ray	Rreze gjysmëvije
+	Read-only	Vetëm për lexim
+	Real name	Emri i vërtetë
+	Realtime	Në kohë reale
+	Reassociate Dimensions	Rilidh përmasat
+	Recalculate Table Formulas	Rillogarit formulat e tabelës
+	Recent	Të fundit
+	Recent Commands	Komandat e fundit
+	Recent Input	Hyrjet e fundit
+	Recover...	Rikupero...
+	Rectangle	Drejtkëndësh
+	Rectangular	Drejtkëndor
+	Rectangular Array	Varg drejtkëndor
+	Rectangular snap	Kapje drejtkëndore
+	Red	E kuqe
+	Redo	Ribëj
+	Redo (⇧⌘Z)	Ribëj (⇧⌘Z)
+	Redraw	Rivizato
+	Reference Manager	Menaxheri i referencave
+	Reference Name	Emri i referencës
+	References: {n}	Referenca: {n}
+	Regen	Rigjenero
+	Regen All	Rigjenero të gjitha
+	Region	Rajon
+	Region/Mass Properties	Vetitë e rajonit/masës
+	Reinitialize	Rinis
+	Relative	Relative
+	Relative to last segment	Relative ndaj segmentit të fundit
+	Release the 3D mouse to calibrate its resting position	Lëshoje miun 3D për të kalibruar pozicionin e tij të qetë
+	Reload	Ringarko
+	Reload All	Ringarko të gjitha
+	Remove	Hiq
+	Remove Leader	Hiq udhëzuesin
+	Remove Vertex	Hiq kulmin
+	Remove the viewport override	Hiq mbishkrimin e dritares së pamjes
+	Rename Dimension Style	Riemërto stilin e përmasave
+	Rename Layer	Riemërto shtresën
+	Rename Layer State	Riemërto gjendjen e shtresave
+	Rename Layout	Riemërto faqosjen
+	Rename Text Style	Riemërto stilin e tekstit
+	Rename...	Riemërto...
+	Repeat {command}	Përsërit {command}
+	Replace Block...	Zëvendëso bllokun...
+	Requires a point (x,y, @dx,dy or @d<a).	Kërkon një pikë (x,y, @dx,dy ose @d<a).
+	Reset Palettes	Rivendos paletat
+	Reset Panel Layout	Rivendos rregullimin e paneleve
+	Reset keeps the interface language.	Rivendosja e ruan gjuhën e ndërfaqes.
+	Reset to Defaults	Rivendos parazgjedhjet
+	Restore	Rikthe
+	Restore Layer State	Rikthe gjendjen e shtresave
+	Reverse	Përmbys
+	Reverse the order	Përmbys renditjen
+	Reverse zoom direction	Përmbys drejtimin e zmadhimit
+	Revision Cloud	Re rishikimi
+	Revolve	Rrotullo rreth boshtit
+	Right	Djathtas
+	Rotate	Rrotullo
+	Rotation	Rrotullimi
+	Run Script...	Ekzekuto skript...
+	SVG drawings (SVG, SVGZ)	Vizatime SVG (SVG, SVGZ)
+	Save	Ruaj
+	Save (⌘S)	Ruaj (⌘S)
+	Save As	Ruaj si
+	Save As...	Ruaj si...
+	Save Layer State	Ruaj gjendjen e shtresave
+	Save State	Ruaj gjendjen
+	Save new drawings as	Ruaj vizatimet e reja si
+	Saved Path	Shtegu i ruajtur
+	Scale	Shkallëzo
+	Scale List...	Lista e shkallëve...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Zmadhuesit e ekranit, lexuesit e ekranit dhe regjistruesit ndjekin kursorin e sistemit.
+	Screening	Zbehje
+	Search for layer	Kërko shtresë
+	Search for parameter	Kërko parametër
+	Search for pattern	Kërko motiv
+	Second and next points:	Pika e dytë dhe pasuese:
+	Select	Zgjidh
+	Select 2D polyline	Zgjidh polivijën 2D
+	Select All	Zgjidh të gjitha
+	Select Objects	Zgjidh objektet
+	Select Similar	Zgjidh të ngjashmet
+	Select a 2D polyline.	Zgjidh një polivijë 2D.
+	Select a block reference.	Zgjidh një referencë blloku.
+	Select a circle or arc.	Zgjidh një rreth ose hark.
+	Select a closed polyline	Zgjidh një polivijë të mbyllur
+	Select a closed polyline, circle, ellipse or closed spline.	Zgjidh një polivijë të mbyllur, rreth, elips ose splajn të mbyllur.
+	Select a closed polyline.	Zgjidh një polivijë të mbyllur.
+	Select a curve as the path.	Zgjidh një kurbë si shteg.
+	Select a dimension constraint type	Zgjidh llojin e kufizimit përmasor
+	Select a line object	Zgjidh një objekt vije
+	Select a line object.	Zgjidh një objekt vije.
+	Select a line or an arc.	Zgjidh një vijë ose hark.
+	Select a line or polyline segment	Zgjidh një vijë ose segment polivije
+	Select a line, arc or open polyline.	Zgjidh një vijë, hark ose polivijë të hapur.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Zgjidh një vijë, hark, rreth, polivijë, elips ose splajn si shteg.
+	Select a line, circle, arc or polyline segment.	Zgjidh një vijë, rreth, hark ose segment polivije.
+	Select a line.	Zgjidh një vijë.
+	Select a polyline.	Zgjidh një polivijë.
+	Select a text, mtext, attribute definition or dimension.	Zgjidh një tekst, tekst shumërreshtor, përkufizim atributi ose përmasë.
+	Select an annotation object	Zgjidh një objekt shënimi
+	Select an arc or circle	Zgjidh një hark ose rreth
+	Select an arc.	Zgjidh një hark.
+	Select an object	Zgjidh një objekt
+	Select an object to change	Zgjidh objektin për të ndryshuar
+	Select an object to measure	Zgjidh objektin për të matur
+	Select an object.	Zgjidh një objekt.
+	Select an open curve.	Zgjidh një kurbë të hapur.
+	Select an open line, arc, polyline, ellipse arc or spline.	Zgjidh një vijë, hark, polivijë, hark eliptik ose splajn të hapur.
+	Select arc or circle	Zgjidh hark ose rreth
+	Select arc or polyline arc segment	Zgjidh hark ose segment harku polivije
+	Select arc style	Zgjidh stilin e harkut
+	Select arc, circle, line	Zgjidh hark, rreth, vijë
+	Select at least two objects to join.	Zgjidh të paktën dy objekte për t'i bashkuar.
+	Select circle or arc to add center mark	Zgjidh rreth ose hark për të shtuar shenjë qendre
+	Select closed objects (regions, closed polylines, circles).	Zgjidh objekte të mbyllura (rajone, polivija të mbyllura, rrathë).
+	Select first line	Zgjidh vijën e parë
+	Select first line or arc	Zgjidh vijën ose harkun e parë
+	Select first object	Zgjidh objektin e parë
+	Select first point	Zgjidh pikën e parë
+	Select nested objects to copy	Zgjidh objektet e përfshira për t'i kopjuar
+	Select object	Zgjidh objektin
+	Select object to dimension	Zgjidh objektin për t'i vënë përmasë
+	Select object to divide	Zgjidh objektin për ta ndarë
+	Select object to extend or shift-select to trim	Zgjidh objektin për ta zgjatur ose zgjidh me Shift për ta shkurtuar
+	Select object to measure	Zgjidh objektin për ta matur
+	Select object to offset	Zgjidh objektin për ta zhvendosur paralelisht
+	Select object to trim or shift-select to extend	Zgjidh objektin për ta shkurtuar ose zgjidh me Shift për ta zgjatur
+	Select objects	Zgjidh objektet
+	Select objects (crossing window first corner)	Zgjidh objektet (këndi i parë i dritares prerëse)
+	Select objects first, then choose a command	Zgjidh fillimisht objektet, pastaj një komandë
+	Select objects to array.	Zgjidh objektet për varg.
+	Select objects to stretch by crossing-window or crossing-polygon...	Zgjidh objektet për t'i shtrirë me dritare prerëse ose shumëkëndësh prerës...
+	Select objects:	Zgjidh objektet:
+	Select one polyline (Multiple is available through the JSON form).	Zgjidh një polivijë (Shumëfish ofrohet përmes formës JSON).
+	Select path curve	Zgjidh kurbën e shtegut
+	Select point or object	Zgjidh pikë ose objekt
+	Select polyline	Zgjidh polivijën
+	Select second line	Zgjidh vijën e dytë
+	Select second line or shift-select to apply corner	Zgjidh vijën e dytë ose zgjidh me Shift për kënd
+	Select second object	Zgjidh objektin e dytë
+	Select second object or shift-select to apply corner	Zgjidh objektin e dytë ose zgjidh me Shift për kënd
+	Select second point	Zgjidh pikën e dytë
+	Select spline	Zgjidh splajnin
+	Select symmetry line	Zgjidh vijën e simetrisë
+	Select two points	Zgjidh dy pika
+	Selection	Përzgjedhja
+	Selection Cycling	Përzgjedhje ciklike
+	Send Hatches to Back	Dërgo vijëzimet prapa
+	Send Under Objects	Dërgo nën objektet
+	Send to Back	Dërgo prapa
+	Services	Shërbimet
+	Set Current	Cakto aktuale
+	Set Current Dimension Style	Cakto stilin aktual të përmasave
+	Set Current Text Style	Cakto stilin aktual të tekstit
+	Set Current Viewport	Cakto dritaren aktuale të pamjes
+	Set Layer Properties	Cakto vetitë e shtresës
+	Set Properties	Cakto vetitë
+	Set Table Cell	Cakto qelizën e tabelës
+	Set Table Cell Style	Cakto stilin e qelizës së tabelës
+	Set Variable	Cakto ndryshoren
+	Set View	Cakto pamjen
+	Settings...	Cilësimet...
+	Share	Ndaj me të tjerë
+	Show	Shfaq
+	Show All	Shfaq të gjitha
+	Show All Constraint Bars	Shfaq të gjithë shiritat e kufizimeve
+	Show All Dynamic Dimensions	Shfaq të gjitha përmasat dinamike
+	Show Annotative Objects	Shfaq objektet shënuese
+	Show Layer List	Shfaq listën e shtresave
+	Show Quick Properties for selected objects	Shfaq vetitë e shpejta për objektet e zgjedhura
+	Show System Cursor	Shfaq kursorin e sistemit
+	Show and hide the tools of this category	Shfaq dhe fshih mjetet e kësaj kategorie
+	Show command prompting near the crosshairs	Shfaq kërkesat e komandës pranë kryqit
+	Show in Tool Sets	Shfaq te grupet e mjeteve
+	Show/Hide Lineweight	Shfaq/Fshih trashësinë e vijave
+	Show/Hide Transparency	Shfaq/Fshih tejdukshmërinë
+	Single Line Text	Tekst njërreshtor
+	Single Point	Pikë e vetme
+	Single...	I vetëm...
+	Smooth	I lëmuar
+	Snap	Kapje
+	Snap Mode	Mënyra e kapjes
+	Snap Mode (F9)	Mënyra e kapjes (F9)
+	Snap On (F9)	Kapje aktive (F9)
+	Snap Overrides	Mbishkrime të kapjes
+	Snap X spacing	Hapësira e kapjes në X
+	Snap and Grid	Kapja dhe rrjeta
+	Snap type	Lloji i kapjes
+	Snap, grid, polar tracking and Dynamic Input:	Kapja, rrjeta, gjurmimi polar dhe hyrja dinamike:
+	Solid	E plotë
+	Solid Editing	Redaktim i trupave
+	Sort	Rendit
+	Specify a point	Përcakto një pikë
+	Specify a scale for the hatch pattern	Përcakto shkallën e motivit të vijëzimit
+	Specify a second extension line origin	Përcakto origjinën e vijës së dytë ndihmëse
+	Specify an angle for the hatch pattern	Përcakto këndin e motivit të vijëzimit
+	Specify angle end point	Përcakto pikën fundore të këndit
+	Specify angle of dimension line	Përcakto këndin e vijës së përmasës
+	Specify angle of dimension text	Përcakto këndin e tekstit të përmasës
+	Specify angle start point	Përcakto pikën fillestare të këndit
+	Specify angle vertex	Përcakto kulmin e këndit
+	Specify angle vertex point	Përcakto pikën e kulmit të këndit
+	Specify arc length dimension location	Përcakto vendndodhjen e përmasës së gjatësisë së harkut
+	Specify axis endpoint of ellipse	Përcakto pikën fundore të boshtit të elipsit
+	Specify base diameter	Përcakto diametrin e bazës
+	Specify base point	Përcakto pikën bazë
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Përcakto pikën bazë ose zhvendosjen (tërhiq me butonin e mesit të miut për zhvendosje në kohë reale)
+	Specify base radius	Përcakto rrezen e bazës
+	Specify center of donut	Përcakto qendrën e unazës
+	Specify center of ellipse	Përcakto qendrën e elipsit
+	Specify center of polygon	Përcakto qendrën e shumëkëndëshit
+	Specify center point for circle	Përcakto pikën qendrore të rrethit
+	Specify center point of arc	Përcakto pikën qendrore të harkut
+	Specify center point of arc (hold Ctrl to switch direction)	Përcakto pikën qendrore të harkut (mbaj Ctrl për të ndërruar drejtimin)
+	Specify center point of array	Përcakto pikën qendrore të vargut
+	Specify center point of base	Përcakto pikën qendrore të bazës
+	Specify corner of viewport	Përcakto këndin e dritares së pamjes
+	Specify corner of window, enter a scale factor (nX or nXP)	Përcakto këndin e dritares, fut faktorin e shkallës (nX ose nXP)
+	Specify diameter of circle	Përcakto diametrin e rrethit
+	Specify dimension arc line location	Përcakto vendndodhjen e harkut të përmasës
+	Specify dimension line location	Përcakto vendndodhjen e vijës së përmasës
+	Specify distance between turns	Përcakto distancën midis rrotullimeve
+	Specify distance to other axis	Përcakto distancën deri te boshti tjetër
+	Specify end angle	Përcakto këndin e fundit
+	Specify end point of arc	Përcakto pikën fundore të harkut
+	Specify end point of arc (hold Ctrl to switch direction)	Përcakto pikën fundore të harkut (mbaj Ctrl për të ndërruar drejtimin)
+	Specify ending width	Përcakto gjerësinë në fund
+	Specify ending width for next segment	Përcakto gjerësinë në fund për segmentin tjetër
+	Specify endpoint of arc	Përcakto skajin e harkut
+	Specify endpoint of axis	Përcakto pikën fundore të boshtit
+	Specify endpoint of line	Përcakto pikën fundore të vijës
+	Specify feature location	Përcakto vendndodhjen e veçorisë
+	Specify fillet radius	Përcakto rrezen e rrumbullakimit
+	Specify fillet radius for rectangles	Përcakto rrezen e rrumbullakimit për drejtkëndëshat
+	Specify first angle endpoint	Përcakto pikën e parë fundore të këndit
+	Specify first chamfer distance	Përcakto distancën e parë të prerjes së këndit
+	Specify first chamfer distance for rectangles	Përcakto distancën e parë të prerjes së këndit për drejtkëndëshat
+	Specify first constraint point	Përcakto pikën e parë të kufizimit
+	Specify first corner	Përcakto këndin e parë
+	Specify first corner point	Përcakto pikën e parë të këndit
+	Specify first destination point	Përcakto pikën e parë të destinacionit
+	Specify first end point of circle's diameter	Përcakto skajin e parë të diametrit të rrethit
+	Specify first endpoint of edge	Përcakto skajin e parë të brinjës
+	Specify first extension line origin	Përcakto origjinën e vijës së parë ndihmëse
+	Specify first point	Përcakto pikën e parë
+	Specify first point of mirror line	Përcakto pikën e parë të vijës së pasqyrimit
+	Specify first point on circle	Përcakto pikën e parë në rreth
+	Specify first point on circle: _tan to	Përcakto pikën e parë në rreth: _tan te
+	Specify first source point	Përcakto pikën e parë burimore
+	Specify height	Përcakto lartësinë
+	Specify helix height	Përcakto lartësinë e spirales
+	Specify included angle	Përcakto këndin e përfshirë
+	Specify included angle (hold Ctrl to switch direction)	Përcakto këndin e përfshirë (mbaj Ctrl për të ndërruar drejtimin)
+	Specify insertion base point	Përcakto pikën bazë të futjes
+	Specify insertion point	Përcakto pikën e futjes
+	Specify inside diameter of donut	Përcakto diametrin e brendshëm të unazës
+	Specify leader arrowhead location	Përcakto vendndodhjen e shigjetës së udhëzuesit
+	Specify leader endpoint	Përcakto pikën fundore të udhëzuesit
+	Specify leader landing location	Përcakto vendndodhjen e platformës së udhëzuesit
+	Specify length for rectangles	Përcakto gjatësinë për drejtkëndëshat
+	Specify length of chord	Përcakto gjatësinë e kordës
+	Specify length of chord (hold Ctrl to switch direction)	Përcakto gjatësinë e kordës (mbaj Ctrl për të ndërruar drejtimin)
+	Specify length of segment	Përcakto gjatësinë e segmentit
+	Specify line width for rectangles	Përcakto gjerësinë e vijës për drejtkëndëshat
+	Specify location for new vertex	Përcakto vendndodhjen e kulmit të ri
+	Specify minimum length of arc	Përcakto gjatësinë minimale të harkut
+	Specify new end point	Përcakto pikën e re fundore
+	Specify new location for marked vertex	Përcakto vendndodhjen e re të kulmit të shënuar
+	Specify new width for all segments	Përcakto gjerësinë e re për të gjitha segmentet
+	Specify next point	Përcakto pikën tjetër
+	Specify offset distance	Përcakto distancën e zhvendosjes paralele
+	Specify opposite corner	Përcakto këndin e kundërt
+	Specify other corner point	Përcakto pikën tjetër të këndit
+	Specify other endpoint of axis	Përcakto skajin tjetër të boshtit
+	Specify outside diameter of donut	Përcakto diametrin e jashtëm të unazës
+	Specify point	Përcakto pikën
+	Specify point on object for first tangent of circle	Përcakto pikën në objekt për tangjenten e parë të rrethit
+	Specify point on object for second tangent of circle	Përcakto pikën në objekt për tangjenten e dytë të rrethit
+	Specify point on side to offset	Përcakto pikën në anën e zhvendosjes
+	Specify radius of arc	Përcakto rrezen e harkut
+	Specify radius of arc (hold Ctrl to switch direction)	Përcakto rrezen e harkut (mbaj Ctrl për të ndërruar drejtimin)
+	Specify radius of circle	Përcakto rrezen e rrethit
+	Specify rotation angle	Përcakto këndin e rrotullimit
+	Specify rotation angle of text	Përcakto këndin e rrotullimit të tekstit
+	Specify scale factor	Përcakto faktorin e shkallës
+	Specify second angle endpoint	Përcakto pikën e dytë fundore të këndit
+	Specify second break point	Përcakto pikën e dytë të ndërprerjes
+	Specify second chamfer distance for rectangles	Përcakto distancën e dytë të prerjes së këndit për drejtkëndëshat
+	Specify second constraint point	Përcakto pikën e dytë të kufizimit
+	Specify second destination point	Përcakto pikën e dytë të destinacionit
+	Specify second end point of circle's diameter	Përcakto skajin e dytë të diametrit të rrethit
+	Specify second endpoint of edge	Përcakto skajin e dytë të brinjës
+	Specify second extension line origin	Përcakto origjinën e vijës së dytë ndihmëse
+	Specify second point	Përcakto pikën e dytë
+	Specify second point of arc	Përcakto pikën e dytë të harkut
+	Specify second point of mirror line	Përcakto pikën e dytë të vijës së pasqyrimit
+	Specify second point on circle	Përcakto pikën e dytë në rreth
+	Specify second point on circle: _tan to	Përcakto pikën e dytë në rreth: _tan te
+	Specify second point or <use first point as displacement>	Përcakto pikën e dytë ose <përdor pikën e parë si zhvendosje>
+	Specify second source point	Përcakto pikën e dytë burimore
+	Specify side to offset	Përcakto anën e zhvendosjes
+	Specify start angle	Përcakto këndin fillestar
+	Specify start point	Përcakto pikën fillestare
+	Specify start point of arc	Përcakto pikën fillestare të harkut
+	Specify start point of polyline	Përcakto pikën fillestare të polivijës
+	Specify start point of text	Përcakto pikën fillestare të tekstit
+	Specify starting width	Përcakto gjerësinë në fillim
+	Specify starting width for next segment	Përcakto gjerësinë në fillim për segmentin tjetër
+	Specify tangent direction for the start point of arc	Përcakto drejtimin e tangjentes për pikën fillestare të harkut
+	Specify the elevation for rectangles	Përcakto lartësinë për drejtkëndëshat
+	Specify thickness for rectangles	Përcakto trashësinë për drejtkëndëshat
+	Specify third point on circle	Përcakto pikën e tretë në rreth
+	Specify third point on circle: _tan to	Përcakto pikën e tretë në rreth: _tan te
+	Specify third source point or <continue>	Përcakto pikën e tretë burimore ose <vazhdo>
+	Specify through point	Përcakto pikën kalimi
+	Specify top diameter	Përcakto diametrin e sipërm
+	Specify top radius	Përcakto rrezen e sipërme
+	Specify total angle	Përcakto këndin total
+	Specify total length	Përcakto gjatësinë totale
+	Specify width for rectangles	Përcakto gjerësinë për drejtkëndëshat
+	Sphere	Sferë
+	Spline	Splajn
+	Spline Edit	Redakto splajnin
+	Stack (type 1/2 then select)	Thyesë (shkruaj 1/2 pastaj zgjidh)
+	Standard	Standard
+	Start	Fillim
+	Start Width	Gjerësia në fillim
+	Start X	Fillimi X
+	Start Y	Fillimi Y
+	Start angle	Këndi fillestar
+	Start, Center, Angle	Fillim, qendër, kënd
+	Start, Center, End	Fillim, qendër, fund
+	Start, Center, Length	Fillim, qendër, gjatësi
+	Start, End, Angle	Fillim, fund, kënd
+	Start, End, Direction	Fillim, fund, drejtim
+	Start, End, Radius	Fillim, fund, rreze
+	Status	Gjendja
+	Status Bar	Shiriti i gjendjes
+	Stretch	Shtrij
+	Stretch Vertex	Shtrij kulmin
+	Style: Standard	Stili: Standard
+	Subtract	Zbrit
+	Sweep	Fshij përgjatë shtegut
+	Switch Drawing	Ndërro vizatimin
+	Switch Layout	Ndërro faqosjen
+	Switch between model space in a viewport and paper space	Ndërro midis hapësirës së modelit në dritare pamjeje dhe hapësirës së letrës
+	Symmetric	Simetrik
+	Synchronize Attributes	Sinkronizo atributet
+	Synchronize Multiple-scale Positions	Sinkronizo pozicionet me shumë shkallë
+	TOP	SIPËR
+	Table	Tabelë
+	Table Breaks	Ndarjet e tabelës
+	Table Cell Style	Stili i qelizës së tabelës
+	Table Style...	Stili i tabelës...
+	Table style	Stili i tabelës
+	Table...	Tabelë...
+	Tan, Tan, Radius	Tang, tang, rreze
+	Tan, Tan, Tan	Tang, tang, tang
+	Tangent	Tangjente
+	Temporary track point	Pikë e përkohshme gjurmimi
+	Text	Tekst
+	Text Editor	Redaktori i tekstit
+	Text Height	Lartësia e tekstit
+	Text Objects Only	Vetëm objektet e tekstit
+	Text Style...	Stili i tekstit...
+	Text height	Lartësia e tekstit
+	Text override	Mbishkrim teksti
+	Text style	Stili i tekstit
+	Thaw All Layers	Shkri të gjitha shtresat
+	Thaw Layer	Shkri shtresën
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Apertura tregon sa afër një pike duhet të vijë kursori që kapja e objektit ta gjejë.
+	There is nothing here yet.	Këtu nuk ka ende asgjë.
+	Thickness	Trashësia
+	Time	Koha
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Kliku i djathtë sipas kohës: kliku i shpejtë është Enter, mbajtja hap menynë
+	To	Deri
+	To get started, create or open a drawing.	Për të filluar, krijo ose hap një vizatim.
+	Toggle PICKADD (off: each pick replaces the selection)	Ndërro PICKADD (joaktiv: çdo zgjedhje zëvendëson përzgjedhjen)
+	Toggle PICKADD (on: picks add to the selection)	Ndërro PICKADD (aktiv: zgjedhjet shtohen te përzgjedhja)
+	Tolerance...	Toleranca...
+	Tool Bar	Shiriti i mjeteve
+	Tool Sets	Grupet e mjeteve
+	Tools	Mjete
+	Torus	Torus
+	Trace	Gjurmë
+	Track orthogonally only	Gjurmo vetëm ortogonalisht
+	Track using all polar angle settings	Gjurmo me të gjitha cilësimet e këndit polar
+	Transparency	Tejdukshmëria
+	Trim	Shkurto
+	True Color	Ngjyrë e vërtetë
+	Turn All Layers On	Ndiz të gjitha shtresat
+	Turn Off Layer	Fik shtresën
+	Turn On Layer	Ndiz shtresën
+	Turn Quick Properties off (QPMODE)	Çaktivizo vetitë e shpejta (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Kur është joaktiv, kliku i djathtë gjatë një komande hap gjithmonë menynë e shkurtoreve.
+	Type	Lloji
+	Type a command	Shkruaj një komandë
+	Type text; Enter starts a new paragraph	Shkruaj tekstin; Enter nis një paragraf të ri
+	UCS Icon	Ikona UCS
+	Undo	Zhbëj
+	Undo (⌘Z)	Zhbëj (⌘Z)
+	Ungroup	Çgrupo
+	Union	Bashkim
+	Unisolate Layer	Hiq izolimin e shtresës
+	Units Conversion	Konvertimi i njësive
+	Units...	Njësitë...
+	Unload	Shkarko
+	Unloaded	I shkarkuar
+	Unlock Layer	Shkyç shtresën
+	Unlock viewport	Shkyç dritaren e pamjes
+	Unmerge Cells	Ndaj qelizat
+	Unreferenced	Pa referenca
+	Unresolved	I pazgjidhur
+	Unsaved Layer State	Gjendje shtresash e paruajtur
+	Up	Lart
+	Update	Përditëso
+	Update Data Links	Përditëso lidhjet e të dhënave
+	Use System Setting	Përdor cilësimin e sistemit
+	Use for this layout	Përdor për këtë faqosje
+	Use object linetype	Përdor llojin e vijës së objektit
+	Use object lineweight	Përdor trashësinë e vijës së objektit
+	User	Përdorues
+	User Parameters	Parametrat e përdoruesit
+	User Preferences	Preferencat e përdoruesit
+	Username	Emri i përdoruesit
+	VP Color	Ngjyra në DP
+	VP Freeze	Ngrirje në DP
+	Value	Vlera
+	Value:	Vlera:
+	Variables	Ndryshoret
+	Version	Versioni
+	Version 2000	Versioni 2000
+	Version 2004	Versioni 2004
+	Version 2007	Versioni 2007
+	Version 2010	Versioni 2010
+	Version 2013	Versioni 2013
+	Version 2018	Versioni 2018
+	Version {version}	Versioni {version}
+	Vertical	Vertikal
+	VerticalDistance	Distancë vertikale
+	View	Pamja
+	ViewCube	ViewCube
+	Viewport	Dritare pamjeje
+	Viewport Layer Freeze	Ngrirje shtresash në dritare pamjeje
+	Viewport Properties	Vetitë e dritares së pamjes
+	Viewport is locked	Dritarja e pamjes është e kyçur
+	Viewport scale	Shkalla e dritares së pamjes
+	Viewport {id}	Dritare pamjeje {id}
+	Viewports	Dritare pamjeje
+	Volume	Vëllimi
+	WCS	WCS
+	White	E bardhë
+	Width factor	Faktori i gjerësisë
+	Window	Dritare
+	Wipeout	Fshirës
+	Workspace Switching	Ndërrimi i hapësirave të punës
+	Write Block	Shkruaj bllokun
+	X	X
+	Xline	Vijë ndërtimi
+	Y	Y
+	Yellow	E verdhë
+	Yes	Po
+	Zoom	Zmadhim
+	Zoom All	Zmadho të gjitha
+	Zoom Dynamic	Zmadhim dinamik
+	Zoom Extents	Zmadho në shtrirje
+	Zoom In	Afro
+	Zoom Object	Zmadho në objekt
+	Zoom Out	Largo
+	Zoom Previous	Zmadhimi i mëparshëm
+	Zoom Realtime	Zmadhim në kohë reale
+	Zoom Window	Zmadho me dritare
+	Zoom sensitivity	Ndjeshmëria e zmadhimit
+	error	gabim
+	min	min
+	objects	objekte
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (kufizimi {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} kufizimi {name} = {expression}  (kliko dy herë për redaktim)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Parametër i ri përdoruesi
+	ΔLOC	ΔRreshta
+	−Bin	−Binarë
+	−LOC	−Rreshta
+	⌘↩ to finish	⌘↩ për të përfunduar
+@plural	{n} commit	{n} ndryshim|{n} ndryshime
+@plural	{n} contributor	{n} kontribues|{n} kontribues
+	Check for Updates…	Kontrollo për përditësime…
+	DraftCraft is up to date.	DraftCraft është i përditësuar.
+	Could not check for updates.	Nuk u kontrollua dot për përditësime.
+	Add to Working Set	Shto te grupi i punës
+	Add: Pick points	Shto: zgjidh pika
+	Add: Select objects	Shto: zgjidh objekte
+	Add…	Shto…
+	Alias	Pseudonim
+	Alias file: {file}	Skedari i pseudonimeve: {file}
+	Align Multileaders	Rreshto shumudhëzuesit
+	Analyze Shapes	Analizo format
+	Analyze Usage	Analizo përdorimin
+	Animation Effects	Efektet e animacionit
+	Animation effects	Efekte animacioni
+	Associative	Asociative
+	Backup copy	Kopje rezervë
+	Block to create or edit	Blloku për t'u krijuar ose redaktuar
+	Bottom left	Poshtë majtas
+	Bottom right	Poshtë djathtas
+	Boundaries	Kufij
+	Boundaries picked: {n}	Kufij të zgjedhur: {n}
+	Break-line Symbol	Simbol i vijës së thyerjes
+	Centered	I qendërzuar
+	Change Properties	Ndrysho vetitë
+	Choose the command the alias starts.	Zgjidh komandën që nis pseudonimi.
+	Click the ruler to add a tab stop, right-click to remove one	Kliko vizoren për të shtuar një ndalesë tabulimi, kliko djathtas për ta hequr
+	Click to set new origin	Kliko për të caktuar origjinën e re
+	Close Block Editor	Mbyll redaktorin e blloqeve
+	Collect	Mblidh
+	Collect Multileaders	Mblidh shumudhëzuesit
+	Color 1	Ngjyra 1
+	Color 2	Ngjyra 2
+	Command	Komanda
+	Convert Text to Mtext	Konverto tekstin në tekst shumërreshtor
+	Create backup copy with each save	Krijo kopje rezervë me çdo ruajtje
+	Create separate hatches	Krijo vijëzime të veçanta
+	Crossing selection color:	Ngjyra e përzgjedhjes prerëse:
+	Curved	I lakuar
+	Customize	Personalizo
+	Default to boundary extents	Si parazgjedhje shtrirja e kufirit
+	Define each corner of the selection window with a separate click.	Përcakto çdo kënd të dritares së përzgjedhjes me një klikim të veçantë.
+	Discard	Hidh poshtë
+	Drag Dynamic Grip	Tërhiq dorezën dinamike
+	Dynamic Block Data	Të dhënat e bllokut dinamik
+	Dynamic Block Grips	Dorezat e bllokut dinamik
+	Dynamic Block Reference	Referencë blloku dinamik
+	Edit Block Definition	Redakto përkufizimin e bllokut
+	Edit Command Aliases (PGP)...	Redakto pseudonimet e komandave (PGP)...
+	Edit Multileader	Redakto shumudhëzuesin
+	Edit Reference In-Place	Redakto referencën në vend
+	Edit…	Redakto…
+	Evaluate LISP	Vlerëso LISP
+	Exclude:	Përjashto:
+	Explode Attributes to Text	Shpërthe atributet në tekst
+	Express Tools	Express Tools
+	Font	Shkronja
+	Grips	Doreza
+	Groups	Grupe
+	Hatch Pick	Zgjedhje vijëzimi
+	Hatch and Gradient	Vijëzim dhe gradient
+	Hatch origin	Origjina e vijëzimit
+	Hatches	Vijëzime
+	Hemispherical	Gjysmësferik
+	Ignore	Shpërfill
+	Imperial (inches)	Anglosaksone (inç)
+	Implied Loops	Laqe të nënkuptuara
+	Indicate selection area	Trego zonën e përzgjedhjes
+	Interface scale	Shkalla e ndërfaqes
+	Inverted	I përmbysur
+	Island	Ishull
+	Island detection	Zbulimi i ishujve
+	Italic	I pjerrët
+	Justify	Rreshto në të dyja anët
+	Load Application...	Ngarko aplikacion...
+	Metric (millimetres)	Metrike (milimetra)
+	More than {n} aliases.	Më shumë se {n} pseudonime.
+	Move/Copy/Rotate	Lëviz/Kopjo/Rrotullo
+	Multiline text	Tekst shumërreshtor
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	I riu dhe vizatimi i parë në nisje përdorin këto njësi, përveç nëse është caktuar një shabllon i parazgjedhur (QNEWTEMPLATE).
+	New block	Bllok i ri
+	No alias file loaded. REINIT replaces these aliases with a file's.	Nuk është ngarkuar skedar pseudonimesh. REINIT i zëvendëson këto pseudonime me ato të një skedari.
+	Not a number or distance: {text}	Nuk është numër ose distancë: {text}
+	Object grouping	Grupimi i objekteve
+	Object selection limit for display of grips	Kufiri i objekteve të zgjedhura për shfaqjen e dorezave
+	Objects on locked layers	Objektet në shtresa të kyçura
+	Open in Block Editor	Hap në redaktorin e blloqeve
+	Origin: {x}, {y}	Origjina: {x}, {y}
+	Outer	I jashtëm
+	Overline	Vijë sipër
+	Preview	Parapamje
+	Query Texts	Kërko tekstet
+	Save Block	Ruaj bllokun
+	Save Block As	Ruaj bllokun si
+	Save Layout as Template	Ruaj faqosjen si shabllon
+	Save Reference Edits	Ruaj redaktimet e referencës
+	Save alias	Ruaj pseudonimin
+	Save changes to block "{name}"?	Të ruhen ndryshimet në bllokun "{name}"?
+	Select boundaries to remove	Zgjidh kufijtë për t'i hequr
+	Select using two clicks only	Përzgjedh vetëm me dy klikime
+	Selection Area Effect	Efekti i zonës së përzgjedhjes
+	Selection Preview Filter	Filtri i parapamjes së përzgjedhjes
+	Selection area opacity:	Patejdukshmëria e zonës së përzgjedhjes:
+	Selection effect color	Ngjyra e efektit të përzgjedhjes
+	Selection modes	Mënyrat e përzgjedhjes
+	Selection preview	Parapamja e përzgjedhjes
+	Set Dynamic Property	Cakto vetinë dinamike
+	Shape	Formë
+	Sheet Books to PDF...	Libra fletësh në PDF...
+	Show grips	Shfaq dorezat
+	Specified origin	Origjinë e përcaktuar
+	Spherical	Sferik
+	Tables	Tabela
+	Text color	Ngjyra e tekstit
+	Top left	Sipër majtas
+	Top right	Sipër djathtas
+	Type an alias name.	Shkruaj emrin e pseudonimit.
+	Underline	I nënvizuar
+	Units of new drawings	Njësitë e vizatimeve të reja
+	Unsaved changes	Ndryshime të paruajtura
+	Use current origin	Përdor origjinën aktuale
+	Visual Effect Settings	Cilësimet e efekteve vizuale
+	Visual Effect Settings...	Cilësimet e efekteve vizuale...
+	When a command is active	Kur një komandë është aktive
+	When no command is active	Kur asnjë komandë nuk është aktive
+	Window selection color:	Ngjyra e përzgjedhjes me dritare:
+	Working Set	Grupi i punës
+	Xref and Block In-place Editing	Redaktim në vend i referencave të jashtme dhe blloqeve
+	Xrefs	Referenca të jashtme
+	built-in	i integruar
+	overrides built-in	mbishkruan të integruarin
+	{alias} is already defined; select it and use Edit.	{alias} është përkufizuar tashmë; zgjidhe dhe përdor Redakto.
+	{command} is an unknown command.	{command} është komandë e panjohur.
+	Find All	Gjej të gjitha
+	Find what:	Gjej:
+	Match case	Përputh shkronjat e mëdha/vogla
+	Replace	Zëvendëso
+	Replace All	Zëvendëso të gjitha
+	Replace with:	Zëvendëso me:
+	Replacement text	Teksti zëvendësues
+	Results	Rezultatet
+	Searches the current space.	Kërkon në hapësirën aktuale.
+	Text to find	Teksti për t'u gjetur
+	Whole words	Fjalë të plota
+	Nothing found	Nuk u gjet asgjë
+	E	L
+	N	V
+	S	J
+	W	P
+	B	F
+	DraftCraft	DraftCraft
+	Clear Recent Files	Pastro skedarët e fundit
+	contains authoring elements. Open in Block Editor?	përmban elemente krijimi. Të hapet në redaktorin e blloqeve?
+	Custom	I personalizuar
+	Open Recent	Hap të fundit
+	This drawing	Ky vizatim
+	Arrow size	Madhësia e shigjetës
+	Dim scale overall	Shkalla e përgjithshme e përmasave
+	Precision	Saktësia
+	Apply to Layout	Zbato te faqosja
+	Center the plot	Qendërzo printimin
+	Enter block names to extract	Fut emrat e blloqeve për nxjerrje
+	Enter geometric characteristic	Fut karakteristikën gjeometrike
+	Enter name of LISP file to load	Fut emrin e skedarit LISP për ngarkim
+	First corner	Këndi i parë
+	Fit to paper	Përshtat në letër
+	Landscape	Horizontale
+	Limits	Kufijtë
+	Opposite corner	Këndi i kundërt
+	Orientation	Orientimi
+	Paper size	Madhësia e letrës
+	Plot area	Zona e printimit
+	Plot object lineweights	Printo trashësitë e vijave të objekteve
+	Plot offset	Zhvendosja e printimit
+	Plot transparency	Printo tejdukshmërinë
+	Portrait	Vertikale
+	Printer/plotter	Printer/ploter
+	Window <	Dritare <
+	X offset (mm)	Zhvendosja X (mm)
+	Y offset (mm)	Zhvendosja Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstromë
+	Architectural	Arkitekturore
+	Astronomical Units	Njësi astronomike
+	Centimeters	Centimetra
+	Decameters	Dekametra
+	Decimal	Dhjetore
+	Decimal Degrees	Gradë dhjetore
+	Decimeters	Decimetra
+	Deg/Min/Sec	Gradë/Min/Sek
+	Don't Save	Mos ruaj
+	Drawing Units	Njësitë e vizatimit
+	Engineering	Inxhinierike
+	Feet	Këmbë
+	Fractional	Thyesore
+	Gigameters	Gigametra
+	Grads	Gradianë
+	Hectometers	Hektometra
+	Inches	Inç
+	Insertion scale	Shkalla e futjes
+	Kilometers	Kilometra
+	Light Years	Vite drite
+	Meters	Metra
+	Microinches	Mikroinç
+	Microns	Mikronë
+	Miles	Milje
+	Millimeters	Milimetra
+	Mils	Mil
+	Nanometers	Nanometra
+	Parsecs	Parsekë
+	Radians	Radianë
+	Sample output	Shembull rezultati
+	Save changes to {name}?	Të ruhen ndryshimet në {name}?
+	Scientific	Shkencore
+	Surveyor's Units	Njësi topografike
+	Unitless	Pa njësi
+	Units to scale inserted content	Njësitë për shkallëzimin e përmbajtjes së futur
+	US Survey Feet	Këmbë topografike SHBA
+	US Survey Inch	Inç topografik SHBA
+	US Survey Mile	Milje topografike SHBA
+	US Survey Yard	Jard topografik SHBA
+	Yards	Jardë
+	Your changes will be lost if you don't save them.	Ndryshimet do të humbasin nëse nuk i ruani.
+	Layouts	Faqosjet
+	Associate	Shoqëro
+	Clip Xref	Prit referencën e jashtme
+	Xref Clip Frame	Korniza e prerjes së referencës së jashtme
+	Minimize	Minimizo
+	Maximize	Maksimizo
+	Restore Down	Rikthe madhësinë
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft dhe logoja e DraftCraft janë marka tregtare të DraftCraft Engineering Ventures.
+	Conic	Konike
+	Spline Fit	Splajn me pika përshtatjeje
+	Spline CV	Splajn me kulme kontrolli
+	Specify start point of conic	Përcakto pikën fillestare të konikes
+	Specify apex (where the end tangents meet)	Përcakto kulmin (ku takohen tangjentet fundore)
+	Specify end point of conic	Përcakto pikën fundore të konikes
+	Specify rho or a point on the conic	Përcakto rho ose një pikë në konike
+	Check for Updates...	Kontrollo për përditësime...
+	Check for Updates	Kontrollo për përditësime
+	Update Available	Ka përditësim
+	DraftCraft {version} is available.	DraftCraft {version} është në dispozicion.
+	You have version {version}.	Ju keni versionin {version}.
+	Do you want to download the update?	Doni ta shkarkoni përditësimin?
+	What's new	Çfarë ka të re
+	What's New	Të rejat
+	Download	Shkarko
+	Later	Më vonë
+	Skip This Version	Kapërce këtë version
+	DraftCraft is up to date (version {version}).	DraftCraft është i përditësuar (versioni {version}).
+	Do you want to install the update now?	Doni ta instaloni përditësimin tani?
+	Update Now	Përditëso tani
+	Open the release page	Hap faqen e publikimit
+	This copy of DraftCraft can't update itself.	Kjo kopje e DraftCraft nuk mund të përditësohet vetë.
+	Updating DraftCraft	Po përditësohet DraftCraft
+	Update Failed	Përditësimi dështoi
+	Installing DraftCraft {version}	Po instalohet DraftCraft {version}
+	Downloading: {done} of {total} MB	Shkarkimi: {done} nga {total} MB
+	Installing…	Po instalohet…
+	Starting the download…	Po nis shkarkimi…
+	The connection dropped; trying again…	Lidhja ra; po provohet përsëri…
+	DraftCraft {version} is installed.	DraftCraft {version} u instalua.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Rinis DraftCraft për ta përdorur. Nëse e rinis më vonë, hapet herën tjetër që nis DraftCraft.
+	Restart Now	Rinis tani
+	The update could not be installed.	Përditësimi nuk mund të instalohej.
+	You can download it from the release page instead.	Në vend të kësaj, mund ta shkarkoni nga faqja e publikimit.
+	2D Wireframe	Kornizë teli 2D
+	Annotate	Shënime
+	Blocks Palette	Paleta e blloqeve
+	CAD Standards	Standardet CAD
+	Commands	Komandat
+	2D Drafting	Vizatim 2D
+	Edit Aliases	Redakto pseudonimet
+	Image	Imazh
+	Palettes	Paleta
+	Top	Sipër
+	Units	Njësitë
+	Workspace	Hapësira e punës
+	Ribbon	Shiriti
+	PDF Underlay...	Nënshtresë PDF...
+	PDF Import	Importim PDF
+	PDF Underlay	Nënshtresë PDF
+	Underlay Layers	Shtresat e nënshtresës
+	Raster Image Reference...	Referencë imazhi raster...
+	Close Text Editor	Mbyll redaktorin e tekstit
+	Image Clip	Prerje imazhi
+	PDF Clip	Prerje PDF
+	Image Adjust	Rregullim imazhi
+	PDF Adjust	Rregullim PDF
+	Adjust...	Rregullo...
+	Parameter	Parametër
+	Action	Veprim
+	DesignCenter	DesignCenter
+	Tool Palettes	Paletat e mjeteve
+	Sheet Set Manager	Menaxheri i grupeve të fletëve
+	Type the drawing's path, then press Enter.	Shkruaj shtegun e vizatimit, pastaj shtyp Enter.
+	Drawing file	Skedari i vizatimit
+	Folder	Dosje
+	Linetypes	Llojet e vijave
+	Text Styles	Stilet e tekstit
+	Dimension Styles	Stilet e përmasave
+	Table Styles	Stilet e tabelave
+	Multileader Styles	Stilet e shumudhëzuesve
+	Multiline Styles	Stilet e shumëvijave
+	Add to Drawing	Shto në vizatim
+	Create Tool Palette	Krijo paletë mjetesh
+	Nothing of this kind in the file.	Nuk ka asgjë të këtij lloji në skedar.
+	Open a drawing to see its blocks, layers and styles.	Hap një vizatim për të parë blloqet, shtresat dhe stilet e tij.
+	Delete Palette	Fshi paletën
+	New Palette	Paletë e re
+	No tool palettes.	Nuk ka paleta mjetesh.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Kjo paletë është bosh: shto një komandë më poshtë ose krijo një paletë nga DesignCenter.
+	Delete Tool	Fshi mjetin
+	Add Command	Shto komandë
+	New Sheet Set...	Grup i ri fletësh...
+	Open Sheet Set...	Hap grup fletësh...
+	Sheet sets (DCSS)	Grupe fletësh (DCSS)
+	Sheet set file	Skedari i grupit të fletëve
+	Make or open a sheet set to list its sheets.	Krijo ose hap një grup fletësh për të listuar fletët e tij.
+	Add Drawing...	Shto vizatim...
+	Publish to PDF...	Publiko në PDF...
+	No sheets yet: add a drawing's layouts.	Ende pa fletë: shto faqosjet e një vizatimi.
+	Number	Numri
+	Title	Titulli
+	Move Up	Lëviz lart
+	Move Down	Lëviz poshtë
+	Sheet Set (DCSS)	Grup fletësh (DCSS)
+	Close Tool Palettes	Mbyll paletat e mjeteve
+	Close DesignCenter	Mbyll DesignCenter
+	Close Sheet Set Manager	Mbyll menaxherin e grupeve të fletëve
+	Manage Tool Palettes	Menaxho paletat e mjeteve
+	Changes apply at once; Save Current As keeps them in a workspace.	Ndryshimet zbatohen menjëherë; Ruaj aktualen si i mban në një hapësirë pune.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Kliko shtresat për të shfaqur vetëm ato; Ctrl ose Shift shton te zgjedhja.
+	Current Workspace	Hapësira aktuale e punës
+	Customize Interface	Personalizo ndërfaqen
+	Customize User Interface	Personalizo ndërfaqen e përdoruesit
+	Customize...	Personalizo...
+	Edit Aliases...	Redakto pseudonimet...
+	Force object color and linetype to ByLayer	Detyro ngjyrën dhe llojin e vijës së objekteve SipasShtresës
+	Geographic Location	Vendndodhja gjeografike
+	Geographic Location...	Vendndodhja gjeografike...
+	Latitude	Gjerësia gjeografike
+	Longitude	Gjatësia gjeografike
+	North direction	Drejtimi i veriut
+	Layer Translation Mappings	Përputhjet e përkthimit të shtresave
+	Layer Translator	Përkthyesi i shtresave
+	Layer Translator...	Përkthyesi i shtresave...
+	Layer Walk	Shëtitje nëpër shtresa
+	Layer Walk...	Shëtitje nëpër shtresa...
+	Location	Vendndodhja
+	Set Location	Cakto vendndodhjen
+	Remove Location	Hiq vendndodhjen
+	The drawing's origin is at this place (WGS 84 degrees).	Origjina e vizatimit është në këtë vend (gradë WGS 84).
+	Map	Përputh
+	New layer name	Emri i shtresës së re
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Ende pa përputhje: zgjidh shtresat majtas, një emër djathtas, pastaj Përputh.
+	Translate	Përkthe
+	Translate From	Përkthe nga
+	Translate To	Përkthe në
+	Restore on exit	Rikthe në dalje
+	Point Cloud	Re pikash
+	Point Cloud...	Re pikash...
+	Point clouds (XYZ, LAS)	Re pikash (XYZ, LAS)
+	ZIP archive	Arkiv ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Shiriti i qasjes së shpejtë
+	Rename	Riemërto
+	Reset to Standard	Rikthe në standard
+	Ribbon Tabs	Skedat e shiritit
+	Save Current As	Ruaj aktualen si
+	Save Current As...	Ruaj aktualen si...
+	Save Workspace	Ruaj hapësirën e punës
+	User Interface	Ndërfaqja e përdoruesit
+	Workspace Settings	Cilësimet e hapësirës së punës
+	Workspace Settings...	Cilësimet e hapësirës së punës...
+	Workspace name	Emri i hapësirës së punës
+	Workspace:	Hapësira e punës:
+	Workspaces	Hapësirat e punës
+	Interface...	Ndërfaqja...
+	Export Attribute Information...	Eksporto informacionin e atributeve...
+	Import Attribute Information...	Importo informacionin e atributeve...
+	Export Attributes	Eksporto atributet
+	Import Attributes	Importo atributet
+	Text, tab-delimited (TXT)	Tekst i ndarë me tabulime (TXT)
+	Import Settings	Importo cilësimet
+	Export Settings	Eksporto cilësimet
+	Import Settings...	Importo cilësimet...
+	Export Settings...	Eksporto cilësimet...
+	DraftCraft settings (TOML)	Cilësimet e DraftCraft (TOML)
+	Total Area and Length	Sipërfaqja dhe gjatësia totale
+	Total Area	Sipërfaqja totale
+	Specify point to place the totals as text	Përcakto pikën për të vendosur totalet si tekst
+	Metric	Metrike
+	Imperial	Anglosaksone
+	A new drawing in millimeters	Një vizatim i ri në milimetra
+	A new drawing in inches	Një vizatim i ri në inç
+	A new drawing in centimeters	Një vizatim i ri në centimetra
+	Metric (centimetres)	Metrike (centimetra)
+	Join the ArtCraft Discord…	Bashkohu në Discord-in e ArtCraft…
+	Join us on Discord	Bashkohu me ne në Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Një nga Crafting Apps të ekipit dhe komunitetit ArtCraft.
+	Change	Ndrysho
+	Multiple Insert	Futje e shumëfishtë
+	Ctrl+Enter to apply	Ctrl+Enter për të zbatuar
+	Edit Text	Redakto tekstin
+	The drawing changed. Close the window and open it again.	Vizatimi ndryshoi. Mbyll dritaren dhe hape përsëri.
+	DView	DView
+	Raster Images	Imazhe raster
+	Xref	Referencë e jashtme
+	Backup copies are off, so the current file will be replaced.	Kopjet rezervë janë joaktive, prandaj skedari aktual do të zëvendësohet.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 dhe më të hershmet i mbajnë. Përdor Ruaj si për t'i mbajtur në vizatim.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF i mban. Përdor Ruaj si për t'i mbajtur në vizatim.
+	Save Anyway	Ruaj gjithsesi
+	Save cancelled: {path} was not changed.	Ruajtja u anulua: {path} nuk u ndryshua.
+	Saving {name} will remove content	Ruajtja e {name} do të heqë përmbajtje
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Skedari aktual nuk duket i plotë, prandaj {name} mbetet siç është dhe skedari aktual do të zëvendësohet.
+	The current file is kept as {name} until the next save.	Skedari aktual mbahet si {name} deri në ruajtjen tjetër.
+	This format can't keep these objects yet: {objects}.	Ky format nuk mund t'i mbajë ende këto objekte: {objects}.
+	{count} more types	edhe {count} lloje
+	Additional Tools	Mjete shtesë
+	Keyboard Shortcuts...	Shkurtoret e tastierës...
+	Keyboard Shortcuts	Shkurtoret e tastierës
+	Replaces the shortcut of {commands}	Zëvendëson shkurtoren e {commands}
+	Needs Ctrl, Alt or a function key	Duhet Ctrl, Alt ose një tast funksioni
+	Press the keys	Shtyp tastet
+	Back to DraftCraft's shortcut	Kthehu te shkurtorja e DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Një shkurtore që cakton ti ka përparësi ndaj asaj të DraftCraft. Ndryshimet zbatohen menjëherë dhe ruhen për herën tjetër.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Kur është joaktiv, kliku i djathtë gjatë një komande bën atë që cakton Personalizimi i klikut të djathtë për mënyrën Komandë.
+	Right-Click Customization...	Personalizimi i klikut të djathtë...
+	Right-Click Customization	Personalizimi i klikut të djathtë
+	Turn on time-sensitive right-click	Aktivizo klikun e djathtë sipas kohës
+	Longer click duration:	Kohëzgjatja e klikut të gjatë:
+	milliseconds	milisekonda
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Gjatë një komande, kliku i shpejtë është Enter dhe kliku më i gjatë hap menynë e shkurtoreve.
+	Default Mode	Mënyra e parazgjedhur
+	No objects selected and no command running:	Asnjë objekt i zgjedhur dhe asnjë komandë në ekzekutim:
+	Edit Mode	Mënyra e redaktimit
+	Objects selected and no command running:	Objekte të zgjedhura dhe asnjë komandë në ekzekutim:
+	Repeat last command	Përsërit komandën e fundit
+	Shortcut Menu	Menyja e shkurtoreve
+	Command Mode	Mënyra Komandë
+	While a command runs:	Gjatë një komande:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Menyja e shkurtoreve: gjithmonë aktive
+	Shortcut Menu: enabled when command options are present	Menyja e shkurtoreve: aktive kur ka opsione komande
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Importim: këtu nuk ka dialog skedarësh; ekzekuto ALIASEDIT me përmbajtjen e skedarit përmes parametrit text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Pseudonimet ruhen në profilin tuaj të DraftCraft dhe mbeten pas rinisjes.
+	Import…	Importo…
+	Run ALIASEDIT with the file's contents using its text parameter.	Ekzekuto ALIASEDIT me përmbajtjen e skedarit përmes parametrit text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Importimi i një skedari zëvendëson {n} pseudonimet tuaja dhe çdo ndryshim ende të pazbatuar.
+	Import and replace	Importo dhe zëvendëso
+	Keep my aliases	Mbaj pseudonimet e mia
+	{n} more warnings; see the command line.	Edhe {n} paralajmërime; shih rreshtin e komandave.
+	Unit	Njësi
+	Drawing units: {unit}, {format}	Njësitë e vizatimit: {unit}, {format}
+	NEW DRAWING	VIZATIM I RI
+	OPEN	HAP
+	WORKSPACE	HAPËSIRA E PUNËS

@@ -1,6 +1,6 @@
 # DraftCraft Croatian (Hrvatski) interface catalog — original translations.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
 # No proprietary translations or other products' string tables were consulted or copied.
 # UTF-8: context<TAB>English source<TAB>translation.
 # Empty context = ordinary label; @plural = |-separated plural forms with {n}.
@@ -1688,3 +1688,8 @@
 	Import and replace	Uvezi i zamijeni
 	Keep my aliases	Zadrži moje aliase
 	{n} more warnings; see the command line.	Još {n} upozorenja; pogledajte naredbeni redak.
+	Unit	Jedinica
+	Drawing units: {unit}, {format}	Jedinice crteža: {unit}, {format}
+	NEW DRAWING	NOVI CRTEŽ
+	OPEN	OTVORI
+	WORKSPACE	RADNI PROSTOR

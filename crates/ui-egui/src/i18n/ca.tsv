@@ -1,6 +1,6 @@
 # DraftCraft Catalan (Català) interface catalog — original translations.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
 # No proprietary translations or other products' string tables were consulted or copied.
 # UTF-8: context<TAB>English source<TAB>translation.
 # Empty context = ordinary label; @plural = |-separated plural forms with {n}.
@@ -1688,3 +1688,8 @@
 	Import and replace	Importa i substitueix
 	Keep my aliases	Conserva els meus àlies
 	{n} more warnings; see the command line.	{n} avisos més; vegeu la línia d'ordres.
+	Unit	Unitat
+	Drawing units: {unit}, {format}	Unitats del dibuix: {unit}, {format}
+	NEW DRAWING	DIBUIX NOU
+	OPEN	OBRE
+	WORKSPACE	ESPAI DE TREBALL

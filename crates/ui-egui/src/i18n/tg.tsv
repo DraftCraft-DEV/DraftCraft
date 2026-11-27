@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Tajik (Тоҷикӣ) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Бекор кардан  
+	  OK  	  OK  
+	 or [	 ё [
+	% of all commits	% аз ҳамаи коммитҳо
+	* Wildcard Match	* Мувофиқат бо шаблон
+	*VARIES*	*ГУНОГУН*
+	+  |  Top  |  2D Wireframe	+  |  Боло  |  Каркаси 2D
+	+Bin	+Сабад
+	+LOC	+LOC
+	1 Viewport	1 равзанаи намоиш
+	2 Points	2 нуқта
+	2 Viewports	2 равзанаи намоиш
+	2D Solid	Ҷисми 2D
+	3 Points	3 нуқта
+	3 Viewports	3 равзанаи намоиш
+	3D Face	Рӯяи 3D
+	3D Mouse	Муши 3D
+	3D Mouse Navigation	Ҳаракат бо муши 3D
+	3D Mouse...	Муши 3D...
+	3D Operations	Амалиётҳои 3D
+	3D Polyline	Полихати 3D
+	3D mouse busy, possibly 3DxWare or missing device permissions	Муши 3D банд аст, шояд 3DxWare кор мекунад ё иҷозати дастгоҳ нест
+	3D mouse connected	Муши 3D пайваст шуд
+	3D mouse disconnected	Муши 3D ҷудо шуд
+	3D mouse input could not be started	Вуруди муши 3D-ро оғоз кардан нашуд
+	3D mouse input is unavailable on this platform	Дар ин платформа вуруди муши 3D дастрас нест
+	4 Viewports	4 равзанаи намоиш
+	< Less than	< Хурдтар
+	<> Not Equal	<> Баробар нест
+	= Equals	= Баробар
+	> Greater than	> Калонтар
+	A built-in table: editing it keeps an edited copy in the drawing.	Ҷадвали дарунсохт: таҳрири он нусхаи таҳриршударо дар нақша нигоҳ медорад.
+	A drawing opened from a file keeps that file's format.	Нақшае, ки аз файл кушода шудааст, формати ҳамон файлро нигоҳ медорад.
+	A variable name starts with a letter and has only letters, digits and _	Номи тағйирёбанда бо ҳарф оғоз мешавад ва танҳо аз ҳарфҳо, рақамҳо ва _ иборат аст
+	About	Дар бораи барнома
+	About DraftCraft	Дар бораи DraftCraft
+	Absolute	Мутлақ
+	Accessibility	Дастрасӣ
+	Add	Илова кардан
+	Add Current Scale	Илова кардани миқёси ҷорӣ
+	Add Leader	Илова кардани хати овез
+	Add Vertex	Илова кардани қулла
+	Add/Delete Scales...	Илова/нест кардани миқёсҳо...
+	Additional angles	Кунҷҳои иловагӣ
+	Align	Ҳамвор кардан
+	Align Text	Ҳамвор кардани матн
+	Aligned	Ҳамворшуда
+	All	Ҳама
+	All Annotation Objects	Ҳамаи объектҳои шарҳ
+	All Scales	Ҳамаи миқёсҳо
+	All Used Layers	Ҳамаи қабатҳои истифодашуда
+	All files	Ҳамаи файлҳо
+	An array that would create more objects than this is refused.	Массиве, ки аз ин зиёд объект месозад, рад карда мешавад.
+	Angle	Кунҷ
+	Angular	Кунҷӣ
+	Annotation Visibility	Намоёнии шарҳҳо
+	Annotation scale	Миқёси шарҳ
+	Annotative Object Scale	Миқёси объекти шарҳдиҳанда
+	Annotative Update	Навсозии шарҳҳо
+	Apparent Intersection	Буриши намоён
+	Append to current selection set	Илова ба маҷмӯи интихоби ҷорӣ
+	Apply	Татбиқ кардан
+	Apply to:	Татбиқ ба:
+	Apply true color	Татбиқи ранги ҳақиқӣ
+	Arc	Камон
+	Arc Length	Дарозии камон
+	Area	Масоҳат
+	Arrange Panel	Ба тартиб даровардани панел
+	Array	Массив
+	Attach	Пайваст кардан
+	Attach DWG...	Пайваст кардани DWG...
+	Attribute	Атрибут
+	Attribute Definition	Таърифи атрибут
+	Attribute Display	Намоиши атрибутҳо
+	Audit	Санҷиш
+	Auto (system language)	Худкор (забони система)
+	Auto Constrain	Маҳдудиятҳои худкор
+	AutoConstrain	AutoConstrain
+	Automatic save every	Захираи худкор ҳар
+	Automatic save file location	Ҷойгиршавии файли захираи худкор
+	Axis, End	Тир, охир
+	Base	Асос
+	Baseline	Хати асосӣ
+	Batch Publish	Нашри гурӯҳӣ
+	Batch Publish...	Нашри гурӯҳӣ...
+	Binary assets added	Захираҳои дуӣ илова шуданд
+	Binary assets removed	Захираҳои дуӣ нест шуданд
+	Bind	Пайвастан
+	Bind...	Пайвастан...
+	Blend	Омехта кардан
+	Block	Блок
+	Block Attribute Manager...	Мудири атрибутҳои блок...
+	Block Description...	Тавсифи блок...
+	Block Editor	Муҳаррири блок
+	Block Reference	Истинод ба блок
+	Block...	Блок...
+	Blocks	Блокҳо
+	Blue	Кабуд
+	Bold	Ғафс
+	Boolean	Амали мантиқӣ
+	Boundary	Сарҳад
+	Boundary...	Сарҳад...
+	Box	Қуттӣ
+	Break	Шикастан
+	Break At Point	Шикастан дар нуқта
+	Bring Above Objects	Болотар аз объектҳо овардан
+	Bring Annotations to Front	Шарҳҳоро ба пеш овардан
+	Bring to Front	Ба пеш овардан
+	Bulleted list	Рӯйхати аломатдор
+	ByBlock	Аз рӯи блок
+	ByColor	Аз рӯи ранг
+	ByLayer	Аз рӯи қабат
+	DraftCraft Help	Ёрии DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft ин танзимот, ҳолатҳои пайвастшавӣ ба объект ва гузаракҳои кашидро барои ҳисоби корбарии шумо нигоҳ медорад ва ҳангоми оғоз барқарор мекунад.
+	Calibrate	Санҷидан
+	Calibrate 3D Mouse	Санҷидани муши 3D
+	Cancel	Бекор кардан
+	Cartesian (x, y)	Декартӣ (x, y)
+	Center	Марказ
+	Center Line	Хати марказӣ
+	Center Mark	Аломати марказ
+	Center X	Маркази X
+	Center Y	Маркази Y
+	Center Z	Маркази Z
+	Center, Diameter	Марказ, диаметр
+	Center, Radius	Марказ, радиус
+	Center, Start, Angle	Марказ, оғоз, кунҷ
+	Center, Start, End	Марказ, оғоз, охир
+	Center, Start, Length	Марказ, оғоз, дарозӣ
+	Chamfer	Фаска
+	Change Space	Иваз кардани фазо
+	Change to Current Layer	Ба қабати ҷорӣ гузарондан
+	Changed: {n}	Тағйир ёфт: {n}
+	Changes apply at once and are kept for next time.	Тағйирот фавран татбиқ ва барои дафъаи оянда нигоҳ дошта мешавад.
+	Circle	Давра
+	Circumference	Дарозии давра
+	Clear	Тоза кардан
+	Clear Command History	Тоза кардани таърихи фармонҳо
+	Reset Suggestion Order	Бозгардонии тартиби пешниҳодҳо
+	Clear History	Тоза кардани таърих
+	Clip	Буридан
+	Clip Viewport	Буридани равзанаи намоиш
+	Clipboard	Буфер
+	Close	Пӯшидан
+	Close All	Ҳамаро пӯшидан
+	Close All Other Drawings	Пӯшидани ҳамаи нақшаҳои дигар
+	Close Array Editing	Пӯшидани таҳрири массив
+	Close Comparison	Пӯшидани муқоиса
+	Export Comparison	Содироти муқоиса
+	Closed	Пӯшида
+	Coincident	Мувофиқ
+	Collapse Palettes	Печондани палитраҳо
+	Collapse Tool Sets	Печондани маҷмӯаҳои асбоб
+	Collinear	Коллинеарӣ
+	Color	Ранг
+	Color 8	Ранги 8
+	Color 9	Ранги 9
+	Color Index	Индекси ранг
+	Color-dependent	Вобаста ба ранг
+	Color...	Ранг...
+	Command Aliases	Тахаллусҳои фармонҳо
+	Command History	Таърихи фармонҳо
+	Command Line	Сатри фармон
+	Command Line History Lines	Сатрҳои таърихи сатри фармон
+	Command Reference	Маълумотномаи фармонҳо
+	Command line history	Таърихи сатри фармон
+	Commits	Коммитҳо
+	Company	Ширкат
+	Compare Drawings...	Муқоисаи нақшаҳо...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Тарроҳӣ ва нақшакашии компютерӣ: барномаи CAD-и кушодаманбаъ ва тозаи ҳуқуқӣ, ки пурра бо Rust навишта шудааст.
+	Concentric	Ҳаммарказ
+	Cone	Конус
+	Constraint Bars	Панелҳои маҳдудият
+	Constraint Settings	Танзимоти маҳдудиятҳо
+	Construction Line	Хати ёрирасон
+	Contents	Мундариҷа
+	Continue	Идома додан
+	Contributors	Саҳмгузорон
+	Control Vertices	Қуллаҳои идоракунӣ
+	Convert	Табдил додан
+	Convert to Arc	Ба камон табдил додан
+	Convert to Line	Ба хат табдил додан
+	Copy	Нусха бардоштан
+	Copy Full File Path	Нусхаи роҳи пурраи файл
+	Copy History	Нусхаи таърих
+	Copy Layout	Нусхаи тарҳбандӣ
+	Copy Nested Objects	Нусхаи объектҳои дохилӣ
+	Copy Selection	Нусхаи интихобшуда
+	Copy as JSON	Нусха ҳамчун JSON
+	Copy with Base Point	Нусха бо нуқтаи асос
+	Count	Шумориш
+	Count List	Рӯйхати шумориш
+	Count Table	Ҷадвали шумориш
+	Create Block	Сохтани блок
+	Creates a user parameter	Параметри корбарро месозад
+	Crosshair size	Андозаи курсор
+	Ctrl+Enter to finish	Барои анҷом Ctrl+Enter
+	Current Scale Only	Танҳо миқёси ҷорӣ
+	Current layer	Қабати ҷорӣ
+	Current selection	Интихоби ҷорӣ
+	Current: {color}	Ҷорӣ: {color}
+	Cut	Буридан
+	Cut with Base Point	Буридан бо нуқтаи асос
+	Cyan	Фирӯзаӣ
+	Cylinder	Силиндр
+	DWG	DWG
+	DWG Reference...	Истиноди DWG...
+	DXF	DXF
+	Dark	Торик
+	Data Extraction...	Истихроҷи маълумот...
+	Data Link...	Пайванди маълумот...
+	Default	Пешфарз
+	Default Save Format	Формати пешфарзи захира
+	Default Save Version	Версияи пешфарзи захира
+	Default save version	Версияи пешфарзи захира
+	Define Attributes	Муайян кардани атрибутҳо
+	Define Attributes...	Муайян кардани атрибутҳо...
+	Defined width	Паҳнои муайян
+	Degree	Дараҷа
+	Degrees of Freedom	Дараҷаҳои озодӣ
+	Degrees of freedom: {n}	Дараҷаҳои озодӣ: {n}
+	Delete	Нест кардан
+	Delete Column	Нест кардани сутун
+	Delete Constraints	Нест кардани маҳдудиятҳо
+	Delete Current Scale	Нест кардани миқёси ҷорӣ
+	Delete Dimension Style	Нест кардани услуби андоза
+	Delete Duplicate Objects	Нест кардани объектҳои такрорӣ
+	Delete Layer	Нест кардани қабат
+	Delete Layer State	Нест кардани ҳолати қабат
+	Delete Layout	Нест кардани тарҳбандӣ
+	Delete Row	Нест кардани сатр
+	Delete Text Style	Нест кардани услуби матн
+	Delta X	Дельта X
+	Delta Y	Дельта Y
+	Description	Тавсиф
+	Deselect All	Бекор кардани интихоб
+	Detach	Ҷудо кардан
+	Diameter	Диаметр
+	Dim style	Услуби андоза
+	Dimension	Андоза
+	Dimension Break	Шикасти андоза
+	Dimension Edit	Таҳрири андоза
+	Dimension Objects Only	Танҳо объектҳои андоза
+	Dimension Space	Фосилаи андозаҳо
+	Dimension Style Override	Иваз кардани услуби андоза
+	Dimension Style...	Услуби андоза...
+	Dimension Text Edit	Таҳрири матни андоза
+	Dimension style	Услуби андоза
+	Dimensional Constraint	Маҳдудияти андозавӣ
+	Dimensional Constraint Parameters	Параметрҳои маҳдудияти андозавӣ
+	Dimensional Constraints	Маҳдудиятҳои андозавӣ
+	Disassociate Dimensions	Ҷудо кардани андозаҳо
+	Display	Намоиш
+	Display name	Номи намоишӣ
+	Display plot styles	Намоиши услубҳои чоп
+	Distance	Масофа
+	Divide	Тақсим кардан
+	Do not plot (click: plot)	Чоп накардан (клик: чоп кардан)
+	Donut	Ҳалқа
+	Double-click to edit the description	Барои таҳрири тавсиф ду бор клик кунед
+	Down	Поён
+	Drafting	Нақшакашӣ
+	Drafting Settings	Танзимоти нақшакашӣ
+	Drafting Settings...	Танзимоти нақшакашӣ...
+	Draw	Кашидан
+	Draw Order	Тартиби кашидан
+	Drawing (DWG)	Нақша (DWG)
+	Drawing (DXF)	Нақша (DXF)
+	Drawing Limits	Ҳудуди нақша
+	Drawing Recovery Manager...	Мудири барқарорсозии нақшаҳо...
+	Drawing Template (DWT)	Шаблони нақша (DWT)
+	Drawing Utilities	Абзорҳои нақша
+	Drawing as bytes	Нақша ҳамчун байтҳо
+	Drawings (DWG, DXF)	Нақшаҳо (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Нақшаҳое, ки ҳоло файл надоранд, дар версияи пешфарз захира мешаванд. 0 дақиқа захираи худкорро хомӯш мекунад.
+	Dynamic	Динамикӣ
+	Dynamic Dimensions	Андозаҳои динамикӣ
+	Dynamic Input	Вуруди динамикӣ
+	Dynamic Input (F12)	Вуруди динамикӣ (F12)
+	Edit	Таҳрир
+	Edit Array	Таҳрири массив
+	Edit Attributes...	Таҳрири атрибутҳо...
+	Edit Table Cell	Таҳрири ячейкаи ҷадвал
+	Edit Text...	Таҳрири матн...
+	Elevation	Баландии сатҳ
+	Ellipse	Эллипс
+	Elliptical Arc	Камони эллиптикӣ
+	Enable 3D mouse navigation	Фаъол кардани ҳаракат бо муши 3D
+	Enable Dynamic Input (F12)	Фаъол кардани вуруди динамикӣ (F12)
+	End Object Isolation	Анҷоми ҷудосозии объектҳо
+	End Width	Паҳнои охир
+	End X	Охири X
+	End Y	Охири Y
+	End angle	Кунҷи охир
+	Endpoint	Нуқтаи охир
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Top, Zero ё Bottom ворид кунед.
+	Enter a fit data option	Параметри маълумоти мувофиқсозиро ворид кунед
+	Enter a pattern name	Номи намунаро ворид кунед
+	Enter a vertex editing option	Параметри таҳрири қулларо ворид кунед
+	Enter an option	Параметрро ворид кунед
+	Enter angle of xline	Кунҷи хати ёрирасонро ворид кунед
+	Enter angle of xline (0)	Кунҷи хати ёрирасонро ворид кунед (0)
+	Enter area of rectangle in current units	Масоҳати росткунҷаро бо воҳидҳои ҷорӣ ворид кунед
+	Enter attribute prompt	Саволи атрибутро ворид кунед
+	Enter attribute tag name	Номи тегҳои атрибутро ворид кунед
+	Enter attribute value	Қимати атрибутро ворид кунед
+	Enter block name	Номи блокро ворид кунед
+	Enter constraint type	Навъи маҳдудиятро ворид кунед
+	Enter continuity	Пайвастагиро ворид кунед
+	Enter default attribute value	Қимати пешфарзи атрибутро ворид кунед
+	Enter degree of spline	Дараҷаи сплайнро ворид кунед
+	Enter delta angle	Афзоиши кунҷро ворид кунед
+	Enter delta length	Афзоиши дарозиро ворид кунед
+	Enter dimension text	Матни андозаро ворид кунед
+	Enter dimension text (<> = measurement)	Матни андозаро ворид кунед (<> = қимати ченшуда)
+	Enter dimension value or [name=expression]	Қимати андоза ё [ном=ифода]-ро ворид кунед
+	Enter dimension variable name to override	Номи тағйирёбандаи андозаро барои иваз ворид кунед
+	Enter justification type	Навъи ҳамворкуниро ворид кунед
+	Enter leader text	Матни хати овезро ворид кунед
+	Enter mline scale	Миқёси мултихатро ворид кунед
+	Enter mode	Ҳолатро ворид кунед
+	Enter name of block to insert	Номи блоки воридшавандаро ворид кунед
+	Enter new text	Матни навро ворид кунед
+	Enter next point	Нуқтаи навбатиро ворид кунед
+	Enter number of columns	Шумораи сутунҳоро ворид кунед
+	Enter number of data rows	Шумораи сатрҳои маълумотро ворид кунед
+	Enter number of items	Шумораи унсурҳоро ворид кунед
+	Enter number of items along path	Шумораи унсурҳо дар роҳро ворид кунед
+	Enter number of sides	Шумораи тарафҳоро ворид кунед
+	Enter number of turns	Шумораи печҳоро ворид кунед
+	Enter percentage length	Фоизи дарозиро ворид кунед
+	Enter rectangle length	Дарозии росткунҷаро ворид кунед
+	Enter rectangle width	Паҳнои росткунҷаро ворид кунед
+	Enter scale factor	Зариби миқёсро ворид кунед
+	Enter text	Матнро ворид кунед
+	Enter text (use \P for new paragraphs)	Матнро ворид кунед (барои сархати нав \P истифода баред)
+	Enter the number of segments	Шумораи қисмҳоро ворид кунед
+	Enter twist direction of helix	Самти печиши спиралро ворид кунед
+	Entire drawing	Тамоми нақша
+	Equal	Баробар
+	Erase	Пок кардан
+	Evaluate	Ҳисоб кардан
+	Exclude from new selection set	Хориҷ аз маҷмӯи интихоби нав
+	Explode	Таҷзия кардан
+	Export	Содирот
+	Export Table	Содироти ҷадвал
+	Export to PDF...	Содирот ба PDF...
+	Export...	Содирот...
+	Expression	Ифода
+	Extend	Дароз кардан
+	Extension	Идома
+	Extents	Ҳудудҳо
+	External Reference	Истиноди берунӣ
+	External References	Истинодҳои берунӣ
+	Extrude	Фишурда баровардан
+	File	Файл
+	File Tab	Варақаи файл
+	Fillet	Мудаввар кардан
+	Filter	Филтр
+	Filters	Филтрҳо
+	Find and Replace	Ёфтан ва иваз кардан
+	Find...	Ёфтан...
+	First	Аввал
+	First commit	Коммити аввал
+	Fit Points	Нуқтаҳои мувофиқсозӣ
+	Fix	Собит кардан
+	Flatten Objects	Ҳамвор кардани объектҳо
+	Format	Формат
+	Freehand	Дастӣ
+	Freeze	Ях кардан
+	Freeze Layer	Ях кардани қабат
+	Freeze in new viewports	Ях кардан дар равзанаҳои нави намоиш
+	Freeze/Thaw	Ях кардан/Об кардан
+	Freeze/Thaw in all viewports	Ях/об кардан дар ҳамаи равзанаҳои намоиш
+	Freeze/Thaw in the current viewport	Ях/об кардан дар равзанаи намоиши ҷорӣ
+	From	Аз
+	From Template...	Аз шаблон...
+	General	Умумӣ
+	Geometric Center	Маркази геометрӣ
+	Geometric Constraint	Маҳдудияти геометрӣ
+	Geometric Constraints	Маҳдудиятҳои геометрӣ
+	Geometry	Геометрия
+	Get Variable	Гирифтани тағйирёбанда
+	Get View	Гирифтани намо
+	Get from the Drawing	Гирифтан аз нақша
+	Global	Умумӣ
+	Global width	Паҳнои умумӣ
+	Grab bag	Гуногун
+	Gradient	Градиент
+	Gradient...	Градиент...
+	Grayscale	Тобиши хокистарӣ
+	Green	Сабз
+	Grid (F7)	Тор (F7)
+	Grid Display	Намоиши тор
+	Grid On (F7)	Тор фаъол (F7)
+	Grid snap	Пайвастшавӣ ба тор
+	Grid spacing	Қадами тор
+	Grip Edit	Таҳрир бо дастакҳо
+	Grip Mirror	Акс бо дастакҳо
+	Grip Option	Параметри дастак
+	Grip Rotate	Гардиш бо дастакҳо
+	Grip Scale	Миқёс бо дастакҳо
+	Grip Stretch	Кашиш бо дастакҳо
+	Grip size	Андозаи дастак
+	Group	Гурӯҳ
+	Group Edit	Таҳрири гурӯҳ
+	Group Options	Параметрҳои гурӯҳ
+	Group Selection	Интихоби гурӯҳ
+	Hatch	Штрихгузорӣ
+	Hatch Edit	Таҳрири штрихгузорӣ
+	Hatch Pattern	Намунаи штрихгузорӣ
+	Hatch Patterns	Намунаҳои штрихгузорӣ
+	Hatch...	Штрихгузорӣ...
+	Height	Баландӣ
+	Height: {height}	Баландӣ: {height}
+	Helix	Спирал
+	Help	Ёрӣ
+	Hide All	Ҳамаро пинҳон кардан
+	Hide All Constraint Bars	Пинҳон кардани ҳамаи панелҳои маҳдудият
+	Hide All Dynamic Dimensions	Пинҳон кардани ҳамаи андозаҳои динамикӣ
+	Hide DraftCraft	Пинҳон кардани DraftCraft
+	Hide Layer List	Пинҳон кардани рӯйхати қабатҳо
+	Hide Objects	Пинҳон кардани объектҳо
+	Hide Others	Пинҳон кардани дигарон
+	Hide Palette	Пинҳон кардани палитра
+	Hide Palettes	Пинҳон кардани палитраҳо
+	History	Таърих
+	Hold Shift to add to the selection	Барои илова ба интихоб Shift-ро нигоҳ доред
+	Home	Асосӣ
+	Horizontal	Уфуқӣ
+	HorizontalDistance	Масофаи уфуқӣ
+	How to apply:	Тарзи татбиқ:
+	ID Point	Координатаҳои нуқта
+	Import	Воридот
+	Import...	Воридот...
+	In	Наздик кардан
+	In-window Menu Bar	Сатри меню дар равзана
+	Include in new selection set	Илова ба маҷмӯи интихоби нав
+	Increment angle	Қадами кунҷ
+	Index Color	Ранги индексӣ
+	Index color: {index}	Ранги индексӣ: {index}
+	Infer Constraints	Муайян кардани маҳдудиятҳо
+	Inquiry	Пурсиш
+	Insert	Ворид кардан
+	Insert Block	Ворид кардани блок
+	Insert Column	Ворид кардани сутун
+	Insert Row	Ворид кардани сатр
+	Insert Table Formula	Ворид кардани формулаи ҷадвал
+	Insert tab	Варақаи Ворид
+	Insert this block	Ворид кардани ин блок
+	Insertion	Воридкунӣ
+	Insertion X	Воридкунии X
+	Insertion Y	Воридкунии Y
+	Insertion Z	Воридкунии Z
+	Inspect Constraints	Санҷиши маҳдудиятҳо
+	Inspect Drawing	Санҷиши нақша
+	Inspection	Санҷиш
+	Interface Language	Забони интерфейс
+	Interface Theme	Мавзӯи интерфейс
+	Interface language	Забони интерфейс
+	Interface theme	Мавзӯи интерфейс
+	Intersect	Буриш
+	Intersection	Буриш
+	Isolate	Ҷудо кардан
+	Isolate Layer	Ҷудо кардани қабат
+	Isolate Objects	Ҷудо кардани объектҳо
+	Isometric Drafting	Нақшакашии изометрӣ
+	Isometric Plane	Ҳамвории изометрӣ
+	Isometric snap	Пайвастшавии изометрӣ
+	Jogged	Шикаста
+	Jogged Linear	Хаттии шикаста
+	Join	Пайвастан
+	Keep an editable copy of this table in the drawing	Нусхаи таҳриршавандаи ин ҷадвалро дар нақша нигоҳ доштан
+	Keep the system cursor visible over the drawing area	Курсори системаро дар болои майдони нақша намоён нигоҳ доштан
+	Language	Забон
+	Largest array	Калонтарин массив
+	Last	Охирин
+	Last commit	Коммити охирин
+	Layer	Қабат
+	Layer Delete	Нест кардани қабат
+	Layer Match	Мувофиқ кардани қабат
+	Layer Merge	Якҷоя кардани қабатҳо
+	Layer Off	Хомӯш кардани қабат
+	Layer Properties	Хусусиятҳои қабат
+	Layer Properties Manager	Мудири хусусиятҳои қабатҳо
+	Layer Properties Manager — current viewport	Мудири хусусиятҳои қабатҳо — равзанаи намоиши ҷорӣ
+	Layer State	Ҳолати қабат
+	Layer States Manager...	Мудири ҳолатҳои қабатҳо...
+	Layer Tools	Асбобҳои қабат
+	Layer contains objects (double-click to make current)	Қабат объектҳо дорад (барои ҷорӣ кардан ду бор клик кунед)
+	Layer is empty (double-click to make current)	Қабат холӣ аст (барои ҷорӣ кардан ду бор клик кунед)
+	Layers	Қабатҳо
+	Layers Palette	Палитраи қабатҳо
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Қабатҳои намоишдодашуда: {shown} аз {total}.   Қабати ҷорӣ: {layer}
+	Layout	Тарҳбандӣ
+	Layout list	Рӯйхати тарҳбандиҳо
+	Layout paper	Коғази тарҳбандӣ
+	Layout {name}: {table}	Тарҳбандии {name}: {table}
+	Leader	Хати овез
+	Leaders Only	Танҳо хатҳои овез
+	Left	Чап
+	Left device button: zoom extents. Right device button: calibrate.	Тугмаи чапи дастгоҳ: миқёс то ҳудудҳо. Тугмаи рост: санҷидан.
+	Length	Дарозӣ
+	Length X	Дарозии X
+	Length Y	Дарозии Y
+	Lengthen	Дароз кардан
+	Light	Равшан
+	Line	Хат
+	Line delta	Фарқи сатрҳо
+	Linear	Хаттӣ
+	Lines +/−	Сатрҳо +/−
+	Lines added	Сатрҳои иловашуда
+	Lines deleted	Сатрҳои нестшуда
+	Lines of Command History	Сатрҳои таърихи фармонҳо
+	Linetype	Навъи хат
+	Linetype Scale	Миқёси навъи хат
+	Linetype scale	Миқёси навъи хат
+	Linetype...	Навъи хат...
+	Lineweight	Ғафсии хат
+	Lineweight...	Ғафсии хат...
+	List	Рӯйхат
+	List Blocks	Рӯйхати блокҳо
+	List Dimension Styles	Рӯйхати услубҳои андоза
+	List Groups	Рӯйхати гурӯҳҳо
+	List Layer States	Рӯйхати ҳолатҳои қабат
+	List Layouts	Рӯйхати тарҳбандиҳо
+	List System Variables	Рӯйхати тағйирёбандаҳои система
+	List Text Styles	Рӯйхати услубҳои матн
+	Load all	Ҳамаро бор кардан
+	Load...	Бор кардан...
+	Loaded	Боршуда
+	Loaded linetypes	Навъҳои хати боршуда
+	Lock	Қулф кардан
+	Lock Layer	Қулф кардани қабат
+	Lock viewport	Қулф кардани равзанаи намоиш
+	Lock/Unlock	Қулф/Кушодан
+	Loft	Гузариш
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Бо Autodesk, Inc. алоқаманд нест.
+	MODEL	МОДЕЛ
+	MText	MText
+	Magenta	Арғувонӣ
+	Major line every	Хати асосӣ ҳар
+	Make Current	Ҷорӣ кардан
+	Make Object's Layer Current	Қабати объектро ҷорӣ кардан
+	Make it a block of this drawing, keeping its layer names	Онро блоки ин нақша кардан, бо нигоҳ доштани номҳои қабатҳо
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Онро блоки ин нақша кардан; қабатҳояш NAME$0$LAYER мешаванд
+	Make...	Сохтан...
+	Match Layer	Мувофиқ кардани қабат
+	Match Properties	Мувофиқ кардани хусусиятҳо
+	Measure	Чен кардан
+	Measure Distance	Чен кардани масофа
+	Measure Geometry	Чен кардани геометрия
+	Merge Cells	Якҷоя кардани ячейкаҳо
+	Merged PRs	PR-ҳои якҷояшуда
+	Mid Between 2 Points	Мобайни 2 нуқта
+	Midpoint	Нуқтаи миёна
+	Mirror	Акс кардан
+	Model	Модел
+	Model Space (in viewport)	Фазои модел (дар равзанаи намоиш)
+	Model background	Заминаи модел
+	Modeling	Моделсозӣ
+	Models	Моделҳо
+	Modify	Тағйир додан
+	More toolbar commands	Фармонҳои дигари лавҳаи асбоб
+	Move	Кӯчондан
+	Move sideways to pan; push/pull or twist to zoom.	Барои ҷобаҷокунӣ ба паҳлу ҳаракат диҳед; барои миқёс тела диҳед/кашед ё печонед.
+	Multileader	Хати овези бисёрҷанба
+	Multileader Style...	Услуби хати овези бисёрҷанба...
+	Multileader style	Услуби хати овези бисёрҷанба
+	Multiline	Мултихат
+	Multiline Style...	Услуби мултихат...
+	Multiline Text	Матни бисёрсатра
+	Multiline Text...	Матни бисёрсатра...
+	Multiline...	Мултихат...
+	Multiple	Якчанд
+	Multiple Point	Якчанд нуқта
+	My	Ман
+	My properties: not available yet	Хусусиятҳои ман: ҳоло дастрас нест
+	Name	Ном
+	Name (A–Z)	Ном (А–Я)
+	Named	Номдор
+	Named Viewports...	Равзанаҳои номдори намоиш...
+	Named Views...	Намоҳои номдор...
+	Nearest	Наздиктарин
+	New	Нав
+	New (metric)	Нав (метрӣ)
+	New CTB	CTB-и нав
+	New Drawing	Нақшаи нав
+	New Drawing (⌘N)	Нақшаи нав (⌘N)
+	New Drawing...	Нақшаи нав...
+	New Layer	Қабати нав
+	New Layout	Тарҳбандии нав
+	New STB	STB-и нав
+	New VP Freeze	Ях дар равзанаи нав
+	New Viewports...	Равзанаҳои нави намоиш...
+	New from Template...	Нав аз шаблон...
+	New layout	Тарҳбандии нав
+	New state name	Номи ҳолати нав
+	New style	Услуби нав
+	Next Change	Тағйири навбатӣ
+	No	Не
+	No blocks defined in this drawing.	Дар ин нақша блок муайян нашудааст.
+	No contributor data was built into this copy.	Дар ин нусха маълумоти саҳмгузорон ҷой дода нашудааст.
+	No external references are attached.	Ягон истиноди берунӣ пайваст нашудааст.
+	No model credits were built into this copy.	Дар ин нусха маълумоти муаллифони моделҳо ҷой дода нашудааст.
+	No plot style tables.	Ҷадвали услубҳои чоп нест.
+	No saved layer states	Ҳолатҳои захирашудаи қабат нест
+	No selection	Интихоб нест
+	No supported 3D mouse found	Муши 3D-и дастгиришаванда ёфт нашуд
+	Node	Гиреҳ
+	None	Ҳеҷ
+	Normal	Муқаррарӣ
+	Not Found	Ёфт нашуд
+	Not available	Дастрас нест
+	Not available yet	Ҳоло дастрас нест
+	Not loaded	Бор нашудааст
+	Numbered list	Рӯйхати рақамдор
+	OK	OK
+	Object	Объект
+	Object Snap	Пайвастшавӣ ба объект
+	Object Snap (F3)	Пайвастшавӣ ба объект (F3)
+	Object Snap On (F3)	Пайвастшавӣ ба объект фаъол (F3)
+	Object Snap Tracking	Пайгирии пайвастшавӣ ба объект
+	Object Snap Tracking (F11)	Пайгирии пайвастшавӣ ба объект (F11)
+	Object Snap Tracking Settings	Танзимоти пайгирии пайвастшавӣ ба объект
+	Object snap aperture	Апертураи пайвастшавӣ ба объект
+	Object snap marker size	Андозаи нишонаи пайвастшавӣ ба объект
+	Object type:	Навъи объект:
+	Oblique	Моил
+	Off	Хомӯш
+	Offset	Ҷобаҷокунии мувозӣ
+	On	Фаъол
+	On/Off	Фаъол/Хомӯш
+	Only in this drawing: {n}	Танҳо дар ин нақша: {n}
+	Only in {name}: {n}	Танҳо дар {name}: {n}
+	Oops	Вой
+	Open	Кушодан
+	Open (⌘O)	Кушодан (⌘O)
+	Open Sample Drawing	Кушодани нақшаи намуна
+	Open Xref	Кушодани истиноди берунӣ
+	Open a drawing first.	Аввал нақшаро кушоед.
+	Open and Save	Кушодан ва захира
+	Open sample drawing	Кушодани нақшаи намуна
+	Open...	Кушодан...
+	Operator:	Амалгар:
+	Options	Параметрҳо
+	Options...	Параметрҳо...
+	Orbit	Мадор
+	Ordinate	Ордината
+	Ortho (F8)	Орто (F8)
+	Ortho Mode	Ҳолати орто
+	Ortho Mode (F8)	Ҳолати орто (F8)
+	Osnap Settings...	Танзимоти пайвастшавӣ ба объект...
+	Out	Дур кардан
+	Over-constrained	Аз ҳад маҳдуд
+	Overlay	Болопӯш
+	Override	Иваз кардан
+	PAPER	КОҒАЗ
+	PRs	PR-ҳо
+	Page Setup Manager	Мудири танзимоти саҳифа
+	Page Setup Manager...	Мудири танзимоти саҳифа...
+	Pan	Ҷобаҷокунӣ
+	Pan Down	Ҷобаҷокунӣ ба поён
+	Pan Left	Ҷобаҷокунӣ ба чап
+	Pan Right	Ҷобаҷокунӣ ба рост
+	Pan Up	Ҷобаҷокунӣ ба боло
+	Pan sensitivity	Ҳассосияти ҷобаҷокунӣ
+	Paper Space	Фазои коғаз
+	Parallel	Мувозӣ
+	Parameters Manager	Мудири параметрҳо
+	Parametric	Параметрӣ
+	Paste	Гузоштан
+	Paste as Block	Гузоштан ҳамчун блок
+	Paste to Command Line	Гузоштан ба сатри фармон
+	Paste to Original Coordinates	Гузоштан ба координатаҳои аслӣ
+	Path Array	Массив дар роҳ
+	Pattern	Намуна
+	Percent	Фоиз
+	Perpendicular	Перпендикуляр
+	Pickbox size	Андозаи қуттии интихоб
+	Plot	Чоп
+	Plot (click: do not plot)	Чоп (клик: чоп накардан)
+	Plot Preview	Пешнамоиши чоп
+	Plot Style Manager	Мудири услубҳои чоп
+	Plot Style Manager...	Мудири услубҳои чоп...
+	Plot Style...	Услуби чоп...
+	Plot Styles...	Услубҳои чоп...
+	Plot Window	Равзанаи чоп
+	Plot style	Услуби чоп
+	Plot style attached to	Услуби чоп пайваст ба
+	Plot style table	Ҷадвали услубҳои чоп
+	Plot table type	Навъи ҷадвали чоп
+	Plotter Manager	Мудири плоттерҳо
+	Plotter Manager...	Мудири плоттерҳо...
+	Plus/minus	Плюс/минус
+	Point	Нуқта
+	Point Filters	Филтрҳои нуқта
+	Point Style...	Услуби нуқта...
+	Polar (distance < angle)	Қутбӣ (масофа < кунҷ)
+	Polar Array	Массиви қутбӣ
+	Polar Tracking	Пайгирии қутбӣ
+	Polar Tracking (F10)	Пайгирии қутбӣ (F10)
+	Polar Tracking On (F10)	Пайгирии қутбӣ фаъол (F10)
+	Polar angle measurement	Ченкунии кунҷи қутбӣ
+	Polar distance	Масофаи қутбӣ
+	Polar: {distance} < {angle}°	Қутбӣ: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	Бисёркунҷа
+	Polygonal	Бисёркунҷа
+	Polygonal Viewport	Равзанаи бисёркунҷаи намоиш
+	Polyline	Полихат
+	Polyline Edit	Таҳрири полихат
+	Position X	Мавқеи X
+	Position Y	Мавқеи Y
+	Position Z	Мавқеи Z
+	Previous	Қаблӣ
+	Previous Change	Тағйири қаблӣ
+	Previous Layer	Қабати қаблӣ
+	Primitives	Примитивҳо
+	Print	Чоп
+	Print...	Чоп...
+	Profiles	Профилҳо
+	Properties	Хусусиятҳо
+	Properties Inspector	Инспектори хусусиятҳо
+	Properties:	Хусусиятҳо:
+	Proxy	Прокси
+	Purge	Тоза кардан
+	Pyramid	Пирамида
+	Quadrant	Квадрант
+	Query Entities	Пурсиши объектҳо
+	Quick	Зуд
+	Quick Dimension	Андозаи зуд
+	Quick Properties	Хусусиятҳои зуд
+	Quick Select	Интихоби зуд
+	Quick Select Properties	Хусусиятҳои интихоби зуд
+	Quick Select...	Интихоби зуд...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	Интихоби QuickCalc
+	Quit DraftCraft	Баромадан аз DraftCraft
+	Radius	Радиус
+	Raster Image	Тасвири растрӣ
+	Ray	Нур
+	Read-only	Танҳо барои хондан
+	Real name	Номи воқеӣ
+	Realtime	Дар вақти воқеӣ
+	Reassociate Dimensions	Аз нав пайваст кардани андозаҳо
+	Recalculate Table Formulas	Аз нав ҳисоб кардани формулаҳои ҷадвал
+	Recent	Охирин
+	Recent Commands	Фармонҳои охирин
+	Recent Input	Вуруди охирин
+	Recover...	Барқарор кардан...
+	Rectangle	Росткунҷа
+	Rectangular	Росткунҷа
+	Rectangular Array	Массиви росткунҷа
+	Rectangular snap	Пайвастшавии росткунҷа
+	Red	Сурх
+	Redo	Такрор кардан
+	Redo (⇧⌘Z)	Такрор кардан (⇧⌘Z)
+	Redraw	Аз нав кашидан
+	Reference Manager	Мудири истинодҳо
+	Reference Name	Номи истинод
+	References: {n}	Истинодҳо: {n}
+	Regen	Навсозӣ
+	Regen All	Навсозии ҳама
+	Region	Минтақа
+	Region/Mass Properties	Хусусиятҳои минтақа/масса
+	Reinitialize	Аз нав оғоз кардан
+	Relative	Нисбӣ
+	Relative to last segment	Нисбат ба қисми охирин
+	Release the 3D mouse to calibrate its resting position	Барои санҷидани ҳолати оромаш муши 3D-ро раҳо кунед
+	Reload	Аз нав бор кардан
+	Reload All	Ҳамаро аз нав бор кардан
+	Remove	Хориҷ кардан
+	Remove Leader	Хориҷ кардани хати овез
+	Remove Vertex	Хориҷ кардани қулла
+	Remove the viewport override	Хориҷ кардани ивази равзанаи намоиш
+	Rename Dimension Style	Тағйири номи услуби андоза
+	Rename Layer	Тағйири номи қабат
+	Rename Layer State	Тағйири номи ҳолати қабат
+	Rename Layout	Тағйири номи тарҳбандӣ
+	Rename Text Style	Тағйири номи услуби матн
+	Rename...	Тағйири ном...
+	Repeat {command}	Такрори {command}
+	Replace Block...	Иваз кардани блок...
+	Requires a point (x,y, @dx,dy or @d<a).	Нуқта лозим аст (x,y, @dx,dy ё @d<a).
+	Reset Palettes	Бозгардонии палитраҳо
+	Reset Panel Layout	Бозгардонии ҷойгиршавии панелҳо
+	Reset keeps the interface language.	Бозгардонӣ забони интерфейсро нигоҳ медорад.
+	Reset to Defaults	Бозгашт ба пешфарзҳо
+	Restore	Барқарор кардан
+	Restore Layer State	Барқарор кардани ҳолати қабат
+	Reverse	Баръакс кардан
+	Reverse the order	Баръакс кардани тартиб
+	Reverse zoom direction	Баръакс кардани самти миқёс
+	Revision Cloud	Абри ислоҳ
+	Revolve	Гардонда сохтан
+	Right	Рост
+	Rotate	Гардондан
+	Rotation	Гардиш
+	Run Script...	Иҷрои скрипт...
+	SVG drawings (SVG, SVGZ)	Нақшаҳои SVG (SVG, SVGZ)
+	Save	Захира кардан
+	Save (⌘S)	Захира кардан (⌘S)
+	Save As	Захира ҳамчун
+	Save As...	Захира ҳамчун...
+	Save Layer State	Захираи ҳолати қабат
+	Save State	Захираи ҳолат
+	Save new drawings as	Нақшаҳои навро захира кардан ҳамчун
+	Saved Path	Роҳи захирашуда
+	Scale	Миқёс
+	Scale List...	Рӯйхати миқёсҳо...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Пурзӯркунандаҳои экран, хонандаҳои экран ва сабткунандаҳо курсори системаро пайгирӣ мекунанд.
+	Screening	Хиракунӣ
+	Search for layer	Ҷустуҷӯи қабат
+	Search for parameter	Ҷустуҷӯи параметр
+	Search for pattern	Ҷустуҷӯи намуна
+	Second and next points:	Нуқтаҳои дуюм ва навбатӣ:
+	Select	Интихоб кардан
+	Select 2D polyline	Полихати 2D-ро интихоб кунед
+	Select All	Ҳамаро интихоб кардан
+	Select Objects	Интихоби объектҳо
+	Select Similar	Интихоби монандҳо
+	Select a 2D polyline.	Полихати 2D-ро интихоб кунед.
+	Select a block reference.	Истиноди блокро интихоб кунед.
+	Select a circle or arc.	Давра ё камонро интихоб кунед.
+	Select a closed polyline	Полихати пӯшидаро интихоб кунед
+	Select a closed polyline, circle, ellipse or closed spline.	Полихати пӯшида, давра, эллипс ё сплайни пӯшидаро интихоб кунед.
+	Select a closed polyline.	Полихати пӯшидаро интихоб кунед.
+	Select a curve as the path.	Хати каҷро ҳамчун роҳ интихоб кунед.
+	Select a dimension constraint type	Навъи маҳдудияти андозавиро интихоб кунед
+	Select a line object	Объекти хатро интихоб кунед
+	Select a line object.	Объекти хатро интихоб кунед.
+	Select a line or an arc.	Хат ё камонро интихоб кунед.
+	Select a line or polyline segment	Хат ё қисми полихатро интихоб кунед
+	Select a line, arc or open polyline.	Хат, камон ё полихати кушодаро интихоб кунед.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Хат, камон, давра, полихат, эллипс ё сплайнро ҳамчун роҳ интихоб кунед.
+	Select a line, circle, arc or polyline segment.	Хат, давра, камон ё қисми полихатро интихоб кунед.
+	Select a line.	Хатро интихоб кунед.
+	Select a polyline.	Полихатро интихоб кунед.
+	Select a text, mtext, attribute definition or dimension.	Матн, mtext, таърифи атрибут ё андозаро интихоб кунед.
+	Select an annotation object	Объекти шарҳро интихоб кунед
+	Select an arc or circle	Камон ё давраро интихоб кунед
+	Select an arc.	Камонро интихоб кунед.
+	Select an object	Объектро интихоб кунед
+	Select an object to change	Объекти тағйирёбандаро интихоб кунед
+	Select an object to measure	Объекти ченшавандаро интихоб кунед
+	Select an object.	Объектро интихоб кунед.
+	Select an open curve.	Хати каҷи кушодаро интихоб кунед.
+	Select an open line, arc, polyline, ellipse arc or spline.	Хати кушода, камон, полихат, камони эллипс ё сплайнро интихоб кунед.
+	Select arc or circle	Камон ё давраро интихоб кунед
+	Select arc or polyline arc segment	Камон ё қисми камонии полихатро интихоб кунед
+	Select arc style	Услуби камонро интихоб кунед
+	Select arc, circle, line	Камон, давра, хатро интихоб кунед
+	Select at least two objects to join.	Барои пайвастан ақаллан ду объект интихоб кунед.
+	Select circle or arc to add center mark	Барои илова кардани аломати марказ давра ё камонро интихоб кунед
+	Select closed objects (regions, closed polylines, circles).	Объектҳои пӯшидаро интихоб кунед (минтақаҳо, полихатҳои пӯшида, давраҳо).
+	Select first line	Хати аввалро интихоб кунед
+	Select first line or arc	Хат ё камони аввалро интихоб кунед
+	Select first object	Объекти аввалро интихоб кунед
+	Select first point	Нуқтаи аввалро интихоб кунед
+	Select nested objects to copy	Объектҳои дохилии нусхашавандаро интихоб кунед
+	Select object	Объектро интихоб кунед
+	Select object to dimension	Объекти андозагузориро интихоб кунед
+	Select object to divide	Объекти тақсимшавандаро интихоб кунед
+	Select object to extend or shift-select to trim	Объекти дарозшавандаро интихоб кунед ё барои буридан бо Shift интихоб кунед
+	Select object to measure	Объекти ченшавандаро интихоб кунед
+	Select object to offset	Объекти ҷобаҷошавандаро интихоб кунед
+	Select object to trim or shift-select to extend	Объекти буридаширо интихоб кунед ё барои дароз кардан бо Shift интихоб кунед
+	Select objects	Объектҳоро интихоб кунед
+	Select objects (crossing window first corner)	Объектҳоро интихоб кунед (кунҷи аввали равзанаи буранда)
+	Select objects first, then choose a command	Аввал объектҳоро интихоб кунед, баъд фармонро интихоб кунед
+	Select objects to array.	Объектҳоро барои массив интихоб кунед.
+	Select objects to stretch by crossing-window or crossing-polygon...	Объектҳоро барои кашиш бо равзанаи буранда ё бисёркунҷаи буранда интихоб кунед...
+	Select objects:	Объектҳоро интихоб кунед:
+	Select one polyline (Multiple is available through the JSON form).	Як полихатро интихоб кунед (Multiple тавассути шакли JSON дастрас аст).
+	Select path curve	Хати каҷи роҳро интихоб кунед
+	Select point or object	Нуқта ё объектро интихоб кунед
+	Select polyline	Полихатро интихоб кунед
+	Select second line	Хати дуюмро интихоб кунед
+	Select second line or shift-select to apply corner	Хати дуюмро интихоб кунед ё барои кунҷ бо Shift интихоб кунед
+	Select second object	Объекти дуюмро интихоб кунед
+	Select second object or shift-select to apply corner	Объекти дуюмро интихоб кунед ё барои кунҷ бо Shift интихоб кунед
+	Select second point	Нуқтаи дуюмро интихоб кунед
+	Select spline	Сплайнро интихоб кунед
+	Select symmetry line	Хати симметрияро интихоб кунед
+	Select two points	Ду нуқта интихоб кунед
+	Selection	Интихоб
+	Selection Cycling	Давраи интихоб
+	Send Hatches to Back	Штрихгузориҳоро ба қафо фиристодан
+	Send Under Objects	Зери объектҳо фиристодан
+	Send to Back	Ба қафо фиристодан
+	Services	Хидматҳо
+	Set Current	Ҷорӣ кардан
+	Set Current Dimension Style	Ҷорӣ кардани услуби андоза
+	Set Current Text Style	Ҷорӣ кардани услуби матн
+	Set Current Viewport	Ҷорӣ кардани равзанаи намоиш
+	Set Layer Properties	Танзими хусусиятҳои қабат
+	Set Properties	Танзими хусусиятҳо
+	Set Table Cell	Танзими ячейкаи ҷадвал
+	Set Table Cell Style	Танзими услуби ячейкаи ҷадвал
+	Set Variable	Танзими тағйирёбанда
+	Set View	Танзими намо
+	Settings...	Танзимот...
+	Share	Мубодила
+	Show	Нишон додан
+	Show All	Ҳамаро нишон додан
+	Show All Constraint Bars	Нишон додани ҳамаи панелҳои маҳдудият
+	Show All Dynamic Dimensions	Нишон додани ҳамаи андозаҳои динамикӣ
+	Show Annotative Objects	Нишон додани объектҳои шарҳдиҳанда
+	Show Layer List	Нишон додани рӯйхати қабатҳо
+	Show Quick Properties for selected objects	Нишон додани хусусиятҳои зуд барои объектҳои интихобшуда
+	Show System Cursor	Нишон додани курсори система
+	Show and hide the tools of this category	Нишон додан ва пинҳон кардани асбобҳои ин категория
+	Show command prompting near the crosshairs	Нишон додани саволҳои фармон дар назди курсор
+	Show in Tool Sets	Нишон додан дар маҷмӯаҳои асбоб
+	Show/Hide Lineweight	Нишон додан/пинҳон кардани ғафсии хат
+	Show/Hide Transparency	Нишон додан/пинҳон кардани шаффофият
+	Single Line Text	Матни яксатра
+	Single Point	Нуқтаи ягона
+	Single...	Ягона...
+	Smooth	Ҳамвор
+	Snap	Пайвастшавӣ
+	Snap Mode	Ҳолати пайвастшавӣ
+	Snap Mode (F9)	Ҳолати пайвастшавӣ (F9)
+	Snap On (F9)	Пайвастшавӣ фаъол (F9)
+	Snap Overrides	Ивазкунии пайвастшавӣ
+	Snap X spacing	Қадами пайвастшавӣ аз рӯи X
+	Snap and Grid	Пайвастшавӣ ва тор
+	Snap type	Навъи пайвастшавӣ
+	Snap, grid, polar tracking and Dynamic Input:	Пайвастшавӣ, тор, пайгирии қутбӣ ва вуруди динамикӣ:
+	Solid	Ҷисм
+	Solid Editing	Таҳрири ҷисм
+	Sort	Мураттаб кардан
+	Specify a point	Нуқтаро муайян кунед
+	Specify a scale for the hatch pattern	Миқёси намунаи штрихгузориро муайян кунед
+	Specify a second extension line origin	Ибтидои хати дуюми баровардаро муайян кунед
+	Specify an angle for the hatch pattern	Кунҷи намунаи штрихгузориро муайян кунед
+	Specify angle end point	Нуқтаи охири кунҷро муайян кунед
+	Specify angle of dimension line	Кунҷи хати андозаро муайян кунед
+	Specify angle of dimension text	Кунҷи матни андозаро муайян кунед
+	Specify angle start point	Нуқтаи ибтидои кунҷро муайян кунед
+	Specify angle vertex	Қуллаи кунҷро муайян кунед
+	Specify angle vertex point	Нуқтаи қуллаи кунҷро муайян кунед
+	Specify arc length dimension location	Ҷойи андозаи дарозии камонро муайян кунед
+	Specify axis endpoint of ellipse	Нуқтаи охири тири эллипсро муайян кунед
+	Specify base diameter	Диаметри асосро муайян кунед
+	Specify base point	Нуқтаи асосро муайян кунед
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Нуқтаи асос ё ҷобаҷоиро муайян кунед (барои ҷобаҷокунӣ дар вақти воқеӣ бо тугмаи миёна кашед)
+	Specify base radius	Радиуси асосро муайян кунед
+	Specify center of donut	Маркази ҳалқаро муайян кунед
+	Specify center of ellipse	Маркази эллипсро муайян кунед
+	Specify center of polygon	Маркази бисёркунҷаро муайян кунед
+	Specify center point for circle	Нуқтаи маркази давраро муайян кунед
+	Specify center point of arc	Нуқтаи маркази камонро муайян кунед
+	Specify center point of arc (hold Ctrl to switch direction)	Нуқтаи маркази камонро муайян кунед (барои иваз кардани самт Ctrl-ро нигоҳ доред)
+	Specify center point of array	Нуқтаи маркази массивро муайян кунед
+	Specify center point of base	Нуқтаи маркази асосро муайян кунед
+	Specify corner of viewport	Кунҷи равзанаи намоишро муайян кунед
+	Specify corner of window, enter a scale factor (nX or nXP)	Кунҷи равзанаро муайян кунед, зариби миқёсро ворид кунед (nX ё nXP)
+	Specify diameter of circle	Диаметри давраро муайян кунед
+	Specify dimension arc line location	Ҷойи хати камонии андозаро муайян кунед
+	Specify dimension line location	Ҷойи хати андозаро муайян кунед
+	Specify distance between turns	Масофаи байни печҳоро муайян кунед
+	Specify distance to other axis	Масофа то тири дигарро муайян кунед
+	Specify end angle	Кунҷи охирро муайян кунед
+	Specify end point of arc	Нуқтаи охири камонро муайян кунед
+	Specify end point of arc (hold Ctrl to switch direction)	Нуқтаи охири камонро муайян кунед (барои иваз кардани самт Ctrl-ро нигоҳ доред)
+	Specify ending width	Паҳнои охирро муайян кунед
+	Specify ending width for next segment	Паҳнои охири қисми навбатиро муайян кунед
+	Specify endpoint of arc	Охири камонро муайян кунед
+	Specify endpoint of axis	Охири тирро муайян кунед
+	Specify endpoint of line	Охири хатро муайян кунед
+	Specify feature location	Ҷойи унсурро муайян кунед
+	Specify fillet radius	Радиуси мудавваркуниро муайян кунед
+	Specify fillet radius for rectangles	Радиуси мудавваркуниро барои росткунҷаҳо муайян кунед
+	Specify first angle endpoint	Охири аввали кунҷро муайян кунед
+	Specify first chamfer distance	Масофаи аввали фаскаро муайян кунед
+	Specify first chamfer distance for rectangles	Масофаи аввали фаскаро барои росткунҷаҳо муайян кунед
+	Specify first constraint point	Нуқтаи аввали маҳдудиятро муайян кунед
+	Specify first corner	Кунҷи аввалро муайян кунед
+	Specify first corner point	Нуқтаи кунҷи аввалро муайян кунед
+	Specify first destination point	Нуқтаи аввали мақсадро муайян кунед
+	Specify first end point of circle's diameter	Охири аввали диаметри давраро муайян кунед
+	Specify first endpoint of edge	Охири аввали тегаро муайян кунед
+	Specify first extension line origin	Ибтидои хати аввали баровардаро муайян кунед
+	Specify first point	Нуқтаи аввалро муайян кунед
+	Specify first point of mirror line	Нуқтаи аввали хати аксро муайян кунед
+	Specify first point on circle	Нуқтаи аввалро дар давра муайян кунед
+	Specify first point on circle: _tan to	Нуқтаи аввалро дар давра муайян кунед: _tan to
+	Specify first source point	Нуқтаи аввали манбаъро муайян кунед
+	Specify height	Баландиро муайян кунед
+	Specify helix height	Баландии спиралро муайян кунед
+	Specify included angle	Кунҷи дохилиро муайян кунед
+	Specify included angle (hold Ctrl to switch direction)	Кунҷи дохилиро муайян кунед (барои иваз кардани самт Ctrl-ро нигоҳ доред)
+	Specify insertion base point	Нуқтаи асоси воридкуниро муайян кунед
+	Specify insertion point	Нуқтаи воридкуниро муайян кунед
+	Specify inside diameter of donut	Диаметри дохилии ҳалқаро муайян кунед
+	Specify leader arrowhead location	Ҷойи тири хати овезро муайян кунед
+	Specify leader endpoint	Охири хати овезро муайян кунед
+	Specify leader landing location	Ҷойи рафчаи хати овезро муайян кунед
+	Specify length for rectangles	Дарозиро барои росткунҷаҳо муайян кунед
+	Specify length of chord	Дарозии ватарро муайян кунед
+	Specify length of chord (hold Ctrl to switch direction)	Дарозии ватарро муайян кунед (барои иваз кардани самт Ctrl-ро нигоҳ доред)
+	Specify length of segment	Дарозии қисмро муайян кунед
+	Specify line width for rectangles	Паҳнои хатро барои росткунҷаҳо муайян кунед
+	Specify location for new vertex	Ҷойи қуллаи навро муайян кунед
+	Specify minimum length of arc	Дарозии ҳадди ақали камонро муайян кунед
+	Specify new end point	Нуқтаи охири навро муайян кунед
+	Specify new location for marked vertex	Ҷойи навро барои қуллаи қайдшуда муайян кунед
+	Specify new width for all segments	Паҳнои навро барои ҳамаи қисмҳо муайян кунед
+	Specify next point	Нуқтаи навбатиро муайян кунед
+	Specify offset distance	Масофаи ҷобаҷокуниро муайян кунед
+	Specify opposite corner	Кунҷи муқобилро муайян кунед
+	Specify other corner point	Нуқтаи кунҷи дигарро муайян кунед
+	Specify other endpoint of axis	Охири дигари тирро муайян кунед
+	Specify outside diameter of donut	Диаметри берунии ҳалқаро муайян кунед
+	Specify point	Нуқтаро муайян кунед
+	Specify point on object for first tangent of circle	Нуқтаро дар объект барои аввалин расандаи давра муайян кунед
+	Specify point on object for second tangent of circle	Нуқтаро дар объект барои дуюмин расандаи давра муайян кунед
+	Specify point on side to offset	Нуқтаро дар тарафи ҷобаҷокунӣ муайян кунед
+	Specify radius of arc	Радиуси камонро муайян кунед
+	Specify radius of arc (hold Ctrl to switch direction)	Радиуси камонро муайян кунед (барои иваз кардани самт Ctrl-ро нигоҳ доред)
+	Specify radius of circle	Радиуси давраро муайян кунед
+	Specify rotation angle	Кунҷи гардишро муайян кунед
+	Specify rotation angle of text	Кунҷи гардиши матнро муайян кунед
+	Specify scale factor	Зариби миқёсро муайян кунед
+	Specify second angle endpoint	Охири дуюми кунҷро муайян кунед
+	Specify second break point	Нуқтаи дуюми шикастро муайян кунед
+	Specify second chamfer distance for rectangles	Масофаи дуюми фаскаро барои росткунҷаҳо муайян кунед
+	Specify second constraint point	Нуқтаи дуюми маҳдудиятро муайян кунед
+	Specify second destination point	Нуқтаи дуюми мақсадро муайян кунед
+	Specify second end point of circle's diameter	Охири дуюми диаметри давраро муайян кунед
+	Specify second endpoint of edge	Охири дуюми тегаро муайян кунед
+	Specify second extension line origin	Ибтидои хати дуюми баровардаро муайян кунед
+	Specify second point	Нуқтаи дуюмро муайян кунед
+	Specify second point of arc	Нуқтаи дуюми камонро муайян кунед
+	Specify second point of mirror line	Нуқтаи дуюми хати аксро муайян кунед
+	Specify second point on circle	Нуқтаи дуюмро дар давра муайян кунед
+	Specify second point on circle: _tan to	Нуқтаи дуюмро дар давра муайян кунед: _tan to
+	Specify second point or <use first point as displacement>	Нуқтаи дуюм ё <нуқтаи аввалро ҳамчун ҷобаҷоӣ истифода баред>-ро муайян кунед
+	Specify second source point	Нуқтаи дуюми манбаъро муайян кунед
+	Specify side to offset	Тарафи ҷобаҷокуниро муайян кунед
+	Specify start angle	Кунҷи ибтидоиро муайян кунед
+	Specify start point	Нуқтаи ибтидоиро муайян кунед
+	Specify start point of arc	Нуқтаи ибтидоии камонро муайян кунед
+	Specify start point of polyline	Нуқтаи ибтидоии полихатро муайян кунед
+	Specify start point of text	Нуқтаи ибтидоии матнро муайян кунед
+	Specify starting width	Паҳнои ибтидоиро муайян кунед
+	Specify starting width for next segment	Паҳнои ибтидоии қисми навбатиро муайян кунед
+	Specify tangent direction for the start point of arc	Самти расандаро барои нуқтаи ибтидоии камон муайян кунед
+	Specify the elevation for rectangles	Баландии сатҳро барои росткунҷаҳо муайян кунед
+	Specify thickness for rectangles	Ғафсиро барои росткунҷаҳо муайян кунед
+	Specify third point on circle	Нуқтаи сеюмро дар давра муайян кунед
+	Specify third point on circle: _tan to	Нуқтаи сеюмро дар давра муайян кунед: _tan to
+	Specify third source point or <continue>	Нуқтаи сеюми манбаъ ё <идома>-ро муайян кунед
+	Specify through point	Нуқтаи гузаришро муайян кунед
+	Specify top diameter	Диаметри болоро муайян кунед
+	Specify top radius	Радиуси болоро муайян кунед
+	Specify total angle	Кунҷи умумиро муайян кунед
+	Specify total length	Дарозии умумиро муайян кунед
+	Specify width for rectangles	Паҳноро барои росткунҷаҳо муайян кунед
+	Sphere	Кура
+	Spline	Сплайн
+	Spline Edit	Таҳрири сплайн
+	Stack (type 1/2 then select)	Каср (1/2 нависед, баъд интихоб кунед)
+	Standard	Стандартӣ
+	Start	Оғоз
+	Start Width	Паҳнои ибтидоӣ
+	Start X	Ибтидои X
+	Start Y	Ибтидои Y
+	Start angle	Кунҷи ибтидоӣ
+	Start, Center, Angle	Оғоз, марказ, кунҷ
+	Start, Center, End	Оғоз, марказ, охир
+	Start, Center, Length	Оғоз, марказ, дарозӣ
+	Start, End, Angle	Оғоз, охир, кунҷ
+	Start, End, Direction	Оғоз, охир, самт
+	Start, End, Radius	Оғоз, охир, радиус
+	Status	Ҳолат
+	Status Bar	Сатри ҳолат
+	Stretch	Кашиш додан
+	Stretch Vertex	Кашиш додани қулла
+	Style: Standard	Услуб: Standard
+	Subtract	Тарҳ кардан
+	Sweep	Сохтан бо ҳаракат
+	Switch Drawing	Иваз кардани нақша
+	Switch Layout	Иваз кардани тарҳбандӣ
+	Switch between model space in a viewport and paper space	Гузариш байни фазои модел дар равзанаи намоиш ва фазои коғаз
+	Symmetric	Симметрӣ
+	Synchronize Attributes	Ҳамоҳангсозии атрибутҳо
+	Synchronize Multiple-scale Positions	Ҳамоҳангсозии мавқеъҳои бисёрмиқёса
+	TOP	БОЛО
+	Table	Ҷадвал
+	Table Breaks	Шикастҳои ҷадвал
+	Table Cell Style	Услуби ячейкаи ҷадвал
+	Table Style...	Услуби ҷадвал...
+	Table style	Услуби ҷадвал
+	Table...	Ҷадвал...
+	Tan, Tan, Radius	Расанда, расанда, радиус
+	Tan, Tan, Tan	Расанда, расанда, расанда
+	Tangent	Расанда
+	Temporary track point	Нуқтаи муваққатии пайгирӣ
+	Text	Матн
+	Text Editor	Муҳаррири матн
+	Text Height	Баландии матн
+	Text Objects Only	Танҳо объектҳои матн
+	Text Style...	Услуби матн...
+	Text height	Баландии матн
+	Text override	Ивази матн
+	Text style	Услуби матн
+	Thaw All Layers	Об кардани ҳамаи қабатҳо
+	Thaw Layer	Об кардани қабат
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Апертура нишон медиҳад, ки курсор бояд то чӣ андоза ба нуқта наздик шавад, то пайвастшавӣ ба объект онро ёбад.
+	There is nothing here yet.	Дар ин ҷо ҳоло чизе нест.
+	Thickness	Ғафсӣ
+	Time	Вақт
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Клики рости вобаста ба вақт: клики зуд Enter аст, нигоҳ доштан менюро мекушояд
+	To	Ба
+	To get started, create or open a drawing.	Барои оғоз нақшаро созед ё кушоед.
+	Toggle PICKADD (off: each pick replaces the selection)	Гузаронидани PICKADD (хомӯш: ҳар интихоб интихоби пешинаро иваз мекунад)
+	Toggle PICKADD (on: picks add to the selection)	Гузаронидани PICKADD (фаъол: интихобҳо ба интихоб илова мешаванд)
+	Tolerance...	Таҳаммулпазирӣ...
+	Tool Bar	Лавҳаи асбоб
+	Tool Sets	Маҷмӯаҳои асбоб
+	Tools	Асбобҳо
+	Torus	Тор
+	Trace	Пайраҳа
+	Track orthogonally only	Танҳо пайгирии ортогоналӣ
+	Track using all polar angle settings	Пайгирӣ бо ҳамаи танзимоти кунҷҳои қутбӣ
+	Transparency	Шаффофият
+	Trim	Буридан
+	True Color	Ранги ҳақиқӣ
+	Turn All Layers On	Фаъол кардани ҳамаи қабатҳо
+	Turn Off Layer	Хомӯш кардани қабат
+	Turn On Layer	Фаъол кардани қабат
+	Turn Quick Properties off (QPMODE)	Хомӯш кардани хусусиятҳои зуд (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Агар хомӯш бошад, клики рост ҳангоми иҷрои фармон ҳамеша менюи контекстиро мекушояд.
+	Type	Навъ
+	Type a command	Фармонро нависед
+	Type text; Enter starts a new paragraph	Матнро нависед; Enter сархати навро оғоз мекунад
+	UCS Icon	Нишонаи UCS
+	Undo	Бекор кардан
+	Undo (⌘Z)	Бекор кардан (⌘Z)
+	Ungroup	Пароканда кардани гурӯҳ
+	Union	Якҷоякунӣ
+	Unisolate Layer	Бекор кардани ҷудосозии қабат
+	Units Conversion	Табдили воҳидҳо
+	Units...	Воҳидҳо...
+	Unload	Хориҷ кардан аз хотира
+	Unloaded	Хориҷшуда
+	Unlock Layer	Кушодани қулфи қабат
+	Unlock viewport	Кушодани қулфи равзанаи намоиш
+	Unmerge Cells	Ҷудо кардани ячейкаҳо
+	Unreferenced	Бе истинод
+	Unresolved	Ҳалнашуда
+	Unsaved Layer State	Ҳолати захиранашудаи қабат
+	Up	Боло
+	Update	Навсозӣ
+	Update Data Links	Навсозии пайвандҳои маълумот
+	Use System Setting	Истифодаи танзими система
+	Use for this layout	Барои ин тарҳбандӣ истифода бурдан
+	Use object linetype	Истифодаи навъи хати объект
+	Use object lineweight	Истифодаи ғафсии хати объект
+	User	Корбар
+	User Parameters	Параметрҳои корбар
+	User Preferences	Танзимоти корбар
+	Username	Номи корбар
+	VP Color	Ранги РН
+	VP Freeze	Яхи РН
+	Value	Қимат
+	Value:	Қимат:
+	Variables	Тағйирёбандаҳо
+	Version	Версия
+	Version 2000	Версияи 2000
+	Version 2004	Версияи 2004
+	Version 2007	Версияи 2007
+	Version 2010	Версияи 2010
+	Version 2013	Версияи 2013
+	Version 2018	Версияи 2018
+	Version {version}	Версияи {version}
+	Vertical	Амудӣ
+	VerticalDistance	Масофаи амудӣ
+	View	Намо
+	ViewCube	ViewCube
+	Viewport	Равзанаи намоиш
+	Viewport Layer Freeze	Ях кардани қабат дар равзанаи намоиш
+	Viewport Properties	Хусусиятҳои равзанаи намоиш
+	Viewport is locked	Равзанаи намоиш қулф аст
+	Viewport scale	Миқёси равзанаи намоиш
+	Viewport {id}	Равзанаи намоиш {id}
+	Viewports	Равзанаҳои намоиш
+	Volume	Ҳаҷм
+	WCS	WCS
+	White	Сафед
+	Width factor	Зариби паҳно
+	Window	Равзана
+	Wipeout	Пӯшиш
+	Workspace Switching	Иваз кардани фазои корӣ
+	Write Block	Навиштани блок
+	X	X
+	Xline	Хати ёрирасон
+	Y	Y
+	Yellow	Зард
+	Yes	Ҳа
+	Zoom	Миқёс
+	Zoom All	Миқёси ҳама
+	Zoom Dynamic	Миқёси динамикӣ
+	Zoom Extents	Миқёс то ҳудудҳо
+	Zoom In	Калон кардан
+	Zoom Object	Миқёс то объект
+	Zoom Out	Хурд кардан
+	Zoom Previous	Миқёси қаблӣ
+	Zoom Realtime	Миқёс дар вақти воқеӣ
+	Zoom Window	Миқёс бо равзана
+	Zoom sensitivity	Ҳассосияти миқёс
+	error	хато
+	min	дақ
+	objects	объектҳо
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (маҳдудияти {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	Маҳдудияти {kind} {name} = {expression}  (барои таҳрир ду бор клик кунед)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Параметри нави корбар
+	ΔLOC	ΔLOC
+	−Bin	−Сабад
+	−LOC	−LOC
+	⌘↩ to finish	Барои анҷом ⌘↩
+@plural	{n} commit	{n} коммит
+@plural	{n} contributor	{n} саҳмгузор
+	Check for Updates…	Санҷиши навсозиҳо…
+	DraftCraft is up to date.	DraftCraft навтарин аст.
+	Could not check for updates.	Санҷиши навсозиҳо имконнопазир шуд.
+	Add to Working Set	Илова ба маҷмӯи корӣ
+	Add: Pick points	Илова: интихоби нуқтаҳо
+	Add: Select objects	Илова: интихоби объектҳо
+	Add…	Илова…
+	Alias	Тахаллус
+	Alias file: {file}	Файли тахаллусҳо: {file}
+	Align Multileaders	Ҳамвор кардани хатҳои овези бисёрҷанба
+	Analyze Shapes	Таҳлили шаклҳо
+	Analyze Usage	Таҳлили истифода
+	Animation Effects	Эффектҳои аниматсия
+	Animation effects	Эффектҳои аниматсия
+	Associative	Ассотсиативӣ
+	Backup copy	Нусхаи эҳтиётӣ
+	Block to create or edit	Блоки сохташаванда ё таҳриршаванда
+	Bottom left	Поёни чап
+	Bottom right	Поёни рост
+	Boundaries	Сарҳадҳо
+	Boundaries picked: {n}	Сарҳадҳои интихобшуда: {n}
+	Break-line Symbol	Аломати хати шикаст
+	Centered	Дар марказ
+	Change Properties	Тағйир додани хусусиятҳо
+	Choose the command the alias starts.	Фармонеро, ки тахаллус оғоз мекунад, интихоб кунед.
+	Click the ruler to add a tab stop, right-click to remove one	Барои илова кардани қатъи табулятсия хаткашро клик кунед, барои хориҷ кардан клики рост
+	Click to set new origin	Барои муқаррар кардани ибтидои нав клик кунед
+	Close Block Editor	Пӯшидани муҳаррири блок
+	Collect	Ҷамъ кардан
+	Collect Multileaders	Ҷамъ кардани хатҳои овези бисёрҷанба
+	Color 1	Ранги 1
+	Color 2	Ранги 2
+	Command	Фармон
+	Convert Text to Mtext	Табдили матн ба mtext
+	Create backup copy with each save	Ҳангоми ҳар захира нусхаи эҳтиётӣ сохтан
+	Create separate hatches	Сохтани штрихгузориҳои алоҳида
+	Crossing selection color:	Ранги интихоби буранда:
+	Curved	Каҷ
+	Customize	Мутобиқсозӣ
+	Default to boundary extents	Пешфарз ҳудуди сарҳад
+	Define each corner of the selection window with a separate click.	Ҳар кунҷи равзанаи интихобро бо клики алоҳида муайян кунед.
+	Discard	Рад кардан
+	Drag Dynamic Grip	Кашидани дастаки динамикӣ
+	Dynamic Block Data	Маълумоти блоки динамикӣ
+	Dynamic Block Grips	Дастакҳои блоки динамикӣ
+	Dynamic Block Reference	Истиноди блоки динамикӣ
+	Edit Block Definition	Таҳрири таърифи блок
+	Edit Command Aliases (PGP)...	Таҳрири тахаллусҳои фармон (PGP)...
+	Edit Multileader	Таҳрири хати овези бисёрҷанба
+	Edit Reference In-Place	Таҳрири истинод дар ҷояш
+	Edit…	Таҳрир…
+	Evaluate LISP	Ҳисоб кардани LISP
+	Exclude:	Истисно:
+	Explode Attributes to Text	Таҷзияи атрибутҳо ба матн
+	Express Tools	Express Tools
+	Font	Ҳуруф
+	Grips	Дастакҳо
+	Groups	Гурӯҳҳо
+	Hatch Pick	Интихоби штрихгузорӣ
+	Hatch and Gradient	Штрихгузорӣ ва градиент
+	Hatch origin	Ибтидои штрихгузорӣ
+	Hatches	Штрихгузориҳо
+	Hemispherical	Нимкуравӣ
+	Ignore	Нодида гирифтан
+	Imperial (inches)	Инглисӣ (дюйм)
+	Implied Loops	Контурҳои тахминӣ
+	Indicate selection area	Нишон додани минтақаи интихоб
+	Interface scale	Миқёси интерфейс
+	Inverted	Баръакс
+	Island	Ҷазира
+	Island detection	Муайян кардани ҷазираҳо
+	Italic	Курсив
+	Justify	Ҳамвор кардан
+	Load Application...	Бор кардани барнома...
+	Metric (millimetres)	Метрӣ (миллиметр)
+	More than {n} aliases.	Зиёда аз {n} тахаллус.
+	Move/Copy/Rotate	Кӯчондан/Нусха/Гардондан
+	Multiline text	Матни бисёрсатра
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Нақшаи нав ва нақшаи аввал ҳангоми оғоз ин воҳидҳоро истифода мебаранд, агар шаблони пешфарз муқаррар нашуда бошад (QNEWTEMPLATE).
+	New block	Блоки нав
+	No alias file loaded. REINIT replaces these aliases with a file's.	Файли тахаллусҳо бор нашудааст. REINIT ин тахаллусҳоро бо тахаллусҳои файл иваз мекунад.
+	Not a number or distance: {text}	Рақам ё масофа нест: {text}
+	Object grouping	Гурӯҳбандии объектҳо
+	Object selection limit for display of grips	Ҳадди интихоби объектҳо барои намоиши дастакҳо
+	Objects on locked layers	Объектҳо дар қабатҳои қулфшуда
+	Open in Block Editor	Кушодан дар муҳаррири блок
+	Origin: {x}, {y}	Ибтидо: {x}, {y}
+	Outer	Берунӣ
+	Overline	Хати болоӣ
+	Preview	Пешнамоиш
+	Query Texts	Пурсиши матнҳо
+	Save Block	Захираи блок
+	Save Block As	Захираи блок ҳамчун
+	Save Layout as Template	Захираи тарҳбандӣ ҳамчун шаблон
+	Save Reference Edits	Захираи таҳрирҳои истинод
+	Save alias	Захираи тахаллус
+	Save changes to block "{name}"?	Тағйиротро дар блоки "{name}" захира кунем?
+	Select boundaries to remove	Сарҳадҳои хориҷшавандаро интихоб кунед
+	Select using two clicks only	Интихоб танҳо бо ду клик
+	Selection Area Effect	Эффекти минтақаи интихоб
+	Selection Preview Filter	Филтри пешнамоиши интихоб
+	Selection area opacity:	Шаффофнокии минтақаи интихоб:
+	Selection effect color	Ранги эффекти интихоб
+	Selection modes	Ҳолатҳои интихоб
+	Selection preview	Пешнамоиши интихоб
+	Set Dynamic Property	Танзими хусусияти динамикӣ
+	Shape	Шакл
+	Sheet Books to PDF...	Китобҳои варақҳо ба PDF...
+	Show grips	Нишон додани дастакҳо
+	Specified origin	Ибтидои муайяншуда
+	Spherical	Курравӣ
+	Tables	Ҷадвалҳо
+	Text color	Ранги матн
+	Top left	Болои чап
+	Top right	Болои рост
+	Type an alias name.	Номи тахаллусро нависед.
+	Underline	Хати зер
+	Units of new drawings	Воҳидҳои нақшаҳои нав
+	Unsaved changes	Тағйироти захиранашуда
+	Use current origin	Истифодаи ибтидои ҷорӣ
+	Visual Effect Settings	Танзимоти эффектҳои визуалӣ
+	Visual Effect Settings...	Танзимоти эффектҳои визуалӣ...
+	When a command is active	Вақте ки фармон фаъол аст
+	When no command is active	Вақте ки фармон фаъол нест
+	Window selection color:	Ранги интихоби равзанавӣ:
+	Working Set	Маҷмӯи корӣ
+	Xref and Block In-place Editing	Таҳрири истинодҳои берунӣ ва блокҳо дар ҷояшон
+	Xrefs	Истинодҳои берунӣ
+	built-in	дарунсохт
+	overrides built-in	дарунсохтро иваз мекунад
+	{alias} is already defined; select it and use Edit.	{alias} аллакай муайян шудааст; онро интихоб карда, Таҳририро истифода баред.
+	{command} is an unknown command.	{command} фармони номаълум аст.
+	Find All	Ҳамаро ёфтан
+	Find what:	Чиро ёфтан:
+	Match case	Бо назардошти ҳарфи калон
+	Replace	Иваз кардан
+	Replace All	Ҳамаро иваз кардан
+	Replace with:	Иваз бо:
+	Replacement text	Матни ивазкунанда
+	Results	Натиҷаҳо
+	Searches the current space.	Дар фазои ҷорӣ ҷустуҷӯ мекунад.
+	Text to find	Матни ҷустуҷӯ
+	Whole words	Калимаҳои пурра
+	Nothing found	Чизе ёфт нашуд
+	E	Шр
+	N	Шм
+	S	Ҷн
+	W	Ғр
+	B	П
+	DraftCraft	DraftCraft
+	Clear Recent Files	Тоза кардани файлҳои охирин
+	contains authoring elements. Open in Block Editor?	унсурҳои муаллифӣ дорад. Дар муҳаррири блок кушоем?
+	Custom	Фармоишӣ
+	Open Recent	Кушодани охиринҳо
+	This drawing	Ин нақша
+	Arrow size	Андозаи тир
+	Dim scale overall	Миқёси умумии андоза
+	Precision	Дақиқӣ
+	Apply to Layout	Татбиқ ба тарҳбандӣ
+	Center the plot	Чопро дар марказ гузоштан
+	Enter block names to extract	Номҳои блокҳои истихроҷшавандаро ворид кунед
+	Enter geometric characteristic	Хусусияти геометриро ворид кунед
+	Enter name of LISP file to load	Номи файли LISP-и боршавандаро ворид кунед
+	First corner	Кунҷи аввал
+	Fit to paper	Мувофиқ ба коғаз
+	Landscape	Уфуқӣ
+	Limits	Ҳудудҳо
+	Opposite corner	Кунҷи муқобил
+	Orientation	Самт
+	Paper size	Андозаи коғаз
+	Plot area	Минтақаи чоп
+	Plot object lineweights	Чопи ғафсии хатҳои объектҳо
+	Plot offset	Ҷобаҷоии чоп
+	Plot transparency	Чопи шаффофият
+	Portrait	Амудӣ
+	Printer/plotter	Принтер/плоттер
+	Window <	Равзана <
+	X offset (mm)	Ҷобаҷоии X (мм)
+	Y offset (mm)	Ҷобаҷоии Y (мм)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Ангстремҳо
+	Architectural	Меъморӣ
+	Astronomical Units	Воҳидҳои астрономӣ
+	Centimeters	Сантиметрҳо
+	Decameters	Декаметрҳо
+	Decimal	Даҳӣ
+	Decimal Degrees	Дараҷаҳои даҳӣ
+	Decimeters	Дециметрҳо
+	Deg/Min/Sec	Дар/Дақ/Сон
+	Don't Save	Захира накардан
+	Drawing Units	Воҳидҳои нақша
+	Engineering	Муҳандисӣ
+	Feet	Футҳо
+	Fractional	Касрӣ
+	Gigameters	Гигаметрҳо
+	Grads	Градҳо
+	Hectometers	Гектометрҳо
+	Inches	Дюймҳо
+	Insertion scale	Миқёси воридкунӣ
+	Kilometers	Километрҳо
+	Light Years	Солҳои нурӣ
+	Meters	Метрҳо
+	Microinches	Микродюймҳо
+	Microns	Микронҳо
+	Miles	Милҳо
+	Millimeters	Миллиметрҳо
+	Mils	Милзҳо
+	Nanometers	Нанометрҳо
+	Parsecs	Парсекҳо
+	Radians	Радианҳо
+	Sample output	Намунаи натиҷа
+	Save changes to {name}?	Тағйиротро дар {name} захира кунем?
+	Scientific	Илмӣ
+	Surveyor's Units	Воҳидҳои геодезӣ
+	Unitless	Бе воҳид
+	Units to scale inserted content	Воҳидҳо барои миқёси мундариҷаи воридшуда
+	US Survey Feet	Фути геодезии ИМА
+	US Survey Inch	Дюйми геодезии ИМА
+	US Survey Mile	Мили геодезии ИМА
+	US Survey Yard	Ярди геодезии ИМА
+	Yards	Ярдҳо
+	Your changes will be lost if you don't save them.	Агар захира накунед, тағйироти шумо гум мешаванд.
+	Layouts	Тарҳбандиҳо
+	Associate	Пайваст кардан
+	Clip Xref	Буридани истиноди берунӣ
+	Xref Clip Frame	Чорчӯбаи буриши истиноди берунӣ
+	Minimize	Хурд кардан
+	Maximize	Калон кардан
+	Restore Down	Барқарор кардан
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft ва логотипи DraftCraft тамғаҳои тиҷоратии DraftCraft Engineering Ventures мебошанд.
+	Conic	Буриши конусӣ
+	Spline Fit	Сплайн (мувофиқсозӣ)
+	Spline CV	Сплайн (қуллаҳои идоракунӣ)
+	Specify start point of conic	Нуқтаи ибтидоии буриши конусиро муайян кунед
+	Specify apex (where the end tangents meet)	Қулларо муайян кунед (ҷое, ки расандаҳои охир вомехӯранд)
+	Specify end point of conic	Нуқтаи охири буриши конусиро муайян кунед
+	Specify rho or a point on the conic	Rho ё нуқтаеро дар буриши конусӣ муайян кунед
+	Check for Updates...	Санҷиши навсозиҳо...
+	Check for Updates	Санҷиши навсозиҳо
+	Update Available	Навсозӣ дастрас аст
+	DraftCraft {version} is available.	DraftCraft {version} дастрас аст.
+	You have version {version}.	Шумо версияи {version} доред.
+	Do you want to download the update?	Навсозиро боргирӣ кунем?
+	What's new	Чӣ нав аст
+	What's New	Чӣ нав аст
+	Download	Боргирӣ
+	Later	Баъдтар
+	Skip This Version	Гузаштан аз ин версия
+	DraftCraft is up to date (version {version}).	DraftCraft навтарин аст (версияи {version}).
+	Do you want to install the update now?	Навсозиро ҳозир насб кунем?
+	Update Now	Ҳозир навсозӣ кардан
+	Open the release page	Кушодани саҳифаи нашр
+	This copy of DraftCraft can't update itself.	Ин нусхаи DraftCraft худро навсозӣ карда наметавонад.
+	Updating DraftCraft	Навсозии DraftCraft
+	Update Failed	Навсозӣ ноком шуд
+	Installing DraftCraft {version}	Насби DraftCraft {version}
+	Downloading: {done} of {total} MB	Боргирӣ: {done} аз {total} МБ
+	Installing…	Насб…
+	Starting the download…	Оғози боргирӣ…
+	The connection dropped; trying again…	Пайваст канда шуд; кӯшиши дубора…
+	DraftCraft {version} is installed.	DraftCraft {version} насб шуд.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Барои истифода DraftCraft-ро аз нав оғоз кунед. Агар баъдтар аз нав оғоз кунед, он дафъаи дигар ҳангоми оғози DraftCraft кушода мешавад.
+	Restart Now	Ҳозир аз нав оғоз кардан
+	The update could not be installed.	Навсозиро насб кардан нашуд.
+	You can download it from the release page instead.	Ба ҷояш метавонед онро аз саҳифаи нашр боргирӣ кунед.
+	2D Wireframe	Каркаси 2D
+	Annotate	Шарҳ
+	Blocks Palette	Палитраи блокҳо
+	CAD Standards	Стандартҳои CAD
+	Commands	Фармонҳо
+	2D Drafting	Нақшакашии 2D
+	Edit Aliases	Таҳрири тахаллусҳо
+	Image	Тасвир
+	Palettes	Палитраҳо
+	Top	Боло
+	Units	Воҳидҳо
+	Workspace	Фазои корӣ
+	Ribbon	Лента
+	PDF Underlay...	Зеркашии PDF...
+	PDF Import	Воридоти PDF
+	PDF Underlay	Зеркашии PDF
+	Underlay Layers	Қабатҳои зеркашӣ
+	Raster Image Reference...	Истиноди тасвири растрӣ...
+	Close Text Editor	Пӯшидани муҳаррири матн
+	Image Clip	Буридани тасвир
+	PDF Clip	Буридани PDF
+	Image Adjust	Танзими тасвир
+	PDF Adjust	Танзими PDF
+	Adjust...	Танзим...
+	Parameter	Параметр
+	Action	Амал
+	DesignCenter	DesignCenter
+	Tool Palettes	Палитраҳои асбоб
+	Sheet Set Manager	Мудири маҷмӯи варақҳо
+	Type the drawing's path, then press Enter.	Роҳи нақшаро нависед, баъд Enter-ро пахш кунед.
+	Drawing file	Файли нақша
+	Folder	Ҷузвдон
+	Linetypes	Навъҳои хат
+	Text Styles	Услубҳои матн
+	Dimension Styles	Услубҳои андоза
+	Table Styles	Услубҳои ҷадвал
+	Multileader Styles	Услубҳои хати овези бисёрҷанба
+	Multiline Styles	Услубҳои мултихат
+	Add to Drawing	Илова ба нақша
+	Create Tool Palette	Сохтани палитраи асбоб
+	Nothing of this kind in the file.	Дар файл чизе аз ин навъ нест.
+	Open a drawing to see its blocks, layers and styles.	Барои дидани блокҳо, қабатҳо ва услубҳо нақшаро кушоед.
+	Delete Palette	Нест кардани палитра
+	New Palette	Палитраи нав
+	No tool palettes.	Палитраи асбоб нест.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Ин палитра холӣ аст: дар поён фармон илова кунед ё аз DesignCenter палитра созед.
+	Delete Tool	Нест кардани асбоб
+	Add Command	Илова кардани фармон
+	New Sheet Set...	Маҷмӯи нави варақҳо...
+	Open Sheet Set...	Кушодани маҷмӯи варақҳо...
+	Sheet sets (DCSS)	Маҷмӯаҳои варақҳо (DCSS)
+	Sheet set file	Файли маҷмӯи варақҳо
+	Make or open a sheet set to list its sheets.	Барои рӯйхат кардани варақҳо маҷмӯи варақҳоро созед ё кушоед.
+	Add Drawing...	Илова кардани нақша...
+	Publish to PDF...	Нашр ба PDF...
+	No sheets yet: add a drawing's layouts.	Ҳоло варақ нест: тарҳбандиҳои нақшаро илова кунед.
+	Number	Рақам
+	Title	Сарлавҳа
+	Move Up	Ба боло кӯчондан
+	Move Down	Ба поён кӯчондан
+	Sheet Set (DCSS)	Маҷмӯи варақҳо (DCSS)
+	Close Tool Palettes	Пӯшидани палитраҳои асбоб
+	Close DesignCenter	Пӯшидани DesignCenter
+	Close Sheet Set Manager	Пӯшидани мудири маҷмӯи варақҳо
+	Manage Tool Palettes	Идоракунии палитраҳои асбоб
+	Changes apply at once; Save Current As keeps them in a workspace.	Тағйирот фавран татбиқ мешавад; «Захираи ҷорӣ ҳамчун» онҳоро дар фазои корӣ нигоҳ медорад.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Барои нишон додани танҳо қабатҳо онҳоро клик кунед; Ctrl ё Shift ба интихоб илова мекунад.
+	Current Workspace	Фазои кории ҷорӣ
+	Customize Interface	Мутобиқсозии интерфейс
+	Customize User Interface	Мутобиқсозии интерфейси корбар
+	Customize...	Мутобиқсозӣ...
+	Edit Aliases...	Таҳрири тахаллусҳо...
+	Force object color and linetype to ByLayer	Маҷбуран ранг ва навъи хати объект ByLayer
+	Geographic Location	Ҷойгиршавии ҷуғрофӣ
+	Geographic Location...	Ҷойгиршавии ҷуғрофӣ...
+	Latitude	Арзи ҷуғрофӣ
+	Longitude	Тӯли ҷуғрофӣ
+	North direction	Самти шимол
+	Layer Translation Mappings	Мувофиқатҳои тарҷумаи қабатҳо
+	Layer Translator	Тарҷумони қабатҳо
+	Layer Translator...	Тарҷумони қабатҳо...
+	Layer Walk	Гардиш дар қабатҳо
+	Layer Walk...	Гардиш дар қабатҳо...
+	Location	Ҷойгиршавӣ
+	Set Location	Муқаррар кардани ҷойгиршавӣ
+	Remove Location	Хориҷ кардани ҷойгиршавӣ
+	The drawing's origin is at this place (WGS 84 degrees).	Ибтидои нақша дар ин ҷо аст (дараҷаҳои WGS 84).
+	Map	Мувофиқ кардан
+	New layer name	Номи қабати нав
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Ҳоло мувофиқат нест: аз чап қабатҳо, аз рост ном интихоб кунед, баъд «Мувофиқ кардан».
+	Translate	Тарҷума кардан
+	Translate From	Тарҷума аз
+	Translate To	Тарҷума ба
+	Restore on exit	Ҳангоми баромадан барқарор кардан
+	Point Cloud	Абри нуқтаҳо
+	Point Cloud...	Абри нуқтаҳо...
+	Point clouds (XYZ, LAS)	Абрҳои нуқтаҳо (XYZ, LAS)
+	ZIP archive	Бойгонии ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Лавҳаи дастрасии зуд
+	Rename	Тағйири ном
+	Reset to Standard	Бозгашт ба стандарт
+	Ribbon Tabs	Варақаҳои лента
+	Save Current As	Захираи ҷорӣ ҳамчун
+	Save Current As...	Захираи ҷорӣ ҳамчун...
+	Save Workspace	Захираи фазои корӣ
+	User Interface	Интерфейси корбар
+	Workspace Settings	Танзимоти фазои корӣ
+	Workspace Settings...	Танзимоти фазои корӣ...
+	Workspace name	Номи фазои корӣ
+	Workspace:	Фазои корӣ:
+	Workspaces	Фазоҳои корӣ
+	Interface...	Интерфейс...
+	Export Attribute Information...	Содироти маълумоти атрибутҳо...
+	Import Attribute Information...	Воридоти маълумоти атрибутҳо...
+	Export Attributes	Содироти атрибутҳо
+	Import Attributes	Воридоти атрибутҳо
+	Text, tab-delimited (TXT)	Матн, бо табулятсия ҷудошуда (TXT)
+	Import Settings	Воридоти танзимот
+	Export Settings	Содироти танзимот
+	Import Settings...	Воридоти танзимот...
+	Export Settings...	Содироти танзимот...
+	DraftCraft settings (TOML)	Танзимоти DraftCraft (TOML)
+	Total Area and Length	Масоҳат ва дарозии умумӣ
+	Total Area	Масоҳати умумӣ
+	Specify point to place the totals as text	Нуқтаро барои гузоштани натиҷаҳо ҳамчун матн муайян кунед
+	Metric	Метрӣ
+	Imperial	Инглисӣ
+	A new drawing in millimeters	Нақшаи нав бо миллиметр
+	A new drawing in inches	Нақшаи нав бо дюйм
+	A new drawing in centimeters	Нақшаи нав бо сантиметр
+	Metric (centimetres)	Метрӣ (сантиметр)
+	Join the ArtCraft Discord…	Ба Discord-и ArtCraft ҳамроҳ шавед…
+	Join us on Discord	Дар Discord ба мо ҳамроҳ шавед
+	One of the Crafting Apps by the ArtCraft team and community.	Яке аз барномаҳои Crafting аз ҷониби дастаи ArtCraft ва ҷомеа.
+	Change	Иваз кардан
+	Multiple Insert	Воридкунии бисёркарата
+	Ctrl+Enter to apply	Барои татбиқ Ctrl+Enter
+	Edit Text	Таҳрири матн
+	The drawing changed. Close the window and open it again.	Нақша тағйир ёфт. Равзанаро пӯшед ва аз нав кушоед.
+	DView	DView
+	Raster Images	Тасвирҳои растрӣ
+	Xref	Истиноди берунӣ
+	Backup copies are off, so the current file will be replaced.	Нусхаҳои эҳтиётӣ хомӯшанд, бинобар ин файли ҷорӣ иваз карда мешавад.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 ва пештар онҳоро нигоҳ медорад. Барои нигоҳ доштан дар нақша «Захира ҳамчун»-ро истифода баред.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF онҳоро нигоҳ медорад. Барои нигоҳ доштан дар нақша «Захира ҳамчун»-ро истифода баред.
+	Save Anyway	Ба ҳар ҳол захира кардан
+	Save cancelled: {path} was not changed.	Захира бекор шуд: {path} тағйир наёфт.
+	Saving {name} will remove content	Захираи {name} мундариҷаро хориҷ мекунад
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Файли ҷорӣ пурра ба назар намерасад, бинобар ин {name} ҳамон тавр мемонад ва файли ҷорӣ иваз карда мешавад.
+	The current file is kept as {name} until the next save.	Файли ҷорӣ то захираи навбатӣ ҳамчун {name} нигоҳ дошта мешавад.
+	This format can't keep these objects yet: {objects}.	Ин формат ҳоло ин объектҳоро нигоҳ дошта наметавонад: {objects}.
+	{count} more types	Боз {count} навъ
+	Additional Tools	Асбобҳои иловагӣ
+	Keyboard Shortcuts...	Миёнбурҳои клавиатура...
+	Keyboard Shortcuts	Миёнбурҳои клавиатура
+	Replaces the shortcut of {commands}	Миёнбури {commands}-ро иваз мекунад
+	Needs Ctrl, Alt or a function key	Ctrl, Alt ё тугмаи функсионалӣ лозим аст
+	Press the keys	Тугмаҳоро пахш кунед
+	Back to DraftCraft's shortcut	Бозгашт ба миёнбури DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Миёнбуре, ки шумо медиҳед, аз миёнбури DraftCraft афзалтар аст. Тағйирот фавран татбиқ ва барои дафъаи оянда нигоҳ дошта мешавад.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Агар хомӯш бошад, клики рост ҳангоми иҷрои фармон он чиро иҷро мекунад, ки «Мутобиқсозии клики рост» барои ҳолати фармон муқаррар кардааст.
+	Right-Click Customization...	Мутобиқсозии клики рост...
+	Right-Click Customization	Мутобиқсозии клики рост
+	Turn on time-sensitive right-click	Фаъол кардани клики рости вобаста ба вақт
+	Longer click duration:	Давомнокии клики дарозтар:
+	milliseconds	миллисония
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Ҳангоми иҷрои фармон клики зуд Enter аст ва клики дарозтар менюи контекстиро мекушояд.
+	Default Mode	Ҳолати пешфарз
+	No objects selected and no command running:	Объект интихоб нашудааст ва фармон иҷро намешавад:
+	Edit Mode	Ҳолати таҳрир
+	Objects selected and no command running:	Объектҳо интихоб шудаанд ва фармон иҷро намешавад:
+	Repeat last command	Такрори фармони охирин
+	Shortcut Menu	Менюи контекстӣ
+	Command Mode	Ҳолати фармон
+	While a command runs:	Ҳангоми иҷрои фармон:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Менюи контекстӣ: ҳамеша фаъол
+	Shortcut Menu: enabled when command options are present	Менюи контекстӣ: ҳангоми мавҷудияти параметрҳои фармон фаъол
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Воридот: дар ин ҷо равзанаи файл нест; ALIASEDIT-ро бо мундариҷаи файл тавассути параметри text иҷро кунед.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Тахаллусҳо дар профили DraftCraft-и шумо захира мешаванд ва пас аз аз нав оғоз низ боқӣ мемонанд.
+	Import…	Воридот…
+	Run ALIASEDIT with the file's contents using its text parameter.	ALIASEDIT-ро бо мундариҷаи файл тавассути параметри text иҷро кунед.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Воридоти файл {n} тахаллуси шумо ва тағйироти ҳанӯз татбиқнашударо иваз мекунад.
+	Import and replace	Воридот ва иваз кардан
+	Keep my aliases	Нигоҳ доштани тахаллусҳои ман
+	{n} more warnings; see the command line.	Боз {n} огоҳӣ; сатри фармонро бинед.
+	Unit	Воҳид
+	Drawing units: {unit}, {format}	Воҳидҳои нақша: {unit}, {format}
+	NEW DRAWING	НАҚШАИ НАВ
+	OPEN	КУШОДАН
+	WORKSPACE	ФАЗОИ КОРӢ

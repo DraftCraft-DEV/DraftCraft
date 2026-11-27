@@ -1,6 +1,6 @@
 # DraftCraft Japanese (日本語) interface catalog — original translations.
 # License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
-# Written from DraftCraft's English strings by WithShalom (AI-assisted, Claude Code); not yet reviewed by a native speaker.
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
 # No proprietary translations or other products' string tables were consulted or copied.
 # UTF-8: context<TAB>English source<TAB>translation.
 # Empty context = ordinary label; @plural = |-separated plural forms with {n}.
@@ -1688,3 +1688,8 @@
 	Import and replace	読み込んで置換
 	Keep my aliases	エイリアスを保持
 	{n} more warnings; see the command line.	ほか {n} 件の警告。コマンド ラインを参照してください。
+	Unit	単位
+	Drawing units: {unit}, {format}	図面の単位: {unit}、{format}
+	NEW DRAWING	新しい図面
+	OPEN	開く
+	WORKSPACE	ワークスペース

@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Somali (Soomaali) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Jooji  
+	  OK  	  OK  
+	 or [	 ama [
+	% of all commits	% dhammaan commit-yada
+	* Wildcard Match	* Isku-eeg Calaamad-guud
+	*VARIES*	*KALA DUWAN*
+	+  |  Top  |  2D Wireframe	+  |  Dusha  |  Silig-qaab 2D
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 Daaqad-muuqaal
+	2 Points	2 Dhibcood
+	2 Viewports	2 Daaqad-muuqaal
+	2D Solid	Adke 2D
+	3 Points	3 Dhibcood
+	3 Viewports	3 Daaqad-muuqaal
+	3D Face	Weji 3D
+	3D Mouse	Jiir 3D
+	3D Mouse Navigation	Socod Jiirka 3D
+	3D Mouse...	Jiir 3D...
+	3D Operations	Hawlgallo 3D
+	3D Polyline	Xarig-badan 3D
+	3D mouse busy, possibly 3DxWare or missing device permissions	Jiirka 3D waa mashquul, waxaa laga yaabaa 3DxWare ama ogolaansho qalab oo maqan
+	3D mouse connected	Jiirka 3D waa ku xiran yahay
+	3D mouse disconnected	Jiirka 3D waa ka go'ay
+	3D mouse input could not be started	Gelinta jiirka 3D lama bilaabi karin
+	3D mouse input is unavailable on this platform	Gelinta jiirka 3D laguma heli karo madalkan
+	4 Viewports	4 Daaqad-muuqaal
+	< Less than	< Ka yar
+	<> Not Equal	<> Aan la Sinnayn
+	= Equals	= La Siman
+	> Greater than	> Ka weyn
+	A built-in table: editing it keeps an edited copy in the drawing.	Shax ku-dhisan: tafatirkeedu wuxuu sawirka ku hayaa nuqul la tafatiray.
+	A drawing opened from a file keeps that file's format.	Sawir laga furay fayl wuxuu hayaa qaabka faylkaas.
+	A variable name starts with a letter and has only letters, digits and _	Magaca doorsoomuhu wuxuu ku bilaabmaa xaraf, wuxuuna leeyahay xarfo, tirooyin iyo _ oo keliya
+	About	Ku saabsan
+	About DraftCraft	Ku saabsan DraftCraft
+	Absolute	Dhammaystiran
+	Accessibility	Gelitaanka
+	Add	Ku dar
+	Add Current Scale	Ku dar Cabbir-miisaanka Hadda
+	Add Leader	Ku dar Hogaamiye
+	Add Vertex	Ku dar Gees
+	Add/Delete Scales...	Ku dar/Tirtir Cabbir-miisaanno...
+	Additional angles	Xaglo dheeraad ah
+	Align	Toosi
+	Align Text	Toosi Qoraalka
+	Aligned	La toosiyay
+	All	Dhammaan
+	All Annotation Objects	Dhammaan Walxaha Faallada
+	All Scales	Dhammaan Cabbir-miisaannada
+	All Used Layers	Dhammaan Lakabyada la Isticmaalay
+	All files	Dhammaan faylasha
+	An array that would create more objects than this is refused.	Habayn abuuri lahayd walxo ka badan kan waa la diidayaa.
+	Angle	Xagal
+	Angular	Xagleed
+	Annotation Visibility	Muuqashada Faallada
+	Annotation scale	Cabbir-miisaanka faallada
+	Annotative Object Scale	Cabbir-miisaanka Walaxda Faallada
+	Annotative Update	Cusboonaysii Faallada
+	Apparent Intersection	Isgoys Muuqda
+	Append to current selection set	Ku dar kooxda xulashada hadda
+	Apply	Codso
+	Apply to:	Ku codso:
+	Apply true color	Codso midab dhab ah
+	Arc	Qaanso
+	Arc Length	Dhererka Qaansada
+	Area	Bed
+	Arrange Panel	Guddiga Habaynta
+	Array	Habayn
+	Attach	Ku lifaaq
+	Attach DWG...	Ku lifaaq DWG...
+	Attribute	Astaan
+	Attribute Definition	Qeexidda Astaanta
+	Attribute Display	Muujinta Astaanta
+	Audit	Hubin
+	Auto (system language)	Toos (luqadda nidaamka)
+	Auto Constrain	Xayiraad Toos ah
+	AutoConstrain	Xayiraad Toos ah
+	Automatic save every	Kaydin toos ah mar kasta
+	Automatic save file location	Goobta faylka kaydinta tooska ah
+	Axis, End	Dhidib, Dhammaad
+	Base	Saldhig
+	Baseline	Xariiq-saldhig
+	Batch Publish	Daabacaad Wadar ah
+	Batch Publish...	Daabacaad Wadar ah...
+	Binary assets added	Hantida binary ee lagu daray
+	Binary assets removed	Hantida binary ee la saaray
+	Bind	Xir
+	Bind...	Xir...
+	Blend	Isku-dar
+	Block	Baloog
+	Block Attribute Manager...	Maamulaha Astaamaha Baloogga...
+	Block Description...	Sharaxaadda Baloogga...
+	Block Editor	Tafatiraha Baloogga
+	Block Reference	Tixraaca Baloogga
+	Block...	Baloog...
+	Blocks	Baloogyo
+	Blue	Buluug
+	Bold	Culus
+	Boolean	Boolean
+	Boundary	Xad
+	Boundary...	Xad...
+	Box	Sanduuq
+	Break	Jebi
+	Break At Point	Ka Jebi Dhibic
+	Bring Above Objects	Keen Walxaha Korkooda
+	Bring Annotations to Front	Keen Faallooyinka Hore
+	Bring to Front	Keen Hore
+	Bulleted list	Liis dhibcood
+	ByBlock	ByBlock
+	ByColor	ByColor
+	ByLayer	ByLayer
+	DraftCraft Help	Caawinta DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft wuxuu xisaabtaada isticmaale u hayaa doorbidyadan, hababka ku-dhejinta walxaha iyo furayaasha sawir-gacmeedka, wuxuuna soo celiyaa marka uu bilaabmo.
+	Calibrate	Qiyaas-hagaaji
+	Calibrate 3D Mouse	Qiyaas-hagaaji Jiirka 3D
+	Cancel	Jooji
+	Cartesian (x, y)	Kaartiisiyan (x, y)
+	Center	Bartame
+	Center Line	Xariiqa Bartamaha
+	Center Mark	Calaamadda Bartamaha
+	Center X	Bartame X
+	Center Y	Bartame Y
+	Center Z	Bartame Z
+	Center, Diameter	Bartame, Dhexroor
+	Center, Radius	Bartame, Gacan
+	Center, Start, Angle	Bartame, Bilow, Xagal
+	Center, Start, End	Bartame, Bilow, Dhammaad
+	Center, Start, Length	Bartame, Bilow, Dherer
+	Chamfer	Jar-gees
+	Change Space	Beddel Meesha
+	Change to Current Layer	U beddel Lakabka Hadda
+	Changed: {n}	La beddelay: {n}
+	Changes apply at once and are kept for next time.	Isbeddelladu isla markiiba way dhaqan galaan waxaana loo hayaa mar kale.
+	Circle	Goobo
+	Circumference	Wareegga
+	Clear	Nadiifi
+	Clear Command History	Nadiifi Taariikhda Amarrada
+	Reset Suggestion Order	Dib u dhig Kala-horreynta Soo-jeedinta
+	Clear History	Nadiifi Taariikhda
+	Clip	Jar
+	Clip Viewport	Jar Daaqad-muuqaalka
+	Clipboard	Kaarka-goynta
+	Close	Xir
+	Close All	Xir Dhammaan
+	Close All Other Drawings	Xir Dhammaan Sawirrada Kale
+	Close Array Editing	Xir Tafatirka Habaynta
+	Close Comparison	Xir Isbarbardhigga
+	Export Comparison	Dhoofi Isbarbardhigga
+	Closed	Xiran
+	Coincident	Isku-dhibic
+	Collapse Palettes	Laab Guddiyada
+	Collapse Tool Sets	Laab Kooxaha Qalabka
+	Collinear	Isku-xariiq
+	Color	Midab
+	Color 8	Midab 8
+	Color 9	Midab 9
+	Color Index	Tusaha Midabka
+	Color-dependent	Ku-xiran midab
+	Color...	Midab...
+	Command Aliases	Magacyada Kale ee Amarrada
+	Command History	Taariikhda Amarrada
+	Command Line	Xariiqa Amarrada
+	Command Line History Lines	Xariiqyada Taariikhda Xariiqa Amarrada
+	Command Reference	Tixraaca Amarrada
+	Command line history	Taariikhda xariiqa amarrada
+	Commits	Commit-yo
+	Company	Shirkad
+	Compare Drawings...	Isbarbardhig Sawirrada...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Naqshad iyo sawir-farsamo kombiyuutar ku caawiyo: barnaamij CAD ah oo il-furan, qol-nadiif ah, oo lagu qoray Rust saafi ah.
+	Concentric	Isku-bartame
+	Cone	Koore
+	Constraint Bars	Baararka Xayiraadda
+	Constraint Settings	Dejinta Xayiraadda
+	Construction Line	Xariiq Dhismo
+	Contents	Tusmo
+	Continue	Sii wad
+	Contributors	Ka-qayb-qaatayaal
+	Control Vertices	Geesaha Xakamaynta
+	Convert	Beddel
+	Convert to Arc	U beddel Qaanso
+	Convert to Line	U beddel Xariiq
+	Copy	Koobiyee
+	Copy Full File Path	Koobiyee Waddada Faylka oo Dhan
+	Copy History	Koobiyee Taariikhda
+	Copy Layout	Koobiyee Qaab-dhigga
+	Copy Nested Objects	Koobiyee Walxaha Ku-dhex-jira
+	Copy Selection	Koobiyee Xulashada
+	Copy as JSON	Koobiyee sida JSON
+	Copy with Base Point	Koobiyee leh Dhibic Saldhig
+	Count	Tiri
+	Count List	Liiska Tirinta
+	Count Table	Shaxda Tirinta
+	Create Block	Samee Baloog
+	Creates a user parameter	Wuxuu abuuraa halbeeg isticmaale
+	Crosshair size	Cabbirka iskutallaabta
+	Ctrl+Enter to finish	Ctrl+Enter si aad u dhammayso
+	Current Scale Only	Cabbir-miisaanka Hadda oo Keliya
+	Current layer	Lakabka hadda
+	Current selection	Xulashada hadda
+	Current: {color}	Hadda: {color}
+	Cut	Gooy
+	Cut with Base Point	Gooy leh Dhibic Saldhig
+	Cyan	Siyaan
+	Cylinder	Dhululubo
+	DWG	DWG
+	DWG Reference...	Tixraac DWG...
+	DXF	DXF
+	Dark	Mugdi
+	Data Extraction...	Soo-saarid Xog...
+	Data Link...	Xiriirka Xogta...
+	Default	Caadi
+	Default Save Format	Qaabka Kaydinta Caadiga ah
+	Default Save Version	Nooca Kaydinta Caadiga ah
+	Default save version	Nooca kaydinta caadiga ah
+	Define Attributes	Qeex Astaamaha
+	Define Attributes...	Qeex Astaamaha...
+	Defined width	Ballac la qeexay
+	Degree	Darajo
+	Degrees of Freedom	Darajooyinka Xorriyadda
+	Degrees of freedom: {n}	Darajooyinka xorriyadda: {n}
+	Delete	Tirtir
+	Delete Column	Tirtir Tiirka
+	Delete Constraints	Tirtir Xayiraadaha
+	Delete Current Scale	Tirtir Cabbir-miisaanka Hadda
+	Delete Dimension Style	Tirtir Qaabka Cabbirka
+	Delete Duplicate Objects	Tirtir Walxaha Labanlaaban
+	Delete Layer	Tirtir Lakabka
+	Delete Layer State	Tirtir Xaaladda Lakabka
+	Delete Layout	Tirtir Qaab-dhigga
+	Delete Row	Tirtir Safka
+	Delete Text Style	Tirtir Qaabka Qoraalka
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Sharaxaad
+	Deselect All	Ka saar Xulashada Dhammaan
+	Detach	Ka fur
+	Diameter	Dhexroor
+	Dim style	Qaabka cabbirka
+	Dimension	Cabbir
+	Dimension Break	Jebinta Cabbirka
+	Dimension Edit	Tafatirka Cabbirka
+	Dimension Objects Only	Walxaha Cabbirka oo Keliya
+	Dimension Space	Kala-fogaanshaha Cabbirka
+	Dimension Style Override	Ka-gudubka Qaabka Cabbirka
+	Dimension Style...	Qaabka Cabbirka...
+	Dimension Text Edit	Tafatirka Qoraalka Cabbirka
+	Dimension style	Qaabka cabbirka
+	Dimensional Constraint	Xayiraad Cabbir
+	Dimensional Constraint Parameters	Halbeegyada Xayiraadda Cabbirka
+	Dimensional Constraints	Xayiraadaha Cabbirka
+	Disassociate Dimensions	Ka goo Cabbirrada
+	Display	Muuji
+	Display name	Magaca la muujiyo
+	Display plot styles	Muuji qaababka daabacaadda
+	Distance	Fogaan
+	Divide	U qaybi
+	Do not plot (click: plot)	Ha daabicin (guji: daabac)
+	Donut	Doonat
+	Double-click to edit the description	Laba-guji si aad u tafatirto sharaxaadda
+	Down	Hoos
+	Drafting	Sawir-farsamo
+	Drafting Settings	Dejinta Sawir-farsamada
+	Drafting Settings...	Dejinta Sawir-farsamada...
+	Draw	Sawir
+	Draw Order	Kala-horreynta Sawirka
+	Drawing (DWG)	Sawir (DWG)
+	Drawing (DXF)	Sawir (DXF)
+	Drawing Limits	Xuduudaha Sawirka
+	Drawing Recovery Manager...	Maamulaha Soo-celinta Sawirka...
+	Drawing Template (DWT)	Qaab-sawir (DWT)
+	Drawing Utilities	Qalabka Sawirka
+	Drawing as bytes	Sawir sida bytes
+	Drawings (DWG, DXF)	Sawirro (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Sawirrada aan weli fayl lahayn waxaa lagu kaydiyaa nooca caadiga ah. 0 daqiiqo wuxuu demiyaa kaydinta tooska ah.
+	Dynamic	Firfircoon
+	Dynamic Dimensions	Cabbirro Firfircoon
+	Dynamic Input	Gelin Firfircoon
+	Dynamic Input (F12)	Gelin Firfircoon (F12)
+	Edit	Tafatir
+	Edit Array	Tafatir Habaynta
+	Edit Attributes...	Tafatir Astaamaha...
+	Edit Table Cell	Tafatir Unugga Shaxda
+	Edit Text...	Tafatir Qoraalka...
+	Elevation	Joogga
+	Ellipse	Ugxaan
+	Elliptical Arc	Qaanso Ugxaneed
+	Enable 3D mouse navigation	Daar socodka jiirka 3D
+	Enable Dynamic Input (F12)	Daar Gelinta Firfircoon (F12)
+	End Object Isolation	Dhammee Go'doominta Walxaha
+	End Width	Ballaca Dhammaadka
+	End X	Dhammaad X
+	End Y	Dhammaad Y
+	End angle	Xagasha dhammaadka
+	Endpoint	Dhibic-dhammaad
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Geli Dusha, Eber ama Hoosta.
+	Enter a fit data option	Geli doorasho xogta ku-habboonaanta
+	Enter a pattern name	Geli magaca naqshadda
+	Enter a vertex editing option	Geli doorasho tafatirka geeska
+	Enter an option	Geli doorasho
+	Enter angle of xline	Geli xagasha xline
+	Enter angle of xline (0)	Geli xagasha xline (0)
+	Enter area of rectangle in current units	Geli bedka laydiga ee unugyada hadda
+	Enter attribute prompt	Geli weydiinta astaanta
+	Enter attribute tag name	Geli magaca calaamadda astaanta
+	Enter attribute value	Geli qiimaha astaanta
+	Enter block name	Geli magaca baloogga
+	Enter constraint type	Geli nooca xayiraadda
+	Enter continuity	Geli isku-xirnaanta
+	Enter default attribute value	Geli qiimaha caadiga ah ee astaanta
+	Enter degree of spline	Geli darajada spline-ka
+	Enter delta angle	Geli farqiga xagasha
+	Enter delta length	Geli farqiga dhererka
+	Enter dimension text	Geli qoraalka cabbirka
+	Enter dimension text (<> = measurement)	Geli qoraalka cabbirka (<> = cabbirka la qaaday)
+	Enter dimension value or [name=expression]	Geli qiimaha cabbirka ama [magac=tibix]
+	Enter dimension variable name to override	Geli magaca doorsoomaha cabbirka ee laga gudbayo
+	Enter justification type	Geli nooca toosinta
+	Enter leader text	Geli qoraalka hogaamiyaha
+	Enter mline scale	Geli cabbir-miisaanka mline
+	Enter mode	Geli habka
+	Enter name of block to insert	Geli magaca baloogga la gelinayo
+	Enter new text	Geli qoraal cusub
+	Enter next point	Geli dhibicda xigta
+	Enter number of columns	Geli tirada tiirarka
+	Enter number of data rows	Geli tirada safafka xogta
+	Enter number of items	Geli tirada walxaha
+	Enter number of items along path	Geli tirada walxaha jidka dhexdiisa
+	Enter number of sides	Geli tirada dhinacyada
+	Enter number of turns	Geli tirada wareegyada
+	Enter percentage length	Geli boqolleyda dhererka
+	Enter rectangle length	Geli dhererka laydiga
+	Enter rectangle width	Geli ballaca laydiga
+	Enter scale factor	Geli isku-dhufashada cabbir-miisaanka
+	Enter text	Geli qoraal
+	Enter text (use \P for new paragraphs)	Geli qoraal (isticmaal \P cutubyo cusub)
+	Enter the number of segments	Geli tirada qaybaha
+	Enter twist direction of helix	Geli jihada maroojinta helix-ka
+	Entire drawing	Sawirka oo dhan
+	Equal	La siman
+	Erase	Tirtir
+	Evaluate	Qiimee
+	Exclude from new selection set	Ka saar kooxda xulashada cusub
+	Explode	Kala-jebi
+	Export	Dhoofi
+	Export Table	Dhoofi Shaxda
+	Export to PDF...	U dhoofi PDF...
+	Export...	Dhoofi...
+	Expression	Tibix
+	Extend	Fidi
+	Extension	Fidin
+	Extents	Baaxadda
+	External Reference	Tixraac Dibadeed
+	External References	Tixraacyo Dibadeed
+	Extrude	Kor u soo saar
+	File	Fayl
+	File Tab	Tab-ka Faylka
+	Fillet	Wareeji-gees
+	Filter	Shaandhee
+	Filters	Shaandhooyin
+	Find and Replace	Raadi oo Beddel
+	Find...	Raadi...
+	First	Kowaad
+	First commit	Commit-kii ugu horreeyay
+	Fit Points	Dhibcaha Ku-habboonaanta
+	Fix	Dheji
+	Flatten Objects	Simbiri Walxaha
+	Format	Qaab
+	Freehand	Gacan-xor
+	Freeze	Qabooji
+	Freeze Layer	Qabooji Lakabka
+	Freeze in new viewports	Ku qabooji daaqad-muuqaallada cusub
+	Freeze/Thaw	Qabooji/Dhalaali
+	Freeze/Thaw in all viewports	Qabooji/Dhalaali dhammaan daaqad-muuqaallada
+	Freeze/Thaw in the current viewport	Qabooji/Dhalaali daaqad-muuqaalka hadda
+	From	Laga bilaabo
+	From Template...	Qaab-sawir ka...
+	General	Guud
+	Geometric Center	Bartamaha Joomatari
+	Geometric Constraint	Xayiraad Joomatari
+	Geometric Constraints	Xayiraadaha Joomatari
+	Geometry	Joomatari
+	Get Variable	Hel Doorsoome
+	Get View	Hel Muuqaal
+	Get from the Drawing	Ka hel Sawirka
+	Global	Guud ahaan
+	Global width	Ballac guud
+	Grab bag	Kala-duwan
+	Gradient	Midab-isu-gudub
+	Gradient...	Midab-isu-gudub...
+	Grayscale	Cawl-cawl
+	Green	Cagaar
+	Grid (F7)	Shabag (F7)
+	Grid Display	Muujinta Shabagga
+	Grid On (F7)	Shabag Daaran (F7)
+	Grid snap	Ku-dhejin shabag
+	Grid spacing	Kala-fogaanshaha shabagga
+	Grip Edit	Tafatir Qabsade
+	Grip Mirror	Muraayad Qabsade
+	Grip Option	Doorashada Qabsade
+	Grip Rotate	Wareeji Qabsade
+	Grip Scale	Cabbir-miisaan Qabsade
+	Grip Stretch	Kala-bixi Qabsade
+	Grip size	Cabbirka qabsadaha
+	Group	Koox
+	Group Edit	Tafatir Kooxda
+	Group Options	Doorashooyinka Kooxda
+	Group Selection	Xulashada Kooxda
+	Hatch	Xariijin
+	Hatch Edit	Tafatir Xariijinta
+	Hatch Pattern	Naqshadda Xariijinta
+	Hatch Patterns	Naqshadaha Xariijinta
+	Hatch...	Xariijin...
+	Height	Dherer
+	Height: {height}	Dherer: {height}
+	Helix	Helix
+	Help	Caawimo
+	Hide All	Qari Dhammaan
+	Hide All Constraint Bars	Qari Dhammaan Baararka Xayiraadda
+	Hide All Dynamic Dimensions	Qari Dhammaan Cabbirrada Firfircoon
+	Hide DraftCraft	Qari DraftCraft
+	Hide Layer List	Qari Liiska Lakabyada
+	Hide Objects	Qari Walxaha
+	Hide Others	Qari Kuwa Kale
+	Hide Palette	Qari Guddiga
+	Hide Palettes	Qari Guddiyada
+	History	Taariikh
+	Hold Shift to add to the selection	Hay Shift si aad xulashada ugu darto
+	Home	Guriga
+	Horizontal	Toosan
+	HorizontalDistance	FogaanToosan
+	How to apply:	Sida loo codsado:
+	ID Point	Dhibic Aqoonsi
+	Import	Soo dejin
+	Import...	Soo dejin...
+	In	Gudaha
+	In-window Menu Bar	Baarka Liiska ee Daaqadda Gudaheeda
+	Include in new selection set	Ku dar kooxda xulashada cusub
+	Increment angle	Xagasha kordhinta
+	Index Color	Midab Tusmo
+	Index color: {index}	Midab tusmo: {index}
+	Infer Constraints	Ka-qiyaas Xayiraadaha
+	Inquiry	Weydiin
+	Insert	Geli
+	Insert Block	Geli Baloog
+	Insert Column	Geli Tiir
+	Insert Row	Geli Saf
+	Insert Table Formula	Geli Qaacidada Shaxda
+	Insert tab	Geli tab
+	Insert this block	Geli baloogan
+	Insertion	Gelin
+	Insertion X	Gelin X
+	Insertion Y	Gelin Y
+	Insertion Z	Gelin Z
+	Inspect Constraints	Baar Xayiraadaha
+	Inspect Drawing	Baar Sawirka
+	Inspection	Baaritaan
+	Interface Language	Luqadda Interface-ka
+	Interface Theme	Mawduuca Interface-ka
+	Interface language	Luqadda interface-ka
+	Interface theme	Mawduuca interface-ka
+	Intersect	Isgoy
+	Intersection	Isgoys
+	Isolate	Go'doomi
+	Isolate Layer	Go'doomi Lakabka
+	Isolate Objects	Go'doomi Walxaha
+	Isometric Drafting	Sawir-farsamo Isometric
+	Isometric Plane	Dusha Isometric
+	Isometric snap	Ku-dhejin isometric
+	Jogged	Qalloocan
+	Jogged Linear	Toosan Qalloocan
+	Join	Ku biir
+	Keep an editable copy of this table in the drawing	Sawirka ku hay nuqul la tafatiri karo oo shaxdan ah
+	Keep the system cursor visible over the drawing area	Cursor-ka nidaamka ka dhig mid ka muuqda goobta sawirka
+	Language	Luqad
+	Largest array	Habaynta ugu weyn
+	Last	Ugu dambeeya
+	Last commit	Commit-kii ugu dambeeyay
+	Layer	Lakab
+	Layer Delete	Tirtirka Lakabka
+	Layer Match	Isku-eeg Lakabka
+	Layer Merge	Isku-dar Lakabka
+	Layer Off	Lakab Dami
+	Layer Properties	Astaamaha Lakabka
+	Layer Properties Manager	Maamulaha Astaamaha Lakabka
+	Layer Properties Manager — current viewport	Maamulaha Astaamaha Lakabka — daaqad-muuqaalka hadda
+	Layer State	Xaaladda Lakabka
+	Layer States Manager...	Maamulaha Xaaladaha Lakabka...
+	Layer Tools	Qalabka Lakabka
+	Layer contains objects (double-click to make current)	Lakabku wuxuu leeyahay walxo (laba-guji si uu u noqdo kan hadda)
+	Layer is empty (double-click to make current)	Lakabku waa madhan yahay (laba-guji si uu u noqdo kan hadda)
+	Layers	Lakabyo
+	Layers Palette	Guddiga Lakabyada
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Lakabyada la muujiyay: {shown} ka mid ah {total}.   Lakabka hadda: {layer}
+	Layout	Qaab-dhig
+	Layout list	Liiska qaab-dhigga
+	Layout paper	Warqadda qaab-dhigga
+	Layout {name}: {table}	Qaab-dhig {name}: {table}
+	Leader	Hogaamiye
+	Leaders Only	Hogaamiyeyaal oo Keliya
+	Left	Bidix
+	Left device button: zoom extents. Right device button: calibrate.	Badhanka bidix ee qalabka: zoom baaxadda. Badhanka midig: qiyaas-hagaaji.
+	Length	Dherer
+	Length X	Dherer X
+	Length Y	Dherer Y
+	Lengthen	Dheerey
+	Light	Iftiin
+	Line	Xariiq
+	Line delta	Farqiga xariiqyada
+	Linear	Toosan
+	Lines +/−	Xariiqyo +/−
+	Lines added	Xariiqyada lagu daray
+	Lines deleted	Xariiqyada la tirtiray
+	Lines of Command History	Xariiqyada Taariikhda Amarrada
+	Linetype	Nooca xariiqa
+	Linetype Scale	Cabbir-miisaanka Nooca Xariiqa
+	Linetype scale	Cabbir-miisaanka nooca xariiqa
+	Linetype...	Nooca xariiqa...
+	Lineweight	Culeyska xariiqa
+	Lineweight...	Culeyska xariiqa...
+	List	Liis
+	List Blocks	Liiska Baloogyada
+	List Dimension Styles	Liiska Qaababka Cabbirka
+	List Groups	Liiska Kooxaha
+	List Layer States	Liiska Xaaladaha Lakabka
+	List Layouts	Liiska Qaab-dhiggyada
+	List System Variables	Liiska Doorsoomayaasha Nidaamka
+	List Text Styles	Liiska Qaababka Qoraalka
+	Load all	Soo rar dhammaan
+	Load...	Soo rar...
+	Loaded	La soo raray
+	Loaded linetypes	Noocyada xariiqa la soo raray
+	Lock	Quful
+	Lock Layer	Quful Lakabka
+	Lock viewport	Quful daaqad-muuqaalka
+	Lock/Unlock	Quful/Fur
+	Loft	Loft
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Lama xiriirin Autodesk, Inc.
+	MODEL	MODEL
+	MText	MText
+	Magenta	Magenta
+	Major line every	Xariiq weyn mar kasta
+	Make Current	Ka dhig Kan Hadda
+	Make Object's Layer Current	Ka dhig Lakabka Walaxda Kan Hadda
+	Make it a block of this drawing, keeping its layer names	Ka dhig baloog sawirkan, adigoo haya magacyada lakabyadiisa
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Ka dhig baloog sawirkan; lakabyadiisu waxay noqdaan NAME$0$LAYER
+	Make...	Samee...
+	Match Layer	Isku-eeg Lakabka
+	Match Properties	Isku-eeg Astaamaha
+	Measure	Cabbir
+	Measure Distance	Cabbir Fogaanta
+	Measure Geometry	Cabbir Joomatariga
+	Merge Cells	Isku-dar Unugyada
+	Merged PRs	PR-yada la isku daray
+	Mid Between 2 Points	Dhexda u dhexeysa 2 Dhibcood
+	Midpoint	Dhibic-dhexe
+	Mirror	Muraayad
+	Model	Model
+	Model Space (in viewport)	Meesha Model-ka (daaqad-muuqaalka gudaha)
+	Model background	Asalka model-ka
+	Modeling	Qaabaynta
+	Models	Model-yo
+	Modify	Wax ka beddel
+	More toolbar commands	Amarro kale oo baarka qalabka
+	Move	Dhaqaaji
+	Move sideways to pan; push/pull or twist to zoom.	Dhinac u dhaqaaji si aad u pan-garayso; riix/jiid ama maroojin si aad u zoom-garayso.
+	Multileader	Hogaamiye-badan
+	Multileader Style...	Qaabka Hogaamiye-badan...
+	Multileader style	Qaabka hogaamiye-badan
+	Multiline	Xariiq-badan
+	Multiline Style...	Qaabka Xariiq-badan...
+	Multiline Text	Qoraal Xariiqyo-badan
+	Multiline Text...	Qoraal Xariiqyo-badan...
+	Multiline...	Xariiq-badan...
+	Multiple	Badan
+	Multiple Point	Dhibic Badan
+	My	Kayga
+	My properties: not available yet	Astaamahayga: weli lama heli karo
+	Name	Magac
+	Name (A–Z)	Magac (A–Z)
+	Named	La magacaabay
+	Named Viewports...	Daaqad-muuqaallo la Magacaabay...
+	Named Views...	Muuqaallo la Magacaabay...
+	Nearest	Ugu dhow
+	New	Cusub
+	New (metric)	Cusub (mitir)
+	New CTB	CTB Cusub
+	New Drawing	Sawir Cusub
+	New Drawing (⌘N)	Sawir Cusub (⌘N)
+	New Drawing...	Sawir Cusub...
+	New Layer	Lakab Cusub
+	New Layout	Qaab-dhig Cusub
+	New STB	STB Cusub
+	New VP Freeze	Qabooji VP Cusub
+	New Viewports...	Daaqad-muuqaallo Cusub...
+	New from Template...	Cusub ka Qaab-sawir...
+	New layout	Qaab-dhig cusub
+	New state name	Magaca xaaladda cusub
+	New style	Qaab cusub
+	Next Change	Isbeddelka Xiga
+	No	Maya
+	No blocks defined in this drawing.	Sawirkan baloog laguma qeexin.
+	No contributor data was built into this copy.	Nuqulkan laguma dhisin xog ka-qayb-qaatayaal.
+	No external references are attached.	Tixraac dibadeed lama lifaaqin.
+	No model credits were built into this copy.	Nuqulkan laguma dhisin abaal-marinno model.
+	No plot style tables.	Ma jiraan shaxo qaab daabacaad.
+	No saved layer states	Ma jiraan xaalado lakab oo la kaydiyay
+	No selection	Xulasho ma jirto
+	No supported 3D mouse found	Jiir 3D oo la taageero lama helin
+	Node	Noodh
+	None	Midna
+	Normal	Caadi
+	Not Found	Lama helin
+	Not available	Lama heli karo
+	Not available yet	Weli lama heli karo
+	Not loaded	Lama soo rarin
+	Numbered list	Liis lambaro
+	OK	OK
+	Object	Walax
+	Object Snap	Ku-dhejinta Walaxda
+	Object Snap (F3)	Ku-dhejinta Walaxda (F3)
+	Object Snap On (F3)	Ku-dhejinta Walaxda Daaran (F3)
+	Object Snap Tracking	Raad-raacidda Ku-dhejinta Walaxda
+	Object Snap Tracking (F11)	Raad-raacidda Ku-dhejinta Walaxda (F11)
+	Object Snap Tracking Settings	Dejinta Raad-raacidda Ku-dhejinta Walaxda
+	Object snap aperture	Godka ku-dhejinta walaxda
+	Object snap marker size	Cabbirka calaamadda ku-dhejinta walaxda
+	Object type:	Nooca walaxda:
+	Oblique	Janjeera
+	Off	Dami
+	Offset	Leexo
+	On	Daar
+	On/Off	Daar/Dami
+	Only in this drawing: {n}	Sawirkan oo keliya: {n}
+	Only in {name}: {n}	{name} oo keliya: {n}
+	Oops	Hoog
+	Open	Fur
+	Open (⌘O)	Fur (⌘O)
+	Open Sample Drawing	Fur Sawirka Tusaalaha
+	Open Xref	Fur Xref
+	Open a drawing first.	Marka hore fur sawir.
+	Open and Save	Fur oo Kaydi
+	Open sample drawing	Fur sawirka tusaalaha
+	Open...	Fur...
+	Operator:	Hawlwadeen:
+	Options	Doorashooyin
+	Options...	Doorashooyin...
+	Orbit	Wareeg
+	Ordinate	Isku-dhaw
+	Ortho (F8)	Ortho (F8)
+	Ortho Mode	Habka Ortho
+	Ortho Mode (F8)	Habka Ortho (F8)
+	Osnap Settings...	Dejinta Osnap...
+	Out	Dibadda
+	Over-constrained	Xayiraad xad-dhaaf ah
+	Overlay	Dul-saar
+	Override	Ka gudub
+	PAPER	PAPER
+	PRs	PR-yo
+	Page Setup Manager	Maamulaha Dejinta Bogga
+	Page Setup Manager...	Maamulaha Dejinta Bogga...
+	Pan	Pan
+	Pan Down	Pan Hoos
+	Pan Left	Pan Bidix
+	Pan Right	Pan Midig
+	Pan Up	Pan Kor
+	Pan sensitivity	Dareenka pan-ka
+	Paper Space	Meesha Warqadda
+	Parallel	Barbar-socda
+	Parameters Manager	Maamulaha Halbeegyada
+	Parametric	Halbeeg
+	Paste	Dheji
+	Paste as Block	U dheji sida Baloog
+	Paste to Command Line	U dheji Xariiqa Amarrada
+	Paste to Original Coordinates	U dheji Isku-duwayaasha Asalka ah
+	Path Array	Habayn Jid
+	Pattern	Naqshad
+	Percent	Boqolley
+	Perpendicular	Qotomo
+	Pickbox size	Cabbirka sanduuqa-xulashada
+	Plot	Daabac
+	Plot (click: do not plot)	Daabac (guji: ha daabicin)
+	Plot Preview	Horu-eegga Daabacaadda
+	Plot Style Manager	Maamulaha Qaabka Daabacaadda
+	Plot Style Manager...	Maamulaha Qaabka Daabacaadda...
+	Plot Style...	Qaabka Daabacaadda...
+	Plot Styles...	Qaababka Daabacaadda...
+	Plot Window	Daaqadda Daabacaadda
+	Plot style	Qaabka daabacaadda
+	Plot style attached to	Qaabka daabacaadda lagu lifaaqay
+	Plot style table	Shaxda qaabka daabacaadda
+	Plot table type	Nooca shaxda daabacaadda
+	Plotter Manager	Maamulaha Daabacaha
+	Plotter Manager...	Maamulaha Daabacaha...
+	Plus/minus	Lagu dar/Laga jar
+	Point	Dhibic
+	Point Filters	Shaandhooyinka Dhibcaha
+	Point Style...	Qaabka Dhibicda...
+	Polar (distance < angle)	Polar (fogaan < xagal)
+	Polar Array	Habayn Polar
+	Polar Tracking	Raad-raacid Polar
+	Polar Tracking (F10)	Raad-raacid Polar (F10)
+	Polar Tracking On (F10)	Raad-raacid Polar Daaran (F10)
+	Polar angle measurement	Cabbirka xagasha polar
+	Polar distance	Fogaanta polar
+	Polar: {distance} < {angle}°	Polar: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	Geeso-badan
+	Polygonal	Geeso-badan
+	Polygonal Viewport	Daaqad-muuqaal Geeso-badan
+	Polyline	Xarig-badan
+	Polyline Edit	Tafatir Xarig-badan
+	Position X	Booska X
+	Position Y	Booska Y
+	Position Z	Booska Z
+	Previous	Hore
+	Previous Change	Isbeddelkii Hore
+	Previous Layer	Lakabkii Hore
+	Primitives	Aasaasiyaal
+	Print	Daabac
+	Print...	Daabac...
+	Profiles	Profile-yo
+	Properties	Astaamo
+	Properties Inspector	Baaraha Astaamaha
+	Properties:	Astaamo:
+	Proxy	Proxy
+	Purge	Sifee
+	Pyramid	Haram
+	Quadrant	Afar-meelood
+	Query Entities	Weydii Walxaha
+	Quick	Degdeg
+	Quick Dimension	Cabbir Degdeg ah
+	Quick Properties	Astaamo Degdeg ah
+	Quick Select	Xulasho Degdeg ah
+	Quick Select Properties	Astaamaha Xulashada Degdegga ah
+	Quick Select...	Xulasho Degdeg ah...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	Dooro QuickCalc
+	Quit DraftCraft	Ka bax DraftCraft
+	Radius	Gacan
+	Raster Image	Sawir Raster
+	Ray	Fallaar
+	Read-only	Akhris-keliya
+	Real name	Magaca dhabta ah
+	Realtime	Waqti-dhab
+	Reassociate Dimensions	Dib ugu xir Cabbirrada
+	Recalculate Table Formulas	Dib u xisaabi Qaacidooyinka Shaxda
+	Recent	Dhowaan
+	Recent Commands	Amarrada Dhowaan
+	Recent Input	Gelinta Dhowaan
+	Recover...	Soo celi...
+	Rectangle	Laydi
+	Rectangular	Laydi
+	Rectangular Array	Habayn Laydi
+	Rectangular snap	Ku-dhejin laydi
+	Red	Casaan
+	Redo	Dib u samee
+	Redo (⇧⌘Z)	Dib u samee (⇧⌘Z)
+	Redraw	Dib u sawir
+	Reference Manager	Maamulaha Tixraacyada
+	Reference Name	Magaca Tixraaca
+	References: {n}	Tixraacyo: {n}
+	Regen	Regen
+	Regen All	Regen Dhammaan
+	Region	Gobol
+	Region/Mass Properties	Astaamaha Gobolka/Cufka
+	Reinitialize	Dib u bilow
+	Relative	Qaraabo
+	Relative to last segment	Qaraabo qaybtii ugu dambaysay
+	Release the 3D mouse to calibrate its resting position	Sii daa jiirka 3D si aad u qiyaas-hagaajiso booska nasashadiisa
+	Reload	Dib u soo rar
+	Reload All	Dib u soo rar Dhammaan
+	Remove	Saar
+	Remove Leader	Saar Hogaamiyaha
+	Remove Vertex	Saar Geeska
+	Remove the viewport override	Saar ka-gudubka daaqad-muuqaalka
+	Rename Dimension Style	Dib u magacaw Qaabka Cabbirka
+	Rename Layer	Dib u magacaw Lakabka
+	Rename Layer State	Dib u magacaw Xaaladda Lakabka
+	Rename Layout	Dib u magacaw Qaab-dhigga
+	Rename Text Style	Dib u magacaw Qaabka Qoraalka
+	Rename...	Dib u magacaw...
+	Repeat {command}	Ku celi {command}
+	Replace Block...	Beddel Baloogga...
+	Requires a point (x,y, @dx,dy or @d<a).	Waxay u baahan tahay dhibic (x,y, @dx,dy ama @d<a).
+	Reset Palettes	Dib u dhig Guddiyada
+	Reset Panel Layout	Dib u dhig Habaynta Guddiga
+	Reset keeps the interface language.	Dib-u-dhiggu wuxuu hayaa luqadda interface-ka.
+	Reset to Defaults	Ku celi Caadiga
+	Restore	Soo celi
+	Restore Layer State	Soo celi Xaaladda Lakabka
+	Reverse	Rogrog
+	Reverse the order	Rogrog kala-horreynta
+	Reverse zoom direction	Rogrog jihada zoom-ka
+	Revision Cloud	Daruur Dib-u-eegis
+	Revolve	Wareeji-dhis
+	Right	Midig
+	Rotate	Wareeji
+	Rotation	Wareejin
+	Run Script...	Orod Qoraal-amar...
+	SVG drawings (SVG, SVGZ)	Sawirro SVG (SVG, SVGZ)
+	Save	Kaydi
+	Save (⌘S)	Kaydi (⌘S)
+	Save As	Kaydi Sida
+	Save As...	Kaydi Sida...
+	Save Layer State	Kaydi Xaaladda Lakabka
+	Save State	Kaydi Xaaladda
+	Save new drawings as	U kaydi sawirrada cusub sida
+	Saved Path	Waddada la Kaydiyay
+	Scale	Cabbir-miisaan
+	Scale List...	Liiska Cabbir-miisaannada...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Weyneeyayaasha shaashadda, akhriyayaasha shaashadda iyo duubayaashu waxay raacaan cursor-ka nidaamka.
+	Screening	Shaashadeyn
+	Search for layer	Raadi lakab
+	Search for parameter	Raadi halbeeg
+	Search for pattern	Raadi naqshad
+	Second and next points:	Dhibcaha labaad iyo kuwa xiga:
+	Select	Dooro
+	Select 2D polyline	Dooro xarig-badan 2D
+	Select All	Dooro Dhammaan
+	Select Objects	Dooro Walxaha
+	Select Similar	Dooro kuwa la Mid ah
+	Select a 2D polyline.	Dooro xarig-badan 2D.
+	Select a block reference.	Dooro tixraac baloog.
+	Select a circle or arc.	Dooro goobo ama qaanso.
+	Select a closed polyline	Dooro xarig-badan xiran
+	Select a closed polyline, circle, ellipse or closed spline.	Dooro xarig-badan xiran, goobo, ugxaan ama spline xiran.
+	Select a closed polyline.	Dooro xarig-badan xiran.
+	Select a curve as the path.	Dooro qalooc jid ahaan.
+	Select a dimension constraint type	Dooro nooca xayiraadda cabbirka
+	Select a line object	Dooro walax xariiq
+	Select a line object.	Dooro walax xariiq.
+	Select a line or an arc.	Dooro xariiq ama qaanso.
+	Select a line or polyline segment	Dooro xariiq ama qayb xarig-badan
+	Select a line, arc or open polyline.	Dooro xariiq, qaanso ama xarig-badan furan.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Dooro xariiq, qaanso, goobo, xarig-badan, ugxaan ama spline jid ahaan.
+	Select a line, circle, arc or polyline segment.	Dooro xariiq, goobo, qaanso ama qayb xarig-badan.
+	Select a line.	Dooro xariiq.
+	Select a polyline.	Dooro xarig-badan.
+	Select a text, mtext, attribute definition or dimension.	Dooro qoraal, mtext, qeexid astaan ama cabbir.
+	Select an annotation object	Dooro walax faallo
+	Select an arc or circle	Dooro qaanso ama goobo
+	Select an arc.	Dooro qaanso.
+	Select an object	Dooro walax
+	Select an object to change	Dooro walaxda la beddelayo
+	Select an object to measure	Dooro walaxda la cabbirayo
+	Select an object.	Dooro walax.
+	Select an open curve.	Dooro qalooc furan.
+	Select an open line, arc, polyline, ellipse arc or spline.	Dooro xariiq furan, qaanso, xarig-badan, qaanso ugxaneed ama spline.
+	Select arc or circle	Dooro qaanso ama goobo
+	Select arc or polyline arc segment	Dooro qaanso ama qayb qaanso xarig-badan
+	Select arc style	Dooro qaabka qaansada
+	Select arc, circle, line	Dooro qaanso, goobo, xariiq
+	Select at least two objects to join.	Dooro ugu yaraan laba walxood oo la isku biirinayo.
+	Select circle or arc to add center mark	Dooro goobo ama qaanso si loogu daro calaamadda bartamaha
+	Select closed objects (regions, closed polylines, circles).	Dooro walxo xiran (gobollo, xarig-badan xiran, goobooyin).
+	Select first line	Dooro xariiqa koowaad
+	Select first line or arc	Dooro xariiqa koowaad ama qaanso
+	Select first object	Dooro walaxda koowaad
+	Select first point	Dooro dhibicda koowaad
+	Select nested objects to copy	Dooro walxaha ku-dhex-jira ee la koobiyeynayo
+	Select object	Dooro walax
+	Select object to dimension	Dooro walaxda la cabbirayo
+	Select object to divide	Dooro walaxda la qaybinayo
+	Select object to extend or shift-select to trim	Dooro walaxda la fidinayo ama shift-dooro si aad u jarto
+	Select object to measure	Dooro walaxda la cabbirayo
+	Select object to offset	Dooro walaxda la leexinayo
+	Select object to trim or shift-select to extend	Dooro walaxda la jarayo ama shift-dooro si aad u fidiso
+	Select objects	Dooro walxaha
+	Select objects (crossing window first corner)	Dooro walxaha (geeska koowaad ee daaqadda iskutallaabta)
+	Select objects first, then choose a command	Marka hore dooro walxaha, kadibna dooro amar
+	Select objects to array.	Dooro walxaha la habaynayo.
+	Select objects to stretch by crossing-window or crossing-polygon...	Dooro walxaha la kala-bixinayo daaqad-iskutallaab ama geeso-badan-iskutallaab...
+	Select objects:	Dooro walxaha:
+	Select one polyline (Multiple is available through the JSON form).	Dooro hal xarig-badan (Badan waxaa lagu heli karaa foomka JSON).
+	Select path curve	Dooro qalooca jidka
+	Select point or object	Dooro dhibic ama walax
+	Select polyline	Dooro xarig-badan
+	Select second line	Dooro xariiqa labaad
+	Select second line or shift-select to apply corner	Dooro xariiqa labaad ama shift-dooro si aad u codsato gees
+	Select second object	Dooro walaxda labaad
+	Select second object or shift-select to apply corner	Dooro walaxda labaad ama shift-dooro si aad u codsato gees
+	Select second point	Dooro dhibicda labaad
+	Select spline	Dooro spline
+	Select symmetry line	Dooro xariiqa isku-eegga
+	Select two points	Dooro laba dhibcood
+	Selection	Xulasho
+	Selection Cycling	Wareegga Xulashada
+	Send Hatches to Back	U dir Xariijinta Gadaal
+	Send Under Objects	U dir Walxaha Hoostooda
+	Send to Back	U dir Gadaal
+	Services	Adeegyo
+	Set Current	Deji Kan Hadda
+	Set Current Dimension Style	Deji Qaabka Cabbirka Hadda
+	Set Current Text Style	Deji Qaabka Qoraalka Hadda
+	Set Current Viewport	Deji Daaqad-muuqaalka Hadda
+	Set Layer Properties	Deji Astaamaha Lakabka
+	Set Properties	Deji Astaamaha
+	Set Table Cell	Deji Unugga Shaxda
+	Set Table Cell Style	Deji Qaabka Unugga Shaxda
+	Set Variable	Deji Doorsoome
+	Set View	Deji Muuqaal
+	Settings...	Dejin...
+	Share	Wadaag
+	Show	Muuji
+	Show All	Muuji Dhammaan
+	Show All Constraint Bars	Muuji Dhammaan Baararka Xayiraadda
+	Show All Dynamic Dimensions	Muuji Dhammaan Cabbirrada Firfircoon
+	Show Annotative Objects	Muuji Walxaha Faallada
+	Show Layer List	Muuji Liiska Lakabyada
+	Show Quick Properties for selected objects	Muuji Astaamo Degdeg ah walxaha la doortay
+	Show System Cursor	Muuji Cursor-ka Nidaamka
+	Show and hide the tools of this category	Muuji oo qari qalabka qaybtan
+	Show command prompting near the crosshairs	Muuji weydiinta amarka meel u dhow iskutallaabta
+	Show in Tool Sets	Ku muuji Kooxaha Qalabka
+	Show/Hide Lineweight	Muuji/Qari Culeyska Xariiqa
+	Show/Hide Transparency	Muuji/Qari Daahfurnaanta
+	Single Line Text	Qoraal Hal Xariiq
+	Single Point	Hal Dhibic
+	Single...	Hal...
+	Smooth	Siman
+	Snap	Ku-dhejin
+	Snap Mode	Habka Ku-dhejinta
+	Snap Mode (F9)	Habka Ku-dhejinta (F9)
+	Snap On (F9)	Ku-dhejin Daaran (F9)
+	Snap Overrides	Ka-gudubka Ku-dhejinta
+	Snap X spacing	Kala-fogaanshaha X ee ku-dhejinta
+	Snap and Grid	Ku-dhejin iyo Shabag
+	Snap type	Nooca ku-dhejinta
+	Snap, grid, polar tracking and Dynamic Input:	Ku-dhejin, shabag, raad-raacid polar iyo Gelin Firfircoon:
+	Solid	Adke
+	Solid Editing	Tafatirka Adkaha
+	Sort	Kala-saar
+	Specify a point	Cayi dhibic
+	Specify a scale for the hatch pattern	Cayi cabbir-miisaanka naqshadda xariijinta
+	Specify a second extension line origin	Cayi asalka xariiqa fidinta labaad
+	Specify an angle for the hatch pattern	Cayi xagal naqshadda xariijinta
+	Specify angle end point	Cayi dhibicda dhammaadka xagasha
+	Specify angle of dimension line	Cayi xagasha xariiqa cabbirka
+	Specify angle of dimension text	Cayi xagasha qoraalka cabbirka
+	Specify angle start point	Cayi dhibicda bilowga xagasha
+	Specify angle vertex	Cayi geeska xagasha
+	Specify angle vertex point	Cayi dhibicda geeska xagasha
+	Specify arc length dimension location	Cayi goobta cabbirka dhererka qaansada
+	Specify axis endpoint of ellipse	Cayi dhibic-dhammaadka dhidibka ugxaanta
+	Specify base diameter	Cayi dhexroorka saldhigga
+	Specify base point	Cayi dhibicda saldhigga
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Cayi dhibicda saldhigga ama barokac (ku jiid badhanka dhexe ee jiirka pan waqti-dhab ah)
+	Specify base radius	Cayi gacanta saldhigga
+	Specify center of donut	Cayi bartamaha doonatka
+	Specify center of ellipse	Cayi bartamaha ugxaanta
+	Specify center of polygon	Cayi bartamaha geeso-badanka
+	Specify center point for circle	Cayi dhibicda bartamaha goobada
+	Specify center point of arc	Cayi dhibicda bartamaha qaansada
+	Specify center point of arc (hold Ctrl to switch direction)	Cayi dhibicda bartamaha qaansada (hay Ctrl si aad jihada u beddesho)
+	Specify center point of array	Cayi dhibicda bartamaha habaynta
+	Specify center point of base	Cayi dhibicda bartamaha saldhigga
+	Specify corner of viewport	Cayi geeska daaqad-muuqaalka
+	Specify corner of window, enter a scale factor (nX or nXP)	Cayi geeska daaqadda, geli isku-dhufasho cabbir-miisaan (nX ama nXP)
+	Specify diameter of circle	Cayi dhexroorka goobada
+	Specify dimension arc line location	Cayi goobta xariiqa qaansada cabbirka
+	Specify dimension line location	Cayi goobta xariiqa cabbirka
+	Specify distance between turns	Cayi fogaanta u dhexeysa wareegyada
+	Specify distance to other axis	Cayi fogaanta dhidibka kale
+	Specify end angle	Cayi xagasha dhammaadka
+	Specify end point of arc	Cayi dhibicda dhammaadka qaansada
+	Specify end point of arc (hold Ctrl to switch direction)	Cayi dhibicda dhammaadka qaansada (hay Ctrl si aad jihada u beddesho)
+	Specify ending width	Cayi ballaca dhammaadka
+	Specify ending width for next segment	Cayi ballaca dhammaadka qaybta xigta
+	Specify endpoint of arc	Cayi dhibic-dhammaadka qaansada
+	Specify endpoint of axis	Cayi dhibic-dhammaadka dhidibka
+	Specify endpoint of line	Cayi dhibic-dhammaadka xariiqa
+	Specify feature location	Cayi goobta sifada
+	Specify fillet radius	Cayi gacanta wareeji-geeska
+	Specify fillet radius for rectangles	Cayi gacanta wareeji-geeska laydiyada
+	Specify first angle endpoint	Cayi dhibic-dhammaadka koowaad ee xagasha
+	Specify first chamfer distance	Cayi fogaanta koowaad ee jar-geeska
+	Specify first chamfer distance for rectangles	Cayi fogaanta koowaad ee jar-geeska laydiyada
+	Specify first constraint point	Cayi dhibicda xayiraadda koowaad
+	Specify first corner	Cayi geeska koowaad
+	Specify first corner point	Cayi dhibicda geeska koowaad
+	Specify first destination point	Cayi dhibicda meel-u-socodka koowaad
+	Specify first end point of circle's diameter	Cayi dhammaadka koowaad ee dhexroorka goobada
+	Specify first endpoint of edge	Cayi dhibic-dhammaadka koowaad ee cidhifka
+	Specify first extension line origin	Cayi asalka xariiqa fidinta koowaad
+	Specify first point	Cayi dhibicda koowaad
+	Specify first point of mirror line	Cayi dhibicda koowaad ee xariiqa muraayadda
+	Specify first point on circle	Cayi dhibicda koowaad ee goobada
+	Specify first point on circle: _tan to	Cayi dhibicda koowaad ee goobada: _tan ilaa
+	Specify first source point	Cayi dhibicda isha koowaad
+	Specify height	Cayi dhererka
+	Specify helix height	Cayi dhererka helix-ka
+	Specify included angle	Cayi xagasha ku-jirta
+	Specify included angle (hold Ctrl to switch direction)	Cayi xagasha ku-jirta (hay Ctrl si aad jihada u beddesho)
+	Specify insertion base point	Cayi dhibicda saldhigga gelinta
+	Specify insertion point	Cayi dhibicda gelinta
+	Specify inside diameter of donut	Cayi dhexroorka gudaha ee doonatka
+	Specify leader arrowhead location	Cayi goobta fallaarta hogaamiyaha
+	Specify leader endpoint	Cayi dhibic-dhammaadka hogaamiyaha
+	Specify leader landing location	Cayi goobta degitaanka hogaamiyaha
+	Specify length for rectangles	Cayi dhererka laydiyada
+	Specify length of chord	Cayi dhererka xadhigga
+	Specify length of chord (hold Ctrl to switch direction)	Cayi dhererka xadhigga (hay Ctrl si aad jihada u beddesho)
+	Specify length of segment	Cayi dhererka qaybta
+	Specify line width for rectangles	Cayi ballaca xariiqa laydiyada
+	Specify location for new vertex	Cayi goobta geeska cusub
+	Specify minimum length of arc	Cayi dhererka ugu yar ee qaansada
+	Specify new end point	Cayi dhibicda dhammaadka cusub
+	Specify new location for marked vertex	Cayi goobta cusub ee geeska la calaameeyay
+	Specify new width for all segments	Cayi ballac cusub dhammaan qaybaha
+	Specify next point	Cayi dhibicda xigta
+	Specify offset distance	Cayi fogaanta leexinta
+	Specify opposite corner	Cayi geeska ka soo horjeeda
+	Specify other corner point	Cayi dhibicda geeska kale
+	Specify other endpoint of axis	Cayi dhibic-dhammaadka kale ee dhidibka
+	Specify outside diameter of donut	Cayi dhexroorka dibadda ee doonatka
+	Specify point	Cayi dhibic
+	Specify point on object for first tangent of circle	Cayi dhibic walaxda dusheeda taabashada koowaad ee goobada
+	Specify point on object for second tangent of circle	Cayi dhibic walaxda dusheeda taabashada labaad ee goobada
+	Specify point on side to offset	Cayi dhibic dhinaca la leexinayo
+	Specify radius of arc	Cayi gacanta qaansada
+	Specify radius of arc (hold Ctrl to switch direction)	Cayi gacanta qaansada (hay Ctrl si aad jihada u beddesho)
+	Specify radius of circle	Cayi gacanta goobada
+	Specify rotation angle	Cayi xagasha wareejinta
+	Specify rotation angle of text	Cayi xagasha wareejinta qoraalka
+	Specify scale factor	Cayi isku-dhufashada cabbir-miisaanka
+	Specify second angle endpoint	Cayi dhibic-dhammaadka labaad ee xagasha
+	Specify second break point	Cayi dhibicda jebinta labaad
+	Specify second chamfer distance for rectangles	Cayi fogaanta labaad ee jar-geeska laydiyada
+	Specify second constraint point	Cayi dhibicda xayiraadda labaad
+	Specify second destination point	Cayi dhibicda meel-u-socodka labaad
+	Specify second end point of circle's diameter	Cayi dhammaadka labaad ee dhexroorka goobada
+	Specify second endpoint of edge	Cayi dhibic-dhammaadka labaad ee cidhifka
+	Specify second extension line origin	Cayi asalka xariiqa fidinta labaad
+	Specify second point	Cayi dhibicda labaad
+	Specify second point of arc	Cayi dhibicda labaad ee qaansada
+	Specify second point of mirror line	Cayi dhibicda labaad ee xariiqa muraayadda
+	Specify second point on circle	Cayi dhibicda labaad ee goobada
+	Specify second point on circle: _tan to	Cayi dhibicda labaad ee goobada: _tan ilaa
+	Specify second point or <use first point as displacement>	Cayi dhibicda labaad ama <isticmaal dhibicda koowaad barokac ahaan>
+	Specify second source point	Cayi dhibicda isha labaad
+	Specify side to offset	Cayi dhinaca la leexinayo
+	Specify start angle	Cayi xagasha bilowga
+	Specify start point	Cayi dhibicda bilowga
+	Specify start point of arc	Cayi dhibicda bilowga qaansada
+	Specify start point of polyline	Cayi dhibicda bilowga xarig-badanka
+	Specify start point of text	Cayi dhibicda bilowga qoraalka
+	Specify starting width	Cayi ballaca bilowga
+	Specify starting width for next segment	Cayi ballaca bilowga qaybta xigta
+	Specify tangent direction for the start point of arc	Cayi jihada taabashada dhibicda bilowga qaansada
+	Specify the elevation for rectangles	Cayi joogga laydiyada
+	Specify thickness for rectangles	Cayi dhumucda laydiyada
+	Specify third point on circle	Cayi dhibicda saddexaad ee goobada
+	Specify third point on circle: _tan to	Cayi dhibicda saddexaad ee goobada: _tan ilaa
+	Specify third source point or <continue>	Cayi dhibicda isha saddexaad ama <sii wad>
+	Specify through point	Cayi dhibicda laga gudbayo
+	Specify top diameter	Cayi dhexroorka sare
+	Specify top radius	Cayi gacanta sare
+	Specify total angle	Cayi xagasha guud
+	Specify total length	Cayi dhererka guud
+	Specify width for rectangles	Cayi ballaca laydiyada
+	Sphere	Kubad
+	Spline	Spline
+	Spline Edit	Tafatir Spline
+	Stack (type 1/2 then select)	Isku-dul-dhig (qor 1/2 kadibna dooro)
+	Standard	Heerka-caadiga
+	Start	Bilow
+	Start Width	Ballaca Bilowga
+	Start X	Bilow X
+	Start Y	Bilow Y
+	Start angle	Xagasha bilowga
+	Start, Center, Angle	Bilow, Bartame, Xagal
+	Start, Center, End	Bilow, Bartame, Dhammaad
+	Start, Center, Length	Bilow, Bartame, Dherer
+	Start, End, Angle	Bilow, Dhammaad, Xagal
+	Start, End, Direction	Bilow, Dhammaad, Jiho
+	Start, End, Radius	Bilow, Dhammaad, Gacan
+	Status	Xaalad
+	Status Bar	Baarka Xaaladda
+	Stretch	Kala-bixi
+	Stretch Vertex	Kala-bixi Geeska
+	Style: Standard	Qaab: Standard
+	Subtract	Ka jar
+	Sweep	Xaaq
+	Switch Drawing	Beddel Sawirka
+	Switch Layout	Beddel Qaab-dhigga
+	Switch between model space in a viewport and paper space	Ku kala-beddel meesha model-ka ee daaqad-muuqaalka iyo meesha warqadda
+	Symmetric	Isku-eeg
+	Synchronize Attributes	Isku-waafaji Astaamaha
+	Synchronize Multiple-scale Positions	Isku-waafaji Booska Cabbir-miisaannada Badan
+	TOP	TOP
+	Table	Shax
+	Table Breaks	Jebinta Shaxda
+	Table Cell Style	Qaabka Unugga Shaxda
+	Table Style...	Qaabka Shaxda...
+	Table style	Qaabka shaxda
+	Table...	Shax...
+	Tan, Tan, Radius	Taabasho, Taabasho, Gacan
+	Tan, Tan, Tan	Taabasho, Taabasho, Taabasho
+	Tangent	Taabasho
+	Temporary track point	Dhibic raad-raacid ku-meel-gaar ah
+	Text	Qoraal
+	Text Editor	Tafatiraha Qoraalka
+	Text Height	Dhererka Qoraalka
+	Text Objects Only	Walxaha Qoraalka oo Keliya
+	Text Style...	Qaabka Qoraalka...
+	Text height	Dhererka qoraalka
+	Text override	Ka-gudubka qoraalka
+	Text style	Qaabka qoraalka
+	Thaw All Layers	Dhalaali Dhammaan Lakabyada
+	Thaw Layer	Dhalaali Lakabka
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Godku waa inta cursor-ku u dhowaado dhibic si ku-dhejinta walaxdu u hesho.
+	There is nothing here yet.	Weli halkan waxba ma jiraan.
+	Thickness	Dhumuc
+	Time	Waqti
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Midig-guji waqti-ku-xiran: gujis degdeg ah waa Enter, haynta waxay furtaa liiska
+	To	Ilaa
+	To get started, create or open a drawing.	Si aad u bilowdo, samee ama fur sawir.
+	Toggle PICKADD (off: each pick replaces the selection)	Beddel PICKADD (dami: dooro kasta wuxuu beddelaa xulashada)
+	Toggle PICKADD (on: picks add to the selection)	Beddel PICKADD (daar: doorashadu waxay ku darsadaan xulashada)
+	Tolerance...	Dulqaad...
+	Tool Bar	Baarka Qalabka
+	Tool Sets	Kooxaha Qalabka
+	Tools	Qalab
+	Torus	Torus
+	Trace	Raad
+	Track orthogonally only	Raad-raac qotomo oo keliya
+	Track using all polar angle settings	Raad-raac adigoo isticmaalaya dhammaan dejinta xagasha polar
+	Transparency	Daahfurnaan
+	Trim	Jar
+	True Color	Midab Dhab ah
+	Turn All Layers On	Daar Dhammaan Lakabyada
+	Turn Off Layer	Dami Lakabka
+	Turn On Layer	Daar Lakabka
+	Turn Quick Properties off (QPMODE)	Dami Astaamaha Degdegga ah (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Marka la damiyo, midig-gujinta inta amar socdo had iyo jeer waxay furtaa liiska gaaban.
+	Type	Nooc
+	Type a command	Qor amar
+	Type text; Enter starts a new paragraph	Qor qoraal; Enter wuxuu bilaabaa cutub cusub
+	UCS Icon	Astaanta UCS
+	Undo	Ka noqo
+	Undo (⌘Z)	Ka noqo (⌘Z)
+	Ungroup	Kala-saar Kooxda
+	Union	Midow
+	Unisolate Layer	Ka qaad Go'doominta Lakabka
+	Units Conversion	Beddelka Unugyada
+	Units...	Unugyo...
+	Unload	Ka-rar
+	Unloaded	La ka-raray
+	Unlock Layer	Fur Qufulka Lakabka
+	Unlock viewport	Fur qufulka daaqad-muuqaalka
+	Unmerge Cells	Kala-saar Unugyada
+	Unreferenced	Aan la tixraacin
+	Unresolved	Aan la xallin
+	Unsaved Layer State	Xaaladda Lakabka aan la Kaydin
+	Up	Kor
+	Update	Cusboonaysii
+	Update Data Links	Cusboonaysii Xiriirada Xogta
+	Use System Setting	Isticmaal Dejinta Nidaamka
+	Use for this layout	U isticmaal qaab-dhiggan
+	Use object linetype	Isticmaal nooca xariiqa walaxda
+	Use object lineweight	Isticmaal culeyska xariiqa walaxda
+	User	Isticmaale
+	User Parameters	Halbeegyada Isticmaalaha
+	User Preferences	Doorbidyada Isticmaalaha
+	Username	Magaca isticmaalaha
+	VP Color	Midabka VP
+	VP Freeze	Qabooji VP
+	Value	Qiime
+	Value:	Qiime:
+	Variables	Doorsoomayaal
+	Version	Nooc
+	Version 2000	Nooca 2000
+	Version 2004	Nooca 2004
+	Version 2007	Nooca 2007
+	Version 2010	Nooca 2010
+	Version 2013	Nooca 2013
+	Version 2018	Nooca 2018
+	Version {version}	Nooca {version}
+	Vertical	Taagan
+	VerticalDistance	FogaanTaagan
+	View	Muuqaal
+	ViewCube	ViewCube
+	Viewport	Daaqad-muuqaal
+	Viewport Layer Freeze	Qaboojinta Lakabka Daaqad-muuqaalka
+	Viewport Properties	Astaamaha Daaqad-muuqaalka
+	Viewport is locked	Daaqad-muuqaalku waa quful yahay
+	Viewport scale	Cabbir-miisaanka daaqad-muuqaalka
+	Viewport {id}	Daaqad-muuqaal {id}
+	Viewports	Daaqad-muuqaallo
+	Volume	Mug
+	WCS	WCS
+	White	Cad
+	Width factor	Isku-dhufashada ballaca
+	Window	Daaqad
+	Wipeout	Tirtir-daboolid
+	Workspace Switching	Beddelka Goobta Shaqada
+	Write Block	Qor Baloog
+	X	X
+	Xline	Xline
+	Y	Y
+	Yellow	Jaalle
+	Yes	Haa
+	Zoom	Zoom
+	Zoom All	Zoom Dhammaan
+	Zoom Dynamic	Zoom Firfircoon
+	Zoom Extents	Zoom Baaxadda
+	Zoom In	Zoom Gudaha
+	Zoom Object	Zoom Walax
+	Zoom Out	Zoom Dibadda
+	Zoom Previous	Zoom Hore
+	Zoom Realtime	Zoom Waqti-dhab
+	Zoom Window	Zoom Daaqad
+	Zoom sensitivity	Dareenka zoom-ka
+	error	khalad
+	min	daq
+	objects	walxo
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (xayiraad {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} xayiraad {name} = {expression}  (laba-guji si aad u tafatirto)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Halbeeg Isticmaale Cusub
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ si aad u dhammayso
+@plural	{n} commit	{n} commit|{n} commit-yo
+@plural	{n} contributor	{n} ka-qayb-qaate|{n} ka-qayb-qaatayaal
+	Check for Updates…	Hubi Cusboonaysiinta…
+	DraftCraft is up to date.	DraftCraft waa casri.
+	Could not check for updates.	Cusboonaysiinta lama hubin karin.
+	Add to Working Set	Ku dar Kooxda Shaqada
+	Add: Pick points	Ku dar: Dooro dhibcaha
+	Add: Select objects	Ku dar: Dooro walxaha
+	Add…	Ku dar…
+	Alias	Magac kale
+	Alias file: {file}	Faylka magacyada kale: {file}
+	Align Multileaders	Toosi Hogaamiye-badanka
+	Analyze Shapes	Falanqee Qaababka
+	Analyze Usage	Falanqee Isticmaalka
+	Animation Effects	Saamaynta Dhaqdhaqaaqa
+	Animation effects	Saamaynta dhaqdhaqaaqa
+	Associative	Isku-xiran
+	Backup copy	Nuqul kayd ah
+	Block to create or edit	Baloogga la abuurayo ama la tafatirayo
+	Bottom left	Hoose bidix
+	Bottom right	Hoose midig
+	Boundaries	Xuduudo
+	Boundaries picked: {n}	Xuduudaha la doortay: {n}
+	Break-line Symbol	Astaanta Xariiqa-jebinta
+	Centered	Bartamaysan
+	Change Properties	Beddel Astaamaha
+	Choose the command the alias starts.	Dooro amarka uu magaca kale bilaabo.
+	Click the ruler to add a tab stop, right-click to remove one	Guji mastarada si aad u darto joogsi tab, midig-guji si aad u saarto
+	Click to set new origin	Guji si aad u dejiso asal cusub
+	Close Block Editor	Xir Tafatiraha Baloogga
+	Collect	Ururi
+	Collect Multileaders	Ururi Hogaamiye-badanka
+	Color 1	Midab 1
+	Color 2	Midab 2
+	Command	Amar
+	Convert Text to Mtext	U beddel Qoraalka Mtext
+	Create backup copy with each save	Samee nuqul kayd ah kaydin kasta
+	Create separate hatches	Samee xariijino kala-gooni ah
+	Crossing selection color:	Midabka xulashada iskutallaabta:
+	Curved	Qalloocan
+	Customize	Habee
+	Default to boundary extents	Caadi ahaan baaxadda xadka
+	Define each corner of the selection window with a separate click.	Geeska kasta oo daaqadda xulashada ku qeex gujis gooni ah.
+	Discard	Iska tuur
+	Drag Dynamic Grip	Jiid Qabsadaha Firfircoon
+	Dynamic Block Data	Xogta Baloogga Firfircoon
+	Dynamic Block Grips	Qabsadayaasha Baloogga Firfircoon
+	Dynamic Block Reference	Tixraaca Baloogga Firfircoon
+	Edit Block Definition	Tafatir Qeexidda Baloogga
+	Edit Command Aliases (PGP)...	Tafatir Magacyada Kale ee Amarrada (PGP)...
+	Edit Multileader	Tafatir Hogaamiye-badanka
+	Edit Reference In-Place	Tafatir Tixraaca Goobta
+	Edit…	Tafatir…
+	Evaluate LISP	Qiimee LISP
+	Exclude:	Ka saar:
+	Explode Attributes to Text	U kala-jebi Astaamaha Qoraal
+	Express Tools	Express Tools
+	Font	Far
+	Grips	Qabsadayaal
+	Groups	Kooxo
+	Hatch Pick	Dooro Xariijin
+	Hatch and Gradient	Xariijin iyo Midab-isu-gudub
+	Hatch origin	Asalka xariijinta
+	Hatches	Xariijino
+	Hemispherical	Nus-kubadeed
+	Ignore	Iska indho tir
+	Imperial (inches)	Imperial (inji)
+	Implied Loops	Wareegyo Qarsoon
+	Indicate selection area	Muuji aagga xulashada
+	Interface scale	Cabbir-miisaanka interface-ka
+	Inverted	La rogay
+	Island	Jasiirad
+	Island detection	Ogaanshaha jasiiradda
+	Italic	Janjeera
+	Justify	Labada dhinac u toosi
+	Load Application...	Soo rar Barnaamij...
+	Metric (millimetres)	Mitir (milimitir)
+	More than {n} aliases.	Magacyo kale oo ka badan {n}.
+	Move/Copy/Rotate	Dhaqaaji/Koobiyee/Wareeji
+	Multiline text	Qoraal xariiqyo-badan
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Cusub iyo sawirka koowaad ee bilowga waxay isticmaalaan unugyadan ilaa qaab-sawir caadi ah la dejiyo (QNEWTEMPLATE).
+	New block	Baloog cusub
+	No alias file loaded. REINIT replaces these aliases with a file's.	Fayl magacyo kale lama soo rarin. REINIT wuxuu magacyadan kale ku beddelaa kuwa fayl.
+	Not a number or distance: {text}	Ma aha tiro ama fogaan: {text}
+	Object grouping	Kooxaynta walxaha
+	Object selection limit for display of grips	Xadka xulashada walxaha ee muujinta qabsadayaasha
+	Objects on locked layers	Walxaha ku yaal lakabyada quful
+	Open in Block Editor	Ku fur Tafatiraha Baloogga
+	Origin: {x}, {y}	Asal: {x}, {y}
+	Outer	Dibadda
+	Overline	Xariiq-sare
+	Preview	Horu-eeg
+	Query Texts	Weydii Qoraallada
+	Save Block	Kaydi Baloogga
+	Save Block As	Kaydi Baloogga Sida
+	Save Layout as Template	U kaydi Qaab-dhigga sida Qaab-sawir
+	Save Reference Edits	Kaydi Tafatirka Tixraaca
+	Save alias	Kaydi magaca kale
+	Save changes to block "{name}"?	Ma kaydisaa isbeddellada baloogga "{name}"?
+	Select boundaries to remove	Dooro xuduudaha la saarayo
+	Select using two clicks only	Dooro adigoo isticmaalaya laba gujis oo keliya
+	Selection Area Effect	Saamaynta Aagga Xulashada
+	Selection Preview Filter	Shaandhada Horu-eegga Xulashada
+	Selection area opacity:	Mugdi-la'aanta aagga xulashada:
+	Selection effect color	Midabka saamaynta xulashada
+	Selection modes	Hababka xulashada
+	Selection preview	Horu-eegga xulashada
+	Set Dynamic Property	Deji Astaan Firfircoon
+	Shape	Qaab
+	Sheet Books to PDF...	Buugaagta Waraaqaha ilaa PDF...
+	Show grips	Muuji qabsadayaasha
+	Specified origin	Asal la cayimay
+	Spherical	Kubadeed
+	Tables	Shaxo
+	Text color	Midabka qoraalka
+	Top left	Sare bidix
+	Top right	Sare midig
+	Type an alias name.	Qor magac kale.
+	Underline	Xariiq-hoose
+	Units of new drawings	Unugyada sawirrada cusub
+	Unsaved changes	Isbeddello aan la kaydin
+	Use current origin	Isticmaal asalka hadda
+	Visual Effect Settings	Dejinta Saamaynta Muuqaalka
+	Visual Effect Settings...	Dejinta Saamaynta Muuqaalka...
+	When a command is active	Marka amar firfircoon yahay
+	When no command is active	Marka aan amar firfircoon ahayn
+	Window selection color:	Midabka xulashada daaqadda:
+	Working Set	Kooxda Shaqada
+	Xref and Block In-place Editing	Tafatirka Goobta ee Xref iyo Baloogga
+	Xrefs	Xref-yo
+	built-in	ku-dhisan
+	overrides built-in	ka gudba ku-dhisanka
+	{alias} is already defined; select it and use Edit.	{alias} horay ayaa loo qeexay; dooro oo isticmaal Tafatir.
+	{command} is an unknown command.	{command} waa amar aan la aqoon.
+	Find All	Raadi Dhammaan
+	Find what:	Raadi waxa:
+	Match case	Isku-eeg xarfaha waaweyn
+	Replace	Beddel
+	Replace All	Beddel Dhammaan
+	Replace with:	Ku beddel:
+	Replacement text	Qoraalka beddelka
+	Results	Natiijooyin
+	Searches the current space.	Wuxuu raadiyaa meesha hadda.
+	Text to find	Qoraalka la raadinayo
+	Whole words	Erayo dhan
+	Nothing found	Waxba lama helin
+	E	E
+	N	N
+	S	S
+	W	W
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Nadiifi Faylasha Dhowaan
+	contains authoring elements. Open in Block Editor?	wuxuu leeyahay walxo qoris. Ku fur Tafatiraha Baloogga?
+	Custom	Gaar ah
+	Open Recent	Fur Dhowaan
+	This drawing	Sawirkan
+	Arrow size	Cabbirka fallaarta
+	Dim scale overall	Cabbir-miisaanka guud ee cabbirka
+	Precision	Saxnaan
+	Apply to Layout	Ku codso Qaab-dhigga
+	Center the plot	Bartamee daabacaadda
+	Enter block names to extract	Geli magacyada baloogyada la soo saarayo
+	Enter geometric characteristic	Geli sifada joomatari
+	Enter name of LISP file to load	Geli magaca faylka LISP ee la soo rarayo
+	First corner	Geeska koowaad
+	Fit to paper	Ku habboonee warqadda
+	Landscape	Jiif
+	Limits	Xuduudo
+	Opposite corner	Geeska ka soo horjeeda
+	Orientation	Jihaynta
+	Paper size	Cabbirka warqadda
+	Plot area	Aagga daabacaadda
+	Plot object lineweights	Daabac culeyska xariiqa walxaha
+	Plot offset	Leexinta daabacaadda
+	Plot transparency	Daabac daahfurnaanta
+	Portrait	Taagan
+	Printer/plotter	Daabace/plotter
+	Window <	Daaqad <
+	X offset (mm)	Leexinta X (mm)
+	Y offset (mm)	Leexinta Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstrom
+	Architectural	Dhismeed
+	Astronomical Units	Unugyada Xiddigiska
+	Centimeters	Sentimitir
+	Decameters	Dekamitir
+	Decimal	Tobanle
+	Decimal Degrees	Darajooyin Tobanle
+	Decimeters	Desimitir
+	Deg/Min/Sec	Daraj/Daq/Il
+	Don't Save	Ha Kaydin
+	Drawing Units	Unugyada Sawirka
+	Engineering	Injineernimo
+	Feet	Fuudh
+	Fractional	Jajab
+	Gigameters	Gigamitir
+	Grads	Grad
+	Hectometers	Hektomitir
+	Inches	Inji
+	Insertion scale	Cabbir-miisaanka gelinta
+	Kilometers	Kiilomitir
+	Light Years	Sannado Iftiin
+	Meters	Mitir
+	Microinches	Micro-inji
+	Microns	Micron
+	Miles	Mayl
+	Millimeters	Milimitir
+	Mils	Mil
+	Nanometers	Nanomitir
+	Parsecs	Parsec
+	Radians	Radian
+	Sample output	Tusaale wax-soo-saar
+	Save changes to {name}?	Ma kaydisaa isbeddellada {name}?
+	Scientific	Saynis
+	Surveyor's Units	Unugyada Sahanka
+	Unitless	Unug la'aan
+	Units to scale inserted content	Unugyada lagu cabbirayo waxa la geliyo
+	US Survey Feet	Fuudh Sahanka US
+	US Survey Inch	Inji Sahanka US
+	US Survey Mile	Mayl Sahanka US
+	US Survey Yard	Yaardi Sahanka US
+	Yards	Yaardi
+	Your changes will be lost if you don't save them.	Isbeddelladaadu way lumi doonaan haddii aadan kaydin.
+	Layouts	Qaab-dhiggyo
+	Associate	Isku-xir
+	Clip Xref	Jar Xref
+	Xref Clip Frame	Qaabka Jarista Xref
+	Minimize	Yaree
+	Maximize	Weynee
+	Restore Down	Soo celi Hoos
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft iyo astaanta DraftCraft waa calaamado ganacsi oo ay leedahay DraftCraft Engineering Ventures.
+	Conic	Qaroori
+	Spline Fit	Ku-habboonaanta Spline
+	Spline CV	Spline CV
+	Specify start point of conic	Cayi dhibicda bilowga qaroori
+	Specify apex (where the end tangents meet)	Cayi caarada (meesha taabashooyinka dhammaadku ku kulmaan)
+	Specify end point of conic	Cayi dhibicda dhammaadka qaroori
+	Specify rho or a point on the conic	Cayi rho ama dhibic qaroori dusheeda
+	Check for Updates...	Hubi Cusboonaysiinta...
+	Check for Updates	Hubi Cusboonaysiinta
+	Update Available	Cusboonaysiin ayaa Diyaar ah
+	DraftCraft {version} is available.	DraftCraft {version} waa diyaar.
+	You have version {version}.	Waxaad haysataa nooca {version}.
+	Do you want to download the update?	Ma rabtaa inaad soo dejiso cusboonaysiinta?
+	What's new	Maxaa cusub
+	What's New	Maxaa Cusub
+	Download	Soo deji
+	Later	Hadhow
+	Skip This Version	Ka bood Noocan
+	DraftCraft is up to date (version {version}).	DraftCraft waa casri (nooca {version}).
+	Do you want to install the update now?	Ma rabtaa inaad hadda rakibto cusboonaysiinta?
+	Update Now	Cusboonaysii Hadda
+	Open the release page	Fur bogga sii-deynta
+	This copy of DraftCraft can't update itself.	Nuqulkan DraftCraft isma cusboonaysiin karo.
+	Updating DraftCraft	Waa la cusboonaysiinayaa DraftCraft
+	Update Failed	Cusboonaysiintu way Fashilantay
+	Installing DraftCraft {version}	Waa la rakibayaa DraftCraft {version}
+	Downloading: {done} of {total} MB	Soo dejinta: {done} ka mid ah {total} MB
+	Installing…	Waa la rakibayaa…
+	Starting the download…	Waa la bilaabayaa soo dejinta…
+	The connection dropped; trying again…	Xiriirkii wuu go'ay; mar kale ayaa la isku dayayaa…
+	DraftCraft {version} is installed.	DraftCraft {version} waa la rakibay.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Dib u bilow DraftCraft si aad u isticmaasho. Haddii aad hadhow dib u bilowdo, wuxuu furmayaa marka xigta ee aad bilowdo DraftCraft.
+	Restart Now	Dib u bilow Hadda
+	The update could not be installed.	Cusboonaysiinta lama rakibi karin.
+	You can download it from the release page instead.	Taa beddelkeeda waxaad ka soo dejisan kartaa bogga sii-deynta.
+	2D Wireframe	Silig-qaab 2D
+	Annotate	Faallee
+	Blocks Palette	Guddiga Baloogyada
+	CAD Standards	Heerarka CAD
+	Commands	Amarro
+	2D Drafting	Sawir-farsamo 2D
+	Edit Aliases	Tafatir Magacyada Kale
+	Image	Sawir
+	Palettes	Guddiyo
+	Top	Dusha
+	Units	Unugyo
+	Workspace	Goobta Shaqada
+	Ribbon	Ribbon
+	PDF Underlay...	Hoos-dhig PDF...
+	PDF Import	Soo dejinta PDF
+	PDF Underlay	Hoos-dhig PDF
+	Underlay Layers	Lakabyada Hoos-dhigga
+	Raster Image Reference...	Tixraaca Sawirka Raster...
+	Close Text Editor	Xir Tafatiraha Qoraalka
+	Image Clip	Jarista Sawirka
+	PDF Clip	Jarista PDF
+	Image Adjust	Hagaaji Sawirka
+	PDF Adjust	Hagaaji PDF
+	Adjust...	Hagaaji...
+	Parameter	Halbeeg
+	Action	Ficil
+	DesignCenter	DesignCenter
+	Tool Palettes	Guddiyada Qalabka
+	Sheet Set Manager	Maamulaha Kooxda Waraaqaha
+	Type the drawing's path, then press Enter.	Qor waddada sawirka, kadibna riix Enter.
+	Drawing file	Faylka sawirka
+	Folder	Gal
+	Linetypes	Noocyada xariiqa
+	Text Styles	Qaababka Qoraalka
+	Dimension Styles	Qaababka Cabbirka
+	Table Styles	Qaababka Shaxda
+	Multileader Styles	Qaababka Hogaamiye-badanka
+	Multiline Styles	Qaababka Xariiq-badanka
+	Add to Drawing	Ku dar Sawirka
+	Create Tool Palette	Samee Guddi Qalab
+	Nothing of this kind in the file.	Faylka kuma jiro wax noocan ah.
+	Open a drawing to see its blocks, layers and styles.	Fur sawir si aad u aragto baloogyadiisa, lakabyadiisa iyo qaababkiisa.
+	Delete Palette	Tirtir Guddiga
+	New Palette	Guddi Cusub
+	No tool palettes.	Guddiyo qalab ma jiraan.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Guddigan waa madhan yahay: hoos ku dar amar, ama ka samee guddi DesignCenter.
+	Delete Tool	Tirtir Qalabka
+	Add Command	Ku dar Amar
+	New Sheet Set...	Kooxda Waraaqaha Cusub...
+	Open Sheet Set...	Fur Kooxda Waraaqaha...
+	Sheet sets (DCSS)	Kooxaha waraaqaha (DCSS)
+	Sheet set file	Faylka kooxda waraaqaha
+	Make or open a sheet set to list its sheets.	Samee ama fur koox waraaqo si aad u liis-garayso waraaqaheeda.
+	Add Drawing...	Ku dar Sawir...
+	Publish to PDF...	U daabac PDF...
+	No sheets yet: add a drawing's layouts.	Weli waraaqo ma jiraan: ku dar qaab-dhiggyada sawir.
+	Number	Lambar
+	Title	Cinwaan
+	Move Up	Kor u dhaqaaji
+	Move Down	Hoos u dhaqaaji
+	Sheet Set (DCSS)	Kooxda Waraaqaha (DCSS)
+	Close Tool Palettes	Xir Guddiyada Qalabka
+	Close DesignCenter	Xir DesignCenter
+	Close Sheet Set Manager	Xir Maamulaha Kooxda Waraaqaha
+	Manage Tool Palettes	Maamul Guddiyada Qalabka
+	Changes apply at once; Save Current As keeps them in a workspace.	Isbeddelladu isla markiiba way dhaqan galaan; Kaydi Kan Hadda Sida wuxuu ku hayaa goob shaqo.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Guji lakabyada si aad u muujiso iyaga oo keliya; Ctrl ama Shift wuxuu ku darayaa doorashada.
+	Current Workspace	Goobta Shaqada ee Hadda
+	Customize Interface	Habee Interface-ka
+	Customize User Interface	Habee Interface-ka Isticmaalaha
+	Customize...	Habee...
+	Edit Aliases...	Tafatir Magacyada Kale...
+	Force object color and linetype to ByLayer	Ku qasab midabka iyo nooca xariiqa walaxda ByLayer
+	Geographic Location	Goobta Juqraafiyeed
+	Geographic Location...	Goobta Juqraafiyeed...
+	Latitude	Loolka
+	Longitude	Dhigga
+	North direction	Jihada Waqooyi
+	Layer Translation Mappings	Khariidaynta Turjumidda Lakabka
+	Layer Translator	Turjumaha Lakabka
+	Layer Translator...	Turjumaha Lakabka...
+	Layer Walk	Socodka Lakabka
+	Layer Walk...	Socodka Lakabka...
+	Location	Goob
+	Set Location	Deji Goobta
+	Remove Location	Saar Goobta
+	The drawing's origin is at this place (WGS 84 degrees).	Asalka sawirku wuxuu ku yaal meeshan (darajooyinka WGS 84).
+	Map	Khariidee
+	New layer name	Magaca lakabka cusub
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Weli khariidayn ma jirto: bidix ka dooro lakabyo, midig ka dooro magac, kadibna Khariidee.
+	Translate	Turjun
+	Translate From	Ka Turjun
+	Translate To	U Turjun
+	Restore on exit	Soo celi marka laga baxo
+	Point Cloud	Daruur Dhibcood
+	Point Cloud...	Daruur Dhibcood...
+	Point clouds (XYZ, LAS)	Daruuraha dhibcaha (XYZ, LAS)
+	ZIP archive	Kayd ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Baarka Qalabka Gelitaanka Degdegga ah
+	Rename	Dib u magacaw
+	Reset to Standard	Ku celi Heerka-caadiga
+	Ribbon Tabs	Tab-yada Ribbon-ka
+	Save Current As	Kaydi Kan Hadda Sida
+	Save Current As...	Kaydi Kan Hadda Sida...
+	Save Workspace	Kaydi Goobta Shaqada
+	User Interface	Interface-ka Isticmaalaha
+	Workspace Settings	Dejinta Goobta Shaqada
+	Workspace Settings...	Dejinta Goobta Shaqada...
+	Workspace name	Magaca goobta shaqada
+	Workspace:	Goobta shaqada:
+	Workspaces	Goobaha Shaqada
+	Interface...	Interface...
+	Export Attribute Information...	Dhoofi Macluumaadka Astaamaha...
+	Import Attribute Information...	Soo deji Macluumaadka Astaamaha...
+	Export Attributes	Dhoofi Astaamaha
+	Import Attributes	Soo deji Astaamaha
+	Text, tab-delimited (TXT)	Qoraal, tab-kala-xadeysan (TXT)
+	Import Settings	Soo deji Dejinta
+	Export Settings	Dhoofi Dejinta
+	Import Settings...	Soo deji Dejinta...
+	Export Settings...	Dhoofi Dejinta...
+	DraftCraft settings (TOML)	Dejinta DraftCraft (TOML)
+	Total Area and Length	Bedka iyo Dhererka Guud
+	Total Area	Bedka Guud
+	Specify point to place the totals as text	Cayi dhibicda wadarta loogu dhigayo qoraal ahaan
+	Metric	Mitir
+	Imperial	Imperial
+	A new drawing in millimeters	Sawir cusub oo milimitir ah
+	A new drawing in inches	Sawir cusub oo inji ah
+	A new drawing in centimeters	Sawir cusub oo sentimitir ah
+	Metric (centimetres)	Mitir (sentimitir)
+	Join the ArtCraft Discord…	Ku biir Discord-ka ArtCraft…
+	Join us on Discord	Nagula soo biir Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Mid ka mid ah Crafting Apps ee kooxda ArtCraft iyo bulshada.
+	Change	Beddel
+	Multiple Insert	Gelin Badan
+	Ctrl+Enter to apply	Ctrl+Enter si aad u codsato
+	Edit Text	Tafatir Qoraalka
+	The drawing changed. Close the window and open it again.	Sawirku wuu isbeddelay. Xir daaqadda oo mar kale fur.
+	DView	DView
+	Raster Images	Sawirro Raster
+	Xref	Xref
+	Backup copies are off, so the current file will be replaced.	Nuqullada kaydka ah waa dansan yihiin, sidaa darteed faylka hadda waa la beddeli doonaa.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 iyo kuwii ka horreeyay way hayaan. Isticmaal Kaydi Sida si aad sawirka ugu hayso.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF way haysaa. Isticmaal Kaydi Sida si aad sawirka ugu hayso.
+	Save Anyway	Kaydi Si Kastaba
+	Save cancelled: {path} was not changed.	Kaydinta waa la joojiyay: {path} lama beddelin.
+	Saving {name} will remove content	Kaydinta {name} waxay saari doontaa waxyaabo
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Faylka hadda uma muuqdo mid dhammaystiran, sidaa darteed {name} sida uu yahay ayuu ahaanayaa, faylka hadda waana la beddeli doonaa.
+	The current file is kept as {name} until the next save.	Faylka hadda waxaa loo hayaa {name} ilaa kaydinta xigta.
+	This format can't keep these objects yet: {objects}.	Qaabkani weli ma hayn karo walxahan: {objects}.
+	{count} more types	{count} nooc oo kale
+	Additional Tools	Qalab Dheeraad ah
+	Keyboard Shortcuts...	Furayaasha Gaaban ee Kiiboodhka...
+	Keyboard Shortcuts	Furayaasha Gaaban ee Kiiboodhka
+	Replaces the shortcut of {commands}	Wuxuu beddelaa furaha gaaban ee {commands}
+	Needs Ctrl, Alt or a function key	Wuxuu u baahan yahay Ctrl, Alt ama fure shaqo
+	Press the keys	Riix furayaasha
+	Back to DraftCraft's shortcut	Ku noqo furaha gaaban ee DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Furaha gaaban ee aad bixiso wuxuu ka adkaadaa kan DraftCraft. Isbeddelladu isla markiiba way dhaqan galaan waxaana loo hayaa mar kale.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Marka la damiyo, midig-gujinta inta amar socdo waxay samaysaa waxa Habaynta Midig-gujinta u dejiso habka Amarka.
+	Right-Click Customization...	Habaynta Midig-gujinta...
+	Right-Click Customization	Habaynta Midig-gujinta
+	Turn on time-sensitive right-click	Daar midig-gujinta waqti-ku-xiran
+	Longer click duration:	Muddada gujinta dheer:
+	milliseconds	milisekond
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Inta amar socdo, gujis degdeg ah waa Enter, gujis dheerina wuxuu furaa liiska gaaban.
+	Default Mode	Habka Caadiga
+	No objects selected and no command running:	Walxo lama dooran, amarna ma socdo:
+	Edit Mode	Habka Tafatirka
+	Objects selected and no command running:	Walxo waa la doortay, amarna ma socdo:
+	Repeat last command	Ku celi amarkii ugu dambeeyay
+	Shortcut Menu	Liiska Gaaban
+	Command Mode	Habka Amarka
+	While a command runs:	Inta amar socdo:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Liiska Gaaban: had iyo jeer daaran
+	Shortcut Menu: enabled when command options are present	Liiska Gaaban: daaran marka doorashooyin amar jiraan
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Soo dejin: halkan ma jiro wada-hadal fayl; orod ALIASEDIT adigoo waxa faylka ku jira siinaya halbeegga text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Magacyada kale waxaa lagu kaydiyaa profile-kaaga DraftCraft, waxayna sii jiraan dib-u-bilowga kadib.
+	Import…	Soo dejin…
+	Run ALIASEDIT with the file's contents using its text parameter.	Orod ALIASEDIT adigoo waxa faylka ku jira siinaya halbeegga text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Soo dejinta fayl waxay beddeshaa {n} magacyadaada kale, iyo isbeddel kasta oo aan weli la codsan.
+	Import and replace	Soo deji oo beddel
+	Keep my aliases	Hay magacyadayda kale
+	{n} more warnings; see the command line.	{n} digniino oo kale; eeg xariiqa amarrada.
+	Unit	Unug
+	Drawing units: {unit}, {format}	Unugyada sawirka: {unit}, {format}
+	NEW DRAWING	SAWIR CUSUB
+	OPEN	FUR
+	WORKSPACE	GOOBTA SHAQADA
