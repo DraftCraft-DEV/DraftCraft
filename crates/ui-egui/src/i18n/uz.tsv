@@ -1,0 +1,1695 @@
+# DraftCraft Uzbek (O‘zbekcha) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Bekor qilish  
+	  OK  	  OK  
+	 or [	 yoki [
+	% of all commits	barcha commitlarning %
+	* Wildcard Match	* Andoza bo‘yicha moslik
+	*VARIES*	*TURLICHA*
+	+  |  Top  |  2D Wireframe	+  |  Yuqori  |  2D Sim karkas
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 ko‘rinish oynasi
+	2 Points	2 nuqta
+	2 Viewports	2 ko‘rinish oynasi
+	2D Solid	2D Qattiq jism
+	3 Points	3 nuqta
+	3 Viewports	3 ko‘rinish oynasi
+	3D Face	3D Yoq
+	3D Mouse	3D Sichqoncha
+	3D Mouse Navigation	3D Sichqoncha bilan navigatsiya
+	3D Mouse...	3D Sichqoncha...
+	3D Operations	3D Amallar
+	3D Polyline	3D Polichiziq
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D sichqoncha band, ehtimol 3DxWare yoki qurilma ruxsatlari yetishmaydi
+	3D mouse connected	3D sichqoncha ulandi
+	3D mouse disconnected	3D sichqoncha uzildi
+	3D mouse input could not be started	3D sichqoncha kiritishini ishga tushirib bo‘lmadi
+	3D mouse input is unavailable on this platform	3D sichqoncha kiritishi bu platformada mavjud emas
+	4 Viewports	4 ko‘rinish oynasi
+	< Less than	< Kichik
+	<> Not Equal	<> Teng emas
+	= Equals	= Teng
+	> Greater than	> Katta
+	A built-in table: editing it keeps an edited copy in the drawing.	Ichki jadval: uni tahrirlash chizmada tahrirlangan nusxasini saqlaydi.
+	A drawing opened from a file keeps that file's format.	Fayldan ochilgan chizma o‘sha faylning formatini saqlaydi.
+	A variable name starts with a letter and has only letters, digits and _	O‘zgaruvchi nomi harf bilan boshlanadi va faqat harflar, raqamlar va _ dan iborat
+	About	Haqida
+	About DraftCraft	DraftCraft haqida
+	Absolute	Mutlaq
+	Accessibility	Maxsus imkoniyatlar
+	Add	Qo‘shish
+	Add Current Scale	Joriy masshtabni qo‘shish
+	Add Leader	Chiqarish chizig‘ini qo‘shish
+	Add Vertex	Uchni qo‘shish
+	Add/Delete Scales...	Masshtablarni qo‘shish/o‘chirish...
+	Additional angles	Qo‘shimcha burchaklar
+	Align	Tekislash
+	Align Text	Matnni tekislash
+	Aligned	Parallel
+	All	Hammasi
+	All Annotation Objects	Barcha annotatsiya obyektlari
+	All Scales	Barcha masshtablar
+	All Used Layers	Barcha ishlatilgan qatlamlar
+	All files	Barcha fayllar
+	An array that would create more objects than this is refused.	Bundan ko‘p obyekt yaratadigan massiv rad etiladi.
+	Angle	Burchak
+	Angular	Burchak o‘lchami
+	Annotation Visibility	Annotatsiyalar ko‘rinishi
+	Annotation scale	Annotatsiya masshtabi
+	Annotative Object Scale	Annotativ obyekt masshtabi
+	Annotative Update	Annotativ yangilash
+	Apparent Intersection	Ko‘rinadigan kesishish
+	Append to current selection set	Joriy tanlov to‘plamiga qo‘shish
+	Apply	Qo‘llash
+	Apply to:	Qo‘llash:
+	Apply true color	Haqiqiy rangni qo‘llash
+	Arc	Yoy
+	Arc Length	Yoy uzunligi
+	Area	Yuza
+	Arrange Panel	Panelni joylashtirish
+	Array	Massiv
+	Attach	Biriktirish
+	Attach DWG...	DWG biriktirish...
+	Attribute	Atribut
+	Attribute Definition	Atribut taʼrifi
+	Attribute Display	Atributlarni ko‘rsatish
+	Audit	Tekshiruv
+	Auto (system language)	Avtomatik (tizim tili)
+	Auto Constrain	Avtomatik bog‘lanish
+	AutoConstrain	AvtoBog‘lanish
+	Automatic save every	Avtomatik saqlash oralig‘i
+	Automatic save file location	Avtomatik saqlash fayli joylashuvi
+	Axis, End	O‘q, oxiri
+	Base	Baza
+	Baseline	Bazaviy chiziq
+	Batch Publish	Paketli nashr
+	Batch Publish...	Paketli nashr...
+	Binary assets added	Qo‘shilgan ikkilik fayllar
+	Binary assets removed	Olib tashlangan ikkilik fayllar
+	Bind	Bog‘lash
+	Bind...	Bog‘lash...
+	Blend	O‘tish egri chizig‘i
+	Block	Blok
+	Block Attribute Manager...	Blok atributlari menejeri...
+	Block Description...	Blok tavsifi...
+	Block Editor	Blok muharriri
+	Block Reference	Blok havolasi
+	Block...	Blok...
+	Blocks	Bloklar
+	Blue	Ko‘k
+	Bold	Qalin
+	Boolean	Mantiqiy amal
+	Boundary	Kontur
+	Boundary...	Kontur...
+	Box	Quti
+	Break	Uzish
+	Break At Point	Nuqtada uzish
+	Bring Above Objects	Obyektlar ustiga chiqarish
+	Bring Annotations to Front	Annotatsiyalarni oldinga chiqarish
+	Bring to Front	Oldinga chiqarish
+	Bulleted list	Belgili ro‘yxat
+	ByBlock	BlokBo‘yicha
+	ByColor	RangBo‘yicha
+	ByLayer	QatlamBo‘yicha
+	DraftCraft Help	DraftCraft yordami
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft bu sozlamalar, obyekt bog‘lash rejimlari va chizma kalitlarini foydalanuvchi hisobingiz uchun saqlaydi va ishga tushganda tiklaydi.
+	Calibrate	Kalibrlash
+	Calibrate 3D Mouse	3D sichqonchani kalibrlash
+	Cancel	Bekor qilish
+	Cartesian (x, y)	Dekart (x, y)
+	Center	Markaz
+	Center Line	Markaz chizig‘i
+	Center Mark	Markaz belgisi
+	Center X	Markaz X
+	Center Y	Markaz Y
+	Center Z	Markaz Z
+	Center, Diameter	Markaz, diametr
+	Center, Radius	Markaz, radius
+	Center, Start, Angle	Markaz, boshi, burchak
+	Center, Start, End	Markaz, boshi, oxiri
+	Center, Start, Length	Markaz, boshi, uzunlik
+	Chamfer	Faska
+	Change Space	Fazoni o‘zgartirish
+	Change to Current Layer	Joriy qatlamga o‘tkazish
+	Changed: {n}	O‘zgartirildi: {n}
+	Changes apply at once and are kept for next time.	O‘zgarishlar darhol qo‘llanadi va keyingi safar uchun saqlanadi.
+	Circle	Aylana
+	Circumference	Aylana uzunligi
+	Clear	Tozalash
+	Clear Command History	Buyruqlar tarixini tozalash
+	Reset Suggestion Order	Takliflar tartibini tiklash
+	Clear History	Tarixni tozalash
+	Clip	Qirqish
+	Clip Viewport	Ko‘rinish oynasini qirqish
+	Clipboard	Almashuv buferi
+	Close	Yopish
+	Close All	Hammasini yopish
+	Close All Other Drawings	Boshqa barcha chizmalarni yopish
+	Close Array Editing	Massiv tahririni yopish
+	Close Comparison	Taqqoslashni yopish
+	Export Comparison	Taqqoslashni eksport qilish
+	Closed	Yopiq
+	Coincident	Ustma-ust
+	Collapse Palettes	Palitralarni yig‘ish
+	Collapse Tool Sets	Asboblar to‘plamlarini yig‘ish
+	Collinear	Kollinear
+	Color	Rang
+	Color 8	Rang 8
+	Color 9	Rang 9
+	Color Index	Rang indeksi
+	Color-dependent	Rangga bog‘liq
+	Color...	Rang...
+	Command Aliases	Buyruq taxalluslari
+	Command History	Buyruqlar tarixi
+	Command Line	Buyruqlar satri
+	Command Line History Lines	Buyruqlar satri tarixi qatorlari
+	Command Reference	Buyruqlar maʼlumotnomasi
+	Command line history	Buyruqlar satri tarixi
+	Commits	Commitlar
+	Company	Kompaniya
+	Compare Drawings...	Chizmalarni taqqoslash...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Kompyuterli loyihalash va chizmachilik: to‘liq Rust tilida yozilgan, ochiq manbali, clean-room CAD dasturi.
+	Concentric	Konsentrik
+	Cone	Konus
+	Constraint Bars	Bog‘lanish panellari
+	Constraint Settings	Bog‘lanish sozlamalari
+	Construction Line	Yordamchi chiziq
+	Contents	Mundarija
+	Continue	Davom etish
+	Contributors	Hissa qo‘shganlar
+	Control Vertices	Boshqaruv uchlari
+	Convert	Aylantirish
+	Convert to Arc	Yoyga aylantirish
+	Convert to Line	Chiziqqa aylantirish
+	Copy	Nusxalash
+	Copy Full File Path	Faylning to‘liq yo‘lini nusxalash
+	Copy History	Tarixni nusxalash
+	Copy Layout	Maketni nusxalash
+	Copy Nested Objects	Ichki obyektlarni nusxalash
+	Copy Selection	Tanlovni nusxalash
+	Copy as JSON	JSON sifatida nusxalash
+	Copy with Base Point	Baza nuqtasi bilan nusxalash
+	Count	Sanash
+	Count List	Sanash ro‘yxati
+	Count Table	Sanash jadvali
+	Create Block	Blok yaratish
+	Creates a user parameter	Foydalanuvchi parametrini yaratadi
+	Crosshair size	Nishon ko‘rsatkichi o‘lchami
+	Ctrl+Enter to finish	Tugatish uchun Ctrl+Enter
+	Current Scale Only	Faqat joriy masshtab
+	Current layer	Joriy qatlam
+	Current selection	Joriy tanlov
+	Current: {color}	Joriy: {color}
+	Cut	Kesib olish
+	Cut with Base Point	Baza nuqtasi bilan kesib olish
+	Cyan	Havorang
+	Cylinder	Silindr
+	DWG	DWG
+	DWG Reference...	DWG havolasi...
+	DXF	DXF
+	Dark	Qorong‘i
+	Data Extraction...	Maʼlumotlarni ajratib olish...
+	Data Link...	Maʼlumotlar havolasi...
+	Default	Standart
+	Default Save Format	Standart saqlash formati
+	Default Save Version	Standart saqlash versiyasi
+	Default save version	Standart saqlash versiyasi
+	Define Attributes	Atributlarni aniqlash
+	Define Attributes...	Atributlarni aniqlash...
+	Defined width	Belgilangan kenglik
+	Degree	Daraja
+	Degrees of Freedom	Erkinlik darajalari
+	Degrees of freedom: {n}	Erkinlik darajalari: {n}
+	Delete	O‘chirish
+	Delete Column	Ustunni o‘chirish
+	Delete Constraints	Bog‘lanishlarni o‘chirish
+	Delete Current Scale	Joriy masshtabni o‘chirish
+	Delete Dimension Style	O‘lcham uslubini o‘chirish
+	Delete Duplicate Objects	Takroriy obyektlarni o‘chirish
+	Delete Layer	Qatlamni o‘chirish
+	Delete Layer State	Qatlam holatini o‘chirish
+	Delete Layout	Maketni o‘chirish
+	Delete Row	Qatorni o‘chirish
+	Delete Text Style	Matn uslubini o‘chirish
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Tavsif
+	Deselect All	Tanlovni bekor qilish
+	Detach	Ajratish
+	Diameter	Diametr
+	Dim style	O‘lcham uslubi
+	Dimension	O‘lcham
+	Dimension Break	O‘lcham uzilishi
+	Dimension Edit	O‘lchamni tahrirlash
+	Dimension Objects Only	Faqat o‘lcham obyektlari
+	Dimension Space	O‘lcham oralig‘i
+	Dimension Style Override	O‘lcham uslubini almashtirish
+	Dimension Style...	O‘lcham uslubi...
+	Dimension Text Edit	O‘lcham matnini tahrirlash
+	Dimension style	O‘lcham uslubi
+	Dimensional Constraint	O‘lcham bog‘lanishi
+	Dimensional Constraint Parameters	O‘lcham bog‘lanishi parametrlari
+	Dimensional Constraints	O‘lcham bog‘lanishlari
+	Disassociate Dimensions	O‘lchamlar assotsiatsiyasini bekor qilish
+	Display	Ko‘rsatish
+	Display name	Ko‘rsatiladigan nom
+	Display plot styles	Chop etish uslublarini ko‘rsatish
+	Distance	Masofa
+	Divide	Bo‘lish
+	Do not plot (click: plot)	Chop etilmaydi (bosing: chop etish)
+	Donut	Halqa
+	Double-click to edit the description	Tavsifni tahrirlash uchun ikki marta bosing
+	Down	Pastga
+	Drafting	Chizmachilik
+	Drafting Settings	Chizmachilik sozlamalari
+	Drafting Settings...	Chizmachilik sozlamalari...
+	Draw	Chizish
+	Draw Order	Chizish tartibi
+	Drawing (DWG)	Chizma (DWG)
+	Drawing (DXF)	Chizma (DXF)
+	Drawing Limits	Chizma chegaralari
+	Drawing Recovery Manager...	Chizmalarni tiklash menejeri...
+	Drawing Template (DWT)	Chizma shabloni (DWT)
+	Drawing Utilities	Chizma yordamchi vositalari
+	Drawing as bytes	Bayt ko‘rinishidagi chizma
+	Drawings (DWG, DXF)	Chizmalar (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Hali fayli bo‘lmagan chizmalar standart versiyada saqlanadi. 0 daqiqa avtomatik saqlashni o‘chiradi.
+	Dynamic	Dinamik
+	Dynamic Dimensions	Dinamik o‘lchamlar
+	Dynamic Input	Dinamik kiritish
+	Dynamic Input (F12)	Dinamik kiritish (F12)
+	Edit	Tahrirlash
+	Edit Array	Massivni tahrirlash
+	Edit Attributes...	Atributlarni tahrirlash...
+	Edit Table Cell	Jadval katagini tahrirlash
+	Edit Text...	Matnni tahrirlash...
+	Elevation	Balandlik sathi
+	Ellipse	Ellips
+	Elliptical Arc	Elliptik yoy
+	Enable 3D mouse navigation	3D sichqoncha navigatsiyasini yoqish
+	Enable Dynamic Input (F12)	Dinamik kiritishni yoqish (F12)
+	End Object Isolation	Obyektlar izolyatsiyasini tugatish
+	End Width	Oxirgi kenglik
+	End X	Oxiri X
+	End Y	Oxiri Y
+	End angle	Oxirgi burchak
+	Endpoint	Oxirgi nuqta
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Top, Zero yoki Bottom kiriting.
+	Enter a fit data option	Moslash maʼlumotlari parametrini kiriting
+	Enter a pattern name	Naqsh nomini kiriting
+	Enter a vertex editing option	Uchni tahrirlash parametrini kiriting
+	Enter an option	Parametrni kiriting
+	Enter angle of xline	Yordamchi chiziq burchagini kiriting
+	Enter angle of xline (0)	Yordamchi chiziq burchagini kiriting (0)
+	Enter area of rectangle in current units	To‘rtburchak yuzasini joriy birliklarda kiriting
+	Enter attribute prompt	Atribut so‘rovini kiriting
+	Enter attribute tag name	Atribut tegi nomini kiriting
+	Enter attribute value	Atribut qiymatini kiriting
+	Enter block name	Blok nomini kiriting
+	Enter constraint type	Bog‘lanish turini kiriting
+	Enter continuity	Uzluksizlikni kiriting
+	Enter default attribute value	Standart atribut qiymatini kiriting
+	Enter degree of spline	Splayn darajasini kiriting
+	Enter delta angle	Delta burchakni kiriting
+	Enter delta length	Delta uzunlikni kiriting
+	Enter dimension text	O‘lcham matnini kiriting
+	Enter dimension text (<> = measurement)	O‘lcham matnini kiriting (<> = o‘lchov)
+	Enter dimension value or [name=expression]	O‘lcham qiymatini kiriting yoki [nom=ifoda]
+	Enter dimension variable name to override	Almashtiriladigan o‘lcham o‘zgaruvchisi nomini kiriting
+	Enter justification type	Tekislash turini kiriting
+	Enter leader text	Chiqarish matnini kiriting
+	Enter mline scale	Multichiziq masshtabini kiriting
+	Enter mode	Rejimni kiriting
+	Enter name of block to insert	Qo‘yiladigan blok nomini kiriting
+	Enter new text	Yangi matnni kiriting
+	Enter next point	Keyingi nuqtani kiriting
+	Enter number of columns	Ustunlar sonini kiriting
+	Enter number of data rows	Maʼlumot qatorlari sonini kiriting
+	Enter number of items	Elementlar sonini kiriting
+	Enter number of items along path	Yo‘l bo‘ylab elementlar sonini kiriting
+	Enter number of sides	Tomonlar sonini kiriting
+	Enter number of turns	O‘ramlar sonini kiriting
+	Enter percentage length	Foizda uzunlikni kiriting
+	Enter rectangle length	To‘rtburchak uzunligini kiriting
+	Enter rectangle width	To‘rtburchak kengligini kiriting
+	Enter scale factor	Masshtab koeffitsiyentini kiriting
+	Enter text	Matnni kiriting
+	Enter text (use \P for new paragraphs)	Matnni kiriting (yangi xatboshilar uchun \P dan foydalaning)
+	Enter the number of segments	Segmentlar sonini kiriting
+	Enter twist direction of helix	Spiral buralish yo‘nalishini kiriting
+	Entire drawing	Butun chizma
+	Equal	Teng
+	Erase	O‘chirish (yo‘qotish)
+	Evaluate	Hisoblash
+	Exclude from new selection set	Yangi tanlov to‘plamidan chiqarish
+	Explode	Parchalash
+	Export	Eksport
+	Export Table	Jadvalni eksport qilish
+	Export to PDF...	PDF ga eksport qilish...
+	Export...	Eksport...
+	Expression	Ifoda
+	Extend	Cho‘zish (uzaytirish)
+	Extension	Kengaytma
+	Extents	Chegaralar
+	External Reference	Tashqi havola
+	External References	Tashqi havolalar
+	Extrude	Ekstruziya
+	File	Fayl
+	File Tab	Fayl yorlig‘i
+	Fillet	Silliqlash (tutashtirish)
+	Filter	Filtr
+	Filters	Filtrlar
+	Find and Replace	Topish va almashtirish
+	Find...	Topish...
+	First	Birinchi
+	First commit	Birinchi commit
+	Fit Points	Moslash nuqtalari
+	Fix	Mahkamlash
+	Flatten Objects	Obyektlarni tekislash
+	Format	Format
+	Freehand	Erkin chizish
+	Freeze	Muzlatish
+	Freeze Layer	Qatlamni muzlatish
+	Freeze in new viewports	Yangi ko‘rinish oynalarida muzlatish
+	Freeze/Thaw	Muzlatish/Eritish
+	Freeze/Thaw in all viewports	Barcha ko‘rinish oynalarida muzlatish/eritish
+	Freeze/Thaw in the current viewport	Joriy ko‘rinish oynasida muzlatish/eritish
+	From	Qayerdan
+	From Template...	Shablondan...
+	General	Umumiy
+	Geometric Center	Geometrik markaz
+	Geometric Constraint	Geometrik bog‘lanish
+	Geometric Constraints	Geometrik bog‘lanishlar
+	Geometry	Geometriya
+	Get Variable	O‘zgaruvchini olish
+	Get View	Ko‘rinishni olish
+	Get from the Drawing	Chizmadan olish
+	Global	Global
+	Global width	Global kenglik
+	Grab bag	Aralash
+	Gradient	Gradiyent
+	Gradient...	Gradiyent...
+	Grayscale	Kulrang tuslar
+	Green	Yashil
+	Grid (F7)	To‘r (F7)
+	Grid Display	To‘rni ko‘rsatish
+	Grid On (F7)	To‘r yoqilgan (F7)
+	Grid snap	To‘rga bog‘lash
+	Grid spacing	To‘r qadami
+	Grip Edit	Tutqich bilan tahrirlash
+	Grip Mirror	Tutqich bilan akslantirish
+	Grip Option	Tutqich parametri
+	Grip Rotate	Tutqich bilan burish
+	Grip Scale	Tutqich bilan masshtablash
+	Grip Stretch	Tutqich bilan cho‘zish
+	Grip size	Tutqich o‘lchami
+	Group	Guruh
+	Group Edit	Guruhni tahrirlash
+	Group Options	Guruh parametrlari
+	Group Selection	Guruh tanlovi
+	Hatch	Shtrixovka
+	Hatch Edit	Shtrixovkani tahrirlash
+	Hatch Pattern	Shtrixovka naqshi
+	Hatch Patterns	Shtrixovka naqshlari
+	Hatch...	Shtrixovka...
+	Height	Balandlik
+	Height: {height}	Balandlik: {height}
+	Helix	Spiral
+	Help	Yordam
+	Hide All	Hammasini yashirish
+	Hide All Constraint Bars	Barcha bog‘lanish panellarini yashirish
+	Hide All Dynamic Dimensions	Barcha dinamik o‘lchamlarni yashirish
+	Hide DraftCraft	DraftCraft ni yashirish
+	Hide Layer List	Qatlamlar ro‘yxatini yashirish
+	Hide Objects	Obyektlarni yashirish
+	Hide Others	Boshqalarni yashirish
+	Hide Palette	Palitrani yashirish
+	Hide Palettes	Palitralarni yashirish
+	History	Tarix
+	Hold Shift to add to the selection	Tanlovga qo‘shish uchun Shift ni bosib turing
+	Home	Bosh sahifa
+	Horizontal	Gorizontal
+	HorizontalDistance	Gorizontal masofa
+	How to apply:	Qanday qo‘llash:
+	ID Point	Nuqta koordinatalari
+	Import	Import
+	Import...	Import...
+	In	Yaqinlashtirish
+	In-window Menu Bar	Oyna ichidagi menyu satri
+	Include in new selection set	Yangi tanlov to‘plamiga kiritish
+	Increment angle	Burchak qadami
+	Index Color	Indeks rangi
+	Index color: {index}	Indeks rangi: {index}
+	Infer Constraints	Bog‘lanishlarni aniqlash
+	Inquiry	So‘rov
+	Insert	Qo‘yish
+	Insert Block	Blok qo‘yish
+	Insert Column	Ustun qo‘yish
+	Insert Row	Qator qo‘yish
+	Insert Table Formula	Jadval formulasini qo‘yish
+	Insert tab	Qo‘yish yorlig‘i
+	Insert this block	Bu blokni qo‘yish
+	Insertion	Qo‘yish nuqtasi
+	Insertion X	Qo‘yish X
+	Insertion Y	Qo‘yish Y
+	Insertion Z	Qo‘yish Z
+	Inspect Constraints	Bog‘lanishlarni tekshirish
+	Inspect Drawing	Chizmani tekshirish
+	Inspection	Tekshirish
+	Interface Language	Interfeys tili
+	Interface Theme	Interfeys mavzusi
+	Interface language	Interfeys tili
+	Interface theme	Interfeys mavzusi
+	Intersect	Kesishtirish
+	Intersection	Kesishish
+	Isolate	Izolyatsiya qilish
+	Isolate Layer	Qatlamni izolyatsiya qilish
+	Isolate Objects	Obyektlarni izolyatsiya qilish
+	Isometric Drafting	Izometrik chizmachilik
+	Isometric Plane	Izometrik tekislik
+	Isometric snap	Izometrik bog‘lash
+	Jogged	Siniq
+	Jogged Linear	Siniq chiziqli o‘lcham
+	Join	Birlashtirish
+	Keep an editable copy of this table in the drawing	Bu jadvalning tahrirlanadigan nusxasini chizmada saqlash
+	Keep the system cursor visible over the drawing area	Tizim kursorini chizma maydoni ustida ko‘rinadigan qilish
+	Language	Til
+	Largest array	Eng katta massiv
+	Last	Oxirgi
+	Last commit	Oxirgi commit
+	Layer	Qatlam
+	Layer Delete	Qatlamni o‘chirish
+	Layer Match	Qatlamni moslash
+	Layer Merge	Qatlamlarni birlashtirish
+	Layer Off	Qatlamni o‘chirib qo‘yish
+	Layer Properties	Qatlam xususiyatlari
+	Layer Properties Manager	Qatlam xususiyatlari menejeri
+	Layer Properties Manager — current viewport	Qatlam xususiyatlari menejeri — joriy ko‘rinish oynasi
+	Layer State	Qatlam holati
+	Layer States Manager...	Qatlam holatlari menejeri...
+	Layer Tools	Qatlam vositalari
+	Layer contains objects (double-click to make current)	Qatlamda obyektlar bor (joriy qilish uchun ikki marta bosing)
+	Layer is empty (double-click to make current)	Qatlam bo‘sh (joriy qilish uchun ikki marta bosing)
+	Layers	Qatlamlar
+	Layers Palette	Qatlamlar palitrasi
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Ko‘rsatilgan qatlamlar: {shown} / {total}.   Joriy qatlam: {layer}
+	Layout	Maket
+	Layout list	Maketlar ro‘yxati
+	Layout paper	Maket qog‘ozi
+	Layout {name}: {table}	Maket {name}: {table}
+	Leader	Chiqarish chizig‘i
+	Leaders Only	Faqat chiqarish chiziqlari
+	Left	Chap
+	Left device button: zoom extents. Right device button: calibrate.	Qurilmaning chap tugmasi: chegaralargacha kattalashtirish. O‘ng tugma: kalibrlash.
+	Length	Uzunlik
+	Length X	Uzunlik X
+	Length Y	Uzunlik Y
+	Lengthen	Uzunlikni o‘zgartirish
+	Light	Yorug‘
+	Line	Chiziq
+	Line delta	Qatorlar farqi
+	Linear	Chiziqli
+	Lines +/−	Qatorlar +/−
+	Lines added	Qo‘shilgan qatorlar
+	Lines deleted	O‘chirilgan qatorlar
+	Lines of Command History	Buyruqlar tarixi qatorlari
+	Linetype	Chiziq turi
+	Linetype Scale	Chiziq turi masshtabi
+	Linetype scale	Chiziq turi masshtabi
+	Linetype...	Chiziq turi...
+	Lineweight	Chiziq qalinligi
+	Lineweight...	Chiziq qalinligi...
+	List	Ro‘yxat
+	List Blocks	Bloklar ro‘yxati
+	List Dimension Styles	O‘lcham uslublari ro‘yxati
+	List Groups	Guruhlar ro‘yxati
+	List Layer States	Qatlam holatlari ro‘yxati
+	List Layouts	Maketlar ro‘yxati
+	List System Variables	Tizim o‘zgaruvchilari ro‘yxati
+	List Text Styles	Matn uslublari ro‘yxati
+	Load all	Hammasini yuklash
+	Load...	Yuklash...
+	Loaded	Yuklangan
+	Loaded linetypes	Yuklangan chiziq turlari
+	Lock	Qulflash
+	Lock Layer	Qatlamni qulflash
+	Lock viewport	Ko‘rinish oynasini qulflash
+	Lock/Unlock	Qulflash/Qulfdan chiqarish
+	Loft	Loft
+	Ltscale	Chiziq turi masshtabi
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Autodesk, Inc. bilan bog‘liq emas.
+	MODEL	MODEL
+	MText	MText
+	Magenta	Pushti binafsha
+	Major line every	Asosiy chiziq har
+	Make Current	Joriy qilish
+	Make Object's Layer Current	Obyekt qatlamini joriy qilish
+	Make it a block of this drawing, keeping its layer names	Qatlam nomlarini saqlagan holda uni bu chizmaning bloki qilish
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Uni bu chizmaning bloki qilish; qatlamlari NAME$0$LAYER bo‘ladi
+	Make...	Yaratish...
+	Match Layer	Qatlamni moslash
+	Match Properties	Xususiyatlarni moslash
+	Measure	O‘lchab bo‘lish
+	Measure Distance	Masofani o‘lchash
+	Measure Geometry	Geometriyani o‘lchash
+	Merge Cells	Kataklarni birlashtirish
+	Merged PRs	Birlashtirilgan PRlar
+	Mid Between 2 Points	2 nuqta o‘rtasi
+	Midpoint	O‘rta nuqta
+	Mirror	Akslantirish
+	Model	Model
+	Model Space (in viewport)	Model fazosi (ko‘rinish oynasida)
+	Model background	Model foni
+	Modeling	Modellashtirish
+	Models	Modellar
+	Modify	O‘zgartirish
+	More toolbar commands	Boshqa asboblar paneli buyruqlari
+	Move	Ko‘chirish
+	Move sideways to pan; push/pull or twist to zoom.	Surish uchun yon tomonga harakatlantiring; kattalashtirish uchun itaring/torting yoki burang.
+	Multileader	Ko‘p chiqarishli chiziq
+	Multileader Style...	Ko‘p chiqarishli chiziq uslubi...
+	Multileader style	Ko‘p chiqarishli chiziq uslubi
+	Multiline	Multichiziq
+	Multiline Style...	Multichiziq uslubi...
+	Multiline Text	Ko‘p qatorli matn
+	Multiline Text...	Ko‘p qatorli matn...
+	Multiline...	Multichiziq...
+	Multiple	Bir nechta
+	Multiple Point	Bir nechta nuqta
+	My	Mening
+	My properties: not available yet	Mening xususiyatlarim: hali mavjud emas
+	Name	Nom
+	Name (A–Z)	Nom (A–Z)
+	Named	Nomlangan
+	Named Viewports...	Nomlangan ko‘rinish oynalari...
+	Named Views...	Nomlangan ko‘rinishlar...
+	Nearest	Eng yaqin
+	New	Yangi
+	New (metric)	Yangi (metrik)
+	New CTB	Yangi CTB
+	New Drawing	Yangi chizma
+	New Drawing (⌘N)	Yangi chizma (⌘N)
+	New Drawing...	Yangi chizma...
+	New Layer	Yangi qatlam
+	New Layout	Yangi maket
+	New STB	Yangi STB
+	New VP Freeze	Yangi KO da muzlatish
+	New Viewports...	Yangi ko‘rinish oynalari...
+	New from Template...	Shablondan yangi...
+	New layout	Yangi maket
+	New state name	Yangi holat nomi
+	New style	Yangi uslub
+	Next Change	Keyingi o‘zgarish
+	No	Yo‘q
+	No blocks defined in this drawing.	Bu chizmada bloklar aniqlanmagan.
+	No contributor data was built into this copy.	Bu nusxaga hissa qo‘shganlar maʼlumoti kiritilmagan.
+	No external references are attached.	Hech qanday tashqi havola biriktirilmagan.
+	No model credits were built into this copy.	Bu nusxaga model mualliflari kiritilmagan.
+	No plot style tables.	Chop etish uslubi jadvallari yo‘q.
+	No saved layer states	Saqlangan qatlam holatlari yo‘q
+	No selection	Tanlov yo‘q
+	No supported 3D mouse found	Qo‘llab-quvvatlanadigan 3D sichqoncha topilmadi
+	Node	Tugun
+	None	Hech biri
+	Normal	Oddiy
+	Not Found	Topilmadi
+	Not available	Mavjud emas
+	Not available yet	Hali mavjud emas
+	Not loaded	Yuklanmagan
+	Numbered list	Raqamli ro‘yxat
+	OK	OK
+	Object	Obyekt
+	Object Snap	Obyektga bog‘lash
+	Object Snap (F3)	Obyektga bog‘lash (F3)
+	Object Snap On (F3)	Obyektga bog‘lash yoqilgan (F3)
+	Object Snap Tracking	Obyektga bog‘lab kuzatish
+	Object Snap Tracking (F11)	Obyektga bog‘lab kuzatish (F11)
+	Object Snap Tracking Settings	Obyektga bog‘lab kuzatish sozlamalari
+	Object snap aperture	Obyektga bog‘lash aperturasi
+	Object snap marker size	Obyektga bog‘lash markeri o‘lchami
+	Object type:	Obyekt turi:
+	Oblique	Qiya
+	Off	O‘chiq
+	Offset	Parallel siljitish
+	On	Yoqilgan
+	On/Off	Yoqish/O‘chirish
+	Only in this drawing: {n}	Faqat bu chizmada: {n}
+	Only in {name}: {n}	Faqat {name} da: {n}
+	Oops	O‘chirilganlarni tiklash
+	Open	Ochish
+	Open (⌘O)	Ochish (⌘O)
+	Open Sample Drawing	Namuna chizmani ochish
+	Open Xref	Tashqi havolani ochish
+	Open a drawing first.	Avval chizmani oching.
+	Open and Save	Ochish va saqlash
+	Open sample drawing	Namuna chizmani ochish
+	Open...	Ochish...
+	Operator:	Operator:
+	Options	Parametrlar
+	Options...	Parametrlar...
+	Orbit	Orbita
+	Ordinate	Ordinata
+	Ortho (F8)	Orto (F8)
+	Ortho Mode	Orto rejimi
+	Ortho Mode (F8)	Orto rejimi (F8)
+	Osnap Settings...	Obyektga bog‘lash sozlamalari...
+	Out	Uzoqlashtirish
+	Over-constrained	Ortiqcha bog‘langan
+	Overlay	Ustiga qo‘yish
+	Override	Almashtirish
+	PAPER	QOG‘OZ
+	PRs	PRlar
+	Page Setup Manager	Sahifa sozlamalari menejeri
+	Page Setup Manager...	Sahifa sozlamalari menejeri...
+	Pan	Surish
+	Pan Down	Pastga surish
+	Pan Left	Chapga surish
+	Pan Right	O‘ngga surish
+	Pan Up	Yuqoriga surish
+	Pan sensitivity	Surish sezgirligi
+	Paper Space	Qog‘oz fazosi
+	Parallel	Parallel
+	Parameters Manager	Parametrlar menejeri
+	Parametric	Parametrik
+	Paste	Joylashtirish
+	Paste as Block	Blok sifatida joylashtirish
+	Paste to Command Line	Buyruqlar satriga joylashtirish
+	Paste to Original Coordinates	Asl koordinatalarga joylashtirish
+	Path Array	Yo‘l bo‘ylab massiv
+	Pattern	Naqsh
+	Percent	Foiz
+	Perpendicular	Perpendikulyar
+	Pickbox size	Tanlash qutisi o‘lchami
+	Plot	Chop etish
+	Plot (click: do not plot)	Chop etiladi (bosing: chop etmaslik)
+	Plot Preview	Chop etishni oldindan ko‘rish
+	Plot Style Manager	Chop etish uslublari menejeri
+	Plot Style Manager...	Chop etish uslublari menejeri...
+	Plot Style...	Chop etish uslubi...
+	Plot Styles...	Chop etish uslublari...
+	Plot Window	Chop etish oynasi
+	Plot style	Chop etish uslubi
+	Plot style attached to	Chop etish uslubi biriktirilgan
+	Plot style table	Chop etish uslubi jadvali
+	Plot table type	Chop etish jadvali turi
+	Plotter Manager	Plotterlar menejeri
+	Plotter Manager...	Plotterlar menejeri...
+	Plus/minus	Plyus/minus
+	Point	Nuqta
+	Point Filters	Nuqta filtrlari
+	Point Style...	Nuqta uslubi...
+	Polar (distance < angle)	Qutbiy (masofa < burchak)
+	Polar Array	Qutbiy massiv
+	Polar Tracking	Qutbiy kuzatish
+	Polar Tracking (F10)	Qutbiy kuzatish (F10)
+	Polar Tracking On (F10)	Qutbiy kuzatish yoqilgan (F10)
+	Polar angle measurement	Qutbiy burchakni o‘lchash
+	Polar distance	Qutbiy masofa
+	Polar: {distance} < {angle}°	Qutbiy: {distance} < {angle}°
+	PolarSnap	Qutbiy bog‘lash
+	Polygon	Ko‘pburchak
+	Polygonal	Ko‘pburchakli
+	Polygonal Viewport	Ko‘pburchakli ko‘rinish oynasi
+	Polyline	Polichiziq
+	Polyline Edit	Polichiziqni tahrirlash
+	Position X	Joylashuv X
+	Position Y	Joylashuv Y
+	Position Z	Joylashuv Z
+	Previous	Oldingi
+	Previous Change	Oldingi o‘zgarish
+	Previous Layer	Oldingi qatlam
+	Primitives	Primitivlar
+	Print	Chop etish
+	Print...	Chop etish...
+	Profiles	Profillar
+	Properties	Xususiyatlar
+	Properties Inspector	Xususiyatlar inspektori
+	Properties:	Xususiyatlar:
+	Proxy	Proksi
+	Purge	Tozalash (ortiqchalarni)
+	Pyramid	Piramida
+	Quadrant	Kvadrant
+	Query Entities	Obyektlarni so‘rash
+	Quick	Tezkor
+	Quick Dimension	Tezkor o‘lcham
+	Quick Properties	Tezkor xususiyatlar
+	Quick Select	Tezkor tanlash
+	Quick Select Properties	Tezkor tanlash xususiyatlari
+	Quick Select...	Tezkor tanlash...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	QuickCalc tanlovi
+	Quit DraftCraft	DraftCraft dan chiqish
+	Radius	Radius
+	Raster Image	Rastr tasvir
+	Ray	Nur
+	Read-only	Faqat o‘qish uchun
+	Real name	Haqiqiy ism
+	Realtime	Real vaqtda
+	Reassociate Dimensions	O‘lchamlarni qayta assotsiatsiyalash
+	Recalculate Table Formulas	Jadval formulalarini qayta hisoblash
+	Recent	So‘nggi
+	Recent Commands	So‘nggi buyruqlar
+	Recent Input	So‘nggi kiritishlar
+	Recover...	Tiklash...
+	Rectangle	To‘rtburchak
+	Rectangular	To‘rtburchakli
+	Rectangular Array	To‘rtburchakli massiv
+	Rectangular snap	To‘rtburchakli bog‘lash
+	Red	Qizil
+	Redo	Qaytarish
+	Redo (⇧⌘Z)	Qaytarish (⇧⌘Z)
+	Redraw	Qayta chizish
+	Reference Manager	Havolalar menejeri
+	Reference Name	Havola nomi
+	References: {n}	Havolalar: {n}
+	Regen	Regeneratsiya
+	Regen All	Hammasini regeneratsiya qilish
+	Region	Region
+	Region/Mass Properties	Region/massa xususiyatlari
+	Reinitialize	Qayta ishga tushirish
+	Relative	Nisbiy
+	Relative to last segment	Oxirgi segmentga nisbatan
+	Release the 3D mouse to calibrate its resting position	Tinch holatini kalibrlash uchun 3D sichqonchani qo‘yib yuboring
+	Reload	Qayta yuklash
+	Reload All	Hammasini qayta yuklash
+	Remove	Olib tashlash
+	Remove Leader	Chiqarish chizig‘ini olib tashlash
+	Remove Vertex	Uchni olib tashlash
+	Remove the viewport override	Ko‘rinish oynasi almashtirishini olib tashlash
+	Rename Dimension Style	O‘lcham uslubini qayta nomlash
+	Rename Layer	Qatlamni qayta nomlash
+	Rename Layer State	Qatlam holatini qayta nomlash
+	Rename Layout	Maketni qayta nomlash
+	Rename Text Style	Matn uslubini qayta nomlash
+	Rename...	Qayta nomlash...
+	Repeat {command}	{command} ni takrorlash
+	Replace Block...	Blokni almashtirish...
+	Requires a point (x,y, @dx,dy or @d<a).	Nuqta talab qilinadi (x,y, @dx,dy yoki @d<a).
+	Reset Palettes	Palitralarni tiklash
+	Reset Panel Layout	Panellar joylashuvini tiklash
+	Reset keeps the interface language.	Tiklash interfeys tilini saqlab qoladi.
+	Reset to Defaults	Standart holatga qaytarish
+	Restore	Tiklash
+	Restore Layer State	Qatlam holatini tiklash
+	Reverse	Teskari aylantirish
+	Reverse the order	Tartibni teskari aylantirish
+	Reverse zoom direction	Kattalashtirish yo‘nalishini teskari qilish
+	Revision Cloud	Tahrir buluti
+	Revolve	Aylantirib jism hosil qilish
+	Right	O‘ng
+	Rotate	Burish
+	Rotation	Burilish
+	Run Script...	Skriptni ishga tushirish...
+	SVG drawings (SVG, SVGZ)	SVG chizmalar (SVG, SVGZ)
+	Save	Saqlash
+	Save (⌘S)	Saqlash (⌘S)
+	Save As	Boshqacha saqlash
+	Save As...	Boshqacha saqlash...
+	Save Layer State	Qatlam holatini saqlash
+	Save State	Holatni saqlash
+	Save new drawings as	Yangi chizmalarni quyidagicha saqlash
+	Saved Path	Saqlangan yo‘l
+	Scale	Masshtablash
+	Scale List...	Masshtablar ro‘yxati...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Ekran kattalashtirgichlari, ekran o‘qigichlari va yozib olish dasturlari tizim kursoriga ergashadi.
+	Screening	Ekranlash
+	Search for layer	Qatlamni qidirish
+	Search for parameter	Parametrni qidirish
+	Search for pattern	Naqshni qidirish
+	Second and next points:	Ikkinchi va keyingi nuqtalar:
+	Select	Tanlash
+	Select 2D polyline	2D polichiziqni tanlang
+	Select All	Hammasini tanlash
+	Select Objects	Obyektlarni tanlash
+	Select Similar	O‘xshashlarini tanlash
+	Select a 2D polyline.	2D polichiziqni tanlang.
+	Select a block reference.	Blok havolasini tanlang.
+	Select a circle or arc.	Aylana yoki yoyni tanlang.
+	Select a closed polyline	Yopiq polichiziqni tanlang
+	Select a closed polyline, circle, ellipse or closed spline.	Yopiq polichiziq, aylana, ellips yoki yopiq splaynni tanlang.
+	Select a closed polyline.	Yopiq polichiziqni tanlang.
+	Select a curve as the path.	Yo‘l sifatida egri chiziqni tanlang.
+	Select a dimension constraint type	O‘lcham bog‘lanishi turini tanlang
+	Select a line object	Chiziq obyektini tanlang
+	Select a line object.	Chiziq obyektini tanlang.
+	Select a line or an arc.	Chiziq yoki yoyni tanlang.
+	Select a line or polyline segment	Chiziq yoki polichiziq segmentini tanlang
+	Select a line, arc or open polyline.	Chiziq, yoy yoki ochiq polichiziqni tanlang.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Yo‘l sifatida chiziq, yoy, aylana, polichiziq, ellips yoki splaynni tanlang.
+	Select a line, circle, arc or polyline segment.	Chiziq, aylana, yoy yoki polichiziq segmentini tanlang.
+	Select a line.	Chiziqni tanlang.
+	Select a polyline.	Polichiziqni tanlang.
+	Select a text, mtext, attribute definition or dimension.	Matn, mtext, atribut taʼrifi yoki o‘lchamni tanlang.
+	Select an annotation object	Annotatsiya obyektini tanlang
+	Select an arc or circle	Yoy yoki aylanani tanlang
+	Select an arc.	Yoyni tanlang.
+	Select an object	Obyektni tanlang
+	Select an object to change	O‘zgartiriladigan obyektni tanlang
+	Select an object to measure	O‘lchanadigan obyektni tanlang
+	Select an object.	Obyektni tanlang.
+	Select an open curve.	Ochiq egri chiziqni tanlang.
+	Select an open line, arc, polyline, ellipse arc or spline.	Ochiq chiziq, yoy, polichiziq, elliptik yoy yoki splaynni tanlang.
+	Select arc or circle	Yoy yoki aylanani tanlang
+	Select arc or polyline arc segment	Yoy yoki polichiziqning yoy segmentini tanlang
+	Select arc style	Yoy uslubini tanlang
+	Select arc, circle, line	Yoy, aylana, chiziqni tanlang
+	Select at least two objects to join.	Birlashtirish uchun kamida ikkita obyektni tanlang.
+	Select circle or arc to add center mark	Markaz belgisi qo‘shish uchun aylana yoki yoyni tanlang
+	Select closed objects (regions, closed polylines, circles).	Yopiq obyektlarni tanlang (regionlar, yopiq polichiziqlar, aylanalar).
+	Select first line	Birinchi chiziqni tanlang
+	Select first line or arc	Birinchi chiziq yoki yoyni tanlang
+	Select first object	Birinchi obyektni tanlang
+	Select first point	Birinchi nuqtani tanlang
+	Select nested objects to copy	Nusxalanadigan ichki obyektlarni tanlang
+	Select object	Obyektni tanlang
+	Select object to dimension	O‘lcham qo‘yiladigan obyektni tanlang
+	Select object to divide	Bo‘linadigan obyektni tanlang
+	Select object to extend or shift-select to trim	Uzaytiriladigan obyektni tanlang yoki qirqish uchun Shift bilan tanlang
+	Select object to measure	O‘lchanadigan obyektni tanlang
+	Select object to offset	Parallel siljitiladigan obyektni tanlang
+	Select object to trim or shift-select to extend	Qirqiladigan obyektni tanlang yoki uzaytirish uchun Shift bilan tanlang
+	Select objects	Obyektlarni tanlang
+	Select objects (crossing window first corner)	Obyektlarni tanlang (kesuvchi oynaning birinchi burchagi)
+	Select objects first, then choose a command	Avval obyektlarni tanlang, so‘ng buyruqni tanlang
+	Select objects to array.	Massiv uchun obyektlarni tanlang.
+	Select objects to stretch by crossing-window or crossing-polygon...	Cho‘ziladigan obyektlarni kesuvchi oyna yoki kesuvchi ko‘pburchak bilan tanlang...
+	Select objects:	Obyektlarni tanlang:
+	Select one polyline (Multiple is available through the JSON form).	Bitta polichiziqni tanlang (Bir nechta JSON shakli orqali mavjud).
+	Select path curve	Yo‘l egri chizig‘ini tanlang
+	Select point or object	Nuqta yoki obyektni tanlang
+	Select polyline	Polichiziqni tanlang
+	Select second line	Ikkinchi chiziqni tanlang
+	Select second line or shift-select to apply corner	Ikkinchi chiziqni tanlang yoki burchak qo‘llash uchun Shift bilan tanlang
+	Select second object	Ikkinchi obyektni tanlang
+	Select second object or shift-select to apply corner	Ikkinchi obyektni tanlang yoki burchak qo‘llash uchun Shift bilan tanlang
+	Select second point	Ikkinchi nuqtani tanlang
+	Select spline	Splaynni tanlang
+	Select symmetry line	Simmetriya chizig‘ini tanlang
+	Select two points	Ikki nuqtani tanlang
+	Selection	Tanlov
+	Selection Cycling	Tanlovni aylantirish
+	Send Hatches to Back	Shtrixovkalarni orqaga yuborish
+	Send Under Objects	Obyektlar ostiga yuborish
+	Send to Back	Orqaga yuborish
+	Services	Xizmatlar
+	Set Current	Joriy qilish
+	Set Current Dimension Style	Joriy o‘lcham uslubini belgilash
+	Set Current Text Style	Joriy matn uslubini belgilash
+	Set Current Viewport	Joriy ko‘rinish oynasini belgilash
+	Set Layer Properties	Qatlam xususiyatlarini belgilash
+	Set Properties	Xususiyatlarni belgilash
+	Set Table Cell	Jadval katagini belgilash
+	Set Table Cell Style	Jadval katagi uslubini belgilash
+	Set Variable	O‘zgaruvchini belgilash
+	Set View	Ko‘rinishni belgilash
+	Settings...	Sozlamalar...
+	Share	Ulashish
+	Show	Ko‘rsatish
+	Show All	Hammasini ko‘rsatish
+	Show All Constraint Bars	Barcha bog‘lanish panellarini ko‘rsatish
+	Show All Dynamic Dimensions	Barcha dinamik o‘lchamlarni ko‘rsatish
+	Show Annotative Objects	Annotativ obyektlarni ko‘rsatish
+	Show Layer List	Qatlamlar ro‘yxatini ko‘rsatish
+	Show Quick Properties for selected objects	Tanlangan obyektlar uchun tezkor xususiyatlarni ko‘rsatish
+	Show System Cursor	Tizim kursorini ko‘rsatish
+	Show and hide the tools of this category	Bu toifa vositalarini ko‘rsatish va yashirish
+	Show command prompting near the crosshairs	Buyruq so‘rovlarini nishon yonida ko‘rsatish
+	Show in Tool Sets	Asboblar to‘plamlarida ko‘rsatish
+	Show/Hide Lineweight	Chiziq qalinligini ko‘rsatish/yashirish
+	Show/Hide Transparency	Shaffoflikni ko‘rsatish/yashirish
+	Single Line Text	Bir qatorli matn
+	Single Point	Bitta nuqta
+	Single...	Bitta...
+	Smooth	Silliqlash
+	Snap	Bog‘lash
+	Snap Mode	Bog‘lash rejimi
+	Snap Mode (F9)	Bog‘lash rejimi (F9)
+	Snap On (F9)	Bog‘lash yoqilgan (F9)
+	Snap Overrides	Bog‘lashni almashtirish
+	Snap X spacing	Bog‘lash X qadami
+	Snap and Grid	Bog‘lash va to‘r
+	Snap type	Bog‘lash turi
+	Snap, grid, polar tracking and Dynamic Input:	Bog‘lash, to‘r, qutbiy kuzatish va dinamik kiritish:
+	Solid	Qattiq
+	Solid Editing	Qattiq jismni tahrirlash
+	Sort	Saralash
+	Specify a point	Nuqtani ko‘rsating
+	Specify a scale for the hatch pattern	Shtrixovka naqshi uchun masshtabni ko‘rsating
+	Specify a second extension line origin	Ikkinchi chiqarish chizig‘i boshini ko‘rsating
+	Specify an angle for the hatch pattern	Shtrixovka naqshi uchun burchakni ko‘rsating
+	Specify angle end point	Burchakning oxirgi nuqtasini ko‘rsating
+	Specify angle of dimension line	O‘lcham chizig‘i burchagini ko‘rsating
+	Specify angle of dimension text	O‘lcham matni burchagini ko‘rsating
+	Specify angle start point	Burchakning boshlang‘ich nuqtasini ko‘rsating
+	Specify angle vertex	Burchak uchini ko‘rsating
+	Specify angle vertex point	Burchak uchi nuqtasini ko‘rsating
+	Specify arc length dimension location	Yoy uzunligi o‘lchami joyini ko‘rsating
+	Specify axis endpoint of ellipse	Ellips o‘qining oxirgi nuqtasini ko‘rsating
+	Specify base diameter	Asos diametrini ko‘rsating
+	Specify base point	Baza nuqtasini ko‘rsating
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Baza nuqtasini yoki siljishni ko‘rsating (real vaqtda surish uchun sichqonchaning o‘rta tugmasi bilan torting)
+	Specify base radius	Asos radiusini ko‘rsating
+	Specify center of donut	Halqa markazini ko‘rsating
+	Specify center of ellipse	Ellips markazini ko‘rsating
+	Specify center of polygon	Ko‘pburchak markazini ko‘rsating
+	Specify center point for circle	Aylana markaz nuqtasini ko‘rsating
+	Specify center point of arc	Yoy markaz nuqtasini ko‘rsating
+	Specify center point of arc (hold Ctrl to switch direction)	Yoy markaz nuqtasini ko‘rsating (yo‘nalishni almashtirish uchun Ctrl ni bosib turing)
+	Specify center point of array	Massiv markaz nuqtasini ko‘rsating
+	Specify center point of base	Asos markaz nuqtasini ko‘rsating
+	Specify corner of viewport	Ko‘rinish oynasi burchagini ko‘rsating
+	Specify corner of window, enter a scale factor (nX or nXP)	Oyna burchagini ko‘rsating, masshtab koeffitsiyentini kiriting (nX yoki nXP)
+	Specify diameter of circle	Aylana diametrini ko‘rsating
+	Specify dimension arc line location	O‘lcham yoy chizig‘i joyini ko‘rsating
+	Specify dimension line location	O‘lcham chizig‘i joyini ko‘rsating
+	Specify distance between turns	O‘ramlar orasidagi masofani ko‘rsating
+	Specify distance to other axis	Boshqa o‘qgacha masofani ko‘rsating
+	Specify end angle	Oxirgi burchakni ko‘rsating
+	Specify end point of arc	Yoyning oxirgi nuqtasini ko‘rsating
+	Specify end point of arc (hold Ctrl to switch direction)	Yoyning oxirgi nuqtasini ko‘rsating (yo‘nalishni almashtirish uchun Ctrl ni bosib turing)
+	Specify ending width	Oxirgi kenglikni ko‘rsating
+	Specify ending width for next segment	Keyingi segment uchun oxirgi kenglikni ko‘rsating
+	Specify endpoint of arc	Yoyning oxirgi nuqtasini ko‘rsating
+	Specify endpoint of axis	O‘qning oxirgi nuqtasini ko‘rsating
+	Specify endpoint of line	Chiziqning oxirgi nuqtasini ko‘rsating
+	Specify feature location	Element joyini ko‘rsating
+	Specify fillet radius	Silliqlash radiusini ko‘rsating
+	Specify fillet radius for rectangles	To‘rtburchaklar uchun silliqlash radiusini ko‘rsating
+	Specify first angle endpoint	Burchakning birinchi oxirgi nuqtasini ko‘rsating
+	Specify first chamfer distance	Birinchi faska masofasini ko‘rsating
+	Specify first chamfer distance for rectangles	To‘rtburchaklar uchun birinchi faska masofasini ko‘rsating
+	Specify first constraint point	Birinchi bog‘lanish nuqtasini ko‘rsating
+	Specify first corner	Birinchi burchakni ko‘rsating
+	Specify first corner point	Birinchi burchak nuqtasini ko‘rsating
+	Specify first destination point	Birinchi manzil nuqtasini ko‘rsating
+	Specify first end point of circle's diameter	Aylana diametrining birinchi oxirgi nuqtasini ko‘rsating
+	Specify first endpoint of edge	Qirraning birinchi oxirgi nuqtasini ko‘rsating
+	Specify first extension line origin	Birinchi chiqarish chizig‘i boshini ko‘rsating
+	Specify first point	Birinchi nuqtani ko‘rsating
+	Specify first point of mirror line	Akslantirish chizig‘ining birinchi nuqtasini ko‘rsating
+	Specify first point on circle	Aylanadagi birinchi nuqtani ko‘rsating
+	Specify first point on circle: _tan to	Aylanadagi birinchi nuqtani ko‘rsating: _tan to
+	Specify first source point	Birinchi manba nuqtasini ko‘rsating
+	Specify height	Balandlikni ko‘rsating
+	Specify helix height	Spiral balandligini ko‘rsating
+	Specify included angle	Ichki burchakni ko‘rsating
+	Specify included angle (hold Ctrl to switch direction)	Ichki burchakni ko‘rsating (yo‘nalishni almashtirish uchun Ctrl ni bosib turing)
+	Specify insertion base point	Qo‘yish baza nuqtasini ko‘rsating
+	Specify insertion point	Qo‘yish nuqtasini ko‘rsating
+	Specify inside diameter of donut	Halqaning ichki diametrini ko‘rsating
+	Specify leader arrowhead location	Chiqarish chizig‘i strelkasi joyini ko‘rsating
+	Specify leader endpoint	Chiqarish chizig‘i oxirgi nuqtasini ko‘rsating
+	Specify leader landing location	Chiqarish tokchasi joyini ko‘rsating
+	Specify length for rectangles	To‘rtburchaklar uchun uzunlikni ko‘rsating
+	Specify length of chord	Vatar uzunligini ko‘rsating
+	Specify length of chord (hold Ctrl to switch direction)	Vatar uzunligini ko‘rsating (yo‘nalishni almashtirish uchun Ctrl ni bosib turing)
+	Specify length of segment	Segment uzunligini ko‘rsating
+	Specify line width for rectangles	To‘rtburchaklar uchun chiziq kengligini ko‘rsating
+	Specify location for new vertex	Yangi uch joyini ko‘rsating
+	Specify minimum length of arc	Yoyning minimal uzunligini ko‘rsating
+	Specify new end point	Yangi oxirgi nuqtani ko‘rsating
+	Specify new location for marked vertex	Belgilangan uch uchun yangi joyni ko‘rsating
+	Specify new width for all segments	Barcha segmentlar uchun yangi kenglikni ko‘rsating
+	Specify next point	Keyingi nuqtani ko‘rsating
+	Specify offset distance	Parallel siljitish masofasini ko‘rsating
+	Specify opposite corner	Qarama-qarshi burchakni ko‘rsating
+	Specify other corner point	Boshqa burchak nuqtasini ko‘rsating
+	Specify other endpoint of axis	O‘qning boshqa oxirgi nuqtasini ko‘rsating
+	Specify outside diameter of donut	Halqaning tashqi diametrini ko‘rsating
+	Specify point	Nuqtani ko‘rsating
+	Specify point on object for first tangent of circle	Aylananing birinchi urinmasi uchun obyektdagi nuqtani ko‘rsating
+	Specify point on object for second tangent of circle	Aylananing ikkinchi urinmasi uchun obyektdagi nuqtani ko‘rsating
+	Specify point on side to offset	Siljitish tomonidagi nuqtani ko‘rsating
+	Specify radius of arc	Yoy radiusini ko‘rsating
+	Specify radius of arc (hold Ctrl to switch direction)	Yoy radiusini ko‘rsating (yo‘nalishni almashtirish uchun Ctrl ni bosib turing)
+	Specify radius of circle	Aylana radiusini ko‘rsating
+	Specify rotation angle	Burish burchagini ko‘rsating
+	Specify rotation angle of text	Matnning burish burchagini ko‘rsating
+	Specify scale factor	Masshtab koeffitsiyentini ko‘rsating
+	Specify second angle endpoint	Burchakning ikkinchi oxirgi nuqtasini ko‘rsating
+	Specify second break point	Ikkinchi uzish nuqtasini ko‘rsating
+	Specify second chamfer distance for rectangles	To‘rtburchaklar uchun ikkinchi faska masofasini ko‘rsating
+	Specify second constraint point	Ikkinchi bog‘lanish nuqtasini ko‘rsating
+	Specify second destination point	Ikkinchi manzil nuqtasini ko‘rsating
+	Specify second end point of circle's diameter	Aylana diametrining ikkinchi oxirgi nuqtasini ko‘rsating
+	Specify second endpoint of edge	Qirraning ikkinchi oxirgi nuqtasini ko‘rsating
+	Specify second extension line origin	Ikkinchi chiqarish chizig‘i boshini ko‘rsating
+	Specify second point	Ikkinchi nuqtani ko‘rsating
+	Specify second point of arc	Yoyning ikkinchi nuqtasini ko‘rsating
+	Specify second point of mirror line	Akslantirish chizig‘ining ikkinchi nuqtasini ko‘rsating
+	Specify second point on circle	Aylanadagi ikkinchi nuqtani ko‘rsating
+	Specify second point on circle: _tan to	Aylanadagi ikkinchi nuqtani ko‘rsating: _tan to
+	Specify second point or <use first point as displacement>	Ikkinchi nuqtani ko‘rsating yoki <birinchi nuqtani siljish sifatida ishlatish>
+	Specify second source point	Ikkinchi manba nuqtasini ko‘rsating
+	Specify side to offset	Siljitish tomonini ko‘rsating
+	Specify start angle	Boshlang‘ich burchakni ko‘rsating
+	Specify start point	Boshlang‘ich nuqtani ko‘rsating
+	Specify start point of arc	Yoyning boshlang‘ich nuqtasini ko‘rsating
+	Specify start point of polyline	Polichiziqning boshlang‘ich nuqtasini ko‘rsating
+	Specify start point of text	Matnning boshlang‘ich nuqtasini ko‘rsating
+	Specify starting width	Boshlang‘ich kenglikni ko‘rsating
+	Specify starting width for next segment	Keyingi segment uchun boshlang‘ich kenglikni ko‘rsating
+	Specify tangent direction for the start point of arc	Yoy boshlang‘ich nuqtasi uchun urinma yo‘nalishini ko‘rsating
+	Specify the elevation for rectangles	To‘rtburchaklar uchun balandlik sathini ko‘rsating
+	Specify thickness for rectangles	To‘rtburchaklar uchun qalinlikni ko‘rsating
+	Specify third point on circle	Aylanadagi uchinchi nuqtani ko‘rsating
+	Specify third point on circle: _tan to	Aylanadagi uchinchi nuqtani ko‘rsating: _tan to
+	Specify third source point or <continue>	Uchinchi manba nuqtasini ko‘rsating yoki <davom etish>
+	Specify through point	O‘tish nuqtasini ko‘rsating
+	Specify top diameter	Yuqori diametrni ko‘rsating
+	Specify top radius	Yuqori radiusni ko‘rsating
+	Specify total angle	Umumiy burchakni ko‘rsating
+	Specify total length	Umumiy uzunlikni ko‘rsating
+	Specify width for rectangles	To‘rtburchaklar uchun kenglikni ko‘rsating
+	Sphere	Shar
+	Spline	Splayn
+	Spline Edit	Splaynni tahrirlash
+	Stack (type 1/2 then select)	Kasr (1/2 yozing, so‘ng tanlang)
+	Standard	Standart
+	Start	Boshi
+	Start Width	Boshlang‘ich kenglik
+	Start X	Boshi X
+	Start Y	Boshi Y
+	Start angle	Boshlang‘ich burchak
+	Start, Center, Angle	Boshi, markaz, burchak
+	Start, Center, End	Boshi, markaz, oxiri
+	Start, Center, Length	Boshi, markaz, uzunlik
+	Start, End, Angle	Boshi, oxiri, burchak
+	Start, End, Direction	Boshi, oxiri, yo‘nalish
+	Start, End, Radius	Boshi, oxiri, radius
+	Status	Holat
+	Status Bar	Holat satri
+	Stretch	Cho‘zish
+	Stretch Vertex	Uchni cho‘zish
+	Style: Standard	Uslub: Standart
+	Subtract	Ayirish
+	Sweep	Siljitib jism hosil qilish
+	Switch Drawing	Chizmani almashtirish
+	Switch Layout	Maketni almashtirish
+	Switch between model space in a viewport and paper space	Ko‘rinish oynasidagi model fazosi va qog‘oz fazosi o‘rtasida almashish
+	Symmetric	Simmetrik
+	Synchronize Attributes	Atributlarni sinxronlash
+	Synchronize Multiple-scale Positions	Ko‘p masshtabli joylashuvlarni sinxronlash
+	TOP	YUQORI
+	Table	Jadval
+	Table Breaks	Jadval uzilishlari
+	Table Cell Style	Jadval katagi uslubi
+	Table Style...	Jadval uslubi...
+	Table style	Jadval uslubi
+	Table...	Jadval...
+	Tan, Tan, Radius	Urinma, urinma, radius
+	Tan, Tan, Tan	Urinma, urinma, urinma
+	Tangent	Urinma
+	Temporary track point	Vaqtinchalik kuzatish nuqtasi
+	Text	Matn
+	Text Editor	Matn muharriri
+	Text Height	Matn balandligi
+	Text Objects Only	Faqat matn obyektlari
+	Text Style...	Matn uslubi...
+	Text height	Matn balandligi
+	Text override	Matnni almashtirish
+	Text style	Matn uslubi
+	Thaw All Layers	Barcha qatlamlarni eritish
+	Thaw Layer	Qatlamni eritish
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Apertura obyektga bog‘lash nuqtani topishi uchun kursor unga qanchalik yaqin kelishi kerakligini belgilaydi.
+	There is nothing here yet.	Bu yerda hali hech narsa yo‘q.
+	Thickness	Qalinlik
+	Time	Vaqt
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Vaqtga sezgir o‘ng tugma: qisqa bosish Enter, bosib turish menyuni ochadi
+	To	Qayerga
+	To get started, create or open a drawing.	Boshlash uchun chizma yarating yoki oching.
+	Toggle PICKADD (off: each pick replaces the selection)	PICKADD ni almashtirish (o‘chiq: har bir tanlash tanlovni almashtiradi)
+	Toggle PICKADD (on: picks add to the selection)	PICKADD ni almashtirish (yoqilgan: tanlashlar tanlovga qo‘shiladi)
+	Tolerance...	Dopusk...
+	Tool Bar	Asboblar paneli
+	Tool Sets	Asboblar to‘plamlari
+	Tools	Vositalar
+	Torus	Tor
+	Trace	Iz
+	Track orthogonally only	Faqat ortogonal kuzatish
+	Track using all polar angle settings	Barcha qutbiy burchak sozlamalari bilan kuzatish
+	Transparency	Shaffoflik
+	Trim	Qirqish
+	True Color	Haqiqiy rang
+	Turn All Layers On	Barcha qatlamlarni yoqish
+	Turn Off Layer	Qatlamni o‘chirib qo‘yish
+	Turn On Layer	Qatlamni yoqish
+	Turn Quick Properties off (QPMODE)	Tezkor xususiyatlarni o‘chirish (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	O‘chirilganda, buyruq bajarilayotganda o‘ng tugma har doim kontekst menyusini ochadi.
+	Type	Tur
+	Type a command	Buyruq yozing
+	Type text; Enter starts a new paragraph	Matn yozing; Enter yangi xatboshi boshlaydi
+	UCS Icon	UCS belgisi
+	Undo	Bekor qilish (orqaga)
+	Undo (⌘Z)	Bekor qilish (⌘Z)
+	Ungroup	Guruhdan chiqarish
+	Union	Birlashma
+	Unisolate Layer	Qatlam izolyatsiyasini bekor qilish
+	Units Conversion	Birliklarni aylantirish
+	Units...	Birliklar...
+	Unload	Yuklamani olib tashlash
+	Unloaded	Yuklanmagan
+	Unlock Layer	Qatlamni qulfdan chiqarish
+	Unlock viewport	Ko‘rinish oynasini qulfdan chiqarish
+	Unmerge Cells	Kataklarni ajratish
+	Unreferenced	Havola qilinmagan
+	Unresolved	Hal qilinmagan
+	Unsaved Layer State	Saqlanmagan qatlam holati
+	Up	Yuqoriga
+	Update	Yangilash
+	Update Data Links	Maʼlumotlar havolalarini yangilash
+	Use System Setting	Tizim sozlamasidan foydalanish
+	Use for this layout	Bu maket uchun ishlatish
+	Use object linetype	Obyekt chiziq turidan foydalanish
+	Use object lineweight	Obyekt chiziq qalinligidan foydalanish
+	User	Foydalanuvchi
+	User Parameters	Foydalanuvchi parametrlari
+	User Preferences	Foydalanuvchi afzalliklari
+	Username	Foydalanuvchi nomi
+	VP Color	KO rangi
+	VP Freeze	KO da muzlatish
+	Value	Qiymat
+	Value:	Qiymat:
+	Variables	O‘zgaruvchilar
+	Version	Versiya
+	Version 2000	Versiya 2000
+	Version 2004	Versiya 2004
+	Version 2007	Versiya 2007
+	Version 2010	Versiya 2010
+	Version 2013	Versiya 2013
+	Version 2018	Versiya 2018
+	Version {version}	Versiya {version}
+	Vertical	Vertikal
+	VerticalDistance	Vertikal masofa
+	View	Ko‘rinish
+	ViewCube	ViewCube
+	Viewport	Ko‘rinish oynasi
+	Viewport Layer Freeze	Ko‘rinish oynasida qatlamni muzlatish
+	Viewport Properties	Ko‘rinish oynasi xususiyatlari
+	Viewport is locked	Ko‘rinish oynasi qulflangan
+	Viewport scale	Ko‘rinish oynasi masshtabi
+	Viewport {id}	Ko‘rinish oynasi {id}
+	Viewports	Ko‘rinish oynalari
+	Volume	Hajm
+	WCS	WCS
+	White	Oq
+	Width factor	Kenglik koeffitsiyenti
+	Window	Oyna
+	Wipeout	Niqoblash
+	Workspace Switching	Ish muhitini almashtirish
+	Write Block	Blokni yozish
+	X	X
+	Xline	Yordamchi chiziq
+	Y	Y
+	Yellow	Sariq
+	Yes	Ha
+	Zoom	Masshtab
+	Zoom All	Hammasini ko‘rsatish (masshtab)
+	Zoom Dynamic	Dinamik masshtab
+	Zoom Extents	Chegaralargacha kattalashtirish
+	Zoom In	Yaqinlashtirish
+	Zoom Object	Obyektga kattalashtirish
+	Zoom Out	Uzoqlashtirish
+	Zoom Previous	Oldingi masshtab
+	Zoom Realtime	Real vaqtda masshtab
+	Zoom Window	Oyna bo‘yicha masshtab
+	Zoom sensitivity	Masshtab sezgirligi
+	error	xato
+	min	daq
+	objects	obyekt
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (bog‘lanish {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} bog‘lanishi {name} = {expression}  (tahrirlash uchun ikki marta bosing)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Yangi foydalanuvchi parametri
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	Tugatish uchun ⌘↩
+@plural	{n} commit	{n} ta commit|{n} ta commit
+@plural	{n} contributor	{n} ta hissa qo‘shgan|{n} ta hissa qo‘shgan
+	Check for Updates…	Yangilanishlarni tekshirish…
+	DraftCraft is up to date.	DraftCraft eng so‘nggi versiyada.
+	Could not check for updates.	Yangilanishlarni tekshirib bo‘lmadi.
+	Add to Working Set	Ish to‘plamiga qo‘shish
+	Add: Pick points	Qo‘shish: nuqtalarni tanlash
+	Add: Select objects	Qo‘shish: obyektlarni tanlash
+	Add…	Qo‘shish…
+	Alias	Taxallus
+	Alias file: {file}	Taxalluslar fayli: {file}
+	Align Multileaders	Ko‘p chiqarishli chiziqlarni tekislash
+	Analyze Shapes	Shakllarni tahlil qilish
+	Analyze Usage	Foydalanishni tahlil qilish
+	Animation Effects	Animatsiya effektlari
+	Animation effects	Animatsiya effektlari
+	Associative	Assotsiativ
+	Backup copy	Zaxira nusxa
+	Block to create or edit	Yaratiladigan yoki tahrirlanadigan blok
+	Bottom left	Pastki chap
+	Bottom right	Pastki o‘ng
+	Boundaries	Konturlar
+	Boundaries picked: {n}	Tanlangan konturlar: {n}
+	Break-line Symbol	Uzilish chizig‘i belgisi
+	Centered	Markazlashtirilgan
+	Change Properties	Xususiyatlarni o‘zgartirish
+	Choose the command the alias starts.	Taxallus ishga tushiradigan buyruqni tanlang.
+	Click the ruler to add a tab stop, right-click to remove one	Tabulyatsiya to‘xtash joyini qo‘shish uchun chizg‘ichni bosing, olib tashlash uchun o‘ng tugmani bosing
+	Click to set new origin	Yangi boshlang‘ich nuqta uchun bosing
+	Close Block Editor	Blok muharririni yopish
+	Collect	Yig‘ish
+	Collect Multileaders	Ko‘p chiqarishli chiziqlarni yig‘ish
+	Color 1	Rang 1
+	Color 2	Rang 2
+	Command	Buyruq
+	Convert Text to Mtext	Matnni Mtext ga aylantirish
+	Create backup copy with each save	Har saqlashda zaxira nusxa yaratish
+	Create separate hatches	Alohida shtrixovkalar yaratish
+	Crossing selection color:	Kesuvchi tanlov rangi:
+	Curved	Egri
+	Customize	Moslashtirish
+	Default to boundary extents	Standart bo‘yicha kontur chegaralari
+	Define each corner of the selection window with a separate click.	Tanlov oynasining har bir burchagini alohida bosish bilan belgilang.
+	Discard	Bekor qilish (tashlash)
+	Drag Dynamic Grip	Dinamik tutqichni sudrash
+	Dynamic Block Data	Dinamik blok maʼlumotlari
+	Dynamic Block Grips	Dinamik blok tutqichlari
+	Dynamic Block Reference	Dinamik blok havolasi
+	Edit Block Definition	Blok taʼrifini tahrirlash
+	Edit Command Aliases (PGP)...	Buyruq taxalluslarini tahrirlash (PGP)...
+	Edit Multileader	Ko‘p chiqarishli chiziqni tahrirlash
+	Edit Reference In-Place	Havolani joyida tahrirlash
+	Edit…	Tahrirlash…
+	Evaluate LISP	LISP ni hisoblash
+	Exclude:	Chiqarib tashlash:
+	Explode Attributes to Text	Atributlarni matnga parchalash
+	Express Tools	Express Tools
+	Font	Shrift
+	Grips	Tutqichlar
+	Groups	Guruhlar
+	Hatch Pick	Shtrixovka tanlovi
+	Hatch and Gradient	Shtrixovka va gradiyent
+	Hatch origin	Shtrixovka boshlang‘ich nuqtasi
+	Hatches	Shtrixovkalar
+	Hemispherical	Yarim sferik
+	Ignore	Eʼtiborsiz qoldirish
+	Imperial (inches)	Imperial (dyuym)
+	Implied Loops	Nazarda tutilgan konturlar
+	Indicate selection area	Tanlov maydonini ko‘rsatish
+	Interface scale	Interfeys masshtabi
+	Inverted	Teskari
+	Island	Orol
+	Island detection	Orollarni aniqlash
+	Italic	Kursiv
+	Justify	Tekislash (joylash)
+	Load Application...	Ilovani yuklash...
+	Metric (millimetres)	Metrik (millimetr)
+	More than {n} aliases.	{n} tadan ortiq taxallus.
+	Move/Copy/Rotate	Ko‘chirish/Nusxalash/Burish
+	Multiline text	Ko‘p qatorli matn
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Standart shablon belgilanmagan bo‘lsa (QNEWTEMPLATE), Yangi buyrug‘i va ishga tushgandagi birinchi chizma shu birliklardan foydalanadi.
+	New block	Yangi blok
+	No alias file loaded. REINIT replaces these aliases with a file's.	Taxalluslar fayli yuklanmagan. REINIT bu taxalluslarni fayldagilar bilan almashtiradi.
+	Not a number or distance: {text}	Son yoki masofa emas: {text}
+	Object grouping	Obyektlarni guruhlash
+	Object selection limit for display of grips	Tutqichlarni ko‘rsatish uchun obyekt tanlash chegarasi
+	Objects on locked layers	Qulflangan qatlamlardagi obyektlar
+	Open in Block Editor	Blok muharririda ochish
+	Origin: {x}, {y}	Boshlang‘ich nuqta: {x}, {y}
+	Outer	Tashqi
+	Overline	Ustki chiziq
+	Preview	Oldindan ko‘rish
+	Query Texts	Matnlarni so‘rash
+	Save Block	Blokni saqlash
+	Save Block As	Blokni boshqacha saqlash
+	Save Layout as Template	Maketni shablon sifatida saqlash
+	Save Reference Edits	Havola tahrirlarini saqlash
+	Save alias	Taxallusni saqlash
+	Save changes to block "{name}"?	"{name}" blokidagi o‘zgarishlar saqlansinmi?
+	Select boundaries to remove	Olib tashlanadigan konturlarni tanlang
+	Select using two clicks only	Faqat ikki marta bosish bilan tanlash
+	Selection Area Effect	Tanlov maydoni effekti
+	Selection Preview Filter	Tanlovni oldindan ko‘rish filtri
+	Selection area opacity:	Tanlov maydoni xiraligi:
+	Selection effect color	Tanlov effekti rangi
+	Selection modes	Tanlov rejimlari
+	Selection preview	Tanlovni oldindan ko‘rish
+	Set Dynamic Property	Dinamik xususiyatni belgilash
+	Shape	Shakl
+	Sheet Books to PDF...	Varaq kitoblarini PDF ga...
+	Show grips	Tutqichlarni ko‘rsatish
+	Specified origin	Ko‘rsatilgan boshlang‘ich nuqta
+	Spherical	Sferik
+	Tables	Jadvallar
+	Text color	Matn rangi
+	Top left	Yuqori chap
+	Top right	Yuqori o‘ng
+	Type an alias name.	Taxallus nomini yozing.
+	Underline	Tagiga chizish
+	Units of new drawings	Yangi chizmalar birliklari
+	Unsaved changes	Saqlanmagan o‘zgarishlar
+	Use current origin	Joriy boshlang‘ich nuqtadan foydalanish
+	Visual Effect Settings	Vizual effekt sozlamalari
+	Visual Effect Settings...	Vizual effekt sozlamalari...
+	When a command is active	Buyruq faol bo‘lganda
+	When no command is active	Hech qanday buyruq faol bo‘lmaganda
+	Window selection color:	Oyna tanlovi rangi:
+	Working Set	Ish to‘plami
+	Xref and Block In-place Editing	Tashqi havola va blokni joyida tahrirlash
+	Xrefs	Tashqi havolalar
+	built-in	ichki
+	overrides built-in	ichkisini almashtiradi
+	{alias} is already defined; select it and use Edit.	{alias} allaqachon aniqlangan; uni tanlang va Tahrirlash dan foydalaning.
+	{command} is an unknown command.	{command} nomaʼlum buyruq.
+	Find All	Hammasini topish
+	Find what:	Nimani topish:
+	Match case	Registrni hisobga olish
+	Replace	Almashtirish
+	Replace All	Hammasini almashtirish
+	Replace with:	Nima bilan almashtirish:
+	Replacement text	Almashtiruvchi matn
+	Results	Natijalar
+	Searches the current space.	Joriy fazoda qidiradi.
+	Text to find	Topiladigan matn
+	Whole words	Butun so‘zlar
+	Nothing found	Hech narsa topilmadi
+	E	Shq
+	N	Shm
+	S	J
+	W	G‘
+	B	P
+	DraftCraft	DraftCraft
+	Clear Recent Files	So‘nggi fayllarni tozalash
+	contains authoring elements. Open in Block Editor?	mualliflik elementlarini o‘z ichiga oladi. Blok muharririda ochilsinmi?
+	Custom	Maxsus
+	Open Recent	So‘nggilarni ochish
+	This drawing	Bu chizma
+	Arrow size	Strelka o‘lchami
+	Dim scale overall	Umumiy o‘lcham masshtabi
+	Precision	Aniqlik
+	Apply to Layout	Maketga qo‘llash
+	Center the plot	Chop etishni markazlashtirish
+	Enter block names to extract	Ajratib olinadigan blok nomlarini kiriting
+	Enter geometric characteristic	Geometrik xarakteristikani kiriting
+	Enter name of LISP file to load	Yuklanadigan LISP fayli nomini kiriting
+	First corner	Birinchi burchak
+	Fit to paper	Qog‘ozga sig‘dirish
+	Landscape	Albom
+	Limits	Chegaralar
+	Opposite corner	Qarama-qarshi burchak
+	Orientation	Yo‘nalish
+	Paper size	Qog‘oz o‘lchami
+	Plot area	Chop etish maydoni
+	Plot object lineweights	Obyekt chiziq qalinliklarini chop etish
+	Plot offset	Chop etish siljishi
+	Plot transparency	Shaffoflikni chop etish
+	Portrait	Portret
+	Printer/plotter	Printer/plotter
+	Window <	Oyna <
+	X offset (mm)	X siljishi (mm)
+	Y offset (mm)	Y siljishi (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstrem
+	Architectural	Arxitektura
+	Astronomical Units	Astronomik birliklar
+	Centimeters	Santimetr
+	Decameters	Dekametr
+	Decimal	O‘nli
+	Decimal Degrees	O‘nli gradus
+	Decimeters	Detsimetr
+	Deg/Min/Sec	Grad/Daq/Son
+	Don't Save	Saqlamaslik
+	Drawing Units	Chizma birliklari
+	Engineering	Muhandislik
+	Feet	Fut
+	Fractional	Kasrli
+	Gigameters	Gigametr
+	Grads	Grad
+	Hectometers	Gektometr
+	Inches	Dyuym
+	Insertion scale	Qo‘yish masshtabi
+	Kilometers	Kilometr
+	Light Years	Yorug‘lik yili
+	Meters	Metr
+	Microinches	Mikrodyuym
+	Microns	Mikron
+	Miles	Mil
+	Millimeters	Millimetr
+	Mils	Mil (dyuymning mingdan biri)
+	Nanometers	Nanometr
+	Parsecs	Parsek
+	Radians	Radian
+	Sample output	Namuna natija
+	Save changes to {name}?	{name} dagi o‘zgarishlar saqlansinmi?
+	Scientific	Ilmiy
+	Surveyor's Units	Geodezik birliklar
+	Unitless	Birliksiz
+	Units to scale inserted content	Qo‘yiladigan tarkibni masshtablash birliklari
+	US Survey Feet	AQSh geodezik futi
+	US Survey Inch	AQSh geodezik dyuymi
+	US Survey Mile	AQSh geodezik mili
+	US Survey Yard	AQSh geodezik yardi
+	Yards	Yard
+	Your changes will be lost if you don't save them.	Saqlamasangiz, o‘zgarishlaringiz yo‘qoladi.
+	Layouts	Maketlar
+	Associate	Assotsiatsiyalash
+	Clip Xref	Tashqi havolani qirqish
+	Xref Clip Frame	Tashqi havola qirqish ramkasi
+	Minimize	Yig‘ish (oyna)
+	Maximize	Kengaytirish (oyna)
+	Restore Down	Oldingi o‘lchamga qaytarish
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft va DraftCraft logotipi DraftCraft Engineering Ventures ning savdo belgilaridir.
+	Conic	Konus kesimi
+	Spline Fit	Splaynni moslash
+	Spline CV	Splayn BU
+	Specify start point of conic	Konus kesimining boshlang‘ich nuqtasini ko‘rsating
+	Specify apex (where the end tangents meet)	Uchini ko‘rsating (oxirgi urinmalar kesishadigan joy)
+	Specify end point of conic	Konus kesimining oxirgi nuqtasini ko‘rsating
+	Specify rho or a point on the conic	Rho yoki konus kesimidagi nuqtani ko‘rsating
+	Check for Updates...	Yangilanishlarni tekshirish...
+	Check for Updates	Yangilanishlarni tekshirish
+	Update Available	Yangilanish mavjud
+	DraftCraft {version} is available.	DraftCraft {version} mavjud.
+	You have version {version}.	Sizda {version} versiyasi bor.
+	Do you want to download the update?	Yangilanishni yuklab olmoqchimisiz?
+	What's new	Yangiliklar
+	What's New	Yangiliklar
+	Download	Yuklab olish
+	Later	Keyinroq
+	Skip This Version	Bu versiyani o‘tkazib yuborish
+	DraftCraft is up to date (version {version}).	DraftCraft eng so‘nggi versiyada ({version} versiya).
+	Do you want to install the update now?	Yangilanishni hozir o‘rnatmoqchimisiz?
+	Update Now	Hozir yangilash
+	Open the release page	Reliz sahifasini ochish
+	This copy of DraftCraft can't update itself.	DraftCraft ning bu nusxasi o‘zini yangilay olmaydi.
+	Updating DraftCraft	DraftCraft yangilanmoqda
+	Update Failed	Yangilanish muvaffaqiyatsiz
+	Installing DraftCraft {version}	DraftCraft {version} o‘rnatilmoqda
+	Downloading: {done} of {total} MB	Yuklab olinmoqda: {done} / {total} MB
+	Installing…	O‘rnatilmoqda…
+	Starting the download…	Yuklab olish boshlanmoqda…
+	The connection dropped; trying again…	Ulanish uzildi; qayta urinilmoqda…
+	DraftCraft {version} is installed.	DraftCraft {version} o‘rnatildi.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Undan foydalanish uchun DraftCraft ni qayta ishga tushiring. Keyinroq qayta ishga tushirsangiz, u DraftCraft ni keyingi safar ishga tushirganingizda ochiladi.
+	Restart Now	Hozir qayta ishga tushirish
+	The update could not be installed.	Yangilanishni o‘rnatib bo‘lmadi.
+	You can download it from the release page instead.	Buning o‘rniga uni reliz sahifasidan yuklab olishingiz mumkin.
+	2D Wireframe	2D Sim karkas
+	Annotate	Annotatsiya
+	Blocks Palette	Bloklar palitrasi
+	CAD Standards	CAD standartlari
+	Commands	Buyruqlar
+	2D Drafting	2D Chizmachilik
+	Edit Aliases	Taxalluslarni tahrirlash
+	Image	Tasvir
+	Palettes	Palitralar
+	Top	Yuqori
+	Units	Birliklar
+	Workspace	Ish muhiti
+	Ribbon	Lenta
+	PDF Underlay...	PDF taglik...
+	PDF Import	PDF import
+	PDF Underlay	PDF taglik
+	Underlay Layers	Taglik qatlamlari
+	Raster Image Reference...	Rastr tasvir havolasi...
+	Close Text Editor	Matn muharririni yopish
+	Image Clip	Tasvirni qirqish
+	PDF Clip	PDF ni qirqish
+	Image Adjust	Tasvirni sozlash
+	PDF Adjust	PDF ni sozlash
+	Adjust...	Sozlash...
+	Parameter	Parametr
+	Action	Amal
+	DesignCenter	DesignCenter
+	Tool Palettes	Asboblar palitralari
+	Sheet Set Manager	Varaqlar to‘plami menejeri
+	Type the drawing's path, then press Enter.	Chizma yo‘lini yozing, so‘ng Enter ni bosing.
+	Drawing file	Chizma fayli
+	Folder	Jild
+	Linetypes	Chiziq turlari
+	Text Styles	Matn uslublari
+	Dimension Styles	O‘lcham uslublari
+	Table Styles	Jadval uslublari
+	Multileader Styles	Ko‘p chiqarishli chiziq uslublari
+	Multiline Styles	Multichiziq uslublari
+	Add to Drawing	Chizmaga qo‘shish
+	Create Tool Palette	Asboblar palitrasini yaratish
+	Nothing of this kind in the file.	Faylda bu turdagi hech narsa yo‘q.
+	Open a drawing to see its blocks, layers and styles.	Bloklari, qatlamlari va uslublarini ko‘rish uchun chizmani oching.
+	Delete Palette	Palitrani o‘chirish
+	New Palette	Yangi palitra
+	No tool palettes.	Asboblar palitralari yo‘q.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Bu palitra bo‘sh: quyida buyruq qo‘shing yoki DesignCenter dan palitra yarating.
+	Delete Tool	Vositani o‘chirish
+	Add Command	Buyruq qo‘shish
+	New Sheet Set...	Yangi varaqlar to‘plami...
+	Open Sheet Set...	Varaqlar to‘plamini ochish...
+	Sheet sets (DCSS)	Varaqlar to‘plamlari (DCSS)
+	Sheet set file	Varaqlar to‘plami fayli
+	Make or open a sheet set to list its sheets.	Varaqlarini ro‘yxatlash uchun varaqlar to‘plamini yarating yoki oching.
+	Add Drawing...	Chizma qo‘shish...
+	Publish to PDF...	PDF ga nashr qilish...
+	No sheets yet: add a drawing's layouts.	Hali varaqlar yo‘q: chizma maketlarini qo‘shing.
+	Number	Raqam
+	Title	Sarlavha
+	Move Up	Yuqoriga ko‘chirish
+	Move Down	Pastga ko‘chirish
+	Sheet Set (DCSS)	Varaqlar to‘plami (DCSS)
+	Close Tool Palettes	Asboblar palitralarini yopish
+	Close DesignCenter	DesignCenter ni yopish
+	Close Sheet Set Manager	Varaqlar to‘plami menejerini yopish
+	Manage Tool Palettes	Asboblar palitralarini boshqarish
+	Changes apply at once; Save Current As keeps them in a workspace.	O‘zgarishlar darhol qo‘llanadi; Joriyni boshqacha saqlash ularni ish muhitida saqlaydi.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Faqat ularni ko‘rsatish uchun qatlamlarni bosing; Ctrl yoki Shift tanlovga qo‘shadi.
+	Current Workspace	Joriy ish muhiti
+	Customize Interface	Interfeysni moslashtirish
+	Customize User Interface	Foydalanuvchi interfeysini moslashtirish
+	Customize...	Moslashtirish...
+	Edit Aliases...	Taxalluslarni tahrirlash...
+	Force object color and linetype to ByLayer	Obyekt rangi va chiziq turini majburan QatlamBo‘yicha qilish
+	Geographic Location	Geografik joylashuv
+	Geographic Location...	Geografik joylashuv...
+	Latitude	Kenglik
+	Longitude	Uzunlik (geografik)
+	North direction	Shimol yo‘nalishi
+	Layer Translation Mappings	Qatlam tarjimasi moslashuvlari
+	Layer Translator	Qatlam tarjimoni
+	Layer Translator...	Qatlam tarjimoni...
+	Layer Walk	Qatlamlar bo‘ylab yurish
+	Layer Walk...	Qatlamlar bo‘ylab yurish...
+	Location	Joylashuv
+	Set Location	Joylashuvni belgilash
+	Remove Location	Joylashuvni olib tashlash
+	The drawing's origin is at this place (WGS 84 degrees).	Chizmaning boshlang‘ich nuqtasi shu joyda (WGS 84 gradus).
+	Map	Moslash
+	New layer name	Yangi qatlam nomi
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Hali moslashuvlar yo‘q: chapdan qatlamlarni, o‘ngdan nomni tanlang, so‘ng Moslash.
+	Translate	Tarjima qilish
+	Translate From	Qaysidan tarjima
+	Translate To	Qaysiga tarjima
+	Restore on exit	Chiqishda tiklash
+	Point Cloud	Nuqtalar buluti
+	Point Cloud...	Nuqtalar buluti...
+	Point clouds (XYZ, LAS)	Nuqtalar bulutlari (XYZ, LAS)
+	ZIP archive	ZIP arxiv
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Tezkor kirish paneli
+	Rename	Qayta nomlash
+	Reset to Standard	Standartga qaytarish
+	Ribbon Tabs	Lenta yorliqlari
+	Save Current As	Joriyni boshqacha saqlash
+	Save Current As...	Joriyni boshqacha saqlash...
+	Save Workspace	Ish muhitini saqlash
+	User Interface	Foydalanuvchi interfeysi
+	Workspace Settings	Ish muhiti sozlamalari
+	Workspace Settings...	Ish muhiti sozlamalari...
+	Workspace name	Ish muhiti nomi
+	Workspace:	Ish muhiti:
+	Workspaces	Ish muhitlari
+	Interface...	Interfeys...
+	Export Attribute Information...	Atribut maʼlumotlarini eksport qilish...
+	Import Attribute Information...	Atribut maʼlumotlarini import qilish...
+	Export Attributes	Atributlarni eksport qilish
+	Import Attributes	Atributlarni import qilish
+	Text, tab-delimited (TXT)	Matn, tab bilan ajratilgan (TXT)
+	Import Settings	Sozlamalarni import qilish
+	Export Settings	Sozlamalarni eksport qilish
+	Import Settings...	Sozlamalarni import qilish...
+	Export Settings...	Sozlamalarni eksport qilish...
+	DraftCraft settings (TOML)	DraftCraft sozlamalari (TOML)
+	Total Area and Length	Umumiy yuza va uzunlik
+	Total Area	Umumiy yuza
+	Specify point to place the totals as text	Jamlarni matn sifatida joylash uchun nuqtani ko‘rsating
+	Metric	Metrik
+	Imperial	Imperial
+	A new drawing in millimeters	Millimetrda yangi chizma
+	A new drawing in inches	Dyuymda yangi chizma
+	A new drawing in centimeters	Santimetrda yangi chizma
+	Metric (centimetres)	Metrik (santimetr)
+	Join the ArtCraft Discord…	ArtCraft Discord ga qo‘shiling…
+	Join us on Discord	Discord da bizga qo‘shiling
+	One of the Crafting Apps by the ArtCraft team and community.	ArtCraft jamoasi va hamjamiyatining Crafting ilovalaridan biri.
+	Change	O‘zgartirish
+	Multiple Insert	Bir nechta qo‘yish
+	Ctrl+Enter to apply	Qo‘llash uchun Ctrl+Enter
+	Edit Text	Matnni tahrirlash
+	The drawing changed. Close the window and open it again.	Chizma o‘zgardi. Oynani yoping va qayta oching.
+	DView	DView
+	Raster Images	Rastr tasvirlar
+	Xref	Tashqi havola
+	Backup copies are off, so the current file will be replaced.	Zaxira nusxalar o‘chirilgan, shuning uchun joriy fayl almashtiriladi.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 va undan oldingilar ularni saqlaydi. Ularni chizmada saqlash uchun Boshqacha saqlash dan foydalaning.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF ularni saqlaydi. Ularni chizmada saqlash uchun Boshqacha saqlash dan foydalaning.
+	Save Anyway	Baribir saqlash
+	Save cancelled: {path} was not changed.	Saqlash bekor qilindi: {path} o‘zgartirilmadi.
+	Saving {name} will remove content	{name} saqlanganda tarkib olib tashlanadi
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Joriy fayl butun ko‘rinmaydi, shuning uchun {name} o‘z holicha qoladi va joriy fayl almashtiriladi.
+	The current file is kept as {name} until the next save.	Joriy fayl keyingi saqlashgacha {name} sifatida saqlanadi.
+	This format can't keep these objects yet: {objects}.	Bu format hali bu obyektlarni saqlay olmaydi: {objects}.
+	{count} more types	yana {count} tur
+	Additional Tools	Qo‘shimcha vositalar
+	Keyboard Shortcuts...	Klaviatura yorliqlari...
+	Keyboard Shortcuts	Klaviatura yorliqlari
+	Replaces the shortcut of {commands}	{commands} yorlig‘ini almashtiradi
+	Needs Ctrl, Alt or a function key	Ctrl, Alt yoki funksiya tugmasi kerak
+	Press the keys	Tugmalarni bosing
+	Back to DraftCraft's shortcut	DraftCraft yorlig‘iga qaytish
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Siz bergan yorliq DraftCraft ning o‘z yorlig‘idan ustun turadi. O‘zgarishlar darhol qo‘llanadi va keyingi safar uchun saqlanadi.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	O‘chirilganda, buyruq bajarilayotganda o‘ng tugma O‘ng tugmani moslashtirishda Buyruq rejimi uchun belgilangan amalni bajaradi.
+	Right-Click Customization...	O‘ng tugmani moslashtirish...
+	Right-Click Customization	O‘ng tugmani moslashtirish
+	Turn on time-sensitive right-click	Vaqtga sezgir o‘ng tugmani yoqish
+	Longer click duration:	Uzoq bosish davomiyligi:
+	milliseconds	millisekund
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Buyruq bajarilayotganda qisqa bosish Enter, uzoqroq bosish esa kontekst menyusini ochadi.
+	Default Mode	Standart rejim
+	No objects selected and no command running:	Obyektlar tanlanmagan va buyruq bajarilmayapti:
+	Edit Mode	Tahrirlash rejimi
+	Objects selected and no command running:	Obyektlar tanlangan va buyruq bajarilmayapti:
+	Repeat last command	Oxirgi buyruqni takrorlash
+	Shortcut Menu	Kontekst menyusi
+	Command Mode	Buyruq rejimi
+	While a command runs:	Buyruq bajarilayotganda:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Kontekst menyusi: har doim yoqilgan
+	Shortcut Menu: enabled when command options are present	Kontekst menyusi: buyruq parametrlari mavjud bo‘lganda yoqilgan
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Import: bu yerda fayl dialogi yo‘q; ALIASEDIT ni faylning tarkibi bilan text parametri orqali ishga tushiring.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Taxalluslar DraftCraft profilingizda saqlanadi va qayta ishga tushirishlardan keyin ham qoladi.
+	Import…	Import…
+	Run ALIASEDIT with the file's contents using its text parameter.	ALIASEDIT ni faylning tarkibi bilan text parametri orqali ishga tushiring.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Faylni import qilish {n} ta taxallusingizni va hali qo‘llanmagan barcha o‘zgarishlarni almashtiradi.
+	Import and replace	Import qilish va almashtirish
+	Keep my aliases	Taxalluslarimni saqlash
+	{n} more warnings; see the command line.	yana {n} ta ogohlantirish; buyruqlar satriga qarang.
+	Unit	Birlik
+	Drawing units: {unit}, {format}	Chizma birliklari: {unit}, {format}
+	NEW DRAWING	YANGI CHIZMA
+	OPEN	OCHISH
+	WORKSPACE	ISH MAYDONI

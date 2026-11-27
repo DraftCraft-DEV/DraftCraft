@@ -1,0 +1,1695 @@
+# DraftCraft Swahili (Kiswahili) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Ghairi  
+	  OK  	  Sawa  
+	 or [	 au [
+	% of all commits	% ya commit zote
+	* Wildcard Match	* Ulinganifu wa herufi wakilishi
+	*VARIES*	*HUTOFAUTIANA*
+	+  |  Top  |  2D Wireframe	+  |  Juu  |  Fremu-waya ya 2D
+	+Bin	+Pipa
+	+LOC	+LOC
+	1 Viewport	Dirisha-tazamo 1
+	2 Points	Nukta 2
+	2 Viewports	Madirisha-tazamo 2
+	2D Solid	Gimba la 2D
+	3 Points	Nukta 3
+	3 Viewports	Madirisha-tazamo 3
+	3D Face	Uso wa 3D
+	3D Mouse	Kipanya cha 3D
+	3D Mouse Navigation	Uelekezaji kwa kipanya cha 3D
+	3D Mouse...	Kipanya cha 3D...
+	3D Operations	Shughuli za 3D
+	3D Polyline	Mstari-poli wa 3D
+	3D mouse busy, possibly 3DxWare or missing device permissions	Kipanya cha 3D kina shughuli, labda 3DxWare au ruhusa za kifaa hazipo
+	3D mouse connected	Kipanya cha 3D kimeunganishwa
+	3D mouse disconnected	Kipanya cha 3D kimetenganishwa
+	3D mouse input could not be started	Ingizo la kipanya cha 3D halikuweza kuanzishwa
+	3D mouse input is unavailable on this platform	Ingizo la kipanya cha 3D halipatikani kwenye jukwaa hili
+	4 Viewports	Madirisha-tazamo 4
+	< Less than	< Chini ya
+	<> Not Equal	<> Si sawa na
+	= Equals	= Sawa na
+	> Greater than	> Zaidi ya
+	A built-in table: editing it keeps an edited copy in the drawing.	Jedwali lililojengewa ndani: kulihariri huhifadhi nakala iliyohaririwa ndani ya mchoro.
+	A drawing opened from a file keeps that file's format.	Mchoro uliofunguliwa kutoka faili huhifadhi muundo wa faili hilo.
+	A variable name starts with a letter and has only letters, digits and _	Jina la kigeu huanza kwa herufi na lina herufi, tarakimu na _ pekee
+	About	Kuhusu
+	About DraftCraft	Kuhusu DraftCraft
+	Absolute	Kamili
+	Accessibility	Ufikivu
+	Add	Ongeza
+	Add Current Scale	Ongeza kipimo cha sasa
+	Add Leader	Ongeza mstari-kiongozi
+	Add Vertex	Ongeza kipeo
+	Add/Delete Scales...	Ongeza/Futa vipimo...
+	Additional angles	Pembe za ziada
+	Align	Panga
+	Align Text	Panga maandishi
+	Aligned	Iliyopangwa
+	All	Zote
+	All Annotation Objects	Vitu vyote vya maelezo
+	All Scales	Vipimo vyote
+	All Used Layers	Matabaka yote yanayotumika
+	All files	Faili zote
+	An array that would create more objects than this is refused.	Mpangilio ambao ungeunda vitu vingi kuliko hivi unakataliwa.
+	Angle	Pembe
+	Angular	Kipembe
+	Annotation Visibility	Kuonekana kwa maelezo
+	Annotation scale	Kipimo cha maelezo
+	Annotative Object Scale	Kipimo cha kitu cha maelezo
+	Annotative Update	Sasisha maelezo
+	Apparent Intersection	Makutano yanayoonekana
+	Append to current selection set	Ongeza kwenye uteuzi wa sasa
+	Apply	Tumia
+	Apply to:	Tumia kwa:
+	Apply true color	Tumia rangi halisi
+	Arc	Tao
+	Arc Length	Urefu wa tao
+	Area	Eneo
+	Arrange Panel	Paneli ya Panga
+	Array	Mpangilio
+	Attach	Ambatisha
+	Attach DWG...	Ambatisha DWG...
+	Attribute	Sifa
+	Attribute Definition	Ufafanuzi wa sifa
+	Attribute Display	Onyesho la sifa
+	Audit	Kagua
+	Auto (system language)	Otomatiki (lugha ya mfumo)
+	Auto Constrain	Vizuizi otomatiki
+	AutoConstrain	Vizuizi otomatiki
+	Automatic save every	Hifadhi otomatiki kila
+	Automatic save file location	Mahali pa faili za kuhifadhi otomatiki
+	Axis, End	Mhimili, mwisho
+	Base	Msingi
+	Baseline	Mstari wa msingi
+	Batch Publish	Chapisha kwa kundi
+	Batch Publish...	Chapisha kwa kundi...
+	Binary assets added	Rasilimali za binary zimeongezwa
+	Binary assets removed	Rasilimali za binary zimeondolewa
+	Bind	Funga ndani
+	Bind...	Funga ndani...
+	Blend	Unganisha laini
+	Block	Bloku
+	Block Attribute Manager...	Kidhibiti cha sifa za bloku...
+	Block Description...	Maelezo ya bloku...
+	Block Editor	Kihariri cha bloku
+	Block Reference	Rejeleo la bloku
+	Block...	Bloku...
+	Blocks	Bloku
+	Blue	Bluu
+	Bold	Herufi nzito
+	Boolean	Kibuliani
+	Boundary	Mpaka
+	Boundary...	Mpaka...
+	Box	Sanduku
+	Break	Vunja
+	Break At Point	Vunja kwenye nukta
+	Bring Above Objects	Leta juu ya vitu
+	Bring Annotations to Front	Leta maelezo mbele
+	Bring to Front	Leta mbele
+	Bulleted list	Orodha ya vitone
+	ByBlock	KwaBloku
+	ByColor	KwaRangi
+	ByLayer	KwaTabaka
+	DraftCraft Help	Msaada wa DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft huhifadhi mapendeleo haya, hali za kunasa vitu na swichi za uchoraji kwa akaunti yako ya mtumiaji na kuzirejesha inapoanza.
+	Calibrate	Rekebisha
+	Calibrate 3D Mouse	Rekebisha kipanya cha 3D
+	Cancel	Ghairi
+	Cartesian (x, y)	Kartesia (x, y)
+	Center	Kitovu
+	Center Line	Mstari wa kitovu
+	Center Mark	Alama ya kitovu
+	Center X	Kitovu X
+	Center Y	Kitovu Y
+	Center Z	Kitovu Z
+	Center, Diameter	Kitovu, kipenyo
+	Center, Radius	Kitovu, nusu-kipenyo
+	Center, Start, Angle	Kitovu, mwanzo, pembe
+	Center, Start, End	Kitovu, mwanzo, mwisho
+	Center, Start, Length	Kitovu, mwanzo, urefu
+	Chamfer	Kata pembe
+	Change Space	Badilisha nafasi
+	Change to Current Layer	Badilisha kwa tabaka la sasa
+	Changed: {n}	Imebadilishwa: {n}
+	Changes apply at once and are kept for next time.	Mabadiliko yanatumika mara moja na yanahifadhiwa kwa wakati ujao.
+	Circle	Duara
+	Circumference	Mzingo
+	Clear	Futa
+	Clear Command History	Futa historia ya amri
+	Reset Suggestion Order	Weka upya mpangilio wa mapendekezo
+	Clear History	Futa historia
+	Clip	Kata kwa mpaka
+	Clip Viewport	Kata dirisha-tazamo
+	Clipboard	Ubao wa kunakili
+	Close	Funga
+	Close All	Funga zote
+	Close All Other Drawings	Funga michoro mingine yote
+	Close Array Editing	Funga uhariri wa mpangilio
+	Close Comparison	Funga ulinganisho
+	Export Comparison	Hamisha ulinganisho
+	Closed	Imefungwa
+	Coincident	Sanjari
+	Collapse Palettes	Kunja paleti
+	Collapse Tool Sets	Kunja seti za zana
+	Collinear	Mstari mmoja
+	Color	Rangi
+	Color 8	Rangi 8
+	Color 9	Rangi 9
+	Color Index	Fahirisi ya rangi
+	Color-dependent	Kutegemea rangi
+	Color...	Rangi...
+	Command Aliases	Majina mbadala ya amri
+	Command History	Historia ya amri
+	Command Line	Mstari wa amri
+	Command Line History Lines	Mistari ya historia ya mstari wa amri
+	Command Reference	Marejeo ya amri
+	Command line history	Historia ya mstari wa amri
+	Commits	Commit
+	Company	Kampuni
+	Compare Drawings...	Linganisha michoro...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Usanifu na uchoraji kwa kompyuta: programu ya CAD ya chanzo huria, iliyoandikwa kwa mbinu safi (clean-room) kwa Rust tupu.
+	Concentric	Kitovu kimoja
+	Cone	Koni
+	Constraint Bars	Pau za vizuizi
+	Constraint Settings	Mipangilio ya vizuizi
+	Construction Line	Mstari wa ujenzi
+	Contents	Yaliyomo
+	Continue	Endelea
+	Contributors	Wachangiaji
+	Control Vertices	Vipeo vya udhibiti
+	Convert	Geuza
+	Convert to Arc	Geuza kuwa tao
+	Convert to Line	Geuza kuwa mstari
+	Copy	Nakili
+	Copy Full File Path	Nakili njia kamili ya faili
+	Copy History	Nakili historia
+	Copy Layout	Nakili mpangilio wa ukurasa
+	Copy Nested Objects	Nakili vitu vilivyo ndani
+	Copy Selection	Nakili uteuzi
+	Copy as JSON	Nakili kama JSON
+	Copy with Base Point	Nakili pamoja na nukta ya msingi
+	Count	Hesabu
+	Count List	Orodha ya hesabu
+	Count Table	Jedwali la hesabu
+	Create Block	Unda bloku
+	Creates a user parameter	Huunda kigezo cha mtumiaji
+	Crosshair size	Ukubwa wa msalaba wa kielekezi
+	Ctrl+Enter to finish	Ctrl+Enter kumaliza
+	Current Scale Only	Kipimo cha sasa pekee
+	Current layer	Tabaka la sasa
+	Current selection	Uteuzi wa sasa
+	Current: {color}	Ya sasa: {color}
+	Cut	Kata
+	Cut with Base Point	Kata pamoja na nukta ya msingi
+	Cyan	Samawati
+	Cylinder	Silinda
+	DWG	DWG
+	DWG Reference...	Rejeleo la DWG...
+	DXF	DXF
+	Dark	Giza
+	Data Extraction...	Utoaji wa data...
+	Data Link...	Kiungo cha data...
+	Default	Chaguo-msingi
+	Default Save Format	Muundo chaguo-msingi wa kuhifadhi
+	Default Save Version	Toleo chaguo-msingi la kuhifadhi
+	Default save version	Toleo chaguo-msingi la kuhifadhi
+	Define Attributes	Fafanua sifa
+	Define Attributes...	Fafanua sifa...
+	Defined width	Upana uliofafanuliwa
+	Degree	Daraja
+	Degrees of Freedom	Viwango vya uhuru
+	Degrees of freedom: {n}	Viwango vya uhuru: {n}
+	Delete	Futa
+	Delete Column	Futa safu wima
+	Delete Constraints	Futa vizuizi
+	Delete Current Scale	Futa kipimo cha sasa
+	Delete Dimension Style	Futa mtindo wa vipimo
+	Delete Duplicate Objects	Futa vitu vilivyorudiwa
+	Delete Layer	Futa tabaka
+	Delete Layer State	Futa hali ya matabaka
+	Delete Layout	Futa mpangilio wa ukurasa
+	Delete Row	Futa safu mlalo
+	Delete Text Style	Futa mtindo wa maandishi
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Maelezo
+	Deselect All	Ondoa uteuzi wote
+	Detach	Tenganisha
+	Diameter	Kipenyo
+	Dim style	Mtindo wa vipimo
+	Dimension	Kipimo
+	Dimension Break	Mkato wa kipimo
+	Dimension Edit	Hariri kipimo
+	Dimension Objects Only	Vitu vya vipimo pekee
+	Dimension Space	Nafasi kati ya vipimo
+	Dimension Style Override	Ubatilishaji wa mtindo wa vipimo
+	Dimension Style...	Mtindo wa vipimo...
+	Dimension Text Edit	Hariri maandishi ya kipimo
+	Dimension style	Mtindo wa vipimo
+	Dimensional Constraint	Kizuizi cha kipimo
+	Dimensional Constraint Parameters	Vigezo vya vizuizi vya vipimo
+	Dimensional Constraints	Vizuizi vya vipimo
+	Disassociate Dimensions	Tenganisha uhusiano wa vipimo
+	Display	Onyesho
+	Display name	Jina la kuonyesha
+	Display plot styles	Onyesha mitindo ya uchapishaji
+	Distance	Umbali
+	Divide	Gawanya
+	Do not plot (click: plot)	Usichapishe (bofya: chapisha)
+	Donut	Pete
+	Double-click to edit the description	Bofya mara mbili kuhariri maelezo
+	Down	Chini
+	Drafting	Uchoraji
+	Drafting Settings	Mipangilio ya uchoraji
+	Drafting Settings...	Mipangilio ya uchoraji...
+	Draw	Chora
+	Draw Order	Mpangilio wa uchoraji
+	Drawing (DWG)	Mchoro (DWG)
+	Drawing (DXF)	Mchoro (DXF)
+	Drawing Limits	Mipaka ya mchoro
+	Drawing Recovery Manager...	Kidhibiti cha urejeshaji wa michoro...
+	Drawing Template (DWT)	Kiolezo cha mchoro (DWT)
+	Drawing Utilities	Huduma za mchoro
+	Drawing as bytes	Mchoro kama baiti
+	Drawings (DWG, DXF)	Michoro (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Michoro isiyo na faili bado huhifadhiwa katika toleo chaguo-msingi. Dakika 0 huzima uhifadhi otomatiki.
+	Dynamic	Inayobadilika
+	Dynamic Dimensions	Vipimo vinavyobadilika
+	Dynamic Input	Ingizo linalobadilika
+	Dynamic Input (F12)	Ingizo linalobadilika (F12)
+	Edit	Hariri
+	Edit Array	Hariri mpangilio
+	Edit Attributes...	Hariri sifa...
+	Edit Table Cell	Hariri seli ya jedwali
+	Edit Text...	Hariri maandishi...
+	Elevation	Mwinuko
+	Ellipse	Duaradufu
+	Elliptical Arc	Tao la duaradufu
+	Enable 3D mouse navigation	Wezesha uelekezaji kwa kipanya cha 3D
+	Enable Dynamic Input (F12)	Wezesha ingizo linalobadilika (F12)
+	End Object Isolation	Maliza utengaji wa vitu
+	End Width	Upana wa mwisho
+	End X	Mwisho X
+	End Y	Mwisho Y
+	End angle	Pembe ya mwisho
+	Endpoint	Ncha
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Ingiza Juu, Sifuri au Chini.
+	Enter a fit data option	Ingiza chaguo la data ya kulinganisha
+	Enter a pattern name	Ingiza jina la ruwaza
+	Enter a vertex editing option	Ingiza chaguo la kuhariri kipeo
+	Enter an option	Ingiza chaguo
+	Enter angle of xline	Ingiza pembe ya mstari wa ujenzi
+	Enter angle of xline (0)	Ingiza pembe ya mstari wa ujenzi (0)
+	Enter area of rectangle in current units	Ingiza eneo la mstatili kwa vipimo vya sasa
+	Enter attribute prompt	Ingiza kidokezo cha sifa
+	Enter attribute tag name	Ingiza jina la lebo ya sifa
+	Enter attribute value	Ingiza thamani ya sifa
+	Enter block name	Ingiza jina la bloku
+	Enter constraint type	Ingiza aina ya kizuizi
+	Enter continuity	Ingiza mwendelezo
+	Enter default attribute value	Ingiza thamani chaguo-msingi ya sifa
+	Enter degree of spline	Ingiza daraja la spline
+	Enter delta angle	Ingiza ongezeko la pembe
+	Enter delta length	Ingiza ongezeko la urefu
+	Enter dimension text	Ingiza maandishi ya kipimo
+	Enter dimension text (<> = measurement)	Ingiza maandishi ya kipimo (<> = kipimo kilichopimwa)
+	Enter dimension value or [name=expression]	Ingiza thamani ya kipimo au [jina=usemi]
+	Enter dimension variable name to override	Ingiza jina la kigeu cha vipimo cha kubatilisha
+	Enter justification type	Ingiza aina ya upangaji
+	Enter leader text	Ingiza maandishi ya kiongozi
+	Enter mline scale	Ingiza kipimo cha mstari-mwingi
+	Enter mode	Ingiza hali
+	Enter name of block to insert	Ingiza jina la bloku la kuingiza
+	Enter new text	Ingiza maandishi mapya
+	Enter next point	Ingiza nukta inayofuata
+	Enter number of columns	Ingiza idadi ya safu wima
+	Enter number of data rows	Ingiza idadi ya safu mlalo za data
+	Enter number of items	Ingiza idadi ya vipengee
+	Enter number of items along path	Ingiza idadi ya vipengee kando ya njia
+	Enter number of sides	Ingiza idadi ya pande
+	Enter number of turns	Ingiza idadi ya mizunguko
+	Enter percentage length	Ingiza urefu kwa asilimia
+	Enter rectangle length	Ingiza urefu wa mstatili
+	Enter rectangle width	Ingiza upana wa mstatili
+	Enter scale factor	Ingiza kipengele cha kipimo
+	Enter text	Ingiza maandishi
+	Enter text (use \P for new paragraphs)	Ingiza maandishi (tumia \P kwa aya mpya)
+	Enter the number of segments	Ingiza idadi ya sehemu
+	Enter twist direction of helix	Ingiza mwelekeo wa kusokota wa hesi
+	Entire drawing	Mchoro mzima
+	Equal	Sawa
+	Erase	Futa
+	Evaluate	Tathmini
+	Exclude from new selection set	Ondoa kutoka uteuzi mpya
+	Explode	Pasua
+	Export	Hamisha
+	Export Table	Hamisha jedwali
+	Export to PDF...	Hamisha kwenda PDF...
+	Export...	Hamisha...
+	Expression	Usemi
+	Extend	Refusha
+	Extension	Kiendelezi
+	Extents	Upeo
+	External Reference	Rejeleo la nje
+	External References	Marejeo ya nje
+	Extrude	Vuta nje
+	File	Faili
+	File Tab	Kichupo cha faili
+	Fillet	Pinda kona
+	Filter	Kichujio
+	Filters	Vichujio
+	Find and Replace	Tafuta na ubadilishe
+	Find...	Tafuta...
+	First	Ya kwanza
+	First commit	Commit ya kwanza
+	Fit Points	Nukta za kulinganisha
+	Fix	Rekebisha mahali
+	Flatten Objects	Bapisha vitu
+	Format	Muundo
+	Freehand	Mkono huru
+	Freeze	Gandisha
+	Freeze Layer	Gandisha tabaka
+	Freeze in new viewports	Gandisha katika madirisha-tazamo mapya
+	Freeze/Thaw	Gandisha/Yeyusha
+	Freeze/Thaw in all viewports	Gandisha/Yeyusha katika madirisha-tazamo yote
+	Freeze/Thaw in the current viewport	Gandisha/Yeyusha katika dirisha-tazamo la sasa
+	From	Kutoka
+	From Template...	Kutoka kiolezo...
+	General	Jumla
+	Geometric Center	Kitovu cha kijiometri
+	Geometric Constraint	Kizuizi cha kijiometri
+	Geometric Constraints	Vizuizi vya kijiometri
+	Geometry	Jiometri
+	Get Variable	Pata kigeu
+	Get View	Pata mwonekano
+	Get from the Drawing	Pata kutoka mchoro
+	Global	Kimataifa
+	Global width	Upana wa jumla
+	Grab bag	Mchanganyiko
+	Gradient	Mwinuko wa rangi
+	Gradient...	Mwinuko wa rangi...
+	Grayscale	Kijivu
+	Green	Kijani
+	Grid (F7)	Gridi (F7)
+	Grid Display	Onyesho la gridi
+	Grid On (F7)	Gridi imewashwa (F7)
+	Grid snap	Kunasa gridi
+	Grid spacing	Nafasi ya gridi
+	Grip Edit	Hariri kwa vishikio
+	Grip Mirror	Kioo kwa vishikio
+	Grip Option	Chaguo la vishikio
+	Grip Rotate	Zungusha kwa vishikio
+	Grip Scale	Kipimo kwa vishikio
+	Grip Stretch	Nyoosha kwa vishikio
+	Grip size	Ukubwa wa vishikio
+	Group	Kikundi
+	Group Edit	Hariri kikundi
+	Group Options	Chaguo za kikundi
+	Group Selection	Uteuzi wa kikundi
+	Hatch	Hachi
+	Hatch Edit	Hariri hachi
+	Hatch Pattern	Ruwaza ya hachi
+	Hatch Patterns	Ruwaza za hachi
+	Hatch...	Hachi...
+	Height	Kimo
+	Height: {height}	Kimo: {height}
+	Helix	Hesi
+	Help	Msaada
+	Hide All	Ficha zote
+	Hide All Constraint Bars	Ficha pau zote za vizuizi
+	Hide All Dynamic Dimensions	Ficha vipimo vyote vinavyobadilika
+	Hide DraftCraft	Ficha DraftCraft
+	Hide Layer List	Ficha orodha ya matabaka
+	Hide Objects	Ficha vitu
+	Hide Others	Ficha vingine
+	Hide Palette	Ficha paleti
+	Hide Palettes	Ficha paleti
+	History	Historia
+	Hold Shift to add to the selection	Shikilia Shift kuongeza kwenye uteuzi
+	Home	Nyumbani
+	Horizontal	Mlalo
+	HorizontalDistance	UmbaliMlalo
+	How to apply:	Jinsi ya kutumia:
+	ID Point	Nukta ya ID
+	Import	Leta
+	Import...	Leta...
+	In	Karibia
+	In-window Menu Bar	Upau wa menyu ndani ya dirisha
+	Include in new selection set	Jumuisha katika uteuzi mpya
+	Increment angle	Ongezeko la pembe
+	Index Color	Rangi ya fahirisi
+	Index color: {index}	Rangi ya fahirisi: {index}
+	Infer Constraints	Kisia vizuizi
+	Inquiry	Uchunguzi
+	Insert	Ingiza
+	Insert Block	Ingiza bloku
+	Insert Column	Ingiza safu wima
+	Insert Row	Ingiza safu mlalo
+	Insert Table Formula	Ingiza fomula ya jedwali
+	Insert tab	Kichupo cha Ingiza
+	Insert this block	Ingiza bloku hili
+	Insertion	Uingizaji
+	Insertion X	Uingizaji X
+	Insertion Y	Uingizaji Y
+	Insertion Z	Uingizaji Z
+	Inspect Constraints	Kagua vizuizi
+	Inspect Drawing	Kagua mchoro
+	Inspection	Ukaguzi
+	Interface Language	Lugha ya kiolesura
+	Interface Theme	Mandhari ya kiolesura
+	Interface language	Lugha ya kiolesura
+	Interface theme	Mandhari ya kiolesura
+	Intersect	Katiza
+	Intersection	Makutano
+	Isolate	Tenga
+	Isolate Layer	Tenga tabaka
+	Isolate Objects	Tenga vitu
+	Isometric Drafting	Uchoraji wa isometriki
+	Isometric Plane	Ndege ya isometriki
+	Isometric snap	Kunasa kwa isometriki
+	Jogged	Iliyokunjwa
+	Jogged Linear	Mstari uliokunjwa
+	Join	Unganisha
+	Keep an editable copy of this table in the drawing	Weka nakala inayoharirika ya jedwali hili ndani ya mchoro
+	Keep the system cursor visible over the drawing area	Acha kielekezi cha mfumo kionekane juu ya eneo la mchoro
+	Language	Lugha
+	Largest array	Mpangilio mkubwa zaidi
+	Last	Ya mwisho
+	Last commit	Commit ya mwisho
+	Layer	Tabaka
+	Layer Delete	Futa tabaka
+	Layer Match	Linganisha tabaka
+	Layer Merge	Unganisha matabaka
+	Layer Off	Zima tabaka
+	Layer Properties	Sifa za tabaka
+	Layer Properties Manager	Kidhibiti cha sifa za tabaka
+	Layer Properties Manager — current viewport	Kidhibiti cha sifa za tabaka — dirisha-tazamo la sasa
+	Layer State	Hali ya matabaka
+	Layer States Manager...	Kidhibiti cha hali za matabaka...
+	Layer Tools	Zana za tabaka
+	Layer contains objects (double-click to make current)	Tabaka lina vitu (bofya mara mbili kulifanya la sasa)
+	Layer is empty (double-click to make current)	Tabaka ni tupu (bofya mara mbili kulifanya la sasa)
+	Layers	Matabaka
+	Layers Palette	Paleti ya matabaka
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Matabaka yanayoonyeshwa: {shown} kati ya {total}.   Tabaka la sasa: {layer}
+	Layout	Mpangilio wa ukurasa
+	Layout list	Orodha ya mipangilio ya ukurasa
+	Layout paper	Karatasi ya mpangilio
+	Layout {name}: {table}	Mpangilio {name}: {table}
+	Leader	Kiongozi
+	Leaders Only	Viongozi pekee
+	Left	Kushoto
+	Left device button: zoom extents. Right device button: calibrate.	Kitufe cha kushoto cha kifaa: kuza hadi upeo. Kitufe cha kulia cha kifaa: rekebisha.
+	Length	Urefu
+	Length X	Urefu X
+	Length Y	Urefu Y
+	Lengthen	Refusha urefu
+	Light	Mwanga
+	Line	Mstari
+	Line delta	Tofauti ya mistari
+	Linear	Mstari
+	Lines +/−	Mistari +/−
+	Lines added	Mistari iliyoongezwa
+	Lines deleted	Mistari iliyofutwa
+	Lines of Command History	Mistari ya historia ya amri
+	Linetype	Aina ya mstari
+	Linetype Scale	Kipimo cha aina ya mstari
+	Linetype scale	Kipimo cha aina ya mstari
+	Linetype...	Aina ya mstari...
+	Lineweight	Unene wa mstari
+	Lineweight...	Unene wa mstari...
+	List	Orodha
+	List Blocks	Orodhesha bloku
+	List Dimension Styles	Orodhesha mitindo ya vipimo
+	List Groups	Orodhesha vikundi
+	List Layer States	Orodhesha hali za matabaka
+	List Layouts	Orodhesha mipangilio ya ukurasa
+	List System Variables	Orodhesha vigeu vya mfumo
+	List Text Styles	Orodhesha mitindo ya maandishi
+	Load all	Pakia zote
+	Load...	Pakia...
+	Loaded	Imepakiwa
+	Loaded linetypes	Aina za mistari zilizopakiwa
+	Lock	Funga
+	Lock Layer	Funga tabaka
+	Lock viewport	Funga dirisha-tazamo
+	Lock/Unlock	Funga/Fungua
+	Loft	Unganisha maumbo
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Haihusiani na Autodesk, Inc.
+	MODEL	MODEL
+	MText	MText
+	Magenta	Majenta
+	Major line every	Mstari mkuu kila
+	Make Current	Fanya kuwa la sasa
+	Make Object's Layer Current	Fanya tabaka la kitu kuwa la sasa
+	Make it a block of this drawing, keeping its layer names	Lifanye bloku la mchoro huu, ukihifadhi majina ya matabaka yake
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Lifanye bloku la mchoro huu; matabaka yake yanakuwa NAME$0$LAYER
+	Make...	Tengeneza...
+	Match Layer	Linganisha tabaka
+	Match Properties	Linganisha sifa
+	Measure	Pima
+	Measure Distance	Pima umbali
+	Measure Geometry	Pima jiometri
+	Merge Cells	Unganisha seli
+	Merged PRs	PR zilizounganishwa
+	Mid Between 2 Points	Katikati ya nukta 2
+	Midpoint	Katikati
+	Mirror	Kioo
+	Model	Modeli
+	Model Space (in viewport)	Nafasi ya modeli (ndani ya dirisha-tazamo)
+	Model background	Mandharinyuma ya modeli
+	Modeling	Uundaji wa modeli
+	Models	Modeli
+	Modify	Rekebisha
+	More toolbar commands	Amri zaidi za upau wa zana
+	Move	Sogeza
+	Move sideways to pan; push/pull or twist to zoom.	Sogeza kando kuburuta mwonekano; sukuma/vuta au zungusha kukuza.
+	Multileader	Kiongozi-mwingi
+	Multileader Style...	Mtindo wa kiongozi-mwingi...
+	Multileader style	Mtindo wa kiongozi-mwingi
+	Multiline	Mstari-mwingi
+	Multiline Style...	Mtindo wa mstari-mwingi...
+	Multiline Text	Maandishi ya mistari mingi
+	Multiline Text...	Maandishi ya mistari mingi...
+	Multiline...	Mstari-mwingi...
+	Multiple	Mara nyingi
+	Multiple Point	Nukta nyingi
+	My	Yangu
+	My properties: not available yet	Sifa zangu: bado hazipatikani
+	Name	Jina
+	Name (A–Z)	Jina (A–Z)
+	Named	Yenye jina
+	Named Viewports...	Madirisha-tazamo yenye majina...
+	Named Views...	Mionekano yenye majina...
+	Nearest	Iliyo karibu zaidi
+	New	Mpya
+	New (metric)	Mpya (metriki)
+	New CTB	CTB mpya
+	New Drawing	Mchoro mpya
+	New Drawing (⌘N)	Mchoro mpya (⌘N)
+	New Drawing...	Mchoro mpya...
+	New Layer	Tabaka jipya
+	New Layout	Mpangilio mpya wa ukurasa
+	New STB	STB mpya
+	New VP Freeze	Gandisha katika VP mpya
+	New Viewports...	Madirisha-tazamo mapya...
+	New from Template...	Mpya kutoka kiolezo...
+	New layout	Mpangilio mpya wa ukurasa
+	New state name	Jina la hali mpya
+	New style	Mtindo mpya
+	Next Change	Badiliko linalofuata
+	No	Hapana
+	No blocks defined in this drawing.	Hakuna bloku zilizofafanuliwa katika mchoro huu.
+	No contributor data was built into this copy.	Hakuna data ya wachangiaji iliyojengwa ndani ya nakala hii.
+	No external references are attached.	Hakuna marejeo ya nje yaliyoambatishwa.
+	No model credits were built into this copy.	Hakuna sifa za modeli zilizojengwa ndani ya nakala hii.
+	No plot style tables.	Hakuna majedwali ya mitindo ya uchapishaji.
+	No saved layer states	Hakuna hali za matabaka zilizohifadhiwa
+	No selection	Hakuna uteuzi
+	No supported 3D mouse found	Hakuna kipanya cha 3D kinachotumika kilichopatikana
+	Node	Nodi
+	None	Hakuna
+	Normal	Kawaida
+	Not Found	Haikupatikana
+	Not available	Haipatikani
+	Not available yet	Bado haipatikani
+	Not loaded	Haijapakiwa
+	Numbered list	Orodha ya namba
+	OK	Sawa
+	Object	Kitu
+	Object Snap	Kunasa vitu
+	Object Snap (F3)	Kunasa vitu (F3)
+	Object Snap On (F3)	Kunasa vitu kumewashwa (F3)
+	Object Snap Tracking	Ufuatiliaji wa kunasa vitu
+	Object Snap Tracking (F11)	Ufuatiliaji wa kunasa vitu (F11)
+	Object Snap Tracking Settings	Mipangilio ya ufuatiliaji wa kunasa vitu
+	Object snap aperture	Kipenyo cha kunasa vitu
+	Object snap marker size	Ukubwa wa alama ya kunasa vitu
+	Object type:	Aina ya kitu:
+	Oblique	Mshazari
+	Off	Zima
+	Offset	Sogeza sambamba
+	On	Washa
+	On/Off	Washa/Zima
+	Only in this drawing: {n}	Katika mchoro huu pekee: {n}
+	Only in {name}: {n}	Katika {name} pekee: {n}
+	Oops	Lo!
+	Open	Fungua
+	Open (⌘O)	Fungua (⌘O)
+	Open Sample Drawing	Fungua mchoro wa mfano
+	Open Xref	Fungua rejeleo la nje
+	Open a drawing first.	Fungua mchoro kwanza.
+	Open and Save	Fungua na hifadhi
+	Open sample drawing	Fungua mchoro wa mfano
+	Open...	Fungua...
+	Operator:	Opereta:
+	Options	Chaguo
+	Options...	Chaguo...
+	Orbit	Zunguka
+	Ordinate	Kiratibu
+	Ortho (F8)	Ortho (F8)
+	Ortho Mode	Hali ya ortho
+	Ortho Mode (F8)	Hali ya ortho (F8)
+	Osnap Settings...	Mipangilio ya kunasa...
+	Out	Mbali
+	Over-constrained	Vizuizi vimezidi
+	Overlay	Wekelea
+	Override	Batilisha
+	PAPER	KARATASI
+	PRs	PR
+	Page Setup Manager	Kidhibiti cha mpangilio wa ukurasa
+	Page Setup Manager...	Kidhibiti cha mpangilio wa ukurasa...
+	Pan	Buruta mwonekano
+	Pan Down	Buruta chini
+	Pan Left	Buruta kushoto
+	Pan Right	Buruta kulia
+	Pan Up	Buruta juu
+	Pan sensitivity	Usikivu wa kuburuta
+	Paper Space	Nafasi ya karatasi
+	Parallel	Sambamba
+	Parameters Manager	Kidhibiti cha vigezo
+	Parametric	Kivigezo
+	Paste	Bandika
+	Paste as Block	Bandika kama bloku
+	Paste to Command Line	Bandika kwenye mstari wa amri
+	Paste to Original Coordinates	Bandika kwenye viwianishi asili
+	Path Array	Mpangilio kwa njia
+	Pattern	Ruwaza
+	Percent	Asilimia
+	Perpendicular	Pembetatu
+	Pickbox size	Ukubwa wa kisanduku cha kuchagua
+	Plot	Chapisha
+	Plot (click: do not plot)	Chapisha (bofya: usichapishe)
+	Plot Preview	Hakiki ya uchapishaji
+	Plot Style Manager	Kidhibiti cha mitindo ya uchapishaji
+	Plot Style Manager...	Kidhibiti cha mitindo ya uchapishaji...
+	Plot Style...	Mtindo wa uchapishaji...
+	Plot Styles...	Mitindo ya uchapishaji...
+	Plot Window	Dirisha la uchapishaji
+	Plot style	Mtindo wa uchapishaji
+	Plot style attached to	Mtindo wa uchapishaji umeambatishwa kwa
+	Plot style table	Jedwali la mitindo ya uchapishaji
+	Plot table type	Aina ya jedwali la uchapishaji
+	Plotter Manager	Kidhibiti cha plota
+	Plotter Manager...	Kidhibiti cha plota...
+	Plus/minus	Jumlisha/toa
+	Point	Nukta
+	Point Filters	Vichujio vya nukta
+	Point Style...	Mtindo wa nukta...
+	Polar (distance < angle)	Kipolari (umbali < pembe)
+	Polar Array	Mpangilio wa kipolari
+	Polar Tracking	Ufuatiliaji wa kipolari
+	Polar Tracking (F10)	Ufuatiliaji wa kipolari (F10)
+	Polar Tracking On (F10)	Ufuatiliaji wa kipolari umewashwa (F10)
+	Polar angle measurement	Upimaji wa pembe ya kipolari
+	Polar distance	Umbali wa kipolari
+	Polar: {distance} < {angle}°	Kipolari: {distance} < {angle}°
+	PolarSnap	Kunasa kwa kipolari
+	Polygon	Poligoni
+	Polygonal	Kipoligoni
+	Polygonal Viewport	Dirisha-tazamo la poligoni
+	Polyline	Mstari-poli
+	Polyline Edit	Hariri mstari-poli
+	Position X	Nafasi X
+	Position Y	Nafasi Y
+	Position Z	Nafasi Z
+	Previous	Iliyotangulia
+	Previous Change	Badiliko lililotangulia
+	Previous Layer	Tabaka lililotangulia
+	Primitives	Maumbo ya msingi
+	Print	Chapa
+	Print...	Chapa...
+	Profiles	Wasifu
+	Properties	Sifa
+	Properties Inspector	Mkaguzi wa sifa
+	Properties:	Sifa:
+	Proxy	Proksi
+	Purge	Safisha
+	Pyramid	Piramidi
+	Quadrant	Robo duara
+	Query Entities	Uliza vitu
+	Quick	Haraka
+	Quick Dimension	Kipimo cha haraka
+	Quick Properties	Sifa za haraka
+	Quick Select	Uteuzi wa haraka
+	Quick Select Properties	Sifa za uteuzi wa haraka
+	Quick Select...	Uteuzi wa haraka...
+	QuickCalc	Kikokotoo cha haraka
+	QuickCalc Pick	Chagua kwa kikokotoo cha haraka
+	Quit DraftCraft	Ondoka DraftCraft
+	Radius	Nusu-kipenyo
+	Raster Image	Picha ya raster
+	Ray	Mwale
+	Read-only	Kusoma tu
+	Real name	Jina halisi
+	Realtime	Wakati halisi
+	Reassociate Dimensions	Unganisha tena vipimo
+	Recalculate Table Formulas	Kokotoa upya fomula za jedwali
+	Recent	Za hivi karibuni
+	Recent Commands	Amri za hivi karibuni
+	Recent Input	Ingizo la hivi karibuni
+	Recover...	Rejesha...
+	Rectangle	Mstatili
+	Rectangular	Mstatili
+	Rectangular Array	Mpangilio wa mstatili
+	Rectangular snap	Kunasa kwa mstatili
+	Red	Nyekundu
+	Redo	Rudia
+	Redo (⇧⌘Z)	Rudia (⇧⌘Z)
+	Redraw	Chora upya
+	Reference Manager	Kidhibiti cha marejeo
+	Reference Name	Jina la rejeleo
+	References: {n}	Marejeo: {n}
+	Regen	Zalisha upya
+	Regen All	Zalisha upya zote
+	Region	Eneo-funge
+	Region/Mass Properties	Sifa za eneo/uzito
+	Reinitialize	Anzisha upya
+	Relative	Kihusiano
+	Relative to last segment	Kuhusiana na sehemu ya mwisho
+	Release the 3D mouse to calibrate its resting position	Achia kipanya cha 3D ili kurekebisha nafasi yake ya kupumzika
+	Reload	Pakia upya
+	Reload All	Pakia upya zote
+	Remove	Ondoa
+	Remove Leader	Ondoa kiongozi
+	Remove Vertex	Ondoa kipeo
+	Remove the viewport override	Ondoa ubatilishaji wa dirisha-tazamo
+	Rename Dimension Style	Badilisha jina la mtindo wa vipimo
+	Rename Layer	Badilisha jina la tabaka
+	Rename Layer State	Badilisha jina la hali ya matabaka
+	Rename Layout	Badilisha jina la mpangilio wa ukurasa
+	Rename Text Style	Badilisha jina la mtindo wa maandishi
+	Rename...	Badilisha jina...
+	Repeat {command}	Rudia {command}
+	Replace Block...	Badilisha bloku...
+	Requires a point (x,y, @dx,dy or @d<a).	Inahitaji nukta (x,y, @dx,dy au @d<a).
+	Reset Palettes	Weka upya paleti
+	Reset Panel Layout	Weka upya mpangilio wa paneli
+	Reset keeps the interface language.	Kuweka upya huhifadhi lugha ya kiolesura.
+	Reset to Defaults	Rejesha chaguo-msingi
+	Restore	Rejesha
+	Restore Layer State	Rejesha hali ya matabaka
+	Reverse	Geuza mwelekeo
+	Reverse the order	Geuza mpangilio
+	Reverse zoom direction	Geuza mwelekeo wa kukuza
+	Revision Cloud	Wingu la marekebisho
+	Revolve	Zungusha kuunda gimba
+	Right	Kulia
+	Rotate	Zungusha
+	Rotation	Mzunguko
+	Run Script...	Endesha hati...
+	SVG drawings (SVG, SVGZ)	Michoro ya SVG (SVG, SVGZ)
+	Save	Hifadhi
+	Save (⌘S)	Hifadhi (⌘S)
+	Save As	Hifadhi kama
+	Save As...	Hifadhi kama...
+	Save Layer State	Hifadhi hali ya matabaka
+	Save State	Hifadhi hali
+	Save new drawings as	Hifadhi michoro mipya kama
+	Saved Path	Njia iliyohifadhiwa
+	Scale	Kipimo
+	Scale List...	Orodha ya vipimo...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Vikuza skrini, visoma skrini na virekodi hufuata kielekezi cha mfumo.
+	Screening	Ufifishaji
+	Search for layer	Tafuta tabaka
+	Search for parameter	Tafuta kigezo
+	Search for pattern	Tafuta ruwaza
+	Second and next points:	Nukta ya pili na zinazofuata:
+	Select	Chagua
+	Select 2D polyline	Chagua mstari-poli wa 2D
+	Select All	Chagua zote
+	Select Objects	Chagua vitu
+	Select Similar	Chagua vinavyofanana
+	Select a 2D polyline.	Chagua mstari-poli wa 2D.
+	Select a block reference.	Chagua rejeleo la bloku.
+	Select a circle or arc.	Chagua duara au tao.
+	Select a closed polyline	Chagua mstari-poli uliofungwa
+	Select a closed polyline, circle, ellipse or closed spline.	Chagua mstari-poli uliofungwa, duara, duaradufu au spline iliyofungwa.
+	Select a closed polyline.	Chagua mstari-poli uliofungwa.
+	Select a curve as the path.	Chagua mkunjo kama njia.
+	Select a dimension constraint type	Chagua aina ya kizuizi cha kipimo
+	Select a line object	Chagua kitu cha mstari
+	Select a line object.	Chagua kitu cha mstari.
+	Select a line or an arc.	Chagua mstari au tao.
+	Select a line or polyline segment	Chagua mstari au sehemu ya mstari-poli
+	Select a line, arc or open polyline.	Chagua mstari, tao au mstari-poli ulio wazi.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Chagua mstari, tao, duara, mstari-poli, duaradufu au spline kama njia.
+	Select a line, circle, arc or polyline segment.	Chagua mstari, duara, tao au sehemu ya mstari-poli.
+	Select a line.	Chagua mstari.
+	Select a polyline.	Chagua mstari-poli.
+	Select a text, mtext, attribute definition or dimension.	Chagua maandishi, mtext, ufafanuzi wa sifa au kipimo.
+	Select an annotation object	Chagua kitu cha maelezo
+	Select an arc or circle	Chagua tao au duara
+	Select an arc.	Chagua tao.
+	Select an object	Chagua kitu
+	Select an object to change	Chagua kitu cha kubadilisha
+	Select an object to measure	Chagua kitu cha kupima
+	Select an object.	Chagua kitu.
+	Select an open curve.	Chagua mkunjo ulio wazi.
+	Select an open line, arc, polyline, ellipse arc or spline.	Chagua mstari ulio wazi, tao, mstari-poli, tao la duaradufu au spline.
+	Select arc or circle	Chagua tao au duara
+	Select arc or polyline arc segment	Chagua tao au sehemu ya tao ya mstari-poli
+	Select arc style	Chagua mtindo wa tao
+	Select arc, circle, line	Chagua tao, duara, mstari
+	Select at least two objects to join.	Chagua angalau vitu viwili vya kuunganisha.
+	Select circle or arc to add center mark	Chagua duara au tao ili kuongeza alama ya kitovu
+	Select closed objects (regions, closed polylines, circles).	Chagua vitu vilivyofungwa (maeneo-funge, mistari-poli iliyofungwa, duara).
+	Select first line	Chagua mstari wa kwanza
+	Select first line or arc	Chagua mstari au tao la kwanza
+	Select first object	Chagua kitu cha kwanza
+	Select first point	Chagua nukta ya kwanza
+	Select nested objects to copy	Chagua vitu vilivyo ndani vya kunakili
+	Select object	Chagua kitu
+	Select object to dimension	Chagua kitu cha kuwekea kipimo
+	Select object to divide	Chagua kitu cha kugawanya
+	Select object to extend or shift-select to trim	Chagua kitu cha kurefusha au chagua na Shift kukata
+	Select object to measure	Chagua kitu cha kupima
+	Select object to offset	Chagua kitu cha kusogeza sambamba
+	Select object to trim or shift-select to extend	Chagua kitu cha kukata au chagua na Shift kurefusha
+	Select objects	Chagua vitu
+	Select objects (crossing window first corner)	Chagua vitu (kona ya kwanza ya dirisha la kukatiza)
+	Select objects first, then choose a command	Chagua vitu kwanza, kisha uchague amri
+	Select objects to array.	Chagua vitu vya kupanga.
+	Select objects to stretch by crossing-window or crossing-polygon...	Chagua vitu vya kunyoosha kwa dirisha la kukatiza au poligoni ya kukatiza...
+	Select objects:	Chagua vitu:
+	Select one polyline (Multiple is available through the JSON form).	Chagua mstari-poli mmoja (Mara nyingi inapatikana kupitia fomu ya JSON).
+	Select path curve	Chagua mkunjo wa njia
+	Select point or object	Chagua nukta au kitu
+	Select polyline	Chagua mstari-poli
+	Select second line	Chagua mstari wa pili
+	Select second line or shift-select to apply corner	Chagua mstari wa pili au chagua na Shift kutumia kona
+	Select second object	Chagua kitu cha pili
+	Select second object or shift-select to apply corner	Chagua kitu cha pili au chagua na Shift kutumia kona
+	Select second point	Chagua nukta ya pili
+	Select spline	Chagua spline
+	Select symmetry line	Chagua mstari wa ulinganifu
+	Select two points	Chagua nukta mbili
+	Selection	Uteuzi
+	Selection Cycling	Uteuzi wa mzunguko
+	Send Hatches to Back	Peleka hachi nyuma
+	Send Under Objects	Peleka chini ya vitu
+	Send to Back	Peleka nyuma
+	Services	Huduma
+	Set Current	Weka kuwa ya sasa
+	Set Current Dimension Style	Weka mtindo wa vipimo wa sasa
+	Set Current Text Style	Weka mtindo wa maandishi wa sasa
+	Set Current Viewport	Weka dirisha-tazamo la sasa
+	Set Layer Properties	Weka sifa za tabaka
+	Set Properties	Weka sifa
+	Set Table Cell	Weka seli ya jedwali
+	Set Table Cell Style	Weka mtindo wa seli ya jedwali
+	Set Variable	Weka kigeu
+	Set View	Weka mwonekano
+	Settings...	Mipangilio...
+	Share	Shiriki
+	Show	Onyesha
+	Show All	Onyesha zote
+	Show All Constraint Bars	Onyesha pau zote za vizuizi
+	Show All Dynamic Dimensions	Onyesha vipimo vyote vinavyobadilika
+	Show Annotative Objects	Onyesha vitu vya maelezo
+	Show Layer List	Onyesha orodha ya matabaka
+	Show Quick Properties for selected objects	Onyesha sifa za haraka za vitu vilivyochaguliwa
+	Show System Cursor	Onyesha kielekezi cha mfumo
+	Show and hide the tools of this category	Onyesha na ficha zana za kategoria hii
+	Show command prompting near the crosshairs	Onyesha vidokezo vya amri karibu na msalaba wa kielekezi
+	Show in Tool Sets	Onyesha katika seti za zana
+	Show/Hide Lineweight	Onyesha/Ficha unene wa mstari
+	Show/Hide Transparency	Onyesha/Ficha uwazi
+	Single Line Text	Maandishi ya mstari mmoja
+	Single Point	Nukta moja
+	Single...	Mstari mmoja...
+	Smooth	Lainisha
+	Snap	Kunasa
+	Snap Mode	Hali ya kunasa
+	Snap Mode (F9)	Hali ya kunasa (F9)
+	Snap On (F9)	Kunasa kumewashwa (F9)
+	Snap Overrides	Ubatilishaji wa kunasa
+	Snap X spacing	Nafasi ya kunasa X
+	Snap and Grid	Kunasa na gridi
+	Snap type	Aina ya kunasa
+	Snap, grid, polar tracking and Dynamic Input:	Kunasa, gridi, ufuatiliaji wa kipolari na ingizo linalobadilika:
+	Solid	Imara
+	Solid Editing	Uhariri wa gimba
+	Sort	Panga
+	Specify a point	Bainisha nukta
+	Specify a scale for the hatch pattern	Bainisha kipimo cha ruwaza ya hachi
+	Specify a second extension line origin	Bainisha chanzo cha mstari wa pili wa kiendelezi
+	Specify an angle for the hatch pattern	Bainisha pembe ya ruwaza ya hachi
+	Specify angle end point	Bainisha ncha ya mwisho ya pembe
+	Specify angle of dimension line	Bainisha pembe ya mstari wa kipimo
+	Specify angle of dimension text	Bainisha pembe ya maandishi ya kipimo
+	Specify angle start point	Bainisha nukta ya mwanzo ya pembe
+	Specify angle vertex	Bainisha kipeo cha pembe
+	Specify angle vertex point	Bainisha nukta ya kipeo cha pembe
+	Specify arc length dimension location	Bainisha mahali pa kipimo cha urefu wa tao
+	Specify axis endpoint of ellipse	Bainisha ncha ya mhimili wa duaradufu
+	Specify base diameter	Bainisha kipenyo cha kitako
+	Specify base point	Bainisha nukta ya msingi
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Bainisha nukta ya msingi au uhamisho (buruta kwa kitufe cha kati cha kipanya kuburuta mwonekano kwa wakati halisi)
+	Specify base radius	Bainisha nusu-kipenyo cha kitako
+	Specify center of donut	Bainisha kitovu cha pete
+	Specify center of ellipse	Bainisha kitovu cha duaradufu
+	Specify center of polygon	Bainisha kitovu cha poligoni
+	Specify center point for circle	Bainisha kitovu cha duara
+	Specify center point of arc	Bainisha kitovu cha tao
+	Specify center point of arc (hold Ctrl to switch direction)	Bainisha kitovu cha tao (shikilia Ctrl kubadili mwelekeo)
+	Specify center point of array	Bainisha kitovu cha mpangilio
+	Specify center point of base	Bainisha kitovu cha kitako
+	Specify corner of viewport	Bainisha kona ya dirisha-tazamo
+	Specify corner of window, enter a scale factor (nX or nXP)	Bainisha kona ya dirisha, ingiza kipengele cha kipimo (nX au nXP)
+	Specify diameter of circle	Bainisha kipenyo cha duara
+	Specify dimension arc line location	Bainisha mahali pa tao la mstari wa kipimo
+	Specify dimension line location	Bainisha mahali pa mstari wa kipimo
+	Specify distance between turns	Bainisha umbali kati ya mizunguko
+	Specify distance to other axis	Bainisha umbali hadi mhimili mwingine
+	Specify end angle	Bainisha pembe ya mwisho
+	Specify end point of arc	Bainisha ncha ya mwisho ya tao
+	Specify end point of arc (hold Ctrl to switch direction)	Bainisha ncha ya mwisho ya tao (shikilia Ctrl kubadili mwelekeo)
+	Specify ending width	Bainisha upana wa mwisho
+	Specify ending width for next segment	Bainisha upana wa mwisho wa sehemu inayofuata
+	Specify endpoint of arc	Bainisha ncha ya tao
+	Specify endpoint of axis	Bainisha ncha ya mhimili
+	Specify endpoint of line	Bainisha ncha ya mstari
+	Specify feature location	Bainisha mahali pa kipengele
+	Specify fillet radius	Bainisha nusu-kipenyo cha kupinda kona
+	Specify fillet radius for rectangles	Bainisha nusu-kipenyo cha kupinda kona kwa mistatili
+	Specify first angle endpoint	Bainisha ncha ya kwanza ya pembe
+	Specify first chamfer distance	Bainisha umbali wa kwanza wa kukata pembe
+	Specify first chamfer distance for rectangles	Bainisha umbali wa kwanza wa kukata pembe kwa mistatili
+	Specify first constraint point	Bainisha nukta ya kwanza ya kizuizi
+	Specify first corner	Bainisha kona ya kwanza
+	Specify first corner point	Bainisha nukta ya kona ya kwanza
+	Specify first destination point	Bainisha nukta ya kwanza ya kulengwa
+	Specify first end point of circle's diameter	Bainisha ncha ya kwanza ya kipenyo cha duara
+	Specify first endpoint of edge	Bainisha ncha ya kwanza ya ukingo
+	Specify first extension line origin	Bainisha chanzo cha mstari wa kwanza wa kiendelezi
+	Specify first point	Bainisha nukta ya kwanza
+	Specify first point of mirror line	Bainisha nukta ya kwanza ya mstari wa kioo
+	Specify first point on circle	Bainisha nukta ya kwanza kwenye duara
+	Specify first point on circle: _tan to	Bainisha nukta ya kwanza kwenye duara: _tan kwa
+	Specify first source point	Bainisha nukta ya kwanza ya chanzo
+	Specify height	Bainisha kimo
+	Specify helix height	Bainisha kimo cha hesi
+	Specify included angle	Bainisha pembe iliyojumuishwa
+	Specify included angle (hold Ctrl to switch direction)	Bainisha pembe iliyojumuishwa (shikilia Ctrl kubadili mwelekeo)
+	Specify insertion base point	Bainisha nukta ya msingi ya uingizaji
+	Specify insertion point	Bainisha nukta ya uingizaji
+	Specify inside diameter of donut	Bainisha kipenyo cha ndani cha pete
+	Specify leader arrowhead location	Bainisha mahali pa kichwa cha mshale wa kiongozi
+	Specify leader endpoint	Bainisha ncha ya kiongozi
+	Specify leader landing location	Bainisha mahali pa kutua kwa kiongozi
+	Specify length for rectangles	Bainisha urefu wa mistatili
+	Specify length of chord	Bainisha urefu wa kiambo
+	Specify length of chord (hold Ctrl to switch direction)	Bainisha urefu wa kiambo (shikilia Ctrl kubadili mwelekeo)
+	Specify length of segment	Bainisha urefu wa sehemu
+	Specify line width for rectangles	Bainisha upana wa mstari kwa mistatili
+	Specify location for new vertex	Bainisha mahali pa kipeo kipya
+	Specify minimum length of arc	Bainisha urefu wa chini kabisa wa tao
+	Specify new end point	Bainisha ncha mpya
+	Specify new location for marked vertex	Bainisha mahali mapya pa kipeo kilichowekwa alama
+	Specify new width for all segments	Bainisha upana mpya kwa sehemu zote
+	Specify next point	Bainisha nukta inayofuata
+	Specify offset distance	Bainisha umbali wa kusogeza sambamba
+	Specify opposite corner	Bainisha kona ya kinyume
+	Specify other corner point	Bainisha nukta ya kona nyingine
+	Specify other endpoint of axis	Bainisha ncha nyingine ya mhimili
+	Specify outside diameter of donut	Bainisha kipenyo cha nje cha pete
+	Specify point	Bainisha nukta
+	Specify point on object for first tangent of circle	Bainisha nukta kwenye kitu kwa mguso wa kwanza wa duara
+	Specify point on object for second tangent of circle	Bainisha nukta kwenye kitu kwa mguso wa pili wa duara
+	Specify point on side to offset	Bainisha nukta upande wa kusogeza
+	Specify radius of arc	Bainisha nusu-kipenyo cha tao
+	Specify radius of arc (hold Ctrl to switch direction)	Bainisha nusu-kipenyo cha tao (shikilia Ctrl kubadili mwelekeo)
+	Specify radius of circle	Bainisha nusu-kipenyo cha duara
+	Specify rotation angle	Bainisha pembe ya mzunguko
+	Specify rotation angle of text	Bainisha pembe ya mzunguko wa maandishi
+	Specify scale factor	Bainisha kipengele cha kipimo
+	Specify second angle endpoint	Bainisha ncha ya pili ya pembe
+	Specify second break point	Bainisha nukta ya pili ya kuvunja
+	Specify second chamfer distance for rectangles	Bainisha umbali wa pili wa kukata pembe kwa mistatili
+	Specify second constraint point	Bainisha nukta ya pili ya kizuizi
+	Specify second destination point	Bainisha nukta ya pili ya kulengwa
+	Specify second end point of circle's diameter	Bainisha ncha ya pili ya kipenyo cha duara
+	Specify second endpoint of edge	Bainisha ncha ya pili ya ukingo
+	Specify second extension line origin	Bainisha chanzo cha mstari wa pili wa kiendelezi
+	Specify second point	Bainisha nukta ya pili
+	Specify second point of arc	Bainisha nukta ya pili ya tao
+	Specify second point of mirror line	Bainisha nukta ya pili ya mstari wa kioo
+	Specify second point on circle	Bainisha nukta ya pili kwenye duara
+	Specify second point on circle: _tan to	Bainisha nukta ya pili kwenye duara: _tan kwa
+	Specify second point or <use first point as displacement>	Bainisha nukta ya pili au <tumia nukta ya kwanza kama uhamisho>
+	Specify second source point	Bainisha nukta ya pili ya chanzo
+	Specify side to offset	Bainisha upande wa kusogeza
+	Specify start angle	Bainisha pembe ya mwanzo
+	Specify start point	Bainisha nukta ya mwanzo
+	Specify start point of arc	Bainisha nukta ya mwanzo ya tao
+	Specify start point of polyline	Bainisha nukta ya mwanzo ya mstari-poli
+	Specify start point of text	Bainisha nukta ya mwanzo ya maandishi
+	Specify starting width	Bainisha upana wa mwanzo
+	Specify starting width for next segment	Bainisha upana wa mwanzo wa sehemu inayofuata
+	Specify tangent direction for the start point of arc	Bainisha mwelekeo wa mguso kwa nukta ya mwanzo ya tao
+	Specify the elevation for rectangles	Bainisha mwinuko kwa mistatili
+	Specify thickness for rectangles	Bainisha unene kwa mistatili
+	Specify third point on circle	Bainisha nukta ya tatu kwenye duara
+	Specify third point on circle: _tan to	Bainisha nukta ya tatu kwenye duara: _tan kwa
+	Specify third source point or <continue>	Bainisha nukta ya tatu ya chanzo au <endelea>
+	Specify through point	Bainisha nukta ya kupitia
+	Specify top diameter	Bainisha kipenyo cha juu
+	Specify top radius	Bainisha nusu-kipenyo cha juu
+	Specify total angle	Bainisha pembe jumla
+	Specify total length	Bainisha urefu jumla
+	Specify width for rectangles	Bainisha upana kwa mistatili
+	Sphere	Tufe
+	Spline	Spline
+	Spline Edit	Hariri spline
+	Stack (type 1/2 then select)	Sehemu (andika 1/2 kisha uchague)
+	Standard	Kawaida
+	Start	Anza
+	Start Width	Upana wa mwanzo
+	Start X	Mwanzo X
+	Start Y	Mwanzo Y
+	Start angle	Pembe ya mwanzo
+	Start, Center, Angle	Mwanzo, kitovu, pembe
+	Start, Center, End	Mwanzo, kitovu, mwisho
+	Start, Center, Length	Mwanzo, kitovu, urefu
+	Start, End, Angle	Mwanzo, mwisho, pembe
+	Start, End, Direction	Mwanzo, mwisho, mwelekeo
+	Start, End, Radius	Mwanzo, mwisho, nusu-kipenyo
+	Status	Hali
+	Status Bar	Upau wa hali
+	Stretch	Nyoosha
+	Stretch Vertex	Nyoosha kipeo
+	Style: Standard	Mtindo: Standard
+	Subtract	Toa
+	Sweep	Fagia
+	Switch Drawing	Badili mchoro
+	Switch Layout	Badili mpangilio wa ukurasa
+	Switch between model space in a viewport and paper space	Badili kati ya nafasi ya modeli ndani ya dirisha-tazamo na nafasi ya karatasi
+	Symmetric	Ulinganifu
+	Synchronize Attributes	Linganisha sifa za bloku
+	Synchronize Multiple-scale Positions	Linganisha nafasi za vipimo vingi
+	TOP	JUU
+	Table	Jedwali
+	Table Breaks	Migawanyiko ya jedwali
+	Table Cell Style	Mtindo wa seli ya jedwali
+	Table Style...	Mtindo wa jedwali...
+	Table style	Mtindo wa jedwali
+	Table...	Jedwali...
+	Tan, Tan, Radius	Mguso, mguso, nusu-kipenyo
+	Tan, Tan, Tan	Mguso, mguso, mguso
+	Tangent	Mguso
+	Temporary track point	Nukta ya muda ya ufuatiliaji
+	Text	Maandishi
+	Text Editor	Kihariri cha maandishi
+	Text Height	Kimo cha maandishi
+	Text Objects Only	Vitu vya maandishi pekee
+	Text Style...	Mtindo wa maandishi...
+	Text height	Kimo cha maandishi
+	Text override	Ubatilishaji wa maandishi
+	Text style	Mtindo wa maandishi
+	Thaw All Layers	Yeyusha matabaka yote
+	Thaw Layer	Yeyusha tabaka
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Kipenyo cha kunasa ni jinsi kielekezi kinavyopaswa kukaribia nukta ili kunasa vitu kuipate.
+	There is nothing here yet.	Bado hakuna kitu hapa.
+	Thickness	Unene
+	Time	Muda
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Kubofya kulia kwa muda: kubofya haraka ni Enter, kushikilia hufungua menyu
+	To	Hadi
+	To get started, create or open a drawing.	Ili kuanza, unda au fungua mchoro.
+	Toggle PICKADD (off: each pick replaces the selection)	Badili PICKADD (imezimwa: kila uchaguzi hubadilisha uteuzi)
+	Toggle PICKADD (on: picks add to the selection)	Badili PICKADD (imewashwa: chaguzi huongezwa kwenye uteuzi)
+	Tolerance...	Ustahimilivu...
+	Tool Bar	Upau wa zana
+	Tool Sets	Seti za zana
+	Tools	Zana
+	Torus	Torasi
+	Trace	Ufuatiliaji
+	Track orthogonally only	Fuatilia kwa pembe mraba pekee
+	Track using all polar angle settings	Fuatilia kwa kutumia mipangilio yote ya pembe za kipolari
+	Transparency	Uwazi
+	Trim	Kata
+	True Color	Rangi halisi
+	Turn All Layers On	Washa matabaka yote
+	Turn Off Layer	Zima tabaka
+	Turn On Layer	Washa tabaka
+	Turn Quick Properties off (QPMODE)	Zima sifa za haraka (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Kikizimwa, kubofya kulia wakati amri inaendeshwa daima hufungua menyu ya njia ya mkato.
+	Type	Aina
+	Type a command	Andika amri
+	Type text; Enter starts a new paragraph	Andika maandishi; Enter huanza aya mpya
+	UCS Icon	Ikoni ya UCS
+	Undo	Tendua
+	Undo (⌘Z)	Tendua (⌘Z)
+	Ungroup	Vunja kikundi
+	Union	Muungano
+	Unisolate Layer	Ondoa utengaji wa tabaka
+	Units Conversion	Ubadilishaji wa vipimo
+	Units...	Vipimo...
+	Unload	Pakua
+	Unloaded	Imepakuliwa
+	Unlock Layer	Fungua tabaka
+	Unlock viewport	Fungua dirisha-tazamo
+	Unmerge Cells	Tenganisha seli
+	Unreferenced	Hazijarejelewa
+	Unresolved	Hazijatatuliwa
+	Unsaved Layer State	Hali ya matabaka isiyohifadhiwa
+	Up	Juu
+	Update	Sasisha
+	Update Data Links	Sasisha viungo vya data
+	Use System Setting	Tumia mpangilio wa mfumo
+	Use for this layout	Tumia kwa mpangilio huu wa ukurasa
+	Use object linetype	Tumia aina ya mstari ya kitu
+	Use object lineweight	Tumia unene wa mstari wa kitu
+	User	Mtumiaji
+	User Parameters	Vigezo vya mtumiaji
+	User Preferences	Mapendeleo ya mtumiaji
+	Username	Jina la mtumiaji
+	VP Color	Rangi ya VP
+	VP Freeze	Gandisha katika VP
+	Value	Thamani
+	Value:	Thamani:
+	Variables	Vigeu
+	Version	Toleo
+	Version 2000	Toleo 2000
+	Version 2004	Toleo 2004
+	Version 2007	Toleo 2007
+	Version 2010	Toleo 2010
+	Version 2013	Toleo 2013
+	Version 2018	Toleo 2018
+	Version {version}	Toleo {version}
+	Vertical	Wima
+	VerticalDistance	UmbaliWima
+	View	Mwonekano
+	ViewCube	ViewCube
+	Viewport	Dirisha-tazamo
+	Viewport Layer Freeze	Kugandisha matabaka ya dirisha-tazamo
+	Viewport Properties	Sifa za dirisha-tazamo
+	Viewport is locked	Dirisha-tazamo limefungwa
+	Viewport scale	Kipimo cha dirisha-tazamo
+	Viewport {id}	Dirisha-tazamo {id}
+	Viewports	Madirisha-tazamo
+	Volume	Ujazo
+	WCS	WCS
+	White	Nyeupe
+	Width factor	Kipengele cha upana
+	Window	Dirisha
+	Wipeout	Kifutio
+	Workspace Switching	Kubadili nafasi za kazi
+	Write Block	Andika bloku
+	X	X
+	Xline	Mstari wa ujenzi
+	Y	Y
+	Yellow	Njano
+	Yes	Ndiyo
+	Zoom	Kuza
+	Zoom All	Kuza zote
+	Zoom Dynamic	Kuza kwa nguvu
+	Zoom Extents	Kuza hadi upeo
+	Zoom In	Karibia
+	Zoom Object	Kuza kitu
+	Zoom Out	Mbali
+	Zoom Previous	Kuza kwa iliyotangulia
+	Zoom Realtime	Kuza kwa wakati halisi
+	Zoom Window	Kuza dirisha
+	Zoom sensitivity	Usikivu wa kukuza
+	error	hitilafu
+	min	dak
+	objects	vitu
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (kizuizi {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	Kizuizi {kind} {name} = {expression}  (bofya mara mbili kuhariri)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Kigezo kipya cha mtumiaji
+	ΔLOC	ΔLOC
+	−Bin	−Pipa
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ kumaliza
+@plural	{n} commit	commit {n}|commit {n}
+@plural	{n} contributor	mchangiaji {n}|wachangiaji {n}
+	Check for Updates…	Angalia masasisho…
+	DraftCraft is up to date.	DraftCraft iko katika toleo jipya zaidi.
+	Could not check for updates.	Haikuweza kuangalia masasisho.
+	Add to Working Set	Ongeza kwenye seti ya kazi
+	Add: Pick points	Ongeza: chagua nukta
+	Add: Select objects	Ongeza: chagua vitu
+	Add…	Ongeza…
+	Alias	Jina mbadala
+	Alias file: {file}	Faili ya majina mbadala: {file}
+	Align Multileaders	Panga viongozi-wengi
+	Analyze Shapes	Changanua maumbo
+	Analyze Usage	Changanua matumizi
+	Animation Effects	Madoido ya uhuishaji
+	Animation effects	Madoido ya uhuishaji
+	Associative	Shirikishi
+	Backup copy	Nakala ya akiba
+	Block to create or edit	Bloku la kuunda au kuhariri
+	Bottom left	Chini kushoto
+	Bottom right	Chini kulia
+	Boundaries	Mipaka
+	Boundaries picked: {n}	Mipaka iliyochaguliwa: {n}
+	Break-line Symbol	Alama ya mstari wa kuvunja
+	Centered	Katikati
+	Change Properties	Badilisha sifa
+	Choose the command the alias starts.	Chagua amri ambayo jina mbadala huanzisha.
+	Click the ruler to add a tab stop, right-click to remove one	Bofya rula kuongeza kituo cha tab, bofya kulia kuondoa
+	Click to set new origin	Bofya kuweka asili mpya
+	Close Block Editor	Funga kihariri cha bloku
+	Collect	Kusanya
+	Collect Multileaders	Kusanya viongozi-wengi
+	Color 1	Rangi 1
+	Color 2	Rangi 2
+	Command	Amri
+	Convert Text to Mtext	Geuza maandishi kuwa mtext
+	Create backup copy with each save	Unda nakala ya akiba kila unapohifadhi
+	Create separate hatches	Unda hachi tofauti
+	Crossing selection color:	Rangi ya uteuzi wa kukatiza:
+	Curved	Iliyopinda
+	Customize	Badilisha upendavyo
+	Default to boundary extents	Chaguo-msingi kwa upeo wa mpaka
+	Define each corner of the selection window with a separate click.	Bainisha kila kona ya dirisha la uteuzi kwa kubofya tofauti.
+	Discard	Tupa
+	Drag Dynamic Grip	Buruta kishikio kinachobadilika
+	Dynamic Block Data	Data ya bloku linalobadilika
+	Dynamic Block Grips	Vishikio vya bloku linalobadilika
+	Dynamic Block Reference	Rejeleo la bloku linalobadilika
+	Edit Block Definition	Hariri ufafanuzi wa bloku
+	Edit Command Aliases (PGP)...	Hariri majina mbadala ya amri (PGP)...
+	Edit Multileader	Hariri kiongozi-mwingi
+	Edit Reference In-Place	Hariri rejeleo papo hapo
+	Edit…	Hariri…
+	Evaluate LISP	Tathmini LISP
+	Exclude:	Ondoa:
+	Explode Attributes to Text	Pasua sifa kuwa maandishi
+	Express Tools	Zana za haraka
+	Font	Fonti
+	Grips	Vishikio
+	Groups	Vikundi
+	Hatch Pick	Chagua hachi
+	Hatch and Gradient	Hachi na mwinuko wa rangi
+	Hatch origin	Asili ya hachi
+	Hatches	Hachi
+	Hemispherical	Nusu-tufe
+	Ignore	Puuza
+	Imperial (inches)	Kiingereza (inchi)
+	Implied Loops	Mizunguko inayodokezwa
+	Indicate selection area	Onyesha eneo la uteuzi
+	Interface scale	Kipimo cha kiolesura
+	Inverted	Iliyogeuzwa
+	Island	Kisiwa
+	Island detection	Utambuzi wa visiwa
+	Italic	Herufi za mlalo
+	Justify	Panga pande zote
+	Load Application...	Pakia programu...
+	Metric (millimetres)	Metriki (milimita)
+	More than {n} aliases.	Zaidi ya majina mbadala {n}.
+	Move/Copy/Rotate	Sogeza/Nakili/Zungusha
+	Multiline text	Maandishi ya mistari mingi
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Mchoro mpya na mchoro wa kwanza wakati wa kuanza hutumia vipimo hivi isipokuwa kiolezo chaguo-msingi kimewekwa (QNEWTEMPLATE).
+	New block	Bloku jipya
+	No alias file loaded. REINIT replaces these aliases with a file's.	Hakuna faili ya majina mbadala iliyopakiwa. REINIT hubadilisha majina mbadala haya kwa yale ya faili.
+	Not a number or distance: {text}	Si namba wala umbali: {text}
+	Object grouping	Upangaji wa vitu katika vikundi
+	Object selection limit for display of grips	Kikomo cha uteuzi wa vitu kwa kuonyesha vishikio
+	Objects on locked layers	Vitu kwenye matabaka yaliyofungwa
+	Open in Block Editor	Fungua katika kihariri cha bloku
+	Origin: {x}, {y}	Asili: {x}, {y}
+	Outer	Nje
+	Overline	Mstari juu
+	Preview	Hakiki
+	Query Texts	Uliza maandishi
+	Save Block	Hifadhi bloku
+	Save Block As	Hifadhi bloku kama
+	Save Layout as Template	Hifadhi mpangilio wa ukurasa kama kiolezo
+	Save Reference Edits	Hifadhi uhariri wa rejeleo
+	Save alias	Hifadhi jina mbadala
+	Save changes to block "{name}"?	Hifadhi mabadiliko ya bloku "{name}"?
+	Select boundaries to remove	Chagua mipaka ya kuondoa
+	Select using two clicks only	Chagua kwa kubofya mara mbili tu
+	Selection Area Effect	Athari ya eneo la uteuzi
+	Selection Preview Filter	Kichujio cha hakiki ya uteuzi
+	Selection area opacity:	Uangavu wa eneo la uteuzi:
+	Selection effect color	Rangi ya athari ya uteuzi
+	Selection modes	Hali za uteuzi
+	Selection preview	Hakiki ya uteuzi
+	Set Dynamic Property	Weka sifa inayobadilika
+	Shape	Umbo
+	Sheet Books to PDF...	Vitabu vya karatasi kwenda PDF...
+	Show grips	Onyesha vishikio
+	Specified origin	Asili iliyobainishwa
+	Spherical	Kitufe
+	Tables	Majedwali
+	Text color	Rangi ya maandishi
+	Top left	Juu kushoto
+	Top right	Juu kulia
+	Type an alias name.	Andika jina mbadala.
+	Underline	Pigia mstari
+	Units of new drawings	Vipimo vya michoro mipya
+	Unsaved changes	Mabadiliko yasiyohifadhiwa
+	Use current origin	Tumia asili ya sasa
+	Visual Effect Settings	Mipangilio ya madoido ya kuona
+	Visual Effect Settings...	Mipangilio ya madoido ya kuona...
+	When a command is active	Amri ikiwa hai
+	When no command is active	Hakuna amri iliyo hai
+	Window selection color:	Rangi ya uteuzi wa dirisha:
+	Working Set	Seti ya kazi
+	Xref and Block In-place Editing	Uhariri wa marejeo ya nje na bloku papo hapo
+	Xrefs	Marejeo ya nje
+	built-in	iliyojengewa ndani
+	overrides built-in	inabatilisha iliyojengewa ndani
+	{alias} is already defined; select it and use Edit.	{alias} tayari limefafanuliwa; lichague na utumie Hariri.
+	{command} is an unknown command.	{command} ni amri isiyojulikana.
+	Find All	Tafuta zote
+	Find what:	Tafuta nini:
+	Match case	Linganisha herufi kubwa/ndogo
+	Replace	Badilisha
+	Replace All	Badilisha zote
+	Replace with:	Badilisha kwa:
+	Replacement text	Maandishi mbadala
+	Results	Matokeo
+	Searches the current space.	Hutafuta katika nafasi ya sasa.
+	Text to find	Maandishi ya kutafuta
+	Whole words	Maneno kamili
+	Nothing found	Hakuna kilichopatikana
+	E	M
+	N	K
+	S	K
+	W	M
+	B	C
+	DraftCraft	DraftCraft
+	Clear Recent Files	Futa faili za hivi karibuni
+	contains authoring elements. Open in Block Editor?	lina vipengele vya uundaji. Fungua katika kihariri cha bloku?
+	Custom	Maalum
+	Open Recent	Fungua za hivi karibuni
+	This drawing	Mchoro huu
+	Arrow size	Ukubwa wa mshale
+	Dim scale overall	Kipimo cha jumla cha vipimo
+	Precision	Usahihi
+	Apply to Layout	Tumia kwa mpangilio wa ukurasa
+	Center the plot	Weka uchapishaji katikati
+	Enter block names to extract	Ingiza majina ya bloku za kutoa
+	Enter geometric characteristic	Ingiza sifa ya kijiometri
+	Enter name of LISP file to load	Ingiza jina la faili ya LISP ya kupakia
+	First corner	Kona ya kwanza
+	Fit to paper	Lingana na karatasi
+	Landscape	Mlalo
+	Limits	Mipaka
+	Opposite corner	Kona ya kinyume
+	Orientation	Mkao
+	Paper size	Ukubwa wa karatasi
+	Plot area	Eneo la uchapishaji
+	Plot object lineweights	Chapisha unene wa mistari ya vitu
+	Plot offset	Usogezaji wa uchapishaji
+	Plot transparency	Chapisha uwazi
+	Portrait	Wima
+	Printer/plotter	Printa/plota
+	Window <	Dirisha <
+	X offset (mm)	Usogezaji X (mm)
+	Y offset (mm)	Usogezaji Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstromu
+	Architectural	Kiusanifu
+	Astronomical Units	Vipimo vya kiastronomia
+	Centimeters	Sentimita
+	Decameters	Dekamita
+	Decimal	Desimali
+	Decimal Degrees	Nyuzi za desimali
+	Decimeters	Desimita
+	Deg/Min/Sec	Nyuzi/Dakika/Sekunde
+	Don't Save	Usihifadhi
+	Drawing Units	Vipimo vya mchoro
+	Engineering	Kihandisi
+	Feet	Futi
+	Fractional	Sehemu
+	Gigameters	Gigamita
+	Grads	Gradi
+	Hectometers	Hektomita
+	Inches	Inchi
+	Insertion scale	Kipimo cha uingizaji
+	Kilometers	Kilomita
+	Light Years	Miaka ya mwanga
+	Meters	Mita
+	Microinches	Maikroinchi
+	Microns	Maikroni
+	Miles	Maili
+	Millimeters	Milimita
+	Mils	Mil
+	Nanometers	Nanomita
+	Parsecs	Parseki
+	Radians	Radiani
+	Sample output	Mfano wa matokeo
+	Save changes to {name}?	Hifadhi mabadiliko ya {name}?
+	Scientific	Kisayansi
+	Surveyor's Units	Vipimo vya upimaji ardhi
+	Unitless	Bila vipimo
+	Units to scale inserted content	Vipimo vya kupima maudhui yaliyoingizwa
+	US Survey Feet	Futi za upimaji za Marekani
+	US Survey Inch	Inchi ya upimaji ya Marekani
+	US Survey Mile	Maili ya upimaji ya Marekani
+	US Survey Yard	Yadi ya upimaji ya Marekani
+	Yards	Yadi
+	Your changes will be lost if you don't save them.	Mabadiliko yako yatapotea usipoyahifadhi.
+	Layouts	Mipangilio ya ukurasa
+	Associate	Husisha
+	Clip Xref	Kata rejeleo la nje
+	Xref Clip Frame	Fremu ya kukata rejeleo la nje
+	Minimize	Punguza
+	Maximize	Kuza dirisha
+	Restore Down	Rejesha chini
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft na nembo ya DraftCraft ni alama za biashara za DraftCraft Engineering Ventures.
+	Conic	Koniki
+	Spline Fit	Spline kwa nukta za kulinganisha
+	Spline CV	Spline kwa vipeo vya udhibiti
+	Specify start point of conic	Bainisha nukta ya mwanzo ya koniki
+	Specify apex (where the end tangents meet)	Bainisha kilele (mahali miguso ya ncha inapokutana)
+	Specify end point of conic	Bainisha ncha ya mwisho ya koniki
+	Specify rho or a point on the conic	Bainisha rho au nukta kwenye koniki
+	Check for Updates...	Angalia masasisho...
+	Check for Updates	Angalia masasisho
+	Update Available	Sasisho linapatikana
+	DraftCraft {version} is available.	DraftCraft {version} inapatikana.
+	You have version {version}.	Una toleo {version}.
+	Do you want to download the update?	Je, unataka kupakua sasisho?
+	What's new	Mapya
+	What's New	Mapya
+	Download	Pakua
+	Later	Baadaye
+	Skip This Version	Ruka toleo hili
+	DraftCraft is up to date (version {version}).	DraftCraft iko katika toleo jipya zaidi (toleo {version}).
+	Do you want to install the update now?	Je, unataka kusakinisha sasisho sasa?
+	Update Now	Sasisha sasa
+	Open the release page	Fungua ukurasa wa toleo
+	This copy of DraftCraft can't update itself.	Nakala hii ya DraftCraft haiwezi kujisasisha.
+	Updating DraftCraft	Inasasisha DraftCraft
+	Update Failed	Kusasisha kumeshindwa
+	Installing DraftCraft {version}	Inasakinisha DraftCraft {version}
+	Downloading: {done} of {total} MB	Inapakua: {done} kati ya {total} MB
+	Installing…	Inasakinisha…
+	Starting the download…	Inaanza kupakua…
+	The connection dropped; trying again…	Muunganisho umekatika; inajaribu tena…
+	DraftCraft {version} is installed.	DraftCraft {version} imesakinishwa.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Anzisha upya DraftCraft ili kuitumia. Ukianzisha upya baadaye, itafunguka wakati ujao utakapoanzisha DraftCraft.
+	Restart Now	Anzisha upya sasa
+	The update could not be installed.	Sasisho halikuweza kusakinishwa.
+	You can download it from the release page instead.	Badala yake unaweza kulipakua kutoka ukurasa wa toleo.
+	2D Wireframe	Fremu-waya ya 2D
+	Annotate	Maelezo
+	Blocks Palette	Paleti ya bloku
+	CAD Standards	Viwango vya CAD
+	Commands	Amri
+	2D Drafting	Uchoraji wa 2D
+	Edit Aliases	Hariri majina mbadala
+	Image	Picha
+	Palettes	Paleti
+	Top	Juu
+	Units	Vipimo
+	Workspace	Nafasi ya kazi
+	Ribbon	Utepe
+	PDF Underlay...	Msingi wa PDF...
+	PDF Import	Leta PDF
+	PDF Underlay	Msingi wa PDF
+	Underlay Layers	Matabaka ya msingi
+	Raster Image Reference...	Rejeleo la picha ya raster...
+	Close Text Editor	Funga kihariri cha maandishi
+	Image Clip	Kata picha
+	PDF Clip	Kata PDF
+	Image Adjust	Rekebisha picha
+	PDF Adjust	Rekebisha PDF
+	Adjust...	Rekebisha...
+	Parameter	Kigezo
+	Action	Kitendo
+	DesignCenter	DesignCenter
+	Tool Palettes	Paleti za zana
+	Sheet Set Manager	Kidhibiti cha seti za karatasi
+	Type the drawing's path, then press Enter.	Andika njia ya mchoro, kisha bonyeza Enter.
+	Drawing file	Faili ya mchoro
+	Folder	Folda
+	Linetypes	Aina za mistari
+	Text Styles	Mitindo ya maandishi
+	Dimension Styles	Mitindo ya vipimo
+	Table Styles	Mitindo ya jedwali
+	Multileader Styles	Mitindo ya viongozi-wengi
+	Multiline Styles	Mitindo ya mistari-mingi
+	Add to Drawing	Ongeza kwenye mchoro
+	Create Tool Palette	Unda paleti ya zana
+	Nothing of this kind in the file.	Hakuna kitu cha aina hii katika faili.
+	Open a drawing to see its blocks, layers and styles.	Fungua mchoro ili kuona bloku, matabaka na mitindo yake.
+	Delete Palette	Futa paleti
+	New Palette	Paleti mpya
+	No tool palettes.	Hakuna paleti za zana.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Paleti hii ni tupu: ongeza amri hapa chini, au tengeneza paleti kutoka DesignCenter.
+	Delete Tool	Futa zana
+	Add Command	Ongeza amri
+	New Sheet Set...	Seti mpya ya karatasi...
+	Open Sheet Set...	Fungua seti ya karatasi...
+	Sheet sets (DCSS)	Seti za karatasi (DCSS)
+	Sheet set file	Faili ya seti ya karatasi
+	Make or open a sheet set to list its sheets.	Tengeneza au fungua seti ya karatasi ili kuorodhesha karatasi zake.
+	Add Drawing...	Ongeza mchoro...
+	Publish to PDF...	Chapisha kwenda PDF...
+	No sheets yet: add a drawing's layouts.	Bado hakuna karatasi: ongeza mipangilio ya ukurasa ya mchoro.
+	Number	Namba
+	Title	Kichwa
+	Move Up	Sogeza juu
+	Move Down	Sogeza chini
+	Sheet Set (DCSS)	Seti ya karatasi (DCSS)
+	Close Tool Palettes	Funga paleti za zana
+	Close DesignCenter	Funga DesignCenter
+	Close Sheet Set Manager	Funga kidhibiti cha seti za karatasi
+	Manage Tool Palettes	Dhibiti paleti za zana
+	Changes apply at once; Save Current As keeps them in a workspace.	Mabadiliko yanatumika mara moja; Hifadhi ya sasa kama huyahifadhi katika nafasi ya kazi.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Bofya matabaka ili kuonyesha hayo tu; Ctrl au Shift huongeza kwenye chaguo.
+	Current Workspace	Nafasi ya kazi ya sasa
+	Customize Interface	Badilisha kiolesura
+	Customize User Interface	Badilisha kiolesura cha mtumiaji
+	Customize...	Badilisha upendavyo...
+	Edit Aliases...	Hariri majina mbadala...
+	Force object color and linetype to ByLayer	Lazimisha rangi na aina ya mstari ya kitu kuwa KwaTabaka
+	Geographic Location	Mahali pa kijiografia
+	Geographic Location...	Mahali pa kijiografia...
+	Latitude	Latitudo
+	Longitude	Longitudo
+	North direction	Mwelekeo wa kaskazini
+	Layer Translation Mappings	Uoanishaji wa tafsiri ya matabaka
+	Layer Translator	Mtafsiri wa matabaka
+	Layer Translator...	Mtafsiri wa matabaka...
+	Layer Walk	Pitia matabaka
+	Layer Walk...	Pitia matabaka...
+	Location	Mahali
+	Set Location	Weka mahali
+	Remove Location	Ondoa mahali
+	The drawing's origin is at this place (WGS 84 degrees).	Asili ya mchoro iko mahali hapa (nyuzi za WGS 84).
+	Map	Oanisha
+	New layer name	Jina la tabaka jipya
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Bado hakuna uoanishaji: chagua matabaka kushoto, jina kulia, kisha Oanisha.
+	Translate	Tafsiri
+	Translate From	Tafsiri kutoka
+	Translate To	Tafsiri kwenda
+	Restore on exit	Rejesha wakati wa kutoka
+	Point Cloud	Wingu la nukta
+	Point Cloud...	Wingu la nukta...
+	Point clouds (XYZ, LAS)	Mawingu ya nukta (XYZ, LAS)
+	ZIP archive	Kumbukumbu ya ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Upau wa ufikiaji wa haraka
+	Rename	Badilisha jina
+	Reset to Standard	Weka upya kwa kawaida
+	Ribbon Tabs	Vichupo vya utepe
+	Save Current As	Hifadhi ya sasa kama
+	Save Current As...	Hifadhi ya sasa kama...
+	Save Workspace	Hifadhi nafasi ya kazi
+	User Interface	Kiolesura cha mtumiaji
+	Workspace Settings	Mipangilio ya nafasi ya kazi
+	Workspace Settings...	Mipangilio ya nafasi ya kazi...
+	Workspace name	Jina la nafasi ya kazi
+	Workspace:	Nafasi ya kazi:
+	Workspaces	Nafasi za kazi
+	Interface...	Kiolesura...
+	Export Attribute Information...	Hamisha taarifa za sifa...
+	Import Attribute Information...	Leta taarifa za sifa...
+	Export Attributes	Hamisha sifa
+	Import Attributes	Leta sifa
+	Text, tab-delimited (TXT)	Maandishi, yaliyotenganishwa kwa tab (TXT)
+	Import Settings	Leta mipangilio
+	Export Settings	Hamisha mipangilio
+	Import Settings...	Leta mipangilio...
+	Export Settings...	Hamisha mipangilio...
+	DraftCraft settings (TOML)	Mipangilio ya DraftCraft (TOML)
+	Total Area and Length	Eneo na urefu jumla
+	Total Area	Eneo jumla
+	Specify point to place the totals as text	Bainisha nukta ya kuweka jumla kama maandishi
+	Metric	Metriki
+	Imperial	Kiingereza
+	A new drawing in millimeters	Mchoro mpya kwa milimita
+	A new drawing in inches	Mchoro mpya kwa inchi
+	A new drawing in centimeters	Mchoro mpya kwa sentimita
+	Metric (centimetres)	Metriki (sentimita)
+	Join the ArtCraft Discord…	Jiunge na Discord ya ArtCraft…
+	Join us on Discord	Jiunge nasi kwenye Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Mojawapo ya programu za Crafting kutoka timu na jumuiya ya ArtCraft.
+	Change	Badilisha
+	Multiple Insert	Uingizaji mwingi
+	Ctrl+Enter to apply	Ctrl+Enter kutumia
+	Edit Text	Hariri maandishi
+	The drawing changed. Close the window and open it again.	Mchoro umebadilika. Funga dirisha na ulifungue tena.
+	DView	DView
+	Raster Images	Picha za raster
+	Xref	Rejeleo la nje
+	Backup copies are off, so the current file will be replaced.	Nakala za akiba zimezimwa, kwa hivyo faili la sasa litabadilishwa.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 na ya zamani huvihifadhi. Tumia Hifadhi kama ili kuvihifadhi ndani ya mchoro.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF huvihifadhi. Tumia Hifadhi kama ili kuvihifadhi ndani ya mchoro.
+	Save Anyway	Hifadhi hata hivyo
+	Save cancelled: {path} was not changed.	Kuhifadhi kumeghairiwa: {path} haikubadilishwa.
+	Saving {name} will remove content	Kuhifadhi {name} kutaondoa maudhui
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Faili la sasa halionekani kuwa kamili, kwa hivyo {name} itabaki ilivyo na faili la sasa litabadilishwa.
+	The current file is kept as {name} until the next save.	Faili la sasa linahifadhiwa kama {name} hadi uhifadhi unaofuata.
+	This format can't keep these objects yet: {objects}.	Muundo huu bado hauwezi kuhifadhi vitu hivi: {objects}.
+	{count} more types	Aina {count} zaidi
+	Additional Tools	Zana za ziada
+	Keyboard Shortcuts...	Njia za mkato za kibodi...
+	Keyboard Shortcuts	Njia za mkato za kibodi
+	Replaces the shortcut of {commands}	Hubadilisha njia ya mkato ya {commands}
+	Needs Ctrl, Alt or a function key	Inahitaji Ctrl, Alt au kitufe cha kazi
+	Press the keys	Bonyeza vitufe
+	Back to DraftCraft's shortcut	Rudi kwa njia ya mkato ya DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Njia ya mkato unayoweka hushinda ile ya DraftCraft. Mabadiliko yanatumika mara moja na yanahifadhiwa kwa wakati ujao.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Kikizimwa, kubofya kulia wakati amri inaendeshwa hufanya kile ambacho Ubinafsishaji wa kubofya kulia huweka kwa hali ya amri.
+	Right-Click Customization...	Ubinafsishaji wa kubofya kulia...
+	Right-Click Customization	Ubinafsishaji wa kubofya kulia
+	Turn on time-sensitive right-click	Washa kubofya kulia kwa muda
+	Longer click duration:	Muda wa kubofya kwa muda mrefu:
+	milliseconds	milisekunde
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Wakati amri inaendeshwa, kubofya haraka ni Enter na kubofya kwa muda mrefu hufungua menyu ya njia ya mkato.
+	Default Mode	Hali chaguo-msingi
+	No objects selected and no command running:	Hakuna vitu vilivyochaguliwa na hakuna amri inayoendeshwa:
+	Edit Mode	Hali ya kuhariri
+	Objects selected and no command running:	Vitu vimechaguliwa na hakuna amri inayoendeshwa:
+	Repeat last command	Rudia amri ya mwisho
+	Shortcut Menu	Menyu ya njia ya mkato
+	Command Mode	Hali ya amri
+	While a command runs:	Wakati amri inaendeshwa:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Menyu ya njia ya mkato: imewezeshwa daima
+	Shortcut Menu: enabled when command options are present	Menyu ya njia ya mkato: imewezeshwa chaguo za amri zinapokuwepo
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Leta: hakuna kidirisha cha faili hapa; endesha ALIASEDIT na maudhui ya faili ukitumia kigezo chake cha text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Majina mbadala huhifadhiwa katika wasifu wako wa DraftCraft na hudumu baada ya kuanzisha upya.
+	Import…	Leta…
+	Run ALIASEDIT with the file's contents using its text parameter.	Endesha ALIASEDIT na maudhui ya faili ukitumia kigezo chake cha text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Kuleta faili hubadilisha majina mbadala yako {n}, na mabadiliko yoyote ambayo bado hayajatumika.
+	Import and replace	Leta na ubadilishe
+	Keep my aliases	Hifadhi majina mbadala yangu
+	{n} more warnings; see the command line.	Maonyo {n} zaidi; tazama mstari wa amri.
+	Unit	Kipimo
+	Drawing units: {unit}, {format}	Vipimo vya mchoro: {unit}, {format}
+	NEW DRAWING	MCHORO MPYA
+	OPEN	FUNGUA
+	WORKSPACE	ENEO LA KAZI

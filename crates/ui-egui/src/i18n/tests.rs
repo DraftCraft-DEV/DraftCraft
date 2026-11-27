@@ -224,6 +224,34 @@ fn assert_additional_locale_aliases() {
         ("el", &["el", "el-GR", "el_GR.UTF-8", "EL-cy"]),
         ("ka", &["ka", "ka-GE", "ka_GE.UTF-8", "KA-ge", " ka-GE "]),
         ("ta", &["ta", "ta-IN", "ta_IN.UTF-8", "TA-in", " ta-LK ", "ta-SG", "ta_MY.UTF-8"]),
+        ("af", &["af", "af-ZA", "af_ZA.UTF-8"]),
+        ("az", &["az", "az-AZ", "az-Latn-AZ", "az_AZ.UTF-8"]),
+        ("be", &["be", "be-BY", "be_BY.UTF-8"]),
+        ("bg", &["bg", "bg-BG", "bg_BG.UTF-8"]),
+        ("ca", &["ca", "ca-ES", "ca_ES.UTF-8", "ca-AD", "ca_ES@valencia"]),
+        ("da", &["da", "da-DK", "da_DK.UTF-8"]),
+        ("et", &["et", "et-EE", "et_EE.UTF-8"]),
+        ("fi", &["fi", "fi-FI", "fi_FI.UTF-8"]),
+        ("fil", &["fil", "fil-PH", "fil_PH.UTF-8", "tl", "tl-PH"]),
+        ("gl", &["gl", "gl-ES", "gl_ES.UTF-8"]),
+        ("hr", &["hr", "hr-HR", "hr_HR.UTF-8", "hr-BA"]),
+        ("id", &["id", "id-ID", "id_ID.UTF-8", "in"]),
+        ("ja", &["ja", "ja-JP", "ja_JP.UTF-8", "JA-jp"]),
+        ("kk", &["kk", "kk-KZ", "kk_KZ.UTF-8"]),
+        ("ky", &["ky", "ky-KG", "ky_KG.UTF-8"]),
+        ("mn", &["mn", "mn-MN", "mn_MN.UTF-8"]),
+        ("ms", &["ms", "ms-MY", "ms_MY.UTF-8", "ms-SG"]),
+        ("nb", &["nb", "nb-NO", "nb_NO.UTF-8", "no", "no-NO", "nn", "nn-NO"]),
+        ("nl", &["nl", "nl-NL", "nl_NL.UTF-8", "nl-BE"]),
+        ("sk", &["sk", "sk-SK", "sk_SK.UTF-8"]),
+        ("so", &["so", "so-SO", "so_SO.UTF-8"]),
+        ("sq", &["sq", "sq-AL", "sq_AL.UTF-8", "sq-XK"]),
+        ("sr", &["sr", "sr-RS", "sr_RS.UTF-8", "sr-Cyrl", "sr-Cyrl-RS", "sr-ME"]),
+        ("sr-Latn", &["sr-Latn", "sr-Latn-RS", "sr_RS@latin", "SR-latn-me", "sr_RS.UTF-8@latin"]),
+        ("sw", &["sw", "sw-KE", "sw_TZ.UTF-8"]),
+        ("tg", &["tg", "tg-TJ", "tg_TJ.UTF-8"]),
+        ("uz", &["uz", "uz-UZ", "uz-Latn-UZ", "uz_UZ.UTF-8"]),
+        ("zu", &["zu", "zu-ZA", "zu_ZA.UTF-8"]),
         ("zh", &["zh", "zh-CN", "zh_CN.UTF-8", "zh-SG", "zh-Hans", "zh-Hans-CN", "zh-Hans-HK", "zh_CN@pinyin"]),
         ("zh-TW", &["zh-TW", "zh_TW.UTF-8", "ZH-tw", " zh-TW ", "zh-HK", "zh_HK.UTF-8", "zh-MO", "zh-Hant", "zh-Hant-TW", "zh-Hant-HK"]),
     ] {
@@ -235,7 +263,7 @@ fn assert_additional_locale_aliases() {
 
 fn assert_unrecognized_locale_tags() {
     // Look-alike codes, three-letter codes and endonyms pick nothing: `se` is Northern Sami.
-    let look_alikes = ["ua", "ukulele", "nl-NL", "", "garbage", "💙", "ptolemy", "cz", "csharp", "csomething", "italic"];
+    let look_alikes = ["ua", "ukulele", "eu-ES", "", "garbage", "💙", "ptolemy", "cz", "csharp", "csomething", "italic"];
     let others = ["kr", "korean", "kotlin", "se", "swe", "svenska", "hun", "magyar", "tur", "türkçe", "elvish", "kat", "geo", "kab", "kartuli"];
     let tamil = ["tam", "tamil", "தமிழ்"];
     for tag in look_alikes.into_iter().chain(others).chain(tamil) {
@@ -244,11 +272,11 @@ fn assert_unrecognized_locale_tags() {
 }
 
 fn assert_auto_locale_precedence() {
-    assert_eq!(Preference::Auto.resolve(&["nl-NL".into(), "pt-BR".into()]), "pt-BR");
+    assert_eq!(Preference::Auto.resolve(&["eu-ES".into(), "pt-BR".into()]), "pt-BR");
     assert_eq!(Preference::Auto.resolve(&["pl-PL".into(), "pt-BR".into()]), "pl");
     assert_eq!(Preference::Auto.resolve(&["fr-FR".into(), "pt-BR".into()]), "fr");
     assert_eq!(Preference::Auto.resolve(&["es-ES".into(), "pt-BR".into()]), "es");
-    let locales = vec!["nl-NL".into(), "uk-UA".into(), "en-US".into()];
+    let locales = vec!["eu-ES".into(), "uk-UA".into(), "en-US".into()];
     assert_eq!(Preference::Auto.resolve(&locales), "uk");
     assert_eq!(Preference::English.resolve(&locales), "en");
     assert_eq!(Preference::Auto.resolve(&["en-US".into(), "uk-UA".into()]), "en");
@@ -271,7 +299,7 @@ fn assert_preference_resolution(preference: Preference) {
     // A chosen language wins over the system's; Auto takes the first system language there is.
     assert_eq!(preference.resolve(&["uk-UA".into()]), preference.code());
     if preference != Preference::English {
-        assert_eq!(Preference::Auto.resolve(&["nl-NL".into(), preference.code().into(), "en-US".into()]), preference.code());
+        assert_eq!(Preference::Auto.resolve(&["eu-ES".into(), preference.code().into(), "en-US".into()]), preference.code());
     }
 }
 
@@ -310,6 +338,8 @@ fn plural_rules_pick_the_cldr_form() {
     let uk = [0, 1, 2, 4, 5, 11, 12, 14, 21, 22, 25, 101, 111, 114, u64::MAX].map(plural_uk);
     assert_eq!(uk, [2, 0, 1, 1, 2, 2, 2, 2, 0, 1, 2, 0, 2, 2, 2]);
     assert_eq!([0, 1, 2, 5, 21, u64::MAX].map(plural_pt), [0, 0, 1, 1, 1, 1]);
+    let fil = [0, 1, 2, 3, 4, 5, 6, 9, 10, 14, 16, 19, 24, 101, u64::MAX].map(crate::i18n::plural_fil);
+    assert_eq!(fil, [0, 0, 0, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0]);
     assert_eq!([0, 1, 2, 4, 5, 11, 21, 22, 25, u64::MAX].map(plural_cs), [2, 0, 1, 1, 2, 2, 2, 2, 2, 2]);
     for language in &LANGUAGES {
         for n in [0, 1, 2, 3, 5, 11, 21, 22, 101, 111, u64::MAX] {
@@ -508,7 +538,7 @@ fn dialogs_render_in_every_language_and_keep_their_source_ids() {
 #[test]
 fn interface_fonts_cover_every_letter_in_each_catalog() {
     for language in translated() {
-        let extra_font = ["ko", "zh", "zh-TW", "ar", "vi", "ka", "ta"].contains(&language.code);
+        let extra_font = ["ko", "zh", "zh-TW", "ar", "vi", "ka", "ta", "ja", "az"].contains(&language.code);
         if extra_font && !crate::theme::can_show(language.code) {
             continue;
         }

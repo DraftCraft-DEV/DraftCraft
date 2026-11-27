@@ -333,6 +333,10 @@ pub fn install_fonts(ctx: &egui::Context, language: &str) {
             if language == "vi" && vietnamese_font() != Some(std::path::Path::new(path)) {
                 continue;
             }
+            // Azərbaycan dili likewise takes the first one with ə.
+            if language == "az" && azerbaijani_font() != Some(std::path::Path::new(path)) {
+                continue;
+            }
             if let Ok(bytes) = std::fs::read(path) {
                 fonts.font_data.insert("system-ui".into(), std::sync::Arc::new(egui::FontData::from_owned(bytes)));
                 if let Some(f) = fonts.families.get_mut(&FontFamily::Proportional) {
@@ -473,6 +477,50 @@ pub fn vietnamese_font() -> Option<&'static std::path::Path> {
     None
 }
 
+/// Whether `face` has ə and Ə, the one Azerbaijani letter egui's bundled faces lack.
+#[cfg(not(target_arch = "wasm32"))]
+fn covers_azerbaijani(face: &draftcraft_fonts::ttf::Face) -> bool {
+    ['ə', 'Ə'].into_iter().all(|c| face.has_glyph(c))
+}
+
+/// The system interface font the Azerbaijani interface takes: the first of
+/// [`system_ui_candidates`] whose first face has ə (Segoe UI, Arial, SF, DejaVu Sans and Noto Sans
+/// do). Without one the interface stays English, as for Vietnamese. Checked once.
+pub fn azerbaijani_font() -> Option<&'static std::path::Path> {
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        static FOUND: std::sync::OnceLock<Option<std::path::PathBuf>> = std::sync::OnceLock::new();
+        FOUND
+            .get_or_init(|| {
+                let has_schwa = |p: &str| {
+                    read_capped(std::path::Path::new(p), MAX_UI_FONT_BYTES)
+                        .and_then(|bytes| draftcraft_fonts::ttf::faces(&std::sync::Arc::new(bytes)).into_iter().next())
+                        .is_some_and(|face| covers_azerbaijani(&face))
+                };
+                ui_font_choice(system_ui_candidates(), true, |p| std::path::Path::new(p).is_file(), has_schwa).map(std::path::PathBuf::from)
+            })
+            .as_deref()
+    }
+    #[cfg(target_arch = "wasm32")]
+    None
+}
+
+/// Whether the interface in `language` shows ə (Azərbaycan dili in the language picker): the
+/// Azerbaijani interface with [`azerbaijani_font`], any other when the system interface font it
+/// loads is that one.
+pub fn shows_azerbaijani(language: &str) -> bool {
+    #[cfg(not(target_arch = "wasm32"))]
+    {
+        let loaded = || ui_font_choice(system_ui_candidates(), false, |p| std::path::Path::new(p).is_file(), |_| true);
+        azerbaijani_font().is_some_and(|a| language == "az" || loaded().is_some_and(|p| std::path::Path::new(p) == a))
+    }
+    #[cfg(target_arch = "wasm32")]
+    {
+        let _ = language;
+        false
+    }
+}
+
 /// Whether the interface in `language` shows the Vietnamese letters (Tiếng Việt in the language
 /// picker): the Vietnamese interface with [`vietnamese_font`], any other when the system interface
 /// font it loads is that one.
@@ -506,6 +554,9 @@ fn embedded_ui_faces<'a>(faces: &[&'a draftcraft_fonts::CraftFont], language: &s
         out.sort_by_key(|f| (!f.scripts.contains(&"Hant"), !f.scripts.contains(&"Hans")));
     } else if language.starts_with("zh") {
         out.sort_by_key(|f| !f.scripts.contains(&"Hans"));
+    } else if language == "ja" {
+        // 日本語: a Japanese face first, for its kana and Japanese glyph forms.
+        out.sort_by_key(|f| !f.scripts.contains(&"Jpan"));
     }
     out.extend(faces.iter().copied().filter(|f| f.style == "Regular" && f.scripts.contains(&"Geor")));
     if language == "ar" {
@@ -855,9 +906,12 @@ pub fn can_show(language: &str) -> bool {
     match language {
         "ko" => shows_hangul("ko"),
         "vi" => vietnamese_font().is_some(),
+        "az" => azerbaijani_font().is_some(),
         "ar" => arabic_font().is_some() || embedded_script("Arab"),
         "ka" => embedded_script("Geor"),
         "ta" => tamil_font().is_some() || embedded_script("Taml"),
+        // 日本語: kana and kanji from an installed Japanese face or a CJK face that has kana.
+        "ja" => japanese_font().is_some() || cjk_font().is_some() || embedded_script("Jpan"),
         l if l.starts_with("zh") => {
             cjk_font().is_some() || traditional_chinese_font().is_some() || embedded_script("Hans") || embedded_script("Hant")
         }
