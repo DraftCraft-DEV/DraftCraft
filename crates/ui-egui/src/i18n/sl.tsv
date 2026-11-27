@@ -1,1 +1,1695 @@
-# placeholder
+# DraftCraft Slovenian (Slovenščina) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Prekliči  
+	  OK  	  V redu  
+	 or [	 ali [
+	% of all commits	% vseh uveljavitev
+	* Wildcard Match	* Ujemanje z nadomestnimi znaki
+	*VARIES*	*RAZLIČNO*
+	+  |  Top  |  2D Wireframe	+  |  Zgoraj  |  2D-žični model
+	+Bin	+Bin
+	+LOC	+Vrstice
+	1 Viewport	1 pogledno okno
+	2 Points	2 točki
+	2 Viewports	2 pogledni okni
+	2D Solid	2D-polno telo
+	3 Points	3 točke
+	3 Viewports	3 pogledna okna
+	3D Face	3D-ploskev
+	3D Mouse	3D-miška
+	3D Mouse Navigation	Krmarjenje s 3D-miško
+	3D Mouse...	3D-miška...
+	3D Operations	3D-operacije
+	3D Polyline	3D-polilinija
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D-miška je zasedena, morda zaradi 3DxWare ali manjkajočih dovoljenj za napravo
+	3D mouse connected	3D-miška je povezana
+	3D mouse disconnected	3D-miška je odklopljena
+	3D mouse input could not be started	Vnosa s 3D-miško ni bilo mogoče zagnati
+	3D mouse input is unavailable on this platform	Vnos s 3D-miško na tej platformi ni na voljo
+	4 Viewports	4 pogledna okna
+	< Less than	< Manj kot
+	<> Not Equal	<> Ni enako
+	= Equals	= Je enako
+	> Greater than	> Več kot
+	A built-in table: editing it keeps an edited copy in the drawing.	Vgrajena tabela: ob urejanju se v risbi shrani urejena kopija.
+	A drawing opened from a file keeps that file's format.	Risba, odprta iz datoteke, ohrani obliko te datoteke.
+	A variable name starts with a letter and has only letters, digits and _	Ime spremenljivke se začne s črko in vsebuje le črke, števke in _
+	About	O programu
+	About DraftCraft	O programu DraftCraft
+	Absolute	Absolutno
+	Accessibility	Dostopnost
+	Add	Dodaj
+	Add Current Scale	Dodaj trenutno merilo
+	Add Leader	Dodaj opisno črto
+	Add Vertex	Dodaj oglišče
+	Add/Delete Scales...	Dodaj/izbriši merila...
+	Additional angles	Dodatni koti
+	Align	Poravnaj
+	Align Text	Poravnaj besedilo
+	Aligned	Poravnana
+	All	Vse
+	All Annotation Objects	Vsi opombni objekti
+	All Scales	Vsa merila
+	All Used Layers	Vse uporabljene plasti
+	All files	Vse datoteke
+	An array that would create more objects than this is refused.	Polje, ki bi ustvarilo več objektov od tega, je zavrnjeno.
+	Angle	Kot
+	Angular	Kotna
+	Annotation Visibility	Vidnost opomb
+	Annotation scale	Merilo opomb
+	Annotative Object Scale	Merilo opombnega objekta
+	Annotative Update	Posodobitev opomb
+	Apparent Intersection	Navidezno presečišče
+	Append to current selection set	Dodaj k trenutnemu izboru
+	Apply	Uporabi
+	Apply to:	Uporabi za:
+	Apply true color	Uporabi pravo barvo
+	Arc	Lok
+	Arc Length	Dolžina loka
+	Area	Ploščina
+	Arrange Panel	Razporedi ploščo
+	Array	Polje
+	Attach	Priloži
+	Attach DWG...	Priloži DWG...
+	Attribute	Atribut
+	Attribute Definition	Definicija atributa
+	Attribute Display	Prikaz atributov
+	Audit	Preverjanje
+	Auto (system language)	Samodejno (jezik sistema)
+	Auto Constrain	Samodejne omejitve
+	AutoConstrain	Samodejne omejitve
+	Automatic save every	Samodejno shranjevanje vsakih
+	Automatic save file location	Mesto datoteke samodejnega shranjevanja
+	Axis, End	Os, konec
+	Base	Osnova
+	Baseline	Osnovnica
+	Batch Publish	Paketna objava
+	Batch Publish...	Paketna objava...
+	Binary assets added	Dodana binarna sredstva
+	Binary assets removed	Odstranjena binarna sredstva
+	Bind	Spoji
+	Bind...	Spoji...
+	Blend	Prehodna krivulja
+	Block	Blok
+	Block Attribute Manager...	Upravitelj atributov blokov...
+	Block Description...	Opis bloka...
+	Block Editor	Urejevalnik blokov
+	Block Reference	Sklic na blok
+	Block...	Blok...
+	Blocks	Bloki
+	Blue	Modra
+	Bold	Krepko
+	Boolean	Boolove operacije
+	Boundary	Meja
+	Boundary...	Meja...
+	Box	Kvader
+	Break	Prekini
+	Break At Point	Prekini v točki
+	Bring Above Objects	Postavi nad objekte
+	Bring Annotations to Front	Postavi opombe v ospredje
+	Bring to Front	Postavi v ospredje
+	Bulleted list	Označeni seznam
+	ByBlock	PoBloku
+	ByColor	PoBarvi
+	ByLayer	PoPlasti
+	DraftCraft Help	Pomoč za DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft hrani te nastavitve, načine pripenjanja na objekte in stikala za risanje za vaš uporabniški račun ter jih obnovi ob zagonu.
+	Calibrate	Umeri
+	Calibrate 3D Mouse	Umeri 3D-miško
+	Cancel	Prekliči
+	Cartesian (x, y)	Kartezične (x, y)
+	Center	Središče
+	Center Line	Središčnica
+	Center Mark	Oznaka središča
+	Center X	Središče X
+	Center Y	Središče Y
+	Center Z	Središče Z
+	Center, Diameter	Središče, premer
+	Center, Radius	Središče, polmer
+	Center, Start, Angle	Središče, začetek, kot
+	Center, Start, End	Središče, začetek, konec
+	Center, Start, Length	Središče, začetek, dolžina
+	Chamfer	Posnetje
+	Change Space	Zamenjaj prostor
+	Change to Current Layer	Premakni v trenutno plast
+	Changed: {n}	Spremenjeno: {n}
+	Changes apply at once and are kept for next time.	Spremembe začnejo veljati takoj in se ohranijo za naslednjič.
+	Circle	Krog
+	Circumference	Obod
+	Clear	Počisti
+	Clear Command History	Počisti zgodovino ukazov
+	Reset Suggestion Order	Ponastavi vrstni red predlogov
+	Clear History	Počisti zgodovino
+	Clip	Odreži
+	Clip Viewport	Odreži pogledno okno
+	Clipboard	Odložišče
+	Close	Zapri
+	Close All	Zapri vse
+	Close All Other Drawings	Zapri vse druge risbe
+	Close Array Editing	Zapri urejanje polja
+	Close Comparison	Zapri primerjavo
+	Export Comparison	Izvozi primerjavo
+	Closed	Zaprto
+	Coincident	Sovpadanje
+	Collapse Palettes	Strni palete
+	Collapse Tool Sets	Strni nabore orodij
+	Collinear	Kolinearnost
+	Color	Barva
+	Color 8	Barva 8
+	Color 9	Barva 9
+	Color Index	Indeks barve
+	Color-dependent	Odvisno od barve
+	Color...	Barva...
+	Command Aliases	Vzdevki ukazov
+	Command History	Zgodovina ukazov
+	Command Line	Ukazna vrstica
+	Command Line History Lines	Vrstice zgodovine ukazne vrstice
+	Command Reference	Priročnik ukazov
+	Command line history	Zgodovina ukazne vrstice
+	Commits	Uveljavitve
+	Company	Podjetje
+	Compare Drawings...	Primerjaj risbe...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Računalniško podprto načrtovanje in risanje: odprtokodna aplikacija CAD, razvita po načelu čiste sobe in napisana v čistem Rustu.
+	Concentric	Koncentričnost
+	Cone	Stožec
+	Constraint Bars	Vrstice z omejitvami
+	Constraint Settings	Nastavitve omejitev
+	Construction Line	Konstrukcijska črta
+	Contents	Vsebina
+	Continue	Nadaljuj
+	Contributors	Sodelavci
+	Control Vertices	Kontrolna oglišča
+	Convert	Pretvori
+	Convert to Arc	Pretvori v lok
+	Convert to Line	Pretvori v črto
+	Copy	Kopiraj
+	Copy Full File Path	Kopiraj celotno pot datoteke
+	Copy History	Kopiraj zgodovino
+	Copy Layout	Kopiraj postavitev
+	Copy Nested Objects	Kopiraj gnezdene objekte
+	Copy Selection	Kopiraj izbor
+	Copy as JSON	Kopiraj kot JSON
+	Copy with Base Point	Kopiraj z osnovno točko
+	Count	Štetje
+	Count List	Seznam štetja
+	Count Table	Tabela štetja
+	Create Block	Ustvari blok
+	Creates a user parameter	Ustvari uporabniški parameter
+	Crosshair size	Velikost križca
+	Ctrl+Enter to finish	Ctrl+Enter za dokončanje
+	Current Scale Only	Samo trenutno merilo
+	Current layer	Trenutna plast
+	Current selection	Trenutni izbor
+	Current: {color}	Trenutno: {color}
+	Cut	Izreži
+	Cut with Base Point	Izreži z osnovno točko
+	Cyan	Cijan
+	Cylinder	Valj
+	DWG	DWG
+	DWG Reference...	Sklic DWG...
+	DXF	DXF
+	Dark	Temna
+	Data Extraction...	Izvleček podatkov...
+	Data Link...	Podatkovna povezava...
+	Default	Privzeto
+	Default Save Format	Privzeta oblika shranjevanja
+	Default Save Version	Privzeta različica shranjevanja
+	Default save version	Privzeta različica shranjevanja
+	Define Attributes	Določi atribute
+	Define Attributes...	Določi atribute...
+	Defined width	Določena širina
+	Degree	Stopnja
+	Degrees of Freedom	Prostostne stopnje
+	Degrees of freedom: {n}	Prostostne stopnje: {n}
+	Delete	Izbriši
+	Delete Column	Izbriši stolpec
+	Delete Constraints	Izbriši omejitve
+	Delete Current Scale	Izbriši trenutno merilo
+	Delete Dimension Style	Izbriši slog kotiranja
+	Delete Duplicate Objects	Izbriši podvojene objekte
+	Delete Layer	Izbriši plast
+	Delete Layer State	Izbriši stanje plasti
+	Delete Layout	Izbriši postavitev
+	Delete Row	Izbriši vrstico
+	Delete Text Style	Izbriši slog besedila
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Opis
+	Deselect All	Počisti izbor
+	Detach	Odpni
+	Diameter	Premer
+	Dim style	Slog kotiranja
+	Dimension	Kota
+	Dimension Break	Prekinitev kote
+	Dimension Edit	Urejanje kote
+	Dimension Objects Only	Samo objekti kot
+	Dimension Space	Razmik kot
+	Dimension Style Override	Preglasitev sloga kotiranja
+	Dimension Style...	Slog kotiranja...
+	Dimension Text Edit	Urejanje besedila kote
+	Dimension style	Slog kotiranja
+	Dimensional Constraint	Dimenzijska omejitev
+	Dimensional Constraint Parameters	Parametri dimenzijskih omejitev
+	Dimensional Constraints	Dimenzijske omejitve
+	Disassociate Dimensions	Razdruži kote
+	Display	Prikaz
+	Display name	Prikazno ime
+	Display plot styles	Prikaži sloge izrisa
+	Distance	Razdalja
+	Divide	Razdeli
+	Do not plot (click: plot)	Ne izriši (klik: izriši)
+	Donut	Kolobar
+	Double-click to edit the description	Dvokliknite za urejanje opisa
+	Down	Navzdol
+	Drafting	Risanje
+	Drafting Settings	Nastavitve risanja
+	Drafting Settings...	Nastavitve risanja...
+	Draw	Riši
+	Draw Order	Vrstni red risanja
+	Drawing (DWG)	Risba (DWG)
+	Drawing (DXF)	Risba (DXF)
+	Drawing Limits	Meje risbe
+	Drawing Recovery Manager...	Upravitelj obnovitve risb...
+	Drawing Template (DWT)	Predloga risbe (DWT)
+	Drawing Utilities	Pripomočki za risbe
+	Drawing as bytes	Risba kot bajti
+	Drawings (DWG, DXF)	Risbe (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Risbe, ki še nimajo datoteke, se shranijo v privzeti različici. 0 minut izklopi samodejno shranjevanje.
+	Dynamic	Dinamično
+	Dynamic Dimensions	Dinamične kote
+	Dynamic Input	Dinamični vnos
+	Dynamic Input (F12)	Dinamični vnos (F12)
+	Edit	Uredi
+	Edit Array	Uredi polje
+	Edit Attributes...	Uredi atribute...
+	Edit Table Cell	Uredi celico tabele
+	Edit Text...	Uredi besedilo...
+	Elevation	Elevacija
+	Ellipse	Elipsa
+	Elliptical Arc	Eliptični lok
+	Enable 3D mouse navigation	Omogoči krmarjenje s 3D-miško
+	Enable Dynamic Input (F12)	Omogoči dinamični vnos (F12)
+	End Object Isolation	Končaj osamitev objektov
+	End Width	Končna širina
+	End X	Konec X
+	End Y	Konec Y
+	End angle	Končni kot
+	Endpoint	Končna točka
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Vnesite Top, Zero ali Bottom.
+	Enter a fit data option	Vnesite možnost za podatke prileganja
+	Enter a pattern name	Vnesite ime vzorca
+	Enter a vertex editing option	Vnesite možnost urejanja oglišč
+	Enter an option	Vnesite možnost
+	Enter angle of xline	Vnesite kot konstrukcijske črte
+	Enter angle of xline (0)	Vnesite kot konstrukcijske črte (0)
+	Enter area of rectangle in current units	Vnesite ploščino pravokotnika v trenutnih enotah
+	Enter attribute prompt	Vnesite poziv atributa
+	Enter attribute tag name	Vnesite ime oznake atributa
+	Enter attribute value	Vnesite vrednost atributa
+	Enter block name	Vnesite ime bloka
+	Enter constraint type	Vnesite vrsto omejitve
+	Enter continuity	Vnesite zveznost
+	Enter default attribute value	Vnesite privzeto vrednost atributa
+	Enter degree of spline	Vnesite stopnjo zlepka
+	Enter delta angle	Vnesite delta kot
+	Enter delta length	Vnesite delta dolžino
+	Enter dimension text	Vnesite besedilo kote
+	Enter dimension text (<> = measurement)	Vnesite besedilo kote (<> = izmera)
+	Enter dimension value or [name=expression]	Vnesite vrednost kote ali [ime=izraz]
+	Enter dimension variable name to override	Vnesite ime spremenljivke kotiranja za preglasitev
+	Enter justification type	Vnesite vrsto poravnave
+	Enter leader text	Vnesite besedilo opisne črte
+	Enter mline scale	Vnesite merilo veččrte
+	Enter mode	Vnesite način
+	Enter name of block to insert	Vnesite ime bloka za vstavljanje
+	Enter new text	Vnesite novo besedilo
+	Enter next point	Vnesite naslednjo točko
+	Enter number of columns	Vnesite število stolpcev
+	Enter number of data rows	Vnesite število podatkovnih vrstic
+	Enter number of items	Vnesite število elementov
+	Enter number of items along path	Vnesite število elementov vzdolž poti
+	Enter number of sides	Vnesite število stranic
+	Enter number of turns	Vnesite število zavojev
+	Enter percentage length	Vnesite dolžino v odstotkih
+	Enter rectangle length	Vnesite dolžino pravokotnika
+	Enter rectangle width	Vnesite širino pravokotnika
+	Enter scale factor	Vnesite faktor merila
+	Enter text	Vnesite besedilo
+	Enter text (use \P for new paragraphs)	Vnesite besedilo (za nov odstavek uporabite \P)
+	Enter the number of segments	Vnesite število segmentov
+	Enter twist direction of helix	Vnesite smer zasuka vijačnice
+	Entire drawing	Celotna risba
+	Equal	Enakost
+	Erase	Briši
+	Evaluate	Izračunaj
+	Exclude from new selection set	Izključi iz novega izbora
+	Explode	Razstavi
+	Export	Izvozi
+	Export Table	Izvozi tabelo
+	Export to PDF...	Izvozi v PDF...
+	Export...	Izvozi...
+	Expression	Izraz
+	Extend	Podaljšaj
+	Extension	Podaljšek
+	Extents	Obseg
+	External Reference	Zunanji sklic
+	External References	Zunanji sklici
+	Extrude	Izvleci
+	File	Datoteka
+	File Tab	Zavihek datoteke
+	Fillet	Zaokrožitev
+	Filter	Filter
+	Filters	Filtri
+	Find and Replace	Najdi in zamenjaj
+	Find...	Najdi...
+	First	Prvi
+	First commit	Prva uveljavitev
+	Fit Points	Točke prileganja
+	Fix	Fiksno
+	Flatten Objects	Splošči objekte
+	Format	Oblika
+	Freehand	Prostoročno
+	Freeze	Zamrzni
+	Freeze Layer	Zamrzni plast
+	Freeze in new viewports	Zamrzni v novih poglednih oknih
+	Freeze/Thaw	Zamrzni/odmrzni
+	Freeze/Thaw in all viewports	Zamrzni/odmrzni v vseh poglednih oknih
+	Freeze/Thaw in the current viewport	Zamrzni/odmrzni v trenutnem poglednem oknu
+	From	Od
+	From Template...	Iz predloge...
+	General	Splošno
+	Geometric Center	Geometrijsko središče
+	Geometric Constraint	Geometrijska omejitev
+	Geometric Constraints	Geometrijske omejitve
+	Geometry	Geometrija
+	Get Variable	Pridobi spremenljivko
+	Get View	Pridobi pogled
+	Get from the Drawing	Pridobi iz risbe
+	Global	Globalno
+	Global width	Skupna širina
+	Grab bag	Razno
+	Gradient	Preliv
+	Gradient...	Preliv...
+	Grayscale	Sivine
+	Green	Zelena
+	Grid (F7)	Mreža (F7)
+	Grid Display	Prikaz mreže
+	Grid On (F7)	Mreža vklopljena (F7)
+	Grid snap	Pripenjanje na mrežo
+	Grid spacing	Razmik mreže
+	Grip Edit	Urejanje z ročaji
+	Grip Mirror	Zrcaljenje z ročaji
+	Grip Option	Možnost ročajev
+	Grip Rotate	Sukanje z ročaji
+	Grip Scale	Spreminjanje merila z ročaji
+	Grip Stretch	Raztezanje z ročaji
+	Grip size	Velikost ročajev
+	Group	Skupina
+	Group Edit	Urejanje skupine
+	Group Options	Možnosti skupine
+	Group Selection	Izbor skupin
+	Hatch	Šrafura
+	Hatch Edit	Urejanje šrafure
+	Hatch Pattern	Vzorec šrafure
+	Hatch Patterns	Vzorci šrafure
+	Hatch...	Šrafura...
+	Height	Višina
+	Height: {height}	Višina: {height}
+	Helix	Vijačnica
+	Help	Pomoč
+	Hide All	Skrij vse
+	Hide All Constraint Bars	Skrij vse vrstice z omejitvami
+	Hide All Dynamic Dimensions	Skrij vse dinamične kote
+	Hide DraftCraft	Skrij DraftCraft
+	Hide Layer List	Skrij seznam plasti
+	Hide Objects	Skrij objekte
+	Hide Others	Skrij druge
+	Hide Palette	Skrij paleto
+	Hide Palettes	Skrij palete
+	History	Zgodovina
+	Hold Shift to add to the selection	Držite Shift za dodajanje k izboru
+	Home	Začetek
+	Horizontal	Vodoravno
+	HorizontalDistance	Vodoravna razdalja
+	How to apply:	Način uporabe:
+	ID Point	Identifikacija točke
+	Import	Uvozi
+	Import...	Uvozi...
+	In	Povečaj
+	In-window Menu Bar	Menijska vrstica v oknu
+	Include in new selection set	Vključi v nov izbor
+	Increment angle	Kot koraka
+	Index Color	Indeksna barva
+	Index color: {index}	Indeksna barva: {index}
+	Infer Constraints	Sklepaj omejitve
+	Inquiry	Poizvedba
+	Insert	Vstavi
+	Insert Block	Vstavi blok
+	Insert Column	Vstavi stolpec
+	Insert Row	Vstavi vrstico
+	Insert Table Formula	Vstavi formulo tabele
+	Insert tab	Vstavi tabulator
+	Insert this block	Vstavi ta blok
+	Insertion	Vstavljanje
+	Insertion X	Vstavljanje X
+	Insertion Y	Vstavljanje Y
+	Insertion Z	Vstavljanje Z
+	Inspect Constraints	Preglej omejitve
+	Inspect Drawing	Preglej risbo
+	Inspection	Pregled
+	Interface Language	Jezik vmesnika
+	Interface Theme	Tema vmesnika
+	Interface language	Jezik vmesnika
+	Interface theme	Tema vmesnika
+	Intersect	Presek
+	Intersection	Presečišče
+	Isolate	Osami
+	Isolate Layer	Osami plast
+	Isolate Objects	Osami objekte
+	Isometric Drafting	Izometrično risanje
+	Isometric Plane	Izometrična ravnina
+	Isometric snap	Izometrično pripenjanje
+	Jogged	Lomljena
+	Jogged Linear	Lomljena linearna
+	Join	Združi
+	Keep an editable copy of this table in the drawing	Ohrani urejljivo kopijo te tabele v risbi
+	Keep the system cursor visible over the drawing area	Sistemski kazalec naj ostane viden nad risalno površino
+	Language	Jezik
+	Largest array	Največje polje
+	Last	Zadnji
+	Last commit	Zadnja uveljavitev
+	Layer	Plast
+	Layer Delete	Brisanje plasti
+	Layer Match	Ujemanje plasti
+	Layer Merge	Združevanje plasti
+	Layer Off	Izklop plasti
+	Layer Properties	Lastnosti plasti
+	Layer Properties Manager	Upravitelj lastnosti plasti
+	Layer Properties Manager — current viewport	Upravitelj lastnosti plasti — trenutno pogledno okno
+	Layer State	Stanje plasti
+	Layer States Manager...	Upravitelj stanj plasti...
+	Layer Tools	Orodja za plasti
+	Layer contains objects (double-click to make current)	Plast vsebuje objekte (dvoklik jo nastavi kot trenutno)
+	Layer is empty (double-click to make current)	Plast je prazna (dvoklik jo nastavi kot trenutno)
+	Layers	Plasti
+	Layers Palette	Paleta plasti
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Prikazane plasti: {shown} od {total}.   Trenutna plast: {layer}
+	Layout	Postavitev
+	Layout list	Seznam postavitev
+	Layout paper	Papir postavitve
+	Layout {name}: {table}	Postavitev {name}: {table}
+	Leader	Opisna črta
+	Leaders Only	Samo opisne črte
+	Left	Levo
+	Left device button: zoom extents. Right device button: calibrate.	Levi gumb naprave: povečava na obseg. Desni gumb naprave: umerjanje.
+	Length	Dolžina
+	Length X	Dolžina X
+	Length Y	Dolžina Y
+	Lengthen	Spremeni dolžino
+	Light	Svetla
+	Line	Črta
+	Line delta	Razlika vrstic
+	Linear	Linearno
+	Lines +/−	Vrstice +/−
+	Lines added	Dodane vrstice
+	Lines deleted	Izbrisane vrstice
+	Lines of Command History	Vrstice zgodovine ukazov
+	Linetype	Vrsta črte
+	Linetype Scale	Merilo vrste črte
+	Linetype scale	Merilo vrste črte
+	Linetype...	Vrsta črte...
+	Lineweight	Debelina črte
+	Lineweight...	Debelina črte...
+	List	Seznam
+	List Blocks	Seznam blokov
+	List Dimension Styles	Seznam slogov kotiranja
+	List Groups	Seznam skupin
+	List Layer States	Seznam stanj plasti
+	List Layouts	Seznam postavitev
+	List System Variables	Seznam sistemskih spremenljivk
+	List Text Styles	Seznam slogov besedila
+	Load all	Naloži vse
+	Load...	Naloži...
+	Loaded	Naloženo
+	Loaded linetypes	Naložene vrste črt
+	Lock	Zakleni
+	Lock Layer	Zakleni plast
+	Lock viewport	Zakleni pogledno okno
+	Lock/Unlock	Zakleni/odkleni
+	Loft	Prehodno telo
+	Ltscale	Merilo vrste črte
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Ni povezano z družbo Autodesk, Inc.
+	MODEL	MODEL
+	MText	Večvrstično besedilo
+	Magenta	Magenta
+	Major line every	Glavna črta vsakih
+	Make Current	Nastavi kot trenutno
+	Make Object's Layer Current	Nastavi plast objekta kot trenutno
+	Make it a block of this drawing, keeping its layer names	Spremeni ga v blok te risbe in ohrani imena njegovih plasti
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Spremeni ga v blok te risbe; njegove plasti postanejo NAME$0$LAYER
+	Make...	Ustvari...
+	Match Layer	Uskladi plast
+	Match Properties	Uskladi lastnosti
+	Measure	Izmeri
+	Measure Distance	Izmeri razdaljo
+	Measure Geometry	Izmeri geometrijo
+	Merge Cells	Spoji celice
+	Merged PRs	Združeni PR-ji
+	Mid Between 2 Points	Sredina med 2 točkama
+	Midpoint	Razpolovišče
+	Mirror	Zrcali
+	Model	Model
+	Model Space (in viewport)	Modelni prostor (v poglednem oknu)
+	Model background	Ozadje modela
+	Modeling	Modeliranje
+	Models	Modeli
+	Modify	Spremeni
+	More toolbar commands	Več ukazov orodne vrstice
+	Move	Premakni
+	Move sideways to pan; push/pull or twist to zoom.	Premaknite vstran za pomik pogleda; potisnite/povlecite ali zasukajte za povečavo.
+	Multileader	Večkratna opisna črta
+	Multileader Style...	Slog večkratne opisne črte...
+	Multileader style	Slog večkratne opisne črte
+	Multiline	Veččrta
+	Multiline Style...	Slog veččrte...
+	Multiline Text	Večvrstično besedilo
+	Multiline Text...	Večvrstično besedilo...
+	Multiline...	Veččrta...
+	Multiple	Več vrst
+	Multiple Point	Več točk
+	My	Moje
+	My properties: not available yet	Moje lastnosti: še ni na voljo
+	Name	Ime
+	Name (A–Z)	Ime (A–Ž)
+	Named	Poimenovano
+	Named Viewports...	Poimenovana pogledna okna...
+	Named Views...	Poimenovani pogledi...
+	Nearest	Najbližje
+	New	Novo
+	New (metric)	Novo (metrično)
+	New CTB	Nova CTB
+	New Drawing	Nova risba
+	New Drawing (⌘N)	Nova risba (⌘N)
+	New Drawing...	Nova risba...
+	New Layer	Nova plast
+	New Layout	Nova postavitev
+	New STB	Nova STB
+	New VP Freeze	Zamrzni v novih PO
+	New Viewports...	Nova pogledna okna...
+	New from Template...	Novo iz predloge...
+	New layout	Nova postavitev
+	New state name	Ime novega stanja
+	New style	Nov slog
+	Next Change	Naslednja sprememba
+	No	Ne
+	No blocks defined in this drawing.	V tej risbi ni določenih blokov.
+	No contributor data was built into this copy.	V to kopijo niso vgrajeni podatki o sodelavcih.
+	No external references are attached.	Ni priloženih zunanjih sklicev.
+	No model credits were built into this copy.	V to kopijo niso vgrajene zasluge za modele.
+	No plot style tables.	Ni tabel slogov izrisa.
+	No saved layer states	Ni shranjenih stanj plasti
+	No selection	Ni izbora
+	No supported 3D mouse found	Ni najdene podprte 3D-miške
+	Node	Vozlišče
+	None	Brez
+	Normal	Navadno
+	Not Found	Ni najdeno
+	Not available	Ni na voljo
+	Not available yet	Še ni na voljo
+	Not loaded	Ni naloženo
+	Numbered list	Oštevilčeni seznam
+	OK	V redu
+	Object	Objekt
+	Object Snap	Pripenjanje na objekte
+	Object Snap (F3)	Pripenjanje na objekte (F3)
+	Object Snap On (F3)	Pripenjanje na objekte vklopljeno (F3)
+	Object Snap Tracking	Sledenje pripenjanju na objekte
+	Object Snap Tracking (F11)	Sledenje pripenjanju na objekte (F11)
+	Object Snap Tracking Settings	Nastavitve sledenja pripenjanju na objekte
+	Object snap aperture	Odprtina pripenjanja na objekte
+	Object snap marker size	Velikost oznake pripenjanja na objekte
+	Object type:	Vrsta objekta:
+	Oblique	Poševno
+	Off	Izklopljeno
+	Offset	Odmik
+	On	Vklopljeno
+	On/Off	Vklop/izklop
+	Only in this drawing: {n}	Samo v tej risbi: {n}
+	Only in {name}: {n}	Samo v {name}: {n}
+	Oops	Obnovi izbrisano
+	Open	Odpri
+	Open (⌘O)	Odpri (⌘O)
+	Open Sample Drawing	Odpri vzorčno risbo
+	Open Xref	Odpri zunanji sklic
+	Open a drawing first.	Najprej odprite risbo.
+	Open and Save	Odpiranje in shranjevanje
+	Open sample drawing	Odpri vzorčno risbo
+	Open...	Odpri...
+	Operator:	Operator:
+	Options	Možnosti
+	Options...	Možnosti...
+	Orbit	Orbita
+	Ordinate	Ordinatna
+	Ortho (F8)	Orto (F8)
+	Ortho Mode	Način orto
+	Ortho Mode (F8)	Način orto (F8)
+	Osnap Settings...	Nastavitve pripenjanja na objekte...
+	Out	Pomanjšaj
+	Over-constrained	Preveč omejeno
+	Overlay	Prekrivanje
+	Override	Preglasitev
+	PAPER	PAPIR
+	PRs	PR-ji
+	Page Setup Manager	Upravitelj nastavitev strani
+	Page Setup Manager...	Upravitelj nastavitev strani...
+	Pan	Pomik pogleda
+	Pan Down	Pomik pogleda navzdol
+	Pan Left	Pomik pogleda levo
+	Pan Right	Pomik pogleda desno
+	Pan Up	Pomik pogleda navzgor
+	Pan sensitivity	Občutljivost pomika pogleda
+	Paper Space	Papirni prostor
+	Parallel	Vzporednost
+	Parameters Manager	Upravitelj parametrov
+	Parametric	Parametrično
+	Paste	Prilepi
+	Paste as Block	Prilepi kot blok
+	Paste to Command Line	Prilepi v ukazno vrstico
+	Paste to Original Coordinates	Prilepi na izvirne koordinate
+	Path Array	Polje vzdolž poti
+	Pattern	Vzorec
+	Percent	Odstotek
+	Perpendicular	Pravokotnost
+	Pickbox size	Velikost izbirnega okvirčka
+	Plot	Izriši
+	Plot (click: do not plot)	Izriši (klik: ne izriši)
+	Plot Preview	Predogled izrisa
+	Plot Style Manager	Upravitelj slogov izrisa
+	Plot Style Manager...	Upravitelj slogov izrisa...
+	Plot Style...	Slog izrisa...
+	Plot Styles...	Slogi izrisa...
+	Plot Window	Okno izrisa
+	Plot style	Slog izrisa
+	Plot style attached to	Slog izrisa je priložen k
+	Plot style table	Tabela slogov izrisa
+	Plot table type	Vrsta tabele izrisa
+	Plotter Manager	Upravitelj risalnikov
+	Plotter Manager...	Upravitelj risalnikov...
+	Plus/minus	Plus/minus
+	Point	Točka
+	Point Filters	Filtri točk
+	Point Style...	Slog točke...
+	Polar (distance < angle)	Polarne (razdalja < kot)
+	Polar Array	Polarno polje
+	Polar Tracking	Polarno sledenje
+	Polar Tracking (F10)	Polarno sledenje (F10)
+	Polar Tracking On (F10)	Polarno sledenje vklopljeno (F10)
+	Polar angle measurement	Merjenje polarnega kota
+	Polar distance	Polarna razdalja
+	Polar: {distance} < {angle}°	Polarno: {distance} < {angle}°
+	PolarSnap	Polarno pripenjanje
+	Polygon	Mnogokotnik
+	Polygonal	Mnogokotno
+	Polygonal Viewport	Mnogokotno pogledno okno
+	Polyline	Polilinija
+	Polyline Edit	Urejanje polilinije
+	Position X	Položaj X
+	Position Y	Položaj Y
+	Position Z	Položaj Z
+	Previous	Prejšnji
+	Previous Change	Prejšnja sprememba
+	Previous Layer	Prejšnja plast
+	Primitives	Osnovna telesa
+	Print	Natisni
+	Print...	Natisni...
+	Profiles	Profili
+	Properties	Lastnosti
+	Properties Inspector	Pregledovalnik lastnosti
+	Properties:	Lastnosti:
+	Proxy	Posredniški objekt
+	Purge	Počisti neuporabljeno
+	Pyramid	Piramida
+	Quadrant	Kvadrant
+	Query Entities	Poizvedba o entitetah
+	Quick	Hitro
+	Quick Dimension	Hitra kota
+	Quick Properties	Hitre lastnosti
+	Quick Select	Hitri izbor
+	Quick Select Properties	Lastnosti hitrega izbora
+	Quick Select...	Hitri izbor...
+	QuickCalc	Hitri kalkulator
+	QuickCalc Pick	Izbira za hitri kalkulator
+	Quit DraftCraft	Zapri DraftCraft
+	Radius	Polmer
+	Raster Image	Rastrska slika
+	Ray	Žarek
+	Read-only	Samo za branje
+	Real name	Pravo ime
+	Realtime	V realnem času
+	Reassociate Dimensions	Ponovno poveži kote
+	Recalculate Table Formulas	Ponovno izračunaj formule tabele
+	Recent	Nedavno
+	Recent Commands	Nedavni ukazi
+	Recent Input	Nedavni vnosi
+	Recover...	Obnovi...
+	Rectangle	Pravokotnik
+	Rectangular	Pravokotno
+	Rectangular Array	Pravokotno polje
+	Rectangular snap	Pravokotno pripenjanje
+	Red	Rdeča
+	Redo	Uveljavi
+	Redo (⇧⌘Z)	Uveljavi (⇧⌘Z)
+	Redraw	Osveži
+	Reference Manager	Upravitelj sklicev
+	Reference Name	Ime sklica
+	References: {n}	Sklici: {n}
+	Regen	Regeneriraj
+	Regen All	Regeneriraj vse
+	Region	Območje
+	Region/Mass Properties	Lastnosti območja/mase
+	Reinitialize	Znova inicializiraj
+	Relative	Relativno
+	Relative to last segment	Glede na zadnji segment
+	Release the 3D mouse to calibrate its resting position	Spustite 3D-miško, da umerite njen položaj mirovanja
+	Reload	Znova naloži
+	Reload All	Znova naloži vse
+	Remove	Odstrani
+	Remove Leader	Odstrani opisno črto
+	Remove Vertex	Odstrani oglišče
+	Remove the viewport override	Odstrani preglasitev za pogledno okno
+	Rename Dimension Style	Preimenuj slog kotiranja
+	Rename Layer	Preimenuj plast
+	Rename Layer State	Preimenuj stanje plasti
+	Rename Layout	Preimenuj postavitev
+	Rename Text Style	Preimenuj slog besedila
+	Rename...	Preimenuj...
+	Repeat {command}	Ponovi {command}
+	Replace Block...	Zamenjaj blok...
+	Requires a point (x,y, @dx,dy or @d<a).	Zahtevana je točka (x,y, @dx,dy ali @d<a).
+	Reset Palettes	Ponastavi palete
+	Reset Panel Layout	Ponastavi razporeditev plošč
+	Reset keeps the interface language.	Ponastavitev ohrani jezik vmesnika.
+	Reset to Defaults	Ponastavi na privzeto
+	Restore	Obnovi
+	Restore Layer State	Obnovi stanje plasti
+	Reverse	Obrni
+	Reverse the order	Obrni vrstni red
+	Reverse zoom direction	Obrni smer povečave
+	Revision Cloud	Revizijski oblak
+	Revolve	Zavrti okrog osi
+	Right	Desno
+	Rotate	Zasukaj
+	Rotation	Zasuk
+	Run Script...	Zaženi skript...
+	SVG drawings (SVG, SVGZ)	Risbe SVG (SVG, SVGZ)
+	Save	Shrani
+	Save (⌘S)	Shrani (⌘S)
+	Save As	Shrani kot
+	Save As...	Shrani kot...
+	Save Layer State	Shrani stanje plasti
+	Save State	Shrani stanje
+	Save new drawings as	Nove risbe shrani kot
+	Saved Path	Shranjena pot
+	Scale	Spremeni merilo
+	Scale List...	Seznam meril...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Zaslonske lupe, bralniki zaslona in snemalniki sledijo sistemskemu kazalcu.
+	Screening	Zasenčenje
+	Search for layer	Iskanje plasti
+	Search for parameter	Iskanje parametra
+	Search for pattern	Iskanje vzorca
+	Second and next points:	Druga in naslednje točke:
+	Select	Izberi
+	Select 2D polyline	Izberite 2D-polilinijo
+	Select All	Izberi vse
+	Select Objects	Izberi objekte
+	Select Similar	Izberi podobne
+	Select a 2D polyline.	Izberite 2D-polilinijo.
+	Select a block reference.	Izberite sklic na blok.
+	Select a circle or arc.	Izberite krog ali lok.
+	Select a closed polyline	Izberite zaprto polilinijo
+	Select a closed polyline, circle, ellipse or closed spline.	Izberite zaprto polilinijo, krog, elipso ali zaprt zlepek.
+	Select a closed polyline.	Izberite zaprto polilinijo.
+	Select a curve as the path.	Izberite krivuljo kot pot.
+	Select a dimension constraint type	Izberite vrsto dimenzijske omejitve
+	Select a line object	Izberite črtni objekt
+	Select a line object.	Izberite črtni objekt.
+	Select a line or an arc.	Izberite črto ali lok.
+	Select a line or polyline segment	Izberite črto ali segment polilinije
+	Select a line, arc or open polyline.	Izberite črto, lok ali odprto polilinijo.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Izberite črto, lok, krog, polilinijo, elipso ali zlepek kot pot.
+	Select a line, circle, arc or polyline segment.	Izberite črto, krog, lok ali segment polilinije.
+	Select a line.	Izberite črto.
+	Select a polyline.	Izberite polilinijo.
+	Select a text, mtext, attribute definition or dimension.	Izberite besedilo, večvrstično besedilo, definicijo atributa ali koto.
+	Select an annotation object	Izberite opombni objekt
+	Select an arc or circle	Izberite lok ali krog
+	Select an arc.	Izberite lok.
+	Select an object	Izberite objekt
+	Select an object to change	Izberite objekt za spremembo
+	Select an object to measure	Izberite objekt za merjenje
+	Select an object.	Izberite objekt.
+	Select an open curve.	Izberite odprto krivuljo.
+	Select an open line, arc, polyline, ellipse arc or spline.	Izberite odprto črto, lok, polilinijo, eliptični lok ali zlepek.
+	Select arc or circle	Izberite lok ali krog
+	Select arc or polyline arc segment	Izberite lok ali ločni segment polilinije
+	Select arc style	Izberite slog loka
+	Select arc, circle, line	Izberite lok, krog, črto
+	Select at least two objects to join.	Izberite vsaj dva objekta za združitev.
+	Select circle or arc to add center mark	Izberite krog ali lok za dodajanje oznake središča
+	Select closed objects (regions, closed polylines, circles).	Izberite zaprte objekte (območja, zaprte polilinije, kroge).
+	Select first line	Izberite prvo črto
+	Select first line or arc	Izberite prvo črto ali lok
+	Select first object	Izberite prvi objekt
+	Select first point	Izberite prvo točko
+	Select nested objects to copy	Izberite gnezdene objekte za kopiranje
+	Select object	Izberite objekt
+	Select object to dimension	Izberite objekt za kotiranje
+	Select object to divide	Izberite objekt za razdelitev
+	Select object to extend or shift-select to trim	Izberite objekt za podaljšanje ali izberite s Shift za obrezovanje
+	Select object to measure	Izberite objekt za merjenje
+	Select object to offset	Izberite objekt za odmik
+	Select object to trim or shift-select to extend	Izberite objekt za obrezovanje ali izberite s Shift za podaljšanje
+	Select objects	Izberite objekte
+	Select objects (crossing window first corner)	Izberite objekte (prvi vogal prečnega okna)
+	Select objects first, then choose a command	Najprej izberite objekte, nato ukaz
+	Select objects to array.	Izberite objekte za polje.
+	Select objects to stretch by crossing-window or crossing-polygon...	Izberite objekte za raztezanje s prečnim oknom ali prečnim mnogokotnikom...
+	Select objects:	Izberite objekte:
+	Select one polyline (Multiple is available through the JSON form).	Izberite eno polilinijo (možnost Multiple je na voljo prek oblike JSON).
+	Select path curve	Izberite krivuljo poti
+	Select point or object	Izberite točko ali objekt
+	Select polyline	Izberite polilinijo
+	Select second line	Izberite drugo črto
+	Select second line or shift-select to apply corner	Izberite drugo črto ali izberite s Shift za uporabo vogala
+	Select second object	Izberite drugi objekt
+	Select second object or shift-select to apply corner	Izberite drugi objekt ali izberite s Shift za uporabo vogala
+	Select second point	Izberite drugo točko
+	Select spline	Izberite zlepek
+	Select symmetry line	Izberite simetrijsko črto
+	Select two points	Izberite dve točki
+	Selection	Izbor
+	Selection Cycling	Kroženje izbora
+	Send Hatches to Back	Pošlji šrafure v ozadje
+	Send Under Objects	Pošlji pod objekte
+	Send to Back	Pošlji v ozadje
+	Services	Storitve
+	Set Current	Nastavi kot trenutno
+	Set Current Dimension Style	Nastavi trenutni slog kotiranja
+	Set Current Text Style	Nastavi trenutni slog besedila
+	Set Current Viewport	Nastavi trenutno pogledno okno
+	Set Layer Properties	Nastavi lastnosti plasti
+	Set Properties	Nastavi lastnosti
+	Set Table Cell	Nastavi celico tabele
+	Set Table Cell Style	Nastavi slog celice tabele
+	Set Variable	Nastavi spremenljivko
+	Set View	Nastavi pogled
+	Settings...	Nastavitve...
+	Share	Skupna raba
+	Show	Pokaži
+	Show All	Pokaži vse
+	Show All Constraint Bars	Pokaži vse vrstice z omejitvami
+	Show All Dynamic Dimensions	Pokaži vse dinamične kote
+	Show Annotative Objects	Pokaži opombne objekte
+	Show Layer List	Pokaži seznam plasti
+	Show Quick Properties for selected objects	Pokaži hitre lastnosti za izbrane objekte
+	Show System Cursor	Pokaži sistemski kazalec
+	Show and hide the tools of this category	Pokaži in skrij orodja te kategorije
+	Show command prompting near the crosshairs	Pokaži pozive ukazov ob križcu
+	Show in Tool Sets	Pokaži v naborih orodij
+	Show/Hide Lineweight	Pokaži/skrij debelino črt
+	Show/Hide Transparency	Pokaži/skrij prosojnost
+	Single Line Text	Enovrstično besedilo
+	Single Point	Ena točka
+	Single...	Posamezna...
+	Smooth	Gladko
+	Snap	Pripenjanje
+	Snap Mode	Način pripenjanja
+	Snap Mode (F9)	Način pripenjanja (F9)
+	Snap On (F9)	Pripenjanje vklopljeno (F9)
+	Snap Overrides	Preglasitve pripenjanja
+	Snap X spacing	Razmik pripenjanja po X
+	Snap and Grid	Pripenjanje in mreža
+	Snap type	Vrsta pripenjanja
+	Snap, grid, polar tracking and Dynamic Input:	Pripenjanje, mreža, polarno sledenje in dinamični vnos:
+	Solid	Telo
+	Solid Editing	Urejanje teles
+	Sort	Razvrsti
+	Specify a point	Določite točko
+	Specify a scale for the hatch pattern	Določite merilo za vzorec šrafure
+	Specify a second extension line origin	Določite izhodišče druge pomožne črte
+	Specify an angle for the hatch pattern	Določite kot za vzorec šrafure
+	Specify angle end point	Določite končno točko kota
+	Specify angle of dimension line	Določite kot kotirne črte
+	Specify angle of dimension text	Določite kot besedila kote
+	Specify angle start point	Določite začetno točko kota
+	Specify angle vertex	Določite vrh kota
+	Specify angle vertex point	Določite točko vrha kota
+	Specify arc length dimension location	Določite mesto kote dolžine loka
+	Specify axis endpoint of ellipse	Določite končno točko osi elipse
+	Specify base diameter	Določite premer osnovne ploskve
+	Specify base point	Določite osnovno točko
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Določite osnovno točko ali premik (za pomik pogleda v realnem času vlecite s srednjim gumbom miške)
+	Specify base radius	Določite polmer osnovne ploskve
+	Specify center of donut	Določite središče kolobarja
+	Specify center of ellipse	Določite središče elipse
+	Specify center of polygon	Določite središče mnogokotnika
+	Specify center point for circle	Določite središče kroga
+	Specify center point of arc	Določite središče loka
+	Specify center point of arc (hold Ctrl to switch direction)	Določite središče loka (držite Ctrl za spremembo smeri)
+	Specify center point of array	Določite središče polja
+	Specify center point of base	Določite središče osnovne ploskve
+	Specify corner of viewport	Določite vogal poglednega okna
+	Specify corner of window, enter a scale factor (nX or nXP)	Določite vogal okna, vnesite faktor merila (nX ali nXP)
+	Specify diameter of circle	Določite premer kroga
+	Specify dimension arc line location	Določite mesto ločne kotirne črte
+	Specify dimension line location	Določite mesto kotirne črte
+	Specify distance between turns	Določite razdaljo med zavoji
+	Specify distance to other axis	Določite razdaljo do druge osi
+	Specify end angle	Določite končni kot
+	Specify end point of arc	Določite končno točko loka
+	Specify end point of arc (hold Ctrl to switch direction)	Določite končno točko loka (držite Ctrl za spremembo smeri)
+	Specify ending width	Določite končno širino
+	Specify ending width for next segment	Določite končno širino za naslednji segment
+	Specify endpoint of arc	Določite končno točko loka
+	Specify endpoint of axis	Določite končno točko osi
+	Specify endpoint of line	Določite končno točko črte
+	Specify feature location	Določite mesto elementa
+	Specify fillet radius	Določite polmer zaokrožitve
+	Specify fillet radius for rectangles	Določite polmer zaokrožitve za pravokotnike
+	Specify first angle endpoint	Določite prvo končno točko kota
+	Specify first chamfer distance	Določite prvo razdaljo posnetja
+	Specify first chamfer distance for rectangles	Določite prvo razdaljo posnetja za pravokotnike
+	Specify first constraint point	Določite prvo točko omejitve
+	Specify first corner	Določite prvi vogal
+	Specify first corner point	Določite prvo vogalno točko
+	Specify first destination point	Določite prvo ciljno točko
+	Specify first end point of circle's diameter	Določite prvo končno točko premera kroga
+	Specify first endpoint of edge	Določite prvo končno točko roba
+	Specify first extension line origin	Določite izhodišče prve pomožne črte
+	Specify first point	Določite prvo točko
+	Specify first point of mirror line	Določite prvo točko zrcalne črte
+	Specify first point on circle	Določite prvo točko na krogu
+	Specify first point on circle: _tan to	Določite prvo točko na krogu: _tan na
+	Specify first source point	Določite prvo izvorno točko
+	Specify height	Določite višino
+	Specify helix height	Določite višino vijačnice
+	Specify included angle	Določite središčni kot
+	Specify included angle (hold Ctrl to switch direction)	Določite središčni kot (držite Ctrl za spremembo smeri)
+	Specify insertion base point	Določite osnovno točko vstavljanja
+	Specify insertion point	Določite točko vstavljanja
+	Specify inside diameter of donut	Določite notranji premer kolobarja
+	Specify leader arrowhead location	Določite mesto puščice opisne črte
+	Specify leader endpoint	Določite končno točko opisne črte
+	Specify leader landing location	Določite mesto police opisne črte
+	Specify length for rectangles	Določite dolžino za pravokotnike
+	Specify length of chord	Določite dolžino tetive
+	Specify length of chord (hold Ctrl to switch direction)	Določite dolžino tetive (držite Ctrl za spremembo smeri)
+	Specify length of segment	Določite dolžino segmenta
+	Specify line width for rectangles	Določite širino črte za pravokotnike
+	Specify location for new vertex	Določite mesto novega oglišča
+	Specify minimum length of arc	Določite najmanjšo dolžino loka
+	Specify new end point	Določite novo končno točko
+	Specify new location for marked vertex	Določite novo mesto označenega oglišča
+	Specify new width for all segments	Določite novo širino za vse segmente
+	Specify next point	Določite naslednjo točko
+	Specify offset distance	Določite razdaljo odmika
+	Specify opposite corner	Določite nasprotni vogal
+	Specify other corner point	Določite drugo vogalno točko
+	Specify other endpoint of axis	Določite drugo končno točko osi
+	Specify outside diameter of donut	Določite zunanji premer kolobarja
+	Specify point	Določite točko
+	Specify point on object for first tangent of circle	Določite točko na objektu za prvo tangento kroga
+	Specify point on object for second tangent of circle	Določite točko na objektu za drugo tangento kroga
+	Specify point on side to offset	Določite točko na strani odmika
+	Specify radius of arc	Določite polmer loka
+	Specify radius of arc (hold Ctrl to switch direction)	Določite polmer loka (držite Ctrl za spremembo smeri)
+	Specify radius of circle	Določite polmer kroga
+	Specify rotation angle	Določite kot zasuka
+	Specify rotation angle of text	Določite kot zasuka besedila
+	Specify scale factor	Določite faktor merila
+	Specify second angle endpoint	Določite drugo končno točko kota
+	Specify second break point	Določite drugo točko prekinitve
+	Specify second chamfer distance for rectangles	Določite drugo razdaljo posnetja za pravokotnike
+	Specify second constraint point	Določite drugo točko omejitve
+	Specify second destination point	Določite drugo ciljno točko
+	Specify second end point of circle's diameter	Določite drugo končno točko premera kroga
+	Specify second endpoint of edge	Določite drugo končno točko roba
+	Specify second extension line origin	Določite izhodišče druge pomožne črte
+	Specify second point	Določite drugo točko
+	Specify second point of arc	Določite drugo točko loka
+	Specify second point of mirror line	Določite drugo točko zrcalne črte
+	Specify second point on circle	Določite drugo točko na krogu
+	Specify second point on circle: _tan to	Določite drugo točko na krogu: _tan na
+	Specify second point or <use first point as displacement>	Določite drugo točko ali <uporabi prvo točko kot premik>
+	Specify second source point	Določite drugo izvorno točko
+	Specify side to offset	Določite stran odmika
+	Specify start angle	Določite začetni kot
+	Specify start point	Določite začetno točko
+	Specify start point of arc	Določite začetno točko loka
+	Specify start point of polyline	Določite začetno točko polilinije
+	Specify start point of text	Določite začetno točko besedila
+	Specify starting width	Določite začetno širino
+	Specify starting width for next segment	Določite začetno širino za naslednji segment
+	Specify tangent direction for the start point of arc	Določite smer tangente za začetno točko loka
+	Specify the elevation for rectangles	Določite elevacijo za pravokotnike
+	Specify thickness for rectangles	Določite debelino za pravokotnike
+	Specify third point on circle	Določite tretjo točko na krogu
+	Specify third point on circle: _tan to	Določite tretjo točko na krogu: _tan na
+	Specify third source point or <continue>	Določite tretjo izvorno točko ali <nadaljuj>
+	Specify through point	Določite točko, skozi katero poteka
+	Specify top diameter	Določite zgornji premer
+	Specify top radius	Določite zgornji polmer
+	Specify total angle	Določite skupni kot
+	Specify total length	Določite skupno dolžino
+	Specify width for rectangles	Določite širino za pravokotnike
+	Sphere	Krogla
+	Spline	Zlepek
+	Spline Edit	Urejanje zlepka
+	Stack (type 1/2 then select)	Ulomek (vnesite 1/2 in nato izberite)
+	Standard	Standardno
+	Start	Začetek
+	Start Width	Začetna širina
+	Start X	Začetek X
+	Start Y	Začetek Y
+	Start angle	Začetni kot
+	Start, Center, Angle	Začetek, središče, kot
+	Start, Center, End	Začetek, središče, konec
+	Start, Center, Length	Začetek, središče, dolžina
+	Start, End, Angle	Začetek, konec, kot
+	Start, End, Direction	Začetek, konec, smer
+	Start, End, Radius	Začetek, konec, polmer
+	Status	Stanje
+	Status Bar	Vrstica stanja
+	Stretch	Raztegni
+	Stretch Vertex	Raztegni oglišče
+	Style: Standard	Slog: Standard
+	Subtract	Odštej
+	Sweep	Izvleci vzdolž poti
+	Switch Drawing	Preklopi risbo
+	Switch Layout	Preklopi postavitev
+	Switch between model space in a viewport and paper space	Preklapljanje med modelnim prostorom v poglednem oknu in papirnim prostorom
+	Symmetric	Simetričnost
+	Synchronize Attributes	Sinhroniziraj atribute
+	Synchronize Multiple-scale Positions	Sinhroniziraj položaje za več meril
+	TOP	ZGORAJ
+	Table	Tabela
+	Table Breaks	Prelomi tabele
+	Table Cell Style	Slog celice tabele
+	Table Style...	Slog tabele...
+	Table style	Slog tabele
+	Table...	Tabela...
+	Tan, Tan, Radius	Tan, tan, polmer
+	Tan, Tan, Tan	Tan, tan, tan
+	Tangent	Tangenta
+	Temporary track point	Začasna točka sledenja
+	Text	Besedilo
+	Text Editor	Urejevalnik besedila
+	Text Height	Višina besedila
+	Text Objects Only	Samo besedilni objekti
+	Text Style...	Slog besedila...
+	Text height	Višina besedila
+	Text override	Preglasitev besedila
+	Text style	Slog besedila
+	Thaw All Layers	Odmrzni vse plasti
+	Thaw Layer	Odmrzni plast
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Odprtina določa, kako blizu točke mora priti kazalec, da jo pripenjanje na objekte najde.
+	There is nothing here yet.	Tu še ni ničesar.
+	Thickness	Debelina
+	Time	Čas
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Desni klik, odvisen od časa: hiter klik je Enter, držanje odpre meni
+	To	Do
+	To get started, create or open a drawing.	Za začetek ustvarite ali odprite risbo.
+	Toggle PICKADD (off: each pick replaces the selection)	Preklopi PICKADD (izklopljeno: vsaka izbira zamenja izbor)
+	Toggle PICKADD (on: picks add to the selection)	Preklopi PICKADD (vklopljeno: izbire se dodajo k izboru)
+	Tolerance...	Toleranca...
+	Tool Bar	Orodna vrstica
+	Tool Sets	Nabori orodij
+	Tools	Orodja
+	Torus	Torus
+	Trace	Sled
+	Track orthogonally only	Sledi samo pravokotno
+	Track using all polar angle settings	Sledi z vsemi nastavitvami polarnih kotov
+	Transparency	Prosojnost
+	Trim	Obreži
+	True Color	Prava barva
+	Turn All Layers On	Vklopi vse plasti
+	Turn Off Layer	Izklopi plast
+	Turn On Layer	Vklopi plast
+	Turn Quick Properties off (QPMODE)	Izklopi hitre lastnosti (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Ko je izklopljeno, desni klik med izvajanjem ukaza vedno odpre priročni meni.
+	Type	Vrsta
+	Type a command	Vnesite ukaz
+	Type text; Enter starts a new paragraph	Vnesite besedilo; Enter začne nov odstavek
+	UCS Icon	Ikona UCS
+	Undo	Razveljavi
+	Undo (⌘Z)	Razveljavi (⌘Z)
+	Ungroup	Razdruži skupino
+	Union	Unija
+	Unisolate Layer	Prekliči osamitev plasti
+	Units Conversion	Pretvorba enot
+	Units...	Enote...
+	Unload	Izprazni
+	Unloaded	Izpraznjeno
+	Unlock Layer	Odkleni plast
+	Unlock viewport	Odkleni pogledno okno
+	Unmerge Cells	Razdruži celice
+	Unreferenced	Brez sklicev
+	Unresolved	Nerazrešeno
+	Unsaved Layer State	Neshranjeno stanje plasti
+	Up	Navzgor
+	Update	Posodobi
+	Update Data Links	Posodobi podatkovne povezave
+	Use System Setting	Uporabi sistemsko nastavitev
+	Use for this layout	Uporabi za to postavitev
+	Use object linetype	Uporabi vrsto črte objekta
+	Use object lineweight	Uporabi debelino črte objekta
+	User	Uporabnik
+	User Parameters	Uporabniški parametri
+	User Preferences	Uporabniške nastavitve
+	Username	Uporabniško ime
+	VP Color	Barva v PO
+	VP Freeze	Zamrzni v PO
+	Value	Vrednost
+	Value:	Vrednost:
+	Variables	Spremenljivke
+	Version	Različica
+	Version 2000	Različica 2000
+	Version 2004	Različica 2004
+	Version 2007	Različica 2007
+	Version 2010	Različica 2010
+	Version 2013	Različica 2013
+	Version 2018	Različica 2018
+	Version {version}	Različica {version}
+	Vertical	Navpično
+	VerticalDistance	Navpična razdalja
+	View	Pogled
+	ViewCube	ViewCube
+	Viewport	Pogledno okno
+	Viewport Layer Freeze	Zamrznitev plasti v poglednem oknu
+	Viewport Properties	Lastnosti poglednega okna
+	Viewport is locked	Pogledno okno je zaklenjeno
+	Viewport scale	Merilo poglednega okna
+	Viewport {id}	Pogledno okno {id}
+	Viewports	Pogledna okna
+	Volume	Prostornina
+	WCS	WCS
+	White	Bela
+	Width factor	Faktor širine
+	Window	Okno
+	Wipeout	Prekrivna maska
+	Workspace Switching	Preklapljanje delovnih prostorov
+	Write Block	Zapiši blok
+	X	X
+	Xline	Konstrukcijska črta
+	Y	Y
+	Yellow	Rumena
+	Yes	Da
+	Zoom	Povečava
+	Zoom All	Povečava – vse
+	Zoom Dynamic	Dinamična povečava
+	Zoom Extents	Povečava na obseg
+	Zoom In	Povečaj
+	Zoom Object	Povečava na objekt
+	Zoom Out	Pomanjšaj
+	Zoom Previous	Prejšnja povečava
+	Zoom Realtime	Povečava v realnem času
+	Zoom Window	Povečava z oknom
+	Zoom sensitivity	Občutljivost povečave
+	error	napaka
+	min	min
+	objects	objektov
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (omejitev {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} omejitev {name} = {expression}  (dvoklik za urejanje)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Nov uporabniški parameter
+	ΔLOC	ΔVrstice
+	−Bin	−Bin
+	−LOC	−Vrstice
+	⌘↩ to finish	⌘↩ za dokončanje
+@plural	{n} commit	{n} uveljavitev|{n} uveljavitvi|{n} uveljavitve|{n} uveljavitev
+@plural	{n} contributor	{n} sodelavec|{n} sodelavca|{n} sodelavci|{n} sodelavcev
+	Check for Updates…	Preveri posodobitve…
+	DraftCraft is up to date.	DraftCraft je posodobljen.
+	Could not check for updates.	Posodobitev ni bilo mogoče preveriti.
+	Add to Working Set	Dodaj v delovni nabor
+	Add: Pick points	Dodaj: izberi točke
+	Add: Select objects	Dodaj: izberi objekte
+	Add…	Dodaj…
+	Alias	Vzdevek
+	Alias file: {file}	Datoteka vzdevkov: {file}
+	Align Multileaders	Poravnaj večkratne opisne črte
+	Analyze Shapes	Analiziraj oblike
+	Analyze Usage	Analiziraj uporabo
+	Animation Effects	Animacijski učinki
+	Animation effects	Animacijski učinki
+	Associative	Asociativno
+	Backup copy	Varnostna kopija
+	Block to create or edit	Blok za ustvarjanje ali urejanje
+	Bottom left	Spodaj levo
+	Bottom right	Spodaj desno
+	Boundaries	Meje
+	Boundaries picked: {n}	Izbrane meje: {n}
+	Break-line Symbol	Simbol prelomne črte
+	Centered	Sredinsko
+	Change Properties	Spremeni lastnosti
+	Choose the command the alias starts.	Izberite ukaz, ki ga vzdevek zažene.
+	Click the ruler to add a tab stop, right-click to remove one	Kliknite ravnilo, da dodate tabulator, z desnim klikom ga odstranite
+	Click to set new origin	Kliknite, da nastavite novo izhodišče
+	Close Block Editor	Zapri urejevalnik blokov
+	Collect	Zberi
+	Collect Multileaders	Zberi večkratne opisne črte
+	Color 1	Barva 1
+	Color 2	Barva 2
+	Command	Ukaz
+	Convert Text to Mtext	Pretvori besedilo v večvrstično besedilo
+	Create backup copy with each save	Ob vsakem shranjevanju ustvari varnostno kopijo
+	Create separate hatches	Ustvari ločene šrafure
+	Crossing selection color:	Barva prečnega izbora:
+	Curved	Ukrivljeno
+	Customize	Prilagodi
+	Default to boundary extents	Privzeto na obseg meje
+	Define each corner of the selection window with a separate click.	Vsak vogal izbirnega okna določite z ločenim klikom.
+	Discard	Zavrzi
+	Drag Dynamic Grip	Vleci dinamični ročaj
+	Dynamic Block Data	Podatki dinamičnega bloka
+	Dynamic Block Grips	Ročaji dinamičnega bloka
+	Dynamic Block Reference	Sklic na dinamični blok
+	Edit Block Definition	Uredi definicijo bloka
+	Edit Command Aliases (PGP)...	Uredi vzdevke ukazov (PGP)...
+	Edit Multileader	Uredi večkratno opisno črto
+	Edit Reference In-Place	Uredi sklic na mestu
+	Edit…	Uredi…
+	Evaluate LISP	Ovrednoti LISP
+	Exclude:	Izključi:
+	Explode Attributes to Text	Razstavi atribute v besedilo
+	Express Tools	Orodja Express
+	Font	Pisava
+	Grips	Ročaji
+	Groups	Skupine
+	Hatch Pick	Izbira šrafure
+	Hatch and Gradient	Šrafura in preliv
+	Hatch origin	Izhodišče šrafure
+	Hatches	Šrafure
+	Hemispherical	Polkrogelno
+	Ignore	Prezri
+	Imperial (inches)	Imperialne (palci)
+	Implied Loops	Implicitne zanke
+	Indicate selection area	Označite območje izbora
+	Interface scale	Merilo vmesnika
+	Inverted	Obrnjeno
+	Island	Otok
+	Island detection	Zaznavanje otokov
+	Italic	Ležeče
+	Justify	Obojestranska poravnava
+	Load Application...	Naloži aplikacijo...
+	Metric (millimetres)	Metrične (milimetri)
+	More than {n} aliases.	Več kot {n} vzdevkov.
+	Move/Copy/Rotate	Premakni/kopiraj/zasukaj
+	Multiline text	Večvrstično besedilo
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Nova risba in prva risba ob zagonu uporabljata te enote, razen če je nastavljena privzeta predloga (QNEWTEMPLATE).
+	New block	Nov blok
+	No alias file loaded. REINIT replaces these aliases with a file's.	Datoteka vzdevkov ni naložena. REINIT te vzdevke zamenja z vzdevki iz datoteke.
+	Not a number or distance: {text}	Ni število ali razdalja: {text}
+	Object grouping	Združevanje objektov v skupine
+	Object selection limit for display of grips	Omejitev izbora objektov za prikaz ročajev
+	Objects on locked layers	Objekti na zaklenjenih plasteh
+	Open in Block Editor	Odpri v urejevalniku blokov
+	Origin: {x}, {y}	Izhodišče: {x}, {y}
+	Outer	Zunanje
+	Overline	Nadčrtano
+	Preview	Predogled
+	Query Texts	Poizvedba o besedilih
+	Save Block	Shrani blok
+	Save Block As	Shrani blok kot
+	Save Layout as Template	Shrani postavitev kot predlogo
+	Save Reference Edits	Shrani urejanje sklica
+	Save alias	Shrani vzdevek
+	Save changes to block "{name}"?	Želite shraniti spremembe v bloku »{name}«?
+	Select boundaries to remove	Izberite meje za odstranitev
+	Select using two clicks only	Izbiraj samo z dvema klikoma
+	Selection Area Effect	Učinek območja izbora
+	Selection Preview Filter	Filter predogleda izbora
+	Selection area opacity:	Neprosojnost območja izbora:
+	Selection effect color	Barva učinka izbora
+	Selection modes	Načini izbora
+	Selection preview	Predogled izbora
+	Set Dynamic Property	Nastavi dinamično lastnost
+	Shape	Oblika
+	Sheet Books to PDF...	Knjige listov v PDF...
+	Show grips	Pokaži ročaje
+	Specified origin	Določeno izhodišče
+	Spherical	Krogelno
+	Tables	Tabele
+	Text color	Barva besedila
+	Top left	Zgoraj levo
+	Top right	Zgoraj desno
+	Type an alias name.	Vnesite ime vzdevka.
+	Underline	Podčrtano
+	Units of new drawings	Enote novih risb
+	Unsaved changes	Neshranjene spremembe
+	Use current origin	Uporabi trenutno izhodišče
+	Visual Effect Settings	Nastavitve vizualnih učinkov
+	Visual Effect Settings...	Nastavitve vizualnih učinkov...
+	When a command is active	Ko je ukaz dejaven
+	When no command is active	Ko ni dejavnega ukaza
+	Window selection color:	Barva izbora z oknom:
+	Working Set	Delovni nabor
+	Xref and Block In-place Editing	Urejanje zunanjih sklicev in blokov na mestu
+	Xrefs	Zunanji sklici
+	built-in	vgrajeno
+	overrides built-in	preglasi vgrajenega
+	{alias} is already defined; select it and use Edit.	{alias} je že določen; izberite ga in uporabite Uredi.
+	{command} is an unknown command.	{command} je neznan ukaz.
+	Find All	Najdi vse
+	Find what:	Najdi:
+	Match case	Razlikuj velike in male črke
+	Replace	Zamenjaj
+	Replace All	Zamenjaj vse
+	Replace with:	Zamenjaj z:
+	Replacement text	Nadomestno besedilo
+	Results	Rezultati
+	Searches the current space.	Išče v trenutnem prostoru.
+	Text to find	Besedilo za iskanje
+	Whole words	Cele besede
+	Nothing found	Ni zadetkov
+	E	V
+	N	S
+	S	J
+	W	Z
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Počisti nedavne datoteke
+	contains authoring elements. Open in Block Editor?	vsebuje elemente za urejanje. Želite odpreti v urejevalniku blokov?
+	Custom	Po meri
+	Open Recent	Odpri nedavno
+	This drawing	Ta risba
+	Arrow size	Velikost puščice
+	Dim scale overall	Skupno merilo kot
+	Precision	Natančnost
+	Apply to Layout	Uporabi za postavitev
+	Center the plot	Centriraj izris
+	Enter block names to extract	Vnesite imena blokov za izvleček
+	Enter geometric characteristic	Vnesite geometrijsko značilnost
+	Enter name of LISP file to load	Vnesite ime datoteke LISP za nalaganje
+	First corner	Prvi vogal
+	Fit to paper	Prilagodi papirju
+	Landscape	Ležeče
+	Limits	Meje
+	Opposite corner	Nasprotni vogal
+	Orientation	Usmerjenost
+	Paper size	Velikost papirja
+	Plot area	Območje izrisa
+	Plot object lineweights	Izriši debeline črt objektov
+	Plot offset	Odmik izrisa
+	Plot transparency	Izriši prosojnost
+	Portrait	Pokončno
+	Printer/plotter	Tiskalnik/risalnik
+	Window <	Okno <
+	X offset (mm)	Odmik X (mm)
+	Y offset (mm)	Odmik Y (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Angstremi
+	Architectural	Arhitekturne
+	Astronomical Units	Astronomske enote
+	Centimeters	Centimetri
+	Decameters	Dekametri
+	Decimal	Decimalne
+	Decimal Degrees	Decimalne stopinje
+	Decimeters	Decimetri
+	Deg/Min/Sec	Stop./min./sek.
+	Don't Save	Ne shrani
+	Drawing Units	Enote risbe
+	Engineering	Inženirske
+	Feet	Čevlji
+	Fractional	Ulomki
+	Gigameters	Gigametri
+	Grads	Gradi
+	Hectometers	Hektometri
+	Inches	Palci
+	Insertion scale	Merilo vstavljanja
+	Kilometers	Kilometri
+	Light Years	Svetlobna leta
+	Meters	Metri
+	Microinches	Mikropalci
+	Microns	Mikroni
+	Miles	Milje
+	Millimeters	Milimetri
+	Mils	Mili
+	Nanometers	Nanometri
+	Parsecs	Parseki
+	Radians	Radiani
+	Sample output	Vzorčni izpis
+	Save changes to {name}?	Želite shraniti spremembe v {name}?
+	Scientific	Znanstvene
+	Surveyor's Units	Geodetske enote
+	Unitless	Brez enot
+	Units to scale inserted content	Enote za spreminjanje merila vstavljene vsebine
+	US Survey Feet	Ameriški geodetski čevlji
+	US Survey Inch	Ameriški geodetski palec
+	US Survey Mile	Ameriška geodetska milja
+	US Survey Yard	Ameriški geodetski jard
+	Yards	Jardi
+	Your changes will be lost if you don't save them.	Če sprememb ne shranite, bodo izgubljene.
+	Layouts	Postavitve
+	Associate	Poveži
+	Clip Xref	Odreži zunanji sklic
+	Xref Clip Frame	Okvir odreza zunanjega sklica
+	Minimize	Minimiraj
+	Maximize	Maksimiraj
+	Restore Down	Obnovi velikost
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft in logotip DraftCraft sta blagovni znamki družbe DraftCraft Engineering Ventures.
+	Conic	Stožnica
+	Spline Fit	Zlepek skozi točke
+	Spline CV	Zlepek s kontrolnimi oglišči
+	Specify start point of conic	Določite začetno točko stožnice
+	Specify apex (where the end tangents meet)	Določite vrh (kjer se srečata končni tangenti)
+	Specify end point of conic	Določite končno točko stožnice
+	Specify rho or a point on the conic	Določite rho ali točko na stožnici
+	Check for Updates...	Preveri posodobitve...
+	Check for Updates	Preveri posodobitve
+	Update Available	Na voljo je posodobitev
+	DraftCraft {version} is available.	Na voljo je DraftCraft {version}.
+	You have version {version}.	Imate različico {version}.
+	Do you want to download the update?	Želite prenesti posodobitev?
+	What's new	Novosti
+	What's New	Novosti
+	Download	Prenesi
+	Later	Pozneje
+	Skip This Version	Preskoči to različico
+	DraftCraft is up to date (version {version}).	DraftCraft je posodobljen (različica {version}).
+	Do you want to install the update now?	Želite zdaj namestiti posodobitev?
+	Update Now	Posodobi zdaj
+	Open the release page	Odpri stran izdaje
+	This copy of DraftCraft can't update itself.	Ta kopija programa DraftCraft se ne more posodobiti sama.
+	Updating DraftCraft	Posodabljanje programa DraftCraft
+	Update Failed	Posodobitev ni uspela
+	Installing DraftCraft {version}	Nameščanje programa DraftCraft {version}
+	Downloading: {done} of {total} MB	Prenašanje: {done} od {total} MB
+	Installing…	Nameščanje…
+	Starting the download…	Začenjanje prenosa…
+	The connection dropped; trying again…	Povezava je bila prekinjena; ponovni poskus…
+	DraftCraft {version} is installed.	DraftCraft {version} je nameščen.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Za uporabo znova zaženite DraftCraft. Če ga znova zaženete pozneje, se odpre ob naslednjem zagonu programa DraftCraft.
+	Restart Now	Znova zaženi zdaj
+	The update could not be installed.	Posodobitve ni bilo mogoče namestiti.
+	You can download it from the release page instead.	Namesto tega jo lahko prenesete s strani izdaje.
+	2D Wireframe	2D-žični model
+	Annotate	Opombe
+	Blocks Palette	Paleta blokov
+	CAD Standards	Standardi CAD
+	Commands	Ukazi
+	2D Drafting	2D-risanje
+	Edit Aliases	Uredi vzdevke
+	Image	Slika
+	Palettes	Palete
+	Top	Zgoraj
+	Units	Enote
+	Workspace	Delovni prostor
+	Ribbon	Trak
+	PDF Underlay...	Podloga PDF...
+	PDF Import	Uvoz PDF
+	PDF Underlay	Podloga PDF
+	Underlay Layers	Plasti podloge
+	Raster Image Reference...	Sklic na rastrsko sliko...
+	Close Text Editor	Zapri urejevalnik besedila
+	Image Clip	Odrez slike
+	PDF Clip	Odrez PDF
+	Image Adjust	Prilagoditev slike
+	PDF Adjust	Prilagoditev PDF
+	Adjust...	Prilagodi...
+	Parameter	Parameter
+	Action	Dejanje
+	DesignCenter	DesignCenter
+	Tool Palettes	Palete orodij
+	Sheet Set Manager	Upravitelj naborov listov
+	Type the drawing's path, then press Enter.	Vnesite pot risbe in pritisnite Enter.
+	Drawing file	Datoteka risbe
+	Folder	Mapa
+	Linetypes	Vrste črt
+	Text Styles	Slogi besedila
+	Dimension Styles	Slogi kotiranja
+	Table Styles	Slogi tabel
+	Multileader Styles	Slogi večkratnih opisnih črt
+	Multiline Styles	Slogi veččrt
+	Add to Drawing	Dodaj v risbo
+	Create Tool Palette	Ustvari paleto orodij
+	Nothing of this kind in the file.	V datoteki ni ničesar te vrste.
+	Open a drawing to see its blocks, layers and styles.	Odprite risbo, da vidite njene bloke, plasti in sloge.
+	Delete Palette	Izbriši paleto
+	New Palette	Nova paleta
+	No tool palettes.	Ni palet orodij.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Ta paleta je prazna: spodaj dodajte ukaz ali ustvarite paleto iz DesignCenter.
+	Delete Tool	Izbriši orodje
+	Add Command	Dodaj ukaz
+	New Sheet Set...	Nov nabor listov...
+	Open Sheet Set...	Odpri nabor listov...
+	Sheet sets (DCSS)	Nabori listov (DCSS)
+	Sheet set file	Datoteka nabora listov
+	Make or open a sheet set to list its sheets.	Ustvarite ali odprite nabor listov, da vidite njegove liste.
+	Add Drawing...	Dodaj risbo...
+	Publish to PDF...	Objavi v PDF...
+	No sheets yet: add a drawing's layouts.	Listov še ni: dodajte postavitve risbe.
+	Number	Številka
+	Title	Naslov
+	Move Up	Premakni navzgor
+	Move Down	Premakni navzdol
+	Sheet Set (DCSS)	Nabor listov (DCSS)
+	Close Tool Palettes	Zapri palete orodij
+	Close DesignCenter	Zapri DesignCenter
+	Close Sheet Set Manager	Zapri upravitelja naborov listov
+	Manage Tool Palettes	Upravljaj palete orodij
+	Changes apply at once; Save Current As keeps them in a workspace.	Spremembe začnejo veljati takoj; Shrani trenutni kot jih ohrani v delovnem prostoru.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Kliknite plasti, da prikažete samo njih; Ctrl ali Shift doda k izbiri.
+	Current Workspace	Trenutni delovni prostor
+	Customize Interface	Prilagodi vmesnik
+	Customize User Interface	Prilagodi uporabniški vmesnik
+	Customize...	Prilagodi...
+	Edit Aliases...	Uredi vzdevke...
+	Force object color and linetype to ByLayer	Nastavi barvo in vrsto črte objektov na PoPlasti
+	Geographic Location	Geografska lokacija
+	Geographic Location...	Geografska lokacija...
+	Latitude	Zemljepisna širina
+	Longitude	Zemljepisna dolžina
+	North direction	Smer severa
+	Layer Translation Mappings	Preslikave prevajanja plasti
+	Layer Translator	Prevajalnik plasti
+	Layer Translator...	Prevajalnik plasti...
+	Layer Walk	Sprehod po plasteh
+	Layer Walk...	Sprehod po plasteh...
+	Location	Lokacija
+	Set Location	Nastavi lokacijo
+	Remove Location	Odstrani lokacijo
+	The drawing's origin is at this place (WGS 84 degrees).	Izhodišče risbe je na tem mestu (stopinje WGS 84).
+	Map	Preslikaj
+	New layer name	Ime nove plasti
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Preslikav še ni: izberite plasti na levi, ime na desni, nato Preslikaj.
+	Translate	Prevedi
+	Translate From	Prevedi iz
+	Translate To	Prevedi v
+	Restore on exit	Obnovi ob izhodu
+	Point Cloud	Oblak točk
+	Point Cloud...	Oblak točk...
+	Point clouds (XYZ, LAS)	Oblaki točk (XYZ, LAS)
+	ZIP archive	Arhiv ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Orodna vrstica za hitri dostop
+	Rename	Preimenuj
+	Reset to Standard	Ponastavi na standardno
+	Ribbon Tabs	Zavihki traku
+	Save Current As	Shrani trenutni kot
+	Save Current As...	Shrani trenutni kot...
+	Save Workspace	Shrani delovni prostor
+	User Interface	Uporabniški vmesnik
+	Workspace Settings	Nastavitve delovnega prostora
+	Workspace Settings...	Nastavitve delovnega prostora...
+	Workspace name	Ime delovnega prostora
+	Workspace:	Delovni prostor:
+	Workspaces	Delovni prostori
+	Interface...	Vmesnik...
+	Export Attribute Information...	Izvozi podatke o atributih...
+	Import Attribute Information...	Uvozi podatke o atributih...
+	Export Attributes	Izvozi atribute
+	Import Attributes	Uvozi atribute
+	Text, tab-delimited (TXT)	Besedilo, ločeno s tabulatorji (TXT)
+	Import Settings	Uvozi nastavitve
+	Export Settings	Izvozi nastavitve
+	Import Settings...	Uvozi nastavitve...
+	Export Settings...	Izvozi nastavitve...
+	DraftCraft settings (TOML)	Nastavitve programa DraftCraft (TOML)
+	Total Area and Length	Skupna ploščina in dolžina
+	Total Area	Skupna ploščina
+	Specify point to place the totals as text	Določite točko za postavitev vsot kot besedila
+	Metric	Metrično
+	Imperial	Imperialno
+	A new drawing in millimeters	Nova risba v milimetrih
+	A new drawing in inches	Nova risba v palcih
+	A new drawing in centimeters	Nova risba v centimetrih
+	Metric (centimetres)	Metrične (centimetri)
+	Join the ArtCraft Discord…	Pridružite se strežniku ArtCraft na Discordu…
+	Join us on Discord	Pridružite se nam na Discordu
+	One of the Crafting Apps by the ArtCraft team and community.	Ena od aplikacij Crafting Apps ekipe in skupnosti ArtCraft.
+	Change	Spremeni
+	Multiple Insert	Večkratno vstavljanje
+	Ctrl+Enter to apply	Ctrl+Enter za uporabo
+	Edit Text	Uredi besedilo
+	The drawing changed. Close the window and open it again.	Risba se je spremenila. Zaprite okno in ga znova odprite.
+	DView	DView
+	Raster Images	Rastrske slike
+	Xref	Zunanji sklic
+	Backup copies are off, so the current file will be replaced.	Varnostne kopije so izklopljene, zato bo trenutna datoteka zamenjana.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 in starejši jih ohranijo. Uporabite Shrani kot, da jih ohranite v risbi.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF jih ohrani. Uporabite Shrani kot, da jih ohranite v risbi.
+	Save Anyway	Vseeno shrani
+	Save cancelled: {path} was not changed.	Shranjevanje preklicano: {path} ni bil spremenjen.
+	Saving {name} will remove content	S shranjevanjem datoteke {name} bo vsebina odstranjena
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Trenutna datoteka ni videti cela, zato {name} ostane nespremenjena, trenutna datoteka pa bo zamenjana.
+	The current file is kept as {name} until the next save.	Trenutna datoteka se do naslednjega shranjevanja hrani kot {name}.
+	This format can't keep these objects yet: {objects}.	Ta oblika teh objektov še ne more ohraniti: {objects}.
+	{count} more types	Še {count} vrst
+	Additional Tools	Dodatna orodja
+	Keyboard Shortcuts...	Bližnjice na tipkovnici...
+	Keyboard Shortcuts	Bližnjice na tipkovnici
+	Replaces the shortcut of {commands}	Zamenja bližnjico za {commands}
+	Needs Ctrl, Alt or a function key	Potrebna je tipka Ctrl, Alt ali funkcijska tipka
+	Press the keys	Pritisnite tipke
+	Back to DraftCraft's shortcut	Nazaj na bližnjico programa DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Bližnjica, ki jo dodelite, ima prednost pred bližnjico programa DraftCraft. Spremembe začnejo veljati takoj in se ohranijo za naslednjič.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Ko je izklopljeno, desni klik med izvajanjem ukaza naredi to, kar je v Prilagoditvi desnega klika nastavljeno za način ukaza.
+	Right-Click Customization...	Prilagoditev desnega klika...
+	Right-Click Customization	Prilagoditev desnega klika
+	Turn on time-sensitive right-click	Vklopi desni klik, odvisen od časa
+	Longer click duration:	Trajanje daljšega klika:
+	milliseconds	milisekund
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Med izvajanjem ukaza je hiter klik Enter, daljši klik pa odpre priročni meni.
+	Default Mode	Privzeti način
+	No objects selected and no command running:	Ni izbranih objektov in noben ukaz se ne izvaja:
+	Edit Mode	Način urejanja
+	Objects selected and no command running:	Objekti so izbrani in noben ukaz se ne izvaja:
+	Repeat last command	Ponovi zadnji ukaz
+	Shortcut Menu	Priročni meni
+	Command Mode	Način ukaza
+	While a command runs:	Med izvajanjem ukaza:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Priročni meni: vedno omogočen
+	Shortcut Menu: enabled when command options are present	Priročni meni: omogočen, ko so na voljo možnosti ukaza
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Uvoz: tu ni pogovornega okna za datoteke; zaženite ALIASEDIT z vsebino datoteke prek njegovega parametra text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Vzdevki se shranijo v vaš profil DraftCraft in ostanejo tudi po ponovnem zagonu.
+	Import…	Uvozi…
+	Run ALIASEDIT with the file's contents using its text parameter.	Zaženite ALIASEDIT z vsebino datoteke prek njegovega parametra text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Uvoz datoteke zamenja vaše vzdevke ({n}) in vse še neuveljavljene spremembe.
+	Import and replace	Uvozi in zamenjaj
+	Keep my aliases	Ohrani moje vzdevke
+	{n} more warnings; see the command line.	Še {n} opozoril; glejte ukazno vrstico.
+	Unit	Enota
+	Drawing units: {unit}, {format}	Enote risbe: {unit}, {format}
+	NEW DRAWING	NOVA RISBA
+	OPEN	ODPRI
+	WORKSPACE	DELOVNI PROSTOR
