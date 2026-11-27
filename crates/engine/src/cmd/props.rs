@@ -10,7 +10,7 @@ mod rename;
 pub use matchprop::MatchProps;
 
 use draftcraft_color::Color;
-use draftcraft_doc::{EntityKind, Lineweight, Transparency};
+use draftcraft_doc::{EntityKind, Handle, Lineweight, Transparency};
 use draftcraft_geom::Vec3;
 use serde_json::{Value, json};
 
@@ -22,7 +22,7 @@ pub fn specs() -> Vec<CommandSpec> {
     vec![
         CommandSpec::new("properties", "Properties", run_get).menu(&["Modify", "Properties"]).alias(&["pr", "props", "ch"]).params("{handles?} → properties of the selection").noundo(),
         CommandSpec::new("properties.set", "Set Properties", run_set).params("{handles?, layer?, color?, linetype?, lineweight?, ltscale?, thickness?, transparency?: \"ByLayer\" | \"ByBlock\" | 0..90, visible?, <geometry fields: radius, center, start, end, text, height, rotation…>; dimensions: textOverride, dimStyle, textHeight, arrowSize, dimScale, precision (per-dimension overrides); conic splines: rho (0 < rho < 1: under 0.5 an ellipse, 0.5 a parabola, over 0.5 a hyperbola)}"),
-        CommandSpec::new("chprop", "Change Properties", chprop::run_chprop)
+        CommandSpec::new("chprop", "Change Properties", run_set)
             .params("as properties.set, leaving out objects on locked layers → {changed, locked} (the command line asks Color, LAyer, LType, ltScale, LWeight, Thickness and TRansparency in turn)")
             .interactive(|_| Ok(Box::new(chprop::ChpropM::new()))),
         CommandSpec::new("change", "Change", change::run_change)
@@ -202,11 +202,56 @@ fn set_xy(p: &mut Vec3, v: &Value) {
     }
 }
 
+/// The objects `properties.set` leaves alone, as CHPROP, MATCHPROP and MOVE do: those on locked
+/// layers. (During an in-place reference edit the session refuses the edit instead.)
+#[derive(Default)]
+struct LeftOut {
+    locked: usize,
+}
+
+impl LeftOut {
+    /// `hs` without the objects on locked layers, and how many those were.
+    fn split(s: &Session, hs: Vec<Handle>) -> (Vec<Handle>, LeftOut) {
+        let mut out = LeftOut::default();
+        let hs = hs
+            .into_iter()
+            .filter(|h| {
+                let locked = super::curves::is_locked(s, *h);
+                if locked {
+                    out.locked += 1;
+                }
+                !locked
+            })
+            .collect();
+        (hs, out)
+    }
+
+    /// `{changed, locked}`, and a message saying how many were left out when any were.
+    fn result(&self, changed: usize) -> Value {
+        let mut note = match self.locked {
+            0 => String::new(),
+            1 => "1 object was on a locked layer.".to_string(),
+            n => format!("{n} objects were on a locked layer."),
+        };
+        if changed == 0 && !note.is_empty() {
+            note.push_str(" Nothing was changed.");
+        }
+        let mut r = json!({ "changed": changed, "locked": self.locked });
+        if !note.is_empty()
+            && let Some(o) = r.as_object_mut()
+        {
+            o.insert("message".into(), json!(note));
+        }
+        r
+    }
+}
+
 fn run_set(s: &mut Session, p: &Value) -> Result<Value> {
     let hs = targets(s, p)?;
     if hs.is_empty() {
         return Err(bad("properties.set", "nothing selected"));
     }
+    let (hs, left_out) = LeftOut::split(s, hs);
     let color = p.get("color").map(|c| parse_color(c).ok_or_else(|| bad("properties.set", "bad colour"))).transpose()?;
     let transparency = p
         .get("transparency")
@@ -217,6 +262,10 @@ fn run_set(s: &mut Session, p: &Value) -> Result<Value> {
         .map(|v| v.as_f64().filter(|x| x.is_finite()).ok_or_else(|| bad("properties.set", "thickness must be a finite number")))
         .transpose()?;
     let lw = p.get("lineweight").map(|v| super::layer::parse_lw(v).ok_or_else(|| bad("properties.set", "bad lineweight"))).transpose()?;
+    if hs.is_empty() {
+        // Every object was on a locked layer: the drawing stays as it was, with no undo step.
+        return Ok(left_out.result(0));
+    }
     if let Some(r) = p.get("rho").filter(|v| !v.is_null()) {
         check_rho(s, &hs, r)?;
     }
@@ -246,7 +295,7 @@ fn run_set(s: &mut Session, p: &Value) -> Result<Value> {
             apply_kind_properties(e, p, dim_style.as_ref(), &dim_over);
         })?;
     }
-    Ok(json!({ "changed": hs.len() }))
+    Ok(left_out.result(hs.len()))
 }
 
 /// A conic's new rho must be a number strictly between 0 and 1, and the selection must hold a

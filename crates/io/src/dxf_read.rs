@@ -1,6 +1,6 @@
 //! DXF → Drawing.
 
-use std::collections::HashMap;
+use std::collections::{HashMap, HashSet};
 
 use draftcraft_color::{Color, Rgb};
 use draftcraft_doc::{
@@ -49,7 +49,8 @@ mod tables;
 mod text;
 
 use document::{
-    apply_sortents, count_skipped, outside_sections, parse_entities, place_blocks, place_entities, read_blocks, read_objects, setup_layouts,
+    HandlePolicy, apply_sortents, count_skipped, outside_sections, parse_entities, place_blocks, place_entities, read_blocks, read_objects,
+    setup_layouts,
 };
 #[cfg(test)]
 use entities::acad_table;
@@ -117,16 +118,43 @@ fn read_budgeted(bytes: &[u8], mut table_cells_left: usize) -> Result<Drawing> {
     let mut blocks: Vec<BlockDef> = Vec::new();
     let mut layout_objs: Vec<LayoutDef> = Vec::new();
     let mut entities = Vec::new();
+    // One set for every list: a generated handle must be unique across blocks and ENTITIES
+    // (a *MODEL_SPACE block and an ENTITIES record both land in the model space).
+    let mut seen_handles = HashSet::new();
+    // Model/paper-space handles retain priority if an in-memory drawing or damaged DXF also
+    // assigns one to a block entity. This preserves top-level references while letting block
+    // handles be repaired before their deferred fixups are recorded.
+    let reserved_entity_handles: HashSet<Handle> = secs
+        .iter()
+        .filter(|s| s.name == "ENTITIES")
+        .flat_map(|s| records(&s.tags))
+        .filter_map(|(_, tags)| common::T(&tags).s(5).and_then(|h| Handle::parse_hex(&h)))
+        .collect();
     let mut objs = Objects::default();
     // Every handle another program's file already uses is taken before anything gets a new one:
     // its $HANDSEED can be lower than its handles, and entities made while reading (the faces of
     // a polygon mesh) would otherwise get handles that records further on still have. A file
     // DraftCraft wrote names its own next handle, above which its rebuilt records are numbered
-    // (#495), so it is left to that.
+    // (#495), so its seed is left to that. Handles in the reserved band above `HANDLE_LIMIT` are
+    // reserved for allocation rather than followed (#913): a handle-less entity read before the
+    // section that names one is placed would otherwise be given it and replace the record (#1276).
     let ours = secs.iter().any(|s| s.name == "OBJECTS" && s.tags.iter().any(|t| t.code == 3 && t.str() == crate::dxf_ext::HANDSEED_KEY));
-    for t in secs.iter().filter(|_| !ours).flat_map(|s| s.tags.iter()).filter(|t| t.code == 5 || t.code == 105) {
-        if let Some(h) = Handle::parse_hex(t.str().trim()) {
-            d.bump_handseed(h);
+    for s in &secs {
+        let entity_section = s.name == "BLOCKS" || s.name == "ENTITIES";
+        for t in s.tags.iter().filter(|t| t.code == 5 || t.code == 105) {
+            if let Some(h) = Handle::parse_hex(t.str().trim()) {
+                if !ours {
+                    d.bump_handseed(h);
+                    if entity_section {
+                        d.reserve_handle(h);
+                    }
+                } else if entity_section {
+                    // A file DraftCraft wrote numbers its rebuilt records from its own seed
+                    // (#495), which must not move; its entity records still keep their handles
+                    // from an entity read earlier that has none, until the read ends.
+                    d.reserved_handles.insert(h.0);
+                }
+            }
         }
     }
     let mut skipped = std::collections::BTreeMap::new();
@@ -135,11 +163,20 @@ fn read_budgeted(bytes: &[u8], mut table_cells_left: usize) -> Result<Drawing> {
         match s.name.as_str() {
             "HEADER" => header(&s.tags, &mut d),
             "TABLES" => tables(&s.tags, &mut d, &mut rx),
-            "BLOCKS" => blocks.extend(read_blocks(&s.tags, &mut d, &mut rx, &mut table_cells_left, &mut skipped)),
+            "BLOCKS" => {
+                blocks.extend(read_blocks(&s.tags, &mut d, &mut rx, &mut table_cells_left, &mut skipped, &mut seen_handles, &reserved_entity_handles))
+            }
             // A damaged file may split its entities over several ENTITIES sections (#865).
             "ENTITIES" => {
                 let mut n = 0;
-                entities.extend(parse_entities(&records(&s.tags), &mut d, &mut rx, &mut n, &mut table_cells_left));
+                entities.extend(parse_entities(
+                    &records(&s.tags),
+                    &mut d,
+                    &mut rx,
+                    &mut n,
+                    &mut table_cells_left,
+                    &mut HandlePolicy { seen: &mut seen_handles, reserved: &reserved_entity_handles, source_wins: true },
+                ));
                 count_skipped(&mut skipped, "ENTITIES", n);
             }
             "OBJECTS" => read_objects(&s.tags, &mut objs, &mut layout_objs),
@@ -168,6 +205,9 @@ fn read_budgeted(bytes: &[u8], mut table_cells_left: usize) -> Result<Drawing> {
     crate::dxf_raw::read(&secs, &mut d);
     crate::dxf_clip::read(&mut d);
     d.skipped_records = skipped;
+    // Every record is placed now, and an object holding a reserved handle keeps it from new
+    // objects by itself. Kept, the set would be copied with every undo step of the drawing.
+    d.reserved_handles.clear();
     Ok(d)
 }
 

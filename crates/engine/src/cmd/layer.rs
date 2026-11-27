@@ -287,7 +287,7 @@ fn run_layerp(s: &mut Session, _p: &Value) -> Result<Value> {
     let d = s.doc_mut()?;
     let snap = d.header.str("DRAFTCRAFT_LAYERP", "");
     let layers: Vec<Layer> = serde_json::from_str(&snap).map_err(|_| bad("layerp", "No previous layer state."))?;
-    d.layers = layers;
+    d.layers = layers.into();
     Ok(json!({"message": "Restored previous layer states."}))
 }
 
@@ -368,7 +368,7 @@ fn run_layuniso(s: &mut Session, _p: &Value) -> Result<Value> {
     let d = s.doc_mut()?;
     let snap = d.header.str("DRAFTCRAFT_LAYISO", "");
     let layers: Vec<Layer> = serde_json::from_str(&snap).map_err(|_| bad("layuniso", "No isolated layers."))?;
-    d.layers = layers;
+    d.layers = layers.into();
     ok()
 }
 
@@ -400,7 +400,7 @@ fn all_layers(s: &mut Session, f: fn(&mut Layer)) -> Result<Value> {
 fn run_state_save(s: &mut Session, p: &Value) -> Result<Value> {
     let name = str_param(p, "name").ok_or_else(|| bad("layerstate.save", "`name` is required"))?.to_string();
     let d = s.doc_mut()?;
-    let layers = d.layers.clone();
+    let layers = d.layers.to_vec();
     d.layer_states.retain(|st| st.name != name);
     d.layer_states.push(draftcraft_doc::LayerState { name, layers });
     ok()

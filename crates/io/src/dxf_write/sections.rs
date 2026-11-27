@@ -946,7 +946,8 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
         .flat_map(|s| s.iter())
         .chain(d.blocks.values().flat_map(|b| b.entities.iter()))
         .map(|e| e.handle.0)
-        .filter(|&h| h >= next)
+        // All of them, not only those above `next`: past the top of the range the numbering
+        // wraps into the reserved band, below `next`, where the drawing's own handles can sit.
         .collect();
     let mut w = W { t: Vec::new(), next, pstyles: HashMap::new(), layers: HashMap::new(), reactors: hatch_reactors(d), taken };
     // Pre-allocate handles for block records.
@@ -1125,8 +1126,7 @@ pub(super) fn tags_for(d: &Drawing, version: Version, target: Version, frozen_34
     // Generated geometry entities (dimension, arrowhead and table blocks) need handles.
     for (_, _, ents) in dim_defs.iter_mut().chain(arrow_defs.iter_mut()).chain(table_defs.iter_mut()) {
         for e in ents.iter_mut().filter(|e| e.handle.0 == 0) {
-            e.handle = Handle(w.next);
-            w.next = w.next.saturating_add(1);
+            e.handle = Handle(w.next_handle());
         }
     }
     for (n, h, ents) in &dim_defs {
