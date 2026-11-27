@@ -71,11 +71,20 @@ pub(crate) fn add(tags: &mut Vec<Tag>, variables: &[(String, String)]) {
     let Some(end) = tags.iter().skip(root_end).position(|t| t.code == 0 && text(t) == "ENDSEC").map(|n| root_end + n) else {
         return;
     };
-    // New handles above every handle the records use.
-    let top = tags.iter().filter(|t| t.code == 5 || t.code == 105).map(|t| hex(text(t))).max().unwrap_or(0);
+    // New handles above every handle the records use, never one a record holds: when a file
+    // holds the top handle, the numbering goes on at the bottom of the reserved band above
+    // `HANDLE_LIMIT` instead of repeating the top handle for every entry (#913).
+    let used: std::collections::HashSet<u64> = tags.iter().filter(|t| t.code == 5 || t.code == 105).map(|t| hex(text(t))).collect();
+    let top = used.iter().copied().max().unwrap_or(0);
+    let step = |h: u64| h.checked_add(1).unwrap_or(draftcraft_doc::HANDLE_LIMIT);
     let mut next = top;
+    let mut tries = used.len().saturating_add(2);
     let mut handle = || {
-        next = next.saturating_add(1);
+        next = step(next);
+        while tries > 0 && (next == 0 || used.contains(&next)) {
+            next = step(next);
+            tries -= 1;
+        }
         format!("{next:X}")
     };
     let dictionary = handle();

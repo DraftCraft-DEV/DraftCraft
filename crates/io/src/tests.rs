@@ -1389,8 +1389,8 @@ fn layer_states_roundtrip_next_to_constraints() {
         description: "walls \\ hidden".into(),
         ..Layer::default()
     });
-    d.layer_states.push(LayerState { name: "Plot".into(), layers: d.layers.clone() });
-    let mut off = d.layers.clone();
+    d.layer_states.push(LayerState { name: "Plot".into(), layers: d.layers.to_vec() });
+    let mut off = d.layers.to_vec();
     for l in &mut off {
         (l.on, l.frozen, l.locked, l.plot) = (false, true, true, false);
     }

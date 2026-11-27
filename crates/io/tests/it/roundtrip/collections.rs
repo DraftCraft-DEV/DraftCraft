@@ -180,7 +180,7 @@ pub(super) fn assert_groups(a: &Drawing, b: &Drawing, context: &str) {
 
 pub(super) fn layer_states() -> Case {
     let mut drawing = cases::drawing();
-    let mut layers = drawing.layers.clone();
+    let mut layers = drawing.layers.to_vec();
     for layer in &mut layers {
         layer.on = false;
         layer.locked = true;
