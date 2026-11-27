@@ -1,0 +1,1695 @@
+# DraftCraft Kyrgyz (Кыргызча) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Жокко чыгаруу  
+	  OK  	  OK  
+	 or [	 же [
+	% of all commits	% бардык коммиттерден
+	* Wildcard Match	* Шаблон боюнча дал келүү
+	*VARIES*	*АР ТҮРДҮҮ*
+	+  |  Top  |  2D Wireframe	+  |  Үстү  |  2D каркас
+	+Bin	+Себет
+	+LOC	+LOC
+	1 Viewport	1 көрүү терезеси
+	2 Points	2 чекит
+	2 Viewports	2 көрүү терезеси
+	2D Solid	2D тулку
+	3 Points	3 чекит
+	3 Viewports	3 көрүү терезеси
+	3D Face	3D бет
+	3D Mouse	3D чычкан
+	3D Mouse Navigation	3D чычкан менен навигация
+	3D Mouse...	3D чычкан...
+	3D Operations	3D операциялар
+	3D Polyline	3D полисызык
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D чычкан бош эмес, 3DxWare иштеп жатышы же түзмөккө уруксат жок болушу мүмкүн
+	3D mouse connected	3D чычкан туташты
+	3D mouse disconnected	3D чычкан ажыратылды
+	3D mouse input could not be started	3D чычкандын киргизүүсүн баштоо мүмкүн болгон жок
+	3D mouse input is unavailable on this platform	Бул платформада 3D чычкандын киргизүүсү жеткиликсиз
+	4 Viewports	4 көрүү терезеси
+	< Less than	< Кичине
+	<> Not Equal	<> Барабар эмес
+	= Equals	= Барабар
+	> Greater than	> Чоң
+	A built-in table: editing it keeps an edited copy in the drawing.	Камтылган таблица: аны түзөтүү чиймеде түзөтүлгөн көчүрмөсүн сактайт.
+	A drawing opened from a file keeps that file's format.	Файлдан ачылган чийме ошол файлдын форматын сактайт.
+	A variable name starts with a letter and has only letters, digits and _	Өзгөрмөнүн аты тамга менен башталат жана тамгалардан, сандардан жана _ гана турат
+	About	Программа жөнүндө
+	About DraftCraft	DraftCraft жөнүндө
+	Absolute	Абсолюттук
+	Accessibility	Атайын мүмкүнчүлүктөр
+	Add	Кошуу
+	Add Current Scale	Учурдагы масштабды кошуу
+	Add Leader	Чыгарма сызык кошуу
+	Add Vertex	Чоку кошуу
+	Add/Delete Scales...	Масштабдарды кошуу/өчүрүү...
+	Additional angles	Кошумча бурчтар
+	Align	Тегиздөө
+	Align Text	Текстти тегиздөө
+	Aligned	Тегизделген
+	All	Баары
+	All Annotation Objects	Бардык аннотация объекттери
+	All Scales	Бардык масштабдар
+	All Used Layers	Колдонулган бардык катмарлар
+	All files	Бардык файлдар
+	An array that would create more objects than this is refused.	Мындан көп объект түзө турган массив четке кагылат.
+	Angle	Бурч
+	Angular	Бурчтук
+	Annotation Visibility	Аннотациялардын көрүнүшү
+	Annotation scale	Аннотация масштабы
+	Annotative Object Scale	Аннотациялык объекттин масштабы
+	Annotative Update	Аннотациялык жаңыртуу
+	Apparent Intersection	Көрүнгөн кесилиш
+	Append to current selection set	Учурдагы тандоо топтомуна кошуу
+	Apply	Колдонуу
+	Apply to:	Колдонуу:
+	Apply true color	Чыныгы түстү колдонуу
+	Arc	Жаа
+	Arc Length	Жаанын узундугу
+	Area	Аянт
+	Arrange Panel	Панелди иреттөө
+	Array	Массив
+	Attach	Тиркөө
+	Attach DWG...	DWG тиркөө...
+	Attribute	Атрибут
+	Attribute Definition	Атрибуттун аныктамасы
+	Attribute Display	Атрибуттардын көрүнүшү
+	Audit	Текшерүү
+	Auto (system language)	Авто (тутумдун тили)
+	Auto Constrain	Авто байланыштар
+	AutoConstrain	AutoConstrain
+	Automatic save every	Автоматтык сактоо ар бир
+	Automatic save file location	Автоматтык сактоо файлынын жайгашкан жери
+	Axis, End	Огу, учу
+	Base	База
+	Baseline	Базалык сызык
+	Batch Publish	Пакеттик жарыялоо
+	Batch Publish...	Пакеттик жарыялоо...
+	Binary assets added	Бинардык ресурстар кошулду
+	Binary assets removed	Бинардык ресурстар өчүрүлдү
+	Bind	Бириктирүү
+	Bind...	Бириктирүү...
+	Blend	Аралаштыруу
+	Block	Блок
+	Block Attribute Manager...	Блок атрибуттарынын менеджери...
+	Block Description...	Блоктун сүрөттөмөсү...
+	Block Editor	Блок редактору
+	Block Reference	Блокко шилтеме
+	Block...	Блок...
+	Blocks	Блоктор
+	Blue	Көк
+	Bold	Калың
+	Boolean	Буль операциясы
+	Boundary	Чек ара
+	Boundary...	Чек ара...
+	Box	Куту
+	Break	Үзүү
+	Break At Point	Чекитте үзүү
+	Bring Above Objects	Объекттерден жогору чыгаруу
+	Bring Annotations to Front	Аннотацияларды алдыга чыгаруу
+	Bring to Front	Алдыга чыгаруу
+	Bulleted list	Белгиленген тизме
+	ByBlock	Блок боюнча
+	ByColor	Түс боюнча
+	ByLayer	Катмар боюнча
+	DraftCraft Help	DraftCraft жардамы
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft бул жөндөөлөрдү, объектке байлоо режимдерин жана сызуу которгучтарын колдонуучу каттоо эсебиңиз үчүн сактап, иштей баштаганда калыбына келтирет.
+	Calibrate	Калибрлөө
+	Calibrate 3D Mouse	3D чычканды калибрлөө
+	Cancel	Жокко чыгаруу
+	Cartesian (x, y)	Декарттык (x, y)
+	Center	Борбор
+	Center Line	Борбордук сызык
+	Center Mark	Борбор белгиси
+	Center X	Борбор X
+	Center Y	Борбор Y
+	Center Z	Борбор Z
+	Center, Diameter	Борбор, диаметр
+	Center, Radius	Борбор, радиус
+	Center, Start, Angle	Борбор, баштоо, бурч
+	Center, Start, End	Борбор, баштоо, учу
+	Center, Start, Length	Борбор, баштоо, узундук
+	Chamfer	Фаска
+	Change Space	Мейкиндикти өзгөртүү
+	Change to Current Layer	Учурдагы катмарга өзгөртүү
+	Changed: {n}	Өзгөртүлдү: {n}
+	Changes apply at once and are kept for next time.	Өзгөртүүлөр дароо колдонулат жана кийинкиге сакталат.
+	Circle	Айлана
+	Circumference	Айлананын узундугу
+	Clear	Тазалоо
+	Clear Command History	Буйруктар тарыхын тазалоо
+	Reset Suggestion Order	Сунуштардын тартибин баштапкы абалга келтирүү
+	Clear History	Тарыхты тазалоо
+	Clip	Кесүү
+	Clip Viewport	Көрүү терезесин кесүү
+	Clipboard	Алмашуу буфери
+	Close	Жабуу
+	Close All	Баарын жабуу
+	Close All Other Drawings	Башка бардык чиймелерди жабуу
+	Close Array Editing	Массивди түзөтүүнү жабуу
+	Close Comparison	Салыштырууну жабуу
+	Export Comparison	Салыштырууну экспорттоо
+	Closed	Жабык
+	Coincident	Дал келген
+	Collapse Palettes	Палитраларды жыйноо
+	Collapse Tool Sets	Инструменттер топтомун жыйноо
+	Collinear	Коллинеардуу
+	Color	Түс
+	Color 8	Түс 8
+	Color 9	Түс 9
+	Color Index	Түс индекси
+	Color-dependent	Түскө көз каранды
+	Color...	Түс...
+	Command Aliases	Буйруктардын псевдонимдери
+	Command History	Буйруктар тарыхы
+	Command Line	Буйрук сабы
+	Command Line History Lines	Буйрук сабынын тарыхындагы саптар
+	Command Reference	Буйруктар маалымдамасы
+	Command line history	Буйрук сабынын тарыхы
+	Commits	Коммиттер
+	Company	Компания
+	Compare Drawings...	Чиймелерди салыштыруу...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Компьютердик долбоорлоо жана сызуу: таза Rust тилинде жазылган, ачык булактуу, таза бөлмө ыкмасындагы CAD тиркемеси.
+	Concentric	Концентрдүү
+	Cone	Конус
+	Constraint Bars	Байланыш панелдери
+	Constraint Settings	Байланыштардын жөндөөлөрү
+	Construction Line	Көмөкчү сызык
+	Contents	Мазмуну
+	Continue	Улантуу
+	Contributors	Салым кошкондор
+	Control Vertices	Башкаруу чокулары
+	Convert	Айландыруу
+	Convert to Arc	Жаага айландыруу
+	Convert to Line	Сызыкка айландыруу
+	Copy	Көчүрүү
+	Copy Full File Path	Файлдын толук жолун көчүрүү
+	Copy History	Тарыхты көчүрүү
+	Copy Layout	Макетти көчүрүү
+	Copy Nested Objects	Ичине салынган объекттерди көчүрүү
+	Copy Selection	Тандалганды көчүрүү
+	Copy as JSON	JSON катары көчүрүү
+	Copy with Base Point	Базалык чекит менен көчүрүү
+	Count	Саноо
+	Count List	Саноо тизмеси
+	Count Table	Саноо таблицасы
+	Create Block	Блок түзүү
+	Creates a user parameter	Колдонуучу параметрин түзөт
+	Crosshair size	Курсордун өлчөмү
+	Ctrl+Enter to finish	Бүтүрүү үчүн Ctrl+Enter
+	Current Scale Only	Учурдагы масштаб гана
+	Current layer	Учурдагы катмар
+	Current selection	Учурдагы тандоо
+	Current: {color}	Учурдагы: {color}
+	Cut	Кесип алуу
+	Cut with Base Point	Базалык чекит менен кесип алуу
+	Cyan	Көгүлтүр
+	Cylinder	Цилиндр
+	DWG	DWG
+	DWG Reference...	DWG шилтемеси...
+	DXF	DXF
+	Dark	Караңгы
+	Data Extraction...	Маалыматтарды алуу...
+	Data Link...	Маалымат байланышы...
+	Default	Демейки
+	Default Save Format	Демейки сактоо форматы
+	Default Save Version	Демейки сактоо версиясы
+	Default save version	Демейки сактоо версиясы
+	Define Attributes	Атрибуттарды аныктоо
+	Define Attributes...	Атрибуттарды аныктоо...
+	Defined width	Аныкталган жазылык
+	Degree	Даража
+	Degrees of Freedom	Эркиндик даражалары
+	Degrees of freedom: {n}	Эркиндик даражалары: {n}
+	Delete	Өчүрүү
+	Delete Column	Мамычаны өчүрүү
+	Delete Constraints	Байланыштарды өчүрүү
+	Delete Current Scale	Учурдагы масштабды өчүрүү
+	Delete Dimension Style	Өлчөм стилин өчүрүү
+	Delete Duplicate Objects	Кайталанган объекттерди өчүрүү
+	Delete Layer	Катмарды өчүрүү
+	Delete Layer State	Катмар абалын өчүрүү
+	Delete Layout	Макетти өчүрүү
+	Delete Row	Сапты өчүрүү
+	Delete Text Style	Текст стилин өчүрүү
+	Delta X	Дельта X
+	Delta Y	Дельта Y
+	Description	Сүрөттөмө
+	Deselect All	Тандоону алып салуу
+	Detach	Ажыратуу
+	Diameter	Диаметр
+	Dim style	Өлчөм стили
+	Dimension	Өлчөм
+	Dimension Break	Өлчөмдү үзүү
+	Dimension Edit	Өлчөмдү түзөтүү
+	Dimension Objects Only	Өлчөм объекттери гана
+	Dimension Space	Өлчөмдөр аралыгы
+	Dimension Style Override	Өлчөм стилин алмаштыруу
+	Dimension Style...	Өлчөм стили...
+	Dimension Text Edit	Өлчөм текстин түзөтүү
+	Dimension style	Өлчөм стили
+	Dimensional Constraint	Өлчөмдүк байланыш
+	Dimensional Constraint Parameters	Өлчөмдүк байланыштын параметрлери
+	Dimensional Constraints	Өлчөмдүк байланыштар
+	Disassociate Dimensions	Өлчөмдөрдү ажыратуу
+	Display	Көрсөтүү
+	Display name	Көрсөтүлүүчү аты
+	Display plot styles	Басып чыгаруу стилдерин көрсөтүү
+	Distance	Аралык
+	Divide	Бөлүү
+	Do not plot (click: plot)	Басып чыгарбоо (чыкылдатуу: басып чыгаруу)
+	Donut	Шакек
+	Double-click to edit the description	Сүрөттөмөнү түзөтүү үчүн эки жолу чыкылдатыңыз
+	Down	Ылдый
+	Drafting	Сызуу
+	Drafting Settings	Сызуу жөндөөлөрү
+	Drafting Settings...	Сызуу жөндөөлөрү...
+	Draw	Сызуу
+	Draw Order	Сызуу тартиби
+	Drawing (DWG)	Чийме (DWG)
+	Drawing (DXF)	Чийме (DXF)
+	Drawing Limits	Чийменин чектери
+	Drawing Recovery Manager...	Чиймелерди калыбына келтирүү менеджери...
+	Drawing Template (DWT)	Чийме шаблону (DWT)
+	Drawing Utilities	Чийме утилиталары
+	Drawing as bytes	Чийме байттар катары
+	Drawings (DWG, DXF)	Чиймелер (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Азырынча файлы жок чиймелер демейки версияда сакталат. 0 мүнөт автоматтык сактоону өчүрөт.
+	Dynamic	Динамикалык
+	Dynamic Dimensions	Динамикалык өлчөмдөр
+	Dynamic Input	Динамикалык киргизүү
+	Dynamic Input (F12)	Динамикалык киргизүү (F12)
+	Edit	Түзөтүү
+	Edit Array	Массивди түзөтүү
+	Edit Attributes...	Атрибуттарды түзөтүү...
+	Edit Table Cell	Таблица уячасын түзөтүү
+	Edit Text...	Текстти түзөтүү...
+	Elevation	Бийиктик белгиси
+	Ellipse	Эллипс
+	Elliptical Arc	Эллипстик жаа
+	Enable 3D mouse navigation	3D чычкан менен навигацияны иштетүү
+	Enable Dynamic Input (F12)	Динамикалык киргизүүнү иштетүү (F12)
+	End Object Isolation	Объекттерди обочолоону бүтүрүү
+	End Width	Акыркы жазылык
+	End X	Акыркы X
+	End Y	Акыркы Y
+	End angle	Акыркы бурч
+	Endpoint	Акыркы чекит
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Top, Zero же Bottom киргизиңиз.
+	Enter a fit data option	Жайгаштыруу маалыматтарынын параметрин киргизиңиз
+	Enter a pattern name	Үлгүнүн атын киргизиңиз
+	Enter a vertex editing option	Чокуну түзөтүү параметрин киргизиңиз
+	Enter an option	Параметрди киргизиңиз
+	Enter angle of xline	Көмөкчү сызыктын бурчун киргизиңиз
+	Enter angle of xline (0)	Көмөкчү сызыктын бурчун киргизиңиз (0)
+	Enter area of rectangle in current units	Тик бурчтуктун аянтын учурдагы бирдиктерде киргизиңиз
+	Enter attribute prompt	Атрибут сурамын киргизиңиз
+	Enter attribute tag name	Атрибут тегинин атын киргизиңиз
+	Enter attribute value	Атрибуттун маанисин киргизиңиз
+	Enter block name	Блоктун атын киргизиңиз
+	Enter constraint type	Байланыштын түрүн киргизиңиз
+	Enter continuity	Үзгүлтүксүздүктү киргизиңиз
+	Enter default attribute value	Атрибуттун демейки маанисин киргизиңиз
+	Enter degree of spline	Сплайндын даражасын киргизиңиз
+	Enter delta angle	Бурчтун өсүндүсүн киргизиңиз
+	Enter delta length	Узундуктун өсүндүсүн киргизиңиз
+	Enter dimension text	Өлчөм текстин киргизиңиз
+	Enter dimension text (<> = measurement)	Өлчөм текстин киргизиңиз (<> = өлчөнгөн маани)
+	Enter dimension value or [name=expression]	Өлчөмдүн маанисин же [аты=туюнтма] киргизиңиз
+	Enter dimension variable name to override	Алмаштыруу үчүн өлчөм өзгөрмөсүнүн атын киргизиңиз
+	Enter justification type	Тегиздөө түрүн киргизиңиз
+	Enter leader text	Чыгарма сызыктын текстин киргизиңиз
+	Enter mline scale	Мультисызыктын масштабын киргизиңиз
+	Enter mode	Режимди киргизиңиз
+	Enter name of block to insert	Кыстаруучу блоктун атын киргизиңиз
+	Enter new text	Жаңы текстти киргизиңиз
+	Enter next point	Кийинки чекитти киргизиңиз
+	Enter number of columns	Мамычалардын санын киргизиңиз
+	Enter number of data rows	Маалымат саптарынын санын киргизиңиз
+	Enter number of items	Элементтердин санын киргизиңиз
+	Enter number of items along path	Жол боюнча элементтердин санын киргизиңиз
+	Enter number of sides	Тараптардын санын киргизиңиз
+	Enter number of turns	Оромдордун санын киргизиңиз
+	Enter percentage length	Узундуктун пайызын киргизиңиз
+	Enter rectangle length	Тик бурчтуктун узундугун киргизиңиз
+	Enter rectangle width	Тик бурчтуктун жазылыгын киргизиңиз
+	Enter scale factor	Масштаб коэффициентин киргизиңиз
+	Enter text	Текстти киргизиңиз
+	Enter text (use \P for new paragraphs)	Текстти киргизиңиз (жаңы абзац үчүн \P колдонуңуз)
+	Enter the number of segments	Сегменттердин санын киргизиңиз
+	Enter twist direction of helix	Спиралдын буралуу багытын киргизиңиз
+	Entire drawing	Бүт чийме
+	Equal	Барабар
+	Erase	Өчүрүү
+	Evaluate	Эсептөө
+	Exclude from new selection set	Жаңы тандоо топтомунан чыгаруу
+	Explode	Жарып чачуу
+	Export	Экспорт
+	Export Table	Таблицаны экспорттоо
+	Export to PDF...	PDF'ке экспорттоо...
+	Export...	Экспорттоо...
+	Expression	Туюнтма
+	Extend	Узартуу
+	Extension	Уландысы
+	Extents	Чектер
+	External Reference	Тышкы шилтеме
+	External References	Тышкы шилтемелер
+	Extrude	Сыгып чыгаруу
+	File	Файл
+	File Tab	Файл өтмөгү
+	Fillet	Тегеректөө
+	Filter	Чыпка
+	Filters	Чыпкалар
+	Find and Replace	Табуу жана алмаштыруу
+	Find...	Табуу...
+	First	Биринчи
+	First commit	Биринчи коммит
+	Fit Points	Жайгаштыруу чекиттери
+	Fix	Бекитүү
+	Flatten Objects	Объекттерди жалпак кылуу
+	Format	Формат
+	Freehand	Кол менен
+	Freeze	Тоңдуруу
+	Freeze Layer	Катмарды тоңдуруу
+	Freeze in new viewports	Жаңы көрүү терезелеринде тоңдуруу
+	Freeze/Thaw	Тоңдуруу/Эритүү
+	Freeze/Thaw in all viewports	Бардык көрүү терезелеринде тоңдуруу/эритүү
+	Freeze/Thaw in the current viewport	Учурдагы көрүү терезесинде тоңдуруу/эритүү
+	From	Кимден
+	From Template...	Шаблондон...
+	General	Жалпы
+	Geometric Center	Геометриялык борбор
+	Geometric Constraint	Геометриялык байланыш
+	Geometric Constraints	Геометриялык байланыштар
+	Geometry	Геометрия
+	Get Variable	Өзгөрмөнү алуу
+	Get View	Көрүнүштү алуу
+	Get from the Drawing	Чиймеден алуу
+	Global	Глобалдык
+	Global width	Глобалдык жазылык
+	Grab bag	Ар кандай
+	Gradient	Градиент
+	Gradient...	Градиент...
+	Grayscale	Боз түстөр
+	Green	Жашыл
+	Grid (F7)	Тор (F7)
+	Grid Display	Торду көрсөтүү
+	Grid On (F7)	Тор күйгүзүлгөн (F7)
+	Grid snap	Торго байлоо
+	Grid spacing	Тордун кадамы
+	Grip Edit	Туткалар менен түзөтүү
+	Grip Mirror	Туткалар менен күзгүдөй чагылдыруу
+	Grip Option	Тутканын параметри
+	Grip Rotate	Туткалар менен буруу
+	Grip Scale	Туткалар менен масштабдоо
+	Grip Stretch	Туткалар менен созуу
+	Grip size	Тутканын өлчөмү
+	Group	Топ
+	Group Edit	Топту түзөтүү
+	Group Options	Топтун параметрлери
+	Group Selection	Топту тандоо
+	Hatch	Штрихтөө
+	Hatch Edit	Штрихтөөнү түзөтүү
+	Hatch Pattern	Штрихтөө үлгүсү
+	Hatch Patterns	Штрихтөө үлгүлөрү
+	Hatch...	Штрихтөө...
+	Height	Бийиктик
+	Height: {height}	Бийиктик: {height}
+	Helix	Спираль
+	Help	Жардам
+	Hide All	Баарын жашыруу
+	Hide All Constraint Bars	Бардык байланыш панелдерин жашыруу
+	Hide All Dynamic Dimensions	Бардык динамикалык өлчөмдөрдү жашыруу
+	Hide DraftCraft	DraftCraft'ты жашыруу
+	Hide Layer List	Катмарлар тизмесин жашыруу
+	Hide Objects	Объекттерди жашыруу
+	Hide Others	Башкаларды жашыруу
+	Hide Palette	Палитраны жашыруу
+	Hide Palettes	Палитраларды жашыруу
+	History	Тарых
+	Hold Shift to add to the selection	Тандоого кошуу үчүн Shift'ти басып туруңуз
+	Home	Башкы
+	Horizontal	Горизонталдуу
+	HorizontalDistance	Горизонталдуу аралык
+	How to apply:	Кантип колдонуу:
+	ID Point	Чекиттин координаттары
+	Import	Импорт
+	Import...	Импорттоо...
+	In	Жакындатуу
+	In-window Menu Bar	Терезедеги меню тилкеси
+	Include in new selection set	Жаңы тандоо топтомуна кошуу
+	Increment angle	Бурчтун кадамы
+	Index Color	Индекстик түс
+	Index color: {index}	Индекстик түс: {index}
+	Infer Constraints	Байланыштарды аныктоо
+	Inquiry	Сурам
+	Insert	Кыстаруу
+	Insert Block	Блокту кыстаруу
+	Insert Column	Мамыча кыстаруу
+	Insert Row	Сап кыстаруу
+	Insert Table Formula	Таблица формуласын кыстаруу
+	Insert tab	Кыстаруу өтмөгү
+	Insert this block	Бул блокту кыстаруу
+	Insertion	Кыстаруу
+	Insertion X	Кыстаруу X
+	Insertion Y	Кыстаруу Y
+	Insertion Z	Кыстаруу Z
+	Inspect Constraints	Байланыштарды текшерүү
+	Inspect Drawing	Чиймени текшерүү
+	Inspection	Текшерүү
+	Interface Language	Интерфейстин тили
+	Interface Theme	Интерфейстин темасы
+	Interface language	Интерфейстин тили
+	Interface theme	Интерфейстин темасы
+	Intersect	Кесилиш
+	Intersection	Кесилиш
+	Isolate	Обочолоо
+	Isolate Layer	Катмарды обочолоо
+	Isolate Objects	Объекттерди обочолоо
+	Isometric Drafting	Изометриялык сызуу
+	Isometric Plane	Изометриялык тегиздик
+	Isometric snap	Изометриялык байлоо
+	Jogged	Сынык
+	Jogged Linear	Сынык сызыктуу
+	Join	Бириктирүү
+	Keep an editable copy of this table in the drawing	Бул таблицанын түзөтүлүүчү көчүрмөсүн чиймеде сактоо
+	Keep the system cursor visible over the drawing area	Тутумдун курсорун чийме аймагында көрүнүктүү калтыруу
+	Language	Тил
+	Largest array	Эң чоң массив
+	Last	Акыркы
+	Last commit	Акыркы коммит
+	Layer	Катмар
+	Layer Delete	Катмарды өчүрүү
+	Layer Match	Катмарды дал келтирүү
+	Layer Merge	Катмарларды бириктирүү
+	Layer Off	Катмарды өчүрүп коюу
+	Layer Properties	Катмардын касиеттери
+	Layer Properties Manager	Катмар касиеттеринин менеджери
+	Layer Properties Manager — current viewport	Катмар касиеттеринин менеджери — учурдагы көрүү терезеси
+	Layer State	Катмар абалы
+	Layer States Manager...	Катмар абалдарынын менеджери...
+	Layer Tools	Катмар инструменттери
+	Layer contains objects (double-click to make current)	Катмарда объекттер бар (учурдагы кылуу үчүн эки жолу чыкылдатыңыз)
+	Layer is empty (double-click to make current)	Катмар бош (учурдагы кылуу үчүн эки жолу чыкылдатыңыз)
+	Layers	Катмарлар
+	Layers Palette	Катмарлар палитрасы
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Көрсөтүлгөн катмарлар: {shown} / {total}.   Учурдагы катмар: {layer}
+	Layout	Макет
+	Layout list	Макеттер тизмеси
+	Layout paper	Макеттин кагазы
+	Layout {name}: {table}	Макет {name}: {table}
+	Leader	Чыгарма сызык
+	Leaders Only	Чыгарма сызыктар гана
+	Left	Солго
+	Left device button: zoom extents. Right device button: calibrate.	Түзмөктүн сол баскычы: чектерге чейин масштабдоо. Оң баскычы: калибрлөө.
+	Length	Узундук
+	Length X	Узундук X
+	Length Y	Узундук Y
+	Lengthen	Узартуу
+	Light	Жарык
+	Line	Сызык
+	Line delta	Саптардын айырмасы
+	Linear	Сызыктуу
+	Lines +/−	Саптар +/−
+	Lines added	Кошулган саптар
+	Lines deleted	Өчүрүлгөн саптар
+	Lines of Command History	Буйруктар тарыхынын саптары
+	Linetype	Сызык түрү
+	Linetype Scale	Сызык түрүнүн масштабы
+	Linetype scale	Сызык түрүнүн масштабы
+	Linetype...	Сызык түрү...
+	Lineweight	Сызыктын салмагы
+	Lineweight...	Сызыктын салмагы...
+	List	Тизме
+	List Blocks	Блоктордун тизмеси
+	List Dimension Styles	Өлчөм стилдеринин тизмеси
+	List Groups	Топтордун тизмеси
+	List Layer States	Катмар абалдарынын тизмеси
+	List Layouts	Макеттердин тизмеси
+	List System Variables	Тутум өзгөрмөлөрүнүн тизмеси
+	List Text Styles	Текст стилдеринин тизмеси
+	Load all	Баарын жүктөө
+	Load...	Жүктөө...
+	Loaded	Жүктөлгөн
+	Loaded linetypes	Жүктөлгөн сызык түрлөрү
+	Lock	Кулпулоо
+	Lock Layer	Катмарды кулпулоо
+	Lock viewport	Көрүү терезесин кулпулоо
+	Lock/Unlock	Кулпулоо/Ачуу
+	Loft	Өтмө форма
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Autodesk, Inc. менен байланышы жок.
+	MODEL	МОДЕЛЬ
+	MText	MText
+	Magenta	Кызгылт көк
+	Major line every	Негизги сызык ар бир
+	Make Current	Учурдагы кылуу
+	Make Object's Layer Current	Объекттин катмарын учурдагы кылуу
+	Make it a block of this drawing, keeping its layer names	Аны катмар аттарын сактап, бул чийменин блогу кылуу
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Аны бул чийменин блогу кылуу; анын катмарлары NAME$0$LAYER болот
+	Make...	Түзүү...
+	Match Layer	Катмарды дал келтирүү
+	Match Properties	Касиеттерди дал келтирүү
+	Measure	Өлчөө
+	Measure Distance	Аралыкты өлчөө
+	Measure Geometry	Геометрияны өлчөө
+	Merge Cells	Уячаларды бириктирүү
+	Merged PRs	Бириктирилген PR'лар
+	Mid Between 2 Points	2 чекиттин ортосу
+	Midpoint	Ортоңку чекит
+	Mirror	Күзгүдөй чагылдыруу
+	Model	Модель
+	Model Space (in viewport)	Модель мейкиндиги (көрүү терезесинде)
+	Model background	Моделдин фону
+	Modeling	Моделдөө
+	Models	Моделдер
+	Modify	Өзгөртүү
+	More toolbar commands	Куралдар тилкесинин башка буйруктары
+	Move	Жылдыруу
+	Move sideways to pan; push/pull or twist to zoom.	Жылдыруу үчүн капталга жылдырыңыз; масштабдоо үчүн түртүңүз/тартыңыз же бураңыз.
+	Multileader	Мульти-чыгарма сызык
+	Multileader Style...	Мульти-чыгарма сызык стили...
+	Multileader style	Мульти-чыгарма сызык стили
+	Multiline	Мультисызык
+	Multiline Style...	Мультисызык стили...
+	Multiline Text	Көп саптуу текст
+	Multiline Text...	Көп саптуу текст...
+	Multiline...	Мультисызык...
+	Multiple	Бир нече
+	Multiple Point	Бир нече чекит
+	My	Менин
+	My properties: not available yet	Менин касиеттерим: азырынча жеткиликсиз
+	Name	Аты
+	Name (A–Z)	Аты (А–Я)
+	Named	Аталган
+	Named Viewports...	Аталган көрүү терезелери...
+	Named Views...	Аталган көрүнүштөр...
+	Nearest	Жакынкы
+	New	Жаңы
+	New (metric)	Жаңы (метрикалык)
+	New CTB	Жаңы CTB
+	New Drawing	Жаңы чийме
+	New Drawing (⌘N)	Жаңы чийме (⌘N)
+	New Drawing...	Жаңы чийме...
+	New Layer	Жаңы катмар
+	New Layout	Жаңы макет
+	New STB	Жаңы STB
+	New VP Freeze	Жаңы көрүү терезесинде тоңдуруу
+	New Viewports...	Жаңы көрүү терезелери...
+	New from Template...	Шаблондон жаңы...
+	New layout	Жаңы макет
+	New state name	Жаңы абалдын аты
+	New style	Жаңы стиль
+	Next Change	Кийинки өзгөртүү
+	No	Жок
+	No blocks defined in this drawing.	Бул чиймеде блоктор аныкталган эмес.
+	No contributor data was built into this copy.	Бул көчүрмөгө салым кошкондор жөнүндө маалымат камтылган эмес.
+	No external references are attached.	Тышкы шилтемелер тиркелген эмес.
+	No model credits were built into this copy.	Бул көчүрмөгө моделдердин авторлору жөнүндө маалымат камтылган эмес.
+	No plot style tables.	Басып чыгаруу стилдеринин таблицалары жок.
+	No saved layer states	Сакталган катмар абалдары жок
+	No selection	Тандоо жок
+	No supported 3D mouse found	Колдоого алынган 3D чычкан табылган жок
+	Node	Түйүн
+	None	Жок
+	Normal	Кадимки
+	Not Found	Табылган жок
+	Not available	Жеткиликсиз
+	Not available yet	Азырынча жеткиликсиз
+	Not loaded	Жүктөлгөн эмес
+	Numbered list	Номерленген тизме
+	OK	OK
+	Object	Объект
+	Object Snap	Объектке байлоо
+	Object Snap (F3)	Объектке байлоо (F3)
+	Object Snap On (F3)	Объектке байлоо күйгүзүлгөн (F3)
+	Object Snap Tracking	Объектке байлоо менен көзөмөлдөө
+	Object Snap Tracking (F11)	Объектке байлоо менен көзөмөлдөө (F11)
+	Object Snap Tracking Settings	Объектке байлоо менен көзөмөлдөөнүн жөндөөлөрү
+	Object snap aperture	Объектке байлоонун апертурасы
+	Object snap marker size	Объектке байлоо маркеринин өлчөмү
+	Object type:	Объекттин түрү:
+	Oblique	Кыйгач
+	Off	Өчүк
+	Offset	Жылыштыруу
+	On	Күйүк
+	On/Off	Күйгүзүү/Өчүрүү
+	Only in this drawing: {n}	Бул чиймеде гана: {n}
+	Only in {name}: {n}	{name} ичинде гана: {n}
+	Oops	Ой
+	Open	Ачуу
+	Open (⌘O)	Ачуу (⌘O)
+	Open Sample Drawing	Үлгү чиймени ачуу
+	Open Xref	Тышкы шилтемени ачуу
+	Open a drawing first.	Адегенде чиймени ачыңыз.
+	Open and Save	Ачуу жана сактоо
+	Open sample drawing	Үлгү чиймени ачуу
+	Open...	Ачуу...
+	Operator:	Оператор:
+	Options	Параметрлер
+	Options...	Параметрлер...
+	Orbit	Орбита
+	Ordinate	Ордината
+	Ortho (F8)	Орто (F8)
+	Ortho Mode	Орто режими
+	Ortho Mode (F8)	Орто режими (F8)
+	Osnap Settings...	Объектке байлоонун жөндөөлөрү...
+	Out	Алыстатуу
+	Over-constrained	Ашыкча байланышкан
+	Overlay	Үстүнө коюу
+	Override	Алмаштыруу
+	PAPER	КАГАЗ
+	PRs	PR'лар
+	Page Setup Manager	Барак жөндөөлөрүнүн менеджери
+	Page Setup Manager...	Барак жөндөөлөрүнүн менеджери...
+	Pan	Жылдыруу
+	Pan Down	Ылдый жылдыруу
+	Pan Left	Солго жылдыруу
+	Pan Right	Оңго жылдыруу
+	Pan Up	Өйдө жылдыруу
+	Pan sensitivity	Жылдыруунун сезгичтиги
+	Paper Space	Кагаз мейкиндиги
+	Parallel	Параллелдүү
+	Parameters Manager	Параметрлер менеджери
+	Parametric	Параметрдик
+	Paste	Чаптоо
+	Paste as Block	Блок катары чаптоо
+	Paste to Command Line	Буйрук сабына чаптоо
+	Paste to Original Coordinates	Баштапкы координаттарга чаптоо
+	Path Array	Жол боюнча массив
+	Pattern	Үлгү
+	Percent	Пайыз
+	Perpendicular	Перпендикулярдуу
+	Pickbox size	Тандоо кутусунун өлчөмү
+	Plot	Басып чыгаруу
+	Plot (click: do not plot)	Басып чыгаруу (чыкылдатуу: басып чыгарбоо)
+	Plot Preview	Басып чыгарууну алдын ала көрүү
+	Plot Style Manager	Басып чыгаруу стилдеринин менеджери
+	Plot Style Manager...	Басып чыгаруу стилдеринин менеджери...
+	Plot Style...	Басып чыгаруу стили...
+	Plot Styles...	Басып чыгаруу стилдери...
+	Plot Window	Басып чыгаруу терезеси
+	Plot style	Басып чыгаруу стили
+	Plot style attached to	Басып чыгаруу стили тиркелген
+	Plot style table	Басып чыгаруу стилдеринин таблицасы
+	Plot table type	Басып чыгаруу таблицасынын түрү
+	Plotter Manager	Плоттерлер менеджери
+	Plotter Manager...	Плоттерлер менеджери...
+	Plus/minus	Плюс/минус
+	Point	Чекит
+	Point Filters	Чекит чыпкалары
+	Point Style...	Чекиттин стили...
+	Polar (distance < angle)	Полярдык (аралык < бурч)
+	Polar Array	Полярдык массив
+	Polar Tracking	Полярдык көзөмөлдөө
+	Polar Tracking (F10)	Полярдык көзөмөлдөө (F10)
+	Polar Tracking On (F10)	Полярдык көзөмөлдөө күйгүзүлгөн (F10)
+	Polar angle measurement	Полярдык бурчту өлчөө
+	Polar distance	Полярдык аралык
+	Polar: {distance} < {angle}°	Полярдык: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	Көп бурчтук
+	Polygonal	Көп бурчтуу
+	Polygonal Viewport	Көп бурчтуу көрүү терезеси
+	Polyline	Полисызык
+	Polyline Edit	Полисызыкты түзөтүү
+	Position X	Абал X
+	Position Y	Абал Y
+	Position Z	Абал Z
+	Previous	Мурунку
+	Previous Change	Мурунку өзгөртүү
+	Previous Layer	Мурунку катмар
+	Primitives	Примитивдер
+	Print	Басып чыгаруу
+	Print...	Басып чыгаруу...
+	Profiles	Профилдер
+	Properties	Касиеттер
+	Properties Inspector	Касиеттер инспектору
+	Properties:	Касиеттер:
+	Proxy	Прокси
+	Purge	Тазалоо
+	Pyramid	Пирамида
+	Quadrant	Квадрант
+	Query Entities	Объекттерди суроо
+	Quick	Тез
+	Quick Dimension	Тез өлчөм
+	Quick Properties	Тез касиеттер
+	Quick Select	Тез тандоо
+	Quick Select Properties	Тез тандоонун касиеттери
+	Quick Select...	Тез тандоо...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	QuickCalc тандоо
+	Quit DraftCraft	DraftCraft'тан чыгуу
+	Radius	Радиус
+	Raster Image	Растрдык сүрөт
+	Ray	Шоола
+	Read-only	Окуу үчүн гана
+	Real name	Чыныгы аты
+	Realtime	Реалдуу убакытта
+	Reassociate Dimensions	Өлчөмдөрдү кайра байланыштыруу
+	Recalculate Table Formulas	Таблица формулаларын кайра эсептөө
+	Recent	Акыркылар
+	Recent Commands	Акыркы буйруктар
+	Recent Input	Акыркы киргизүү
+	Recover...	Калыбына келтирүү...
+	Rectangle	Тик бурчтук
+	Rectangular	Тик бурчтуу
+	Rectangular Array	Тик бурчтуу массив
+	Rectangular snap	Тик бурчтуу байлоо
+	Red	Кызыл
+	Redo	Кайталоо
+	Redo (⇧⌘Z)	Кайталоо (⇧⌘Z)
+	Redraw	Кайра сызуу
+	Reference Manager	Шилтемелер менеджери
+	Reference Name	Шилтеменин аты
+	References: {n}	Шилтемелер: {n}
+	Regen	Жаңылоо
+	Regen All	Баарын жаңылоо
+	Region	Аймак
+	Region/Mass Properties	Аймактын/массанын касиеттери
+	Reinitialize	Кайра инициализациялоо
+	Relative	Салыштырмалуу
+	Relative to last segment	Акыркы сегментке салыштырмалуу
+	Release the 3D mouse to calibrate its resting position	Тынч абалын калибрлөө үчүн 3D чычканды коё бериңиз
+	Reload	Кайра жүктөө
+	Reload All	Баарын кайра жүктөө
+	Remove	Алып салуу
+	Remove Leader	Чыгарма сызыкты алып салуу
+	Remove Vertex	Чокуну алып салуу
+	Remove the viewport override	Көрүү терезесинин алмаштыруусун алып салуу
+	Rename Dimension Style	Өлчөм стилинин атын өзгөртүү
+	Rename Layer	Катмардын атын өзгөртүү
+	Rename Layer State	Катмар абалынын атын өзгөртүү
+	Rename Layout	Макеттин атын өзгөртүү
+	Rename Text Style	Текст стилинин атын өзгөртүү
+	Rename...	Атын өзгөртүү...
+	Repeat {command}	{command} кайталоо
+	Replace Block...	Блокту алмаштыруу...
+	Requires a point (x,y, @dx,dy or @d<a).	Чекит талап кылынат (x,y, @dx,dy же @d<a).
+	Reset Palettes	Палитраларды баштапкы абалга келтирүү
+	Reset Panel Layout	Панелдердин жайгашуусун баштапкы абалга келтирүү
+	Reset keeps the interface language.	Баштапкы абалга келтирүү интерфейстин тилин сактайт.
+	Reset to Defaults	Демейкилерге кайтаруу
+	Restore	Калыбына келтирүү
+	Restore Layer State	Катмар абалын калыбына келтирүү
+	Reverse	Тескери буруу
+	Reverse the order	Тартипти тескери буруу
+	Reverse zoom direction	Масштабдоо багытын тескери буруу
+	Revision Cloud	Оңдоо булуту
+	Revolve	Айландыруу менен түзүү
+	Right	Оңго
+	Rotate	Буруу
+	Rotation	Буруу
+	Run Script...	Скриптти иштетүү...
+	SVG drawings (SVG, SVGZ)	SVG чиймелери (SVG, SVGZ)
+	Save	Сактоо
+	Save (⌘S)	Сактоо (⌘S)
+	Save As	Башкача сактоо
+	Save As...	Башкача сактоо...
+	Save Layer State	Катмар абалын сактоо
+	Save State	Абалды сактоо
+	Save new drawings as	Жаңы чиймелерди мындай сактоо
+	Saved Path	Сакталган жол
+	Scale	Масштаб
+	Scale List...	Масштабдар тизмеси...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Экран лупалары, экран окугучтар жана жаздыргычтар тутумдун курсорун ээрчишет.
+	Screening	Күңүрттөтүү
+	Search for layer	Катмарды издөө
+	Search for parameter	Параметрди издөө
+	Search for pattern	Үлгүнү издөө
+	Second and next points:	Экинчи жана кийинки чекиттер:
+	Select	Тандоо
+	Select 2D polyline	2D полисызыкты тандаңыз
+	Select All	Баарын тандоо
+	Select Objects	Объекттерди тандоо
+	Select Similar	Окшошторду тандоо
+	Select a 2D polyline.	2D полисызыкты тандаңыз.
+	Select a block reference.	Блокко шилтемени тандаңыз.
+	Select a circle or arc.	Айлананы же жааны тандаңыз.
+	Select a closed polyline	Жабык полисызыкты тандаңыз
+	Select a closed polyline, circle, ellipse or closed spline.	Жабык полисызыкты, айлананы, эллипсти же жабык сплайнды тандаңыз.
+	Select a closed polyline.	Жабык полисызыкты тандаңыз.
+	Select a curve as the path.	Жол катары ийри сызыкты тандаңыз.
+	Select a dimension constraint type	Өлчөмдүк байланыштын түрүн тандаңыз
+	Select a line object	Сызык объектин тандаңыз
+	Select a line object.	Сызык объектин тандаңыз.
+	Select a line or an arc.	Сызыкты же жааны тандаңыз.
+	Select a line or polyline segment	Сызыкты же полисызык сегментин тандаңыз
+	Select a line, arc or open polyline.	Сызыкты, жааны же ачык полисызыкты тандаңыз.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Жол катары сызыкты, жааны, айлананы, полисызыкты, эллипсти же сплайнды тандаңыз.
+	Select a line, circle, arc or polyline segment.	Сызыкты, айлананы, жааны же полисызык сегментин тандаңыз.
+	Select a line.	Сызыкты тандаңыз.
+	Select a polyline.	Полисызыкты тандаңыз.
+	Select a text, mtext, attribute definition or dimension.	Текстти, мтекстти, атрибуттун аныктамасын же өлчөмдү тандаңыз.
+	Select an annotation object	Аннотация объектин тандаңыз
+	Select an arc or circle	Жааны же айлананы тандаңыз
+	Select an arc.	Жааны тандаңыз.
+	Select an object	Объектти тандаңыз
+	Select an object to change	Өзгөртүлүүчү объектти тандаңыз
+	Select an object to measure	Өлчөнүүчү объектти тандаңыз
+	Select an object.	Объектти тандаңыз.
+	Select an open curve.	Ачык ийри сызыкты тандаңыз.
+	Select an open line, arc, polyline, ellipse arc or spline.	Ачык сызыкты, жааны, полисызыкты, эллипс жаасын же сплайнды тандаңыз.
+	Select arc or circle	Жааны же айлананы тандаңыз
+	Select arc or polyline arc segment	Жааны же полисызыктын жаа сегментин тандаңыз
+	Select arc style	Жаанын стилин тандаңыз
+	Select arc, circle, line	Жааны, айлананы, сызыкты тандаңыз
+	Select at least two objects to join.	Бириктирүү үчүн жок дегенде эки объект тандаңыз.
+	Select circle or arc to add center mark	Борбор белгисин кошуу үчүн айлананы же жааны тандаңыз
+	Select closed objects (regions, closed polylines, circles).	Жабык объекттерди тандаңыз (аймактар, жабык полисызыктар, айланалар).
+	Select first line	Биринчи сызыкты тандаңыз
+	Select first line or arc	Биринчи сызыкты же жааны тандаңыз
+	Select first object	Биринчи объектти тандаңыз
+	Select first point	Биринчи чекитти тандаңыз
+	Select nested objects to copy	Көчүрүлүүчү ичине салынган объекттерди тандаңыз
+	Select object	Объектти тандаңыз
+	Select object to dimension	Өлчөм коюлуучу объектти тандаңыз
+	Select object to divide	Бөлүнүүчү объектти тандаңыз
+	Select object to extend or shift-select to trim	Узартуучу объектти тандаңыз же кесүү үчүн Shift менен тандаңыз
+	Select object to measure	Өлчөнүүчү объектти тандаңыз
+	Select object to offset	Жылыштыруучу объектти тандаңыз
+	Select object to trim or shift-select to extend	Кесилүүчү объектти тандаңыз же узартуу үчүн Shift менен тандаңыз
+	Select objects	Объекттерди тандаңыз
+	Select objects (crossing window first corner)	Объекттерди тандаңыз (кесилүүчү терезенин биринчи бурчу)
+	Select objects first, then choose a command	Адегенде объекттерди тандап, андан кийин буйрукту тандаңыз
+	Select objects to array.	Массив үчүн объекттерди тандаңыз.
+	Select objects to stretch by crossing-window or crossing-polygon...	Созуу үчүн объекттерди кесилүүчү терезе же кесилүүчү көп бурчтук менен тандаңыз...
+	Select objects:	Объекттерди тандаңыз:
+	Select one polyline (Multiple is available through the JSON form).	Бир полисызыкты тандаңыз (Multiple JSON формасы аркылуу жеткиликтүү).
+	Select path curve	Жолдун ийри сызыгын тандаңыз
+	Select point or object	Чекитти же объектти тандаңыз
+	Select polyline	Полисызыкты тандаңыз
+	Select second line	Экинчи сызыкты тандаңыз
+	Select second line or shift-select to apply corner	Экинчи сызыкты тандаңыз же бурчту колдонуу үчүн Shift менен тандаңыз
+	Select second object	Экинчи объектти тандаңыз
+	Select second object or shift-select to apply corner	Экинчи объектти тандаңыз же бурчту колдонуу үчүн Shift менен тандаңыз
+	Select second point	Экинчи чекитти тандаңыз
+	Select spline	Сплайнды тандаңыз
+	Select symmetry line	Симметрия сызыгын тандаңыз
+	Select two points	Эки чекит тандаңыз
+	Selection	Тандоо
+	Selection Cycling	Тандоону айлантуу
+	Send Hatches to Back	Штрихтөөлөрдү артка жылдыруу
+	Send Under Objects	Объекттердин астына жылдыруу
+	Send to Back	Артка жылдыруу
+	Services	Кызматтар
+	Set Current	Учурдагы кылып коюу
+	Set Current Dimension Style	Учурдагы өлчөм стилин коюу
+	Set Current Text Style	Учурдагы текст стилин коюу
+	Set Current Viewport	Учурдагы көрүү терезесин коюу
+	Set Layer Properties	Катмардын касиеттерин коюу
+	Set Properties	Касиеттерди коюу
+	Set Table Cell	Таблица уячасын коюу
+	Set Table Cell Style	Таблица уячасынын стилин коюу
+	Set Variable	Өзгөрмөнү коюу
+	Set View	Көрүнүштү коюу
+	Settings...	Жөндөөлөр...
+	Share	Бөлүшүү
+	Show	Көрсөтүү
+	Show All	Баарын көрсөтүү
+	Show All Constraint Bars	Бардык байланыш панелдерин көрсөтүү
+	Show All Dynamic Dimensions	Бардык динамикалык өлчөмдөрдү көрсөтүү
+	Show Annotative Objects	Аннотациялык объекттерди көрсөтүү
+	Show Layer List	Катмарлар тизмесин көрсөтүү
+	Show Quick Properties for selected objects	Тандалган объекттер үчүн тез касиеттерди көрсөтүү
+	Show System Cursor	Тутумдун курсорун көрсөтүү
+	Show and hide the tools of this category	Бул категориянын инструменттерин көрсөтүү жана жашыруу
+	Show command prompting near the crosshairs	Буйрук сурамдарын курсордун жанында көрсөтүү
+	Show in Tool Sets	Инструменттер топтомунда көрсөтүү
+	Show/Hide Lineweight	Сызыктын салмагын көрсөтүү/жашыруу
+	Show/Hide Transparency	Тунуктукту көрсөтүү/жашыруу
+	Single Line Text	Бир саптуу текст
+	Single Point	Жалгыз чекит
+	Single...	Бир...
+	Smooth	Жылмакай
+	Snap	Байлоо
+	Snap Mode	Байлоо режими
+	Snap Mode (F9)	Байлоо режими (F9)
+	Snap On (F9)	Байлоо күйгүзүлгөн (F9)
+	Snap Overrides	Байлоону алмаштыруулар
+	Snap X spacing	X боюнча байлоо кадамы
+	Snap and Grid	Байлоо жана тор
+	Snap type	Байлоонун түрү
+	Snap, grid, polar tracking and Dynamic Input:	Байлоо, тор, полярдык көзөмөлдөө жана динамикалык киргизүү:
+	Solid	Тулку
+	Solid Editing	Тулкуну түзөтүү
+	Sort	Иреттөө
+	Specify a point	Чекитти көрсөтүңүз
+	Specify a scale for the hatch pattern	Штрихтөө үлгүсүнүн масштабын көрсөтүңүз
+	Specify a second extension line origin	Экинчи чыгаруу сызыгынын башталышын көрсөтүңүз
+	Specify an angle for the hatch pattern	Штрихтөө үлгүсүнүн бурчун көрсөтүңүз
+	Specify angle end point	Бурчтун акыркы чекитин көрсөтүңүз
+	Specify angle of dimension line	Өлчөм сызыгынын бурчун көрсөтүңүз
+	Specify angle of dimension text	Өлчөм текстинин бурчун көрсөтүңүз
+	Specify angle start point	Бурчтун баштапкы чекитин көрсөтүңүз
+	Specify angle vertex	Бурчтун чокусун көрсөтүңүз
+	Specify angle vertex point	Бурчтун чоку чекитин көрсөтүңүз
+	Specify arc length dimension location	Жаа узундугунун өлчөмүнүн ордун көрсөтүңүз
+	Specify axis endpoint of ellipse	Эллипс огунун акыркы чекитин көрсөтүңүз
+	Specify base diameter	Негиздин диаметрин көрсөтүңүз
+	Specify base point	Базалык чекитти көрсөтүңүз
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Базалык чекитти же жылышууну көрсөтүңүз (реалдуу убакытта жылдыруу үчүн ортоңку баскыч менен сүйрөңүз)
+	Specify base radius	Негиздин радиусун көрсөтүңүз
+	Specify center of donut	Шакектин борборун көрсөтүңүз
+	Specify center of ellipse	Эллипстин борборун көрсөтүңүз
+	Specify center of polygon	Көп бурчтуктун борборун көрсөтүңүз
+	Specify center point for circle	Айлананын борбор чекитин көрсөтүңүз
+	Specify center point of arc	Жаанын борбор чекитин көрсөтүңүз
+	Specify center point of arc (hold Ctrl to switch direction)	Жаанын борбор чекитин көрсөтүңүз (багытты алмаштыруу үчүн Ctrl'ду басып туруңуз)
+	Specify center point of array	Массивдин борбор чекитин көрсөтүңүз
+	Specify center point of base	Негиздин борбор чекитин көрсөтүңүз
+	Specify corner of viewport	Көрүү терезесинин бурчун көрсөтүңүз
+	Specify corner of window, enter a scale factor (nX or nXP)	Терезенин бурчун көрсөтүңүз, масштаб коэффициентин киргизиңиз (nX же nXP)
+	Specify diameter of circle	Айлананын диаметрин көрсөтүңүз
+	Specify dimension arc line location	Өлчөм жаа сызыгынын ордун көрсөтүңүз
+	Specify dimension line location	Өлчөм сызыгынын ордун көрсөтүңүз
+	Specify distance between turns	Оромдордун ортосундагы аралыкты көрсөтүңүз
+	Specify distance to other axis	Башка окко чейинки аралыкты көрсөтүңүз
+	Specify end angle	Акыркы бурчту көрсөтүңүз
+	Specify end point of arc	Жаанын акыркы чекитин көрсөтүңүз
+	Specify end point of arc (hold Ctrl to switch direction)	Жаанын акыркы чекитин көрсөтүңүз (багытты алмаштыруу үчүн Ctrl'ду басып туруңуз)
+	Specify ending width	Акыркы жазылыкты көрсөтүңүз
+	Specify ending width for next segment	Кийинки сегменттин акыркы жазылыгын көрсөтүңүз
+	Specify endpoint of arc	Жаанын учун көрсөтүңүз
+	Specify endpoint of axis	Октун учун көрсөтүңүз
+	Specify endpoint of line	Сызыктын учун көрсөтүңүз
+	Specify feature location	Элементтин ордун көрсөтүңүз
+	Specify fillet radius	Тегеректөө радиусун көрсөтүңүз
+	Specify fillet radius for rectangles	Тик бурчтуктар үчүн тегеректөө радиусун көрсөтүңүз
+	Specify first angle endpoint	Бурчтун биринчи учун көрсөтүңүз
+	Specify first chamfer distance	Фасканын биринчи аралыгын көрсөтүңүз
+	Specify first chamfer distance for rectangles	Тик бурчтуктар үчүн фасканын биринчи аралыгын көрсөтүңүз
+	Specify first constraint point	Байланыштын биринчи чекитин көрсөтүңүз
+	Specify first corner	Биринчи бурчту көрсөтүңүз
+	Specify first corner point	Биринчи бурч чекитин көрсөтүңүз
+	Specify first destination point	Биринчи максаттуу чекитти көрсөтүңүз
+	Specify first end point of circle's diameter	Айлана диаметринин биринчи учун көрсөтүңүз
+	Specify first endpoint of edge	Кырдын биринчи учун көрсөтүңүз
+	Specify first extension line origin	Биринчи чыгаруу сызыгынын башталышын көрсөтүңүз
+	Specify first point	Биринчи чекитти көрсөтүңүз
+	Specify first point of mirror line	Күзгү сызыгынын биринчи чекитин көрсөтүңүз
+	Specify first point on circle	Айланадагы биринчи чекитти көрсөтүңүз
+	Specify first point on circle: _tan to	Айланадагы биринчи чекитти көрсөтүңүз: _tan to
+	Specify first source point	Биринчи булак чекитин көрсөтүңүз
+	Specify height	Бийиктикти көрсөтүңүз
+	Specify helix height	Спиралдын бийиктигин көрсөтүңүз
+	Specify included angle	Ички бурчту көрсөтүңүз
+	Specify included angle (hold Ctrl to switch direction)	Ички бурчту көрсөтүңүз (багытты алмаштыруу үчүн Ctrl'ду басып туруңуз)
+	Specify insertion base point	Кыстаруунун базалык чекитин көрсөтүңүз
+	Specify insertion point	Кыстаруу чекитин көрсөтүңүз
+	Specify inside diameter of donut	Шакектин ички диаметрин көрсөтүңүз
+	Specify leader arrowhead location	Чыгарма сызыктын жебесинин ордун көрсөтүңүз
+	Specify leader endpoint	Чыгарма сызыктын учун көрсөтүңүз
+	Specify leader landing location	Чыгарма сызыктын текчесинин ордун көрсөтүңүз
+	Specify length for rectangles	Тик бурчтуктар үчүн узундукту көрсөтүңүз
+	Specify length of chord	Хорданын узундугун көрсөтүңүз
+	Specify length of chord (hold Ctrl to switch direction)	Хорданын узундугун көрсөтүңүз (багытты алмаштыруу үчүн Ctrl'ду басып туруңуз)
+	Specify length of segment	Сегменттин узундугун көрсөтүңүз
+	Specify line width for rectangles	Тик бурчтуктар үчүн сызыктын жазылыгын көрсөтүңүз
+	Specify location for new vertex	Жаңы чокунун ордун көрсөтүңүз
+	Specify minimum length of arc	Жаанын минималдуу узундугун көрсөтүңүз
+	Specify new end point	Жаңы акыркы чекитти көрсөтүңүз
+	Specify new location for marked vertex	Белгиленген чоку үчүн жаңы орунду көрсөтүңүз
+	Specify new width for all segments	Бардык сегменттер үчүн жаңы жазылыкты көрсөтүңүз
+	Specify next point	Кийинки чекитти көрсөтүңүз
+	Specify offset distance	Жылыштыруу аралыгын көрсөтүңүз
+	Specify opposite corner	Карама-каршы бурчту көрсөтүңүз
+	Specify other corner point	Башка бурч чекитин көрсөтүңүз
+	Specify other endpoint of axis	Октун башка учун көрсөтүңүз
+	Specify outside diameter of donut	Шакектин тышкы диаметрин көрсөтүңүз
+	Specify point	Чекитти көрсөтүңүз
+	Specify point on object for first tangent of circle	Айлананын биринчи жанымасы үчүн объекттеги чекитти көрсөтүңүз
+	Specify point on object for second tangent of circle	Айлананын экинчи жанымасы үчүн объекттеги чекитти көрсөтүңүз
+	Specify point on side to offset	Жылыштыруу тарабындагы чекитти көрсөтүңүз
+	Specify radius of arc	Жаанын радиусун көрсөтүңүз
+	Specify radius of arc (hold Ctrl to switch direction)	Жаанын радиусун көрсөтүңүз (багытты алмаштыруу үчүн Ctrl'ду басып туруңуз)
+	Specify radius of circle	Айлананын радиусун көрсөтүңүз
+	Specify rotation angle	Буруу бурчун көрсөтүңүз
+	Specify rotation angle of text	Тексттин буруу бурчун көрсөтүңүз
+	Specify scale factor	Масштаб коэффициентин көрсөтүңүз
+	Specify second angle endpoint	Бурчтун экинчи учун көрсөтүңүз
+	Specify second break point	Үзүүнүн экинчи чекитин көрсөтүңүз
+	Specify second chamfer distance for rectangles	Тик бурчтуктар үчүн фасканын экинчи аралыгын көрсөтүңүз
+	Specify second constraint point	Байланыштын экинчи чекитин көрсөтүңүз
+	Specify second destination point	Экинчи максаттуу чекитти көрсөтүңүз
+	Specify second end point of circle's diameter	Айлана диаметринин экинчи учун көрсөтүңүз
+	Specify second endpoint of edge	Кырдын экинчи учун көрсөтүңүз
+	Specify second extension line origin	Экинчи чыгаруу сызыгынын башталышын көрсөтүңүз
+	Specify second point	Экинчи чекитти көрсөтүңүз
+	Specify second point of arc	Жаанын экинчи чекитин көрсөтүңүз
+	Specify second point of mirror line	Күзгү сызыгынын экинчи чекитин көрсөтүңүз
+	Specify second point on circle	Айланадагы экинчи чекитти көрсөтүңүз
+	Specify second point on circle: _tan to	Айланадагы экинчи чекитти көрсөтүңүз: _tan to
+	Specify second point or <use first point as displacement>	Экинчи чекитти же <биринчи чекитти жылышуу катары колдонуу> көрсөтүңүз
+	Specify second source point	Экинчи булак чекитин көрсөтүңүз
+	Specify side to offset	Жылыштыруу тарабын көрсөтүңүз
+	Specify start angle	Баштапкы бурчту көрсөтүңүз
+	Specify start point	Баштапкы чекитти көрсөтүңүз
+	Specify start point of arc	Жаанын баштапкы чекитин көрсөтүңүз
+	Specify start point of polyline	Полисызыктын баштапкы чекитин көрсөтүңүз
+	Specify start point of text	Тексттин баштапкы чекитин көрсөтүңүз
+	Specify starting width	Баштапкы жазылыкты көрсөтүңүз
+	Specify starting width for next segment	Кийинки сегменттин баштапкы жазылыгын көрсөтүңүз
+	Specify tangent direction for the start point of arc	Жаанын баштапкы чекити үчүн жаныма багытын көрсөтүңүз
+	Specify the elevation for rectangles	Тик бурчтуктар үчүн бийиктик белгисин көрсөтүңүз
+	Specify thickness for rectangles	Тик бурчтуктар үчүн калыңдыкты көрсөтүңүз
+	Specify third point on circle	Айланадагы үчүнчү чекитти көрсөтүңүз
+	Specify third point on circle: _tan to	Айланадагы үчүнчү чекитти көрсөтүңүз: _tan to
+	Specify third source point or <continue>	Үчүнчү булак чекитин же <улантуу> көрсөтүңүз
+	Specify through point	Өтүүчү чекитти көрсөтүңүз
+	Specify top diameter	Үстүнкү диаметрди көрсөтүңүз
+	Specify top radius	Үстүнкү радиусту көрсөтүңүз
+	Specify total angle	Жалпы бурчту көрсөтүңүз
+	Specify total length	Жалпы узундукту көрсөтүңүз
+	Specify width for rectangles	Тик бурчтуктар үчүн жазылыкты көрсөтүңүз
+	Sphere	Шар
+	Spline	Сплайн
+	Spline Edit	Сплайнды түзөтүү
+	Stack (type 1/2 then select)	Бөлчөк (1/2 териңиз, андан кийин тандаңыз)
+	Standard	Стандарттык
+	Start	Баштоо
+	Start Width	Баштапкы жазылык
+	Start X	Баштапкы X
+	Start Y	Баштапкы Y
+	Start angle	Баштапкы бурч
+	Start, Center, Angle	Баштоо, борбор, бурч
+	Start, Center, End	Баштоо, борбор, учу
+	Start, Center, Length	Баштоо, борбор, узундук
+	Start, End, Angle	Баштоо, учу, бурч
+	Start, End, Direction	Баштоо, учу, багыт
+	Start, End, Radius	Баштоо, учу, радиус
+	Status	Абал
+	Status Bar	Абал тилкеси
+	Stretch	Созуу
+	Stretch Vertex	Чокуну созуу
+	Style: Standard	Стиль: Standard
+	Subtract	Кемитүү
+	Sweep	Шыпыруу менен түзүү
+	Switch Drawing	Чиймени которуу
+	Switch Layout	Макетти которуу
+	Switch between model space in a viewport and paper space	Көрүү терезесиндеги модель мейкиндиги менен кагаз мейкиндигинин ортосунда которуу
+	Symmetric	Симметриялуу
+	Synchronize Attributes	Атрибуттарды шайкештирүү
+	Synchronize Multiple-scale Positions	Көп масштабдуу абалдарды шайкештирүү
+	TOP	ҮСТҮ
+	Table	Таблица
+	Table Breaks	Таблицаны бөлүү
+	Table Cell Style	Таблица уячасынын стили
+	Table Style...	Таблица стили...
+	Table style	Таблица стили
+	Table...	Таблица...
+	Tan, Tan, Radius	Жаныма, жаныма, радиус
+	Tan, Tan, Tan	Жаныма, жаныма, жаныма
+	Tangent	Жаныма
+	Temporary track point	Убактылуу көзөмөл чекити
+	Text	Текст
+	Text Editor	Текст редактору
+	Text Height	Тексттин бийиктиги
+	Text Objects Only	Текст объекттери гана
+	Text Style...	Текст стили...
+	Text height	Тексттин бийиктиги
+	Text override	Тексттин алмаштыруусу
+	Text style	Текст стили
+	Thaw All Layers	Бардык катмарларды эритүү
+	Thaw Layer	Катмарды эритүү
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Апертура — объектке байлоо чекитти табышы үчүн курсор ага канчалык жакын келиши керектиги.
+	There is nothing here yet.	Бул жерде азырынча эч нерсе жок.
+	Thickness	Калыңдык
+	Time	Убакыт
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Убакытка сезгич оң чыкылдатуу: тез чыкылдатуу — Enter, басып туруу менюну ачат
+	To	Кимге
+	To get started, create or open a drawing.	Баштоо үчүн чиймени түзүңүз же ачыңыз.
+	Toggle PICKADD (off: each pick replaces the selection)	PICKADD которуу (өчүк: ар бир тандоо мурункуну алмаштырат)
+	Toggle PICKADD (on: picks add to the selection)	PICKADD которуу (күйүк: тандоолор тандоого кошулат)
+	Tolerance...	Чектелген четтөө...
+	Tool Bar	Куралдар тилкеси
+	Tool Sets	Инструменттер топтому
+	Tools	Инструменттер
+	Torus	Тор
+	Trace	Из
+	Track orthogonally only	Ортогоналдуу гана көзөмөлдөө
+	Track using all polar angle settings	Бардык полярдык бурч жөндөөлөрүн колдонуп көзөмөлдөө
+	Transparency	Тунуктук
+	Trim	Кесүү
+	True Color	Чыныгы түс
+	Turn All Layers On	Бардык катмарларды күйгүзүү
+	Turn Off Layer	Катмарды өчүрүп коюу
+	Turn On Layer	Катмарды күйгүзүү
+	Turn Quick Properties off (QPMODE)	Тез касиеттерди өчүрүү (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Өчүрүлгөндө, буйрук иштеп жатканда оң чыкылдатуу дайыма контексттик менюну ачат.
+	Type	Түрү
+	Type a command	Буйрукту териңиз
+	Type text; Enter starts a new paragraph	Текстти териңиз; Enter жаңы абзацты баштайт
+	UCS Icon	UCS белгиси
+	Undo	Жокко чыгаруу
+	Undo (⌘Z)	Жокко чыгаруу (⌘Z)
+	Ungroup	Топту таратуу
+	Union	Бириктирүү
+	Unisolate Layer	Катмардын обочолоосун алып салуу
+	Units Conversion	Бирдиктерди айландыруу
+	Units...	Бирдиктер...
+	Unload	Чыгарып салуу
+	Unloaded	Чыгарылган
+	Unlock Layer	Катмардын кулпусун ачуу
+	Unlock viewport	Көрүү терезесинин кулпусун ачуу
+	Unmerge Cells	Уячаларды ажыратуу
+	Unreferenced	Шилтемеси жок
+	Unresolved	Чечилбеген
+	Unsaved Layer State	Сакталбаган катмар абалы
+	Up	Өйдө
+	Update	Жаңыртуу
+	Update Data Links	Маалымат байланыштарын жаңыртуу
+	Use System Setting	Тутумдун жөндөөсүн колдонуу
+	Use for this layout	Бул макет үчүн колдонуу
+	Use object linetype	Объекттин сызык түрүн колдонуу
+	Use object lineweight	Объекттин сызык салмагын колдонуу
+	User	Колдонуучу
+	User Parameters	Колдонуучу параметрлери
+	User Preferences	Колдонуучунун жөндөөлөрү
+	Username	Колдонуучунун аты
+	VP Color	КТ түсү
+	VP Freeze	КТ тоңдуруу
+	Value	Маани
+	Value:	Маани:
+	Variables	Өзгөрмөлөр
+	Version	Версия
+	Version 2000	2000 версиясы
+	Version 2004	2004 версиясы
+	Version 2007	2007 версиясы
+	Version 2010	2010 версиясы
+	Version 2013	2013 версиясы
+	Version 2018	2018 версиясы
+	Version {version}	{version} версиясы
+	Vertical	Вертикалдуу
+	VerticalDistance	Вертикалдуу аралык
+	View	Көрүнүш
+	ViewCube	ViewCube
+	Viewport	Көрүү терезеси
+	Viewport Layer Freeze	Көрүү терезесинде катмарды тоңдуруу
+	Viewport Properties	Көрүү терезесинин касиеттери
+	Viewport is locked	Көрүү терезеси кулпуланган
+	Viewport scale	Көрүү терезесинин масштабы
+	Viewport {id}	Көрүү терезеси {id}
+	Viewports	Көрүү терезелери
+	Volume	Көлөм
+	WCS	WCS
+	White	Ак
+	Width factor	Жазылык коэффициенти
+	Window	Терезе
+	Wipeout	Жаап салуу
+	Workspace Switching	Иш мейкиндигин которуу
+	Write Block	Блокту жазуу
+	X	X
+	Xline	Көмөкчү сызык
+	Y	Y
+	Yellow	Сары
+	Yes	Ооба
+	Zoom	Масштабдоо
+	Zoom All	Баарын масштабдоо
+	Zoom Dynamic	Динамикалык масштабдоо
+	Zoom Extents	Чектерге чейин масштабдоо
+	Zoom In	Чоңойтуу
+	Zoom Object	Объектке масштабдоо
+	Zoom Out	Кичирейтүү
+	Zoom Previous	Мурунку масштаб
+	Zoom Realtime	Реалдуу убакытта масштабдоо
+	Zoom Window	Терезе боюнча масштабдоо
+	Zoom sensitivity	Масштабдоонун сезгичтиги
+	error	ката
+	min	мүн
+	objects	объекттер
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (байланыш {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} байланышы {name} = {expression}  (түзөтүү үчүн эки жолу чыкылдатыңыз)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Жаңы колдонуучу параметри
+	ΔLOC	ΔLOC
+	−Bin	−Себет
+	−LOC	−LOC
+	⌘↩ to finish	Бүтүрүү үчүн ⌘↩
+@plural	{n} commit	{n} коммит|{n} коммит
+@plural	{n} contributor	{n} салым кошуучу|{n} салым кошуучу
+	Check for Updates…	Жаңыртууларды текшерүү…
+	DraftCraft is up to date.	DraftCraft акыркы версияда.
+	Could not check for updates.	Жаңыртууларды текшерүү мүмкүн болгон жок.
+	Add to Working Set	Иш топтомуна кошуу
+	Add: Pick points	Кошуу: чекиттерди тандоо
+	Add: Select objects	Кошуу: объекттерди тандоо
+	Add…	Кошуу…
+	Alias	Псевдоним
+	Alias file: {file}	Псевдонимдер файлы: {file}
+	Align Multileaders	Мульти-чыгарма сызыктарды тегиздөө
+	Analyze Shapes	Фигураларды талдоо
+	Analyze Usage	Колдонулушун талдоо
+	Animation Effects	Анимация эффекттери
+	Animation effects	Анимация эффекттери
+	Associative	Ассоциативдүү
+	Backup copy	Камдык көчүрмө
+	Block to create or edit	Түзүлүүчү же түзөтүлүүчү блок
+	Bottom left	Төмөнкү сол
+	Bottom right	Төмөнкү оң
+	Boundaries	Чек аралар
+	Boundaries picked: {n}	Тандалган чек аралар: {n}
+	Break-line Symbol	Үзүү сызыгынын белгиси
+	Centered	Борборго тегизделген
+	Change Properties	Касиеттерди өзгөртүү
+	Choose the command the alias starts.	Псевдоним иштете турган буйрукту тандаңыз.
+	Click the ruler to add a tab stop, right-click to remove one	Табуляция токтотмосун кошуу үчүн сызгычты чыкылдатыңыз, алып салуу үчүн оң чыкылдатыңыз
+	Click to set new origin	Жаңы башталышты коюу үчүн чыкылдатыңыз
+	Close Block Editor	Блок редакторун жабуу
+	Collect	Чогултуу
+	Collect Multileaders	Мульти-чыгарма сызыктарды чогултуу
+	Color 1	Түс 1
+	Color 2	Түс 2
+	Command	Буйрук
+	Convert Text to Mtext	Текстти мтекстке айландыруу
+	Create backup copy with each save	Ар бир сактоодо камдык көчүрмө түзүү
+	Create separate hatches	Өзүнчө штрихтөөлөрдү түзүү
+	Crossing selection color:	Кесилүүчү тандоонун түсү:
+	Curved	Ийри
+	Customize	Ыңгайлаштыруу
+	Default to boundary extents	Демейки боюнча чек аранын чектери
+	Define each corner of the selection window with a separate click.	Тандоо терезесинин ар бир бурчун өзүнчө чыкылдатуу менен аныктаңыз.
+	Discard	Таштоо
+	Drag Dynamic Grip	Динамикалык тутканы сүйрөө
+	Dynamic Block Data	Динамикалык блоктун маалыматтары
+	Dynamic Block Grips	Динамикалык блоктун туткалары
+	Dynamic Block Reference	Динамикалык блокко шилтеме
+	Edit Block Definition	Блоктун аныктамасын түзөтүү
+	Edit Command Aliases (PGP)...	Буйрук псевдонимдерин түзөтүү (PGP)...
+	Edit Multileader	Мульти-чыгарма сызыкты түзөтүү
+	Edit Reference In-Place	Шилтемени ордунда түзөтүү
+	Edit…	Түзөтүү…
+	Evaluate LISP	LISP'ти эсептөө
+	Exclude:	Чыгаруу:
+	Explode Attributes to Text	Атрибуттарды текстке жарып чачуу
+	Express Tools	Express Tools
+	Font	Арип
+	Grips	Туткалар
+	Groups	Топтор
+	Hatch Pick	Штрихтөөнү тандоо
+	Hatch and Gradient	Штрихтөө жана градиент
+	Hatch origin	Штрихтөөнүн башталышы
+	Hatches	Штрихтөөлөр
+	Hemispherical	Жарым шардык
+	Ignore	Этибарга албоо
+	Imperial (inches)	Англис (дюйм)
+	Implied Loops	Болжолдуу контурлар
+	Indicate selection area	Тандоо аймагын көрсөтүү
+	Interface scale	Интерфейстин масштабы
+	Inverted	Тескери
+	Island	Арал
+	Island detection	Аралдарды аныктоо
+	Italic	Курсив
+	Justify	Тегиздөө
+	Load Application...	Тиркемени жүктөө...
+	Metric (millimetres)	Метрикалык (миллиметр)
+	More than {n} aliases.	{n} псевдонимден ашык.
+	Move/Copy/Rotate	Жылдыруу/Көчүрүү/Буруу
+	Multiline text	Көп саптуу текст
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Жаңы чийме жана ишке киргизгендеги биринчи чийме, демейки шаблон коюлбаса (QNEWTEMPLATE), ушул бирдиктерди колдонот.
+	New block	Жаңы блок
+	No alias file loaded. REINIT replaces these aliases with a file's.	Псевдонимдер файлы жүктөлгөн эмес. REINIT бул псевдонимдерди файлдагылар менен алмаштырат.
+	Not a number or distance: {text}	Сан же аралык эмес: {text}
+	Object grouping	Объекттерди топтоо
+	Object selection limit for display of grips	Туткаларды көрсөтүү үчүн объекттерди тандоо чеги
+	Objects on locked layers	Кулпуланган катмарлардагы объекттер
+	Open in Block Editor	Блок редакторунда ачуу
+	Origin: {x}, {y}	Башталыш: {x}, {y}
+	Outer	Тышкы
+	Overline	Үстүнөн сызылган
+	Preview	Алдын ала көрүү
+	Query Texts	Тексттерди суроо
+	Save Block	Блокту сактоо
+	Save Block As	Блокту башкача сактоо
+	Save Layout as Template	Макетти шаблон катары сактоо
+	Save Reference Edits	Шилтеме түзөтүүлөрүн сактоо
+	Save alias	Псевдонимди сактоо
+	Save changes to block "{name}"?	"{name}" блогундагы өзгөртүүлөрдү сактайсызбы?
+	Select boundaries to remove	Алып салуучу чек араларды тандаңыз
+	Select using two clicks only	Эки чыкылдатуу менен гана тандоо
+	Selection Area Effect	Тандоо аймагынын эффекти
+	Selection Preview Filter	Тандоону алдын ала көрүү чыпкасы
+	Selection area opacity:	Тандоо аймагынын тунук эместиги:
+	Selection effect color	Тандоо эффектинин түсү
+	Selection modes	Тандоо режимдери
+	Selection preview	Тандоону алдын ала көрүү
+	Set Dynamic Property	Динамикалык касиетти коюу
+	Shape	Фигура
+	Sheet Books to PDF...	Барак китептерин PDF'ке...
+	Show grips	Туткаларды көрсөтүү
+	Specified origin	Көрсөтүлгөн башталыш
+	Spherical	Сфералык
+	Tables	Таблицалар
+	Text color	Тексттин түсү
+	Top left	Жогорку сол
+	Top right	Жогорку оң
+	Type an alias name.	Псевдонимдин атын териңиз.
+	Underline	Асты сызылган
+	Units of new drawings	Жаңы чиймелердин бирдиктери
+	Unsaved changes	Сакталбаган өзгөртүүлөр
+	Use current origin	Учурдагы башталышты колдонуу
+	Visual Effect Settings	Визуалдык эффекттердин жөндөөлөрү
+	Visual Effect Settings...	Визуалдык эффекттердин жөндөөлөрү...
+	When a command is active	Буйрук активдүү болгондо
+	When no command is active	Буйрук активдүү болбогондо
+	Window selection color:	Терезе менен тандоонун түсү:
+	Working Set	Иш топтому
+	Xref and Block In-place Editing	Тышкы шилтемелерди жана блокторду ордунда түзөтүү
+	Xrefs	Тышкы шилтемелер
+	built-in	камтылган
+	overrides built-in	камтылганды алмаштырат
+	{alias} is already defined; select it and use Edit.	{alias} мурунтан аныкталган; аны тандап, Түзөтүүнү колдонуңуз.
+	{command} is an unknown command.	{command} — белгисиз буйрук.
+	Find All	Баарын табуу
+	Find what:	Эмнени табуу:
+	Match case	Регистрди эске алуу
+	Replace	Алмаштыруу
+	Replace All	Баарын алмаштыруу
+	Replace with:	Мында алмаштыруу:
+	Replacement text	Алмаштыруучу текст
+	Results	Жыйынтыктар
+	Searches the current space.	Учурдагы мейкиндикте издейт.
+	Text to find	Табылуучу текст
+	Whole words	Бүтүн сөздөр
+	Nothing found	Эч нерсе табылган жок
+	E	Чыг
+	N	Түн
+	S	Түш
+	W	Бат
+	B	Т
+	DraftCraft	DraftCraft
+	Clear Recent Files	Акыркы файлдарды тазалоо
+	contains authoring elements. Open in Block Editor?	түзүү элементтерин камтыйт. Блок редакторунда ачасызбы?
+	Custom	Ыңгайлаштырылган
+	Open Recent	Акыркыларды ачуу
+	This drawing	Бул чийме
+	Arrow size	Жебенин өлчөмү
+	Dim scale overall	Өлчөмдүн жалпы масштабы
+	Precision	Тактык
+	Apply to Layout	Макетке колдонуу
+	Center the plot	Басып чыгарууну борборго коюу
+	Enter block names to extract	Алынуучу блоктордун аттарын киргизиңиз
+	Enter geometric characteristic	Геометриялык мүнөздөмөнү киргизиңиз
+	Enter name of LISP file to load	Жүктөлүүчү LISP файлынын атын киргизиңиз
+	First corner	Биринчи бурч
+	Fit to paper	Кагазга батыруу
+	Landscape	Альбомдук
+	Limits	Чектер
+	Opposite corner	Карама-каршы бурч
+	Orientation	Багыты
+	Paper size	Кагаздын өлчөмү
+	Plot area	Басып чыгаруу аймагы
+	Plot object lineweights	Объекттердин сызык салмактарын басып чыгаруу
+	Plot offset	Басып чыгаруунун жылышы
+	Plot transparency	Тунуктукту басып чыгаруу
+	Portrait	Китептик
+	Printer/plotter	Принтер/плоттер
+	Window <	Терезе <
+	X offset (mm)	X жылышы (мм)
+	Y offset (mm)	Y жылышы (мм)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Ангстремдер
+	Architectural	Архитектуралык
+	Astronomical Units	Астрономиялык бирдиктер
+	Centimeters	Сантиметрлер
+	Decameters	Декаметрлер
+	Decimal	Ондук
+	Decimal Degrees	Ондук градустар
+	Decimeters	Дециметрлер
+	Deg/Min/Sec	Град/Мүн/Сек
+	Don't Save	Сактабоо
+	Drawing Units	Чийменин бирдиктери
+	Engineering	Инженердик
+	Feet	Футтар
+	Fractional	Бөлчөктүк
+	Gigameters	Гигаметрлер
+	Grads	Градтар
+	Hectometers	Гектометрлер
+	Inches	Дюймдар
+	Insertion scale	Кыстаруу масштабы
+	Kilometers	Километрлер
+	Light Years	Жарык жылдары
+	Meters	Метрлер
+	Microinches	Микродюймдар
+	Microns	Микрондор
+	Miles	Милялар
+	Millimeters	Миллиметрлер
+	Mils	Милдер
+	Nanometers	Нанометрлер
+	Parsecs	Парсектер
+	Radians	Радиандар
+	Sample output	Чыгаруунун үлгүсү
+	Save changes to {name}?	{name} ичиндеги өзгөртүүлөрдү сактайсызбы?
+	Scientific	Илимий
+	Surveyor's Units	Геодезиялык бирдиктер
+	Unitless	Бирдиксиз
+	Units to scale inserted content	Кыстарылган мазмунду масштабдоо бирдиктери
+	US Survey Feet	АКШ геодезиялык футу
+	US Survey Inch	АКШ геодезиялык дюйму
+	US Survey Mile	АКШ геодезиялык милясы
+	US Survey Yard	АКШ геодезиялык ярды
+	Yards	Ярддар
+	Your changes will be lost if you don't save them.	Сактабасаңыз, өзгөртүүлөрүңүз жоголот.
+	Layouts	Макеттер
+	Associate	Байланыштыруу
+	Clip Xref	Тышкы шилтемени кесүү
+	Xref Clip Frame	Тышкы шилтеменин кесүү алкагы
+	Minimize	Кичирейтүү
+	Maximize	Чоңойтуу
+	Restore Down	Калыбына келтирүү
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft жана DraftCraft логотиби DraftCraft Engineering Ventures компаниясынын соода белгилери.
+	Conic	Конустук кесилиш
+	Spline Fit	Сплайн (жайгаштыруу)
+	Spline CV	Сплайн (башкаруу чокулары)
+	Specify start point of conic	Конустук кесилиштин баштапкы чекитин көрсөтүңүз
+	Specify apex (where the end tangents meet)	Чокуну көрсөтүңүз (учтардагы жанымалар кесилишкен жер)
+	Specify end point of conic	Конустук кесилиштин акыркы чекитин көрсөтүңүз
+	Specify rho or a point on the conic	Rho маанисин же конустук кесилиштеги чекитти көрсөтүңүз
+	Check for Updates...	Жаңыртууларды текшерүү...
+	Check for Updates	Жаңыртууларды текшерүү
+	Update Available	Жаңыртуу жеткиликтүү
+	DraftCraft {version} is available.	DraftCraft {version} жеткиликтүү.
+	You have version {version}.	Сизде {version} версиясы бар.
+	Do you want to download the update?	Жаңыртууну жүктөп аласызбы?
+	What's new	Эмне жаңы
+	What's New	Эмне жаңы
+	Download	Жүктөп алуу
+	Later	Кийинчерээк
+	Skip This Version	Бул версияны өткөрүп жиберүү
+	DraftCraft is up to date (version {version}).	DraftCraft акыркы версияда ({version} версиясы).
+	Do you want to install the update now?	Жаңыртууну азыр орнотосузбу?
+	Update Now	Азыр жаңыртуу
+	Open the release page	Чыгаруу барагын ачуу
+	This copy of DraftCraft can't update itself.	DraftCraft'тын бул көчүрмөсү өзүн өзү жаңырта албайт.
+	Updating DraftCraft	DraftCraft жаңыртылууда
+	Update Failed	Жаңыртуу ишке ашкан жок
+	Installing DraftCraft {version}	DraftCraft {version} орнотулууда
+	Downloading: {done} of {total} MB	Жүктөлүүдө: {done} / {total} МБ
+	Installing…	Орнотулууда…
+	Starting the download…	Жүктөп алуу башталууда…
+	The connection dropped; trying again…	Байланыш үзүлдү; кайра аракет кылынууда…
+	DraftCraft {version} is installed.	DraftCraft {version} орнотулду.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Аны колдонуу үчүн DraftCraft'ты кайра иштетиңиз. Кийинчерээк кайра иштетсеңиз, ал DraftCraft'ты кийинки ишке киргизгенде ачылат.
+	Restart Now	Азыр кайра иштетүү
+	The update could not be installed.	Жаңыртууну орнотуу мүмкүн болгон жок.
+	You can download it from the release page instead.	Анын ордуна аны чыгаруу барагынан жүктөп алсаңыз болот.
+	2D Wireframe	2D каркас
+	Annotate	Аннотация
+	Blocks Palette	Блоктор палитрасы
+	CAD Standards	CAD стандарттары
+	Commands	Буйруктар
+	2D Drafting	2D сызуу
+	Edit Aliases	Псевдонимдерди түзөтүү
+	Image	Сүрөт
+	Palettes	Палитралар
+	Top	Үстү
+	Units	Бирдиктер
+	Workspace	Иш мейкиндиги
+	Ribbon	Тасма
+	PDF Underlay...	PDF подложка...
+	PDF Import	PDF импорттоо
+	PDF Underlay	PDF подложка
+	Underlay Layers	Подложканын катмарлары
+	Raster Image Reference...	Растрдык сүрөткө шилтеме...
+	Close Text Editor	Текст редакторун жабуу
+	Image Clip	Сүрөттү кесүү
+	PDF Clip	PDF'ти кесүү
+	Image Adjust	Сүрөттү жөндөө
+	PDF Adjust	PDF'ти жөндөө
+	Adjust...	Жөндөө...
+	Parameter	Параметр
+	Action	Аракет
+	DesignCenter	DesignCenter
+	Tool Palettes	Инструменттер палитралары
+	Sheet Set Manager	Барактар топтомунун менеджери
+	Type the drawing's path, then press Enter.	Чийменин жолун териңиз, андан кийин Enter басыңыз.
+	Drawing file	Чийме файлы
+	Folder	Папка
+	Linetypes	Сызык түрлөрү
+	Text Styles	Текст стилдери
+	Dimension Styles	Өлчөм стилдери
+	Table Styles	Таблица стилдери
+	Multileader Styles	Мульти-чыгарма сызык стилдери
+	Multiline Styles	Мультисызык стилдери
+	Add to Drawing	Чиймеге кошуу
+	Create Tool Palette	Инструменттер палитрасын түзүү
+	Nothing of this kind in the file.	Файлда мындай түрдөгү эч нерсе жок.
+	Open a drawing to see its blocks, layers and styles.	Блокторун, катмарларын жана стилдерин көрүү үчүн чиймени ачыңыз.
+	Delete Palette	Палитраны өчүрүү
+	New Palette	Жаңы палитра
+	No tool palettes.	Инструменттер палитралары жок.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Бул палитра бош: төмөндө буйрук кошуңуз же DesignCenter'ден палитра түзүңүз.
+	Delete Tool	Инструментти өчүрүү
+	Add Command	Буйрук кошуу
+	New Sheet Set...	Жаңы барактар топтому...
+	Open Sheet Set...	Барактар топтомун ачуу...
+	Sheet sets (DCSS)	Барактар топтомдору (DCSS)
+	Sheet set file	Барактар топтомунун файлы
+	Make or open a sheet set to list its sheets.	Барактарын тизмелөө үчүн барактар топтомун түзүңүз же ачыңыз.
+	Add Drawing...	Чийме кошуу...
+	Publish to PDF...	PDF'ке жарыялоо...
+	No sheets yet: add a drawing's layouts.	Азырынча барактар жок: чийменин макеттерин кошуңуз.
+	Number	Номер
+	Title	Аталышы
+	Move Up	Өйдө жылдыруу
+	Move Down	Ылдый жылдыруу
+	Sheet Set (DCSS)	Барактар топтому (DCSS)
+	Close Tool Palettes	Инструменттер палитраларын жабуу
+	Close DesignCenter	DesignCenter'ди жабуу
+	Close Sheet Set Manager	Барактар топтомунун менеджерин жабуу
+	Manage Tool Palettes	Инструменттер палитраларын башкаруу
+	Changes apply at once; Save Current As keeps them in a workspace.	Өзгөртүүлөр дароо колдонулат; «Учурдагыны башкача сактоо» аларды иш мейкиндигинде сактайт.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Катмарларды гана көрсөтүү үчүн аларды чыкылдатыңыз; Ctrl же Shift тандоого кошот.
+	Current Workspace	Учурдагы иш мейкиндиги
+	Customize Interface	Интерфейсти ыңгайлаштыруу
+	Customize User Interface	Колдонуучу интерфейсин ыңгайлаштыруу
+	Customize...	Ыңгайлаштыруу...
+	Edit Aliases...	Псевдонимдерди түзөтүү...
+	Force object color and linetype to ByLayer	Объекттин түсүн жана сызык түрүн ByLayer кылууга мажбурлоо
+	Geographic Location	Географиялык жайгашуу
+	Geographic Location...	Географиялык жайгашуу...
+	Latitude	Кеңдик
+	Longitude	Узундук
+	North direction	Түндүк багыты
+	Layer Translation Mappings	Катмарларды которуу дал келтирүүлөрү
+	Layer Translator	Катмар которгучу
+	Layer Translator...	Катмар которгучу...
+	Layer Walk	Катмарларды аралоо
+	Layer Walk...	Катмарларды аралоо...
+	Location	Жайгашкан жер
+	Set Location	Жайгашкан жерди коюу
+	Remove Location	Жайгашкан жерди алып салуу
+	The drawing's origin is at this place (WGS 84 degrees).	Чийменин башталышы ушул жерде (WGS 84 градустары).
+	Map	Дал келтирүү
+	New layer name	Жаңы катмардын аты
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Азырынча дал келтирүүлөр жок: сол жактан катмарларды, оң жактан атты тандап, андан кийин «Дал келтирүү».
+	Translate	Которуу
+	Translate From	Кайдан которуу
+	Translate To	Кайда которуу
+	Restore on exit	Чыкканда калыбына келтирүү
+	Point Cloud	Чекиттер булуту
+	Point Cloud...	Чекиттер булуту...
+	Point clouds (XYZ, LAS)	Чекиттер булуттары (XYZ, LAS)
+	ZIP archive	ZIP архиви
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Тез жетүү панели
+	Rename	Атын өзгөртүү
+	Reset to Standard	Стандартка кайтаруу
+	Ribbon Tabs	Тасманын өтмөктөрү
+	Save Current As	Учурдагыны башкача сактоо
+	Save Current As...	Учурдагыны башкача сактоо...
+	Save Workspace	Иш мейкиндигин сактоо
+	User Interface	Колдонуучу интерфейси
+	Workspace Settings	Иш мейкиндигинин жөндөөлөрү
+	Workspace Settings...	Иш мейкиндигинин жөндөөлөрү...
+	Workspace name	Иш мейкиндигинин аты
+	Workspace:	Иш мейкиндиги:
+	Workspaces	Иш мейкиндиктери
+	Interface...	Интерфейс...
+	Export Attribute Information...	Атрибут маалыматын экспорттоо...
+	Import Attribute Information...	Атрибут маалыматын импорттоо...
+	Export Attributes	Атрибуттарды экспорттоо
+	Import Attributes	Атрибуттарды импорттоо
+	Text, tab-delimited (TXT)	Текст, табуляция менен бөлүнгөн (TXT)
+	Import Settings	Жөндөөлөрдү импорттоо
+	Export Settings	Жөндөөлөрдү экспорттоо
+	Import Settings...	Жөндөөлөрдү импорттоо...
+	Export Settings...	Жөндөөлөрдү экспорттоо...
+	DraftCraft settings (TOML)	DraftCraft жөндөөлөрү (TOML)
+	Total Area and Length	Жалпы аянт жана узундук
+	Total Area	Жалпы аянт
+	Specify point to place the totals as text	Жыйынтыктарды текст катары жайгаштыруу үчүн чекитти көрсөтүңүз
+	Metric	Метрикалык
+	Imperial	Англис
+	A new drawing in millimeters	Миллиметрдеги жаңы чийме
+	A new drawing in inches	Дюймдагы жаңы чийме
+	A new drawing in centimeters	Сантиметрдеги жаңы чийме
+	Metric (centimetres)	Метрикалык (сантиметр)
+	Join the ArtCraft Discord…	ArtCraft Discord'уна кошулуу…
+	Join us on Discord	Discord'то бизге кошулуңуз
+	One of the Crafting Apps by the ArtCraft team and community.	ArtCraft командасы жана коомчулугу жасаган Crafting тиркемелеринин бири.
+	Change	Өзгөртүү
+	Multiple Insert	Көп кыстаруу
+	Ctrl+Enter to apply	Колдонуу үчүн Ctrl+Enter
+	Edit Text	Текстти түзөтүү
+	The drawing changed. Close the window and open it again.	Чийме өзгөрдү. Терезени жаап, кайра ачыңыз.
+	DView	DView
+	Raster Images	Растрдык сүрөттөр
+	Xref	Тышкы шилтеме
+	Backup copies are off, so the current file will be replaced.	Камдык көчүрмөлөр өчүк, ошондуктан учурдагы файл алмаштырылат.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 жана андан мурункулар аларды сактайт. Аларды чиймеде сактоо үчүн «Башкача сактоону» колдонуңуз.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF аларды сактайт. Аларды чиймеде сактоо үчүн «Башкача сактоону» колдонуңуз.
+	Save Anyway	Баары бир сактоо
+	Save cancelled: {path} was not changed.	Сактоо жокко чыгарылды: {path} өзгөртүлгөн жок.
+	Saving {name} will remove content	{name} сактоо мазмунду өчүрөт
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Учурдагы файл толук эмес окшойт, ошондуктан {name} ошол бойдон калат жана учурдагы файл алмаштырылат.
+	The current file is kept as {name} until the next save.	Учурдагы файл кийинки сактоого чейин {name} катары сакталат.
+	This format can't keep these objects yet: {objects}.	Бул формат азырынча бул объекттерди сактай албайт: {objects}.
+	{count} more types	Дагы {count} түр
+	Additional Tools	Кошумча инструменттер
+	Keyboard Shortcuts...	Баскычтоптун тез баскычтары...
+	Keyboard Shortcuts	Баскычтоптун тез баскычтары
+	Replaces the shortcut of {commands}	{commands} тез баскычын алмаштырат
+	Needs Ctrl, Alt or a function key	Ctrl, Alt же функциялык баскыч керек
+	Press the keys	Баскычтарды басыңыз
+	Back to DraftCraft's shortcut	DraftCraft'тын тез баскычына кайтуу
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Сиз берген тез баскыч DraftCraft'тыкынан артыкчылыктуу. Өзгөртүүлөр дароо колдонулат жана кийинкиге сакталат.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Өчүрүлгөндө, буйрук иштеп жатканда оң чыкылдатуу «Оң чыкылдатууну ыңгайлаштыруу» буйрук режими үчүн койгонду аткарат.
+	Right-Click Customization...	Оң чыкылдатууну ыңгайлаштыруу...
+	Right-Click Customization	Оң чыкылдатууну ыңгайлаштыруу
+	Turn on time-sensitive right-click	Убакытка сезгич оң чыкылдатууну күйгүзүү
+	Longer click duration:	Узунураак чыкылдатуунун узактыгы:
+	milliseconds	миллисекунд
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Буйрук иштеп жатканда тез чыкылдатуу — Enter, узунураак чыкылдатуу контексттик менюну ачат.
+	Default Mode	Демейки режим
+	No objects selected and no command running:	Объекттер тандалган эмес жана буйрук иштеп жаткан жок:
+	Edit Mode	Түзөтүү режими
+	Objects selected and no command running:	Объекттер тандалган жана буйрук иштеп жаткан жок:
+	Repeat last command	Акыркы буйрукту кайталоо
+	Shortcut Menu	Контексттик меню
+	Command Mode	Буйрук режими
+	While a command runs:	Буйрук иштеп жатканда:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Контексттик меню: дайыма иштетилген
+	Shortcut Menu: enabled when command options are present	Контексттик меню: буйрук параметрлери болгондо иштетилет
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Импорт: бул жерде файл диалогу жок; ALIASEDIT буйругун файлдын мазмуну менен text параметри аркылуу иштетиңиз.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Псевдонимдер DraftCraft профилиңизде сакталат жана кайра иштетүүдөн кийин да калат.
+	Import…	Импорттоо…
+	Run ALIASEDIT with the file's contents using its text parameter.	ALIASEDIT буйругун файлдын мазмуну менен text параметри аркылуу иштетиңиз.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Файлды импорттоо сиздин {n} псевдонимиңизди жана азырынча колдонулбаган өзгөртүүлөрдү алмаштырат.
+	Import and replace	Импорттоо жана алмаштыруу
+	Keep my aliases	Менин псевдонимдеримди калтыруу
+	{n} more warnings; see the command line.	Дагы {n} эскертүү; буйрук сабын караңыз.
+	Unit	Бирдик
+	Drawing units: {unit}, {format}	Чийменин бирдиктери: {unit}, {format}
+	NEW DRAWING	ЖАҢЫ ЧИЙМЕ
+	OPEN	АЧУУ
+	WORKSPACE	ИШ МЕЙКИНДИГИ

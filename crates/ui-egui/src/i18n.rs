@@ -57,9 +57,65 @@ pub enum Preference {
     Vietnamese,
     #[serde(rename = "ta")]
     Tamil,
+    #[serde(rename = "af")]
+    Afrikaans,
+    #[serde(rename = "az")]
+    Azerbaijani,
+    #[serde(rename = "be")]
+    Belarusian,
+    #[serde(rename = "bg")]
+    Bulgarian,
+    #[serde(rename = "ca")]
+    Catalan,
+    #[serde(rename = "da")]
+    Danish,
+    #[serde(rename = "et")]
+    Estonian,
+    #[serde(rename = "fi")]
+    Finnish,
+    #[serde(rename = "fil")]
+    Filipino,
+    #[serde(rename = "gl")]
+    Galician,
+    #[serde(rename = "hr")]
+    Croatian,
+    #[serde(rename = "id")]
+    Indonesian,
+    #[serde(rename = "ja")]
+    Japanese,
+    #[serde(rename = "kk")]
+    Kazakh,
+    #[serde(rename = "ky")]
+    Kyrgyz,
+    #[serde(rename = "mn")]
+    Mongolian,
+    #[serde(rename = "ms")]
+    Malay,
+    #[serde(rename = "nb")]
+    NorwegianBokmal,
+    #[serde(rename = "nl")]
+    Dutch,
+    #[serde(rename = "sk")]
+    Slovak,
+    #[serde(rename = "so")]
+    Somali,
+    #[serde(rename = "sq")]
+    Albanian,
+    #[serde(rename = "sr")]
+    Serbian,
+    #[serde(rename = "sr-Latn")]
+    SerbianLatin,
+    #[serde(rename = "sw")]
+    Swahili,
+    #[serde(rename = "tg")]
+    Tajik,
+    #[serde(rename = "uz")]
+    Uzbek,
+    #[serde(rename = "zu")]
+    Zulu,
 }
 impl Preference {
-    pub const ALL: [Self; 23] = [
+    pub const ALL: [Self; 51] = [
         Self::Auto,
         Self::English,
         Self::Greek,
@@ -83,6 +139,34 @@ impl Preference {
         Self::Bosnian,
         Self::Vietnamese,
         Self::Tamil,
+        Self::Afrikaans,
+        Self::Azerbaijani,
+        Self::Belarusian,
+        Self::Bulgarian,
+        Self::Catalan,
+        Self::Danish,
+        Self::Estonian,
+        Self::Finnish,
+        Self::Filipino,
+        Self::Galician,
+        Self::Croatian,
+        Self::Indonesian,
+        Self::Japanese,
+        Self::Kazakh,
+        Self::Kyrgyz,
+        Self::Mongolian,
+        Self::Malay,
+        Self::NorwegianBokmal,
+        Self::Dutch,
+        Self::Slovak,
+        Self::Somali,
+        Self::Albanian,
+        Self::Serbian,
+        Self::SerbianLatin,
+        Self::Swahili,
+        Self::Tajik,
+        Self::Uzbek,
+        Self::Zulu,
     ];
 
     /// Every preference in the order the Interface Language dialog lists them: Auto, then English
@@ -136,6 +220,34 @@ impl Preference {
             Self::Bosnian => "bs",
             Self::Vietnamese => "vi",
             Self::Tamil => "ta",
+            Self::Afrikaans => "af",
+            Self::Azerbaijani => "az",
+            Self::Belarusian => "be",
+            Self::Bulgarian => "bg",
+            Self::Catalan => "ca",
+            Self::Danish => "da",
+            Self::Estonian => "et",
+            Self::Finnish => "fi",
+            Self::Filipino => "fil",
+            Self::Galician => "gl",
+            Self::Croatian => "hr",
+            Self::Indonesian => "id",
+            Self::Japanese => "ja",
+            Self::Kazakh => "kk",
+            Self::Kyrgyz => "ky",
+            Self::Mongolian => "mn",
+            Self::Malay => "ms",
+            Self::NorwegianBokmal => "nb",
+            Self::Dutch => "nl",
+            Self::Slovak => "sk",
+            Self::Somali => "so",
+            Self::Albanian => "sq",
+            Self::Serbian => "sr",
+            Self::SerbianLatin => "sr-Latn",
+            Self::Swahili => "sw",
+            Self::Tajik => "tg",
+            Self::Uzbek => "uz",
+            Self::Zulu => "zu",
         }
     }
 
@@ -193,6 +305,48 @@ impl Preference {
                     "Tamil"
                 }
             }
+            Self::Afrikaans => "Afrikaans",
+            // ə needs a system interface font that has it ([`crate::theme::azerbaijani_font`]).
+            Self::Azerbaijani => {
+                if crate::theme::shows_azerbaijani(CURRENT.with(Cell::get)) {
+                    "Azərbaycan dili"
+                } else {
+                    "Azerbaijani"
+                }
+            }
+            Self::Belarusian => "Беларуская",
+            Self::Bulgarian => "Български",
+            Self::Catalan => "Català",
+            Self::Danish => "Dansk",
+            Self::Estonian => "Eesti",
+            Self::Finnish => "Suomi",
+            Self::Filipino => "Filipino",
+            Self::Galician => "Galego",
+            Self::Croatian => "Hrvatski",
+            Self::Indonesian => "Bahasa Indonesia",
+            Self::Kazakh => "Қазақ тілі",
+            Self::Kyrgyz => "Кыргызча",
+            Self::Mongolian => "Монгол",
+            Self::Malay => "Bahasa Melayu",
+            Self::NorwegianBokmal => "Norsk bokmål",
+            Self::Dutch => "Nederlands",
+            Self::Slovak => "Slovenčina",
+            Self::Somali => "Soomaali",
+            Self::Albanian => "Shqip",
+            Self::Serbian => "Српски (ћирилица)",
+            Self::SerbianLatin => "Srpski (latinica)",
+            Self::Swahili => "Kiswahili",
+            Self::Tajik => "Тоҷикӣ",
+            Self::Uzbek => "O‘zbekcha",
+            Self::Zulu => "isiZulu",
+            // Its letters need a Japanese or CJK font; without one the picker reads the English name.
+            Self::Japanese => {
+                if crate::theme::can_show("ja") {
+                    "日本語"
+                } else {
+                    "Japanese"
+                }
+            }
         }
     }
 
@@ -229,6 +383,34 @@ impl Preference {
             Self::Bosnian => "bs",
             Self::Vietnamese => "vi",
             Self::Tamil => "ta",
+            Self::Afrikaans => "af",
+            Self::Azerbaijani => "az",
+            Self::Belarusian => "be",
+            Self::Bulgarian => "bg",
+            Self::Catalan => "ca",
+            Self::Danish => "da",
+            Self::Estonian => "et",
+            Self::Finnish => "fi",
+            Self::Filipino => "fil",
+            Self::Galician => "gl",
+            Self::Croatian => "hr",
+            Self::Indonesian => "id",
+            Self::Japanese => "ja",
+            Self::Kazakh => "kk",
+            Self::Kyrgyz => "ky",
+            Self::Mongolian => "mn",
+            Self::Malay => "ms",
+            Self::NorwegianBokmal => "nb",
+            Self::Dutch => "nl",
+            Self::Slovak => "sk",
+            Self::Somali => "so",
+            Self::Albanian => "sq",
+            Self::Serbian => "sr",
+            Self::SerbianLatin => "sr-Latn",
+            Self::Swahili => "sw",
+            Self::Tajik => "tg",
+            Self::Uzbek => "uz",
+            Self::Zulu => "zu",
             Self::Auto => locales.iter().find_map(|s| locale_language(s)).unwrap_or("en"),
         }
     }
@@ -245,7 +427,7 @@ pub struct Language {
     catalog: OnceLock<Catalog<'static>>,
 }
 
-pub static LANGUAGES: [Language; 22] = [
+pub static LANGUAGES: [Language; 50] = [
     Language { code: "en", name: "English", source: "", plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
     Language { code: "pl", name: "Polski", source: include_str!("i18n/pl.tsv"), plural: plural_pl, plural_forms: 3, catalog: OnceLock::new() },
     // Greek: one for exactly 1; other for zero and all other integer counts.
@@ -319,9 +501,103 @@ pub static LANGUAGES: [Language; 22] = [
     Language {
         code: "ta", name: "தமிழ்", source: include_str!("i18n/ta.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
     },
+    // Afrikaans plurals follow the English rule: one (1), other.
+    Language { code: "af", name: "Afrikaans", source: include_str!("i18n/af.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Azerbaijani (Latin script): one (1), other, the English rule. Its ə needs a system
+    // interface font that has it (`theme::can_show`).
+    Language {
+        code: "az",
+        name: "Azərbaycan dili",
+        source: include_str!("i18n/az.tsv"),
+        plural: plural_en,
+        plural_forms: 2,
+        catalog: OnceLock::new(),
+    },
+    // Belarusian integer plurals follow the Ukrainian rule: one (1, 21), few (2–4), many.
+    Language {
+        code: "be", name: "Беларуская", source: include_str!("i18n/be.tsv"), plural: plural_uk, plural_forms: 3, catalog: OnceLock::new()
+    },
+    // Bulgarian plurals follow the English rule: one (1), other.
+    Language {
+        code: "bg", name: "Български", source: include_str!("i18n/bg.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // Catalan integer plurals follow the English rule: one (1), other.
+    Language { code: "ca", name: "Català", source: include_str!("i18n/ca.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Danish integer plurals follow the English rule: one (1), other.
+    Language { code: "da", name: "Dansk", source: include_str!("i18n/da.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Estonian plurals follow the English rule: one (1), other.
+    Language { code: "et", name: "Eesti", source: include_str!("i18n/et.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Finnish plurals follow the English rule: one (1), other.
+    Language { code: "fi", name: "Suomi", source: include_str!("i18n/fi.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Filipino (CLDR `fil`): one for 1, 2, 3 and counts not ending in 4, 6 or 9; other for the rest.
+    Language { code: "fil", name: "Filipino", source: include_str!("i18n/fil.tsv"), plural: plural_fil, plural_forms: 2, catalog: OnceLock::new() },
+    // Galician integer plurals follow the English rule: one (1), other.
+    Language { code: "gl", name: "Galego", source: include_str!("i18n/gl.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Croatian: one (1, 21), few (2–4, 22–24, not 12–14), other — the Ukrainian rule for integers.
+    Language { code: "hr", name: "Hrvatski", source: include_str!("i18n/hr.tsv"), plural: plural_uk, plural_forms: 3, catalog: OnceLock::new() },
+    // Indonesian doesn't inflect a noun for number, so like Korean it has one form.
+    Language {
+        code: "id",
+        name: "Bahasa Indonesia",
+        source: include_str!("i18n/id.tsv"),
+        plural: plural_ko,
+        plural_forms: 1,
+        catalog: OnceLock::new(),
+    },
+    // Japanese has no grammatical plural, so one form. Its glyphs come from an installed Japanese or CJK
+    // font, or a craft-fonts `Jpan` face (`theme::can_show`); without one the interface stays English.
+    Language { code: "ja", name: "日本語", source: include_str!("i18n/ja.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // Kazakh (Cyrillic): one (1), other, the English rule.
+    Language {
+        code: "kk", name: "Қазақ тілі", source: include_str!("i18n/kk.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // Kyrgyz (Cyrillic): one (1), other, the English rule.
+    Language {
+        code: "ky", name: "Кыргызча", source: include_str!("i18n/ky.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new()
+    },
+    // Mongolian (Cyrillic): one (1), other, the English rule.
+    Language { code: "mn", name: "Монгол", source: include_str!("i18n/mn.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Malay doesn't inflect a noun for number, so like Korean it has one form.
+    Language { code: "ms", name: "Bahasa Melayu", source: include_str!("i18n/ms.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // Norwegian Bokmål plurals follow the English rule: one (1), other. `no` and `nn` tags select it.
+    Language { code: "nb", name: "Norsk bokmål", source: include_str!("i18n/nb.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Dutch plurals follow the English rule: one (1), other.
+    Language { code: "nl", name: "Nederlands", source: include_str!("i18n/nl.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Slovak integer plurals follow the Czech rule: one (1), few (2–4), other.
+    Language { code: "sk", name: "Slovenčina", source: include_str!("i18n/sk.tsv"), plural: plural_cs, plural_forms: 3, catalog: OnceLock::new() },
+    // Somali plurals follow the English rule: one (1), other.
+    Language { code: "so", name: "Soomaali", source: include_str!("i18n/so.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Albanian plurals follow the English rule: one (1), other.
+    Language { code: "sq", name: "Shqip", source: include_str!("i18n/sq.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Serbian in Cyrillic, the default for `sr` tags: one (1, 21), few (2–4), other — the Ukrainian rule.
+    Language {
+        code: "sr",
+        name: "Српски (ћирилица)",
+        source: include_str!("i18n/sr.tsv"),
+        plural: plural_uk,
+        plural_forms: 3,
+        catalog: OnceLock::new(),
+    },
+    // Serbian in Latin script, for `sr-Latn` tags: the same plural rule as Cyrillic Serbian.
+    Language {
+        code: "sr-Latn",
+        name: "Srpski (latinica)",
+        source: include_str!("i18n/sr_latn.tsv"),
+        plural: plural_uk,
+        plural_forms: 3,
+        catalog: OnceLock::new(),
+    },
+    // Swahili plurals follow the English rule: one (1), other.
+    Language { code: "sw", name: "Kiswahili", source: include_str!("i18n/sw.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Tajik keeps a noun singular after a numeral, so like Korean it has one form.
+    Language { code: "tg", name: "Тоҷикӣ", source: include_str!("i18n/tg.tsv"), plural: plural_ko, plural_forms: 1, catalog: OnceLock::new() },
+    // Uzbek (Latin script): one (1), other, the English rule.
+    Language { code: "uz", name: "O‘zbekcha", source: include_str!("i18n/uz.tsv"), plural: plural_en, plural_forms: 2, catalog: OnceLock::new() },
+    // Zulu (CLDR `zu`): one (0, 1), other, the Portuguese rule.
+    Language { code: "zu", name: "isiZulu", source: include_str!("i18n/zu.tsv"), plural: plural_pt, plural_forms: 2, catalog: OnceLock::new() },
 ];
 
-/// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8` and `pt_BR.UTF-8`.
+/// BCP 47 and POSIX locale tags, including `uk-UA`, `uk_UA.UTF-8`, `pt_BR.UTF-8` and `sr_RS@latin`.
 /// A catalog is chosen by the tag's primary language, so any `pt-*` tag selects `pt-BR`; Chinese
 /// also by its script or region: Traditional (`zh-TW`) for `Hant`, Taiwan, Hong Kong and Macau,
 /// else Simplified (`zh`).
@@ -329,8 +605,21 @@ pub fn locale_language(tag: &str) -> Option<&'static str> {
     // The language, script and region subtags: a POSIX codeset (`.UTF-8`) or modifier (`@…`) ends them.
     let subtags = tag.trim().split(['.', '@']).next().unwrap_or_default();
     let primary = tag.trim().split(['-', '_', '.', '@']).next()?;
+    let has = |names: &[&str]| subtags.split(['-', '_']).skip(1).any(|s| names.iter().any(|n| s.eq_ignore_ascii_case(n)));
+    // Serbian: Latin script for `Latn` or `@latin`, else Cyrillic. Norwegian `no` and Nynorsk `nn` read
+    // Bokmål; the older `tl` (Tagalog) reads Filipino and `in` Indonesian.
+    if primary.eq_ignore_ascii_case("sr") {
+        // POSIX writes the script as a modifier: `sr_RS@latin`.
+        let latin = has(&["Latn"]) || tag.to_ascii_lowercase().contains("@latin");
+        return Some(if latin { "sr-Latn" } else { "sr" });
+    }
+    let primary = match primary.to_ascii_lowercase().as_str() {
+        "no" | "nn" => "nb",
+        "tl" => "fil",
+        "in" => "id",
+        _ => primary,
+    };
     if primary.eq_ignore_ascii_case("zh") {
-        let has = |names: &[&str]| subtags.split(['-', '_']).skip(1).any(|s| names.iter().any(|n| s.eq_ignore_ascii_case(n)));
         return Some(if !has(&["Hans"]) && has(&["Hant", "TW", "HK", "MO"]) { "zh-TW" } else { "zh" });
     }
     LANGUAGES.iter().find(|l| l.code.split('-').next().is_some_and(|p| p.eq_ignore_ascii_case(primary))).map(|l| l.code)
@@ -465,6 +754,11 @@ pub fn plural_arabic(n: u64) -> usize {
         (_, 11..=99) => 4,
         _ => 5,
     }
+}
+
+/// Filipino (CLDR `fil`): one for 1, 2 and 3 and for any count whose last digit is not 4, 6 or 9.
+pub fn plural_fil(n: u64) -> usize {
+    usize::from(n > 3 && matches!(n % 10, 4 | 6 | 9))
 }
 
 fn plural_en(n: u64) -> usize {

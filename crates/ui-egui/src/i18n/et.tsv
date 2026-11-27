@@ -1,0 +1,1695 @@
+# DraftCraft Estonian (Eesti) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Loobu  
+	  OK  	  OK  
+	 or [	 või [
+	% of all commits	% kõigist muudatustest
+	* Wildcard Match	* Metamärgiga vaste
+	*VARIES*	*ERINEV*
+	+  |  Top  |  2D Wireframe	+  |  Peal  |  2D-traatraam
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	1 vaateaken
+	2 Points	2 punkti
+	2 Viewports	2 vaateakent
+	2D Solid	2D-täidis
+	3 Points	3 punkti
+	3 Viewports	3 vaateakent
+	3D Face	3D-tahk
+	3D Mouse	3D-hiir
+	3D Mouse Navigation	3D-hiirega navigeerimine
+	3D Mouse...	3D-hiir...
+	3D Operations	3D-toimingud
+	3D Polyline	3D-polüjoon
+	3D mouse busy, possibly 3DxWare or missing device permissions	3D-hiir on hõivatud, võimalik et 3DxWare või puuduvad seadmeõigused
+	3D mouse connected	3D-hiir ühendatud
+	3D mouse disconnected	3D-hiire ühendus katkes
+	3D mouse input could not be started	3D-hiire sisendit ei saanud käivitada
+	3D mouse input is unavailable on this platform	3D-hiire sisend pole sellel platvormil saadaval
+	4 Viewports	4 vaateakent
+	< Less than	< Väiksem kui
+	<> Not Equal	<> Ei võrdu
+	= Equals	= Võrdub
+	> Greater than	> Suurem kui
+	A built-in table: editing it keeps an edited copy in the drawing.	Sisseehitatud tabel: selle muutmine hoiab joonises muudetud koopiat.
+	A drawing opened from a file keeps that file's format.	Failist avatud joonis säilitab selle faili vormingu.
+	A variable name starts with a letter and has only letters, digits and _	Muutuja nimi algab tähega ja sisaldab ainult tähti, numbreid ja _
+	About	Teave
+	About DraftCraft	DraftCrafti teave
+	Absolute	Absoluutne
+	Accessibility	Juurdepääsetavus
+	Add	Lisa
+	Add Current Scale	Lisa praegune mõõtkava
+	Add Leader	Lisa viiktekst
+	Add Vertex	Lisa tipp
+	Add/Delete Scales...	Lisa/kustuta mõõtkavu...
+	Additional angles	Lisanurgad
+	Align	Joonda
+	Align Text	Joonda tekst
+	Aligned	Joondatud
+	All	Kõik
+	All Annotation Objects	Kõik annotatsiooniobjektid
+	All Scales	Kõik mõõtkavad
+	All Used Layers	Kõik kasutatud kihid
+	All files	Kõik failid
+	An array that would create more objects than this is refused.	Massiiv, mis looks sellest rohkem objekte, lükatakse tagasi.
+	Angle	Nurk
+	Angular	Nurgamõõde
+	Annotation Visibility	Annotatsioonide nähtavus
+	Annotation scale	Annotatsiooni mõõtkava
+	Annotative Object Scale	Annotatiivse objekti mõõtkava
+	Annotative Update	Annotatiivne värskendus
+	Apparent Intersection	Näiv lõikepunkt
+	Append to current selection set	Lisa praegusele valikukomplektile
+	Apply	Rakenda
+	Apply to:	Rakenda:
+	Apply true color	Rakenda täisvärv
+	Arc	Kaar
+	Arc Length	Kaare pikkus
+	Area	Pindala
+	Arrange Panel	Korralda paneel
+	Array	Massiiv
+	Attach	Manusta
+	Attach DWG...	Manusta DWG...
+	Attribute	Atribuut
+	Attribute Definition	Atribuudi definitsioon
+	Attribute Display	Atribuutide kuvamine
+	Audit	Audit
+	Auto (system language)	Automaatne (süsteemi keel)
+	Auto Constrain	Automaatsed sidemed
+	AutoConstrain	AutoConstrain
+	Automatic save every	Automaatne salvestus iga
+	Automatic save file location	Automaatse salvestuse asukoht
+	Axis, End	Telg, ots
+	Base	Alus
+	Baseline	Baasjoon
+	Batch Publish	Pakettavaldamine
+	Batch Publish...	Pakettavaldamine...
+	Binary assets added	Binaarvarasid lisatud
+	Binary assets removed	Binaarvarasid eemaldatud
+	Bind	Seo
+	Bind...	Seo...
+	Blend	Sujuv üleminek
+	Block	Plokk
+	Block Attribute Manager...	Plokiatribuutide haldur...
+	Block Description...	Ploki kirjeldus...
+	Block Editor	Plokiredaktor
+	Block Reference	Plokiviide
+	Block...	Plokk...
+	Blocks	Plokid
+	Blue	Sinine
+	Bold	Paks
+	Boolean	Tõeväärtus
+	Boundary	Piirjoon
+	Boundary...	Piirjoon...
+	Box	Risttahukas
+	Break	Katkesta
+	Break At Point	Katkesta punktis
+	Bring Above Objects	Too objektide kohale
+	Bring Annotations to Front	Too annotatsioonid ette
+	Bring to Front	Too ette
+	Bulleted list	Täpploend
+	ByBlock	Ploki järgi
+	ByColor	Värvi järgi
+	ByLayer	Kihi järgi
+	DraftCraft Help	DraftCrafti abi
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	DraftCraft hoiab need eelistused, objektihaarde režiimid ja joonestuslülitid sinu kasutajakonto jaoks ning taastab need käivitumisel.
+	Calibrate	Kalibreeri
+	Calibrate 3D Mouse	Kalibreeri 3D-hiir
+	Cancel	Loobu
+	Cartesian (x, y)	Ristkoordinaadid (x, y)
+	Center	Keskpunkt
+	Center Line	Keskjoon
+	Center Mark	Keskpunkti märk
+	Center X	Keskpunkt X
+	Center Y	Keskpunkt Y
+	Center Z	Keskpunkt Z
+	Center, Diameter	Keskpunkt, läbimõõt
+	Center, Radius	Keskpunkt, raadius
+	Center, Start, Angle	Keskpunkt, algus, nurk
+	Center, Start, End	Keskpunkt, algus, lõpp
+	Center, Start, Length	Keskpunkt, algus, pikkus
+	Chamfer	Faas
+	Change Space	Muuda ruumi
+	Change to Current Layer	Muuda praeguseks kihiks
+	Changed: {n}	Muudetud: {n}
+	Changes apply at once and are kept for next time.	Muudatused rakenduvad kohe ja jäävad järgmiseks korraks alles.
+	Circle	Ring
+	Circumference	Ümbermõõt
+	Clear	Tühjenda
+	Clear Command History	Tühjenda käsuajalugu
+	Reset Suggestion Order	Lähtesta soovituste järjekord
+	Clear History	Tühjenda ajalugu
+	Clip	Kärbi
+	Clip Viewport	Kärbi vaateakent
+	Clipboard	Lõikelaud
+	Close	Sulge
+	Close All	Sulge kõik
+	Close All Other Drawings	Sulge kõik teised joonised
+	Close Array Editing	Sulge massiivi redigeerimine
+	Close Comparison	Sulge võrdlus
+	Export Comparison	Ekspordi võrdlus
+	Closed	Suletud
+	Coincident	Kokkulangev
+	Collapse Palettes	Ahenda paletid
+	Collapse Tool Sets	Ahenda tööriistakomplektid
+	Collinear	Kollineaarne
+	Color	Värv
+	Color 8	Värv 8
+	Color 9	Värv 9
+	Color Index	Värviindeks
+	Color-dependent	Värvist sõltuv
+	Color...	Värv...
+	Command Aliases	Käsualiased
+	Command History	Käsuajalugu
+	Command Line	Käsurida
+	Command Line History Lines	Käsurea ajaloo read
+	Command Reference	Käskude teatmik
+	Command line history	Käsurea ajalugu
+	Commits	Muudatused
+	Company	Ettevõte
+	Compare Drawings...	Võrdle jooniseid...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Raalprojekteerimine ja joonestamine: avatud lähtekoodiga, puhtalt lehelt loodud CAD-rakendus, kirjutatud puhtas Rustis.
+	Concentric	Kontsentriline
+	Cone	Koonus
+	Constraint Bars	Sidemeribad
+	Constraint Settings	Sidemete sätted
+	Construction Line	Abijoon
+	Contents	Sisukord
+	Continue	Jätka
+	Contributors	Kaastöölised
+	Control Vertices	Juhttipud
+	Convert	Teisenda
+	Convert to Arc	Teisenda kaareks
+	Convert to Line	Teisenda jooneks
+	Copy	Kopeeri
+	Copy Full File Path	Kopeeri faili täielik tee
+	Copy History	Kopeeri ajalugu
+	Copy Layout	Kopeeri paigutus
+	Copy Nested Objects	Kopeeri pesastatud objektid
+	Copy Selection	Kopeeri valik
+	Copy as JSON	Kopeeri JSON-ina
+	Copy with Base Point	Kopeeri baaspunktiga
+	Count	Arv
+	Count List	Loenduse loend
+	Count Table	Loenduse tabel
+	Create Block	Loo plokk
+	Creates a user parameter	Loob kasutaja parameetri
+	Crosshair size	Sihtristi suurus
+	Ctrl+Enter to finish	Ctrl+Enter lõpetab
+	Current Scale Only	Ainult praegune mõõtkava
+	Current layer	Praegune kiht
+	Current selection	Praegune valik
+	Current: {color}	Praegune: {color}
+	Cut	Lõika
+	Cut with Base Point	Lõika baaspunktiga
+	Cyan	Tsüaan
+	Cylinder	Silinder
+	DWG	DWG
+	DWG Reference...	DWG-viide...
+	DXF	DXF
+	Dark	Tume
+	Data Extraction...	Andmete eraldamine...
+	Data Link...	Andmelink...
+	Default	Vaikimisi
+	Default Save Format	Vaikimisi salvestusvorming
+	Default Save Version	Vaikimisi salvestusversioon
+	Default save version	Vaikimisi salvestusversioon
+	Define Attributes	Defineeri atribuudid
+	Define Attributes...	Defineeri atribuudid...
+	Defined width	Määratud laius
+	Degree	Aste
+	Degrees of Freedom	Vabadusastmed
+	Degrees of freedom: {n}	Vabadusastmeid: {n}
+	Delete	Kustuta
+	Delete Column	Kustuta veerg
+	Delete Constraints	Kustuta sidemed
+	Delete Current Scale	Kustuta praegune mõõtkava
+	Delete Dimension Style	Kustuta mõõtmestiil
+	Delete Duplicate Objects	Kustuta topeltobjektid
+	Delete Layer	Kustuta kiht
+	Delete Layer State	Kustuta kihi olek
+	Delete Layout	Kustuta paigutus
+	Delete Row	Kustuta rida
+	Delete Text Style	Kustuta tekstistiil
+	Delta X	Delta X
+	Delta Y	Delta Y
+	Description	Kirjeldus
+	Deselect All	Tühista kõik valikud
+	Detach	Eemalda
+	Diameter	Läbimõõt
+	Dim style	Mõõtmestiil
+	Dimension	Mõõde
+	Dimension Break	Mõõtme katkestus
+	Dimension Edit	Mõõtme redigeerimine
+	Dimension Objects Only	Ainult mõõtmeobjektid
+	Dimension Space	Mõõtmete vahe
+	Dimension Style Override	Mõõtmestiili alistamine
+	Dimension Style...	Mõõtmestiil...
+	Dimension Text Edit	Mõõtmeteksti redigeerimine
+	Dimension style	Mõõtmestiil
+	Dimensional Constraint	Mõõtmeside
+	Dimensional Constraint Parameters	Mõõtmesideme parameetrid
+	Dimensional Constraints	Mõõtmesidemed
+	Disassociate Dimensions	Eralda mõõtmete seosed
+	Display	Kuva
+	Display name	Kuvatav nimi
+	Display plot styles	Kuva printimisstiilid
+	Distance	Kaugus
+	Divide	Jaota
+	Do not plot (click: plot)	Ära prindi (klõps: prindi)
+	Donut	Rõngas
+	Double-click to edit the description	Kirjelduse muutmiseks topeltklõpsa
+	Down	Alla
+	Drafting	Joonestamine
+	Drafting Settings	Joonestussätted
+	Drafting Settings...	Joonestussätted...
+	Draw	Joonesta
+	Draw Order	Joonestusjärjestus
+	Drawing (DWG)	Joonis (DWG)
+	Drawing (DXF)	Joonis (DXF)
+	Drawing Limits	Joonise piirid
+	Drawing Recovery Manager...	Joonise taastamise haldur...
+	Drawing Template (DWT)	Joonise mall (DWT)
+	Drawing Utilities	Joonise utiliidid
+	Drawing as bytes	Joonis baitidena
+	Drawings (DWG, DXF)	Joonised (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Joonised, millel pole veel faili, salvestatakse vaikimisi versioonis. 0 minutit lülitab automaatse salvestuse välja.
+	Dynamic	Dünaamiline
+	Dynamic Dimensions	Dünaamilised mõõtmed
+	Dynamic Input	Dünaamiline sisend
+	Dynamic Input (F12)	Dünaamiline sisend (F12)
+	Edit	Redigeeri
+	Edit Array	Redigeeri massiivi
+	Edit Attributes...	Redigeeri atribuute...
+	Edit Table Cell	Redigeeri tabeli lahtrit
+	Edit Text...	Redigeeri teksti...
+	Elevation	Kõrgus
+	Ellipse	Ellips
+	Elliptical Arc	Elliptiline kaar
+	Enable 3D mouse navigation	Luba 3D-hiirega navigeerimine
+	Enable Dynamic Input (F12)	Luba dünaamiline sisend (F12)
+	End Object Isolation	Lõpeta objektide isoleerimine
+	End Width	Lõpplaius
+	End X	Lõpp X
+	End Y	Lõpp Y
+	End angle	Lõppnurk
+	Endpoint	Otspunkt
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Sisesta Top, Zero või Bottom.
+	Enter a fit data option	Sisesta sobitusandmete valik
+	Enter a pattern name	Sisesta mustri nimi
+	Enter a vertex editing option	Sisesta tipu redigeerimise valik
+	Enter an option	Sisesta valik
+	Enter angle of xline	Sisesta abijoone nurk
+	Enter angle of xline (0)	Sisesta abijoone nurk (0)
+	Enter area of rectangle in current units	Sisesta ristküliku pindala praegustes ühikutes
+	Enter attribute prompt	Sisesta atribuudi viip
+	Enter attribute tag name	Sisesta atribuudi sildi nimi
+	Enter attribute value	Sisesta atribuudi väärtus
+	Enter block name	Sisesta ploki nimi
+	Enter constraint type	Sisesta sideme tüüp
+	Enter continuity	Sisesta pidevus
+	Enter default attribute value	Sisesta atribuudi vaikeväärtus
+	Enter degree of spline	Sisesta splaini aste
+	Enter delta angle	Sisesta nurga muut
+	Enter delta length	Sisesta pikkuse muut
+	Enter dimension text	Sisesta mõõtmetekst
+	Enter dimension text (<> = measurement)	Sisesta mõõtmetekst (<> = mõõtetulemus)
+	Enter dimension value or [name=expression]	Sisesta mõõtme väärtus või [nimi=avaldis]
+	Enter dimension variable name to override	Sisesta alistatava mõõtmemuutuja nimi
+	Enter justification type	Sisesta joondustüüp
+	Enter leader text	Sisesta viiktekst
+	Enter mline scale	Sisesta multijoone mõõtkava
+	Enter mode	Sisesta režiim
+	Enter name of block to insert	Sisesta lisatava ploki nimi
+	Enter new text	Sisesta uus tekst
+	Enter next point	Sisesta järgmine punkt
+	Enter number of columns	Sisesta veergude arv
+	Enter number of data rows	Sisesta andmeridade arv
+	Enter number of items	Sisesta elementide arv
+	Enter number of items along path	Sisesta elementide arv teekonnal
+	Enter number of sides	Sisesta külgede arv
+	Enter number of turns	Sisesta pöörete arv
+	Enter percentage length	Sisesta pikkus protsentides
+	Enter rectangle length	Sisesta ristküliku pikkus
+	Enter rectangle width	Sisesta ristküliku laius
+	Enter scale factor	Sisesta mõõtkavategur
+	Enter text	Sisesta tekst
+	Enter text (use \P for new paragraphs)	Sisesta tekst (\P alustab uut lõiku)
+	Enter the number of segments	Sisesta segmentide arv
+	Enter twist direction of helix	Sisesta heeliksi keerdumissuund
+	Entire drawing	Kogu joonis
+	Equal	Võrdne
+	Erase	Kustuta
+	Evaluate	Arvuta
+	Exclude from new selection set	Jäta uuest valikukomplektist välja
+	Explode	Lõhu
+	Export	Ekspordi
+	Export Table	Ekspordi tabel
+	Export to PDF...	Ekspordi PDF-i...
+	Export...	Ekspordi...
+	Expression	Avaldis
+	Extend	Pikenda
+	Extension	Pikendus
+	Extents	Ulatus
+	External Reference	Välisviide
+	External References	Välisviited
+	Extrude	Ekstrudeeri
+	File	Fail
+	File Tab	Failivahekaart
+	Fillet	Ümardus
+	Filter	Filter
+	Filters	Filtrid
+	Find and Replace	Otsi ja asenda
+	Find...	Otsi...
+	First	Esimene
+	First commit	Esimene muudatus
+	Fit Points	Sobituspunktid
+	Fix	Fikseeri
+	Flatten Objects	Lamenda objektid
+	Format	Vorming
+	Freehand	Vabakäsi
+	Freeze	Külmuta
+	Freeze Layer	Külmuta kiht
+	Freeze in new viewports	Külmuta uutes vaateakendes
+	Freeze/Thaw	Külmuta/sulata
+	Freeze/Thaw in all viewports	Külmuta/sulata kõigis vaateakendes
+	Freeze/Thaw in the current viewport	Külmuta/sulata praeguses vaateaknas
+	From	Alates
+	From Template...	Mallist...
+	General	Üldine
+	Geometric Center	Geomeetriline kese
+	Geometric Constraint	Geomeetriline side
+	Geometric Constraints	Geomeetrilised sidemed
+	Geometry	Geomeetria
+	Get Variable	Hangi muutuja
+	Get View	Hangi vaade
+	Get from the Drawing	Hangi joonisest
+	Global	Globaalne
+	Global width	Globaalne laius
+	Grab bag	Sekalaadne
+	Gradient	Gradient
+	Gradient...	Gradient...
+	Grayscale	Halltoonid
+	Green	Roheline
+	Grid (F7)	Ruudustik (F7)
+	Grid Display	Ruudustiku kuva
+	Grid On (F7)	Ruudustik sees (F7)
+	Grid snap	Ruudustikuhaare
+	Grid spacing	Ruudustiku samm
+	Grip Edit	Pidemega redigeerimine
+	Grip Mirror	Pidemega peegeldamine
+	Grip Option	Pideme valik
+	Grip Rotate	Pidemega pööramine
+	Grip Scale	Pidemega skaleerimine
+	Grip Stretch	Pidemega venitamine
+	Grip size	Pideme suurus
+	Group	Grupp
+	Group Edit	Grupi redigeerimine
+	Group Options	Grupi valikud
+	Group Selection	Grupi valik
+	Hatch	Viirutus
+	Hatch Edit	Viirutuse redigeerimine
+	Hatch Pattern	Viirutusmuster
+	Hatch Patterns	Viirutusmustrid
+	Hatch...	Viirutus...
+	Height	Kõrgus
+	Height: {height}	Kõrgus: {height}
+	Helix	Heeliks
+	Help	Abi
+	Hide All	Peida kõik
+	Hide All Constraint Bars	Peida kõik sidemeribad
+	Hide All Dynamic Dimensions	Peida kõik dünaamilised mõõtmed
+	Hide DraftCraft	Peida DraftCraft
+	Hide Layer List	Peida kihtide loend
+	Hide Objects	Peida objektid
+	Hide Others	Peida teised
+	Hide Palette	Peida palett
+	Hide Palettes	Peida paletid
+	History	Ajalugu
+	Hold Shift to add to the selection	Valikule lisamiseks hoia all Shift
+	Home	Avaleht
+	Horizontal	Horisontaalne
+	HorizontalDistance	Horisontaalkaugus
+	How to apply:	Rakendamise viis:
+	ID Point	Punkti ID
+	Import	Impordi
+	Import...	Impordi...
+	In	Sisse
+	In-window Menu Bar	Aknasisene menüüriba
+	Include in new selection set	Kaasa uude valikukomplekti
+	Increment angle	Nurga samm
+	Index Color	Indeksvärv
+	Index color: {index}	Indeksvärv: {index}
+	Infer Constraints	Tuleta sidemed
+	Inquiry	Päring
+	Insert	Lisa
+	Insert Block	Lisa plokk
+	Insert Column	Lisa veerg
+	Insert Row	Lisa rida
+	Insert Table Formula	Lisa tabelivalem
+	Insert tab	Vahekaart Lisa
+	Insert this block	Lisa see plokk
+	Insertion	Lisamispunkt
+	Insertion X	Lisamispunkt X
+	Insertion Y	Lisamispunkt Y
+	Insertion Z	Lisamispunkt Z
+	Inspect Constraints	Uuri sidemeid
+	Inspect Drawing	Uuri joonist
+	Inspection	Kontroll
+	Interface Language	Liidese keel
+	Interface Theme	Liidese teema
+	Interface language	Liidese keel
+	Interface theme	Liidese teema
+	Intersect	Ühisosa
+	Intersection	Lõikepunkt
+	Isolate	Isoleeri
+	Isolate Layer	Isoleeri kiht
+	Isolate Objects	Isoleeri objektid
+	Isometric Drafting	Isomeetriline joonestamine
+	Isometric Plane	Isomeetriline tasand
+	Isometric snap	Isomeetriline haare
+	Jogged	Murtud
+	Jogged Linear	Murtud lineaarne
+	Join	Ühenda
+	Keep an editable copy of this table in the drawing	Hoia selle tabeli redigeeritavat koopiat joonises
+	Keep the system cursor visible over the drawing area	Hoia süsteemi kursor joonestusala kohal nähtav
+	Language	Keel
+	Largest array	Suurim massiiv
+	Last	Viimane
+	Last commit	Viimane muudatus
+	Layer	Kiht
+	Layer Delete	Kihi kustutamine
+	Layer Match	Kihi sobitamine
+	Layer Merge	Kihtide ühendamine
+	Layer Off	Kiht välja
+	Layer Properties	Kihi omadused
+	Layer Properties Manager	Kihtide omaduste haldur
+	Layer Properties Manager — current viewport	Kihtide omaduste haldur — praegune vaateaken
+	Layer State	Kihi olek
+	Layer States Manager...	Kihiolekute haldur...
+	Layer Tools	Kihitööriistad
+	Layer contains objects (double-click to make current)	Kihil on objekte (praeguseks muutmiseks topeltklõpsa)
+	Layer is empty (double-click to make current)	Kiht on tühi (praeguseks muutmiseks topeltklõpsa)
+	Layers	Kihid
+	Layers Palette	Kihtide palett
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Kuvatud kihid: {shown}/{total}.   Praegune kiht: {layer}
+	Layout	Paigutus
+	Layout list	Paigutuste loend
+	Layout paper	Paigutuse paber
+	Layout {name}: {table}	Paigutus {name}: {table}
+	Leader	Viiktekst
+	Leaders Only	Ainult viiktekstid
+	Left	Vasak
+	Left device button: zoom extents. Right device button: calibrate.	Seadme vasak nupp: suumi ulatuseni. Parem nupp: kalibreeri.
+	Length	Pikkus
+	Length X	Pikkus X
+	Length Y	Pikkus Y
+	Lengthen	Pikenda
+	Light	Hele
+	Line	Joon
+	Line delta	Ridade muut
+	Linear	Lineaarne
+	Lines +/−	Read +/−
+	Lines added	Lisatud read
+	Lines deleted	Kustutatud read
+	Lines of Command History	Käsuajaloo read
+	Linetype	Joonetüüp
+	Linetype Scale	Joonetüübi mõõtkava
+	Linetype scale	Joonetüübi mõõtkava
+	Linetype...	Joonetüüp...
+	Lineweight	Joonepaksus
+	Lineweight...	Joonepaksus...
+	List	Loend
+	List Blocks	Loetle plokid
+	List Dimension Styles	Loetle mõõtmestiilid
+	List Groups	Loetle grupid
+	List Layer States	Loetle kihiolekud
+	List Layouts	Loetle paigutused
+	List System Variables	Loetle süsteemimuutujad
+	List Text Styles	Loetle tekstistiilid
+	Load all	Laadi kõik
+	Load...	Laadi...
+	Loaded	Laaditud
+	Loaded linetypes	Laaditud joonetüübid
+	Lock	Lukusta
+	Lock Layer	Lukusta kiht
+	Lock viewport	Lukusta vaateaken
+	Lock/Unlock	Lukusta/ava
+	Loft	Loft
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Pole seotud ettevõttega Autodesk, Inc.
+	MODEL	MUDEL
+	MText	MText
+	Magenta	Magenta
+	Major line every	Põhijoon iga
+	Make Current	Muuda praeguseks
+	Make Object's Layer Current	Muuda objekti kiht praeguseks
+	Make it a block of this drawing, keeping its layer names	Tee sellest selle joonise plokk, säilitades kihtide nimed
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Tee sellest selle joonise plokk; selle kihtidest saavad NIMI$0$KIHT
+	Make...	Loo...
+	Match Layer	Sobita kiht
+	Match Properties	Sobita omadused
+	Measure	Mõõda
+	Measure Distance	Mõõda kaugus
+	Measure Geometry	Mõõda geomeetriat
+	Merge Cells	Ühenda lahtrid
+	Merged PRs	Ühendatud PR-id
+	Mid Between 2 Points	Kahe punkti keskkoht
+	Midpoint	Keskpunkt
+	Mirror	Peegelda
+	Model	Mudel
+	Model Space (in viewport)	Mudeliruum (vaateaknas)
+	Model background	Mudeli taust
+	Modeling	Modelleerimine
+	Models	Mudelid
+	Modify	Muuda
+	More toolbar commands	Veel tööriistariba käske
+	Move	Teisalda
+	Move sideways to pan; push/pull or twist to zoom.	Liiguta külgsuunas panoraamimiseks; suumimiseks lükka/tõmba või keera.
+	Multileader	Multiviiktekst
+	Multileader Style...	Multiviikteksti stiil...
+	Multileader style	Multiviikteksti stiil
+	Multiline	Multijoon
+	Multiline Style...	Multijoone stiil...
+	Multiline Text	Mitmerealine tekst
+	Multiline Text...	Mitmerealine tekst...
+	Multiline...	Multijoon...
+	Multiple	Mitu
+	Multiple Point	Mitu punkti
+	My	Minu
+	My properties: not available yet	Minu omadused: pole veel saadaval
+	Name	Nimi
+	Name (A–Z)	Nimi (A–Ü)
+	Named	Nimelised
+	Named Viewports...	Nimelised vaateaknad...
+	Named Views...	Nimelised vaated...
+	Nearest	Lähim
+	New	Uus
+	New (metric)	Uus (meetriline)
+	New CTB	Uus CTB
+	New Drawing	Uus joonis
+	New Drawing (⌘N)	Uus joonis (⌘N)
+	New Drawing...	Uus joonis...
+	New Layer	Uus kiht
+	New Layout	Uus paigutus
+	New STB	Uus STB
+	New VP Freeze	Uue VA külmutus
+	New Viewports...	Uued vaateaknad...
+	New from Template...	Uus mallist...
+	New layout	Uus paigutus
+	New state name	Uue oleku nimi
+	New style	Uus stiil
+	Next Change	Järgmine muudatus
+	No	Ei
+	No blocks defined in this drawing.	Selles joonises pole plokke defineeritud.
+	No contributor data was built into this copy.	Sellesse koopiasse pole kaastööliste andmeid lisatud.
+	No external references are attached.	Välisviiteid pole manustatud.
+	No model credits were built into this copy.	Sellesse koopiasse pole mudelite tunnustusi lisatud.
+	No plot style tables.	Printimisstiili tabeleid pole.
+	No saved layer states	Salvestatud kihiolekuid pole
+	No selection	Valik puudub
+	No supported 3D mouse found	Toetatud 3D-hiirt ei leitud
+	Node	Sõlm
+	None	Puudub
+	Normal	Tavaline
+	Not Found	Ei leitud
+	Not available	Pole saadaval
+	Not available yet	Pole veel saadaval
+	Not loaded	Laadimata
+	Numbered list	Nummerdatud loend
+	OK	OK
+	Object	Objekt
+	Object Snap	Objektihaare
+	Object Snap (F3)	Objektihaare (F3)
+	Object Snap On (F3)	Objektihaare sees (F3)
+	Object Snap Tracking	Objektihaarde jälgimine
+	Object Snap Tracking (F11)	Objektihaarde jälgimine (F11)
+	Object Snap Tracking Settings	Objektihaarde jälgimise sätted
+	Object snap aperture	Objektihaarde ava
+	Object snap marker size	Objektihaarde markeri suurus
+	Object type:	Objekti tüüp:
+	Oblique	Kaldu
+	Off	Väljas
+	Offset	Nihe
+	On	Sees
+	On/Off	Sees/väljas
+	Only in this drawing: {n}	Ainult selles joonises: {n}
+	Only in {name}: {n}	Ainult failis {name}: {n}
+	Oops	Oih
+	Open	Ava
+	Open (⌘O)	Ava (⌘O)
+	Open Sample Drawing	Ava näidisjoonis
+	Open Xref	Ava välisviide
+	Open a drawing first.	Ava kõigepealt joonis.
+	Open and Save	Avamine ja salvestamine
+	Open sample drawing	Ava näidisjoonis
+	Open...	Ava...
+	Operator:	Operaator:
+	Options	Valikud
+	Options...	Valikud...
+	Orbit	Orbiit
+	Ordinate	Ordinaatmõõde
+	Ortho (F8)	Orto (F8)
+	Ortho Mode	Ortorežiim
+	Ortho Mode (F8)	Ortorežiim (F8)
+	Osnap Settings...	Objektihaarde sätted...
+	Out	Välja
+	Over-constrained	Üle seotud
+	Overlay	Ülekate
+	Override	Alistus
+	PAPER	PABER
+	PRs	PR-id
+	Page Setup Manager	Lehekülje häälestuse haldur
+	Page Setup Manager...	Lehekülje häälestuse haldur...
+	Pan	Panoraami
+	Pan Down	Panoraami alla
+	Pan Left	Panoraami vasakule
+	Pan Right	Panoraami paremale
+	Pan Up	Panoraami üles
+	Pan sensitivity	Panoraamimise tundlikkus
+	Paper Space	Paberiruum
+	Parallel	Paralleelne
+	Parameters Manager	Parameetrite haldur
+	Parametric	Parameetriline
+	Paste	Kleebi
+	Paste as Block	Kleebi plokina
+	Paste to Command Line	Kleebi käsureale
+	Paste to Original Coordinates	Kleebi algsetesse koordinaatidesse
+	Path Array	Teekonnamassiiv
+	Pattern	Muster
+	Percent	Protsent
+	Perpendicular	Ristuv
+	Pickbox size	Valikukasti suurus
+	Plot	Prindi
+	Plot (click: do not plot)	Prindi (klõps: ära prindi)
+	Plot Preview	Prindi eelvaade
+	Plot Style Manager	Printimisstiilide haldur
+	Plot Style Manager...	Printimisstiilide haldur...
+	Plot Style...	Printimisstiil...
+	Plot Styles...	Printimisstiilid...
+	Plot Window	Printimisaken
+	Plot style	Printimisstiil
+	Plot style attached to	Printimisstiil on seotud
+	Plot style table	Printimisstiili tabel
+	Plot table type	Printimistabeli tüüp
+	Plotter Manager	Plotterite haldur
+	Plotter Manager...	Plotterite haldur...
+	Plus/minus	Pluss/miinus
+	Point	Punkt
+	Point Filters	Punktifiltrid
+	Point Style...	Punktistiil...
+	Polar (distance < angle)	Polaarne (kaugus < nurk)
+	Polar Array	Polaarmassiiv
+	Polar Tracking	Polaarjälgimine
+	Polar Tracking (F10)	Polaarjälgimine (F10)
+	Polar Tracking On (F10)	Polaarjälgimine sees (F10)
+	Polar angle measurement	Polaarnurga mõõtmine
+	Polar distance	Polaarkaugus
+	Polar: {distance} < {angle}°	Polaarne: {distance} < {angle}°
+	PolarSnap	Polaarhaare
+	Polygon	Hulknurk
+	Polygonal	Hulknurkne
+	Polygonal Viewport	Hulknurkne vaateaken
+	Polyline	Polüjoon
+	Polyline Edit	Polüjoone redigeerimine
+	Position X	Asukoht X
+	Position Y	Asukoht Y
+	Position Z	Asukoht Z
+	Previous	Eelmine
+	Previous Change	Eelmine muudatus
+	Previous Layer	Eelmine kiht
+	Primitives	Primitiivid
+	Print	Prindi
+	Print...	Prindi...
+	Profiles	Profiilid
+	Properties	Omadused
+	Properties Inspector	Omaduste inspektor
+	Properties:	Omadused:
+	Proxy	Puhverobjekt
+	Purge	Puhasta
+	Pyramid	Püramiid
+	Quadrant	Veerandpunkt
+	Query Entities	Päri olemeid
+	Quick	Kiire
+	Quick Dimension	Kiirmõõtmestus
+	Quick Properties	Kiiromadused
+	Quick Select	Kiirvalik
+	Quick Select Properties	Kiirvaliku omadused
+	Quick Select...	Kiirvalik...
+	QuickCalc	Kiirkalkulaator
+	QuickCalc Pick	Kiirkalkulaatori valimine
+	Quit DraftCraft	Välju DraftCraftist
+	Radius	Raadius
+	Raster Image	Rasterpilt
+	Ray	Kiir
+	Read-only	Kirjutuskaitstud
+	Real name	Pärisnimi
+	Realtime	Reaalajas
+	Reassociate Dimensions	Seo mõõtmed uuesti
+	Recalculate Table Formulas	Arvuta tabeli valemid ümber
+	Recent	Hiljutised
+	Recent Commands	Hiljutised käsud
+	Recent Input	Hiljutine sisend
+	Recover...	Taasta...
+	Rectangle	Ristkülik
+	Rectangular	Ristkülikukujuline
+	Rectangular Array	Ristkülikmassiiv
+	Rectangular snap	Ristkülikhaare
+	Red	Punane
+	Redo	Tee uuesti
+	Redo (⇧⌘Z)	Tee uuesti (⇧⌘Z)
+	Redraw	Joonista uuesti
+	Reference Manager	Viidete haldur
+	Reference Name	Viite nimi
+	References: {n}	Viited: {n}
+	Regen	Regenereeri
+	Regen All	Regenereeri kõik
+	Region	Regioon
+	Region/Mass Properties	Regiooni/massi omadused
+	Reinitialize	Lähtesta uuesti
+	Relative	Suhteline
+	Relative to last segment	Viimase segmendi suhtes
+	Release the 3D mouse to calibrate its resting position	Puhkeasendi kalibreerimiseks vabasta 3D-hiir
+	Reload	Laadi uuesti
+	Reload All	Laadi kõik uuesti
+	Remove	Eemalda
+	Remove Leader	Eemalda viiktekst
+	Remove Vertex	Eemalda tipp
+	Remove the viewport override	Eemalda vaateakna alistus
+	Rename Dimension Style	Nimeta mõõtmestiil ümber
+	Rename Layer	Nimeta kiht ümber
+	Rename Layer State	Nimeta kihi olek ümber
+	Rename Layout	Nimeta paigutus ümber
+	Rename Text Style	Nimeta tekstistiil ümber
+	Rename...	Nimeta ümber...
+	Repeat {command}	Korda {command}
+	Replace Block...	Asenda plokk...
+	Requires a point (x,y, @dx,dy or @d<a).	Nõuab punkti (x,y, @dx,dy või @d<a).
+	Reset Palettes	Lähtesta paletid
+	Reset Panel Layout	Lähtesta paneelide paigutus
+	Reset keeps the interface language.	Lähtestamine säilitab liidese keele.
+	Reset to Defaults	Lähtesta vaikesätetele
+	Restore	Taasta
+	Restore Layer State	Taasta kihi olek
+	Reverse	Pööra suund ümber
+	Reverse the order	Pööra järjekord ümber
+	Reverse zoom direction	Pööratud suumimissuund
+	Revision Cloud	Revisioonipilv
+	Revolve	Pöörd
+	Right	Parem
+	Rotate	Pööra
+	Rotation	Pööre
+	Run Script...	Käivita skript...
+	SVG drawings (SVG, SVGZ)	SVG-joonised (SVG, SVGZ)
+	Save	Salvesta
+	Save (⌘S)	Salvesta (⌘S)
+	Save As	Salvesta nimega
+	Save As...	Salvesta nimega...
+	Save Layer State	Salvesta kihi olek
+	Save State	Salvesta olek
+	Save new drawings as	Salvesta uued joonised vormingus
+	Saved Path	Salvestatud tee
+	Scale	Skaleeri
+	Scale List...	Mõõtkavade loend...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Ekraaniluubid, ekraanilugejad ja salvestajad järgivad süsteemi kursorit.
+	Screening	Varjestus
+	Search for layer	Otsi kihti
+	Search for parameter	Otsi parameetrit
+	Search for pattern	Otsi mustrit
+	Second and next points:	Teine ja järgmised punktid:
+	Select	Vali
+	Select 2D polyline	Vali 2D-polüjoon
+	Select All	Vali kõik
+	Select Objects	Vali objektid
+	Select Similar	Vali sarnased
+	Select a 2D polyline.	Vali 2D-polüjoon.
+	Select a block reference.	Vali plokiviide.
+	Select a circle or arc.	Vali ring või kaar.
+	Select a closed polyline	Vali suletud polüjoon
+	Select a closed polyline, circle, ellipse or closed spline.	Vali suletud polüjoon, ring, ellips või suletud splain.
+	Select a closed polyline.	Vali suletud polüjoon.
+	Select a curve as the path.	Vali kõver teekonnaks.
+	Select a dimension constraint type	Vali mõõtmesideme tüüp
+	Select a line object	Vali joonobjekt
+	Select a line object.	Vali joonobjekt.
+	Select a line or an arc.	Vali joon või kaar.
+	Select a line or polyline segment	Vali joon või polüjoone segment
+	Select a line, arc or open polyline.	Vali joon, kaar või avatud polüjoon.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Vali teekonnaks joon, kaar, ring, polüjoon, ellips või splain.
+	Select a line, circle, arc or polyline segment.	Vali joon, ring, kaar või polüjoone segment.
+	Select a line.	Vali joon.
+	Select a polyline.	Vali polüjoon.
+	Select a text, mtext, attribute definition or dimension.	Vali tekst, mitmerealine tekst, atribuudi definitsioon või mõõde.
+	Select an annotation object	Vali annotatsiooniobjekt
+	Select an arc or circle	Vali kaar või ring
+	Select an arc.	Vali kaar.
+	Select an object	Vali objekt
+	Select an object to change	Vali muudetav objekt
+	Select an object to measure	Vali mõõdetav objekt
+	Select an object.	Vali objekt.
+	Select an open curve.	Vali avatud kõver.
+	Select an open line, arc, polyline, ellipse arc or spline.	Vali avatud joon, kaar, polüjoon, elliptiline kaar või splain.
+	Select arc or circle	Vali kaar või ring
+	Select arc or polyline arc segment	Vali kaar või polüjoone kaaresegment
+	Select arc style	Vali kaare stiil
+	Select arc, circle, line	Vali kaar, ring, joon
+	Select at least two objects to join.	Vali vähemalt kaks ühendatavat objekti.
+	Select circle or arc to add center mark	Vali ring või kaar keskpunkti märgi lisamiseks
+	Select closed objects (regions, closed polylines, circles).	Vali suletud objektid (regioonid, suletud polüjooned, ringid).
+	Select first line	Vali esimene joon
+	Select first line or arc	Vali esimene joon või kaar
+	Select first object	Vali esimene objekt
+	Select first point	Vali esimene punkt
+	Select nested objects to copy	Vali kopeeritavad pesastatud objektid
+	Select object	Vali objekt
+	Select object to dimension	Vali mõõtmestatav objekt
+	Select object to divide	Vali jaotatav objekt
+	Select object to extend or shift-select to trim	Vali pikendatav objekt või kärpimiseks vali koos Shiftiga
+	Select object to measure	Vali mõõdetav objekt
+	Select object to offset	Vali nihutatav objekt
+	Select object to trim or shift-select to extend	Vali kärbitav objekt või pikendamiseks vali koos Shiftiga
+	Select objects	Vali objektid
+	Select objects (crossing window first corner)	Vali objektid (lõikava akna esimene nurk)
+	Select objects first, then choose a command	Vali kõigepealt objektid, siis käsk
+	Select objects to array.	Vali massiivi objektid.
+	Select objects to stretch by crossing-window or crossing-polygon...	Vali venitatavad objektid lõikava akna või lõikava hulknurgaga...
+	Select objects:	Vali objektid:
+	Select one polyline (Multiple is available through the JSON form).	Vali üks polüjoon (Mitu on saadaval JSON-vormi kaudu).
+	Select path curve	Vali teekonna kõver
+	Select point or object	Vali punkt või objekt
+	Select polyline	Vali polüjoon
+	Select second line	Vali teine joon
+	Select second line or shift-select to apply corner	Vali teine joon või nurga moodustamiseks vali koos Shiftiga
+	Select second object	Vali teine objekt
+	Select second object or shift-select to apply corner	Vali teine objekt või nurga moodustamiseks vali koos Shiftiga
+	Select second point	Vali teine punkt
+	Select spline	Vali splain
+	Select symmetry line	Vali sümmeetriajoon
+	Select two points	Vali kaks punkti
+	Selection	Valik
+	Selection Cycling	Valiku tsükkel
+	Send Hatches to Back	Saada viirutused taha
+	Send Under Objects	Saada objektide alla
+	Send to Back	Saada taha
+	Services	Teenused
+	Set Current	Määra praeguseks
+	Set Current Dimension Style	Määra praegune mõõtmestiil
+	Set Current Text Style	Määra praegune tekstistiil
+	Set Current Viewport	Määra praegune vaateaken
+	Set Layer Properties	Määra kihi omadused
+	Set Properties	Määra omadused
+	Set Table Cell	Määra tabeli lahter
+	Set Table Cell Style	Määra tabeli lahtri stiil
+	Set Variable	Määra muutuja
+	Set View	Määra vaade
+	Settings...	Sätted...
+	Share	Jaga
+	Show	Kuva
+	Show All	Kuva kõik
+	Show All Constraint Bars	Kuva kõik sidemeribad
+	Show All Dynamic Dimensions	Kuva kõik dünaamilised mõõtmed
+	Show Annotative Objects	Kuva annotatiivsed objektid
+	Show Layer List	Kuva kihtide loend
+	Show Quick Properties for selected objects	Kuva valitud objektide kiiromadused
+	Show System Cursor	Kuva süsteemi kursor
+	Show and hide the tools of this category	Kuva ja peida selle kategooria tööriistad
+	Show command prompting near the crosshairs	Kuva käsuviibad sihtristi lähedal
+	Show in Tool Sets	Kuva tööriistakomplektides
+	Show/Hide Lineweight	Kuva/peida joonepaksus
+	Show/Hide Transparency	Kuva/peida läbipaistvus
+	Single Line Text	Üherealine tekst
+	Single Point	Üksik punkt
+	Single...	Üksik...
+	Smooth	Silu
+	Snap	Haare
+	Snap Mode	Haarderežiim
+	Snap Mode (F9)	Haarderežiim (F9)
+	Snap On (F9)	Haare sees (F9)
+	Snap Overrides	Haarde alistused
+	Snap X spacing	Haarde X-samm
+	Snap and Grid	Haare ja ruudustik
+	Snap type	Haarde tüüp
+	Snap, grid, polar tracking and Dynamic Input:	Haare, ruudustik, polaarjälgimine ja dünaamiline sisend:
+	Solid	Täidis
+	Solid Editing	Tahkiste redigeerimine
+	Sort	Sordi
+	Specify a point	Määra punkt
+	Specify a scale for the hatch pattern	Määra viirutusmustri mõõtkava
+	Specify a second extension line origin	Määra teise abijoone alguspunkt
+	Specify an angle for the hatch pattern	Määra viirutusmustri nurk
+	Specify angle end point	Määra nurga lõpp-punkt
+	Specify angle of dimension line	Määra mõõtjoone nurk
+	Specify angle of dimension text	Määra mõõtmeteksti nurk
+	Specify angle start point	Määra nurga alguspunkt
+	Specify angle vertex	Määra nurga tipp
+	Specify angle vertex point	Määra nurga tipp-punkt
+	Specify arc length dimension location	Määra kaare pikkuse mõõtme asukoht
+	Specify axis endpoint of ellipse	Määra ellipsi telje otspunkt
+	Specify base diameter	Määra aluse läbimõõt
+	Specify base point	Määra baaspunkt
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Määra baaspunkt või nihe (reaalajas panoraamimiseks lohista hiire keskmise nupuga)
+	Specify base radius	Määra aluse raadius
+	Specify center of donut	Määra rõnga keskpunkt
+	Specify center of ellipse	Määra ellipsi keskpunkt
+	Specify center of polygon	Määra hulknurga keskpunkt
+	Specify center point for circle	Määra ringi keskpunkt
+	Specify center point of arc	Määra kaare keskpunkt
+	Specify center point of arc (hold Ctrl to switch direction)	Määra kaare keskpunkt (suuna vahetamiseks hoia all Ctrl)
+	Specify center point of array	Määra massiivi keskpunkt
+	Specify center point of base	Määra aluse keskpunkt
+	Specify corner of viewport	Määra vaateakna nurk
+	Specify corner of window, enter a scale factor (nX or nXP)	Määra akna nurk, sisesta mõõtkavategur (nX või nXP)
+	Specify diameter of circle	Määra ringi läbimõõt
+	Specify dimension arc line location	Määra mõõtkaare asukoht
+	Specify dimension line location	Määra mõõtjoone asukoht
+	Specify distance between turns	Määra pöörete vaheline kaugus
+	Specify distance to other axis	Määra kaugus teise teljeni
+	Specify end angle	Määra lõppnurk
+	Specify end point of arc	Määra kaare lõpp-punkt
+	Specify end point of arc (hold Ctrl to switch direction)	Määra kaare lõpp-punkt (suuna vahetamiseks hoia all Ctrl)
+	Specify ending width	Määra lõpplaius
+	Specify ending width for next segment	Määra järgmise segmendi lõpplaius
+	Specify endpoint of arc	Määra kaare otspunkt
+	Specify endpoint of axis	Määra telje otspunkt
+	Specify endpoint of line	Määra joone otspunkt
+	Specify feature location	Määra elemendi asukoht
+	Specify fillet radius	Määra ümardusraadius
+	Specify fillet radius for rectangles	Määra ristkülikute ümardusraadius
+	Specify first angle endpoint	Määra nurga esimene otspunkt
+	Specify first chamfer distance	Määra esimene faasikaugus
+	Specify first chamfer distance for rectangles	Määra ristkülikute esimene faasikaugus
+	Specify first constraint point	Määra esimene sidemepunkt
+	Specify first corner	Määra esimene nurk
+	Specify first corner point	Määra esimene nurgapunkt
+	Specify first destination point	Määra esimene sihtpunkt
+	Specify first end point of circle's diameter	Määra ringi läbimõõdu esimene otspunkt
+	Specify first endpoint of edge	Määra serva esimene otspunkt
+	Specify first extension line origin	Määra esimese abijoone alguspunkt
+	Specify first point	Määra esimene punkt
+	Specify first point of mirror line	Määra peegeldusjoone esimene punkt
+	Specify first point on circle	Määra ringi esimene punkt
+	Specify first point on circle: _tan to	Määra ringi esimene punkt: _tan objektini
+	Specify first source point	Määra esimene lähtepunkt
+	Specify height	Määra kõrgus
+	Specify helix height	Määra heeliksi kõrgus
+	Specify included angle	Määra kesknurk
+	Specify included angle (hold Ctrl to switch direction)	Määra kesknurk (suuna vahetamiseks hoia all Ctrl)
+	Specify insertion base point	Määra lisamise baaspunkt
+	Specify insertion point	Määra lisamispunkt
+	Specify inside diameter of donut	Määra rõnga siseläbimõõt
+	Specify leader arrowhead location	Määra viikteksti nooleotsa asukoht
+	Specify leader endpoint	Määra viikteksti otspunkt
+	Specify leader landing location	Määra viikteksti riiuli asukoht
+	Specify length for rectangles	Määra ristkülikute pikkus
+	Specify length of chord	Määra kõõlu pikkus
+	Specify length of chord (hold Ctrl to switch direction)	Määra kõõlu pikkus (suuna vahetamiseks hoia all Ctrl)
+	Specify length of segment	Määra segmendi pikkus
+	Specify line width for rectangles	Määra ristkülikute joone laius
+	Specify location for new vertex	Määra uue tipu asukoht
+	Specify minimum length of arc	Määra kaare minimaalne pikkus
+	Specify new end point	Määra uus lõpp-punkt
+	Specify new location for marked vertex	Määra märgitud tipu uus asukoht
+	Specify new width for all segments	Määra kõigile segmentidele uus laius
+	Specify next point	Määra järgmine punkt
+	Specify offset distance	Määra nihkekaugus
+	Specify opposite corner	Määra vastasnurk
+	Specify other corner point	Määra teine nurgapunkt
+	Specify other endpoint of axis	Määra telje teine otspunkt
+	Specify outside diameter of donut	Määra rõnga välisläbimõõt
+	Specify point	Määra punkt
+	Specify point on object for first tangent of circle	Määra objektil punkt ringi esimese puutuja jaoks
+	Specify point on object for second tangent of circle	Määra objektil punkt ringi teise puutuja jaoks
+	Specify point on side to offset	Määra punkt nihutamise poolel
+	Specify radius of arc	Määra kaare raadius
+	Specify radius of arc (hold Ctrl to switch direction)	Määra kaare raadius (suuna vahetamiseks hoia all Ctrl)
+	Specify radius of circle	Määra ringi raadius
+	Specify rotation angle	Määra pöördenurk
+	Specify rotation angle of text	Määra teksti pöördenurk
+	Specify scale factor	Määra mõõtkavategur
+	Specify second angle endpoint	Määra nurga teine otspunkt
+	Specify second break point	Määra teine katkestuspunkt
+	Specify second chamfer distance for rectangles	Määra ristkülikute teine faasikaugus
+	Specify second constraint point	Määra teine sidemepunkt
+	Specify second destination point	Määra teine sihtpunkt
+	Specify second end point of circle's diameter	Määra ringi läbimõõdu teine otspunkt
+	Specify second endpoint of edge	Määra serva teine otspunkt
+	Specify second extension line origin	Määra teise abijoone alguspunkt
+	Specify second point	Määra teine punkt
+	Specify second point of arc	Määra kaare teine punkt
+	Specify second point of mirror line	Määra peegeldusjoone teine punkt
+	Specify second point on circle	Määra ringi teine punkt
+	Specify second point on circle: _tan to	Määra ringi teine punkt: _tan objektini
+	Specify second point or <use first point as displacement>	Määra teine punkt või <kasuta esimest punkti nihkena>
+	Specify second source point	Määra teine lähtepunkt
+	Specify side to offset	Määra nihutamise pool
+	Specify start angle	Määra algnurk
+	Specify start point	Määra alguspunkt
+	Specify start point of arc	Määra kaare alguspunkt
+	Specify start point of polyline	Määra polüjoone alguspunkt
+	Specify start point of text	Määra teksti alguspunkt
+	Specify starting width	Määra alglaius
+	Specify starting width for next segment	Määra järgmise segmendi alglaius
+	Specify tangent direction for the start point of arc	Määra kaare alguspunkti puutuja suund
+	Specify the elevation for rectangles	Määra ristkülikute kõrgus
+	Specify thickness for rectangles	Määra ristkülikute paksus
+	Specify third point on circle	Määra ringi kolmas punkt
+	Specify third point on circle: _tan to	Määra ringi kolmas punkt: _tan objektini
+	Specify third source point or <continue>	Määra kolmas lähtepunkt või <jätka>
+	Specify through point	Määra läbimispunkt
+	Specify top diameter	Määra ülaosa läbimõõt
+	Specify top radius	Määra ülaosa raadius
+	Specify total angle	Määra kogunurk
+	Specify total length	Määra kogupikkus
+	Specify width for rectangles	Määra ristkülikute laius
+	Sphere	Sfäär
+	Spline	Splain
+	Spline Edit	Splaini redigeerimine
+	Stack (type 1/2 then select)	Virn (kirjuta 1/2 ja vali)
+	Standard	Standardne
+	Start	Algus
+	Start Width	Alglaius
+	Start X	Algus X
+	Start Y	Algus Y
+	Start angle	Algnurk
+	Start, Center, Angle	Algus, keskpunkt, nurk
+	Start, Center, End	Algus, keskpunkt, lõpp
+	Start, Center, Length	Algus, keskpunkt, pikkus
+	Start, End, Angle	Algus, lõpp, nurk
+	Start, End, Direction	Algus, lõpp, suund
+	Start, End, Radius	Algus, lõpp, raadius
+	Status	Olek
+	Status Bar	Olekuriba
+	Stretch	Venita
+	Stretch Vertex	Venita tippu
+	Style: Standard	Stiil: Standard
+	Subtract	Lahuta
+	Sweep	Pühkimine
+	Switch Drawing	Vaheta joonist
+	Switch Layout	Vaheta paigutust
+	Switch between model space in a viewport and paper space	Lülitu vaateakna mudeliruumi ja paberiruumi vahel
+	Symmetric	Sümmeetriline
+	Synchronize Attributes	Sünkrooni atribuudid
+	Synchronize Multiple-scale Positions	Sünkrooni mitme mõõtkava asukohad
+	TOP	ÜLAL
+	Table	Tabel
+	Table Breaks	Tabeli katkestused
+	Table Cell Style	Tabeli lahtri stiil
+	Table Style...	Tabelistiil...
+	Table style	Tabelistiil
+	Table...	Tabel...
+	Tan, Tan, Radius	Puut, puut, raadius
+	Tan, Tan, Tan	Puut, puut, puut
+	Tangent	Puutuja
+	Temporary track point	Ajutine jälgimispunkt
+	Text	Tekst
+	Text Editor	Tekstiredaktor
+	Text Height	Teksti kõrgus
+	Text Objects Only	Ainult tekstiobjektid
+	Text Style...	Tekstistiil...
+	Text height	Teksti kõrgus
+	Text override	Teksti alistus
+	Text style	Tekstistiil
+	Thaw All Layers	Sulata kõik kihid
+	Thaw Layer	Sulata kiht
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Ava määrab, kui lähedale punktile peab kursor jõudma, et objektihaare selle leiaks.
+	There is nothing here yet.	Siin pole veel midagi.
+	Thickness	Paksus
+	Time	Aeg
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Ajatundlik paremklõps: kiire klõps on Enter, hoidmine avab menüü
+	To	Kuni
+	To get started, create or open a drawing.	Alustamiseks loo või ava joonis.
+	Toggle PICKADD (off: each pick replaces the selection)	Lülita PICKADD (väljas: iga valimine asendab valiku)
+	Toggle PICKADD (on: picks add to the selection)	Lülita PICKADD (sees: valimised lisatakse valikule)
+	Tolerance...	Tolerants...
+	Tool Bar	Tööriistariba
+	Tool Sets	Tööriistakomplektid
+	Tools	Tööriistad
+	Torus	Toor
+	Trace	Jälg
+	Track orthogonally only	Jälgi ainult ortogonaalselt
+	Track using all polar angle settings	Jälgi kõigi polaarnurga sätetega
+	Transparency	Läbipaistvus
+	Trim	Kärbi
+	True Color	Täisvärv
+	Turn All Layers On	Lülita kõik kihid sisse
+	Turn Off Layer	Lülita kiht välja
+	Turn On Layer	Lülita kiht sisse
+	Turn Quick Properties off (QPMODE)	Lülita kiiromadused välja (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Väljalülitatuna avab paremklõps käsu ajal alati kiirmenüü.
+	Type	Tüüp
+	Type a command	Sisesta käsk
+	Type text; Enter starts a new paragraph	Kirjuta teksti; Enter alustab uut lõiku
+	UCS Icon	UCS-ikoon
+	Undo	Võta tagasi
+	Undo (⌘Z)	Võta tagasi (⌘Z)
+	Ungroup	Tühista grupp
+	Union	Ühend
+	Unisolate Layer	Tühista kihi isoleerimine
+	Units Conversion	Ühikute teisendus
+	Units...	Ühikud...
+	Unload	Laadi maha
+	Unloaded	Maha laaditud
+	Unlock Layer	Ava kihi lukustus
+	Unlock viewport	Ava vaateakna lukustus
+	Unmerge Cells	Tühista lahtrite ühendamine
+	Unreferenced	Viitamata
+	Unresolved	Lahendamata
+	Unsaved Layer State	Salvestamata kihi olek
+	Up	Üles
+	Update	Värskenda
+	Update Data Links	Värskenda andmelinke
+	Use System Setting	Kasuta süsteemi sätet
+	Use for this layout	Kasuta selle paigutuse jaoks
+	Use object linetype	Kasuta objekti joonetüüpi
+	Use object lineweight	Kasuta objekti joonepaksust
+	User	Kasutaja
+	User Parameters	Kasutaja parameetrid
+	User Preferences	Kasutaja eelistused
+	Username	Kasutajanimi
+	VP Color	VA värv
+	VP Freeze	VA külmutus
+	Value	Väärtus
+	Value:	Väärtus:
+	Variables	Muutujad
+	Version	Versioon
+	Version 2000	Versioon 2000
+	Version 2004	Versioon 2004
+	Version 2007	Versioon 2007
+	Version 2010	Versioon 2010
+	Version 2013	Versioon 2013
+	Version 2018	Versioon 2018
+	Version {version}	Versioon {version}
+	Vertical	Vertikaalne
+	VerticalDistance	Vertikaalkaugus
+	View	Vaade
+	ViewCube	ViewCube
+	Viewport	Vaateaken
+	Viewport Layer Freeze	Vaateakna kihi külmutus
+	Viewport Properties	Vaateakna omadused
+	Viewport is locked	Vaateaken on lukustatud
+	Viewport scale	Vaateakna mõõtkava
+	Viewport {id}	Vaateaken {id}
+	Viewports	Vaateaknad
+	Volume	Ruumala
+	WCS	WCS
+	White	Valge
+	Width factor	Laiustegur
+	Window	Aken
+	Wipeout	Varjamine
+	Workspace Switching	Tööruumi vahetamine
+	Write Block	Kirjuta plokk
+	X	X
+	Xline	Abijoon
+	Y	Y
+	Yellow	Kollane
+	Yes	Jah
+	Zoom	Suumi
+	Zoom All	Suumi kõik
+	Zoom Dynamic	Dünaamiline suum
+	Zoom Extents	Suumi ulatuseni
+	Zoom In	Suurenda
+	Zoom Object	Suumi objektini
+	Zoom Out	Vähenda
+	Zoom Previous	Eelmine suum
+	Zoom Realtime	Reaalajas suum
+	Zoom Window	Suumi aknani
+	Zoom sensitivity	Suumimise tundlikkus
+	error	viga
+	min	min
+	objects	objekti
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (side {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} side {name} = {expression}  (redigeerimiseks topeltklõpsa)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Uus kasutaja parameeter
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ lõpetab
+@plural	{n} commit	{n} muudatus|{n} muudatust
+@plural	{n} contributor	{n} kaastööline|{n} kaastöölist
+	Check for Updates…	Kontrolli värskendusi…
+	DraftCraft is up to date.	DraftCraft on ajakohane.
+	Could not check for updates.	Värskendusi ei õnnestunud kontrollida.
+	Add to Working Set	Lisa töökomplekti
+	Add: Pick points	Lisa: vali punktid
+	Add: Select objects	Lisa: vali objektid
+	Add…	Lisa…
+	Alias	Alias
+	Alias file: {file}	Aliasefail: {file}
+	Align Multileaders	Joonda multiviiktekstid
+	Analyze Shapes	Analüüsi kujundeid
+	Analyze Usage	Analüüsi kasutust
+	Animation Effects	Animatsiooniefektid
+	Animation effects	Animatsiooniefektid
+	Associative	Assotsiatiivne
+	Backup copy	Varukoopia
+	Block to create or edit	Loodav või redigeeritav plokk
+	Bottom left	All vasakul
+	Bottom right	All paremal
+	Boundaries	Piirjooned
+	Boundaries picked: {n}	Valitud piirjooni: {n}
+	Break-line Symbol	Katkestusjoone sümbol
+	Centered	Tsentreeritud
+	Change Properties	Muuda omadusi
+	Choose the command the alias starts.	Vali käsk, mille alias käivitab.
+	Click the ruler to add a tab stop, right-click to remove one	Tabulaatori lisamiseks klõpsa joonlaual, eemaldamiseks paremklõpsa
+	Click to set new origin	Uue alguspunkti määramiseks klõpsa
+	Close Block Editor	Sulge plokiredaktor
+	Collect	Kogu
+	Collect Multileaders	Kogu multiviiktekstid
+	Color 1	Värv 1
+	Color 2	Värv 2
+	Command	Käsk
+	Convert Text to Mtext	Teisenda tekst mitmerealiseks tekstiks
+	Create backup copy with each save	Loo iga salvestusega varukoopia
+	Create separate hatches	Loo eraldi viirutused
+	Crossing selection color:	Lõikava valiku värv:
+	Curved	Kõver
+	Customize	Kohanda
+	Default to boundary extents	Vaikimisi piirjoonte ulatus
+	Define each corner of the selection window with a separate click.	Määra valikuakna iga nurk eraldi klõpsuga.
+	Discard	Loobu muudatustest
+	Drag Dynamic Grip	Lohista dünaamilist pidet
+	Dynamic Block Data	Dünaamilise ploki andmed
+	Dynamic Block Grips	Dünaamilise ploki pidemed
+	Dynamic Block Reference	Dünaamilise ploki viide
+	Edit Block Definition	Redigeeri ploki definitsiooni
+	Edit Command Aliases (PGP)...	Redigeeri käsualiaseid (PGP)...
+	Edit Multileader	Redigeeri multiviikteksti
+	Edit Reference In-Place	Redigeeri viidet kohapeal
+	Edit…	Redigeeri…
+	Evaluate LISP	Väärtusta LISP
+	Exclude:	Jäta välja:
+	Explode Attributes to Text	Lõhu atribuudid tekstiks
+	Express Tools	Express Tools
+	Font	Font
+	Grips	Pidemed
+	Groups	Grupid
+	Hatch Pick	Viirutuse valimine
+	Hatch and Gradient	Viirutus ja gradient
+	Hatch origin	Viirutuse alguspunkt
+	Hatches	Viirutused
+	Hemispherical	Poolsfääriline
+	Ignore	Eira
+	Imperial (inches)	Briti (tollid)
+	Implied Loops	Kaudsed silmused
+	Indicate selection area	Näita valikuala
+	Interface scale	Liidese mastaap
+	Inverted	Pööratud
+	Island	Saar
+	Island detection	Saarte tuvastamine
+	Italic	Kaldkiri
+	Justify	Rööpjoonda
+	Load Application...	Laadi rakendus...
+	Metric (millimetres)	Meetriline (millimeetrid)
+	More than {n} aliases.	Üle {n} aliase.
+	Move/Copy/Rotate	Teisalda/kopeeri/pööra
+	Multiline text	Mitmerealine tekst
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	Uus ja esimene joonis käivitumisel kasutavad neid ühikuid, kui vaikemalli pole määratud (QNEWTEMPLATE).
+	New block	Uus plokk
+	No alias file loaded. REINIT replaces these aliases with a file's.	Aliasefaili pole laaditud. REINIT asendab need aliased faili omadega.
+	Not a number or distance: {text}	Pole arv ega kaugus: {text}
+	Object grouping	Objektide grupeerimine
+	Object selection limit for display of grips	Objektivaliku piirang pidemete kuvamiseks
+	Objects on locked layers	Objektid lukustatud kihtidel
+	Open in Block Editor	Ava plokiredaktoris
+	Origin: {x}, {y}	Alguspunkt: {x}, {y}
+	Outer	Välimine
+	Overline	Ülajoon
+	Preview	Eelvaade
+	Query Texts	Päri tekste
+	Save Block	Salvesta plokk
+	Save Block As	Salvesta plokk nimega
+	Save Layout as Template	Salvesta paigutus mallina
+	Save Reference Edits	Salvesta viite muudatused
+	Save alias	Salvesta alias
+	Save changes to block "{name}"?	Kas salvestada ploki "{name}" muudatused?
+	Select boundaries to remove	Vali eemaldatavad piirjooned
+	Select using two clicks only	Vali ainult kahe klõpsuga
+	Selection Area Effect	Valikuala efekt
+	Selection Preview Filter	Valiku eelvaate filter
+	Selection area opacity:	Valikuala läbipaistmatus:
+	Selection effect color	Valikuefekti värv
+	Selection modes	Valikurežiimid
+	Selection preview	Valiku eelvaade
+	Set Dynamic Property	Määra dünaamiline omadus
+	Shape	Kujund
+	Sheet Books to PDF...	Lehekomplektid PDF-i...
+	Show grips	Kuva pidemed
+	Specified origin	Määratud alguspunkt
+	Spherical	Sfääriline
+	Tables	Tabelid
+	Text color	Teksti värv
+	Top left	Üleval vasakul
+	Top right	Üleval paremal
+	Type an alias name.	Sisesta aliase nimi.
+	Underline	Allakriipsutus
+	Units of new drawings	Uute jooniste ühikud
+	Unsaved changes	Salvestamata muudatused
+	Use current origin	Kasuta praegust alguspunkti
+	Visual Effect Settings	Visuaalefektide sätted
+	Visual Effect Settings...	Visuaalefektide sätted...
+	When a command is active	Kui käsk on aktiivne
+	When no command is active	Kui ükski käsk pole aktiivne
+	Window selection color:	Aknavaliku värv:
+	Working Set	Töökomplekt
+	Xref and Block In-place Editing	Välisviite ja ploki kohapealne redigeerimine
+	Xrefs	Välisviited
+	built-in	sisseehitatud
+	overrides built-in	alistab sisseehitatu
+	{alias} is already defined; select it and use Edit.	{alias} on juba defineeritud; vali see ja kasuta Redigeeri.
+	{command} is an unknown command.	{command} on tundmatu käsk.
+	Find All	Otsi kõik
+	Find what:	Otsitav:
+	Match case	Tõstutundlik
+	Replace	Asenda
+	Replace All	Asenda kõik
+	Replace with:	Asendus:
+	Replacement text	Asendustekst
+	Results	Tulemused
+	Searches the current space.	Otsib praegusest ruumist.
+	Text to find	Otsitav tekst
+	Whole words	Terved sõnad
+	Nothing found	Midagi ei leitud
+	E	I
+	N	P
+	S	L
+	W	L
+	B	A
+	DraftCraft	DraftCraft
+	Clear Recent Files	Tühjenda hiljutiste failide loend
+	contains authoring elements. Open in Block Editor?	sisaldab koostamiselemente. Kas avada plokiredaktoris?
+	Custom	Kohandatud
+	Open Recent	Ava hiljutine
+	This drawing	See joonis
+	Arrow size	Noole suurus
+	Dim scale overall	Mõõtmete üldmõõtkava
+	Precision	Täpsus
+	Apply to Layout	Rakenda paigutusele
+	Center the plot	Tsentreeri print
+	Enter block names to extract	Sisesta eraldatavate plokkide nimed
+	Enter geometric characteristic	Sisesta geomeetriline karakteristik
+	Enter name of LISP file to load	Sisesta laaditava LISP-faili nimi
+	First corner	Esimene nurk
+	Fit to paper	Sobita paberile
+	Landscape	Rõhtpaigutus
+	Limits	Piirid
+	Opposite corner	Vastasnurk
+	Orientation	Suund
+	Paper size	Paberi suurus
+	Plot area	Printimisala
+	Plot object lineweights	Prindi objektide joonepaksused
+	Plot offset	Printimise nihe
+	Plot transparency	Prindi läbipaistvus
+	Portrait	Püstpaigutus
+	Printer/plotter	Printer/plotter
+	Window <	Aken <
+	X offset (mm)	X-nihe (mm)
+	Y offset (mm)	Y-nihe (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Ångströmid
+	Architectural	Arhitektuurne
+	Astronomical Units	Astronoomilised ühikud
+	Centimeters	Sentimeetrid
+	Decameters	Dekameetrid
+	Decimal	Kümnendmurd
+	Decimal Degrees	Kümnendkraadid
+	Decimeters	Detsimeetrid
+	Deg/Min/Sec	Kr/min/s
+	Don't Save	Ära salvesta
+	Drawing Units	Joonise ühikud
+	Engineering	Inseneri
+	Feet	Jalad
+	Fractional	Murdarv
+	Gigameters	Gigameetrid
+	Grads	Goonid
+	Hectometers	Hektomeetrid
+	Inches	Tollid
+	Insertion scale	Lisamise mõõtkava
+	Kilometers	Kilomeetrid
+	Light Years	Valgusaastad
+	Meters	Meetrid
+	Microinches	Mikrotollid
+	Microns	Mikronid
+	Miles	Miilid
+	Millimeters	Millimeetrid
+	Mils	Milid
+	Nanometers	Nanomeetrid
+	Parsecs	Parsekid
+	Radians	Radiaanid
+	Sample output	Näidisväljund
+	Save changes to {name}?	Kas salvestada faili {name} muudatused?
+	Scientific	Teaduslik
+	Surveyor's Units	Maamõõtja ühikud
+	Unitless	Ühikuteta
+	Units to scale inserted content	Lisatud sisu skaleerimise ühikud
+	US Survey Feet	USA maamõõtejalad
+	US Survey Inch	USA maamõõtetoll
+	US Survey Mile	USA maamõõtemiil
+	US Survey Yard	USA maamõõtejard
+	Yards	Jardid
+	Your changes will be lost if you don't save them.	Kui sa neid ei salvesta, lähevad muudatused kaotsi.
+	Layouts	Paigutused
+	Associate	Seosta
+	Clip Xref	Kärbi välisviidet
+	Xref Clip Frame	Välisviite kärpimisraam
+	Minimize	Minimeeri
+	Maximize	Maksimeeri
+	Restore Down	Taasta suurus
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	DraftCraft ja DraftCrafti logo on ettevõtte DraftCraft Engineering Ventures kaubamärgid.
+	Conic	Koonuselõige
+	Spline Fit	Splaini sobitus
+	Spline CV	Splaini juhttipud
+	Specify start point of conic	Määra koonuselõike alguspunkt
+	Specify apex (where the end tangents meet)	Määra tipp (kus otspuutujad kohtuvad)
+	Specify end point of conic	Määra koonuselõike lõpp-punkt
+	Specify rho or a point on the conic	Määra rho või punkt koonuselõikel
+	Check for Updates...	Kontrolli värskendusi...
+	Check for Updates	Kontrolli värskendusi
+	Update Available	Värskendus saadaval
+	DraftCraft {version} is available.	DraftCraft {version} on saadaval.
+	You have version {version}.	Sul on versioon {version}.
+	Do you want to download the update?	Kas soovid värskenduse alla laadida?
+	What's new	Mis on uut
+	What's New	Mis on uut
+	Download	Laadi alla
+	Later	Hiljem
+	Skip This Version	Jäta see versioon vahele
+	DraftCraft is up to date (version {version}).	DraftCraft on ajakohane (versioon {version}).
+	Do you want to install the update now?	Kas soovid värskenduse kohe installida?
+	Update Now	Värskenda kohe
+	Open the release page	Ava väljalaske leht
+	This copy of DraftCraft can't update itself.	See DraftCrafti koopia ei saa ennast värskendada.
+	Updating DraftCraft	DraftCrafti värskendamine
+	Update Failed	Värskendamine nurjus
+	Installing DraftCraft {version}	DraftCraft {version} installimine
+	Downloading: {done} of {total} MB	Allalaadimine: {done}/{total} MB
+	Installing…	Installimine…
+	Starting the download…	Allalaadimise alustamine…
+	The connection dropped; trying again…	Ühendus katkes; proovin uuesti…
+	DraftCraft {version} is installed.	DraftCraft {version} on installitud.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Kasutamiseks taaskäivita DraftCraft. Kui taaskäivitad hiljem, avaneb see järgmisel DraftCrafti käivitamisel.
+	Restart Now	Taaskäivita kohe
+	The update could not be installed.	Värskendust ei õnnestunud installida.
+	You can download it from the release page instead.	Selle asemel saad selle alla laadida väljalaske lehelt.
+	2D Wireframe	2D-traatraam
+	Annotate	Annoteeri
+	Blocks Palette	Plokkide palett
+	CAD Standards	CAD-standardid
+	Commands	Käsud
+	2D Drafting	2D-joonestamine
+	Edit Aliases	Redigeeri aliaseid
+	Image	Pilt
+	Palettes	Paletid
+	Top	Peal
+	Units	Ühikud
+	Workspace	Tööruum
+	Ribbon	Lint
+	PDF Underlay...	PDF-aluskiht...
+	PDF Import	PDF-import
+	PDF Underlay	PDF-aluskiht
+	Underlay Layers	Aluskihi kihid
+	Raster Image Reference...	Rasterpildi viide...
+	Close Text Editor	Sulge tekstiredaktor
+	Image Clip	Pildi kärpimine
+	PDF Clip	PDF-i kärpimine
+	Image Adjust	Pildi reguleerimine
+	PDF Adjust	PDF-i reguleerimine
+	Adjust...	Reguleeri...
+	Parameter	Parameeter
+	Action	Toiming
+	DesignCenter	DesignCenter
+	Tool Palettes	Tööriistapaletid
+	Sheet Set Manager	Lehekomplektide haldur
+	Type the drawing's path, then press Enter.	Sisesta joonise tee ja vajuta Enter.
+	Drawing file	Joonisefail
+	Folder	Kaust
+	Linetypes	Joonetüübid
+	Text Styles	Tekstistiilid
+	Dimension Styles	Mõõtmestiilid
+	Table Styles	Tabelistiilid
+	Multileader Styles	Multiviikteksti stiilid
+	Multiline Styles	Multijoone stiilid
+	Add to Drawing	Lisa joonisele
+	Create Tool Palette	Loo tööriistapalett
+	Nothing of this kind in the file.	Failis pole sellist liiki elemente.
+	Open a drawing to see its blocks, layers and styles.	Ava joonis, et näha selle plokke, kihte ja stiile.
+	Delete Palette	Kustuta palett
+	New Palette	Uus palett
+	No tool palettes.	Tööriistapalette pole.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	See palett on tühi: lisa allpool käsk või loo palett DesignCenterist.
+	Delete Tool	Kustuta tööriist
+	Add Command	Lisa käsk
+	New Sheet Set...	Uus lehekomplekt...
+	Open Sheet Set...	Ava lehekomplekt...
+	Sheet sets (DCSS)	Lehekomplektid (DCSS)
+	Sheet set file	Lehekomplekti fail
+	Make or open a sheet set to list its sheets.	Lehtede loetlemiseks loo või ava lehekomplekt.
+	Add Drawing...	Lisa joonis...
+	Publish to PDF...	Avalda PDF-ina...
+	No sheets yet: add a drawing's layouts.	Lehti veel pole: lisa joonise paigutused.
+	Number	Number
+	Title	Pealkiri
+	Move Up	Liiguta üles
+	Move Down	Liiguta alla
+	Sheet Set (DCSS)	Lehekomplekt (DCSS)
+	Close Tool Palettes	Sulge tööriistapaletid
+	Close DesignCenter	Sulge DesignCenter
+	Close Sheet Set Manager	Sulge lehekomplektide haldur
+	Manage Tool Palettes	Halda tööriistapalette
+	Changes apply at once; Save Current As keeps them in a workspace.	Muudatused rakenduvad kohe; Salvesta praegune nimega hoiab need tööruumis.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Klõpsa kihtidel, et kuvada ainult neid; Ctrl või Shift lisab valikule.
+	Current Workspace	Praegune tööruum
+	Customize Interface	Kohanda liidest
+	Customize User Interface	Kohanda kasutajaliidest
+	Customize...	Kohanda...
+	Edit Aliases...	Redigeeri aliaseid...
+	Force object color and linetype to ByLayer	Sunni objekti värv ja joonetüüp kihi järgi
+	Geographic Location	Geograafiline asukoht
+	Geographic Location...	Geograafiline asukoht...
+	Latitude	Laiuskraad
+	Longitude	Pikkuskraad
+	North direction	Põhjasuund
+	Layer Translation Mappings	Kihtide tõlkevastavused
+	Layer Translator	Kihitõlkija
+	Layer Translator...	Kihitõlkija...
+	Layer Walk	Kihtide läbikäimine
+	Layer Walk...	Kihtide läbikäimine...
+	Location	Asukoht
+	Set Location	Määra asukoht
+	Remove Location	Eemalda asukoht
+	The drawing's origin is at this place (WGS 84 degrees).	Joonise alguspunkt on selles kohas (WGS 84 kraadides).
+	Map	Vastenda
+	New layer name	Uue kihi nimi
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Vastavusi veel pole: vali vasakult kihid, paremalt nimi, siis Vastenda.
+	Translate	Tõlgi
+	Translate From	Tõlgi kihist
+	Translate To	Tõlgi kihiks
+	Restore on exit	Taasta väljumisel
+	Point Cloud	Punktipilv
+	Point Cloud...	Punktipilv...
+	Point clouds (XYZ, LAS)	Punktipilved (XYZ, LAS)
+	ZIP archive	ZIP-arhiiv
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Kiirjuurdepääsu tööriistariba
+	Rename	Nimeta ümber
+	Reset to Standard	Lähtesta standardile
+	Ribbon Tabs	Lindi vahekaardid
+	Save Current As	Salvesta praegune nimega
+	Save Current As...	Salvesta praegune nimega...
+	Save Workspace	Salvesta tööruum
+	User Interface	Kasutajaliides
+	Workspace Settings	Tööruumi sätted
+	Workspace Settings...	Tööruumi sätted...
+	Workspace name	Tööruumi nimi
+	Workspace:	Tööruum:
+	Workspaces	Tööruumid
+	Interface...	Liides...
+	Export Attribute Information...	Ekspordi atribuudiandmed...
+	Import Attribute Information...	Impordi atribuudiandmed...
+	Export Attributes	Ekspordi atribuudid
+	Import Attributes	Impordi atribuudid
+	Text, tab-delimited (TXT)	Tekst, tabeldusmärgiga eraldatud (TXT)
+	Import Settings	Impordi sätted
+	Export Settings	Ekspordi sätted
+	Import Settings...	Impordi sätted...
+	Export Settings...	Ekspordi sätted...
+	DraftCraft settings (TOML)	DraftCrafti sätted (TOML)
+	Total Area and Length	Kogupindala ja -pikkus
+	Total Area	Kogupindala
+	Specify point to place the totals as text	Määra punkt, kuhu summad tekstina paigutada
+	Metric	Meetriline
+	Imperial	Briti
+	A new drawing in millimeters	Uus joonis millimeetrites
+	A new drawing in inches	Uus joonis tollides
+	A new drawing in centimeters	Uus joonis sentimeetrites
+	Metric (centimetres)	Meetriline (sentimeetrid)
+	Join the ArtCraft Discord…	Liitu ArtCrafti Discordiga…
+	Join us on Discord	Liitu meiega Discordis
+	One of the Crafting Apps by the ArtCraft team and community.	Üks ArtCrafti meeskonna ja kogukonna Crafting-rakendustest.
+	Change	Muuda
+	Multiple Insert	Mitmiklisamine
+	Ctrl+Enter to apply	Ctrl+Enter rakendab
+	Edit Text	Redigeeri teksti
+	The drawing changed. Close the window and open it again.	Joonis muutus. Sulge aken ja ava see uuesti.
+	DView	DView
+	Raster Images	Rasterpildid
+	Xref	Välisviide
+	Backup copies are off, so the current file will be replaced.	Varukoopiad on välja lülitatud, seega praegune fail asendatakse.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	DXF 2010 ja varasemad säilitavad need. Nende joonises hoidmiseks kasuta Salvesta nimega.
+	DXF keeps them. Use Save As to keep them in the drawing.	DXF säilitab need. Nende joonises hoidmiseks kasuta Salvesta nimega.
+	Save Anyway	Salvesta ikkagi
+	Save cancelled: {path} was not changed.	Salvestamine tühistati: {path} ei muutunud.
+	Saving {name} will remove content	{name} salvestamine eemaldab sisu
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Praegune fail ei tundu terviklik, seega {name} jääb muutmata ja praegune fail asendatakse.
+	The current file is kept as {name} until the next save.	Praegust faili hoitakse nimega {name} kuni järgmise salvestuseni.
+	This format can't keep these objects yet: {objects}.	See vorming ei suuda neid objekte veel säilitada: {objects}.
+	{count} more types	Veel {count} tüüpi
+	Additional Tools	Lisatööriistad
+	Keyboard Shortcuts...	Kiirklahvid...
+	Keyboard Shortcuts	Kiirklahvid
+	Replaces the shortcut of {commands}	Asendab käsu {commands} kiirklahvi
+	Needs Ctrl, Alt or a function key	Vajab Ctrl-, Alt- või funktsiooniklahvi
+	Press the keys	Vajuta klahve
+	Back to DraftCraft's shortcut	Tagasi DraftCrafti kiirklahvile
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Sinu määratud kiirklahv on DraftCrafti omast tähtsam. Muudatused rakenduvad kohe ja jäävad järgmiseks korraks alles.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Väljalülitatuna teeb paremklõps käsu ajal seda, mis on paremklõpsu kohandamises käsurežiimi jaoks määratud.
+	Right-Click Customization...	Paremklõpsu kohandamine...
+	Right-Click Customization	Paremklõpsu kohandamine
+	Turn on time-sensitive right-click	Lülita ajatundlik paremklõps sisse
+	Longer click duration:	Pikema klõpsu kestus:
+	milliseconds	millisekundit
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Käsu ajal on kiire klõps Enter ja pikem klõps avab kiirmenüü.
+	Default Mode	Vaikerežiim
+	No objects selected and no command running:	Objekte pole valitud ja käsk ei tööta:
+	Edit Mode	Redigeerimisrežiim
+	Objects selected and no command running:	Objektid valitud ja käsk ei tööta:
+	Repeat last command	Korda viimast käsku
+	Shortcut Menu	Kiirmenüü
+	Command Mode	Käsurežiim
+	While a command runs:	Käsu töötamise ajal:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Kiirmenüü: alati lubatud
+	Shortcut Menu: enabled when command options are present	Kiirmenüü: lubatud, kui käsul on valikuid
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Import: siin pole failidialoogi; käivita ALIASEDIT faili sisuga, kasutades selle parameetrit text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Aliased salvestatakse sinu DraftCrafti profiili ja need säilivad taaskäivitamisel.
+	Import…	Impordi…
+	Run ALIASEDIT with the file's contents using its text parameter.	Käivita ALIASEDIT faili sisuga, kasutades selle parameetrit text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Faili importimine asendab sinu {n} aliast ja kõik veel rakendamata muudatused.
+	Import and replace	Impordi ja asenda
+	Keep my aliases	Säilita minu aliased
+	{n} more warnings; see the command line.	Veel {n} hoiatust; vaata käsurealt.
+	Unit	Ühik
+	Drawing units: {unit}, {format}	Joonise ühikud: {unit}, {format}
+	NEW DRAWING	UUS JOONIS
+	OPEN	AVA
+	WORKSPACE	TÖÖRUUM

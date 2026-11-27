@@ -1,0 +1,1695 @@
+# DraftCraft Zulu (isiZulu) interface catalog — original translations.
+# License: MIT OR Apache-2.0 (the repository LICENSE-MIT and LICENSE-APACHE).
+# Written from DraftCraft's English strings by WithShalom (Shalom) with Claude Code (AI-assisted); not yet reviewed by a native speaker.
+# No proprietary translations or other products' string tables were consulted or copied.
+# UTF-8: context<TAB>English source<TAB>translation.
+# Empty context = ordinary label; @plural = |-separated plural forms with {n}.
+# Keep command IDs, keywords, technology/product names and user data unchanged.
+	  Cancel  	  Khansela  
+	  OK  	  KULUNGILE  
+	 or [	 noma [
+	% of all commits	% yawo wonke ama-commit
+	* Wildcard Match	* Ukufanisa nge-Wildcard
+	*VARIES*	*KUYAHLUKAHLUKA*
+	+  |  Top  |  2D Wireframe	+  |  Phezulu  |  2D Wireframe
+	+Bin	+Bin
+	+LOC	+LOC
+	1 Viewport	I-viewport e-1
+	2 Points	Amaphoyinti ama-2
+	2 Viewports	Ama-viewport ama-2
+	2D Solid	I-2D Solid
+	3 Points	Amaphoyinti ama-3
+	3 Viewports	Ama-viewport ama-3
+	3D Face	I-3D Face
+	3D Mouse	I-3D Mouse
+	3D Mouse Navigation	Ukuzulazula nge-3D Mouse
+	3D Mouse...	I-3D Mouse...
+	3D Operations	Imisebenzi ye-3D
+	3D Polyline	I-3D Polyline
+	3D mouse busy, possibly 3DxWare or missing device permissions	I-3D mouse imatasa, mhlawumbe yi-3DxWare noma izimvume zedivayisi ezingekho
+	3D mouse connected	I-3D mouse ixhunyiwe
+	3D mouse disconnected	I-3D mouse inqanyuliwe
+	3D mouse input could not be started	Okokufaka kwe-3D mouse akukwazanga ukuqalwa
+	3D mouse input is unavailable on this platform	Okokufaka kwe-3D mouse akutholakali kule nkundla
+	4 Viewports	Ama-viewport ama-4
+	< Less than	< Ngaphansi kuka
+	<> Not Equal	<> Akulingani
+	= Equals	= Kuyalingana
+	> Greater than	> Ngaphezu kuka
+	A built-in table: editing it keeps an edited copy in the drawing.	Ithebula elakhelwe ngaphakathi: ukulihlela kugcina ikhophi ehleliwe emdwebeni.
+	A drawing opened from a file keeps that file's format.	Umdwebo ovulwe efayeleni ugcina ifomethi yalelo fayela.
+	A variable name starts with a letter and has only letters, digits and _	Igama le-variable liqala ngohlamvu futhi linezinhlamvu, izinombolo kanye no-_ kuphela
+	About	Mayelana
+	About DraftCraft	Mayelana ne-DraftCraft
+	Absolute	Okuphelele
+	Accessibility	Ukufinyeleleka
+	Add	Engeza
+	Add Current Scale	Engeza i-Scale Yamanje
+	Add Leader	Engeza i-Leader
+	Add Vertex	Engeza i-Vertex
+	Add/Delete Scales...	Engeza/Susa ama-Scale...
+	Additional angles	Ama-engeli engeziwe
+	Align	Qondanisa
+	Align Text	Qondanisa Umbhalo
+	Aligned	Kuqondanisiwe
+	All	Konke
+	All Annotation Objects	Zonke Izinto Zokuchasisa
+	All Scales	Wonke ama-Scale
+	All Used Layers	Zonke Izingqimba Ezisetshenziswayo
+	All files	Wonke amafayela
+	An array that would create more objects than this is refused.	Uhlu olungadala izinto eziningi kunalokhu luyenqatshwa.
+	Angle	I-engeli
+	Angular	Okwe-engeli
+	Annotation Visibility	Ukubonakala Kokuchasisa
+	Annotation scale	I-scale yokuchasisa
+	Annotative Object Scale	I-Scale Yento Echasisayo
+	Annotative Update	Ukubuyekezwa Kokuchasisayo
+	Apparent Intersection	Ukuhlangana Okubonakalayo
+	Append to current selection set	Engeza kusethi yokukhetha yamanje
+	Apply	Sebenzisa
+	Apply to:	Sebenzisa ku:
+	Apply true color	Sebenzisa umbala weqiniso
+	Arc	I-arc
+	Arc Length	Ubude be-Arc
+	Area	Indawo
+	Arrange Panel	Hlela Iphaneli
+	Array	Uhlu
+	Attach	Namathisela
+	Attach DWG...	Namathisela i-DWG...
+	Attribute	I-attribute
+	Attribute Definition	Incazelo ye-Attribute
+	Attribute Display	Ukubonisa i-Attribute
+	Audit	Hlola
+	Auto (system language)	Okuzenzakalelayo (ulimi lwesistimu)
+	Auto Constrain	Imikhawulo Ezenzakalelayo
+	AutoConstrain	AutoConstrain
+	Automatic save every	Londoloza ngokuzenzakalela njalo emva kwa
+	Automatic save file location	Indawo yefayela lokulondoloza okuzenzakalelayo
+	Axis, End	I-eksisi, Ukuphela
+	Base	Isisekelo
+	Baseline	Umugqa wesisekelo
+	Batch Publish	Ukushicilela Ngeqoqo
+	Batch Publish...	Ukushicilela Ngeqoqo...
+	Binary assets added	Izimpahla zebhayinari ezengeziwe
+	Binary assets removed	Izimpahla zebhayinari ezisusiwe
+	Bind	Bophela
+	Bind...	Bophela...
+	Blend	Hlanganisa
+	Block	Ibhulokhu
+	Block Attribute Manager...	Umphathi Wama-Attribute Ebhulokhu...
+	Block Description...	Incazelo Yebhulokhu...
+	Block Editor	Umhleli Webhulokhu
+	Block Reference	Ireferensi Yebhulokhu
+	Block...	Ibhulokhu...
+	Blocks	Amabhulokhu
+	Blue	Okuluhlaza okwesibhakabhaka
+	Bold	Okugqamile
+	Boolean	I-Boolean
+	Boundary	Umngcele
+	Boundary...	Umngcele...
+	Box	Ibhokisi
+	Break	Yephula
+	Break At Point	Yephula Ephoyintini
+	Bring Above Objects	Letha Ngaphezu Kwezinto
+	Bring Annotations to Front	Letha Ukuchasisa Phambili
+	Bring to Front	Letha Phambili
+	Bulleted list	Uhlu olunezichasiselo
+	ByBlock	ByBlock
+	ByColor	ByColor
+	ByLayer	ByLayer
+	DraftCraft Help	Usizo lwe-DraftCraft
+	DraftCraft keeps these preferences, object snap modes and drafting toggles for your user account and restores them when it starts.	I-DraftCraft igcina lezi zintandokazi, izindlela ze-object snap nezishintshi zokudweba ku-akhawunti yakho yomsebenzisi futhi izibuyisela uma iqala.
+	Calibrate	Linganisa
+	Calibrate 3D Mouse	Linganisa i-3D Mouse
+	Cancel	Khansela
+	Cartesian (x, y)	I-Cartesian (x, y)
+	Center	Maphakathi
+	Center Line	Umugqa Wamaphakathi
+	Center Mark	Uphawu Lwamaphakathi
+	Center X	Maphakathi X
+	Center Y	Maphakathi Y
+	Center Z	Maphakathi Z
+	Center, Diameter	Maphakathi, Ububanzi
+	Center, Radius	Maphakathi, Irediyasi
+	Center, Start, Angle	Maphakathi, Ukuqala, I-engeli
+	Center, Start, End	Maphakathi, Ukuqala, Ukuphela
+	Center, Start, Length	Maphakathi, Ukuqala, Ubude
+	Chamfer	I-Chamfer
+	Change Space	Shintsha Isikhala
+	Change to Current Layer	Shintshela Kungqimba Wamanje
+	Changed: {n}	Kushintshiwe: {n}
+	Changes apply at once and are kept for next time.	Izinguquko zisebenza ngokushesha futhi zigcinelwa isikhathi esizayo.
+	Circle	Indilinga
+	Circumference	Umjikelezo
+	Clear	Sula
+	Clear Command History	Sula Umlando Wemiyalo
+	Reset Suggestion Order	Setha Kabusha Ukulandelana Kweziphakamiso
+	Clear History	Sula Umlando
+	Clip	Sika
+	Clip Viewport	Sika i-Viewport
+	Clipboard	Ibhodi lokunamathisela
+	Close	Vala
+	Close All	Vala Konke
+	Close All Other Drawings	Vala Yonke Eminye Imidwebo
+	Close Array Editing	Vala Ukuhlela Uhlu
+	Close Comparison	Vala Ukuqhathanisa
+	Export Comparison	Thekelisa Ukuqhathanisa
+	Closed	Kuvaliwe
+	Coincident	Kuhlangana
+	Collapse Palettes	Goqa Ama-palette
+	Collapse Tool Sets	Goqa i-Tool Sets
+	Collinear	Kusemugqeni munye
+	Color	Umbala
+	Color 8	Umbala 8
+	Color 9	Umbala 9
+	Color Index	Inkomba Yombala
+	Color-dependent	Kuncike kumbala
+	Color...	Umbala...
+	Command Aliases	Iziteketiso Zemiyalo
+	Command History	Umlando Wemiyalo
+	Command Line	Umugqa Womyalo
+	Command Line History Lines	Imigqa Yomlando Womugqa Womyalo
+	Command Reference	Inkomba Yemiyalo
+	Command line history	Umlando womugqa womyalo
+	Commits	Ama-commit
+	Company	Inkampani
+	Compare Drawings...	Qhathanisa Imidwebo...
+	Computer-aided design and drafting: an open-source, clean-room CAD application written in pure Rust.	Ukuklama nokudweba ngosizo lwekhompyutha: uhlelo lokusebenza lwe-CAD oluvulekile, olwakhiwe kusukela ekuqaleni, olubhalwe nge-Rust ehlanzekile.
+	Concentric	Kunamaphakathi afanayo
+	Cone	Ikhoni
+	Constraint Bars	Amabha Emikhawulo
+	Constraint Settings	Izilungiselelo Zemikhawulo
+	Construction Line	Umugqa Wokwakha
+	Contents	Okuqukethwe
+	Continue	Qhubeka
+	Contributors	Abaxhasi
+	Control Vertices	Ama-Vertex Okulawula
+	Convert	Guqula
+	Convert to Arc	Guqulela ku-Arc
+	Convert to Line	Guqulela Kumugqa
+	Copy	Kopisha
+	Copy Full File Path	Kopisha Indlela Ephelele Yefayela
+	Copy History	Kopisha Umlando
+	Copy Layout	Kopisha Isakhiwo
+	Copy Nested Objects	Kopisha Izinto Ezifakwe Ngaphakathi
+	Copy Selection	Kopisha Okukhethiwe
+	Copy as JSON	Kopisha njenge-JSON
+	Copy with Base Point	Kopisha nePhoyinti Lesisekelo
+	Count	Isibalo
+	Count List	Uhlu Lwesibalo
+	Count Table	Ithebula Lesibalo
+	Create Block	Dala Ibhulokhu
+	Creates a user parameter	Idala ipharamitha yomsebenzisi
+	Crosshair size	Usayizi we-crosshair
+	Ctrl+Enter to finish	Ctrl+Enter ukuqeda
+	Current Scale Only	I-Scale Yamanje Kuphela
+	Current layer	Ungqimba wamanje
+	Current selection	Okukhethiwe kwamanje
+	Current: {color}	Okwamanje: {color}
+	Cut	Sika
+	Cut with Base Point	Sika nePhoyinti Lesisekelo
+	Cyan	I-Cyan
+	Cylinder	Isilinda
+	DWG	DWG
+	DWG Reference...	Ireferensi ye-DWG...
+	DXF	DXF
+	Dark	Okumnyama
+	Data Extraction...	Ukukhipha Idatha...
+	Data Link...	Isixhumanisi Sedatha...
+	Default	Okuzenzakalelayo
+	Default Save Format	Ifomethi Yokulondoloza Ezenzakalelayo
+	Default Save Version	Inguqulo Yokulondoloza Ezenzakalelayo
+	Default save version	Inguqulo yokulondoloza ezenzakalelayo
+	Define Attributes	Chaza Ama-attribute
+	Define Attributes...	Chaza Ama-attribute...
+	Defined width	Ububanzi obuchaziwe
+	Degree	Idigri
+	Degrees of Freedom	Amazinga Enkululeko
+	Degrees of freedom: {n}	Amazinga enkululeko: {n}
+	Delete	Susa
+	Delete Column	Susa Ikholamu
+	Delete Constraints	Susa Imikhawulo
+	Delete Current Scale	Susa i-Scale Yamanje
+	Delete Dimension Style	Susa Isitayela Sobukhulu
+	Delete Duplicate Objects	Susa Izinto Eziphindiwe
+	Delete Layer	Susa Ungqimba
+	Delete Layer State	Susa Isimo Songqimba
+	Delete Layout	Susa Isakhiwo
+	Delete Row	Susa Umugqa
+	Delete Text Style	Susa Isitayela Sombhalo
+	Delta X	I-Delta X
+	Delta Y	I-Delta Y
+	Description	Incazelo
+	Deselect All	Ungakhethi Lutho
+	Detach	Khipha
+	Diameter	Ububanzi bendilinga
+	Dim style	Isitayela sobukhulu
+	Dimension	Ubukhulu
+	Dimension Break	Ukwephuka Kobukhulu
+	Dimension Edit	Hlela Ubukhulu
+	Dimension Objects Only	Izinto Zobukhulu Kuphela
+	Dimension Space	Isikhala Sobukhulu
+	Dimension Style Override	Ukweqisa Isitayela Sobukhulu
+	Dimension Style...	Isitayela Sobukhulu...
+	Dimension Text Edit	Hlela Umbhalo Wobukhulu
+	Dimension style	Isitayela sobukhulu
+	Dimensional Constraint	Umkhawulo Wobukhulu
+	Dimensional Constraint Parameters	Amapharamitha Omkhawulo Wobukhulu
+	Dimensional Constraints	Imikhawulo Yobukhulu
+	Disassociate Dimensions	Hlukanisa Ubukhulu
+	Display	Bonisa
+	Display name	Igama elibonisiwe
+	Display plot styles	Bonisa izitayela zokuphrinta
+	Distance	Ibanga
+	Divide	Hlukanisa
+	Do not plot (click: plot)	Ungaphrinti (chofoza: phrinta)
+	Donut	I-Donut
+	Double-click to edit the description	Chofoza kabili ukuze uhlele incazelo
+	Down	Phansi
+	Drafting	Ukudweba
+	Drafting Settings	Izilungiselelo Zokudweba
+	Drafting Settings...	Izilungiselelo Zokudweba...
+	Draw	Dweba
+	Draw Order	Ukulandelana Kokudweba
+	Drawing (DWG)	Umdwebo (DWG)
+	Drawing (DXF)	Umdwebo (DXF)
+	Drawing Limits	Imingcele Yomdwebo
+	Drawing Recovery Manager...	Umphathi Wokubuyisa Imidwebo...
+	Drawing Template (DWT)	Isifanekiso Somdwebo (DWT)
+	Drawing Utilities	Amathuluzi Omdwebo
+	Drawing as bytes	Umdwebo njengama-byte
+	Drawings (DWG, DXF)	Imidwebo (DWG, DXF)
+	Drawings with no file yet are saved in the default version. 0 minutes turns automatic save off.	Imidwebo engakabi nefayela ilondolozwa enguqulweni ezenzakalelayo. Imizuzu engu-0 ivala ukulondoloza okuzenzakalelayo.
+	Dynamic	Okushintshashintshayo
+	Dynamic Dimensions	Ubukhulu Obushintshashintshayo
+	Dynamic Input	Okokufaka Okushintshashintshayo
+	Dynamic Input (F12)	Okokufaka Okushintshashintshayo (F12)
+	Edit	Hlela
+	Edit Array	Hlela Uhlu
+	Edit Attributes...	Hlela Ama-attribute...
+	Edit Table Cell	Hlela Iseli Lethebula
+	Edit Text...	Hlela Umbhalo...
+	Elevation	Ukuphakama
+	Ellipse	I-Ellipse
+	Elliptical Arc	I-Arc ye-Ellipse
+	Enable 3D mouse navigation	Vula ukuzulazula nge-3D mouse
+	Enable Dynamic Input (F12)	Vula Okokufaka Okushintshashintshayo (F12)
+	End Object Isolation	Qeda Ukuhlukanisa Izinto
+	End Width	Ububanzi Ekugcineni
+	End X	Ukuphela X
+	End Y	Ukuphela Y
+	End angle	I-engeli yokuphela
+	Endpoint	Iphoyinti lokuphela
+	Enter	Enter
+	Enter Top, Zero or Bottom.	Faka u-Top, Zero noma u-Bottom.
+	Enter a fit data option	Faka inketho yedatha yokufanisa
+	Enter a pattern name	Faka igama lephethini
+	Enter a vertex editing option	Faka inketho yokuhlela i-vertex
+	Enter an option	Faka inketho
+	Enter angle of xline	Faka i-engeli ye-xline
+	Enter angle of xline (0)	Faka i-engeli ye-xline (0)
+	Enter area of rectangle in current units	Faka indawo yonxande ngamayunithi amanje
+	Enter attribute prompt	Faka umyalezo we-attribute
+	Enter attribute tag name	Faka igama lethegi ye-attribute
+	Enter attribute value	Faka inani le-attribute
+	Enter block name	Faka igama lebhulokhu
+	Enter constraint type	Faka uhlobo lomkhawulo
+	Enter continuity	Faka ukuqhubeka
+	Enter default attribute value	Faka inani le-attribute elizenzakalelayo
+	Enter degree of spline	Faka idigri ye-spline
+	Enter delta angle	Faka i-engeli ye-delta
+	Enter delta length	Faka ubude be-delta
+	Enter dimension text	Faka umbhalo wobukhulu
+	Enter dimension text (<> = measurement)	Faka umbhalo wobukhulu (<> = isilinganiso)
+	Enter dimension value or [name=expression]	Faka inani lobukhulu noma [igama=isisho]
+	Enter dimension variable name to override	Faka igama le-variable yobukhulu ozoyeqisa
+	Enter justification type	Faka uhlobo lokuqondanisa
+	Enter leader text	Faka umbhalo we-leader
+	Enter mline scale	Faka i-scale ye-mline
+	Enter mode	Faka imodi
+	Enter name of block to insert	Faka igama lebhulokhu ozolifaka
+	Enter new text	Faka umbhalo omusha
+	Enter next point	Faka iphoyinti elilandelayo
+	Enter number of columns	Faka inani lamakholamu
+	Enter number of data rows	Faka inani lemigqa yedatha
+	Enter number of items	Faka inani lezinto
+	Enter number of items along path	Faka inani lezinto ezisendleleni
+	Enter number of sides	Faka inani lezinhlangothi
+	Enter number of turns	Faka inani lokujika
+	Enter percentage length	Faka iphesenti lobude
+	Enter rectangle length	Faka ubude bonxande
+	Enter rectangle width	Faka ububanzi bonxande
+	Enter scale factor	Faka isici se-scale
+	Enter text	Faka umbhalo
+	Enter text (use \P for new paragraphs)	Faka umbhalo (sebenzisa \P ezigabeni ezintsha)
+	Enter the number of segments	Faka inani lezingxenye
+	Enter twist direction of helix	Faka indlela yokusonteka ye-helix
+	Entire drawing	Umdwebo wonke
+	Equal	Kuyalingana
+	Erase	Sula
+	Evaluate	Hlola
+	Exclude from new selection set	Khipha kusethi yokukhetha entsha
+	Explode	Qhumisa
+	Export	Thekelisa
+	Export Table	Thekelisa Ithebula
+	Export to PDF...	Thekelisa ku-PDF...
+	Export...	Thekelisa...
+	Expression	Isisho
+	Extend	Elula
+	Extension	Isandiso
+	Extents	Imikhawulo
+	External Reference	Ireferensi Yangaphandle
+	External References	Amareferensi Angaphandle
+	Extrude	Khiphela phandle
+	File	Ifayela
+	File Tab	Ithebhu Yefayela
+	Fillet	I-Fillet
+	Filter	Isihlungi
+	Filters	Izihlungi
+	Find and Replace	Thola futhi Ushintshe
+	Find...	Thola...
+	First	Okokuqala
+	First commit	I-commit yokuqala
+	Fit Points	Amaphoyinti Okufanisa
+	Fix	Qinisa
+	Flatten Objects	Yenza Izinto Zibe Yisicaba
+	Format	Ifomethi
+	Freehand	Ngesandla
+	Freeze	Qandisa
+	Freeze Layer	Qandisa Ungqimba
+	Freeze in new viewports	Qandisa kuma-viewport amasha
+	Freeze/Thaw	Qandisa/Ncibilikisa
+	Freeze/Thaw in all viewports	Qandisa/Ncibilikisa kuwo wonke ama-viewport
+	Freeze/Thaw in the current viewport	Qandisa/Ncibilikisa ku-viewport yamanje
+	From	Kusuka
+	From Template...	Kusuka Esifanekisweni...
+	General	Okujwayelekile
+	Geometric Center	Maphakathi Ejiyomethri
+	Geometric Constraint	Umkhawulo Wejiyomethri
+	Geometric Constraints	Imikhawulo Yejiyomethri
+	Geometry	Ijiyomethri
+	Get Variable	Thola i-Variable
+	Get View	Thola Ukubuka
+	Get from the Drawing	Thola Emdwebeni
+	Global	Okomhlaba wonke
+	Global width	Ububanzi bonke
+	Grab bag	Okuxubile
+	Gradient	I-Gradient
+	Gradient...	I-Gradient...
+	Grayscale	Okumpunga
+	Green	Okuluhlaza
+	Grid (F7)	Igridi (F7)
+	Grid Display	Ukubonisa Igridi
+	Grid On (F7)	Igridi Ivuliwe (F7)
+	Grid snap	I-snap yegridi
+	Grid spacing	Isikhala segridi
+	Grip Edit	Ukuhlela nge-Grip
+	Grip Mirror	Isibuko nge-Grip
+	Grip Option	Inketho ye-Grip
+	Grip Rotate	Ukujikisa nge-Grip
+	Grip Scale	I-Scale nge-Grip
+	Grip Stretch	Ukwelula nge-Grip
+	Grip size	Usayizi we-grip
+	Group	Iqembu
+	Group Edit	Hlela Iqembu
+	Group Options	Izinketho Zeqembu
+	Group Selection	Ukukhetha Iqembu
+	Hatch	I-Hatch
+	Hatch Edit	Hlela i-Hatch
+	Hatch Pattern	Iphethini ye-Hatch
+	Hatch Patterns	Amaphethini e-Hatch
+	Hatch...	I-Hatch...
+	Height	Ukuphakama
+	Height: {height}	Ukuphakama: {height}
+	Helix	I-Helix
+	Help	Usizo
+	Hide All	Fihla Konke
+	Hide All Constraint Bars	Fihla Wonke Amabha Emikhawulo
+	Hide All Dynamic Dimensions	Fihla Bonke Ubukhulu Obushintshashintshayo
+	Hide DraftCraft	Fihla i-DraftCraft
+	Hide Layer List	Fihla Uhlu Lwezingqimba
+	Hide Objects	Fihla Izinto
+	Hide Others	Fihla Okunye
+	Hide Palette	Fihla i-Palette
+	Hide Palettes	Fihla Ama-palette
+	History	Umlando
+	Hold Shift to add to the selection	Bamba u-Shift ukuze wengeze kokukhethiwe
+	Home	Ikhaya
+	Horizontal	Okuvundlile
+	HorizontalDistance	Ibanga Elivundlile
+	How to apply:	Indlela yokusebenzisa:
+	ID Point	Iphoyinti le-ID
+	Import	Ngenisa
+	Import...	Ngenisa...
+	In	Ngaphakathi
+	In-window Menu Bar	Ibha Yemenyu Ngaphakathi Kwewindi
+	Include in new selection set	Faka kusethi yokukhetha entsha
+	Increment angle	I-engeli yokwenyuka
+	Index Color	Umbala Wenkomba
+	Index color: {index}	Umbala wenkomba: {index}
+	Infer Constraints	Qagela Imikhawulo
+	Inquiry	Ukubuza
+	Insert	Faka
+	Insert Block	Faka Ibhulokhu
+	Insert Column	Faka Ikholamu
+	Insert Row	Faka Umugqa
+	Insert Table Formula	Faka Ifomula Yethebula
+	Insert tab	Ithebhu ethi Faka
+	Insert this block	Faka le bhulokhu
+	Insertion	Ukufaka
+	Insertion X	Ukufaka X
+	Insertion Y	Ukufaka Y
+	Insertion Z	Ukufaka Z
+	Inspect Constraints	Hlola Imikhawulo
+	Inspect Drawing	Hlola Umdwebo
+	Inspection	Ukuhlola
+	Interface Language	Ulimi Lokuxhumana
+	Interface Theme	Itimu Yokuxhumana
+	Interface language	Ulimi lokuxhumana
+	Interface theme	Itimu yokuxhumana
+	Intersect	Ukuhlangana kwezinto
+	Intersection	Ukuhlangana
+	Isolate	Hlukanisa
+	Isolate Layer	Hlukanisa Ungqimba
+	Isolate Objects	Hlukanisa Izinto
+	Isometric Drafting	Ukudweba kwe-Isometric
+	Isometric Plane	Indiza ye-Isometric
+	Isometric snap	I-snap ye-isometric
+	Jogged	Okugobile
+	Jogged Linear	Okuqondile Okugobile
+	Join	Hlanganisa
+	Keep an editable copy of this table in the drawing	Gcina ikhophi ehlelekayo yaleli thebula emdwebeni
+	Keep the system cursor visible over the drawing area	Gcina ikhesa yesistimu ibonakala phezu kwendawo yokudweba
+	Language	Ulimi
+	Largest array	Uhlu olukhulu kakhulu
+	Last	Okokugcina
+	Last commit	I-commit yokugcina
+	Layer	Ungqimba
+	Layer Delete	Susa Ungqimba
+	Layer Match	Fanisa Ungqimba
+	Layer Merge	Hlanganisa Izingqimba
+	Layer Off	Vala Ungqimba
+	Layer Properties	Izakhiwo Zongqimba
+	Layer Properties Manager	Umphathi Wezakhiwo Zezingqimba
+	Layer Properties Manager — current viewport	Umphathi Wezakhiwo Zezingqimba — i-viewport yamanje
+	Layer State	Isimo Songqimba
+	Layer States Manager...	Umphathi Wezimo Zezingqimba...
+	Layer Tools	Amathuluzi Ongqimba
+	Layer contains objects (double-click to make current)	Ungqimba lunezinto (chofoza kabili ukuze lube owamanje)
+	Layer is empty (double-click to make current)	Ungqimba alunalutho (chofoza kabili ukuze lube owamanje)
+	Layers	Izingqimba
+	Layers Palette	I-Palette Yezingqimba
+	Layers displayed: {shown} of {total}.   Current layer: {layer}	Izingqimba ezibonisiwe: {shown} kwezingu-{total}.   Ungqimba wamanje: {layer}
+	Layout	Isakhiwo
+	Layout list	Uhlu lwezakhiwo
+	Layout paper	Iphepha lesakhiwo
+	Layout {name}: {table}	Isakhiwo {name}: {table}
+	Leader	I-Leader
+	Leaders Only	Ama-Leader Kuphela
+	Left	Kwesobunxele
+	Left device button: zoom extents. Right device button: calibrate.	Inkinobho yedivayisi yesobunxele: zoom extents. Inkinobho yedivayisi yesokudla: linganisa.
+	Length	Ubude
+	Length X	Ubude X
+	Length Y	Ubude Y
+	Lengthen	Yelula
+	Light	Okukhanyayo
+	Line	Umugqa
+	Line delta	I-delta yomugqa
+	Linear	Okuqondile
+	Lines +/−	Imigqa +/−
+	Lines added	Imigqa engeziwe
+	Lines deleted	Imigqa esusiwe
+	Lines of Command History	Imigqa Yomlando Wemiyalo
+	Linetype	Uhlobo lomugqa
+	Linetype Scale	I-Scale Yohlobo Lomugqa
+	Linetype scale	I-scale yohlobo lomugqa
+	Linetype...	Uhlobo lomugqa...
+	Lineweight	Ubukhulu bomugqa
+	Lineweight...	Ubukhulu bomugqa...
+	List	Uhlu
+	List Blocks	Bhala Amabhulokhu
+	List Dimension Styles	Bhala Izitayela Zobukhulu
+	List Groups	Bhala Amaqembu
+	List Layer States	Bhala Izimo Zezingqimba
+	List Layouts	Bhala Izakhiwo
+	List System Variables	Bhala Ama-variable Esistimu
+	List Text Styles	Bhala Izitayela Zombhalo
+	Load all	Layisha konke
+	Load...	Layisha...
+	Loaded	Kulayishiwe
+	Loaded linetypes	Izinhlobo zemigqa ezilayishiwe
+	Lock	Khiya
+	Lock Layer	Khiya Ungqimba
+	Lock viewport	Khiya i-viewport
+	Lock/Unlock	Khiya/Vula
+	Loft	I-Loft
+	Ltscale	Ltscale
+	MIT OR Apache-2.0. Not affiliated with Autodesk, Inc.	MIT OR Apache-2.0. Akuhlobene ne-Autodesk, Inc.
+	MODEL	MODEL
+	MText	I-MText
+	Magenta	I-Magenta
+	Major line every	Umugqa omkhulu njalo emva kwa
+	Make Current	Yenza Kube Okwamanje
+	Make Object's Layer Current	Yenza Ungqimba Lwento Lube Owamanje
+	Make it a block of this drawing, keeping its layer names	Yenza ibe ibhulokhu yalo mdwebo, igcina amagama ezingqimba
+	Make it a block of this drawing; its layers become NAME$0$LAYER	Yenza ibe ibhulokhu yalo mdwebo; izingqimba zayo ziba NAME$0$LAYER
+	Make...	Yenza...
+	Match Layer	Fanisa Ungqimba
+	Match Properties	Fanisa Izakhiwo
+	Measure	Linganisa
+	Measure Distance	Linganisa Ibanga
+	Measure Geometry	Linganisa Ijiyomethri
+	Merge Cells	Hlanganisa Amaseli
+	Merged PRs	Ama-PR ahlanganisiwe
+	Mid Between 2 Points	Maphakathi Phakathi Kwamaphoyinti Ama-2
+	Midpoint	Iphoyinti lamaphakathi
+	Mirror	Isibuko
+	Model	Imodeli
+	Model Space (in viewport)	Isikhala Semodeli (ku-viewport)
+	Model background	Ingemuva lemodeli
+	Modeling	Ukwenza imodeli
+	Models	Amamodeli
+	Modify	Shintsha
+	More toolbar commands	Eminye imiyalo yebha yamathuluzi
+	Move	Hambisa
+	Move sideways to pan; push/pull or twist to zoom.	Hambisa eceleni ukuze u-pan; phusha/donsa noma sonta ukuze u-zoom.
+	Multileader	I-Multileader
+	Multileader Style...	Isitayela se-Multileader...
+	Multileader style	Isitayela se-multileader
+	Multiline	I-Multiline
+	Multiline Style...	Isitayela se-Multiline...
+	Multiline Text	Umbhalo Wemigqa Eminingi
+	Multiline Text...	Umbhalo Wemigqa Eminingi...
+	Multiline...	I-Multiline...
+	Multiple	Okuningi
+	Multiple Point	Amaphoyinti Amaningi
+	My	Okwami
+	My properties: not available yet	Izakhiwo zami: azikatholakali
+	Name	Igama
+	Name (A–Z)	Igama (A–Z)
+	Named	Okunegama
+	Named Viewports...	Ama-Viewport Anegama...
+	Named Views...	Ukubuka Okunegama...
+	Nearest	Okuseduze kakhulu
+	New	Okusha
+	New (metric)	Okusha (metric)
+	New CTB	I-CTB Entsha
+	New Drawing	Umdwebo Omusha
+	New Drawing (⌘N)	Umdwebo Omusha (⌘N)
+	New Drawing...	Umdwebo Omusha...
+	New Layer	Ungqimba Olusha
+	New Layout	Isakhiwo Esisha
+	New STB	I-STB Entsha
+	New VP Freeze	Ukuqandisa kwe-VP Entsha
+	New Viewports...	Ama-Viewport Amasha...
+	New from Template...	Okusha Kusuka Esifanekisweni...
+	New layout	Isakhiwo esisha
+	New state name	Igama lesimo esisha
+	New style	Isitayela esisha
+	Next Change	Ushintsho Olulandelayo
+	No	Cha
+	No blocks defined in this drawing.	Awekho amabhulokhu achazwe kulo mdwebo.
+	No contributor data was built into this copy.	Ayikho idatha yabaxhasi efakwe kule khophi.
+	No external references are attached.	Awekho amareferensi angaphandle anamathiselwe.
+	No model credits were built into this copy.	Awekho amakhredithi emodeli afakwe kule khophi.
+	No plot style tables.	Awekho amathebula ezitayela zokuphrinta.
+	No saved layer states	Azikho izimo zezingqimba ezilondoloziwe
+	No selection	Akukho okukhethiwe
+	No supported 3D mouse found	Ayitholakalanga i-3D mouse esekelwayo
+	Node	Inodi
+	None	Lutho
+	Normal	Okujwayelekile
+	Not Found	Akutholakalanga
+	Not available	Akutholakali
+	Not available yet	Akukatholakali
+	Not loaded	Akulayishiwe
+	Numbered list	Uhlu olunezinombolo
+	OK	KULUNGILE
+	Object	Into
+	Object Snap	I-Object Snap
+	Object Snap (F3)	I-Object Snap (F3)
+	Object Snap On (F3)	I-Object Snap Ivuliwe (F3)
+	Object Snap Tracking	I-Object Snap Tracking
+	Object Snap Tracking (F11)	I-Object Snap Tracking (F11)
+	Object Snap Tracking Settings	Izilungiselelo ze-Object Snap Tracking
+	Object snap aperture	Imbobo ye-object snap
+	Object snap marker size	Usayizi wesimaki se-object snap
+	Object type:	Uhlobo lwento:
+	Oblique	Okutshekile
+	Off	Kuvaliwe
+	Offset	I-Offset
+	On	Kuvuliwe
+	On/Off	Vula/Vala
+	Only in this drawing: {n}	Kulo mdwebo kuphela: {n}
+	Only in {name}: {n}	Ku-{name} kuphela: {n}
+	Oops	Hhayi bo
+	Open	Vula
+	Open (⌘O)	Vula (⌘O)
+	Open Sample Drawing	Vula Umdwebo Oyisampula
+	Open Xref	Vula i-Xref
+	Open a drawing first.	Vula umdwebo kuqala.
+	Open and Save	Ukuvula Nokulondoloza
+	Open sample drawing	Vula umdwebo oyisampula
+	Open...	Vula...
+	Operator:	Opharetha:
+	Options	Izinketho
+	Options...	Izinketho...
+	Orbit	I-Orbit
+	Ordinate	I-Ordinate
+	Ortho (F8)	I-Ortho (F8)
+	Ortho Mode	Imodi ye-Ortho
+	Ortho Mode (F8)	Imodi ye-Ortho (F8)
+	Osnap Settings...	Izilungiselelo ze-Osnap...
+	Out	Ngaphandle
+	Over-constrained	Kunemikhawulo eminingi kakhulu
+	Overlay	I-Overlay
+	Override	Yeqisa
+	PAPER	PAPER
+	PRs	Ama-PR
+	Page Setup Manager	Umphathi Wokusetha Ikhasi
+	Page Setup Manager...	Umphathi Wokusetha Ikhasi...
+	Pan	I-Pan
+	Pan Down	I-Pan Phansi
+	Pan Left	I-Pan Kwesobunxele
+	Pan Right	I-Pan Kwesokudla
+	Pan Up	I-Pan Phezulu
+	Pan sensitivity	Ukuzwela kwe-pan
+	Paper Space	Isikhala Sephepha
+	Parallel	Okuhambisanayo
+	Parameters Manager	Umphathi Wamapharamitha
+	Parametric	Okwepharamitha
+	Paste	Namathisela
+	Paste as Block	Namathisela njengeBhulokhu
+	Paste to Command Line	Namathisela Kumugqa Womyalo
+	Paste to Original Coordinates	Namathisela Kuma-Coordinate Okuqala
+	Path Array	Uhlu Lwendlela
+	Pattern	Iphethini
+	Percent	Iphesenti
+	Perpendicular	Okuqondile
+	Pickbox size	Usayizi we-pickbox
+	Plot	Phrinta
+	Plot (click: do not plot)	Phrinta (chofoza: ungaphrinti)
+	Plot Preview	Ukubuka Kuqala Ukuphrinta
+	Plot Style Manager	Umphathi Wezitayela Zokuphrinta
+	Plot Style Manager...	Umphathi Wezitayela Zokuphrinta...
+	Plot Style...	Isitayela Sokuphrinta...
+	Plot Styles...	Izitayela Zokuphrinta...
+	Plot Window	Iwindi Lokuphrinta
+	Plot style	Isitayela sokuphrinta
+	Plot style attached to	Isitayela sokuphrinta sinamathiselwe ku
+	Plot style table	Ithebula lesitayela sokuphrinta
+	Plot table type	Uhlobo lwethebula lokuphrinta
+	Plotter Manager	Umphathi We-Plotter
+	Plotter Manager...	Umphathi We-Plotter...
+	Plus/minus	Hlanganisa/khipha
+	Point	Iphoyinti
+	Point Filters	Izihlungi Zamaphoyinti
+	Point Style...	Isitayela Sephoyinti...
+	Polar (distance < angle)	I-Polar (ibanga < i-engeli)
+	Polar Array	Uhlu lwe-Polar
+	Polar Tracking	I-Polar Tracking
+	Polar Tracking (F10)	I-Polar Tracking (F10)
+	Polar Tracking On (F10)	I-Polar Tracking Ivuliwe (F10)
+	Polar angle measurement	Ukulinganisa i-engeli ye-polar
+	Polar distance	Ibanga le-polar
+	Polar: {distance} < {angle}°	I-Polar: {distance} < {angle}°
+	PolarSnap	PolarSnap
+	Polygon	I-Polygon
+	Polygonal	Okwe-Polygon
+	Polygonal Viewport	I-Viewport ye-Polygon
+	Polyline	I-Polyline
+	Polyline Edit	Hlela i-Polyline
+	Position X	Indawo X
+	Position Y	Indawo Y
+	Position Z	Indawo Z
+	Previous	Okwedlule
+	Previous Change	Ushintsho Olwedlule
+	Previous Layer	Ungqimba Olwedlule
+	Primitives	Izinto Eziyisisekelo
+	Print	Phrinta
+	Print...	Phrinta...
+	Profiles	Amaphrofayela
+	Properties	Izakhiwo
+	Properties Inspector	Umhloli Wezakhiwo
+	Properties:	Izakhiwo:
+	Proxy	I-Proxy
+	Purge	Hlanza
+	Pyramid	Iphiramidi
+	Quadrant	I-Quadrant
+	Query Entities	Buza Izinto
+	Quick	Okusheshayo
+	Quick Dimension	Ubukhulu Obusheshayo
+	Quick Properties	Izakhiwo Ezisheshayo
+	Quick Select	Ukukhetha Okusheshayo
+	Quick Select Properties	Izakhiwo Zokukhetha Okusheshayo
+	Quick Select...	Ukukhetha Okusheshayo...
+	QuickCalc	QuickCalc
+	QuickCalc Pick	Ukukhetha kwe-QuickCalc
+	Quit DraftCraft	Phuma ku-DraftCraft
+	Radius	Irediyasi
+	Raster Image	Isithombe se-Raster
+	Ray	I-Ray
+	Read-only	Ukufunda kuphela
+	Real name	Igama langempela
+	Realtime	Ngesikhathi sangempela
+	Reassociate Dimensions	Phinda Uhlobanise Ubukhulu
+	Recalculate Table Formulas	Phinda Ubale Amafomula Ethebula
+	Recent	Okwakamuva
+	Recent Commands	Imiyalo Yakamuva
+	Recent Input	Okokufaka Kwakamuva
+	Recover...	Buyisa...
+	Rectangle	Unxande
+	Rectangular	Okonxande
+	Rectangular Array	Uhlu Lonxande
+	Rectangular snap	I-snap yonxande
+	Red	Okubomvu
+	Redo	Phinda wenze
+	Redo (⇧⌘Z)	Phinda wenze (⇧⌘Z)
+	Redraw	Phinda udwebe
+	Reference Manager	Umphathi Wamareferensi
+	Reference Name	Igama Lereferensi
+	References: {n}	Amareferensi: {n}
+	Regen	I-Regen
+	Regen All	I-Regen Konke
+	Region	Isifunda
+	Region/Mass Properties	Izakhiwo Zesifunda/Zesisindo
+	Reinitialize	Qalisa kabusha
+	Relative	Okuhlobene
+	Relative to last segment	Okuhlobene nengxenye yokugcina
+	Release the 3D mouse to calibrate its resting position	Yekela i-3D mouse ukuze ulinganise indawo yayo yokuphumula
+	Reload	Layisha kabusha
+	Reload All	Layisha Konke Kabusha
+	Remove	Susa
+	Remove Leader	Susa i-Leader
+	Remove Vertex	Susa i-Vertex
+	Remove the viewport override	Susa ukweqisa kwe-viewport
+	Rename Dimension Style	Qamba Kabusha Isitayela Sobukhulu
+	Rename Layer	Qamba Kabusha Ungqimba
+	Rename Layer State	Qamba Kabusha Isimo Songqimba
+	Rename Layout	Qamba Kabusha Isakhiwo
+	Rename Text Style	Qamba Kabusha Isitayela Sombhalo
+	Rename...	Qamba kabusha...
+	Repeat {command}	Phinda u-{command}
+	Replace Block...	Shintsha Ibhulokhu...
+	Requires a point (x,y, @dx,dy or @d<a).	Kudingeka iphoyinti (x,y, @dx,dy noma @d<a).
+	Reset Palettes	Setha Kabusha Ama-palette
+	Reset Panel Layout	Setha Kabusha Isakhiwo Sephaneli
+	Reset keeps the interface language.	Ukusetha kabusha kugcina ulimi lokuxhumana.
+	Reset to Defaults	Setha Kabusha Kokuzenzakalelayo
+	Restore	Buyisela
+	Restore Layer State	Buyisela Isimo Songqimba
+	Reverse	Hlehlisa
+	Reverse the order	Hlehlisa ukulandelana
+	Reverse zoom direction	Hlehlisa indlela ye-zoom
+	Revision Cloud	Ifu Lokubuyekeza
+	Revolve	Jikelezisa
+	Right	Kwesokudla
+	Rotate	Jikisa
+	Rotation	Ukujikeleza
+	Run Script...	Qalisa Iskripthi...
+	SVG drawings (SVG, SVGZ)	Imidwebo ye-SVG (SVG, SVGZ)
+	Save	Londoloza
+	Save (⌘S)	Londoloza (⌘S)
+	Save As	Londoloza Njenge
+	Save As...	Londoloza Njenge...
+	Save Layer State	Londoloza Isimo Songqimba
+	Save State	Londoloza Isimo
+	Save new drawings as	Londoloza imidwebo emisha njenge
+	Saved Path	Indlela Elondoloziwe
+	Scale	I-Scale
+	Scale List...	Uhlu Lwama-Scale...
+	Screen magnifiers, screen readers and recorders follow the system cursor.	Izikhulisi zesikrini, abafundi besikrini nabaqopha balandela ikhesa yesistimu.
+	Screening	Ukuhlunga
+	Search for layer	Sesha ungqimba
+	Search for parameter	Sesha ipharamitha
+	Search for pattern	Sesha iphethini
+	Second and next points:	Iphoyinti lesibili nalandelayo:
+	Select	Khetha
+	Select 2D polyline	Khetha i-2D polyline
+	Select All	Khetha Konke
+	Select Objects	Khetha Izinto
+	Select Similar	Khetha Okufanayo
+	Select a 2D polyline.	Khetha i-2D polyline.
+	Select a block reference.	Khetha ireferensi yebhulokhu.
+	Select a circle or arc.	Khetha indilinga noma i-arc.
+	Select a closed polyline	Khetha i-polyline evaliwe
+	Select a closed polyline, circle, ellipse or closed spline.	Khetha i-polyline evaliwe, indilinga, i-ellipse noma i-spline evaliwe.
+	Select a closed polyline.	Khetha i-polyline evaliwe.
+	Select a curve as the path.	Khetha ijika njengendlela.
+	Select a dimension constraint type	Khetha uhlobo lomkhawulo wobukhulu
+	Select a line object	Khetha into engumugqa
+	Select a line object.	Khetha into engumugqa.
+	Select a line or an arc.	Khetha umugqa noma i-arc.
+	Select a line or polyline segment	Khetha umugqa noma ingxenye ye-polyline
+	Select a line, arc or open polyline.	Khetha umugqa, i-arc noma i-polyline evulekile.
+	Select a line, arc, circle, polyline, ellipse or spline as the path.	Khetha umugqa, i-arc, indilinga, i-polyline, i-ellipse noma i-spline njengendlela.
+	Select a line, circle, arc or polyline segment.	Khetha umugqa, indilinga, i-arc noma ingxenye ye-polyline.
+	Select a line.	Khetha umugqa.
+	Select a polyline.	Khetha i-polyline.
+	Select a text, mtext, attribute definition or dimension.	Khetha umbhalo, i-mtext, incazelo ye-attribute noma ubukhulu.
+	Select an annotation object	Khetha into yokuchasisa
+	Select an arc or circle	Khetha i-arc noma indilinga
+	Select an arc.	Khetha i-arc.
+	Select an object	Khetha into
+	Select an object to change	Khetha into ozoyishintsha
+	Select an object to measure	Khetha into ozoyilinganisa
+	Select an object.	Khetha into.
+	Select an open curve.	Khetha ijika elivulekile.
+	Select an open line, arc, polyline, ellipse arc or spline.	Khetha umugqa ovulekile, i-arc, i-polyline, i-arc ye-ellipse noma i-spline.
+	Select arc or circle	Khetha i-arc noma indilinga
+	Select arc or polyline arc segment	Khetha i-arc noma ingxenye ye-arc ye-polyline
+	Select arc style	Khetha isitayela se-arc
+	Select arc, circle, line	Khetha i-arc, indilinga, umugqa
+	Select at least two objects to join.	Khetha okungenani izinto ezimbili ozozihlanganisa.
+	Select circle or arc to add center mark	Khetha indilinga noma i-arc ukuze wengeze uphawu lwamaphakathi
+	Select closed objects (regions, closed polylines, circles).	Khetha izinto ezivaliwe (izifunda, ama-polyline avaliwe, izindilinga).
+	Select first line	Khetha umugqa wokuqala
+	Select first line or arc	Khetha umugqa wokuqala noma i-arc
+	Select first object	Khetha into yokuqala
+	Select first point	Khetha iphoyinti lokuqala
+	Select nested objects to copy	Khetha izinto ezifakwe ngaphakathi ozozikopisha
+	Select object	Khetha into
+	Select object to dimension	Khetha into ozoyinika ubukhulu
+	Select object to divide	Khetha into ozoyihlukanisa
+	Select object to extend or shift-select to trim	Khetha into ozoyelula noma u-shift-select ukuze u-trim
+	Select object to measure	Khetha into ozoyilinganisa
+	Select object to offset	Khetha into ozoyi-offset
+	Select object to trim or shift-select to extend	Khetha into ozoyi-trim noma u-shift-select ukuze welule
+	Select objects	Khetha izinto
+	Select objects (crossing window first corner)	Khetha izinto (ikhona lokuqala le-crossing window)
+	Select objects first, then choose a command	Khetha izinto kuqala, bese ukhetha umyalo
+	Select objects to array.	Khetha izinto ozozenza uhlu.
+	Select objects to stretch by crossing-window or crossing-polygon...	Khetha izinto ozozelula nge-crossing-window noma i-crossing-polygon...
+	Select objects:	Khetha izinto:
+	Select one polyline (Multiple is available through the JSON form).	Khetha i-polyline eyodwa (i-Multiple itholakala ngefomu le-JSON).
+	Select path curve	Khetha ijika lendlela
+	Select point or object	Khetha iphoyinti noma into
+	Select polyline	Khetha i-polyline
+	Select second line	Khetha umugqa wesibili
+	Select second line or shift-select to apply corner	Khetha umugqa wesibili noma u-shift-select ukuze usebenzise ikhona
+	Select second object	Khetha into yesibili
+	Select second object or shift-select to apply corner	Khetha into yesibili noma u-shift-select ukuze usebenzise ikhona
+	Select second point	Khetha iphoyinti lesibili
+	Select spline	Khetha i-spline
+	Select symmetry line	Khetha umugqa wokulingana
+	Select two points	Khetha amaphoyinti amabili
+	Selection	Ukukhetha
+	Selection Cycling	Ukujikeleza Kokukhetha
+	Send Hatches to Back	Thumela ama-Hatch Ngemuva
+	Send Under Objects	Thumela Ngaphansi Kwezinto
+	Send to Back	Thumela Ngemuva
+	Services	Izinsiza
+	Set Current	Setha Njengamanje
+	Set Current Dimension Style	Setha Isitayela Sobukhulu Samanje
+	Set Current Text Style	Setha Isitayela Sombhalo Samanje
+	Set Current Viewport	Setha i-Viewport Yamanje
+	Set Layer Properties	Setha Izakhiwo Zongqimba
+	Set Properties	Setha Izakhiwo
+	Set Table Cell	Setha Iseli Lethebula
+	Set Table Cell Style	Setha Isitayela Seseli Lethebula
+	Set Variable	Setha i-Variable
+	Set View	Setha Ukubuka
+	Settings...	Izilungiselelo...
+	Share	Yabelana
+	Show	Bonisa
+	Show All	Bonisa Konke
+	Show All Constraint Bars	Bonisa Wonke Amabha Emikhawulo
+	Show All Dynamic Dimensions	Bonisa Bonke Ubukhulu Obushintshashintshayo
+	Show Annotative Objects	Bonisa Izinto Ezichasisayo
+	Show Layer List	Bonisa Uhlu Lwezingqimba
+	Show Quick Properties for selected objects	Bonisa Izakhiwo Ezisheshayo zezinto ezikhethiwe
+	Show System Cursor	Bonisa Ikhesa Yesistimu
+	Show and hide the tools of this category	Bonisa futhi ufihle amathuluzi alesi sigaba
+	Show command prompting near the crosshairs	Bonisa imiyalezo yomyalo eduze ne-crosshair
+	Show in Tool Sets	Bonisa ku-Tool Sets
+	Show/Hide Lineweight	Bonisa/Fihla Ubukhulu Bomugqa
+	Show/Hide Transparency	Bonisa/Fihla Ukubonakala Ngale
+	Single Line Text	Umbhalo Womugqa Owodwa
+	Single Point	Iphoyinti Elilodwa
+	Single...	Okukodwa...
+	Smooth	Bushelelezi
+	Snap	I-Snap
+	Snap Mode	Imodi ye-Snap
+	Snap Mode (F9)	Imodi ye-Snap (F9)
+	Snap On (F9)	I-Snap Ivuliwe (F9)
+	Snap Overrides	Ukweqisa kwe-Snap
+	Snap X spacing	Isikhala se-Snap X
+	Snap and Grid	I-Snap neGridi
+	Snap type	Uhlobo lwe-snap
+	Snap, grid, polar tracking and Dynamic Input:	I-snap, igridi, i-polar tracking ne-Okokufaka Okushintshashintshayo:
+	Solid	Okuqinile
+	Solid Editing	Ukuhlela Okuqinile
+	Sort	Hlunga
+	Specify a point	Cacisa iphoyinti
+	Specify a scale for the hatch pattern	Cacisa i-scale yephethini ye-hatch
+	Specify a second extension line origin	Cacisa umsuka womugqa wesibili wesandiso
+	Specify an angle for the hatch pattern	Cacisa i-engeli yephethini ye-hatch
+	Specify angle end point	Cacisa iphoyinti lokuphela le-engeli
+	Specify angle of dimension line	Cacisa i-engeli yomugqa wobukhulu
+	Specify angle of dimension text	Cacisa i-engeli yombhalo wobukhulu
+	Specify angle start point	Cacisa iphoyinti lokuqala le-engeli
+	Specify angle vertex	Cacisa i-vertex ye-engeli
+	Specify angle vertex point	Cacisa iphoyinti le-vertex ye-engeli
+	Specify arc length dimension location	Cacisa indawo yobukhulu bobude be-arc
+	Specify axis endpoint of ellipse	Cacisa iphoyinti lokuphela le-eksisi ye-ellipse
+	Specify base diameter	Cacisa ububanzi besisekelo
+	Specify base point	Cacisa iphoyinti lesisekelo
+	Specify base point or displacement (drag with the middle mouse button for realtime pan)	Cacisa iphoyinti lesisekelo noma ukususwa (hudula ngenkinobho yegundane emaphakathi ukuze u-pan ngesikhathi sangempela)
+	Specify base radius	Cacisa irediyasi yesisekelo
+	Specify center of donut	Cacisa maphakathi e-donut
+	Specify center of ellipse	Cacisa maphakathi e-ellipse
+	Specify center of polygon	Cacisa maphakathi e-polygon
+	Specify center point for circle	Cacisa iphoyinti lamaphakathi lendilinga
+	Specify center point of arc	Cacisa iphoyinti lamaphakathi le-arc
+	Specify center point of arc (hold Ctrl to switch direction)	Cacisa iphoyinti lamaphakathi le-arc (bamba u-Ctrl ukuze ushintshe indlela)
+	Specify center point of array	Cacisa iphoyinti lamaphakathi lohlu
+	Specify center point of base	Cacisa iphoyinti lamaphakathi lesisekelo
+	Specify corner of viewport	Cacisa ikhona le-viewport
+	Specify corner of window, enter a scale factor (nX or nXP)	Cacisa ikhona lewindi, faka isici se-scale (nX noma nXP)
+	Specify diameter of circle	Cacisa ububanzi bendilinga
+	Specify dimension arc line location	Cacisa indawo yomugqa we-arc wobukhulu
+	Specify dimension line location	Cacisa indawo yomugqa wobukhulu
+	Specify distance between turns	Cacisa ibanga phakathi kokujika
+	Specify distance to other axis	Cacisa ibanga eliya kwenye i-eksisi
+	Specify end angle	Cacisa i-engeli yokuphela
+	Specify end point of arc	Cacisa iphoyinti lokuphela le-arc
+	Specify end point of arc (hold Ctrl to switch direction)	Cacisa iphoyinti lokuphela le-arc (bamba u-Ctrl ukuze ushintshe indlela)
+	Specify ending width	Cacisa ububanzi bokuphela
+	Specify ending width for next segment	Cacisa ububanzi bokuphela bengxenye elandelayo
+	Specify endpoint of arc	Cacisa isiphetho se-arc
+	Specify endpoint of axis	Cacisa isiphetho se-eksisi
+	Specify endpoint of line	Cacisa isiphetho somugqa
+	Specify feature location	Cacisa indawo yesici
+	Specify fillet radius	Cacisa irediyasi ye-fillet
+	Specify fillet radius for rectangles	Cacisa irediyasi ye-fillet yonxande
+	Specify first angle endpoint	Cacisa isiphetho sokuqala se-engeli
+	Specify first chamfer distance	Cacisa ibanga lokuqala le-chamfer
+	Specify first chamfer distance for rectangles	Cacisa ibanga lokuqala le-chamfer yonxande
+	Specify first constraint point	Cacisa iphoyinti lokuqala lomkhawulo
+	Specify first corner	Cacisa ikhona lokuqala
+	Specify first corner point	Cacisa iphoyinti lekhona lokuqala
+	Specify first destination point	Cacisa iphoyinti lokuqala lokuya
+	Specify first end point of circle's diameter	Cacisa isiphetho sokuqala sobubanzi bendilinga
+	Specify first endpoint of edge	Cacisa isiphetho sokuqala somphetho
+	Specify first extension line origin	Cacisa umsuka womugqa wokuqala wesandiso
+	Specify first point	Cacisa iphoyinti lokuqala
+	Specify first point of mirror line	Cacisa iphoyinti lokuqala lomugqa wesibuko
+	Specify first point on circle	Cacisa iphoyinti lokuqala endilingeni
+	Specify first point on circle: _tan to	Cacisa iphoyinti lokuqala endilingeni: _tan to
+	Specify first source point	Cacisa iphoyinti lokuqala lomthombo
+	Specify height	Cacisa ukuphakama
+	Specify helix height	Cacisa ukuphakama kwe-helix
+	Specify included angle	Cacisa i-engeli efakiwe
+	Specify included angle (hold Ctrl to switch direction)	Cacisa i-engeli efakiwe (bamba u-Ctrl ukuze ushintshe indlela)
+	Specify insertion base point	Cacisa iphoyinti lesisekelo lokufaka
+	Specify insertion point	Cacisa iphoyinti lokufaka
+	Specify inside diameter of donut	Cacisa ububanzi bangaphakathi be-donut
+	Specify leader arrowhead location	Cacisa indawo yekhanda lomcibisholo we-leader
+	Specify leader endpoint	Cacisa isiphetho se-leader
+	Specify leader landing location	Cacisa indawo yokuhlala ye-leader
+	Specify length for rectangles	Cacisa ubude bonxande
+	Specify length of chord	Cacisa ubude be-chord
+	Specify length of chord (hold Ctrl to switch direction)	Cacisa ubude be-chord (bamba u-Ctrl ukuze ushintshe indlela)
+	Specify length of segment	Cacisa ubude bengxenye
+	Specify line width for rectangles	Cacisa ububanzi bomugqa wonxande
+	Specify location for new vertex	Cacisa indawo ye-vertex entsha
+	Specify minimum length of arc	Cacisa ubude obuncane be-arc
+	Specify new end point	Cacisa iphoyinti lokuphela elisha
+	Specify new location for marked vertex	Cacisa indawo entsha ye-vertex emakiwe
+	Specify new width for all segments	Cacisa ububanzi obusha bazo zonke izingxenye
+	Specify next point	Cacisa iphoyinti elilandelayo
+	Specify offset distance	Cacisa ibanga le-offset
+	Specify opposite corner	Cacisa ikhona eliphambene
+	Specify other corner point	Cacisa elinye iphoyinti lekhona
+	Specify other endpoint of axis	Cacisa esinye isiphetho se-eksisi
+	Specify outside diameter of donut	Cacisa ububanzi bangaphandle be-donut
+	Specify point	Cacisa iphoyinti
+	Specify point on object for first tangent of circle	Cacisa iphoyinti entweni le-tangent yokuqala yendilinga
+	Specify point on object for second tangent of circle	Cacisa iphoyinti entweni le-tangent yesibili yendilinga
+	Specify point on side to offset	Cacisa iphoyinti ohlangothini ozolu-offset
+	Specify radius of arc	Cacisa irediyasi ye-arc
+	Specify radius of arc (hold Ctrl to switch direction)	Cacisa irediyasi ye-arc (bamba u-Ctrl ukuze ushintshe indlela)
+	Specify radius of circle	Cacisa irediyasi yendilinga
+	Specify rotation angle	Cacisa i-engeli yokujikisa
+	Specify rotation angle of text	Cacisa i-engeli yokujikisa umbhalo
+	Specify scale factor	Cacisa isici se-scale
+	Specify second angle endpoint	Cacisa isiphetho sesibili se-engeli
+	Specify second break point	Cacisa iphoyinti lesibili lokwephula
+	Specify second chamfer distance for rectangles	Cacisa ibanga lesibili le-chamfer yonxande
+	Specify second constraint point	Cacisa iphoyinti lesibili lomkhawulo
+	Specify second destination point	Cacisa iphoyinti lesibili lokuya
+	Specify second end point of circle's diameter	Cacisa isiphetho sesibili sobubanzi bendilinga
+	Specify second endpoint of edge	Cacisa isiphetho sesibili somphetho
+	Specify second extension line origin	Cacisa umsuka womugqa wesibili wesandiso
+	Specify second point	Cacisa iphoyinti lesibili
+	Specify second point of arc	Cacisa iphoyinti lesibili le-arc
+	Specify second point of mirror line	Cacisa iphoyinti lesibili lomugqa wesibuko
+	Specify second point on circle	Cacisa iphoyinti lesibili endilingeni
+	Specify second point on circle: _tan to	Cacisa iphoyinti lesibili endilingeni: _tan to
+	Specify second point or <use first point as displacement>	Cacisa iphoyinti lesibili noma <sebenzisa iphoyinti lokuqala njengokususwa>
+	Specify second source point	Cacisa iphoyinti lesibili lomthombo
+	Specify side to offset	Cacisa uhlangothi ozolu-offset
+	Specify start angle	Cacisa i-engeli yokuqala
+	Specify start point	Cacisa iphoyinti lokuqala
+	Specify start point of arc	Cacisa iphoyinti lokuqala le-arc
+	Specify start point of polyline	Cacisa iphoyinti lokuqala le-polyline
+	Specify start point of text	Cacisa iphoyinti lokuqala lombhalo
+	Specify starting width	Cacisa ububanzi bokuqala
+	Specify starting width for next segment	Cacisa ububanzi bokuqala bengxenye elandelayo
+	Specify tangent direction for the start point of arc	Cacisa indlela ye-tangent yephoyinti lokuqala le-arc
+	Specify the elevation for rectangles	Cacisa ukuphakama konxande
+	Specify thickness for rectangles	Cacisa ugqinsi lonxande
+	Specify third point on circle	Cacisa iphoyinti lesithathu endilingeni
+	Specify third point on circle: _tan to	Cacisa iphoyinti lesithathu endilingeni: _tan to
+	Specify third source point or <continue>	Cacisa iphoyinti lesithathu lomthombo noma <qhubeka>
+	Specify through point	Cacisa iphoyinti lokudlula
+	Specify top diameter	Cacisa ububanzi obuphezulu
+	Specify top radius	Cacisa irediyasi ephezulu
+	Specify total angle	Cacisa i-engeli ephelele
+	Specify total length	Cacisa ubude obuphelele
+	Specify width for rectangles	Cacisa ububanzi bonxande
+	Sphere	Indingilizi
+	Spline	I-Spline
+	Spline Edit	Hlela i-Spline
+	Stack (type 1/2 then select)	Qoqela (thayipha u-1/2 bese ukhetha)
+	Standard	Okujwayelekile
+	Start	Qala
+	Start Width	Ububanzi Bokuqala
+	Start X	Ukuqala X
+	Start Y	Ukuqala Y
+	Start angle	I-engeli yokuqala
+	Start, Center, Angle	Ukuqala, Maphakathi, I-engeli
+	Start, Center, End	Ukuqala, Maphakathi, Ukuphela
+	Start, Center, Length	Ukuqala, Maphakathi, Ubude
+	Start, End, Angle	Ukuqala, Ukuphela, I-engeli
+	Start, End, Direction	Ukuqala, Ukuphela, Indlela
+	Start, End, Radius	Ukuqala, Ukuphela, Irediyasi
+	Status	Isimo
+	Status Bar	Ibha Yesimo
+	Stretch	Yelula
+	Stretch Vertex	Yelula i-Vertex
+	Style: Standard	Isitayela: Standard
+	Subtract	Khipha
+	Sweep	I-Sweep
+	Switch Drawing	Shintsha Umdwebo
+	Switch Layout	Shintsha Isakhiwo
+	Switch between model space in a viewport and paper space	Shintsha phakathi kwesikhala semodeli ku-viewport nesikhala sephepha
+	Symmetric	Okulinganayo
+	Synchronize Attributes	Vumelanisa Ama-attribute
+	Synchronize Multiple-scale Positions	Vumelanisa Izindawo Zama-scale Amaningi
+	TOP	PHEZULU
+	Table	Ithebula
+	Table Breaks	Ukwephuka Kwethebula
+	Table Cell Style	Isitayela Seseli Lethebula
+	Table Style...	Isitayela Sethebula...
+	Table style	Isitayela sethebula
+	Table...	Ithebula...
+	Tan, Tan, Radius	Tan, Tan, Irediyasi
+	Tan, Tan, Tan	Tan, Tan, Tan
+	Tangent	I-Tangent
+	Temporary track point	Iphoyinti lokulandelela lesikhashana
+	Text	Umbhalo
+	Text Editor	Umhleli Wombhalo
+	Text Height	Ukuphakama Kombhalo
+	Text Objects Only	Izinto Zombhalo Kuphela
+	Text Style...	Isitayela Sombhalo...
+	Text height	Ukuphakama kombhalo
+	Text override	Ukweqisa umbhalo
+	Text style	Isitayela sombhalo
+	Thaw All Layers	Ncibilikisa Zonke Izingqimba
+	Thaw Layer	Ncibilikisa Ungqimba
+	The aperture is how near the cursor must come to a point for an object snap to find it.	Imbobo isho ukuthi ikhesa kufanele isondele kangakanani ephoyintini ukuze i-object snap ilithole.
+	There is nothing here yet.	Akukho lutho lapha okwamanje.
+	Thickness	Ugqinsi
+	Time	Isikhathi
+	Time-sensitive right-click: a quick click is Enter, holding opens the menu	Ukuchofoza kwesokudla okuncike esikhathini: ukuchofoza okusheshayo kungu-Enter, ukubamba kuvula imenyu
+	To	Kuya ku
+	To get started, create or open a drawing.	Ukuze uqale, dala noma uvule umdwebo.
+	Toggle PICKADD (off: each pick replaces the selection)	Shintsha i-PICKADD (kuvaliwe: ukukhetha ngakunye kuthatha indawo yokukhethiwe)
+	Toggle PICKADD (on: picks add to the selection)	Shintsha i-PICKADD (kuvuliwe: ukukhetha kwengeza kokukhethiwe)
+	Tolerance...	Ukubekezelela...
+	Tool Bar	Ibha Yamathuluzi
+	Tool Sets	Tool Sets
+	Tools	Amathuluzi
+	Torus	I-Torus
+	Trace	Landelela
+	Track orthogonally only	Landelela ngokuqondile kuphela
+	Track using all polar angle settings	Landelela usebenzisa zonke izilungiselelo ze-engeli ye-polar
+	Transparency	Ukubonakala ngale
+	Trim	I-Trim
+	True Color	Umbala Weqiniso
+	Turn All Layers On	Vula Zonke Izingqimba
+	Turn Off Layer	Vala Ungqimba
+	Turn On Layer	Vula Ungqimba
+	Turn Quick Properties off (QPMODE)	Vala Izakhiwo Ezisheshayo (QPMODE)
+	Turned off, a right-click while a command runs always opens the shortcut menu.	Uma kuvaliwe, ukuchofoza kwesokudla ngesikhathi umyalo usebenza kuhlala kuvula imenyu yesinqamuleli.
+	Type	Uhlobo
+	Type a command	Thayipha umyalo
+	Type text; Enter starts a new paragraph	Thayipha umbhalo; u-Enter uqala isigaba esisha
+	UCS Icon	Isithonjana se-UCS
+	Undo	Hlehlisa
+	Undo (⌘Z)	Hlehlisa (⌘Z)
+	Ungroup	Hlakaza Iqembu
+	Union	Ubunye
+	Unisolate Layer	Yeka Ukuhlukanisa Ungqimba
+	Units Conversion	Ukuguqulwa Kwamayunithi
+	Units...	Amayunithi...
+	Unload	Khipha
+	Unloaded	Kukhishiwe
+	Unlock Layer	Vula Ungqimba Okhiyiwe
+	Unlock viewport	Vula i-viewport ekhiyiwe
+	Unmerge Cells	Hlukanisa Amaseli
+	Unreferenced	Akunareferensi
+	Unresolved	Akuxazululiwe
+	Unsaved Layer State	Isimo Songqimba Esingalondoloziwe
+	Up	Phezulu
+	Update	Buyekeza
+	Update Data Links	Buyekeza Izixhumanisi Zedatha
+	Use System Setting	Sebenzisa Isilungiselelo Sesistimu
+	Use for this layout	Sebenzisa kulesi sakhiwo
+	Use object linetype	Sebenzisa uhlobo lomugqa lwento
+	Use object lineweight	Sebenzisa ubukhulu bomugqa bento
+	User	Umsebenzisi
+	User Parameters	Amapharamitha Omsebenzisi
+	User Preferences	Izintandokazi Zomsebenzisi
+	Username	Igama lomsebenzisi
+	VP Color	Umbala we-VP
+	VP Freeze	Ukuqandisa kwe-VP
+	Value	Inani
+	Value:	Inani:
+	Variables	Ama-variable
+	Version	Inguqulo
+	Version 2000	Inguqulo 2000
+	Version 2004	Inguqulo 2004
+	Version 2007	Inguqulo 2007
+	Version 2010	Inguqulo 2010
+	Version 2013	Inguqulo 2013
+	Version 2018	Inguqulo 2018
+	Version {version}	Inguqulo {version}
+	Vertical	Okuqondile phezulu
+	VerticalDistance	Ibanga Eliqondile Phezulu
+	View	Ukubuka
+	ViewCube	ViewCube
+	Viewport	I-Viewport
+	Viewport Layer Freeze	Ukuqandisa Ungqimba ku-Viewport
+	Viewport Properties	Izakhiwo ze-Viewport
+	Viewport is locked	I-viewport ikhiyiwe
+	Viewport scale	I-scale ye-viewport
+	Viewport {id}	I-Viewport {id}
+	Viewports	Ama-Viewport
+	Volume	Ivolumu
+	WCS	WCS
+	White	Okumhlophe
+	Width factor	Isici sobubanzi
+	Window	Iwindi
+	Wipeout	I-Wipeout
+	Workspace Switching	Ukushintsha Indawo Yokusebenza
+	Write Block	Bhala Ibhulokhu
+	X	X
+	Xline	I-Xline
+	Y	Y
+	Yellow	Okuphuzi
+	Yes	Yebo
+	Zoom	I-Zoom
+	Zoom All	I-Zoom Konke
+	Zoom Dynamic	I-Zoom Eshintshashintshayo
+	Zoom Extents	Zoom Extents
+	Zoom In	Sondeza
+	Zoom Object	I-Zoom Entweni
+	Zoom Out	Hlehlisa i-zoom
+	Zoom Previous	I-Zoom Yangaphambilini
+	Zoom Realtime	I-Zoom Ngesikhathi Sangempela
+	Zoom Window	I-Zoom Ngewindi
+	Zoom sensitivity	Ukuzwela kwe-zoom
+	error	iphutha
+	min	imiz
+	objects	izinto
+	{contributors} · {commits}	{contributors} · {commits}
+	{kind} (constraint {id})	{kind} (umkhawulo {id})
+	{kind} constraint {name} = {expression}  (double-click to edit)	{kind} umkhawulo {name} = {expression}  (chofoza kabili ukuze uhlele)
+	{name}: {distance} < {angle}°	{name}: {distance} < {angle}°
+	ƒx  New User Parameter	ƒx  Ipharamitha Entsha Yomsebenzisi
+	ΔLOC	ΔLOC
+	−Bin	−Bin
+	−LOC	−LOC
+	⌘↩ to finish	⌘↩ ukuqeda
+@plural	{n} commit	i-commit engu-{n}|ama-commit angu-{n}
+@plural	{n} contributor	umxhasi ongu-{n}|abaxhasi abangu-{n}
+	Check for Updates…	Hlola Izibuyekezo…
+	DraftCraft is up to date.	I-DraftCraft isesikhathini.
+	Could not check for updates.	Akukwazekanga ukuhlola izibuyekezo.
+	Add to Working Set	Engeza Kusethi Yokusebenza
+	Add: Pick points	Engeza: Khetha amaphoyinti
+	Add: Select objects	Engeza: Khetha izinto
+	Add…	Engeza…
+	Alias	Isiteketiso
+	Alias file: {file}	Ifayela leziteketiso: {file}
+	Align Multileaders	Qondanisa ama-Multileader
+	Analyze Shapes	Hlaziya Izimo
+	Analyze Usage	Hlaziya Ukusetshenziswa
+	Animation Effects	Imiphumela Yopopayi
+	Animation effects	Imiphumela yopopayi
+	Associative	Okuhlobanisiwe
+	Backup copy	Ikhophi yokulondoloza
+	Block to create or edit	Ibhulokhu ozoyidala noma uyihlele
+	Bottom left	Phansi kwesobunxele
+	Bottom right	Phansi kwesokudla
+	Boundaries	Imingcele
+	Boundaries picked: {n}	Imingcele ekhethiwe: {n}
+	Break-line Symbol	Uphawu Lomugqa Wokwephuka
+	Centered	Kumaphakathi
+	Change Properties	Shintsha Izakhiwo
+	Choose the command the alias starts.	Khetha umyalo oqalwa yisiteketiso.
+	Click the ruler to add a tab stop, right-click to remove one	Chofoza irula ukuze wengeze ithebhu, chofoza kwesokudla ukuze uyisuse
+	Click to set new origin	Chofoza ukuze usethe umsuka omusha
+	Close Block Editor	Vala Umhleli Webhulokhu
+	Collect	Qoqa
+	Collect Multileaders	Qoqa ama-Multileader
+	Color 1	Umbala 1
+	Color 2	Umbala 2
+	Command	Umyalo
+	Convert Text to Mtext	Guqula Umbhalo ube yi-Mtext
+	Create backup copy with each save	Dala ikhophi yokulondoloza ngakho konke ukulondoloza
+	Create separate hatches	Dala ama-hatch ahlukene
+	Crossing selection color:	Umbala wokukhetha okuwelayo:
+	Curved	Okugobile
+	Customize	Enza ngokwakho
+	Default to boundary extents	Okuzenzakalelayo kuya emkhawulweni womngcele
+	Define each corner of the selection window with a separate click.	Chaza ikhona ngalinye lewindi lokukhetha ngokuchofoza okuhlukile.
+	Discard	Lahla
+	Drag Dynamic Grip	Hudula i-Grip Eshintshashintshayo
+	Dynamic Block Data	Idatha Yebhulokhu Eshintshashintshayo
+	Dynamic Block Grips	Ama-Grip Ebhulokhu Eshintshashintshayo
+	Dynamic Block Reference	Ireferensi Yebhulokhu Eshintshashintshayo
+	Edit Block Definition	Hlela Incazelo Yebhulokhu
+	Edit Command Aliases (PGP)...	Hlela Iziteketiso Zemiyalo (PGP)...
+	Edit Multileader	Hlela i-Multileader
+	Edit Reference In-Place	Hlela Ireferensi Endaweni
+	Edit…	Hlela…
+	Evaluate LISP	Hlola i-LISP
+	Exclude:	Ngaphandle kwa:
+	Explode Attributes to Text	Qhumisa Ama-attribute abe Umbhalo
+	Express Tools	Express Tools
+	Font	Ifonti
+	Grips	Ama-grip
+	Groups	Amaqembu
+	Hatch Pick	Ukukhetha i-Hatch
+	Hatch and Gradient	I-Hatch ne-Gradient
+	Hatch origin	Umsuka we-hatch
+	Hatches	Ama-hatch
+	Hemispherical	Okwe-Hemisphere
+	Ignore	Ziba
+	Imperial (inches)	Imperial (amayintshi)
+	Implied Loops	Izindilinga Ezicatshangwayo
+	Indicate selection area	Bonisa indawo yokukhetha
+	Interface scale	I-scale yokuxhumana
+	Inverted	Okuphendukiwe
+	Island	Isiqhingi
+	Island detection	Ukuthola iziqhingi
+	Italic	Okutshekile
+	Justify	Qondanisa
+	Load Application...	Layisha Uhlelo Lokusebenza...
+	Metric (millimetres)	Metric (amamilimitha)
+	More than {n} aliases.	Iziteketiso ezingaphezu kuka-{n}.
+	Move/Copy/Rotate	Hambisa/Kopisha/Jikisa
+	Multiline text	Umbhalo wemigqa eminingi
+	New and the first drawing at startup use these units unless a default template is set (QNEWTEMPLATE).	I-New nomdwebo wokuqala ekuqaleni kusebenzisa lawa mayunithi ngaphandle uma kusethwe isifanekiso esizenzakalelayo (QNEWTEMPLATE).
+	New block	Ibhulokhu entsha
+	No alias file loaded. REINIT replaces these aliases with a file's.	Alikho ifayela leziteketiso elilayishiwe. I-REINIT ithatha indawo yalezi ziteketiso ngezefayela.
+	Not a number or distance: {text}	Akuyona inombolo noma ibanga: {text}
+	Object grouping	Ukuqoqwa kwezinto
+	Object selection limit for display of grips	Umkhawulo wokukhetha izinto wokubonisa ama-grip
+	Objects on locked layers	Izinto ezisezingqimbeni ezikhiyiwe
+	Open in Block Editor	Vula ku-Block Editor
+	Origin: {x}, {y}	Umsuka: {x}, {y}
+	Outer	Okwangaphandle
+	Overline	Umugqa phezulu
+	Preview	Ukubuka kuqala
+	Query Texts	Buza Imibhalo
+	Save Block	Londoloza Ibhulokhu
+	Save Block As	Londoloza Ibhulokhu Njenge
+	Save Layout as Template	Londoloza Isakhiwo njengeSifanekiso
+	Save Reference Edits	Londoloza Ukuhlela Kwereferensi
+	Save alias	Londoloza isiteketiso
+	Save changes to block "{name}"?	Londoloza izinguquko kubhulokhu ethi "{name}"?
+	Select boundaries to remove	Khetha imingcele ozoyisusa
+	Select using two clicks only	Khetha ngokuchofoza kabili kuphela
+	Selection Area Effect	Umphumela Wendawo Yokukhetha
+	Selection Preview Filter	Isihlungi Sokubuka Kuqala Ukukhetha
+	Selection area opacity:	Ukufiphala kwendawo yokukhetha:
+	Selection effect color	Umbala womphumela wokukhetha
+	Selection modes	Izindlela zokukhetha
+	Selection preview	Ukubuka kuqala ukukhetha
+	Set Dynamic Property	Setha Isakhiwo Esishintshashintshayo
+	Shape	Isimo
+	Sheet Books to PDF...	Ama-Sheet Book ku-PDF...
+	Show grips	Bonisa ama-grip
+	Specified origin	Umsuka ocacisiwe
+	Spherical	Okwendingilizi
+	Tables	Amathebula
+	Text color	Umbala wombhalo
+	Top left	Phezulu kwesobunxele
+	Top right	Phezulu kwesokudla
+	Type an alias name.	Thayipha igama lesiteketiso.
+	Underline	Umugqa ngaphansi
+	Units of new drawings	Amayunithi emidwebo emisha
+	Unsaved changes	Izinguquko ezingalondoloziwe
+	Use current origin	Sebenzisa umsuka wamanje
+	Visual Effect Settings	Izilungiselelo Zemiphumela Ebonakalayo
+	Visual Effect Settings...	Izilungiselelo Zemiphumela Ebonakalayo...
+	When a command is active	Uma umyalo usebenza
+	When no command is active	Uma kungekho myalo osebenzayo
+	Window selection color:	Umbala wokukhetha ngewindi:
+	Working Set	Isethi Yokusebenza
+	Xref and Block In-place Editing	Ukuhlela i-Xref neBhulokhu Endaweni
+	Xrefs	Ama-Xref
+	built-in	okwakhelwe ngaphakathi
+	overrides built-in	yeqisa okwakhelwe ngaphakathi
+	{alias} is already defined; select it and use Edit.	U-{alias} usuchaziwe; mkhethe bese usebenzisa u-Hlela.
+	{command} is an unknown command.	U-{command} ngumyalo ongaziwa.
+	Find All	Thola Konke
+	Find what:	Thola:
+	Match case	Fanisa osonhlamvukazi
+	Replace	Shintsha
+	Replace All	Shintsha Konke
+	Replace with:	Shintsha nge:
+	Replacement text	Umbhalo ongena esikhundleni
+	Results	Imiphumela
+	Searches the current space.	Isesha isikhala samanje.
+	Text to find	Umbhalo ozowuthola
+	Whole words	Amagama aphelele
+	Nothing found	Akutholakalanga lutho
+	E	E
+	N	N
+	S	S
+	W	W
+	B	B
+	DraftCraft	DraftCraft
+	Clear Recent Files	Sula Amafayela Akamuva
+	contains authoring elements. Open in Block Editor?	iqukethe izinto zokuqamba. Vula ku-Block Editor?
+	Custom	Okwenziwe ngokwakho
+	Open Recent	Vula Okwakamuva
+	This drawing	Lo mdwebo
+	Arrow size	Usayizi womcibisholo
+	Dim scale overall	I-dim scale iyonke
+	Precision	Ukunemba
+	Apply to Layout	Sebenzisa Esakhiweni
+	Center the plot	Beka ukuphrinta maphakathi
+	Enter block names to extract	Faka amagama amabhulokhu ozowakhipha
+	Enter geometric characteristic	Faka isici sejiyomethri
+	Enter name of LISP file to load	Faka igama lefayela le-LISP ozolilayisha
+	First corner	Ikhona lokuqala
+	Fit to paper	Lingana nephepha
+	Landscape	Okwesimo esivundlile
+	Limits	Imingcele
+	Opposite corner	Ikhona eliphambene
+	Orientation	Ukubheka
+	Paper size	Usayizi wephepha
+	Plot area	Indawo yokuphrinta
+	Plot object lineweights	Phrinta ubukhulu bemigqa bezinto
+	Plot offset	I-offset yokuphrinta
+	Plot transparency	Phrinta ukubonakala ngale
+	Portrait	Okwesimo esime mpo
+	Printer/plotter	Iphrinta/i-plotter
+	Window <	Iwindi <
+	X offset (mm)	I-X offset (mm)
+	Y offset (mm)	I-Y offset (mm)
+	AutoLISP (LSP)	AutoLISP (LSP)
+	Angstroms	Ama-angstrom
+	Architectural	Okwezakhiwo
+	Astronomical Units	Amayunithi Ezinkanyezi
+	Centimeters	Amasentimitha
+	Decameters	Amadekhamitha
+	Decimal	Idesimali
+	Decimal Degrees	Amadigri Edesimali
+	Decimeters	Amadesimitha
+	Deg/Min/Sec	Deg/Min/Sec
+	Don't Save	Ungalondolozi
+	Drawing Units	Amayunithi Omdwebo
+	Engineering	Ubunjiniyela
+	Feet	Amafidi
+	Fractional	Okwengxenyana
+	Gigameters	Amagigamitha
+	Grads	Ama-grad
+	Hectometers	Amahekthomitha
+	Inches	Amayintshi
+	Insertion scale	I-scale yokufaka
+	Kilometers	Amakhilomitha
+	Light Years	Iminyaka Yokukhanya
+	Meters	Amamitha
+	Microinches	Ama-microinch
+	Microns	Ama-micron
+	Miles	Amamayela
+	Millimeters	Amamilimitha
+	Mils	Ama-mil
+	Nanometers	Amanamitha
+	Parsecs	Ama-parsec
+	Radians	Ama-radian
+	Sample output	Isampula yokuphumayo
+	Save changes to {name}?	Londoloza izinguquko ku-{name}?
+	Scientific	Okwesayensi
+	Surveyor's Units	Amayunithi Omhloli Womhlaba
+	Unitless	Akunayunithi
+	Units to scale inserted content	Amayunithi okwenza i-scale yokuqukethwe okufakiwe
+	US Survey Feet	Amafidi e-US Survey
+	US Survey Inch	Iyintshi ye-US Survey
+	US Survey Mile	Imayela le-US Survey
+	US Survey Yard	Iyadi le-US Survey
+	Yards	Amayadi
+	Your changes will be lost if you don't save them.	Izinguquko zakho zizolahleka uma ungazilondolozi.
+	Layouts	Izakhiwo
+	Associate	Hlobanisa
+	Clip Xref	Sika i-Xref
+	Xref Clip Frame	Uhlaka Lokusika i-Xref
+	Minimize	Nciphisa
+	Maximize	Khulisa
+	Restore Down	Buyisela Phansi
+	DraftCraft and the DraftCraft logo are trademarks of DraftCraft Engineering Ventures.	I-DraftCraft nelogo ye-DraftCraft yizimpawu zokuhweba ze-DraftCraft Engineering Ventures.
+	Conic	I-Conic
+	Spline Fit	I-Spline Fit
+	Spline CV	I-Spline CV
+	Specify start point of conic	Cacisa iphoyinti lokuqala le-conic
+	Specify apex (where the end tangents meet)	Cacisa i-apex (lapho ama-tangent okuphela ahlangana khona)
+	Specify end point of conic	Cacisa iphoyinti lokuphela le-conic
+	Specify rho or a point on the conic	Cacisa i-rho noma iphoyinti ku-conic
+	Check for Updates...	Hlola Izibuyekezo...
+	Check for Updates	Hlola Izibuyekezo
+	Update Available	Isibuyekezo Siyatholakala
+	DraftCraft {version} is available.	I-DraftCraft {version} iyatholakala.
+	You have version {version}.	Unenguqulo {version}.
+	Do you want to download the update?	Ingabe ufuna ukulanda isibuyekezo?
+	What's new	Okusha
+	What's New	Okusha
+	Download	Landa
+	Later	Kamuva
+	Skip This Version	Yeqa Le Nguqulo
+	DraftCraft is up to date (version {version}).	I-DraftCraft isesikhathini (inguqulo {version}).
+	Do you want to install the update now?	Ingabe ufuna ukufaka isibuyekezo manje?
+	Update Now	Buyekeza Manje
+	Open the release page	Vula ikhasi lokukhishwa
+	This copy of DraftCraft can't update itself.	Le khophi ye-DraftCraft ayikwazi ukuzibuyekeza.
+	Updating DraftCraft	Ibuyekeza i-DraftCraft
+	Update Failed	Isibuyekezo Sihlulekile
+	Installing DraftCraft {version}	Ifaka i-DraftCraft {version}
+	Downloading: {done} of {total} MB	Iyalanda: {done} kwezingu-{total} MB
+	Installing…	Iyafaka…
+	Starting the download…	Iqala ukulanda…
+	The connection dropped; trying again…	Uxhumano lunqamukile; iyazama futhi…
+	DraftCraft {version} is installed.	I-DraftCraft {version} ifakiwe.
+	Restart DraftCraft to use it. If you restart later, it opens the next time you start DraftCraft.	Qalisa kabusha i-DraftCraft ukuze uyisebenzise. Uma uqalisa kabusha kamuva, izovuleka ngokulandelayo uma uqala i-DraftCraft.
+	Restart Now	Qalisa Kabusha Manje
+	The update could not be installed.	Isibuyekezo asikwazanga ukufakwa.
+	You can download it from the release page instead.	Ungasilanda ekhasini lokukhishwa esikhundleni salokho.
+	2D Wireframe	2D Wireframe
+	Annotate	Chasisa
+	Blocks Palette	I-Palette Yamabhulokhu
+	CAD Standards	Amazinga e-CAD
+	Commands	Imiyalo
+	2D Drafting	Ukudweba kwe-2D
+	Edit Aliases	Hlela Iziteketiso
+	Image	Isithombe
+	Palettes	Ama-palette
+	Top	Phezulu
+	Units	Amayunithi
+	Workspace	Indawo yokusebenza
+	Ribbon	I-Ribbon
+	PDF Underlay...	I-PDF Underlay...
+	PDF Import	Ukungenisa i-PDF
+	PDF Underlay	I-PDF Underlay
+	Underlay Layers	Izingqimba ze-Underlay
+	Raster Image Reference...	Ireferensi Yesithombe se-Raster...
+	Close Text Editor	Vala Umhleli Wombhalo
+	Image Clip	Ukusika Isithombe
+	PDF Clip	Ukusika i-PDF
+	Image Adjust	Lungisa Isithombe
+	PDF Adjust	Lungisa i-PDF
+	Adjust...	Lungisa...
+	Parameter	Ipharamitha
+	Action	Isenzo
+	DesignCenter	DesignCenter
+	Tool Palettes	Tool Palettes
+	Sheet Set Manager	Umphathi Wamasethi Amashidi
+	Type the drawing's path, then press Enter.	Thayipha indlela yomdwebo, bese ucindezela u-Enter.
+	Drawing file	Ifayela lomdwebo
+	Folder	Ifolda
+	Linetypes	Izinhlobo Zemigqa
+	Text Styles	Izitayela Zombhalo
+	Dimension Styles	Izitayela Zobukhulu
+	Table Styles	Izitayela Zethebula
+	Multileader Styles	Izitayela ze-Multileader
+	Multiline Styles	Izitayela ze-Multiline
+	Add to Drawing	Engeza Emdwebeni
+	Create Tool Palette	Dala i-Tool Palette
+	Nothing of this kind in the file.	Akukho lutho lwalolu hlobo efayeleni.
+	Open a drawing to see its blocks, layers and styles.	Vula umdwebo ukuze ubone amabhulokhu, izingqimba nezitayela zawo.
+	Delete Palette	Susa i-Palette
+	New Palette	I-Palette Entsha
+	No tool palettes.	Awekho ama-tool palette.
+	This palette is empty: add a command below, or make a palette from DesignCenter.	Le palette ayinalutho: engeza umyalo ngezansi, noma wenze i-palette kusuka ku-DesignCenter.
+	Delete Tool	Susa Ithuluzi
+	Add Command	Engeza Umyalo
+	New Sheet Set...	Isethi Yamashidi Entsha...
+	Open Sheet Set...	Vula Isethi Yamashidi...
+	Sheet sets (DCSS)	Amasethi amashidi (DCSS)
+	Sheet set file	Ifayela lesethi yamashidi
+	Make or open a sheet set to list its sheets.	Dala noma uvule isethi yamashidi ukuze ubhale amashidi ayo.
+	Add Drawing...	Engeza Umdwebo...
+	Publish to PDF...	Shicilela ku-PDF...
+	No sheets yet: add a drawing's layouts.	Awekho amashidi okwamanje: engeza izakhiwo zomdwebo.
+	Number	Inombolo
+	Title	Isihloko
+	Move Up	Hambisa Phezulu
+	Move Down	Hambisa Phansi
+	Sheet Set (DCSS)	Isethi Yamashidi (DCSS)
+	Close Tool Palettes	Vala i-Tool Palettes
+	Close DesignCenter	Vala i-DesignCenter
+	Close Sheet Set Manager	Vala Umphathi Wamasethi Amashidi
+	Manage Tool Palettes	Phatha i-Tool Palettes
+	Changes apply at once; Save Current As keeps them in a workspace.	Izinguquko zisebenza ngokushesha; u-Londoloza Okwamanje Njenge uzigcina endaweni yokusebenza.
+	Click layers to show only them; Ctrl or Shift adds to the choice.	Chofoza izingqimba ukuze ubonise zona kuphela; u-Ctrl noma u-Shift wengeza ekukhetheni.
+	Current Workspace	Indawo Yokusebenza Yamanje
+	Customize Interface	Enza Ukuxhumana Ngokwakho
+	Customize User Interface	Enza Ukuxhumana Komsebenzisi Ngokwakho
+	Customize...	Enza ngokwakho...
+	Edit Aliases...	Hlela Iziteketiso...
+	Force object color and linetype to ByLayer	Phoqa umbala nohlobo lomugqa lwento kube ByLayer
+	Geographic Location	Indawo Yejografi
+	Geographic Location...	Indawo Yejografi...
+	Latitude	Ubude bendawo
+	Longitude	Ubude bomhlaba
+	North direction	Indlela eya enyakatho
+	Layer Translation Mappings	Ukumephwa Kokuhumusha Izingqimba
+	Layer Translator	Umhumushi Wezingqimba
+	Layer Translator...	Umhumushi Wezingqimba...
+	Layer Walk	Ukuhamba Ezingqimbeni
+	Layer Walk...	Ukuhamba Ezingqimbeni...
+	Location	Indawo
+	Set Location	Setha Indawo
+	Remove Location	Susa Indawo
+	The drawing's origin is at this place (WGS 84 degrees).	Umsuka womdwebo ukule ndawo (amadigri e-WGS 84).
+	Map	Mepha
+	New layer name	Igama longqimba olusha
+	No mappings yet: pick layers on the left, a name on the right, then Map.	Akukho ukumephwa okwamanje: khetha izingqimba kwesobunxele, igama kwesokudla, bese u-Mepha.
+	Translate	Humusha
+	Translate From	Humusha Kusuka
+	Translate To	Humushela Ku
+	Restore on exit	Buyisela lapho uphuma
+	Point Cloud	I-Point Cloud
+	Point Cloud...	I-Point Cloud...
+	Point clouds (XYZ, LAS)	Ama-point cloud (XYZ, LAS)
+	ZIP archive	Ingobo yomlando ye-ZIP
+	eTransmit	eTransmit
+	eTransmit...	eTransmit...
+	Quick Access Toolbar	Ibha Yamathuluzi Yokufinyelela Okusheshayo
+	Rename	Qamba kabusha
+	Reset to Standard	Setha Kabusha ku-Standard
+	Ribbon Tabs	Amathebhu e-Ribbon
+	Save Current As	Londoloza Okwamanje Njenge
+	Save Current As...	Londoloza Okwamanje Njenge...
+	Save Workspace	Londoloza Indawo Yokusebenza
+	User Interface	Ukuxhumana Komsebenzisi
+	Workspace Settings	Izilungiselelo Zendawo Yokusebenza
+	Workspace Settings...	Izilungiselelo Zendawo Yokusebenza...
+	Workspace name	Igama lendawo yokusebenza
+	Workspace:	Indawo yokusebenza:
+	Workspaces	Izindawo Zokusebenza
+	Interface...	Ukuxhumana...
+	Export Attribute Information...	Thekelisa Ulwazi Lwama-attribute...
+	Import Attribute Information...	Ngenisa Ulwazi Lwama-attribute...
+	Export Attributes	Thekelisa Ama-attribute
+	Import Attributes	Ngenisa Ama-attribute
+	Text, tab-delimited (TXT)	Umbhalo, ohlukaniswe ngamathebhu (TXT)
+	Import Settings	Ngenisa Izilungiselelo
+	Export Settings	Thekelisa Izilungiselelo
+	Import Settings...	Ngenisa Izilungiselelo...
+	Export Settings...	Thekelisa Izilungiselelo...
+	DraftCraft settings (TOML)	Izilungiselelo ze-DraftCraft (TOML)
+	Total Area and Length	Indawo Ephelele Nobude
+	Total Area	Indawo Ephelele
+	Specify point to place the totals as text	Cacisa iphoyinti lokubeka izibalo eziphelele njengombhalo
+	Metric	Metric
+	Imperial	Imperial
+	A new drawing in millimeters	Umdwebo omusha ngamamilimitha
+	A new drawing in inches	Umdwebo omusha ngamayintshi
+	A new drawing in centimeters	Umdwebo omusha ngamasentimitha
+	Metric (centimetres)	Metric (amasentimitha)
+	Join the ArtCraft Discord…	Joyina i-ArtCraft Discord…
+	Join us on Discord	Joyina thina ku-Discord
+	One of the Crafting Apps by the ArtCraft team and community.	Esinye sezinhlelo ze-Crafting Apps zethimba nomphakathi we-ArtCraft.
+	Change	Shintsha
+	Multiple Insert	Ukufaka Okuningi
+	Ctrl+Enter to apply	Ctrl+Enter ukusebenzisa
+	Edit Text	Hlela Umbhalo
+	The drawing changed. Close the window and open it again.	Umdwebo ushintshile. Vala iwindi bese uyivula futhi.
+	DView	DView
+	Raster Images	Izithombe ze-Raster
+	Xref	I-Xref
+	Backup copies are off, so the current file will be replaced.	Amakhophi okulondoloza avaliwe, ngakho ifayela lamanje lizothathelwa indawo.
+	DXF 2010 and earlier keep them. Use Save As to keep them in the drawing.	I-DXF 2010 nangaphambili iyakugcina. Sebenzisa u-Londoloza Njenge ukuze ukugcine emdwebeni.
+	DXF keeps them. Use Save As to keep them in the drawing.	I-DXF iyakugcina. Sebenzisa u-Londoloza Njenge ukuze ukugcine emdwebeni.
+	Save Anyway	Londoloza Noma Kunjalo
+	Save cancelled: {path} was not changed.	Ukulondoloza kukhanseliwe: i-{path} ayishintshwanga.
+	Saving {name} will remove content	Ukulondoloza i-{name} kuzosusa okuqukethwe
+	The current file doesn't look whole, so {name} stays as it is and the current file will be replaced.	Ifayela lamanje alibonakali liphelele, ngakho i-{name} ihlala injalo futhi ifayela lamanje lizothathelwa indawo.
+	The current file is kept as {name} until the next save.	Ifayela lamanje ligcinwa njenge-{name} kuze kube ukulondoloza okulandelayo.
+	This format can't keep these objects yet: {objects}.	Le fomethi ayikakwazi ukugcina lezi zinto: {objects}.
+	{count} more types	Ezinye izinhlobo ezingu-{count}
+	Additional Tools	Amathuluzi Engeziwe
+	Keyboard Shortcuts...	Izinqamuleli Zekhibhodi...
+	Keyboard Shortcuts	Izinqamuleli Zekhibhodi
+	Replaces the shortcut of {commands}	Ithatha indawo yesinqamuleli sika-{commands}
+	Needs Ctrl, Alt or a function key	Kudingeka u-Ctrl, u-Alt noma ukhiye womsebenzi
+	Press the keys	Cindezela okhiye
+	Back to DraftCraft's shortcut	Buyela kusinqamuleli se-DraftCraft
+	A shortcut you give wins over DraftCraft's own. Changes apply at once and are kept for next time.	Isinqamuleli osinikezayo siphumelela kunesi-DraftCraft uqobo. Izinguquko zisebenza ngokushesha futhi zigcinelwa isikhathi esizayo.
+	Turned off, a right-click while a command runs does what Right-Click Customization sets for Command mode.	Uma kuvaliwe, ukuchofoza kwesokudla ngesikhathi umyalo usebenza kwenza lokho okusethwe yi-Right-Click Customization kwimodi yomyalo.
+	Right-Click Customization...	Right-Click Customization...
+	Right-Click Customization	Right-Click Customization
+	Turn on time-sensitive right-click	Vula ukuchofoza kwesokudla okuncike esikhathini
+	Longer click duration:	Isikhathi sokuchofoza eside:
+	milliseconds	ama-millisecond
+	While a command runs, a quick click is Enter and a longer click opens the shortcut menu.	Ngesikhathi umyalo usebenza, ukuchofoza okusheshayo kungu-Enter futhi ukuchofoza okude kuvula imenyu yesinqamuleli.
+	Default Mode	Imodi Ezenzakalelayo
+	No objects selected and no command running:	Azikho izinto ezikhethiwe futhi akukho myalo osebenzayo:
+	Edit Mode	Imodi Yokuhlela
+	Objects selected and no command running:	Izinto zikhethiwe futhi akukho myalo osebenzayo:
+	Repeat last command	Phinda umyalo wokugcina
+	Shortcut Menu	Imenyu Yesinqamuleli
+	Command Mode	Imodi Yomyalo
+	While a command runs:	Ngesikhathi umyalo usebenza:
+	ENTER	ENTER
+	Shortcut Menu: always enabled	Imenyu Yesinqamuleli: ihlala ivuliwe
+	Shortcut Menu: enabled when command options are present	Imenyu Yesinqamuleli: ivuliwe uma kunezinketho zomyalo
+	Import: there is no file dialog here; run ALIASEDIT with the file's contents using its text parameter.	Ngenisa: alikho ibhokisi lefayela lapha; qalisa i-ALIASEDIT nokuqukethwe kwefayela usebenzisa ipharamitha yayo ye-text.
+	Aliases are saved in your DraftCraft profile and survive restarts.	Iziteketiso zilondolozwa kuphrofayela yakho ye-DraftCraft futhi zihlala ngisho uqalisa kabusha.
+	Import…	Ngenisa…
+	Run ALIASEDIT with the file's contents using its text parameter.	Qalisa i-ALIASEDIT nokuqukethwe kwefayela usebenzisa ipharamitha yayo ye-text.
+	Importing a file replaces your {n} aliases, and any changes not applied yet.	Ukungenisa ifayela kuthatha indawo yeziteketiso zakho ezingu-{n}, nanoma yiziphi izinguquko ezingakasetshenziswa.
+	Import and replace	Ngenisa futhi uthathe indawo
+	Keep my aliases	Gcina iziteketiso zami
+	{n} more warnings; see the command line.	Ezinye izixwayiso ezingu-{n}; bheka umugqa womyalo.
+	Unit	Iyunithi
+	Drawing units: {unit}, {format}	Amayunithi omdwebo: {unit}, {format}
+	NEW DRAWING	UMDWEBO OMUSHA
+	OPEN	VULA
+	WORKSPACE	INDAWO YOKUSEBENZA

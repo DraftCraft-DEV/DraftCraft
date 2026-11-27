@@ -140,7 +140,7 @@ DraftCraft is young and moving fast. [ROADMAP.md](ROADMAP.md) has what is missin
 
 | Area | Status |
 |---|---|
-| Interface | Windows-style ribbon (10 tabs, split buttons, layer and property lists), application menu, Quick Access Toolbar, file tabs, floating command line, ViewCube and navigation bar, status bar toggles and drawing units, Properties and Layers palettes, What's New after every update, 21 languages |
+| Interface | Windows-style ribbon (10 tabs, split buttons, layer and property lists), application menu, Quick Access Toolbar, file tabs, floating command line, ViewCube and navigation bar, status bar toggles and drawing units, Properties and Layers palettes, What's New after every update, 49 languages |
 | Command line | AutoCAD command names and aliases, prompts with keywords, AutoComplete that learns the commands you use most, `@dx,dy`, `@d<a`, `#x,y`, direct distance entry, transparent commands, scripts |
 | Draw | LINE, PLINE (arcs, widths), CIRCLE, ARC, RECTANG, POLYGON, ELLIPSE, SPLINE, CONIC, POINT, XLINE, RAY, DONUT, REVCLOUD, WIPEOUT, TEXT, MTEXT |
 | Modify | ERASE, MOVE, COPY, ROTATE, SCALE, MIRROR, STRETCH, OFFSET, TRIM, EXTEND, FILLET, CHAMFER, BREAK, JOIN, EXPLODE, arrays, draw order, OVERKILL, grips |

@@ -1,34 +1,87 @@
 # Interface language roadmap
 
-Written 2026-11-26. The aim: every language ArtCraft's CADCraft covers (done) and a route to every language
-CadCraft Studio covers. What is measured is marked as measured; the rest is marked as my reading.
+Written 2026-11-26, updated 2026-11-27. The aim: a route to as many languages as CadCraft Studio offers, its 75 being the goalpost
+for breadth only. What is measured is marked as measured; the rest is marked as reading.
 
 ## Where we are
 
 | | Languages besides English | Source |
 |---|---|---|
-| DraftCraft | **21**: ar bs cs de el es fr hu it ka ko pl pt-BR ru sv ta tr uk vi zh zh-TW | `crates/ui-egui/src/i18n.rs` |
-| ArtCraft's CADCraft | 20: ours without zh-TW. Polish, Georgian and Tamil were the three we lacked; they are in now. | upstream `cadcraft/main` at `a3ed0682` |
-| CadCraft Studio, the launcher (`hub/lang`) | **75** (76 files with `en`), 762 strings each: the launcher's own words, not CAD commands | `getcadcraft/studio` 0.11.0, `8fd681c` (2026-11-23) |
-| CadCraft Studio, the CAD apps (`language-packs`) | **54**, about 44,700 entries each across all apps | `getcadcraft/language-packs`, pack version 2026.11.01 |
+| DraftCraft | **49**: the 21 below plus the 28 of wave 1 | `crates/ui-egui/src/i18n.rs` |
+| Before wave 1 | 21: ar bs cs de el es fr hu it ka ko pl pt-BR ru sv ta tr uk vi zh zh-TW | |
+| CadCraft Studio (`getcadcraft/studio`, `hub/lang`) | **75** (76 files with `en`) | 0.11.0, `8fd681c` (2026-11-23) |
 
-You said 77. I count 75 plus English (76 files) in the repository, and 54 in the packs; getcadcraft.com, where the apps fetch the live
-packs, is not reachable from this environment, so I could not see whether two more were added since. Tell me which and I will add them.
+Of Studio's 75, we now cover 50 (our one Spanish stands for both of its Spanish variants); 25 remain: 17 in wave 2, 7 in wave 3, and
+Portuguese (Portugal).
 
-All 21 of our languages are in Studio's launcher set (our one Spanish stands for both of its Spanish variants, so 22 of its 75 are covered); 53 are not ours yet.
-Every Studio translation is a machine draft that no native speaker has reviewed; its own files say so. The licence is Apache-2.0.
+## Wave 1: shipped, waiting for native review
 
-## What Studio's packs can seed (measured)
+The 28 wave-1 languages are in (`af az be bg ca da et fi fil gl hr id ja kk ky mn ms nb nl sk so sq sr sr-Latn sw tg uz zu`).
+They were written from DraftCraft's own English strings by WithShalom (Shalom) with Claude Code. Nothing was taken from CadCraft Studio
+or any other product: Studio's 75 languages are only the target for how many languages we cover. Each catalog has the same 1,688 rows,
+passes the catalog tests (placeholders, ellipses, plural forms, glyph coverage) and falls back to English only where a string is new.
 
-Each pack entry stores the translation and a 12-character hash of the English sentence it translates. Hashing our English strings the same way
-(`sha256`, first 12 hex characters) matches **485 of our 1,673 strings (29%)** in every one of the 54 pack languages: the shared words (Cancel,
-Layers, Settings...). The other 71% are AutoCAD-style command names and prompts that Studio does not have, so they need new translations.
+### Limitations
 
-The 21 launcher-only languages have no pack: only 20 of our strings (About, Add, Cancel, Close, Copy...) match their launcher text. They start from nothing.
+- **No native speaker has reviewed any of them.** They are drafts that read correctly to a careful non-native writer, not finished
+  translations. Treat terminology as provisional until a reviewer signs off.
+- **CAD vocabulary is thin in several languages.** Swahili, Somali, Zulu, Kyrgyz and Tajik have little established CAD terminology;
+  terms such as layer, viewport, hatch, snap and grip were coined or borrowed and need a practitioner's choice.
+- **Loanwords vary by language.** Filipino keeps about 350 strings in English (Layer, Block, Hatch, Viewport...), Indonesian about 100,
+  Danish about 100. That follows common usage but should be confirmed.
+- **Croatian and Serbian (Latin)** started from our Bosnian catalog and were converted word by word, so some Bosnian forms may remain.
+- **Japanese** shows only with a Japanese or CJK font (installed, or a craft-fonts Japanese face); without one the interface stays in
+  English and the status line says why. Its layout in narrow ribbon panels has not been checked on screen.
+- **Azerbaijani** shows only with an installed interface font that has ə (Segoe UI, Arial, SF, DejaVu Sans, Noto Sans); egui's bundled faces lack it, so the web build stays in English for Azerbaijani until a font is bundled.
+- **Uzbek** uses ‘ (U+2018) rather than the official ʻ (U+02BB) for oʻ and gʻ, because the bundled fonts lack U+02BB. This is common in everyday Uzbek text, but a native speaker may prefer the official letter once a font is bundled.
+- **The single-letter row "B"** (beside the compass letters E, N, S, W) was translated without context; translators guessed
+  "bottom" or "back". It needs checking against the ViewCube or compass where it appears.
+- **Not checked on screen:** long labels in the ribbon and dialogs for languages with long words (Finnish, Estonian, Zulu).
 
-Whether the drafts are good enough to ship: on the strings both sides have, Studio's draft equals the catalog we already have for the same
-language only **42% to 82%** of the time (Portuguese 82%, Italian 74%, Swedish 72%, Russian 65%, Arabic 43%, Greek 42%), so a seed is a
-starting point that a native speaker must review, not a finished translation.
+### Requests for native speakers
+
+Please open the catalog in `crates/ui-egui/src/i18n/<code>.tsv`, switch the interface to your language (Edit → Interface Language)
+and correct anything that reads wrong. Points the translators flagged:
+
+| Language | Please check |
+|---|---|
+| Afrikaans `af` | "aansig" is used for both View and Viewport; vasmaak (snap), opsporing (tracking), bladstel (sheet set) |
+| Albanian `sq` | Erase "Fshij" vs Delete "Fshi"; Sweep also uses "Fshij"; faqosje (layout), vijëzim (hatch) |
+| Azerbaijani `az` | maket (layout), görünüş pəncərəsi (viewport), bağlama (snap), ştrix (hatch), descriptive Sweep/Revolve |
+| Belarusian `be` | слой vs пласт (layer), відавы экран (viewport), пункт vs кропка (point), DesignCenter rendered literally |
+| Bulgarian `bg` | прозорец на изгледа (viewport) and its short form ПИ, износка (leader), Английски (imperial units) |
+| Catalan `ca` | Sombreig vs Tramat (hatch), finestra gràfica (viewport) and FG, Forçament (snap), Equidistància (offset) |
+| Croatian `hr` | leftover Bosnian forms ("da dodate"), raspored vs izgled (layout), šrafura, Odsijeci vs Odreži (trim) |
+| Danish `da` | "Ø" is both Island and East; dimension/snap/layout/array kept as loanwords; Kote (elevation) |
+| Dutch `nl` | viewport, snap, grip, tracking, extents kept in English; onderlegger (underlay), bladenset (sheet set) |
+| Estonian `et` | South and West both "L"; side (constraint), haare (snap), viiktekst (leader) |
+| Filipino `fil` | about 350 English loanwords kept; plural "{n} na commit" may read unnaturally |
+| Finnish `fi` | Array and Table are both "Taulukko"; kohdistus (snap), viitta (leader), monoviiva (multiline) |
+| Galician `gl` | "Capas da capa subxacente" (Underlay Layers) reads awkwardly; Modelo (template); infinitive commands |
+| Indonesian `id` | many CAD terms kept in English (layer, viewport, polyline, offset, fillet); West and "B" both "B" |
+| Japanese `ja` | レイヤー rather than 画層 for layer; ribbon label lengths; その他 for "Grab bag" |
+| Kazakh `kk` | өрнек for both Pattern and Expression; сілтеме сызығы (leader) close to "reference"; DesignCenter |
+| Kyrgyz `ky` | байланыш (constraint) also means connection; подложка (underlay) is a Russian loan; compass abbreviations |
+| Malay `ms` | Conic and Cone are both "Kon"; "Lapisan bagi Lapisan Bawah" (Underlay Layers); Lorek (hatch) |
+| Mongolian `mn` | товчлол is both Alias and Shortcut; харах цонх (viewport), наалдалт (snap), штрих (hatch) |
+| Norwegian Bokmål `nb` | mål/målsettingsstil (dimension), fang (snap), oppsett (layout), matrise (array) |
+| Serbian Cyrillic `sr` | распоред vs лист (layout), прозор приказа (viewport) and ПП, ручица (grip), маска (wipeout) |
+| Serbian Latin `sr-Latn` | leftover Bosnian forms ("Kad" vs "Kada"), Upravljač vs Menadžer, Ostava (clipboard) |
+| Slovak `sk` | výrez (viewport), rozvrhnutie (layout), uzly for both grips and Node; Šablónovanie (loft), Ťahanie (sweep) |
+| Somali `so` | coined terms: xariijin (hatch), xarig-badan (polyline), daaqad-muuqaal (viewport), ku-dhejin (snap) |
+| Swahili `sw` | coined terms: tabaka (layer), dirisha-tazamo (viewport), kunasa (snap); compass letters clash (M/K) |
+| Tajik `tg` | равзанаи намоиш (viewport), пайвастшавӣ (snap), тарҳбандӣ (layout); "clean-room" rendered loosely |
+| Uzbek `uz` | maket (layout), bogʻlash (snap) vs bogʻlanish (constraint), shtrixovka (hatch) |
+| Zulu `zu` | ungqimba (layer), isakhiwo for both layout and properties, Khipha for Unload and Subtract, Hlehlisa for Undo, Reverse and Zoom Out |
+
+When a language has been reviewed, its `ATTRIBUTION.md` row and the catalog header say so, and the reviewer is credited there.
+
+## Why we do not take Studio's translations
+
+DraftCraft's catalogs are written from DraftCraft's own English strings, in DraftCraft's own format. CadCraft Studio is a separate
+application with an unrelated architecture; we take no code and no translations from it. Measured on 2026-11-26, its packs would also
+have helped little: they match only 29% of our strings (the rest are AutoCAD-style commands and prompts it does not have), they are
+unreviewed machine drafts, and where both sides have a string they agree with our existing catalogs only 42% to 82% of the time.
 
 ## Languages
 
@@ -39,83 +92,83 @@ themselves, on Studio's launcher text plus its CAD-app strings where a pack exis
 **Plurals** use the rules we already have, my reading of CLDR; verify before implementing. **Wave**: 1 = can go on today's code; 2 = one small
 addition first (a plural rule, a pin bump, or a right-to-left or complex-script rendering check); 3 = needs a font we do not have; V = variant of a language we have.
 
-| Code | Language | Script | Ours | ArtCraft | Studio packs | Font | Plurals | Wave |
-|---|---|---|:-:|:-:|:-:|---|---|:-:|
-| `ar` | Arabic · العربية | Arab RTL | ✓ | ✓ | ✓ | shipped | 6 (ar rule) | — |
-| `bs` | Bosnian · Bosanski | Latn | ✓ | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
-| `cs` | Czech · Čeština | Latn | ✓ | ✓ | ✓ | egui | 3 (cs rule) | — |
-| `de` | German · Deutsch | Latn | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `el` | Greek · Ελληνικά | Grek | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `es-ES` | Spanish (Spain) · Español (España) | Latn | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `es-MX` | Spanish (Mexico) · Español (México) | Latn | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `fr` | French · Français | Latn | ✓ | ✓ | ✓ | egui | 2 (0 and 1) | — |
-| `hu` | Hungarian · Magyar | Latn | ✓ | ✓ | ✓ | egui | 1 form | — |
-| `it` | Italian · Italiano | Latn | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `ka` | Georgian · ქართული | Geor | ✓ | ✓ | – | shipped | 1 form | — |
-| `ko` | Korean · 한국어 | Kore | ✓ | ✓ | ✓ | shipped | 1 form | — |
-| `pl` | Polish · Polski | Latn | ✓ | ✓ | ✓ | egui | 3 (pl rule) | — |
-| `pt-BR` | Portuguese (Brazil) · Português (Brasil) | Latn | ✓ | ✓ | ✓ | egui | 2 (0 and 1) | — |
-| `ru` | Russian · Русский | Cyrl | ✓ | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
-| `sv` | Swedish · Svenska | Latn | ✓ | ✓ | ✓ | egui | 2 (one = 1) | — |
-| `ta` | Tamil · தமிழ் | Taml | ✓ | ✓ | ✓ | pin bump | 2 (one = 1) | — |
-| `tr` | Turkish · Türkçe | Latn | ✓ | ✓ | ✓ | egui | 1 form | — |
-| `uk` | Ukrainian · Українська | Cyrl | ✓ | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
-| `vi` | Vietnamese · Tiếng Việt | Latn | ✓ | ✓ | ✓ | shipped | 1 form | — |
-| `zh-Hans` | Chinese (Simplified) · 简体中文 | Hans | ✓ | ✓ | ✓ | shipped | 1 form | — |
-| `zh-Hant` | Chinese (Traditional) · 繁體中文 | Hant | ✓ | – | ✓ | shipped | 1 form | — |
-| `af` | Afrikaans · Afrikaans | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `az` | Azerbaijani · Azərbaycanca | Latn | – | – | – | shipped | 2 (one = 1) | 1 |
-| `be` | Belarusian · Беларуская | Cyrl | – | – | – | egui | 3 (1 · 2-4 · rest) | 1 |
-| `bg` | Bulgarian · Български | Cyrl | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `ca` | Catalan · Català | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `da` | Danish · Dansk | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `et` | Estonian · Eesti | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `fi` | Finnish · Suomi | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `fil` | Filipino · Filipino | Latn | – | – | ✓ | egui | 2, verify | 1 |
-| `gl` | Galician · Galician | Latn | – | – | – | egui | 2 (one = 1) | 1 |
-| `hr` | Croatian · Hrvatski | Latn | – | – | ✓ | egui | 3 (1 · 2-4 · rest) | 1 |
-| `id` | Indonesian · Bahasa Indonesia | Latn | – | – | ✓ | egui | 1 form | 1 |
-| `ja` | Japanese · 日本語 | Jpan | – | – | ✓ | shipped | 1 form | 1 |
-| `kk` | Kazakh · Қазақша | Cyrl | – | – | – | egui | 2 (one = 1) | 1 |
-| `ky` | Kyrgyz · Кыргызча | Cyrl | – | – | – | egui | 2 (one = 1) | 1 |
-| `mn` | Mongolian · Монгол | Cyrl | – | – | – | egui | 2 (one = 1) | 1 |
-| `ms` | Malay · Bahasa Melayu | Latn | – | – | ✓ | egui | 1 form | 1 |
-| `nb` | Norwegian Bokmål · Norsk bokmål | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `nl` | Dutch · Nederlands | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `sk` | Slovak · Slovenčina | Latn | – | – | ✓ | egui | 3 (cs rule) | 1 |
-| `so` | Somali · Soomaali | Latn | – | – | – | egui | 2 (one = 1) | 1 |
-| `sq` | Albanian · Shqip | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `sr-Cyrl` | Serbian (Cyrillic) · Српски (ћирилица) | Cyrl | – | – | ✓ | egui | 3 (1 · 2-4 · rest) | 1 |
-| `sr-Latn` | Serbian (Latin) · Srpski (latinica) | Latn | – | – | ✓ | egui | 3 (1 · 2-4 · rest) | 1 |
-| `sw` | Swahili · Kiswahili | Latn | – | – | ✓ | egui | 2 (one = 1) | 1 |
-| `tg` | Tajik · Тоҷикӣ | Cyrl | – | – | – | egui | 2, verify | 1 |
-| `uz` | Uzbek · Oʻzbekcha | Latn | – | – | ✓ | shipped | 2 (one = 1) | 1 |
-| `zu` | Zulu · isiZulu | Latn | – | – | – | egui | 2 (0 and 1) | 1 |
-| `bn` | Bengali · বাংলা | Beng | – | – | ✓ | pin bump | 2 (0 and 1) | 2 |
-| `fa` | Persian · فارسی | Arab RTL | – | – | ✓ | shipped | 2 (0 and 1) | 2 |
-| `gn` | Guarani · Guarani | Latn | – | – | – | shipped | unknown, verify | 2 |
-| `he` | Hebrew · עברית | Hebr RTL | – | – | ✓ | shipped | new rule | 2 |
-| `hi` | Hindi · हिन्दी | Deva | – | – | ✓ | shipped | 2 (0 and 1) | 2 |
-| `is` | Icelandic · Íslenska | Latn | – | – | – | egui | new rule | 2 |
-| `lo` | Lao · ລາວ | Laoo | – | – | – | pin bump | 1 form | 2 |
-| `lt` | Lithuanian · Lietuvių | Latn | – | – | ✓ | egui | new rule | 2 |
-| `lv` | Latvian · Latviešu | Latn | – | – | ✓ | egui | new rule | 2 |
-| `mk` | Macedonian · Македонски | Cyrl | – | – | – | egui | new rule | 2 |
-| `mr` | Marathi · मराठी | Deva | – | – | ✓ | shipped | 2 (one = 1) | 2 |
-| `ne` | Nepali · नेपाली | Deva | – | – | – | shipped | 2 (one = 1) | 2 |
-| `ro` | Romanian · Română | Latn | – | – | ✓ | egui | new rule | 2 |
-| `sl` | Slovenian · Slovenščina | Latn | – | – | ✓ | egui | new rule | 2 |
-| `te` | Telugu · తెలుగు | Telu | – | – | ✓ | pin bump | 2 (one = 1) | 2 |
-| `th` | Thai · ไทย | Thai | – | – | ✓ | shipped | 1 form | 2 |
-| `ur` | Urdu · اردو | Arab RTL | – | – | ✓ | shipped | 2 (one = 1) | 2 |
-| `am` | Amharic · አማርኛ | Ethi | – | – | – | none | 2 (0 and 1) | 3 |
-| `dv` | Dhivehi · ދިވެހި | Thaa RTL | – | – | – | none | 2 (one = 1) | 3 |
-| `hy` | Armenian · Հայերեն | Armn | – | – | – | none | 2 (0 and 1) | 3 |
-| `km` | Khmer · ខ្មែរ | Khmr | – | – | – | none | 1 form | 3 |
-| `my` | Burmese · မြန်မာ | Mymr | – | – | ✓ | none | 1 form | 3 |
-| `ps` | Pashto · پښتو | Arab RTL | – | – | – | none (2 letters) | 2 (one = 1) | 3 |
-| `si` | Sinhala · සිංහල | Sinh | – | – | – | none | 2 (0 and 1) | 3 |
-| `pt-PT` | Portuguese (Portugal) · Português (Portugal) | Latn | – | – | ✓ | egui | 2 (one = 1) | V |
+| Code | Language | Script | Ours | Studio packs | Font | Plurals | Wave |
+|---|---|---|:-:|:-:|---|---|:-:|
+| `ar` | Arabic · العربية | Arab RTL | ✓ | ✓ | shipped | 6 (ar rule) | — |
+| `bs` | Bosnian · Bosanski | Latn | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
+| `cs` | Czech · Čeština | Latn | ✓ | ✓ | egui | 3 (cs rule) | — |
+| `de` | German · Deutsch | Latn | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `el` | Greek · Ελληνικά | Grek | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `es-ES` | Spanish (Spain) · Español (España) | Latn | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `es-MX` | Spanish (Mexico) · Español (México) | Latn | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `fr` | French · Français | Latn | ✓ | ✓ | egui | 2 (0 and 1) | — |
+| `hu` | Hungarian · Magyar | Latn | ✓ | ✓ | egui | 1 form | — |
+| `it` | Italian · Italiano | Latn | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `ka` | Georgian · ქართული | Geor | ✓ | – | shipped | 1 form | — |
+| `ko` | Korean · 한국어 | Kore | ✓ | ✓ | shipped | 1 form | — |
+| `pl` | Polish · Polski | Latn | ✓ | ✓ | egui | 3 (pl rule) | — |
+| `pt-BR` | Portuguese (Brazil) · Português (Brasil) | Latn | ✓ | ✓ | egui | 2 (0 and 1) | — |
+| `ru` | Russian · Русский | Cyrl | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
+| `sv` | Swedish · Svenska | Latn | ✓ | ✓ | egui | 2 (one = 1) | — |
+| `ta` | Tamil · தமிழ் | Taml | ✓ | ✓ | pin bump | 2 (one = 1) | — |
+| `tr` | Turkish · Türkçe | Latn | ✓ | ✓ | egui | 1 form | — |
+| `uk` | Ukrainian · Українська | Cyrl | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | — |
+| `vi` | Vietnamese · Tiếng Việt | Latn | ✓ | ✓ | shipped | 1 form | — |
+| `zh-Hans` | Chinese (Simplified) · 简体中文 | Hans | ✓ | ✓ | shipped | 1 form | — |
+| `zh-Hant` | Chinese (Traditional) · 繁體中文 | Hant | ✓ | ✓ | shipped | 1 form | — |
+| `af` | Afrikaans · Afrikaans | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `az` | Azerbaijani · Azərbaycanca | Latn | ✓ | – | shipped | 2 (one = 1) | ✓ (wave 1) |
+| `be` | Belarusian · Беларуская | Cyrl | ✓ | – | egui | 3 (1 · 2-4 · rest) | ✓ (wave 1) |
+| `bg` | Bulgarian · Български | Cyrl | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `ca` | Catalan · Català | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `da` | Danish · Dansk | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `et` | Estonian · Eesti | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `fi` | Finnish · Suomi | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `fil` | Filipino · Filipino | Latn | ✓ | ✓ | egui | 2, verify | ✓ (wave 1) |
+| `gl` | Galician · Galician | Latn | ✓ | – | egui | 2 (one = 1) | ✓ (wave 1) |
+| `hr` | Croatian · Hrvatski | Latn | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | ✓ (wave 1) |
+| `id` | Indonesian · Bahasa Indonesia | Latn | ✓ | ✓ | egui | 1 form | ✓ (wave 1) |
+| `ja` | Japanese · 日本語 | Jpan | ✓ | ✓ | shipped | 1 form | ✓ (wave 1) |
+| `kk` | Kazakh · Қазақша | Cyrl | ✓ | – | egui | 2 (one = 1) | ✓ (wave 1) |
+| `ky` | Kyrgyz · Кыргызча | Cyrl | ✓ | – | egui | 2 (one = 1) | ✓ (wave 1) |
+| `mn` | Mongolian · Монгол | Cyrl | ✓ | – | egui | 2 (one = 1) | ✓ (wave 1) |
+| `ms` | Malay · Bahasa Melayu | Latn | ✓ | ✓ | egui | 1 form | ✓ (wave 1) |
+| `nb` | Norwegian Bokmål · Norsk bokmål | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `nl` | Dutch · Nederlands | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `sk` | Slovak · Slovenčina | Latn | ✓ | ✓ | egui | 3 (cs rule) | ✓ (wave 1) |
+| `so` | Somali · Soomaali | Latn | ✓ | – | egui | 2 (one = 1) | ✓ (wave 1) |
+| `sq` | Albanian · Shqip | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `sr-Cyrl` | Serbian (Cyrillic) · Српски (ћирилица) | Cyrl | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | ✓ (wave 1) |
+| `sr-Latn` | Serbian (Latin) · Srpski (latinica) | Latn | ✓ | ✓ | egui | 3 (1 · 2-4 · rest) | ✓ (wave 1) |
+| `sw` | Swahili · Kiswahili | Latn | ✓ | ✓ | egui | 2 (one = 1) | ✓ (wave 1) |
+| `tg` | Tajik · Тоҷикӣ | Cyrl | ✓ | – | egui | 2, verify | ✓ (wave 1) |
+| `uz` | Uzbek · O‘zbekcha | Latn | ✓ | ✓ | shipped | 2 (one = 1) | ✓ (wave 1) |
+| `zu` | Zulu · isiZulu | Latn | ✓ | – | egui | 2 (0 and 1) | ✓ (wave 1) |
+| `bn` | Bengali · বাংলা | Beng | – | ✓ | pin bump | 2 (0 and 1) | 2 |
+| `fa` | Persian · فارسی | Arab RTL | – | ✓ | shipped | 2 (0 and 1) | 2 |
+| `gn` | Guarani · Guarani | Latn | – | – | shipped | unknown, verify | 2 |
+| `he` | Hebrew · עברית | Hebr RTL | – | ✓ | shipped | new rule | 2 |
+| `hi` | Hindi · हिन्दी | Deva | – | ✓ | shipped | 2 (0 and 1) | 2 |
+| `is` | Icelandic · Íslenska | Latn | – | – | egui | new rule | 2 |
+| `lo` | Lao · ລາວ | Laoo | – | – | pin bump | 1 form | 2 |
+| `lt` | Lithuanian · Lietuvių | Latn | – | ✓ | egui | new rule | 2 |
+| `lv` | Latvian · Latviešu | Latn | – | ✓ | egui | new rule | 2 |
+| `mk` | Macedonian · Македонски | Cyrl | – | – | egui | new rule | 2 |
+| `mr` | Marathi · मराठी | Deva | – | ✓ | shipped | 2 (one = 1) | 2 |
+| `ne` | Nepali · नेपाली | Deva | – | – | shipped | 2 (one = 1) | 2 |
+| `ro` | Romanian · Română | Latn | – | ✓ | egui | new rule | 2 |
+| `sl` | Slovenian · Slovenščina | Latn | – | ✓ | egui | new rule | 2 |
+| `te` | Telugu · తెలుగు | Telu | – | ✓ | pin bump | 2 (one = 1) | 2 |
+| `th` | Thai · ไทย | Thai | – | ✓ | shipped | 1 form | 2 |
+| `ur` | Urdu · اردو | Arab RTL | – | ✓ | shipped | 2 (one = 1) | 2 |
+| `am` | Amharic · አማርኛ | Ethi | – | – | none | 2 (0 and 1) | 3 |
+| `dv` | Dhivehi · ދިވެހި | Thaa RTL | – | – | none | 2 (one = 1) | 3 |
+| `hy` | Armenian · Հայերեն | Armn | – | – | none | 2 (0 and 1) | 3 |
+| `km` | Khmer · ខ្មែរ | Khmr | – | – | none | 1 form | 3 |
+| `my` | Burmese · မြန်မာ | Mymr | – | ✓ | none | 1 form | 3 |
+| `ps` | Pashto · پښتو | Arab RTL | – | – | none (2 letters) | 2 (one = 1) | 3 |
+| `si` | Sinhala · සිංහල | Sinh | – | – | none | 2 (0 and 1) | 3 |
+| `pt-PT` | Portuguese (Portugal) · Português (Portugal) | Latn | – | ✓ | egui | 2 (one = 1) | V |
 
 Counts of Studio's 75: covered by us 22, wave 1: 28, wave 2: 17, wave 3: 7, variant 1 (22 + 28 + 17 + 7 + 1 = 75).
 
@@ -138,7 +191,7 @@ Counts of Studio's 75: covered by us 22, wave 1: 28, wave 2: 17, wave 3: 7, vari
 
 ## Per language, the same steps (as done for pl, ka and ta)
 
-1. Catalog `crates/ui-egui/src/i18n/<code>.tsv` (context, English, translation columns; plurals as `one|other...`), and an `ATTRIBUTION.md` row: author, source, licence. Rows taken from Studio's packs keep **Apache-2.0** (not MIT OR Apache-2.0) and name the pack and its version.
+1. Catalog `crates/ui-egui/src/i18n/<code>.tsv` (context, English, translation columns; plurals as `one|other...`), and an `ATTRIBUTION.md` row: author, source, licence.
 2. A `Preference` variant, its code, its native name (the English name where the script cannot be drawn, as Korean does), the `LANGUAGES` entry with its plural function, and the locale tags that select it.
 3. A plural function if the language needs a new rule, with a test.
 4. Fonts: a face in `craft-fonts` (and `CRAFT_FONTS_REF` raised), the `can_show` arm and `embedded_ui_faces` entry for the script, and for the web build the script listed in `crates/fonts/build.rs`.
@@ -147,11 +200,9 @@ Counts of Studio's 75: covered by us 22, wave 1: 28, wave 2: 17, wave 3: 7, vari
 
 ## Proposed next steps
 
-1. **`cargo xtask i18n-seed <pack-locale>`** (Rust, in `xtask`): hash our English strings, take Studio's matching entries for that language into a draft `<code>.tsv`
-   marked as a draft, and write the `ATTRIBUTION.md` row. It makes steps 1 of the 33 pack languages mechanical: 485 strings each, and a list of the rest to translate.
-2. **Wave 1, starting with Japanese**: Japanese faces already ship, it has one plural form, and AutoCAD itself is localized into it, so it is the commercial
-   priority. AutoCAD's own localizations are Chinese (both), Czech, French, German, Hungarian, Italian, Japanese, Korean, Polish, Portuguese (Brazil), Russian and Spanish
-   (from public product information, not checked today): once Japanese is in, we cover all of them.
-3. **Raise `CRAFT_FONTS_REF`** to `83c36c8` or later so Tamil, Bengali and Telugu (and Lao, at `baf0f2c`) show without an installed font. Upstream has not done this either.
-4. **Add the six missing scripts** to `craft-fonts` before any wave-3 language.
-5. **Native review**: find a reviewer per language before it ships as anything but a draft; Studio's own files say none of theirs has one.
+1. **Native review of wave 1** (see the table above), one language at a time, crediting the reviewer in `ATTRIBUTION.md`.
+2. **Wave 2** in its own pull request: the plural rules for Lithuanian, Latvian, Slovenian, Romanian, Hebrew, Macedonian and Icelandic
+   (and a lookup for Guarani), right-to-left checks for Hebrew, Persian and Urdu, and screenshots for Devanagari, Bengali, Telugu, Thai and Lao.
+3. **Raise `CRAFT_FONTS_REF`** to `83c36c8` or later so Tamil, Bengali and Telugu (and Lao, at `baf0f2c`) show without an installed font.
+4. **Wave 3** after the six missing scripts (Ethiopic, Thaana, Armenian, Khmer, Myanmar, Sinhala) are added to `craft-fonts`.
+5. **Portuguese (Portugal)** as a second Portuguese catalog, if we decide to split `pt`.
